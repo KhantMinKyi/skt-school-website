@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Auth\AuthController;
 use App\Http\Middleware\IsAdmin;
+use App\Http\Middleware\IsStaff;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -16,5 +17,11 @@ Route::post('/administration-panel/login', [AuthController::class, 'login'])->na
 Route::group(['middleware' => ['auth', IsAdmin::class]], function () {
     Route::get('/administration-panel/admin/dashborad', function () {
         return view('admin.dashboard');
+    });
+});
+
+Route::group(['middleware' => ['auth', IsStaff::class]], function () {
+    Route::get('/administration-panel/staff/dashborad', function () {
+        return view('staff.dashboard');
     });
 });
