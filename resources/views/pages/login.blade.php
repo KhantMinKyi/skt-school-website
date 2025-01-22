@@ -32,11 +32,12 @@
 			<div class="row">				
 				<div class="col-lg-6 offset-lg-3 col-xs-12">
 					<div class="login">
-						<form action="{{route('')}}" method="post">
+						<form action="{{route('show.login')}}" method="post">
+							@csrf
 						<h4 class="login_register_title">Sign In </h4>
 						<div class="form-group">
 							<label for="">Username</label>
-							<input type="text" id="contact-name" class=" form-control requiredField input-label" name="name">
+							<input type="text" id="contact-name" class=" form-control requiredField input-label" name="login">
 						</div>
 						<div class="form-group">
 							<label for="">Password</label>

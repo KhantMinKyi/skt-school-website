@@ -15,13 +15,13 @@ class AuthController extends Controller
 
         $login = request()->input('login');
         $password =  request()->input('password');
-        $fieldType = filter_var($login, FILTER_VALIDATE_EMAIL) ? 'email' : 'username';
+        $fieldType = filter_var($login, FILTER_VALIDATE_EMAIL) ? 'email' : 'user_name';
 
         $credentials = [
             $fieldType => $login,
             'password' => $password,
         ];
-
+        // dd($credentials);
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
 
@@ -32,11 +32,9 @@ class AuthController extends Controller
             }
 
             if ($userType == 'admin' && Auth::user()->user_status == 1) {
-                return redirect('/admin/home');
+                return redirect('/administration-panel/admin/dashborad');
             } else if ($userType == 'staff' && Auth::user()->user_status == 1) {
-                return redirect('/app/home');
-            } else if ($userType == 'student' && Auth::user()->user_status == 1) {
-                return redirect('/student/home');
+                return redirect('/administration-panel/staff/dashborad');
             } else {
                 Auth::logout();
                 return redirect('/')->withErrors('Something wrong with your account.');

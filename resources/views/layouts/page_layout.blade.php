@@ -49,6 +49,7 @@
   </style>
 </head>
 <body>
+	{{-- {{Auth::user() ?? 'No User '}} --}}
     	<!-- START NAVBAR -->  
 	<div id="navigation" class="fixed-top  bg-faded site-navigation">
 		<div class="">
