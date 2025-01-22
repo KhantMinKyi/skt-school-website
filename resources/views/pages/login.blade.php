@@ -1,4 +1,4 @@
-@extends('layouts.page_layout')
+@extends('layouts.login_layout')
 	@section('content')
 		
 

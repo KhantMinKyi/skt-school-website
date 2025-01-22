@@ -935,7 +935,7 @@ p.section-title-white {
 .home_bg {
     /* height: 1200px; */
     position: relative;
-	height: 100vh;
+	/* height: 100vh; */
 }
 /* .home_bg {
     position: relative;
@@ -962,7 +962,7 @@ p.section-title-white {
     padding-top: 30vh;  */
 }
 .home_bg2 {
-    height: 700px;
+    /* height: 700px; */
     position: relative;
 }
 .home_content {
@@ -1033,7 +1033,7 @@ p.section-title-white {
 }
 /*HOME THREE CSS*/
 .home_img_bg {
-    height: 750px;
+    /* height: 750px; */
     position: relative;
 }
 .home_img_bg::before {

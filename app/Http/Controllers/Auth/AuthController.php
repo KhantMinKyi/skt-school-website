@@ -49,4 +49,12 @@ class AuthController extends Controller
             return redirect('/')->withErrors('Invalid username or password!');
         }
     }
+    public function logout(Request $request)
+    {
+        // dd('asdas');
+        Auth::logout();
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+        return redirect('/');
+    }
 }
