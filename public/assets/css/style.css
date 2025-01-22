@@ -5174,5 +5174,10 @@ blockquote::before,
 .home-banner-hero.slide-out {
     animation: slideOutToRight 0.5s forwards; /* Slide out animation */
 }
+.home-banner-text > h3{
+    font-family: "Smooch Sans", serif;
+    font-weight: bold;
+    color: #34526f;
+}
 
 /*END SHOP CSS*/
