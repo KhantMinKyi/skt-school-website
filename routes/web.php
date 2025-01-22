@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Auth\AuthController;
+use App\Http\Controllers\UserController;
 use App\Http\Middleware\IsAdmin;
 use App\Http\Middleware\IsStaff;
 use Illuminate\Support\Facades\Route;
@@ -16,15 +17,16 @@ Route::get('/skt-riverside-campus', function () {
 })->name('river.home');
 
 // admin
-Route::group(['middleware' => ['auth', IsAdmin::class]], function () {
-    Route::get('/administration-panel/admin/dashborad', function () {
+Route::group(['middleware' => ['auth', IsAdmin::class], 'prefix' => '/administration-panel/admin'], function () {
+    Route::get('dashborad', function () {
         return view('admin.dashboard');
     });
+    Route::resource('admin-users', UserController::class);
 });
 
 // staff
-Route::group(['middleware' => ['auth', IsStaff::class]], function () {
-    Route::get('/administration-panel/staff/dashborad', function () {
+Route::group(['middleware' => ['auth', IsStaff::class], 'prefix' => '/administration-panel/staff'], function () {
+    Route::get('dashborad', function () {
         return view('staff.dashboard');
     });
 });
@@ -37,6 +39,7 @@ Route::post('/administration-panel/login', [AuthController::class, 'login'])->na
 Route::post('/administration-panel/logout', [AuthController::class, 'logout'])->name('logout');
 
 
+// Error handling
 Route::any('{catchall}', function () {
     return view('pages.not_found');
 })->where('catchall', '.*');

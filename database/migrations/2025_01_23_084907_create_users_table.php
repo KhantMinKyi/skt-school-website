@@ -21,6 +21,8 @@ return new class extends Migration
             $table->string('user_type')->default('staff');
             $table->boolean('is_admin')->default(0);
             $table->boolean('user_status')->default(1);
+            $table->string('phone')->nullable();
+            $table->foreignId('branch_id')->constrained('branches');
             $table->rememberToken();
             $table->timestamps();
         });

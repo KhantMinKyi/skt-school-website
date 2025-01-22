@@ -28,7 +28,7 @@ class IsAdmin
             return $next($request);
         } else {
             Auth::logout();
-            // return redirect('administration-panel/login');
+            return redirect('administration-panel/login');
         }
 
         return $next($request);
