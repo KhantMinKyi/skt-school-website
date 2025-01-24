@@ -13,10 +13,11 @@ class UserController extends Controller
      */
     public function index()
     {
-        $users = User::paginate(10);
+        $admin_users = User::where('user_status', 1)->where('user_type', 'admin')->paginate(10);
+        $staff_users = User::where('user_status', 1)->where('user_type', 'staff')->paginate(10);
         $branches = Branch::all();
         // dd($users);
-        return view('admin.users.user_index', compact('users', 'branches'));
+        return view('admin.users.user_index', compact('admin_users', 'staff_users', 'branches'));
     }
 
     /**
@@ -100,5 +101,25 @@ class UserController extends Controller
     public function destroy(string $id)
     {
         //
+    }
+    public function archivedUser(string $id, Request $request)
+    {
+        $user = User::find($id);
+        // dd($user);
+        if ($user) {
+            $user->update(['user_status' => $request->status]);
+            return to_route('admin-users.index')->with('success', 'Updated Successfully!');;
+            // dd($user);
+        } else {
+            return response()->json([
+                'message' => 'Cannot Find a User'
+            ]);
+        }
+    }
+    public function showArchivedUser()
+    {
+        $archived_users = User::where('user_status', 0)->paginate(10);
+        // dd($archived_users);
+        return view('partial_view.admin.users.user_archived', compact('archived_users'));
     }
 }

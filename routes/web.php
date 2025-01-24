@@ -24,6 +24,8 @@ Route::group(['middleware' => ['auth', IsAdmin::class], 'prefix' => '/administra
     });
     Route::resource('admin-users', UserController::class);
     Route::resource('admin-branches', BranchController::class);
+    Route::get('admin-users/archived-user/show-archived-user', [UserController::class, 'showArchivedUser'])->name('admin-users.show_archived_user');
+    Route::get('admin-users/archived-user/{id}', [UserController::class, 'archivedUser'])->name('admin-users.archived_user');
 });
 
 // staff

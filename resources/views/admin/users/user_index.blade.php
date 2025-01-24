@@ -14,10 +14,27 @@
 
 
     <div class="card">
-        <div class="card-header font-weight-bold h5">Users</div>
+        <div class="card-header font-weight-bold h5">Admin Users</div>
         <div class="text-right m-4 ">
             <a href="#" class="btn btn-success btn-md" data-bs-toggle="modal" data-bs-target="#modalNewUser">
-                Add New User
+                <div class="d-flex  align-items-center">
+                    <span class="animated-icon mr-2 ">
+                        <div style="width:14px;height:14px; cursor: pointer;"
+                            data-animation-path="{{ asset('admin/vendor/animated-icons/add/add.json') }}"
+                            data-anim-loop="false" title="Add user"></div>
+                    </span>
+                    Add New User
+                </div>
+            </a>
+            <a href="{{ route('admin-users.show_archived_user') }}" class="btn btn-secondary btn-md">
+                <div class="d-flex  align-items-center">
+                    <span class="animated-icon mr-2 ">
+                        <div style="width:14px;height:14px; cursor: pointer;"
+                            data-animation-path="{{ asset('admin/vendor/animated-icons/open-box/open-box.json') }}"
+                            data-anim-loop="false" title="Add user"></div>
+                    </span>
+                    Archived Users
+                </div>
             </a>
         </div>
         <div class="card-body">
@@ -36,7 +53,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach ($users as $user)
+                            @foreach ($admin_users as $user)
                                 <tr>
                                     <td>{{ $user->id }}</td>
                                     <td>{{ $user->name }}</td>
@@ -61,17 +78,79 @@
                                                 data-animation-path="{{ asset('admin/vendor/animated-icons/restart/restart.json') }}"
                                                 data-anim-loop="false" title="reset password"></div>
                                         </span>
-                                        <span class="animated-icon mr-2 ">
+                                        <a href="{{ route('admin-users.archived_user', $user->id) }}?status=0"
+                                            onclick="return confirm('Are you sure you want to archive this user?');"
+                                            class="animated-icon mr-2 ">
                                             <div style="width:14px;height:14px; cursor: pointer;"
                                                 data-animation-path="{{ asset('admin/vendor/animated-icons/trash-bin/trash-bin.json') }}"
                                                 data-anim-loop="false" title="archive user"></div>
-                                        </span>
+                                        </a>
                                     </td>
                                 </tr>
                             @endforeach
                         </tbody>
                     </table>
-                    {{ $users->links() }}
+                    {{ $admin_users->links() }}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header font-weight-bold h5"> Staff Users</div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <div class="table-responsive">
+                    <table class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Name</th>
+                                <th>Branch</th>
+                                <th>Username</th>
+                                <th>Gmail</th>
+                                <th>Phone</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach ($staff_users as $user)
+                                <tr>
+                                    <td>{{ $user->id }}</td>
+                                    <td>{{ $user->name }}</td>
+                                    <td>{{ $user->branch->branch_name }}</td>
+                                    <td>{{ $user->user_name }}</td>
+                                    <td>{{ $user->email }}</td>
+                                    <td>{{ $user->phone }}</td>
+                                    <td class="d-flex justify-content-center">
+                                        <span class="animated-icon mr-2 ">
+                                            <div style="width:14px;height:14px; cursor: pointer;"
+                                                data-animation-path="{{ asset('admin/vendor/animated-icons/eye/eye.json') }}"
+                                                data-anim-loop="false" title="view user"></div>
+                                        </span>
+                                        <a class="animated-icon mr-2" href="{{ route('admin-users.edit', $user->id) }}">
+                                            <div style="width:14px;height:14px; cursor: pointer;"
+                                                data-animation-path="{{ asset('admin/vendor/animated-icons/edit/edit.json') }}"
+                                                data-anim-loop="false" title="edit user">
+                                            </div>
+                                        </a>
+                                        <span class="animated-icon mr-2 ">
+                                            <div style="width:14px;height:14px; cursor: pointer;"
+                                                data-animation-path="{{ asset('admin/vendor/animated-icons/restart/restart.json') }}"
+                                                data-anim-loop="false" title="reset password"></div>
+                                        </span>
+                                        <a href="{{ route('admin-users.archived_user', $user->id) }}?status=0"
+                                            onclick="return confirm('Are you sure you want to archive this user?');"
+                                            class="animated-icon mr-2 ">
+                                            <div style="width:14px;height:14px; cursor: pointer;"
+                                                data-animation-path="{{ asset('admin/vendor/animated-icons/trash-bin/trash-bin.json') }}"
+                                                data-anim-loop="false" title="archive user"></div>
+                                        </a>
+                                    </td>
+                                </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
+                    {{ $staff_users->links() }}
                 </div>
             </div>
         </div>
@@ -107,8 +186,8 @@
                                 <div class="row mb-3">
                                     <label for="inputEmail3" class="col-3 col-form-label"> Name </label>
                                     <div class="col-9">
-                                        <input type="text" placeholder="Enter a full name " value="" name="name"
-                                            title="Name is required" required class="form-control">
+                                        <input type="text" placeholder="Enter a full name " value=""
+                                            name="name" title="Name is required" required class="form-control">
                                     </div>
 
                                 </div>
