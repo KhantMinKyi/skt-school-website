@@ -44,13 +44,17 @@ class UserController extends Controller
             'password' => 'required',
             'user_type' => 'required',
         ]);
+        $same_data = User::where('user_name', $data['user_name'])->orWhere('email', $data['email'])->get();
+        if (count($same_data) > 0) {
+            return to_route('admin-users.index')->with('error', 'Email or Username is Invalid . Try Again!');
+        }
         if ($data['user_type']) {
             $data['is_admin'] = $data['user_type'] == 'admin' ? 1 : 0;
         }
         $data['password'] = bcrypt($data['password']);
         // dd($data);
         User::create($data);
-        return to_route('admin-users.index');
+        return to_route('admin-users.index')->with('success', 'User Created Successfully!');
     }
 
     /**
@@ -66,7 +70,15 @@ class UserController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $user = User::find($id);
+        $branches = Branch::all();
+        if ($user) {
+            return view('partial_view.admin.users.user_edit', compact('user', 'branches'));
+        } else {
+            return response()->json([
+                'message' => 'Error Finding User'
+            ]);
+        }
     }
 
     /**
@@ -74,7 +86,12 @@ class UserController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        if ($request->user_type) {
+            $request['is_admin'] = $request->user_type == 'admin' ? 1 : 0;
+        }
+        $user = User::find($request->user_id);
+        $user->update($request->all());
+        return to_route('admin-users.index')->with('success', 'User Updated Successfully!');
     }
 
     /**

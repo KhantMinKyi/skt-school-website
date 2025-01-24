@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Auth\AuthController;
+use App\Http\Controllers\BranchController;
 use App\Http\Controllers\UserController;
 use App\Http\Middleware\IsAdmin;
 use App\Http\Middleware\IsStaff;
@@ -22,6 +23,7 @@ Route::group(['middleware' => ['auth', IsAdmin::class], 'prefix' => '/administra
         return view('admin.dashboard');
     });
     Route::resource('admin-users', UserController::class);
+    Route::resource('admin-branches', BranchController::class);
 });
 
 // staff

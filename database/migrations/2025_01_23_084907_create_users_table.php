@@ -23,6 +23,8 @@ return new class extends Migration
             $table->boolean('user_status')->default(1);
             $table->string('phone')->nullable();
             $table->foreignId('branch_id')->constrained('branches');
+            $table->string('gender');
+            $table->date('birth_date');
             $table->rememberToken();
             $table->timestamps();
         });

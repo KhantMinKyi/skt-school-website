@@ -30,6 +30,8 @@ class DatabaseSeeder extends Seeder
             'user_type' => 'admin',
             'branch_id' => 1,
             'phone' => '1123123413432',
+            'gender' => 'male',
+            'birth_date' => '199-06-28',
 
         ]);
     }

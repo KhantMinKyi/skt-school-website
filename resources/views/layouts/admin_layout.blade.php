@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-gb">
-  <head>
+
+<head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -9,40 +10,35 @@
 
 
     <title>SKT International School Admin Portal</title>
-    <link rel="icon" href="{{ asset('assets/images/icon/icon.png') }}" type="image/png">		
-    <link
-      href="https://fonts.googleapis.com/css?family=Montserrat:900|Anonymous+Pro:400,700|Arimo:400,700"
-      rel="stylesheet"
-    />
-<style>
-    .app-footer {
-    margin-top: auto; /* Pushes the footer to the bottom */
-    width: 100%; /* Ensures it spans the full width */
-}
-</style>
-    <link rel="stylesheet" href="{{asset('admin/css/app.css')}}" />
+    <link rel="icon" href="{{ asset('assets/images/icon/icon.png') }}" type="image/png">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:900|Anonymous+Pro:400,700|Arimo:400,700"
+        rel="stylesheet" />
+    <style>
+        .app-footer {
+            margin-top: auto;
+            /* Pushes the footer to the bottom */
+            width: 100%;
+            /* Ensures it spans the full width */
+        }
+    </style>
+    <link rel="stylesheet" href="{{ asset('admin/css/app.css') }}" />
 
-    <script src="{{asset('admin/vendor/Chart.min.js')}}"></script>
-  </head>
-  <body>
+    <script src="{{ asset('admin/vendor/Chart.min.js') }}"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+        integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body>
     <svg width="24" height="24" viewBox="0 0 24 24" style="display:none">
-      <g
-        id="logo-icon"
-        stroke="currentColor"
-        stroke-width="1"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        fill="none"
-        fill-rule="evenodd"
-      >
-        <path
-          d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"
-        ></path>
-      </g>
+        <g id="logo-icon" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+            fill="none" fill-rule="evenodd">
+            <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+        </g>
     </svg>
 
     <div class="page page-sticky-sidebar">
-      {{-- <div class="app-header" style="display: none; visibility: hidden;">
+        {{-- <div class="app-header" style="display: none; visibility: hidden;">
         <nav class="bg-white navbar">
           <ul class="navbar-nav">
             <a href="/" class="navbar-brand">
@@ -413,701 +409,519 @@
           </ul>
         </nav>
       </div> --}}
-      <div class="position-relative d-flex flex-row flex-fill page-wrapper">
-        <div
-          class="sidebar bg-dark page-sidebar"
-          style="transform:translateX(0);min-width:280px;max-width:280px"
-        >
-          <div class="h-100 d-flex flex-column flex-1">
-            <nav
-              class="navbar navbar-expand-md  d-none d-lg-flex d-xl-flex bg-dark"
-            >
-            <a href="#" class="navbar-brand">
-                  <img src="{{asset('/img/skt-bnw-logo.png')}}" width="170px" alt="">
-                {{-- <svg width="24" height="24">
+        <div class="position-relative d-flex flex-row flex-fill page-wrapper">
+            <div class="sidebar bg-dark page-sidebar" style="transform:translateX(0);min-width:280px;max-width:280px">
+                <div class="h-100 d-flex flex-column flex-1">
+                    <nav class="navbar navbar-expand-md  d-none d-lg-flex d-xl-flex bg-dark">
+                        <a href="#" class="navbar-brand">
+                            <img src="{{ asset('/img/skt-bnw-logo.png') }}" width="170px" alt="">
+                            {{-- <svg width="24" height="24">
                   <use xlink:href="#logo-icon"></use>
                 </svg> --}}
-                {{-- <span class="ml-3">SKT</span> --}}
-              </a>
-              <a href="javascript:;" class="nav-toggle">
-                <span class="animated-icon">
-                  <div
-                    style="width:24px;height:24px"
-                    data-animation-path="{{asset('admin/vendor/animated-icons/menu-back/menu-back.json')}}"
-                    data-anim-loop="false"
-                  ></div>
-                </span>
-              </a>
-            </nav>
-            <ul class="d-block scroll-y flex-1 py-3 nav flex-column">
-              <div class="sidebar-item">
-                <li class="nav-item  active">
-                  <a
-                    class="nav-link d-flex align-items-center nav-link"
-                    href="index.html"
-                  >
-                    <span class="animated-icon">
-                      <div
-                        style="width:18px;height:18px"
-                        data-animation-path="{{asset('admin/vendor/animated-icons/loading-bar/loading-bar.json')}}"
-                        data-anim-loop="false"
-                      ></div>
-                    </span>
-                    <span class="mr-auto menu-name">Home</span>
-                  </a>
-                </li>
-              </div>
-              <div class="sidebar-item">
-                <li class="nav-item ">
-                  <a
-                    class="nav-link d-flex align-items-center nav-link"
-                    href="widgets.html"
-                  >
-                    <span class="animated-icon">
-                      <div
-                        style="width:18px;height:18px"
-                        data-animation-path="{{asset('admin/vendor/animated-icons/book/book.json')}}"
-                        data-anim-loop="false"
-                      ></div>
-                    </span>
-                    <span class="mr-auto menu-name">Widgets</span>
-                    <span class="badge badge-danger badge-pill">5</span>
-                  </a>
-                </li>
-              </div>
-              <div class="sidebar-item">
-                <li class="nav-item ">
-                  <a
-                    class="nav-link d-flex align-items-center nav-link"
-                    href="javascript:;"
-                  >
-                    <span class="animated-icon">
-                      <div
-                        style="width:18px;height:18px"
-                        data-animation-path="vendor/animated-icons/folder/folder.json"
-                        data-anim-loop="false"
-                      ></div>
-                    </span>
-                    <span class="mr-auto menu-name">Bootstrap UI</span>
-                    <span class="caret">
-                      <span class="animated-icon">
-                        <div
-                          style="width:12px;height:12px"
-                          data-animation-path="{{asset('admin/vendor/animated-icons/expand/expand.json')}}"
-                        ></div>
-                      </span>
-                    </span>
-                  </a>
-                  <div class="sub-menu collapse " aria-expanded="false">
-                    <ul class="nav flex-column">
-                      <li class="nav-item ">
-                        <a href="bootstrap-ui-alerts.html" class="nav-link">
-                          <span class="mr-auto menu-name">Alerts</span>
+                            {{-- <span class="ml-3">SKT</span> --}}
                         </a>
-                      </li>
-                      <li class="nav-item ">
-                        <a href="bootstrap-ui-badge.html" class="nav-link">
-                          <span class="mr-auto menu-name">Badge</span>
-                        </a>
-                      </li>
-                      <li class="nav-item ">
-                        <a href="bootstrap-ui-buttons.html" class="nav-link">
-                          <span class="mr-auto menu-name">Buttons</span>
-                        </a>
-                      </li>
-                      <li class="nav-item ">
-                        <a href="bootstrap-ui-card.html" class="nav-link">
-                          <span class="mr-auto menu-name">Card</span>
-                        </a>
-                      </li>
-                      <li class="nav-item ">
-                        <a href="bootstrap-ui-carousel.html" class="nav-link">
-                          <span class="mr-auto menu-name">Carousel</span>
-                        </a>
-                      </li>
-                      <li class="nav-item ">
-                        <a href="bootstrap-ui-jumbotron.html" class="nav-link">
-                          <span class="mr-auto menu-name">Jumbotron</span>
-                        </a>
-                      </li>
-                      <li class="nav-item ">
-                        <a href="bootstrap-ui-list-group.html" class="nav-link">
-                          <span class="mr-auto menu-name">List Group</span>
-                        </a>
-                      </li>
-
-                      <li class="nav-item ">
-                        <a href="bootstrap-ui-progress.html" class="nav-link">
-                          <span class="mr-auto menu-name">Progress</span>
-                        </a>
-                      </li>
-                      <li class="nav-item ">
-                        <a href="bootstrap-ui-other.html" class="nav-link">
-                          <span class="mr-auto menu-name">Other</span>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </li>
-              </div>
-              <div class="sidebar-item">
-                <li class="nav-item ">
-                  <a
-                    class="nav-link d-flex align-items-center nav-link"
-                    href="messages.html"
-                  >
-                    <span class="animated-icon">
-                      <div
-                        style="width:18px;height:18px"
-                        data-animation-path="{{asset('admin/vendor/animated-icons/speech/speech.json')}}"
-                        data-anim-loop="false"
-                      ></div>
-                    </span>
-                    <span class="mr-auto menu-name">Messages</span>
-                  </a>
-                </li>
-              </div>
-              <div class="sidebar-item">
-                <li class="nav-item ">
-                  <a
-                    class="nav-link d-flex align-items-center nav-link"
-                    href="javascript:;"
-                  >
-                    <span class="animated-icon">
-                      <div
-                        style="width:18px;height:18px"
-                        data-animation-path="{{asset('admin/vendor/animated-icons/toggle/toggle.json')}}"
-                        data-anim-loop="false"
-                      ></div>
-                    </span>
-                    <span class="mr-auto menu-name">Form</span>
-                    <span class="caret">
-                      <span class="animated-icon">
-                        <div
-                          style="width:12px;height:12px"
-                          data-animation-path="{{asset('admin/vendor/animated-icons/expand/expand.json')}}"
-                        ></div>
-                      </span>
-                    </span>
-                  </a>
-                  <div class="sub-menu collapse " aria-expanded="false">
-                    <ul class="nav flex-column">
-                      <li class="nav-item ">
-                        <a href="form-basic-form.html" class="nav-link">
-                          <span class="mr-auto menu-name">Basic Form</span>
-                        </a>
-                      </li>
-                      <li class="nav-item ">
-                        <a href="form-editor.html" class="nav-link">
-                          <span class="mr-auto menu-name">Editor</span>
-                        </a>
-                      </li>
-                      <li class="nav-item ">
-                        <a href="form-validation.html" class="nav-link">
-                          <span class="mr-auto menu-name">Validation</span>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </li>
-              </div>
-              <div class="sidebar-item">
-                <li class="nav-item ">
-                  <a
-                    class="nav-link d-flex align-items-center nav-link"
-                    href="javascript:;"
-                  >
-                    <span class="animated-icon">
-                      <div
-                        style="width:18px;height:18px"
-                        data-animation-path="{{asset('admin/vendor/animated-icons/box/box.json')}}"
-                        data-anim-loop="false"
-                      ></div>
-                    </span>
-                    <span class="mr-auto menu-name">Tables</span>
-                    <span class="caret">
-                      <span class="animated-icon">
-                        <div
-                          style="width:12px;height:12px"
-                          data-animation-path="{{asset('admin/vendor/animated-icons/expand/expand.json')}}"
-                        ></div>
-                      </span>
-                    </span>
-                  </a>
-                  <div class="sub-menu collapse " aria-expanded="false">
-                    <ul class="nav flex-column">
-                      <li class="nav-item ">
-                        <a href="tables-basic-table.html" class="nav-link">
-                          <span class="mr-auto menu-name">Basic Table</span>
-                        </a>
-                      </li>
-                      <li class="nav-item ">
-                        <a href="tables-responsive.html" class="nav-link">
-                          <span class="mr-auto menu-name">Responsive</span>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </li>
-              </div>
-              <div class="sidebar-item">
-                <li class="nav-item ">
-                  <a
-                    class="nav-link d-flex align-items-center nav-link"
-                    href="taskboard.html"
-                  >
-                    <span class="animated-icon">
-                      <div
-                        style="width:18px;height:18px"
-                        data-animation-path="{{asset('admin/vendor/animated-icons/bookmark-in-book/bookmark-in-book.json')}}"
-                        data-anim-loop="false"
-                      ></div>
-                    </span>
-                    <span class="mr-auto menu-name">Taskboard</span>
-                    <span class="badge badge-primary badge-pill">New</span>
-                  </a>
-                </li>
-              </div>
-
-              <div class="sidebar-item">
-                <li class="nav-item ">
-                  <a
-                    class="nav-link d-flex align-items-center nav-link"
-                    href="javascript:;"
-                  >
-                    <span class="animated-icon">
-                      <div
-                        style="width:18px;height:18px"
-                        data-animation-path="{{asset('admin/vendor/animated-icons/document/document.json')}}"
-                        data-anim-loop="false"
-                      ></div>
-                    </span>
-                    <span class="mr-auto menu-name">Pages</span>
-                    <span class="caret">
-                      <span class="animated-icon">
-                        <div
-                          style="width:12px;height:12px"
-                          data-animation-path="{{asset('admin/vendor/animated-icons/expand/expand.json')}}"
-                        ></div>
-                      </span>
-                    </span>
-                  </a>
-                  <div class="sub-menu collapse " aria-expanded="false">
-                    <ul class="nav flex-column">
-                      <li class="nav-item ">
-                        <a href="pages-invoice.html" class="nav-link">
-                          <span class="mr-auto menu-name">Invoice</span>
-                        </a>
-                      </li>
-                      <li class="nav-item ">
-                        <a href="pages-timeline.html" class="nav-link">
-                          <span class="mr-auto menu-name">Timeline</span>
-                        </a>
-                      </li>
-                      <li class="nav-item ">
-                        <a href="pages-blank.html" class="nav-link">
-                          <span class="mr-auto menu-name">Blank</span>
-                        </a>
-                      </li>
-                      <li class="nav-item ">
-                        <a href="pages-pricing.html" class="nav-link">
-                          <span class="mr-auto menu-name">Pricing</span>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </li>
-              </div>
-              <div class="sidebar-item">
-                <li class="nav-item ">
-                  <a
-                    class="nav-link d-flex align-items-center nav-link"
-                    href="calendar.html"
-                  >
-                    <span class="animated-icon">
-                      <div
-                        style="width:18px;height:18px"
-                        data-animation-path="{{asset('admin/vendor/animated-icons/calendar/calendar.json')}}"
-                        data-anim-loop="false"
-                      ></div>
-                    </span>
-                    <span class="mr-auto menu-name">Calendar</span>
-                  </a>
-                </li>
-              </div>
-              <div class="sidebar-item">
-                <li class="nav-item ">
-                  <a
-                    class="nav-link d-flex align-items-center nav-link"
-                    href="javascript:;"
-                  >
-                    <span class="animated-icon">
-                      <div
-                        style="width:18px;height:18px"
-                        data-animation-path="{{asset('admin/vendor/animated-icons/settings/settings.json')}}"
-                        data-anim-loop="false"
-                      ></div>
-                    </span>
-                    <span class="mr-auto menu-name">Settings</span>
-                    <span class="caret">
-                      <span class="animated-icon">
-                        <div
-                          style="width:12px;height:12px"
-                          data-animation-path="{{asset('admin/vendor/animated-icons/expand/expand.json')}}"
-                        ></div>
-                      </span>
-                    </span>
-                  </a>
-                  <div class="sub-menu collapse " aria-expanded="false">
-                    <ul class="nav flex-column">
-                      <li class="nav-item ">
-                        <a href="{{route('admin-users.index')}}" class="nav-link">
+                        <a href="javascript:;" class="nav-toggle">
                             <span class="animated-icon">
-                                <div
-                                  style="width:18px;height:18px"
-                                  data-animation-path="{{asset('admin/vendor/animated-icons/activity/activity.json')}}"
-                                  data-anim-loop="false"
-                                ></div>
-                              </span> 
-                          <span class="mr-auto menu-name">Users</span>
+                                <div style="width:24px;height:24px"
+                                    data-animation-path="{{ asset('admin/vendor/animated-icons/menu-back/menu-back.json') }}"
+                                    data-anim-loop="false"></div>
+                            </span>
                         </a>
-                      </li>
-                    </ul>
-                  </div>
-                </li>
-              </div>
-              <div class="sidebar-item">
-                <li class="nav-item ">
-                  <a
-                    class="nav-link d-flex align-items-center nav-link"
-                    href="javascript:;"
-                  >
-                    <span class="animated-icon">
-                      <div
-                        style="width:18px;height:18px"
-                        data-animation-path="vendor/animated-icons/warning-1/warning-1.json"
-                        data-anim-loop="false"
-                      ></div>
-                    </span>
-                    <span class="mr-auto menu-name">Error</span>
-                    <span class="caret">
-                      <span class="animated-icon">
-                        <div
-                          style="width:12px;height:12px"
-                          data-animation-path="vendor/animated-icons/expand/expand.json"
-                        ></div>
-                      </span>
-                    </span>
-                  </a>
-                  <div class="sub-menu collapse " aria-expanded="false">
-                    <ul class="nav flex-column">
-                      <li class="nav-item ">
-                        <a href="404.html" class="nav-link">
-                          <span class="mr-auto menu-name">404</span>
-                        </a>
-                      </li>
-                      <li class="nav-item ">
-                        <a href="500.html" class="nav-link">
-                          <span class="mr-auto menu-name">Error</span>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </li>
-              </div>
-            </ul>
-          </div>
-        </div>
-        {{-- End Side Bar --}}
-        <div class="page-overlay" style="visibility:hidden;opacity:0"></div>
+                    </nav>
+                    <ul class="d-block scroll-y flex-1 py-3 nav flex-column">
+                        <div class="sidebar-item">
+                            <li class="nav-item  active">
+                                <a class="nav-link d-flex align-items-center nav-link" href="index.html">
+                                    <span class="animated-icon">
+                                        <div style="width:18px;height:18px"
+                                            data-animation-path="{{ asset('admin/vendor/animated-icons/activity/activity.json') }}"
+                                            data-anim-loop="false"></div>
+                                    </span>
+                                    <span class="mr-auto menu-name">Home</span>
+                                </a>
+                            </li>
+                        </div>
+                        <div class="sidebar-item">
+                            <li class="nav-item ">
+                                <a class="nav-link d-flex align-items-center nav-link" href="javascript:;">
+                                    <span class="animated-icon">
+                                        <div style="width:18px;height:18px"
+                                            data-animation-path="{{ asset('admin/vendor/animated-icons/settings/settings.json') }}"
+                                            data-anim-loop="false"></div>
+                                    </span>
+                                    <span class="mr-auto menu-name">Settings</span>
+                                    <span class="caret">
+                                        <span class="animated-icon">
+                                            <div style="width:12px;height:12px"
+                                                data-animation-path="{{ asset('admin/vendor/animated-icons/expand/expand.json') }}">
+                                            </div>
+                                        </span>
+                                    </span>
+                                </a>
+                                <div class="sub-menu collapse " aria-expanded="false">
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item ">
+                                            <a href="{{ route('admin-users.index') }}" class="nav-link">
+                                                <span class="animated-icon">
+                                                    <div style="width:18px;height:18px"
+                                                        data-animation-path="{{ asset('admin/vendor/animated-icons/wink/wink.json') }}"
+                                                        data-anim-loop="false"></div>
+                                                </span>
+                                                <span class="mr-auto menu-name">Users</span>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item ">
+                                            <a href="{{ route('admin-branches.index') }}" class="nav-link">
+                                                <span class="animated-icon">
+                                                    <div style="width:18px;height:18px"
+                                                        data-animation-path="{{ asset('admin/vendor/animated-icons/pin/pin.json') }}"
+                                                        data-anim-loop="false"></div>
+                                                </span>
+                                                <span class="mr-auto menu-name">Branches</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </div>
+                        <div class="sidebar-item">
+                            <li class="nav-item ">
+                                <a class="nav-link d-flex align-items-center nav-link" href="widgets.html">
+                                    <span class="animated-icon">
+                                        <div style="width:18px;height:18px"
+                                            data-animation-path="{{ asset('admin/vendor/animated-icons/book/book.json') }}"
+                                            data-anim-loop="false"></div>
+                                    </span>
+                                    <span class="mr-auto menu-name">Widgets</span>
+                                    <span class="badge badge-danger badge-pill">5</span>
+                                </a>
+                            </li>
+                        </div>
+                        <div class="sidebar-item">
+                            <li class="nav-item ">
+                                <a class="nav-link d-flex align-items-center nav-link" href="javascript:;">
+                                    <span class="animated-icon">
+                                        <div style="width:18px;height:18px"
+                                            data-animation-path="vendor/animated-icons/folder/folder.json"
+                                            data-anim-loop="false"></div>
+                                    </span>
+                                    <span class="mr-auto menu-name">Bootstrap UI</span>
+                                    <span class="caret">
+                                        <span class="animated-icon">
+                                            <div style="width:12px;height:12px"
+                                                data-animation-path="{{ asset('admin/vendor/animated-icons/expand/expand.json') }}">
+                                            </div>
+                                        </span>
+                                    </span>
+                                </a>
+                                <div class="sub-menu collapse " aria-expanded="false">
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item ">
+                                            <a href="bootstrap-ui-alerts.html" class="nav-link">
+                                                <span class="mr-auto menu-name">Alerts</span>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item ">
+                                            <a href="bootstrap-ui-badge.html" class="nav-link">
+                                                <span class="mr-auto menu-name">Badge</span>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item ">
+                                            <a href="bootstrap-ui-buttons.html" class="nav-link">
+                                                <span class="mr-auto menu-name">Buttons</span>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item ">
+                                            <a href="bootstrap-ui-card.html" class="nav-link">
+                                                <span class="mr-auto menu-name">Card</span>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item ">
+                                            <a href="bootstrap-ui-carousel.html" class="nav-link">
+                                                <span class="mr-auto menu-name">Carousel</span>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item ">
+                                            <a href="bootstrap-ui-jumbotron.html" class="nav-link">
+                                                <span class="mr-auto menu-name">Jumbotron</span>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item ">
+                                            <a href="bootstrap-ui-list-group.html" class="nav-link">
+                                                <span class="mr-auto menu-name">List Group</span>
+                                            </a>
+                                        </li>
 
-        <div
-          class="position-relative d-flex flex-column flex-fill page-content"
-          style="min-width:0"
-        >
-          <div class="app-header">
-            <nav class="bg-white navbar">
-              <ul class="navbar-nav d-lg-none d-sm-flex d-md-flex">
-                <a class="nav-toggle mobile-toggle">
-                  <span class="animated-icon">
-                    <div
-                      style="width:24px;height:24px"
-                      data-animation-path="{{asset('admin/vendor/animated-icons/menu-back/menu-back.json')}}"
-                    ></div>
-                  </span>
-                </a>
-                <a href="/" class="navbar-brand">
-                    <img src="{{asset('/img/skt-bnw-logo.png')}}" width="100px" alt="">
-                  {{-- <svg width="24" height="24">
+                                        <li class="nav-item ">
+                                            <a href="bootstrap-ui-progress.html" class="nav-link">
+                                                <span class="mr-auto menu-name">Progress</span>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item ">
+                                            <a href="bootstrap-ui-other.html" class="nav-link">
+                                                <span class="mr-auto menu-name">Other</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </div>
+                        <div class="sidebar-item">
+                            <li class="nav-item ">
+                                <a class="nav-link d-flex align-items-center nav-link" href="messages.html">
+                                    <span class="animated-icon">
+                                        <div style="width:18px;height:18px"
+                                            data-animation-path="{{ asset('admin/vendor/animated-icons/speech/speech.json') }}"
+                                            data-anim-loop="false"></div>
+                                    </span>
+                                    <span class="mr-auto menu-name">Messages</span>
+                                </a>
+                            </li>
+                        </div>
+                        <div class="sidebar-item">
+                            <li class="nav-item ">
+                                <a class="nav-link d-flex align-items-center nav-link" href="javascript:;">
+                                    <span class="animated-icon">
+                                        <div style="width:18px;height:18px"
+                                            data-animation-path="{{ asset('admin/vendor/animated-icons/toggle/toggle.json') }}"
+                                            data-anim-loop="false"></div>
+                                    </span>
+                                    <span class="mr-auto menu-name">Form</span>
+                                    <span class="caret">
+                                        <span class="animated-icon">
+                                            <div style="width:12px;height:12px"
+                                                data-animation-path="{{ asset('admin/vendor/animated-icons/expand/expand.json') }}">
+                                            </div>
+                                        </span>
+                                    </span>
+                                </a>
+                                <div class="sub-menu collapse " aria-expanded="false">
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item ">
+                                            <a href="form-basic-form.html" class="nav-link">
+                                                <span class="mr-auto menu-name">Basic Form</span>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item ">
+                                            <a href="form-editor.html" class="nav-link">
+                                                <span class="mr-auto menu-name">Editor</span>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item ">
+                                            <a href="form-validation.html" class="nav-link">
+                                                <span class="mr-auto menu-name">Validation</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </div>
+                        <div class="sidebar-item">
+                            <li class="nav-item ">
+                                <a class="nav-link d-flex align-items-center nav-link" href="javascript:;">
+                                    <span class="animated-icon">
+                                        <div style="width:18px;height:18px"
+                                            data-animation-path="{{ asset('admin/vendor/animated-icons/box/box.json') }}"
+                                            data-anim-loop="false"></div>
+                                    </span>
+                                    <span class="mr-auto menu-name">Tables</span>
+                                    <span class="caret">
+                                        <span class="animated-icon">
+                                            <div style="width:12px;height:12px"
+                                                data-animation-path="{{ asset('admin/vendor/animated-icons/expand/expand.json') }}">
+                                            </div>
+                                        </span>
+                                    </span>
+                                </a>
+                                <div class="sub-menu collapse " aria-expanded="false">
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item ">
+                                            <a href="tables-basic-table.html" class="nav-link">
+                                                <span class="mr-auto menu-name">Basic Table</span>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item ">
+                                            <a href="tables-responsive.html" class="nav-link">
+                                                <span class="mr-auto menu-name">Responsive</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </div>
+                        <div class="sidebar-item">
+                            <li class="nav-item ">
+                                <a class="nav-link d-flex align-items-center nav-link" href="taskboard.html">
+                                    <span class="animated-icon">
+                                        <div style="width:18px;height:18px"
+                                            data-animation-path="{{ asset('admin/vendor/animated-icons/bookmark-in-book/bookmark-in-book.json') }}"
+                                            data-anim-loop="false"></div>
+                                    </span>
+                                    <span class="mr-auto menu-name">Taskboard</span>
+                                    <span class="badge badge-primary badge-pill">New</span>
+                                </a>
+                            </li>
+                        </div>
+
+                        <div class="sidebar-item">
+                            <li class="nav-item ">
+                                <a class="nav-link d-flex align-items-center nav-link" href="javascript:;">
+                                    <span class="animated-icon">
+                                        <div style="width:18px;height:18px"
+                                            data-animation-path="{{ asset('admin/vendor/animated-icons/document/document.json') }}"
+                                            data-anim-loop="false"></div>
+                                    </span>
+                                    <span class="mr-auto menu-name">Pages</span>
+                                    <span class="caret">
+                                        <span class="animated-icon">
+                                            <div style="width:12px;height:12px"
+                                                data-animation-path="{{ asset('admin/vendor/animated-icons/expand/expand.json') }}">
+                                            </div>
+                                        </span>
+                                    </span>
+                                </a>
+                                <div class="sub-menu collapse " aria-expanded="false">
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item ">
+                                            <a href="pages-invoice.html" class="nav-link">
+                                                <span class="mr-auto menu-name">Invoice</span>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item ">
+                                            <a href="pages-timeline.html" class="nav-link">
+                                                <span class="mr-auto menu-name">Timeline</span>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item ">
+                                            <a href="pages-blank.html" class="nav-link">
+                                                <span class="mr-auto menu-name">Blank</span>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item ">
+                                            <a href="pages-pricing.html" class="nav-link">
+                                                <span class="mr-auto menu-name">Pricing</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </div>
+                        <div class="sidebar-item">
+                            <li class="nav-item ">
+                                <a class="nav-link d-flex align-items-center nav-link" href="calendar.html">
+                                    <span class="animated-icon">
+                                        <div style="width:18px;height:18px"
+                                            data-animation-path="{{ asset('admin/vendor/animated-icons/calendar/calendar.json') }}"
+                                            data-anim-loop="false"></div>
+                                    </span>
+                                    <span class="mr-auto menu-name">Calendar</span>
+                                </a>
+                            </li>
+                        </div>
+
+                        <div class="sidebar-item">
+                            <li class="nav-item ">
+                                <a class="nav-link d-flex align-items-center nav-link" href="javascript:;">
+                                    <span class="animated-icon">
+                                        <div style="width:18px;height:18px"
+                                            data-animation-path="vendor/animated-icons/warning-1/warning-1.json"
+                                            data-anim-loop="false"></div>
+                                    </span>
+                                    <span class="mr-auto menu-name">Error</span>
+                                    <span class="caret">
+                                        <span class="animated-icon">
+                                            <div style="width:12px;height:12px"
+                                                data-animation-path="vendor/animated-icons/expand/expand.json"></div>
+                                        </span>
+                                    </span>
+                                </a>
+                                <div class="sub-menu collapse " aria-expanded="false">
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item ">
+                                            <a href="404.html" class="nav-link">
+                                                <span class="mr-auto menu-name">404</span>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item ">
+                                            <a href="500.html" class="nav-link">
+                                                <span class="mr-auto menu-name">Error</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+            {{-- End Side Bar --}}
+            <div class="page-overlay" style="visibility:hidden;opacity:0"></div>
+
+            <div class="position-relative d-flex flex-column flex-fill page-content" style="min-width:0">
+                <div class="app-header">
+                    <nav class="bg-white navbar">
+                        <ul class="navbar-nav d-lg-none d-sm-flex d-md-flex">
+                            <a class="nav-toggle mobile-toggle">
+                                <span class="animated-icon">
+                                    <div style="width:24px;height:24px"
+                                        data-animation-path="{{ asset('admin/vendor/animated-icons/menu-back/menu-back.json') }}">
+                                    </div>
+                                </span>
+                            </a>
+                            <a href="/" class="navbar-brand">
+                                <img src="{{ asset('/img/skt-bnw-logo.png') }}" width="100px" alt="">
+                                {{-- <svg width="24" height="24">
                     <use xlink:href="#logo-icon"></use>
                   </svg> --}}
-                  
-                </a>
-              </ul>
-              <ul class="ml-auto menu-right navbar-nav">
-                <li class="nav-item">
-                  <a class="nav-link toggle-fullscreen" href="javascript:;">
-                    <span class="animated-icon">
-                      <div
-                        style="width:18px;height:18px"
-                        data-animation-path="{{asset('admin/vendor/animated-icons/fullscreen/fullscreen.json')}}"
-                      ></div>
-                    </span>
-                  </a>
-                </li>
-                <li class="dropdown nav-item">
-                  <a
-                    data-toggle="dropdown"
-                    aria-haspopup="true"
-                    href="#"
-                    class="nav-link"
-                    aria-expanded="false"
-                  >
-                    <span class="animated-icon">
-                      <div
-                        style="width:18px;height:18px"
-                        data-animation-path="{{asset('admin/vendor/animated-icons/toggle/toggle.json')}}"
-                      ></div>
-                    </span>
-                  </a>
-                  <div
-                    tabindex="-1"
-                    role="menu"
-                    aria-hidden="true"
-                    class="app-settings dropdown-menu dropdown-menu-right"
-                  >
-                    <span class="dropdown-item-text">Settings</span>
-                    <div tabindex="-1" class="m-0 dropdown-divider"></div>
-                    <button
-                      type="button"
-                      tabindex="0"
-                      role="menuitem"
-                      class="d-flex align-items-center justify-content-between dropdown-item"
-                    >
-                      <label for="darkModeOption" class="m-0">Dark mode</label>
-                      <div class="custom-switch custom-control">
-                        <input
-                          type="checkbox"
-                          id="darkModeOption"
-                          name="darkModeOption"
-                          class="custom-control-input"
-                        />
-                        <label
-                          class="custom-control-label"
-                          for="darkModeOption"
-                        ></label>
-                      </div>
-                    </button>
-                    <button
-                      type="button"
-                      tabindex="0"
-                      role="menuitem"
-                      class="d-flex align-items-center justify-content-between dropdown-item"
-                    >
-                      <label for="boxedOption" class="m-0">Boxed layout</label>
-                      <div class="custom-switch custom-control">
-                        <input
-                          type="checkbox"
-                          id="boxedOption"
-                          name="boxedOption"
-                          class="custom-control-input"
-                        />
-                        <label
-                          class="custom-control-label"
-                          for="boxedOption"
-                        ></label>
-                      </div>
-                    </button>
-                    <button
-                      type="button"
-                      tabindex="0"
-                      role="menuitem"
-                      class="d-flex align-items-center justify-content-between dropdown-item"
-                    >
-                      <label for="stickyHeaderOption" class="m-0"
-                        >Sticky header</label
-                      >
-                      <div class="custom-switch custom-control">
-                        <input
-                          type="checkbox"
-                          id="stickyHeaderOption"
-                          name="stickyHeaderOption"
-                          class="custom-control-input"
-                        />
-                        <label
-                          class="custom-control-label"
-                          for="stickyHeaderOption"
-                        ></label>
-                      </div>
-                    </button>
-                    <button
-                      type="button"
-                      tabindex="0"
-                      role="menuitem"
-                      class="d-flex align-items-center justify-content-between dropdown-item"
-                    >
-                      <label for="stickySidebarOption" class="m-0"
-                        >Sticky sidebar</label
-                      >
-                      <div class="custom-switch custom-control">
-                        <input
-                          type="checkbox"
-                          id="stickySidebarOption"
-                          name="stickySidebarOption"
-                          class="custom-control-input"
-                        />
-                        <label
-                          class="custom-control-label"
-                          for="stickySidebarOption"
-                        ></label>
-                      </div>
-                    </button>
-                    <button
-                      type="button"
-                      tabindex="0"
-                      role="menuitem"
-                      class="d-flex align-items-center justify-content-between dropdown-item"
-                    >
-                      <label for="collapsedSidebarOption" class="m-0"
-                        >Collapsed sidebar</label
-                      >
-                      <div class="custom-switch custom-control">
-                        <input
-                          type="checkbox"
-                          id="collapsedSidebarOption"
-                          name="collapsedSidebarOption"
-                          class="custom-control-input"
-                        />
-                        <label
-                          class="custom-control-label"
-                          for="collapsedSidebarOption"
-                        ></label>
-                      </div>
-                    </button>
-                    <button
-                      type="button"
-                      tabindex="0"
-                      role="menuitem"
-                      class="d-flex align-items-center justify-content-between dropdown-item"
-                    >
-                      <label for="topHeaderOption" class="m-0"
-                        >Top header</label
-                      >
-                      <div class="custom-switch custom-control">
-                        <input
-                          type="checkbox"
-                          id="topHeaderOption"
-                          name="topHeaderOption"
-                          class="custom-control-input"
-                        />
-                        <label
-                          class="custom-control-label"
-                          for="topHeaderOption"
-                        ></label>
-                      </div>
-                    </button>
-                  </div>
-                </li>
-                <li class="dropdown nav-item">
-                  <a
-                    data-toggle="dropdown"
-                    aria-haspopup="true"
-                    href="#"
-                    class="nav-link"
-                    aria-expanded="false"
-                  >
-                    <span
-                      class="position-relative d-flex rounded-circle"
-                      style="width:32px;height:32px"
-                    >
-                      <img
-                        src="{{asset('admin/images/avatar.jpg')}}"
-                        alt="avatar"
-                        width="32px"
-                        height="32px"
-                        class="rounded-circle"
-                      />
-                    </span>
-                  </a>
-                  <div
-                    tabindex="-1"
-                    role="menu"
-                    aria-hidden="true"
-                    class="dropdown-menu dropdown-menu-right"
-                  >
-                    <button
-                      type="button"
-                      tabindex="0"
-                      role="menuitem"
-                      class="dropdown-item"
-                    >
-                      Settings
-                    </button>
-                    <button
-                      type="button"
-                      tabindex="0"
-                      role="menuitem"
-                      class="dropdown-item"
-                    >
-                      Profile
-                    </button>
-                    <button
-                      type="button"
-                      tabindex="0"
-                      role="menuitem"
-                      class="dropdown-item"
-                    >
-                      Notifications
-                    </button>
-                    <div tabindex="-1" class="dropdown-divider"></div>
-                    <form action="{{route('logout')}}" method="post">
-                        @csrf
-                        <button
-                        type="submit"
-                        tabindex="0"
-                        role="menuitem"
-                        class="dropdown-item"
-                        >
-                        Logout
-                    </button>
-                </form>
-                  </div>
-                </li>
-              </ul>
-            </nav>
-          </div>
 
-         @yield('content')
+                            </a>
+                        </ul>
+                        <ul class="ml-auto menu-right navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link toggle-fullscreen" href="javascript:;">
+                                    <span class="animated-icon">
+                                        <div style="width:18px;height:18px"
+                                            data-animation-path="{{ asset('admin/vendor/animated-icons/fullscreen/fullscreen.json') }}">
+                                        </div>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="dropdown nav-item">
+                                <a data-toggle="dropdown" aria-haspopup="true" href="#" class="nav-link"
+                                    aria-expanded="false">
+                                    <span class="animated-icon">
+                                        <div style="width:18px;height:18px"
+                                            data-animation-path="{{ asset('admin/vendor/animated-icons/toggle/toggle.json') }}">
+                                        </div>
+                                    </span>
+                                </a>
+                                <div tabindex="-1" role="menu" aria-hidden="true"
+                                    class="app-settings dropdown-menu dropdown-menu-right">
+                                    <span class="dropdown-item-text">Settings</span>
+                                    <div tabindex="-1" class="m-0 dropdown-divider"></div>
+                                    <button type="button" tabindex="0" role="menuitem"
+                                        class="d-flex align-items-center justify-content-between dropdown-item">
+                                        <label for="darkModeOption" class="m-0">Dark mode</label>
+                                        <div class="custom-switch custom-control">
+                                            <input type="checkbox" id="darkModeOption" name="darkModeOption"
+                                                class="custom-control-input" />
+                                            <label class="custom-control-label" for="darkModeOption"></label>
+                                        </div>
+                                    </button>
+                                    <button type="button" tabindex="0" role="menuitem"
+                                        class="d-flex align-items-center justify-content-between dropdown-item">
+                                        <label for="boxedOption" class="m-0">Boxed layout</label>
+                                        <div class="custom-switch custom-control">
+                                            <input type="checkbox" id="boxedOption" name="boxedOption"
+                                                class="custom-control-input" />
+                                            <label class="custom-control-label" for="boxedOption"></label>
+                                        </div>
+                                    </button>
+                                    <button type="button" tabindex="0" role="menuitem"
+                                        class="d-flex align-items-center justify-content-between dropdown-item">
+                                        <label for="stickyHeaderOption" class="m-0">Sticky header</label>
+                                        <div class="custom-switch custom-control">
+                                            <input type="checkbox" id="stickyHeaderOption" name="stickyHeaderOption"
+                                                class="custom-control-input" />
+                                            <label class="custom-control-label" for="stickyHeaderOption"></label>
+                                        </div>
+                                    </button>
+                                    <button type="button" tabindex="0" role="menuitem"
+                                        class="d-flex align-items-center justify-content-between dropdown-item">
+                                        <label for="stickySidebarOption" class="m-0">Sticky sidebar</label>
+                                        <div class="custom-switch custom-control">
+                                            <input type="checkbox" id="stickySidebarOption"
+                                                name="stickySidebarOption" class="custom-control-input" />
+                                            <label class="custom-control-label" for="stickySidebarOption"></label>
+                                        </div>
+                                    </button>
+                                    <button type="button" tabindex="0" role="menuitem"
+                                        class="d-flex align-items-center justify-content-between dropdown-item">
+                                        <label for="collapsedSidebarOption" class="m-0">Collapsed sidebar</label>
+                                        <div class="custom-switch custom-control">
+                                            <input type="checkbox" id="collapsedSidebarOption"
+                                                name="collapsedSidebarOption" class="custom-control-input" />
+                                            <label class="custom-control-label" for="collapsedSidebarOption"></label>
+                                        </div>
+                                    </button>
+                                    <button type="button" tabindex="0" role="menuitem"
+                                        class="d-flex align-items-center justify-content-between dropdown-item">
+                                        <label for="topHeaderOption" class="m-0">Top header</label>
+                                        <div class="custom-switch custom-control">
+                                            <input type="checkbox" id="topHeaderOption" name="topHeaderOption"
+                                                class="custom-control-input" />
+                                            <label class="custom-control-label" for="topHeaderOption"></label>
+                                        </div>
+                                    </button>
+                                </div>
+                            </li>
+                            <li class="dropdown nav-item">
+                                <a data-toggle="dropdown" aria-haspopup="true" href="#" class="nav-link"
+                                    aria-expanded="false">
+                                    <span class="position-relative d-flex rounded-circle"
+                                        style="width:32px;height:32px">
+                                        <img src="{{ asset('admin/images/avatar.jpg') }}" alt="avatar"
+                                            width="32px" height="32px" class="rounded-circle" />
+                                    </span>
+                                </a>
+                                <div tabindex="-1" role="menu" aria-hidden="true"
+                                    class="dropdown-menu dropdown-menu-right">
+                                    <button type="button" tabindex="0" role="menuitem" class="dropdown-item">
+                                        Settings
+                                    </button>
+                                    <button type="button" tabindex="0" role="menuitem" class="dropdown-item">
+                                        Profile
+                                    </button>
+                                    <button type="button" tabindex="0" role="menuitem" class="dropdown-item">
+                                        Notifications
+                                    </button>
+                                    <div tabindex="-1" class="dropdown-divider"></div>
+                                    <form action="{{ route('logout') }}" method="post">
+                                        @csrf
+                                        <button type="submit" tabindex="0" role="menuitem" class="dropdown-item">
+                                            Logout
+                                        </button>
+                                    </form>
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
 
-          <div class="app-footer bg-light">
-            <nav class="navbar navbar-expand">
-              <div class="collapse show navbar-collapse" aria-expanded="true">
-                <ul class="navbar-nav">
-                  <li class="nav-item">
-                    {{-- <a class="nav-link"
+                <div class="m-4">
+                    @yield('content')
+                </div>
+
+                <div class="app-footer bg-light">
+                    <nav class="navbar navbar-expand">
+                        <div class="collapse show navbar-collapse" aria-expanded="true">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    {{-- <a class="nav-link"
                       >© Copyright FusePX Premium Templates 2020</a
                     > --}}
-                  </li>
-                </ul>
-              </div>
-              <ul class="ml-auto menu-right navbar-nav">
-                <li class="nav-item"><a class="nav-link">About</a></li>
-                <li class="nav-item"><a class="nav-link">Team</a></li>
-                <li class="nav-item"><a class="nav-link">Contact</a></li>
-              </ul>
-            </nav>
-          </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <ul class="ml-auto menu-right navbar-nav">
+                            <li class="nav-item"><a class="nav-link">About</a></li>
+                            <li class="nav-item"><a class="nav-link">Team</a></li>
+                            <li class="nav-item"><a class="nav-link">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
 
-    <script src="{{asset('admin/vendor/jquery-3.4.1.slim.min.js')}}"></script>
-    <script src="{{asset('admin/vendor/bootstrap.bundle.min.js')}}"></script>
-    <script src="{{asset('admin/vendor/lottie.js')}}"></script>
+    <script src="{{ asset('admin/vendor/jquery-3.4.1.slim.min.js') }}"></script>
+    <script src="{{ asset('admin/vendor/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ asset('admin/vendor/lottie.js') }}"></script>
 
-    <script src="{{asset('admin/js/app.js')}}"></script>
+    <script src="{{ asset('admin/js/app.js') }}"></script>
 
-    <script src="{{asset('admin/js/dashboard.js')}}"></script>
+    <script src="{{ asset('admin/js/dashboard.js') }}"></script>
 
-  </body>
+</body>
+
 </html>

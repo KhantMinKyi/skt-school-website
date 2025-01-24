@@ -27,6 +27,8 @@ class User extends Authenticatable
         'user_status',
         'phone',
         'branch_id',
+        'gender',
+        'birth_date',
     ];
 
     /**
