@@ -1108,5 +1108,6 @@
     <script src="{{asset('admin/js/app.js')}}"></script>
 
     <script src="{{asset('admin/js/dashboard.js')}}"></script>
+
   </body>
 </html>
