@@ -22,7 +22,11 @@
         }
     </style>
     <link rel="stylesheet" href="{{ asset('admin/css/app.css') }}" />
-
+    <style>
+        table td {
+            vertical-align: middle !important;
+        }
+    </style>
     <script src="{{ asset('admin/vendor/Chart.min.js') }}"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"
         integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="

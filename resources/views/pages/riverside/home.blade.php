@@ -1,6 +1,8 @@
+@php
+    use App\Models\Branch;
+    $skt_riverside_campus = Branch::where('branch_short_name', 'SKT-RC')->first();
+@endphp
 @extends('layouts.riverside_layout')
-
-
 @section('content')
     <style>
         #bouncing-text span {
@@ -95,7 +97,8 @@
                     <div class="container mb-4">
                         <div class="row">
                             <div class="col-12 " style="cursor: pointer ">
-                                <img src="img/skt_riverside_campus.png" width="180" class="bounce-up" alt="">
+                                <img src="{{ asset($skt_riverside_campus->branch_logo) }}" width="180" class="bounce-up"
+                                    alt="">
                             </div>
                             {{-- <div class="col-6 " style="cursor: pointer " >
 									<img src="img/skt_city_campus.png" width="180" class="bounce-up" alt="">
@@ -183,10 +186,10 @@
                     data-wow-offset="0">
                     <div class="ab_img">
                         {{-- <img src="assets/images/all-img/about1.png" class="img-fluid" alt="image"> --}}
-                        <img src="img/home-banner-hero.png" class="img-fluid" alt="image">
+                        <img src="{{ asset($skt_riverside_campus->branch_logo) }}" class="img-fluid" alt="image">
                         <!-- <div class="wc_year">
-                                                                <h3><span>6k+</span> <br />Happy Clients</h3>
-                                                               </div> -->
+                                                                                <h3><span>6k+</span> <br />Happy Clients</h3>
+                                                                               </div> -->
                     </div>
                 </div><!--- END COL -->
                 <div class="col-lg-6 col-sm-12 col-xs-12 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.1s"
@@ -533,8 +536,8 @@
                     <div class="cp_img">
                         <img src="assets/images/all-img/promo.png" class="img-fluid" alt="image">
                         <!-- <div class="wc_year">
-                                                                <h3>20 Years of Experience <br />from 2002</h3>
-                                                               </div> -->
+                                                                                <h3>20 Years of Experience <br />from 2002</h3>
+                                                                               </div> -->
                     </div>
                 </div><!--- END COL -->
             </div><!--- END ROW -->

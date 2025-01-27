@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('branch_location')->nullable();
             $table->string('branch_logo')->nullable();
             $table->text('branch_description')->nullable();
+            $table->boolean('is_active')->default(1);
             $table->timestamps();
         });
     }

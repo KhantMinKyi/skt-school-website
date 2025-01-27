@@ -61,31 +61,34 @@
                                     <td>{{ $user->user_name }}</td>
                                     <td>{{ $user->email }}</td>
                                     <td>{{ $user->phone }}</td>
-                                    <td class="d-flex justify-content-center">
-                                        <span class="animated-icon mr-2 ">
-                                            <div style="width:14px;height:14px; cursor: pointer;"
-                                                data-animation-path="{{ asset('admin/vendor/animated-icons/eye/eye.json') }}"
-                                                data-anim-loop="false" title="view user"></div>
-                                        </span>
-                                        <a class="animated-icon mr-2" href="{{ route('admin-users.edit', $user->id) }}">
-                                            <div style="width:14px;height:14px; cursor: pointer;"
-                                                data-animation-path="{{ asset('admin/vendor/animated-icons/edit/edit.json') }}"
-                                                data-anim-loop="false" title="edit user">
-                                            </div>
-                                        </a>
-                                        <a href="{{ route('admin-users.show_reset_password', $user->id) }}"
-                                            class="animated-icon mr-2 ">
-                                            <div style="width:14px;height:14px; cursor: pointer;"
-                                                data-animation-path="{{ asset('admin/vendor/animated-icons/restart/restart.json') }}"
-                                                data-anim-loop="false" title="reset password"></div>
-                                        </a>
-                                        <a href="{{ route('admin-users.archived_user', $user->id) }}?status=0"
-                                            onclick="return confirm('Are you sure you want to archive this user?');"
-                                            class="animated-icon mr-2 ">
-                                            <div style="width:14px;height:14px; cursor: pointer;"
-                                                data-animation-path="{{ asset('admin/vendor/animated-icons/trash-bin/trash-bin.json') }}"
-                                                data-anim-loop="false" title="archive user"></div>
-                                        </a>
+                                    <td>
+                                        <div class="d-flex justify-content-center align-items-center">
+                                            <span class="animated-icon mr-2 ">
+                                                <div style="width:14px;height:14px; cursor: pointer;"
+                                                    data-animation-path="{{ asset('admin/vendor/animated-icons/eye/eye.json') }}"
+                                                    data-anim-loop="false" title="view user"></div>
+                                            </span>
+                                            <a class="animated-icon mr-2"
+                                                href="{{ route('admin-users.edit', $user->id) }}">
+                                                <div style="width:14px;height:14px; cursor: pointer;"
+                                                    data-animation-path="{{ asset('admin/vendor/animated-icons/edit/edit.json') }}"
+                                                    data-anim-loop="false" title="edit user">
+                                                </div>
+                                            </a>
+                                            <a href="{{ route('admin-users.show_reset_password', $user->id) }}"
+                                                class="animated-icon mr-2 ">
+                                                <div style="width:14px;height:14px; cursor: pointer;"
+                                                    data-animation-path="{{ asset('admin/vendor/animated-icons/restart/restart.json') }}"
+                                                    data-anim-loop="false" title="reset password"></div>
+                                            </a>
+                                            <a href="{{ route('admin-users.archived_user', $user->id) }}?status=0"
+                                                onclick="return confirm('Are you sure you want to archive this user?');"
+                                                class="animated-icon mr-2 ">
+                                                <div style="width:14px;height:14px; cursor: pointer;"
+                                                    data-animation-path="{{ asset('admin/vendor/animated-icons/trash-bin/trash-bin.json') }}"
+                                                    data-anim-loop="false" title="archive user"></div>
+                                            </a>
+                                        </div>
                                     </td>
                                 </tr>
                             @endforeach

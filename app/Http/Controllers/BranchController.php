@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Branch;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
 
 class BranchController extends Controller
 {
@@ -11,7 +13,8 @@ class BranchController extends Controller
      */
     public function index()
     {
-        //
+        $branches = Branch::where('is_active', 1)->paginate(10);
+        return view('admin.branches.branch_index', compact('branches'));
     }
 
     /**
@@ -27,7 +30,31 @@ class BranchController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->validate([
+            'branch_logo' => 'required|file',
+            'branch_name' => 'required',
+            'branch_short_name' => 'required',
+            'branch_location' => 'required',
+            'branch_description' => 'nullable',
+        ]);
+
+        if (isset($data['branch_logo'])) {
+            $filePath = "img/branch_data/" . $data['branch_short_name'];
+            if (!File::exists($filePath)) {
+                $result = File::makeDirectory($filePath, 0755, true);
+            }
+
+            $photo = $data['branch_logo'];
+            $extension = $photo->getClientOriginalExtension();
+            $imageUid = uniqid('', true);
+            $photoName = $filePath . "/team_" . $imageUid . "." . $extension;
+
+            $photo->move($filePath, "/team_" . $imageUid . "." . $extension);
+            $data['branch_logo'] = "/" . $photoName;
+        }
+        Branch::create($data);
+        return to_route('admin-branches.index')->with('success', 'Branch Created Successfully!');
+        // dd($data);
     }
 
     /**
