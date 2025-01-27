@@ -47,9 +47,9 @@ class BranchController extends Controller
             $photo = $data['branch_logo'];
             $extension = $photo->getClientOriginalExtension();
             $imageUid = uniqid('', true);
-            $photoName = $filePath . "/team_" . $imageUid . "." . $extension;
+            $photoName = $filePath . "/branch_" . $imageUid . "." . $extension;
 
-            $photo->move($filePath, "/team_" . $imageUid . "." . $extension);
+            $photo->move($filePath, "/branch_" . $imageUid . "." . $extension);
             $data['branch_logo'] = "/" . $photoName;
         }
         Branch::create($data);
@@ -70,7 +70,8 @@ class BranchController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $branch = Branch::find($id);
+        return view('partial_view.admin.branches.branch_edit', compact('branch'));
     }
 
     /**
@@ -78,7 +79,36 @@ class BranchController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $data = $request->validate([
+            'branch_logo' => 'nullable|file',
+            'branch_name' => 'required',
+            'branch_short_name' => 'required',
+            'branch_location' => 'required',
+            'branch_description' => 'nullable',
+        ]);
+        $branch = Branch::find($id);
+        if (isset($data['branch_logo'])) {
+            if (File::exists(public_path($branch->branch_logo))) {
+                File::delete(public_path($branch->branch_logo));
+                // dd('yes');
+            }
+            // dd('no');
+            $filePath = "img/branch_data/" . $data['branch_short_name'];
+            if (!File::exists($filePath)) {
+                $result = File::makeDirectory($filePath, 0755, true);
+            }
+
+            $photo = $data['branch_logo'];
+            $extension = $photo->getClientOriginalExtension();
+            $imageUid = uniqid('', true);
+            $photoName = $filePath . "/branch_" . $imageUid . "." . $extension;
+
+            $photo->move($filePath, "/branch_" . $imageUid . "." . $extension);
+            $data['branch_logo'] = "/" . $photoName;
+        }
+        $branch->update($data);
+        // dd($request->all());
+        return to_route('admin-branches.index')->with('success', 'Branch Updated Successfully');
     }
 
     /**
