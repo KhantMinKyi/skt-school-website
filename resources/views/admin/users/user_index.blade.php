@@ -73,11 +73,12 @@
                                                 data-anim-loop="false" title="edit user">
                                             </div>
                                         </a>
-                                        <span class="animated-icon mr-2 ">
+                                        <a href="{{ route('admin-users.show_reset_password', $user->id) }}"
+                                            class="animated-icon mr-2 ">
                                             <div style="width:14px;height:14px; cursor: pointer;"
                                                 data-animation-path="{{ asset('admin/vendor/animated-icons/restart/restart.json') }}"
                                                 data-anim-loop="false" title="reset password"></div>
-                                        </span>
+                                        </a>
                                         <a href="{{ route('admin-users.archived_user', $user->id) }}?status=0"
                                             onclick="return confirm('Are you sure you want to archive this user?');"
                                             class="animated-icon mr-2 ">
@@ -133,11 +134,12 @@
                                                 data-anim-loop="false" title="edit user">
                                             </div>
                                         </a>
-                                        <span class="animated-icon mr-2 ">
+                                        <a href="{{ route('admin-users.show_reset_password', $user->id) }}"
+                                            class="animated-icon mr-2 ">
                                             <div style="width:14px;height:14px; cursor: pointer;"
                                                 data-animation-path="{{ asset('admin/vendor/animated-icons/restart/restart.json') }}"
                                                 data-anim-loop="false" title="reset password"></div>
-                                        </span>
+                                        </a>
                                         <a href="{{ route('admin-users.archived_user', $user->id) }}?status=0"
                                             onclick="return confirm('Are you sure you want to archive this user?');"
                                             class="animated-icon mr-2 ">

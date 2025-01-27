@@ -37,7 +37,7 @@ class AuthController extends Controller
                 return redirect('/administration-panel/staff/dashborad');
             } else {
                 Auth::logout();
-                return redirect('/')->withErrors('Something wrong with your account.');
+                return redirect('/administration-panel/login')->withErrors('Something wrong with your account.');
             }
         } else {
             // throw new \ErrorException('Invalid Username or password!');
@@ -46,7 +46,7 @@ class AuthController extends Controller
             //             'email' => 'Invalid username or pasword!',
             //         ]);
             Session::flush('errors');
-            return redirect('/')->withErrors('Invalid username or password!');
+            return redirect('/administration-panel/login')->withErrors('Invalid username or password!');
         }
     }
     public function logout(Request $request)

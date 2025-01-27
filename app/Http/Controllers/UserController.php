@@ -122,4 +122,24 @@ class UserController extends Controller
         // dd($archived_users);
         return view('partial_view.admin.users.user_archived', compact('archived_users'));
     }
+    public function showResetPassword($id)
+    {
+        $reset_password_user = User::find($id);
+        // dd($archived_users);
+        return view('partial_view.admin.users.user_reset_password', compact('reset_password_user'));
+    }
+
+    public function resetPassword(Request $request)
+    {
+        $data = $request->validate([
+            'user_id' => 'required',
+            'password' => 'required'
+        ]);
+        $user = User::find($data['user_id']);
+        $user->update([
+            'password' => bcrypt($data['password'])
+        ]);
+        return to_route('admin-users.index')->with('success', 'Password Updated Successfully');
+        // dd($request->all());
+    }
 }
