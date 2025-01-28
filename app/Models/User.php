@@ -57,4 +57,12 @@ class User extends Authenticatable
     {
         return $this->belongsTo(Branch::class);
     }
+    public function created_posts()
+    {
+        return $this->hasMany(Post::class, 'post_created_user_id');
+    }
+    public function created_categories()
+    {
+        return $this->hasMany(Category::class, 'category_created_user_id');
+    }
 }

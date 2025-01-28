@@ -435,7 +435,8 @@
                     <ul class="d-block scroll-y flex-1 py-3 nav flex-column">
                         <div class="sidebar-item">
                             <li class="nav-item  active">
-                                <a class="nav-link d-flex align-items-center nav-link" href="index.html">
+                                <a class="nav-link d-flex align-items-center nav-link"
+                                    href="{{ route('admin.dashboard') }}">
                                     <span class="animated-icon">
                                         <div style="width:18px;height:18px"
                                             data-animation-path="{{ asset('admin/vendor/animated-icons/activity/activity.json') }}"
@@ -484,86 +485,14 @@
                                                 <span class="mr-auto menu-name">Branches</span>
                                             </a>
                                         </li>
-                                    </ul>
-                                </div>
-                            </li>
-                        </div>
-                        <div class="sidebar-item">
-                            <li class="nav-item ">
-                                <a class="nav-link d-flex align-items-center nav-link" href="widgets.html">
-                                    <span class="animated-icon">
-                                        <div style="width:18px;height:18px"
-                                            data-animation-path="{{ asset('admin/vendor/animated-icons/book/book.json') }}"
-                                            data-anim-loop="false"></div>
-                                    </span>
-                                    <span class="mr-auto menu-name">Widgets</span>
-                                    <span class="badge badge-danger badge-pill">5</span>
-                                </a>
-                            </li>
-                        </div>
-                        <div class="sidebar-item">
-                            <li class="nav-item ">
-                                <a class="nav-link d-flex align-items-center nav-link" href="javascript:;">
-                                    <span class="animated-icon">
-                                        <div style="width:18px;height:18px"
-                                            data-animation-path="vendor/animated-icons/folder/folder.json"
-                                            data-anim-loop="false"></div>
-                                    </span>
-                                    <span class="mr-auto menu-name">Bootstrap UI</span>
-                                    <span class="caret">
-                                        <span class="animated-icon">
-                                            <div style="width:12px;height:12px"
-                                                data-animation-path="{{ asset('admin/vendor/animated-icons/expand/expand.json') }}">
-                                            </div>
-                                        </span>
-                                    </span>
-                                </a>
-                                <div class="sub-menu collapse " aria-expanded="false">
-                                    <ul class="nav flex-column">
                                         <li class="nav-item ">
-                                            <a href="bootstrap-ui-alerts.html" class="nav-link">
-                                                <span class="mr-auto menu-name">Alerts</span>
-                                            </a>
-                                        </li>
-                                        <li class="nav-item ">
-                                            <a href="bootstrap-ui-badge.html" class="nav-link">
-                                                <span class="mr-auto menu-name">Badge</span>
-                                            </a>
-                                        </li>
-                                        <li class="nav-item ">
-                                            <a href="bootstrap-ui-buttons.html" class="nav-link">
-                                                <span class="mr-auto menu-name">Buttons</span>
-                                            </a>
-                                        </li>
-                                        <li class="nav-item ">
-                                            <a href="bootstrap-ui-card.html" class="nav-link">
-                                                <span class="mr-auto menu-name">Card</span>
-                                            </a>
-                                        </li>
-                                        <li class="nav-item ">
-                                            <a href="bootstrap-ui-carousel.html" class="nav-link">
-                                                <span class="mr-auto menu-name">Carousel</span>
-                                            </a>
-                                        </li>
-                                        <li class="nav-item ">
-                                            <a href="bootstrap-ui-jumbotron.html" class="nav-link">
-                                                <span class="mr-auto menu-name">Jumbotron</span>
-                                            </a>
-                                        </li>
-                                        <li class="nav-item ">
-                                            <a href="bootstrap-ui-list-group.html" class="nav-link">
-                                                <span class="mr-auto menu-name">List Group</span>
-                                            </a>
-                                        </li>
-
-                                        <li class="nav-item ">
-                                            <a href="bootstrap-ui-progress.html" class="nav-link">
-                                                <span class="mr-auto menu-name">Progress</span>
-                                            </a>
-                                        </li>
-                                        <li class="nav-item ">
-                                            <a href="bootstrap-ui-other.html" class="nav-link">
-                                                <span class="mr-auto menu-name">Other</span>
+                                            <a href="{{ route('admin-categories.index') }}" class="nav-link">
+                                                <span class="animated-icon">
+                                                    <div style="width:18px;height:18px"
+                                                        data-animation-path="{{ asset('admin/vendor/animated-icons/icon-list-view/icon-list-view.json') }}"
+                                                        data-anim-loop="false"></div>
+                                                </span>
+                                                <span class="mr-auto menu-name">Categories</span>
                                             </a>
                                         </li>
                                     </ul>
@@ -572,110 +501,39 @@
                         </div>
                         <div class="sidebar-item">
                             <li class="nav-item ">
-                                <a class="nav-link d-flex align-items-center nav-link" href="messages.html">
+                                <a class="nav-link d-flex align-items-center nav-link"
+                                    href="{{ route('admin-events.index') }}">
                                     <span class="animated-icon">
                                         <div style="width:18px;height:18px"
-                                            data-animation-path="{{ asset('admin/vendor/animated-icons/speech/speech.json') }}"
+                                            data-animation-path="{{ asset('admin/vendor/animated-icons/calendar/calendar.json') }}"
                                             data-anim-loop="false"></div>
                                     </span>
-                                    <span class="mr-auto menu-name">Messages</span>
+                                    <span class="mr-auto menu-name">Events</span>
                                 </a>
                             </li>
                         </div>
                         <div class="sidebar-item">
                             <li class="nav-item ">
-                                <a class="nav-link d-flex align-items-center nav-link" href="javascript:;">
-                                    <span class="animated-icon">
-                                        <div style="width:18px;height:18px"
-                                            data-animation-path="{{ asset('admin/vendor/animated-icons/toggle/toggle.json') }}"
-                                            data-anim-loop="false"></div>
-                                    </span>
-                                    <span class="mr-auto menu-name">Form</span>
-                                    <span class="caret">
-                                        <span class="animated-icon">
-                                            <div style="width:12px;height:12px"
-                                                data-animation-path="{{ asset('admin/vendor/animated-icons/expand/expand.json') }}">
-                                            </div>
-                                        </span>
-                                    </span>
-                                </a>
-                                <div class="sub-menu collapse " aria-expanded="false">
-                                    <ul class="nav flex-column">
-                                        <li class="nav-item ">
-                                            <a href="form-basic-form.html" class="nav-link">
-                                                <span class="mr-auto menu-name">Basic Form</span>
-                                            </a>
-                                        </li>
-                                        <li class="nav-item ">
-                                            <a href="form-editor.html" class="nav-link">
-                                                <span class="mr-auto menu-name">Editor</span>
-                                            </a>
-                                        </li>
-                                        <li class="nav-item ">
-                                            <a href="form-validation.html" class="nav-link">
-                                                <span class="mr-auto menu-name">Validation</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
-                        </div>
-                        <div class="sidebar-item">
-                            <li class="nav-item ">
-                                <a class="nav-link d-flex align-items-center nav-link" href="javascript:;">
-                                    <span class="animated-icon">
-                                        <div style="width:18px;height:18px"
-                                            data-animation-path="{{ asset('admin/vendor/animated-icons/box/box.json') }}"
-                                            data-anim-loop="false"></div>
-                                    </span>
-                                    <span class="mr-auto menu-name">Tables</span>
-                                    <span class="caret">
-                                        <span class="animated-icon">
-                                            <div style="width:12px;height:12px"
-                                                data-animation-path="{{ asset('admin/vendor/animated-icons/expand/expand.json') }}">
-                                            </div>
-                                        </span>
-                                    </span>
-                                </a>
-                                <div class="sub-menu collapse " aria-expanded="false">
-                                    <ul class="nav flex-column">
-                                        <li class="nav-item ">
-                                            <a href="tables-basic-table.html" class="nav-link">
-                                                <span class="mr-auto menu-name">Basic Table</span>
-                                            </a>
-                                        </li>
-                                        <li class="nav-item ">
-                                            <a href="tables-responsive.html" class="nav-link">
-                                                <span class="mr-auto menu-name">Responsive</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
-                        </div>
-                        <div class="sidebar-item">
-                            <li class="nav-item ">
-                                <a class="nav-link d-flex align-items-center nav-link" href="taskboard.html">
-                                    <span class="animated-icon">
-                                        <div style="width:18px;height:18px"
-                                            data-animation-path="{{ asset('admin/vendor/animated-icons/bookmark-in-book/bookmark-in-book.json') }}"
-                                            data-anim-loop="false"></div>
-                                    </span>
-                                    <span class="mr-auto menu-name">Taskboard</span>
-                                    <span class="badge badge-primary badge-pill">New</span>
-                                </a>
-                            </li>
-                        </div>
-
-                        <div class="sidebar-item">
-                            <li class="nav-item ">
-                                <a class="nav-link d-flex align-items-center nav-link" href="javascript:;">
+                                <a class="nav-link d-flex align-items-center nav-link"
+                                    href="{{ route('admin-posts.index') }}">
                                     <span class="animated-icon">
                                         <div style="width:18px;height:18px"
                                             data-animation-path="{{ asset('admin/vendor/animated-icons/document/document.json') }}"
                                             data-anim-loop="false"></div>
                                     </span>
-                                    <span class="mr-auto menu-name">Pages</span>
+                                    <span class="mr-auto menu-name">Posts</span>
+                                </a>
+                            </li>
+                        </div>
+                        <div class="sidebar-item">
+                            <li class="nav-item ">
+                                <a class="nav-link d-flex align-items-center nav-link" href="javascript:;">
+                                    <span class="animated-icon">
+                                        <div style="width:18px;height:18px"
+                                            data-animation-path="{{ asset('admin/vendor/animated-icons/paint-roller/paint-roller.json') }}"
+                                            data-anim-loop="false"></div>
+                                    </span>
+                                    <span class="mr-auto menu-name">Appearance</span>
                                     <span class="caret">
                                         <span class="animated-icon">
                                             <div style="width:12px;height:12px"
@@ -687,26 +545,27 @@
                                 <div class="sub-menu collapse " aria-expanded="false">
                                     <ul class="nav flex-column">
                                         <li class="nav-item ">
-                                            <a href="pages-invoice.html" class="nav-link">
-                                                <span class="mr-auto menu-name">Invoice</span>
+                                            <a href="{{ route('admin-users.index') }}" class="nav-link">
+                                                <span class="animated-icon">
+                                                    <div style="width:18px;height:18px"
+                                                        data-animation-path="{{ asset('admin/vendor/animated-icons/menu-forward/menu-forward.json') }}"
+                                                        data-anim-loop="false"></div>
+                                                </span>
+                                                <span class="mr-auto menu-name">Nav Bar</span>
                                             </a>
                                         </li>
                                         <li class="nav-item ">
-                                            <a href="pages-timeline.html" class="nav-link">
-                                                <span class="mr-auto menu-name">Timeline</span>
-                                            </a>
-                                        </li>
-                                        <li class="nav-item ">
-                                            <a href="pages-blank.html" class="nav-link">
-                                                <span class="mr-auto menu-name">Blank</span>
-                                            </a>
-                                        </li>
-                                        <li class="nav-item ">
-                                            <a href="pages-pricing.html" class="nav-link">
-                                                <span class="mr-auto menu-name">Pricing</span>
+                                            <a href="{{ route('admin-branches.index') }}" class="nav-link">
+                                                <span class="animated-icon">
+                                                    <div style="width:18px;height:18px"
+                                                        data-animation-path="{{ asset('admin/vendor/animated-icons/bookmark-in-book/bookmark-in-book.json') }}"
+                                                        data-anim-loop="false"></div>
+                                                </span>
+                                                <span class="mr-auto menu-name">Pages</span>
                                             </a>
                                         </li>
                                     </ul>
+
                                 </div>
                             </li>
                         </div>
