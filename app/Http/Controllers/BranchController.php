@@ -118,4 +118,24 @@ class BranchController extends Controller
     {
         //
     }
+    public function archivedBranch(string $id, Request $request)
+    {
+        $branch = Branch::find($id);
+        // dd($branch);
+        if ($branch) {
+            $branch->update(['is_active' => $request->status]);
+            return to_route('admin-branches.index')->with('success', 'Updated Successfully!');;
+            // dd($user);
+        } else {
+            return response()->json([
+                'message' => 'Cannot Find a Branch'
+            ]);
+        }
+    }
+    public function showArchivedBranch()
+    {
+        $archived_branches = Branch::where('is_active', 0)->paginate(10);
+        // dd($archived_branches);
+        return view('partial_view.admin.branches.branch_archived', compact('archived_branches'));
+    }
 }

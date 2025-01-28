@@ -15,6 +15,7 @@ class Branch extends Model
         'branch_location',
         'branch_logo',
         'branch_description',
+        'is_active',
     ];
     public function users()
     {
