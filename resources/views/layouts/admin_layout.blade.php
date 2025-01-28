@@ -434,7 +434,7 @@
                     </nav>
                     <ul class="d-block scroll-y flex-1 py-3 nav flex-column">
                         <div class="sidebar-item">
-                            <li class="nav-item  active">
+                            <li class="nav-item  {{ request()->routeIs('admin.dashboard') ? 'active' : '' }}">
                                 <a class="nav-link d-flex align-items-center nav-link"
                                     href="{{ route('admin.dashboard') }}">
                                     <span class="animated-icon">
@@ -463,9 +463,12 @@
                                         </span>
                                     </span>
                                 </a>
-                                <div class="sub-menu collapse " aria-expanded="false">
+                                <div div
+                                    class="sub-menu collapse {{ request()->routeIs('admin-users.index', 'admin-branches.index', 'admin-categories.index') ? 'show' : '' }}"
+                                    aria-expanded="{{ request()->routeIs('admin-users.index', 'admin-branches.index', 'admin-categories.index') ? 'true' : 'false' }}">
                                     <ul class="nav flex-column">
-                                        <li class="nav-item ">
+                                        <li
+                                            class="nav-item {{ request()->routeIs('admin-users.index') ? 'active' : '' }}">
                                             <a href="{{ route('admin-users.index') }}" class="nav-link">
                                                 <span class="animated-icon">
                                                     <div style="width:18px;height:18px"
@@ -475,7 +478,8 @@
                                                 <span class="mr-auto menu-name">Users</span>
                                             </a>
                                         </li>
-                                        <li class="nav-item ">
+                                        <li
+                                            class="nav-item {{ request()->routeIs('admin-branches.index') ? 'active' : '' }}">
                                             <a href="{{ route('admin-branches.index') }}" class="nav-link">
                                                 <span class="animated-icon">
                                                     <div style="width:18px;height:18px"
@@ -485,7 +489,8 @@
                                                 <span class="mr-auto menu-name">Branches</span>
                                             </a>
                                         </li>
-                                        <li class="nav-item ">
+                                        <li
+                                            class="nav-item {{ request()->routeIs('admin-categories.index') ? 'active' : '' }}">
                                             <a href="{{ route('admin-categories.index') }}" class="nav-link">
                                                 <span class="animated-icon">
                                                     <div style="width:18px;height:18px"
@@ -500,7 +505,7 @@
                             </li>
                         </div>
                         <div class="sidebar-item">
-                            <li class="nav-item ">
+                            <li class="nav-item {{ request()->routeIs('admin-events.index') ? 'active' : '' }}">
                                 <a class="nav-link d-flex align-items-center nav-link"
                                     href="{{ route('admin-events.index') }}">
                                     <span class="animated-icon">
@@ -513,7 +518,7 @@
                             </li>
                         </div>
                         <div class="sidebar-item">
-                            <li class="nav-item ">
+                            <li class="nav-item {{ request()->routeIs('admin-posts.index') ? 'active' : '' }}">
                                 <a class="nav-link d-flex align-items-center nav-link"
                                     href="{{ route('admin-posts.index') }}">
                                     <span class="animated-icon">

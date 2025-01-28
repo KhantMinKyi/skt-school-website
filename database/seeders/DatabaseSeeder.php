@@ -21,6 +21,11 @@ class DatabaseSeeder extends Seeder
             'branch_short_name' => 'SKT-RC',
             'branch_location' => 'Thar Kay Ta',
         ]);
+        Branch::create([
+            'branch_name' => 'SKT International School - City Campus',
+            'branch_short_name' => 'SKT-CC',
+            'branch_location' => 'Bahan',
+        ]);
         User::factory()->create([
             'name' => 'Test User',
             'user_name' => 'kmk',
