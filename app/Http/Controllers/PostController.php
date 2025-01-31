@@ -78,7 +78,11 @@ class PostController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $post = Post::with('branch', 'category')->find($id);
+        if (!$post) {
+            return to_route('admin-posts.index')->with('error', 'Post Not Found');
+        }
+        return view('partial_view.admin.posts.post_detail', compact('post'));
     }
 
     /**

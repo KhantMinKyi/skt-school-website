@@ -60,7 +60,11 @@
                                     {{-- <td>
                                         <img src="{{ asset($post->post_banner) }}" alt="" width="80px">
                                     </td> --}}
-                                    <td class="font-weight-bold">{{ $post->post_title }}</td>
+                                    <td class="font-weight-bold">
+                                        <a href="{{ route('admin-posts.show', $post->id) }}">
+                                            {{ $post->post_title }}
+                                        </a>
+                                    </td>
                                     <td>{{ $post->branch->branch_name }}</td>
                                     <td>{{ $post->created_user->name }}</td>
                                     <td>{{ $post->category->category_title }}</td>
@@ -143,6 +147,7 @@
                                 <div class="row mb-3">
                                     <label for="inputEmail3" class="col-3 col-form-label"> Banner </label>
                                     <div class="col-9">
+                                        <span class="text-danger">Banner Size have to be 370x260!</span>
                                         <input type="file" placeholder="Choose Post Banner " value=""
                                             name="post_banner" title="Post Banner is required" required
                                             class="form-control">
