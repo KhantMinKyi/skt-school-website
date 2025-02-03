@@ -84,7 +84,11 @@ class EventController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $event = Event::with('branch', 'category')->find($id);
+        if (!$event) {
+            return to_route('admin-events.index')->with('error', 'Event Not Found');
+        }
+        return view('partial_view.admin.events.event_detail', compact('event'));
     }
 
     /**
@@ -92,7 +96,13 @@ class EventController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $event = Event::find($id);
+        $categories = Category::all();
+        $branches = Branch::all();
+        if (!$event) {
+            return to_route('admin-events.index')->with('error', 'Event Not Found');
+        }
+        return view('partial_view.admin.events.event_edit', compact('event', 'categories', 'branches'));
     }
 
     /**
@@ -100,7 +110,52 @@ class EventController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        // dd($request->all());
+
+
+        $data = $request->validate([
+            'event_banner'                  => 'nullable|file',
+            'event_title'                   => 'required',
+            'event_branch_id'               => 'required',
+            'event_category_id'             => 'required',
+            'event_body'                    => 'required',
+            'event_video'                   => 'nullable',
+            'event_image'                   => 'nullable',
+            'event_is_show_front'           => 'nullable',
+            'event_start_date'              => 'required',
+            'event_end_date'                => 'required',
+            'event_time'                    => 'required',
+            'event_location'                => 'required',
+            'event_registration_fee'        => 'required',
+        ]);
+        // dd($data);
+        $event = Event::find($id);
+        $branch = Branch::find($data['event_branch_id']);
+        $user_id = Auth::user()->id;
+        if (!$branch) {
+            return to_route('admin-events.index')->with('error', 'No Branch Found ! Please Try Again');
+        }
+        if (isset($data['event_banner'])) {
+            if (File::exists(public_path($event->event_banner))) {
+                File::delete(public_path($event->event_banner));
+            }
+            $filePath = "img/event_data/" . $branch->branch_short_name;
+            if (!File::exists($filePath)) {
+                $result = File::makeDirectory($filePath, 0755, true);
+            }
+
+            $photo = $data['event_banner'];
+            $extension = $photo->getClientOriginalExtension();
+            $imageUid = uniqid('', true);
+            $photoName = $filePath . "/event_" . $imageUid . "." . $extension;
+
+            $photo->move($filePath, "/event_" . $imageUid . "." . $extension);
+            $data['event_banner'] = "/" . $photoName;
+        }
+        $data['event_updated_user_id'] = $user_id;
+        $data['event_is_show_front'] = isset($data['event_is_show_front'])  ? 1 : 0;
+        $event->update($data);
+        return to_route('admin-events.index')->with('success', 'Event Updated Successfully');
     }
 
     /**
@@ -109,5 +164,25 @@ class EventController extends Controller
     public function destroy(string $id)
     {
         //
+    }
+    public function archivedEvent(string $id, Request $request)
+    {
+        $event = Event::find($id);
+        // dd($event);
+        if ($event) {
+            $event->update(['event_is_active' => $request->status]);
+            return to_route('admin-events.index')->with('success', 'Updated Successfully!');;
+            // dd($user);
+        } else {
+            return response()->json([
+                'message' => 'Cannot Find a Event'
+            ]);
+        }
+    }
+    public function showArchivedEvent()
+    {
+        $archived_events = Event::where('event_is_active', 0)->paginate(10);
+        // dd($archived_events);
+        return view('partial_view.admin.events.event_archived', compact('archived_events'));
     }
 }

@@ -748,7 +748,7 @@ p.section-title-white {
         width: 100%;
     }
     .slicknav_nav {
-        background-color: #fff;
+        background-color: transparent;
     }
     #navigation #mobile_menu li a {
         color: #1a2d62;
@@ -876,15 +876,20 @@ p.section-title-white {
 }
 .hlc {
     position: relative;
-    margin-right: 30px;
+    margin-right: 10px;
     display: inline-block;
+}
+@media only screen and (max-width: 769px) {
+    .hlc {
+        display: none;
+    }
 }
 .home_lc a i {
     display: flex;
     align-items: center;
     justify-content: center;
     color: #1a2d62;
-    font-size: 26px;
+    font-size: 20px;
 }
 .home_lc a .gactive {
     width: 20px;
@@ -935,7 +940,7 @@ p.section-title-white {
 .home_bg {
     /* height: 1200px; */
     position: relative;
-	/* height: 100vh; */
+	height: 100vh;
 }
 /* .home_bg {
     position: relative;

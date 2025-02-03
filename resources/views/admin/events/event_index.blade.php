@@ -49,6 +49,7 @@
                                 <th>Branch</th>
                                 <th>Created By</th>
                                 <th>Category </th>
+                                <th>Location </th>
                                 <th>Date </th>
                                 <th></th>
                             </tr>
@@ -68,6 +69,16 @@
                                     <td>{{ $event->branch->branch_name }}</td>
                                     <td>{{ $event->created_user->name }}</td>
                                     <td>{{ $event->category->category_title }}</td>
+                                    <td>
+                                        <span class="text-primary font-weight-bold">{{ $event->event_location }} </span>
+                                        <br> <span class="text-success font-weight-bold"> Date -
+                                            ({{ date('d-m-Y', strToTime($event->event_start_date)) }} -
+                                            {{ date('d-m-Y', strToTime($event->event_end_date)) }})
+                                        </span>
+                                        <br><span class="text-danger font-weight-bold"> Time - (
+                                            {{ $event->event_time }}
+                                            ) </span>
+                                    </td>
                                     <td> Created - {{ date('d-m-Y h:s', strToTime($event->created_at)) }} <br>
                                         Last Updated - {{ date('d-m-Y h:s', strToTime($event->updated_at)) }}
                                     </td>

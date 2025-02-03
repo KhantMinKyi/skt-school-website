@@ -59,14 +59,14 @@
     <div id="navigation" class="fixed-top  bg-faded site-navigation">
         <div class="">
             <div class="row">
-                <div class="col-lg-4 col-md-3 col-sm-4 text-center">
+                <div class="col-lg-3 col-md-3 col-sm-3 text-center">
                     <div class="site-logo">
                         {{-- <a href="index.html"><img src="assets/images/all-img/logo.png" alt=""></a>          			        				 --}}
                         <a href="/"><img src="{{ asset('img/skt_with_tagline.png') }}" alt=""></a>
                     </div>
                 </div><!--- END Col -->
 
-                <div class="col-lg-8 col-md-9 col-sm-8 ">
+                <div class="col-lg-7 col-md-9 col-sm-9 ">
                     <div class="header_right ">
                         <nav id="main-menu" class="ms-auto">
                             <ul>
@@ -119,26 +119,26 @@
                                 <li><a class="nav-link" href="contact.html">Contacts</a></li>
                             </ul>
                         </nav>
-                        <div id="mobile_menu"></div>
                     </div>
+                    <div id="mobile_menu"></div>
                 </div><!--- END Col -->
-                {{-- <div class="col-lg-2 col-md-3 col-sm-8">
-					<div class="home_lc">
-						<a href="#" class="hlc">
-						  <i class="ti-heart"></i>
-						  <span class="gactive">0</span>
-					   </a>
-						<a href="#" class="hlc">
-						  <i class="ti-shopping-cart-full"></i>
-						  <span class="gactive">2</span>
-					   </a>
-                      
-					</div>
-					<div class="call_to_action">
-						<a class="btn_one" href="login.html">Login</a>
-						<a class="btn_two" href="register.html">Sign Up</a>
-					</div>				
-				</div> --}}
+                <div class="col-lg-2 ">
+                    <div class="home_lc">
+                        <a href="#" class="hlc">
+                            <i class="ti-facebook"></i>
+                        </a>
+                        <a href="#" class="hlc">
+                            <i class="ti-instagram"></i>
+                        </a>
+                        <a href="#" class="hlc">
+                            <i class="ti-youtube"></i>
+                        </a>
+                        <a href="#" class="hlc">
+                            <i class="ti-mobile"></i>
+                        </a>
+
+                    </div>
+                </div>
             </div>
         </div><!--- END CONTAINER -->
     </div>
