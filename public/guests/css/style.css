@@ -1,0 +1,150 @@
+#bouncing-text span {
+    display: inline-block;
+    animation: bounce 1s ease infinite;
+    animation-delay: calc(var(--index) * 0.5s);
+    /* Offset animation timing */
+    opacity: 0;
+}
+
+@keyframes bounce {
+    0%,
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    75% {
+        opacity: 0.8;
+    }
+}
+
+#fading-text span {
+    display: inline-block;
+    opacity: 0;
+    /* Start invisible */
+    animation: fade-in-out 4s ease-in-out infinite;
+    animation-delay: calc(var(--index) * 0.5s);
+    /* Stagger animations */
+}
+
+/* Updated fade-in and fade-out keyframes */
+@keyframes fade-in-out {
+    0% {
+        opacity: 0;
+        /* Fully transparent */
+    }
+
+    20% {
+        opacity: 1;
+        /* Fade-in transition */
+    }
+
+    70% {
+        opacity: 1;
+        /* Stay fully visible */
+    }
+
+    85% {
+        opacity: 0;
+        /* Start fade-out */
+    }
+
+    100% {
+        opacity: 0;
+        /* Fully transparent */
+    }
+}
+
+.bounce-up {
+    display: inline-block;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bounce-up:hover {
+    transform: translateY(-10px);
+    /* Move up by 10px */
+    /* box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); Optional shadow for visual effect */
+}
+
+.home_content h1 .color-header-text {
+    color: #2eca7f;
+}
+
+.home_content {
+    position: relative;
+}
+
+@media only screen and (max-width: 768px) {
+    .home_content {
+        padding-left: 30px;
+        padding-right: 20px;
+    }
+}
+
+.home_content h1 {
+    font-size: 80px;
+    font-weight: 700;
+    line-height: 100px;
+    margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 1024px) {
+    .home_content h1 {
+        font-size: 60px;
+        line-height: 70px;
+    }
+}
+
+@media only screen and (max-width: 960px) {
+    .home_content h1 {
+        font-size: 60px;
+        line-height: 70px;
+    }
+}
+
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOutToRight {
+    0% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+
+.home-banner-hero {
+    opacity: 0;
+    /* Start invisible */
+    transform: translateX(100%);
+    /* Start off-screen */
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    /* Smooth transition */
+}
+
+.home-banner-hero.slide-in {
+    animation: slideInFromRight 0.5s forwards;
+    /* Slide in animation */
+}
+
+.home-banner-hero.slide-out {
+    animation: slideOutToRight 0.5s forwards;
+    /* Slide out animation */
+}

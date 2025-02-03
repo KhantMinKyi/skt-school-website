@@ -668,7 +668,8 @@ p.section-title-white {
     -webkit-transition: 0.5s;
     -o-transition: 0.5s;
     transition: 0.5s;
-    font-size: 20px;
+    /* font-size: 20px; */
+    font-size: calc(1vw + 0.1rem);
     padding: 24px 0 26px;
     display: block;
 }
