@@ -6,6 +6,7 @@
 @section('content')
     <link rel="stylesheet" href="{{ asset('guests/css/style.css') }}" />
     <!-- START HOME -->
+    <!-- START HOME BANNER -->
     <section id="home" class=" min-h-screen flex items-center justify-center pt-96 md:pt-28 "
         style="background-image: url(assets/images/banner/home.png); background-size:cover; background-position: center center;">
         <div class="grid md:grid-cols-2  ">
@@ -18,7 +19,7 @@
                     <span>FUTURES</span>
                 </h1>
                 <div class="flex justify-center" style="cursor: pointer">
-                    <img src="{{ asset($skt_riverside_campus->branch_logo) }}" width="180" class="bounce-up"
+                    <img src="{{ asset($skt_riverside_campus->branch_logo) }}" width="240" class="bounce-up"
                         alt="">
                 </div>
             </div>
@@ -42,6 +43,81 @@
 
         </div>
     </section>
+    <!-- END HOME BANNER -->
+
+    <!-- START TOP PROMO FEATURES -->
+    <section class="tp_feature ">
+        <div class="grid grid-cols-3">
+            <!-- Quality Education -->
+            <div class="  bg-white ">
+                <div class=" bg-white p-16 mb-8  shadow border-r border-gray-50 ">
+                    <h3 class="text-xl mb-4">Quality Education</h3>
+                    <p class="mb-10 font-light text-gray-500">Lorem ipsum dolor sit amet, consectetur notted adipisicing
+                        elit sed do
+                        eiusmod
+                        tempor incididunt ut labore.</p>
+                    <a href="#" class="relative inline-block mx-auto py-4 px-6 overflow-hidden group">
+                        <span
+                            class="relative font-semibold text-[#1a2d62] uppercase px-6 py-4 transition-all duration-300 group-hover:text-white">
+                            <!-- Background animation -->
+                            <span class="absolute inset-0 flex items-center">
+                                <span
+                                    class="w-8 h-8 bg-teal-400 rounded-full transition-all duration-300 origin-left transform scale-100 group-hover:w-full group-hover:h-full group-hover:scale-x-100"></span>
+                            </span>
+                            <span class="relative z-10">Explore</span>
+                        </span>
+                    </a>
+
+                </div>
+            </div>
+
+            <!-- Experienced Teachers -->
+            <div class="  bg-white ">
+                <div class=" bg-white p-16 mb-8  shadow border-r border-gray-50 ">
+                    <h3 class="text-xl mb-4">Experienced Teachers</h3>
+                    <p class="mb-10 font-light text-gray-500">Lorem ipsum dolor sit amet, consectetur notted adipisicing
+                        elit sed do
+                        eiusmod
+                        tempor incididunt ut labore.</p>
+                    <a href="#" class="relative inline-block mx-auto py-4 px-6 overflow-hidden group">
+                        <span
+                            class="relative font-semibold text-[#1a2d62] uppercase px-6 py-4 transition-all duration-300 group-hover:text-white">
+                            <!-- Background animation -->
+                            <span class="absolute inset-0 flex items-center">
+                                <span
+                                    class="w-8 h-8 bg-teal-400 rounded-full transition-all duration-300 origin-left transform scale-100 group-hover:w-full group-hover:h-full group-hover:scale-x-100"></span>
+                            </span>
+                            <span class="relative z-10">Explore</span>
+                        </span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Delicious Food -->
+            <div class="  bg-white ">
+                <div class=" bg-white p-16 mb-8  shadow border-r border-gray-50 ">
+                    <h3 class="text-xl mb-4">Delicious Food</h3>
+                    <p class="mb-10 font-light text-gray-500">Lorem ipsum dolor sit amet, consectetur notted adipisicing
+                        elit sed do
+                        eiusmod
+                        tempor incididunt ut labore.</p>
+                    <a href="#" class="relative inline-block mx-auto py-4 px-6 overflow-hidden group">
+                        <span
+                            class="relative font-semibold text-[#1a2d62] uppercase px-6 py-4 transition-all duration-300 group-hover:text-white">
+                            <!-- Background animation -->
+                            <span class="absolute inset-0 flex items-center">
+                                <span
+                                    class="w-8 h-8 bg-teal-400 rounded-full transition-all duration-300 origin-left transform scale-100 group-hover:w-full group-hover:h-full group-hover:scale-x-100"></span>
+                            </span>
+                            <span class="relative z-10">Explore</span>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END TOP PROMO FEATURES -->
+
     <!-- END  HOME -->
 
     <script>
