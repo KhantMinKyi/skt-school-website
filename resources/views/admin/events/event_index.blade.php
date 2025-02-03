@@ -14,26 +14,26 @@
 
 
     <div class="card">
-        <div class="card-header font-weight-bold h5">Posts</div>
+        <div class="card-header font-weight-bold h5">Events</div>
         <div class="text-right m-4 ">
-            <a href="#" class="btn btn-success btn-md" data-bs-toggle="modal" data-bs-target="#modalNewPost">
+            <a href="#" class="btn btn-success btn-md" data-bs-toggle="modal" data-bs-target="#modalNewEvent">
                 <div class="d-flex  align-items-center">
                     <span class="animated-icon mr-2 ">
                         <div style="width:14px;height:14px; cursor: pointer;"
                             data-animation-path="{{ asset('admin/vendor/animated-icons/add/add.json') }}"
-                            data-anim-loop="false" title="Add Post"></div>
+                            data-anim-loop="false" title="Add Event"></div>
                     </span>
-                    Add New Post
+                    Add New Event
                 </div>
             </a>
-            <a href="{{ route('admin-posts.show_archived_post') }}" class="btn btn-secondary btn-md">
+            <a href="{{ route('admin-events.show_archived_event') }}" class="btn btn-secondary btn-md">
                 <div class="d-flex  align-items-center">
                     <span class="animated-icon mr-2 ">
                         <div style="width:14px;height:14px; cursor: pointer;"
                             data-animation-path="{{ asset('admin/vendor/animated-icons/open-box/open-box.json') }}"
                             data-anim-loop="false"></div>
                     </span>
-                    Archived Posts
+                    Archived Events
                 </div>
             </a>
         </div>
@@ -54,38 +54,38 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach ($posts as $post)
+                            @foreach ($events as $event)
                                 <tr>
-                                    <td>{{ $post->id }}</td>
+                                    <td>{{ $event->id }}</td>
                                     {{-- <td>
-                                        <img src="{{ asset($post->post_banner) }}" alt="" width="80px">
+                                        <img src="{{ asset($event->event_banner) }}" alt="" width="80px">
                                     </td> --}}
                                     <td class="font-weight-bold">
-                                        <a href="{{ route('admin-posts.show', $post->id) }}">
-                                            {{ $post->post_title }}
+                                        <a href="{{ route('admin-events.show', $event->id) }}">
+                                            {{ $event->event_title }}
                                         </a>
                                     </td>
-                                    <td>{{ $post->branch->branch_name }}</td>
-                                    <td>{{ $post->created_user->name }}</td>
-                                    <td>{{ $post->category->category_title }}</td>
-                                    <td> Created - {{ date('d-m-Y h:s', strToTime($post->created_at)) }} <br>
-                                        Last Updated - {{ date('d-m-Y h:s', strToTime($post->updated_at)) }}
+                                    <td>{{ $event->branch->branch_name }}</td>
+                                    <td>{{ $event->created_user->name }}</td>
+                                    <td>{{ $event->category->category_title }}</td>
+                                    <td> Created - {{ date('d-m-Y h:s', strToTime($event->created_at)) }} <br>
+                                        Last Updated - {{ date('d-m-Y h:s', strToTime($event->updated_at)) }}
                                     </td>
                                     <td class="">
                                         <div class="d-flex justify-content-center align-items-center">
                                             <a class="animated-icon mr-2"
-                                                href="{{ route('admin-posts.edit', $post->id) }}">
+                                                href="{{ route('admin-events.edit', $event->id) }}">
                                                 <div style="width:14px;height:14px; cursor: pointer;"
                                                     data-animation-path="{{ asset('admin/vendor/animated-icons/edit/edit.json') }}"
-                                                    data-anim-loop="false" title="edit post">
+                                                    data-anim-loop="false" title="edit event">
                                                 </div>
                                             </a>
-                                            <a href="{{ route('admin-posts.archived_post', $post->id) }}?status=0"
-                                                onclick="return confirm('Are you sure you want to archive this Post?');"
+                                            <a href="{{ route('admin-events.archived_event', $event->id) }}?status=0"
+                                                onclick="return confirm('Are you sure you want to archive this Event?');"
                                                 class="animated-icon mr-2 ">
                                                 <div style="width:14px;height:14px; cursor: pointer;"
                                                     data-animation-path="{{ asset('admin/vendor/animated-icons/trash-bin/trash-bin.json') }}"
-                                                    data-anim-loop="false" title="archive Post"></div>
+                                                    data-anim-loop="false" title="archive Event"></div>
                                             </a>
                                         </div>
                                     </td>
@@ -93,19 +93,19 @@
                             @endforeach
                         </tbody>
                     </table>
-                    {{ $posts->links() }}
+                    {{ $events->links() }}
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="modal fade" tabindex="-1" id="modalNewPost">
+    <div class="modal fade" tabindex="-1" id="modalNewEvent">
         <div class="modal-dialog modal-xl modal-dialog-centered">
             <div class="modal-content">
-                <form action="{{ route('admin-posts.store') }}" method="post" enctype="multipart/form-data">
+                <form action="{{ route('admin-events.store') }}" method="post" enctype="multipart/form-data">
                     @csrf
                     <div class="modal-header">
-                        <h5 class="modal-title">Add New Post</h5>
+                        <h5 class="modal-title">Add New Event</h5>
                         <button type="button" class="btn btn-icon btn-sm btn-active-light-primary ms-2"
                             data-bs-dismiss="modal" aria-label="Close">
                             <span class="svg-icon svg-icon-2x"><i class="fa-solid fa-xmark"></i></span>
@@ -118,7 +118,7 @@
                                 <div class="row mb-3">
                                     <label for="inputEmail3" class="col-3 col-form-label"> Branch</label>
                                     <div class="col-sm-9">
-                                        <select class="form-control select2" name="post_branch_id" required
+                                        <select class="form-control select2" name="event_branch_id" required
                                             title="Branch is required">
                                             <option disabled selected>Select a Branch</option>
                                             @foreach ($branches as $key => $data)
@@ -132,7 +132,7 @@
                                 <div class="row mb-3">
                                     <label for="inputEmail3" class="col-3 col-form-label"> Category</label>
                                     <div class="col-sm-9">
-                                        <select class="form-control select2" name="post_category_id" required
+                                        <select class="form-control select2" name="event_category_id" required
                                             title="Category is required">
                                             <option disabled selected>Select a Category</option>
                                             @foreach ($categories as $key => $category)
@@ -148,8 +148,8 @@
                                     <label for="inputEmail3" class="col-3 col-form-label"> Banner </label>
                                     <div class="col-9">
                                         <span class="text-danger">Banner Size have to be 370x260!</span>
-                                        <input type="file" placeholder="Choose Post Banner " value=""
-                                            name="post_banner" title="Post Banner is required" required
+                                        <input type="file" placeholder="Choose Event Banner " value=""
+                                            name="event_banner" title="Event Banner is required" required
                                             class="form-control">
                                     </div>
                                 </div>
@@ -158,8 +158,8 @@
                                 <div class="row mb-3">
                                     <label for="inputEmail3" class="col-3 col-form-label"> Title </label>
                                     <div class="col-9">
-                                        <input type="text" placeholder="Choose Title " value="" name="post_title"
-                                            title="Title is required" required class="form-control">
+                                        <input type="text" placeholder="Choose Title " value=""
+                                            name="event_title" title="Title is required" required class="form-control">
                                     </div>
                                 </div>
                             </div>
@@ -167,8 +167,8 @@
                                 <div class="row mb-3">
                                     <label for="inputEmail3" class="col-3 col-form-label"> Body </label>
                                     <div class="col-9">
-                                        <textarea class="form-control" name="post_body" id="" cols="30" rows="5" required
-                                            placeholder="Enter Post Body "></textarea>
+                                        <textarea class="form-control" name="event_body" id="" cols="30" rows="5" required
+                                            placeholder="Enter Event Body "></textarea>
                                     </div>
                                 </div>
                             </div>
@@ -177,8 +177,8 @@
                                     <label for="inputEmail3" class="col-3 col-form-label"> Video </label>
                                     <div class="col-9">
                                         <span><small>You can add video link if there is a video</small></span>
-                                        <input type="text" placeholder="Choose Post Video Link (Optional)"
-                                            value="" name="post_video" class="form-control">
+                                        <input type="text" placeholder="Choose Event Video Link (Optional)"
+                                            value="" name="event_video" class="form-control">
                                     </div>
                                 </div>
                             </div>
@@ -187,17 +187,58 @@
                                     <label for="inputEmail3" class="col-3 col-form-label"> Image </label>
                                     <div class="col-9">
                                         <span><small>You can add an image link if there is an image</small></span>
-                                        <input type="text" placeholder="Choose Post Image Link (Optional)"
-                                            value="" name="post_image" class="form-control">
+                                        <input type="text" placeholder="Choose Event Image Link (Optional)"
+                                            value="" name="event_image" class="form-control">
                                     </div>
                                 </div>
                             </div> --}}
                             <div class="col-12">
                                 <div class="row mb-3">
+                                    <label for="inputEmail3" class="col-3 col-form-label"> From/To Date </label>
+                                    <div class="col-4">
+                                        <input type="date" placeholder="Choose Event Start Date" value=""
+                                            name="event_start_date" class="form-control" required>
+                                    </div>
+                                    <div class="col-5">
+                                        <input type="date" placeholder="Choose Event End Date" value=""
+                                            name="event_end_date" class="form-control" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="row mb-3">
+                                    <label for="inputEmail3" class="col-3 col-form-label"> Time </label>
+                                    <div class="col-9">
+                                        <input type="text" placeholder="1PM - 5PM" value="" name="event_time"
+                                            class="form-control" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="row mb-3">
+                                    <label for="inputEmail3" class="col-3 col-form-label"> Location </label>
+                                    <div class="col-9">
+                                        <input type="text" placeholder="Enter Event Location" value=""
+                                            name="event_location" class="form-control" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="row mb-3">
+                                    <label for="inputEmail3" class="col-3 col-form-label"> Registration Free </label>
+                                    <div class="col-9">
+                                        <input type="text"
+                                            placeholder="You can write free if there is no registration fee"
+                                            value="" name="event_registration_fee" class="form-control" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="row mb-3">
                                     <label for="inputEmail3" class="col-3 col-form-label"> Will Show at the Landing Page ?
                                     </label>
                                     <div class="col-9">
-                                        <input type="checkbox" name="post_is_show_front" id="" value="1">
+                                        <input type="checkbox" name="event_is_show_front" id="" value="1">
                                     </div>
                                 </div>
                             </div>

@@ -70,7 +70,7 @@ class PostController extends Controller
         $data['post_created_user_id'] = $user_id;
         $data['post_updated_user_id'] = $user_id;
         Post::create($data);
-        return to_route('admin-posts.index')->with('success', 'Branch Created Successfully!');
+        return to_route('admin-posts.index')->with('success', 'Post Created Successfully!');
     }
 
     /**
