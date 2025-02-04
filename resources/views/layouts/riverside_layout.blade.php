@@ -7,7 +7,8 @@
     {{-- <script src="https://cdn.tailwindcss.com"></script> --}}
     @vite('resources/css/app.css')
     <link rel="stylesheet" href="{{ asset('assets/fonts/themify-icons.css') }}">
-
+    <link rel="stylesheet" href="{{ asset('assets/owlcarousel/css/owl.carousel.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/owlcarousel/css/owl.theme.css') }}">
     <title>SKT International School</title>
     <link rel="icon" href="{{ asset('assets/images/icon/icon.png') }}" type="image/png">
 
@@ -92,6 +93,7 @@
     <script src="assets/js/jquery-1.12.4.min.js"></script>
     <!-- jquery purecounter vanilla js -->
     <script src="assets/js/purecounter_vanilla.js"></script>
+    <script src="{{ asset('assets/owlcarousel/js/owl.carousel.min.js') }}"></script>
     <!-- scripts js -->
     <script src="{{ asset('guests/js/script.js') }}"></script>
     <script>
