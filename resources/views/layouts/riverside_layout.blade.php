@@ -32,7 +32,7 @@
 @endphp
 
 <body>
-    <nav id="navbar" class="bg-transparent text-white fixed top-0 w-full z-50 shadow-lg transition-all duration-300">
+    <nav id="navbar" class="bg-transparent text-white fixed top-0 w-full z-50  transition-all duration-300">
         <div class=" mx-auto flex justify-end p-4">
             <!-- Social Icons (Hidden on small screens) -->
             <div class="hidden md:flex  space-x-4 text-gray-700">
@@ -108,11 +108,11 @@
         document.addEventListener("scroll", function() {
             const navbar = document.getElementById("navbar");
             if (window.scrollY > 50) {
-                navbar.classList.add("bg-white", "text-black");
+                navbar.classList.add("bg-white", "text-black", 'shadow-lg');
                 navbar.classList.remove("bg-transparent", "text-white");
             } else {
                 navbar.classList.add("bg-transparent", "text-white");
-                navbar.classList.remove("bg-white", "text-black");
+                navbar.classList.remove("bg-white", "text-black", 'shadow-lg');
             }
         });
     </script>

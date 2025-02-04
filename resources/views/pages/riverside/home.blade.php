@@ -182,7 +182,8 @@
                 <div class="mx-2 mb-2">
                     <div class="count-box rounded-lg flex justify-center">
                         {{-- <i class="ti-face-smile"></i> --}}
-                        <i class="fa-solid fa-chalkboard-user"></i>
+                        <img src="{{ asset('assets/images/icon/teacher2.svg') }}" class="mr-4" alt="" />
+                        {{-- <i class="fa-solid fa-chalkboard-user"></i> --}}
                         {{-- <span id="counter" class="text-3xl font-bold text-gray-800 mx-4">0</span> --}}
                         <div>
                             <span data-purecounter-start="0" data-purecounter-end="52" data-purecounter-duration="1"
@@ -194,7 +195,8 @@
                 <!--- END COL -->
                 <div class="mx-2 mb-2">
                     <div class="count-box rounded-lg flex justify-center">
-                        <i class="fa fa-bank" style="color: #ee6c20"></i>
+                        {{-- <i class="fa fa-bank" style="color: #ee6c20"></i> --}}
+                        <img src="{{ asset('assets/images/icon/program.svg') }}" class="mr-4" alt="" />
                         <div>
                             <span data-purecounter-start="0" data-purecounter-end="58" data-purecounter-duration="1"
                                 class="purecounter"></span>
@@ -205,7 +207,8 @@
                 <!--- END COL -->
                 <div class="mx-2 mb-2">
                     <div class="count-box rounded-lg flex justify-center">
-                        <i class="fa fa-trophy" style="color: #15be56"></i>
+                        {{-- <i class="fa fa-trophy" style="color: #15be56"></i> --}}
+                        <img src="{{ asset('assets/images/icon/award.svg') }}" class="mr-4" alt="" />
                         <div>
                             <span data-purecounter-start="0" data-purecounter-end="163" data-purecounter-duration="1"
                                 class="purecounter"></span>
@@ -216,7 +219,8 @@
                 <!--- END COL -->
                 <div class="mx-2 mb-2">
                     <div class="count-box rounded-lg flex justify-center">
-                        <i class="fa fa-graduation-cap text-red-500" style="color: #bb0852"></i>
+                        {{-- <i class="fa fa-graduation-cap text-red-500" style="color: #bb0852"></i> --}}
+                        <img src="{{ asset('assets/images/icon/student2.svg') }}" class="mr-4" alt="" />
                         <div>
                             <span data-purecounter-start="0" data-purecounter-end="356" data-purecounter-duration="1"
                                 class="purecounter"></span>
@@ -231,7 +235,7 @@
         <!--- END CONTAINER -->
     </section>
     <!-- END SCHOOL INFO COUNTER -->
-    <hr class=" w-1/2 mx-auto md:mt-40">
+    <hr class=" w-1/2 mx-auto md:mt-20">
     <!-- START SCHOOL Facilities -->
     <section id="" class=" mt-10  mb-10">
         <div class="container  mx-auto">
@@ -347,9 +351,9 @@
     <!-- END SISTER SCHOOL  -->
     <hr class=" w-1/2 mx-auto md:my-20">
 
-    <!-- START SCHOOL HISTORY -->
-    <section class="school_history mt-10">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 ">
+    <!-- START PRINCIPAL MESSAGE -->
+    <section class="principal_message mt-10">
+        <div class="grid grid-cols-1 lg:grid-cols-2 ">
             <div class=" max-w-2xl mx-auto p-10">
                 <div class="ab_content">
                     <h2 class=" text-xl font-light text-gray-500">
@@ -384,8 +388,76 @@
             </div>
         </div>
     </section>
-    <!-- START SCHOOL HISTORY -->
+    <!-- START PRINCIPAL MESSAGE-->
     <hr class=" w-1/2 mx-auto md:my-20">
+
+    <!-- START TOPIC-->
+    <section class="topic_content_area section-padding" style="background-image: url(assets/images/banner/topic.png);">
+        <div class="container mx-auto">
+            <div class="section-title">
+                <h2>What We Provide</h2>
+                <p>
+                    Discover <span class="text-emerald-500">Our Campus & Services</span> Today.
+                </p>
+            </div>
+            <div class="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1">
+                <div class="col-lg-4 col-sm-6 col-xs-12">
+                    <div class="single_tca shadow-md p-12 border m-2 min-h-48 max-h-52">
+
+                        <img src="{{ asset('assets/images/icon/ct3.svg') }}" alt="" />
+                        {{-- <i class="fa-solid fa-book-open text-3xl"></i> --}}
+                        <h2><a href="#">Cambridge Curriculum</a></h2>
+                        <span>Year 2 to IB</span>
+                    </div>
+                </div>
+                <!-- END COL -->
+                <div class="col-lg-4 col-sm-6 col-xs-12">
+                    <div class="single_tca shadow-md p-12 border m-2 min-h-48 max-h-52">
+                        <img src="{{ asset('assets/images/icon/campus.svg') }}" alt="" />
+                        <h2><a href="#">Modern Campus</a></h2>
+                        <span>Clean & Joyful environment</span>
+                    </div>
+                </div>
+                <!-- END COL -->
+                <div class="col-lg-4 col-sm-6 col-xs-12">
+                    <div class="single_tca shadow-md p-12 border m-2 min-h-48 max-h-52">
+                        <img src="{{ asset('assets/images/icon/lab.svg') }}" alt="" />
+                        <h2><a href="#">Science labs</a></h2>
+                        <span>Full Lab Equipment</span>
+                    </div>
+                </div>
+                <!-- END COL -->
+                <div class="col-lg-4 col-sm-6 col-xs-12">
+                    <div class="single_tca shadow-md p-12 border m-2 min-h-48 max-h-52">
+
+                        <img src="{{ asset('assets/images/icon/ct6.svg') }}" alt="" />
+                        <h2><a href="#">Playgounds & Stadiums</a></h2>
+                        <span>Over 10 sports</span>
+                    </div>
+                </div>
+                <!-- END COL -->
+                <div class="col-lg-4 col-sm-6 col-xs-12">
+                    <div class="single_tca shadow-md p-12 border m-2 min-h-48 max-h-52">
+                        <img src="{{ asset('assets/images/icon/facility.svg') }}" alt="" />
+                        <h2><a href="#">The Best Facilities</a></h2>
+                        <span>Smart Teaching Equipment </span>
+                    </div>
+                </div>
+                <!-- END COL -->
+                <div class="col-lg-4 col-sm-6 col-xs-12">
+                    <div class="single_tca shadow-md p-12 border m-2 min-h-48 max-h-52">
+                        <img src="{{ asset('assets/images/icon/safe.svg') }}" alt="" />
+                        <h2><a href="#">24hr Safety</a></h2>
+                        <span>100% Safety Enviroment</span>
+                    </div>
+                </div>
+                <!-- END COL -->
+            </div>
+            <!-- END ROW -->
+        </div>
+        <!-- END CONTAINER -->
+    </section>
+    <!-- END TOPIC -->
 
     <!-- END  HOME -->
     <script>
