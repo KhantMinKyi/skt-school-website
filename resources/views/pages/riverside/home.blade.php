@@ -397,7 +397,7 @@
             <div class="section-title">
                 <h2>What We Provide</h2>
                 <p>
-                    Discover <span class="text-emerald-500">Our Campus & Services</span> Today.
+                    Discover <span class="text-emerald-500">Our Campus & Services</span> Today
                 </p>
             </div>
             <div class="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1">
@@ -458,6 +458,84 @@
         <!-- END CONTAINER -->
     </section>
     <!-- END TOPIC -->
+
+    <!-- START Event-->
+    <section class=" section_event section-padding">
+        <div class="container mx-auto">
+            <div class="section-title">
+                <h2>Upcoming Events</h2>
+                <p>
+                    Join With Us <a href="#" class="text-emerald-500 ">Our Events</a>
+                </p>
+            </div>
+            <div class="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1">
+                <div class="event-slide mr-4 hover:shadow-md hover:cursor-pointer">
+                    <div class="event-img rounded-t-md">
+                        <img src="{{ asset('assets/images/event/e1.png') }}" alt="" />
+                        <div class="event-date">
+                            <span class="date">20</span>
+                            <span class="month">Oct</span>
+                        </div>
+                    </div>
+                    <div class="event-content">
+                        <h3 class="hover:text-teal-500">
+                            <a href="#">Electrical Engineering of Batparder new event</a>
+                        </h3>
+                        <span><i class="fa fa-clock-o"></i>10.00AM - 12.00PM</span>
+                        <span><i class="fa fa-table"></i><strong>At Penn School</strong></span>
+                        <p>
+                            Lorem ipsum dolor sit amet magna consectetur adipisicing elit.
+                        </p>
+                    </div>
+                </div>
+                <!-- END COL -->
+                <div class="event-slide mr-4 hover:shadow-md hover:cursor-pointer">
+                    <div class="event-img rounded-t-md">
+                        <img src="{{ asset('assets/images/event/e1.png') }}" alt="" />
+                        <div class="event-date">
+                            <span class="date">20</span>
+                            <span class="month">Oct</span>
+                        </div>
+                    </div>
+                    <div class="event-content">
+                        <h3 class="hover:text-teal-500">
+                            <a href="#">Electrical Engineering of Batparder new event</a>
+                        </h3>
+                        <span><i class="fa fa-clock-o"></i>10.00AM - 12.00PM</span>
+                        <span><i class="fa fa-table"></i><strong>At Penn School</strong></span>
+                        <p>
+                            Lorem ipsum dolor sit amet magna consectetur adipisicing elit.
+                        </p>
+                    </div>
+                </div>
+                <!-- END COL -->
+                <div class="event-slide mr-4 hover:shadow-md hover:cursor-pointer">
+                    <div class="event-img rounded-t-md">
+                        <img src="{{ asset('assets/images/event/e1.png') }}" alt="" />
+                        <div class="event-date">
+                            <span class="date">20</span>
+                            <span class="month">Oct</span>
+                        </div>
+                    </div>
+                    <div class="event-content">
+                        <h3 class="hover:text-teal-500">
+                            <a href="#">Electrical Engineering of Batparder new event</a>
+                        </h3>
+                        <span><i class="fa fa-clock-o"></i>10.00AM - 12.00PM</span>
+                        <span><i class="fa fa-table"></i><strong>At Penn School</strong></span>
+                        <p>
+                            Lorem ipsum dolor sit amet magna consectetur adipisicing elit.
+                        </p>
+                    </div>
+                </div>
+                <!-- END COL -->
+
+            </div>
+            <!-- END ROW -->
+        </div>
+        <!-- END CONTAINER -->
+    </section>
+    <!-- END Event -->
 
     <!-- END  HOME -->
     <script>
