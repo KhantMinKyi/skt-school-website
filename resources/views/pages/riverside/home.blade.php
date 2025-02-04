@@ -353,8 +353,8 @@
 
     <!-- START PRINCIPAL MESSAGE -->
     <section class="principal_message mt-10">
-        <div class="grid grid-cols-1 lg:grid-cols-2 ">
-            <div class=" max-w-2xl mx-auto p-10">
+        <div class="grid grid-cols-1 lg:grid-cols-3 ">
+            <div class=" lg:col-span-2  mx-auto p-10">
                 <div class="ab_content">
                     <h2 class=" text-xl font-light text-gray-500">
                         Our
@@ -383,8 +383,9 @@
                     </p>
                 </div>
             </div>
-            <div class="flex justify-center items-center">
-                <img src="{{ asset('img/skt_riverside_campus.png') }}" style="max-height: 420px" alt="" />
+            <div class="flex justify-center items-center ">
+                <img class="w-[420px] h-[420px] object-cover rounded-full"
+                    src="{{ asset('img/skt_riverside/principal.jpg') }}" alt="" />
             </div>
         </div>
     </section>
