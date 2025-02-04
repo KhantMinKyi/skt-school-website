@@ -88,6 +88,12 @@
     <!-- START HOME -->
     @yield('content')
     <!-- END  HOME -->
+    <!-- Latest jQuery -->
+    <script src="assets/js/jquery-1.12.4.min.js"></script>
+    <!-- jquery purecounter vanilla js -->
+    <script src="assets/js/purecounter_vanilla.js"></script>
+    <!-- scripts js -->
+    <script src="{{ asset('guests/js/script.js') }}"></script>
     <script>
         document.getElementById('menu-btn').addEventListener('click', function() {
             document.getElementById('mobile-menu').classList.toggle('hidden');
