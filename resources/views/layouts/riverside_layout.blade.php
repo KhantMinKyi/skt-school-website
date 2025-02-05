@@ -207,9 +207,10 @@
 
 
     <!-- Latest jQuery -->
-    <script src="assets/js/jquery-1.12.4.min.js"></script>
+    <script src="{{ asset('assets/js/jquery-1.12.4.min.js') }}"></script>
     <!-- jquery purecounter vanilla js -->
-    <script src="assets/js/purecounter_vanilla.js"></script>
+    <script src="{{ asset('assets/js/purecounter_vanilla.js') }}"></script>
+    <script src="{{ asset('assets/js/scrolltopcontrol.js') }}"></script>
     <script src="{{ asset('assets/owlcarousel/js/owl.carousel.min.js') }}"></script>
     <!-- scripts js -->
     <script src="{{ asset('guests/js/script.js') }}"></script>

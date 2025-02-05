@@ -460,7 +460,7 @@
     </section>
     <!-- END TOPIC -->
 
-    <!-- START Event-->
+    <!-- START EVENT-->
     <section class=" section_event section-padding">
         <div class="container mx-auto">
             <div class="section-title">
@@ -536,7 +536,121 @@
         </div>
         <!-- END CONTAINER -->
     </section>
-    <!-- END Event -->
+    <!-- END EVENT -->
+
+    <!-- START BLOG -->
+    <section id="blog" class="blog_area section-padding">
+        <div class="container mx-auto">
+            <div class="section-title">
+                <h2>News</h2>
+                <p>
+                    Our Latest <span class="text-emerald-500">Blogs</span>
+                </p>
+            </div>
+            <div class=" grid sm:grid-cols-3">
+                <div class="mr-2">
+                    <div class="single_blog">
+                        <div class="content_box">
+                            <span>August 25, 2023 | <a href="blog_single.html">Design</a></span>
+                            <h2>
+                                <a href="blog_single.html">Professional Mobile Painting and Sculpting</a>
+                            </h2>
+                            <a href="#" class="relative inline-block mx-auto py-4 px-6 overflow-hidden group">
+                                <span
+                                    class="relative font-semibold text-[#1a2d62] uppercase px-6 py-4 transition-all duration-300 group-hover:text-white">
+                                    <!-- Background animation -->
+                                    <span class="absolute inset-0 flex items-center">
+                                        <span
+                                            class="w-8 h-8 bg-teal-400 rounded-full transition-all duration-300 origin-left transform scale-100 group-hover:w-full group-hover:h-full group-hover:scale-x-100"></span>
+                                    </span>
+                                    <span class="relative z-10">READ MORE <i class="fa-solid fa-caret-right ml-1"></i>
+                                    </span>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="single_blog">
+                        <div class="content_box">
+                            <span>August 25, 2023 | <a href="blog_single.html">Design</a></span>
+                            <h2>
+                                <a href="blog_single.html">Professional Mobile Painting and Sculpting</a>
+                            </h2>
+                            <a href="#" class="relative inline-block mx-auto py-4 px-6 overflow-hidden group">
+                                <span
+                                    class="relative font-semibold text-[#1a2d62] uppercase px-6 py-4 transition-all duration-300 group-hover:text-white">
+                                    <!-- Background animation -->
+                                    <span class="absolute inset-0 flex items-center">
+                                        <span
+                                            class="w-8 h-8 bg-teal-400 rounded-full transition-all duration-300 origin-left transform scale-100 group-hover:w-full group-hover:h-full group-hover:scale-x-100"></span>
+                                    </span>
+                                    <span class="relative z-10">READ MORE <i class="fa-solid fa-caret-right ml-1"></i>
+                                    </span>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- END COL-->
+                <div class="mr-2">
+                    <div class="single_blog ">
+                        <img src="assets/images/blog/3.png" class="img-fluid" alt="image" />
+                        <div class="content_box">
+                            <span>August 28, 2023 |
+                                <a href="blog_single.html">Programing</a></span>
+                            <h2>
+                                <a href="blog_single.html">Education Is About Create Leaders For Tomorrow
+                                </a>
+                            </h2>
+
+                            <a href="#" class="relative inline-block mx-auto py-4 px-6 overflow-hidden group">
+                                <span
+                                    class="relative font-semibold text-[#1a2d62] uppercase px-6 py-4 transition-all duration-300 group-hover:text-white">
+                                    <!-- Background animation -->
+                                    <span class="absolute inset-0 flex items-center">
+                                        <span
+                                            class="w-8 h-8 bg-teal-400 rounded-full transition-all duration-300 origin-left transform scale-100 group-hover:w-full group-hover:h-full group-hover:scale-x-100"></span>
+                                    </span>
+                                    <span class="relative z-10">READ MORE <i class="fa-solid fa-caret-right ml-1"></i>
+                                    </span>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- END COL-->
+                <div class="mr-2" data-wow-duration="1s" data-wow-delay="0.3s" data-wow-offset="0">
+                    <div class="single_blog">
+                        <img src="assets/images/blog/3.png" class="img-fluid" alt="image" />
+                        <div class="content_box">
+                            <span>August 28, 2023 |
+                                <a href="blog_single.html">Programing</a></span>
+                            <h2>
+                                <a href="blog_single.html">Education Is About Create Leaders For Tomorrow
+                                </a>
+                            </h2>
+
+                            <a href="#" class="relative inline-block mx-auto py-4 px-6 overflow-hidden group">
+                                <span
+                                    class="relative font-semibold text-[#1a2d62] uppercase px-6 py-4 transition-all duration-300 group-hover:text-white">
+                                    <!-- Background animation -->
+                                    <span class="absolute inset-0 flex items-center">
+                                        <span
+                                            class="w-8 h-8 bg-teal-400 rounded-full transition-all duration-300 origin-left transform scale-100 group-hover:w-full group-hover:h-full group-hover:scale-x-100"></span>
+                                    </span>
+                                    <span class="relative z-10">READ MORE <i class="fa-solid fa-caret-right ml-1"></i>
+                                    </span>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- END COL-->
+            </div>
+            <!-- / END ROW -->
+        </div>
+        <!-- END CONTAINER  -->
+    </section>
+    <!-- END BLOG -->
 
     <!-- END  HOME -->
     <script>
