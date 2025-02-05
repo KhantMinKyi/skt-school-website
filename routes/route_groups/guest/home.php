@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\GeneralRouteController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -8,7 +9,4 @@ Route::get('/', function () {
 Route::get('/skt-city-campus', function () {
     return view('pages.city.home');
 })->name('city.home');
-Route::get('/skt-riverside-campus', function () {
-    // return view('pages.riverside.home');
-    return view('pages.riverside.home');
-})->name('river.home');
+Route::get('/skt-riverside-campus', [GeneralRouteController::class, 'riverHome'])->name('river.home');

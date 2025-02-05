@@ -27,10 +27,6 @@
         }
     </style>
 </head>
-@php
-    use App\Models\Branch;
-    $skt_riverside_campus = Branch::where('branch_short_name', 'SKT-RC')->first();
-@endphp
 
 <body>
     <nav id="navbar" class="bg-transparent text-white fixed top-0 w-full z-50  transition-all duration-300">
@@ -59,7 +55,17 @@
 
             <!-- Menu (Hidden on small screens) -->
             <ul class="hidden lg:flex space-x-6 pb-2 ">
-                <li><a href="#" class="hover:text-gray-400 text-gray-700 font-bold">Home</a></li>
+                {{-- <li><a href="#" class="hover:text-gray-400 text-gray-700 font-bold">Home</a></li> --}}
+                <li class="relative group">
+                    <a href="#" class="text-gray-700 font-bold hover:text-gray-400 ">Home</a>
+                    <ul class="absolute hidden group-hover:block text-gray-900 bg-white mt-1 w-60 shadow-lg">
+                        <li><a href="{{ route('city.home') }}" class="block px-4 py-2 hover:bg-gray-50 pt-4">SKT City
+                                Campus</a></li>
+                        <li><a href="{{ route('river.home') }}" class="block px-4 py-2 hover:bg-gray-50 pt-4">SKT
+                                Riverside Campus</a>
+                        </li>
+                    </ul>
+                </li>
                 <li class="relative group">
                     <a href="#" class="text-gray-700 font-bold hover:text-gray-400 ">About Us</a>
                     <ul class="absolute hidden group-hover:block text-gray-900 bg-white mt-1 w-60 shadow-lg">

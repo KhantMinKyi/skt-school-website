@@ -21,4 +21,12 @@ class Branch extends Model
     {
         return $this->hasMany(User::class);
     }
+    public function posts()
+    {
+        return $this->hasMany(Post::class, 'post_branch_id');
+    }
+    public function events()
+    {
+        return $this->hasMany(Event::class, 'event_branch_id');
+    }
 }

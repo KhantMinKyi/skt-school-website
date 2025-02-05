@@ -1,7 +1,3 @@
-@php
-    use App\Models\Branch;
-    $skt_riverside_campus = Branch::where('branch_short_name', 'SKT-RC')->first();
-@endphp
 @extends('layouts.riverside_layout')
 @section('content')
     <style>
@@ -17,7 +13,7 @@
     <link rel="stylesheet" href="{{ asset('guests/css/style.css') }}" />
     <!-- START HOME -->
     <!-- START HOME BANNER -->
-    <section id="home" class=" min-h-screen flex items-center justify-center pt-64 md:pt-28 "
+    <section id="home" class=" min-h-screen flex items-center justify-center  md:pt-28 "
         style="background-image: url(assets/images/banner/home.png); background-size:cover; background-position: center center;">
         <div class="grid lg:grid-cols-2  ">
             <div class="home_content flex flex-col justify-center items-center">
@@ -29,8 +25,7 @@
                     <span>FUTURES</span>
                 </h1>
                 <div class="flex justify-center" style="cursor: pointer">
-                    <img src="{{ asset($skt_riverside_campus->branch_logo) }}" width="240" class="bounce-up"
-                        alt="">
+                    <img src="{{ asset($branch->branch_logo) }}" width="240" class="bounce-up" alt="">
                 </div>
             </div>
 
@@ -134,7 +129,7 @@
     <section class="school_history mt-10">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 ">
             <div class="flex justify-center items-center">
-                <img src="{{ asset('img/skt_riverside_campus.png') }}" style="max-height: 420px" alt="" />
+                <img src="{{ asset($branch->branch_logo) }}" style="max-height: 420px" alt="" />
             </div>
             <div class=" max-w-2xl p-10">
                 <div class="ab_content">
@@ -470,25 +465,29 @@
                 </p>
             </div>
             <div class="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1">
-                <div class="event-slide mr-4 hover:shadow-md hover:cursor-pointer">
-                    <div class="event-img rounded-t-md">
-                        <img src="{{ asset('assets/images/event/e1.png') }}" alt="" />
-                        <div class="event-date">
-                            <span class="date">20</span>
-                            <span class="month">Oct</span>
-                        </div>
+                @foreach ($branch->events as $event)
+                    <div class="event-slide mr-4 hover:shadow-md ">
+                        <a href="{{ route('admin-events.show', $event->id) }}"> {{-- need tobe replaced --}}
+                            <div class="event-img rounded-t-md">
+                                <img src="{{ asset($event->event_banner) }}" style="max-height: 361px" alt="" />
+                                <div class="event-date">
+                                    <span class="date">{{ $event->event_start_date }}</span>
+                                    <span class="month">{{ $event->event_end_date }}</span>
+                                </div>
+                            </div>
+                            <div class="event-content">
+                                <h3 class="hover:text-teal-500">
+                                    <a href="#">{{ $event->event_title }}</a>
+                                </h3>
+                                <span><i class="fa fa-clock-o"></i>{{ $event->event_time }}</span>
+                                <span><i class="fa fa-table"></i><strong>{{ $event->event_location }}</strong></span>
+                                <p>
+                                    {{ \Illuminate\Support\Str::words($event->event_body, 10, '...') }}
+                                </p>
+                            </div>
+                        </a>
                     </div>
-                    <div class="event-content">
-                        <h3 class="hover:text-teal-500">
-                            <a href="#">Electrical Engineering of Batparder new event</a>
-                        </h3>
-                        <span><i class="fa fa-clock-o"></i>10.00AM - 12.00PM</span>
-                        <span><i class="fa fa-table"></i><strong>At Penn School</strong></span>
-                        <p>
-                            Lorem ipsum dolor sit amet magna consectetur adipisicing elit.
-                        </p>
-                    </div>
-                </div>
+                @endforeach
                 <!-- END COL -->
                 <div class="event-slide mr-4 hover:shadow-md hover:cursor-pointer">
                     <div class="event-img rounded-t-md">
@@ -538,58 +537,47 @@
     </section>
     <!-- END EVENT -->
 
-    <!-- START BLOG -->
-    <section id="blog" class="blog_area section-padding">
+    <!-- START POST -->
+    <section id="post" class="blog_area section-padding">
         <div class="container mx-auto">
             <div class="section-title">
                 <h2>News</h2>
                 <p>
-                    Our Latest <span class="text-emerald-500">Blogs</span>
+                    Our Latest <span class="text-emerald-500">Posts</span>
                 </p>
             </div>
             <div class=" grid sm:grid-cols-3">
-                <div class="mr-2">
-                    <div class="single_blog">
-                        <div class="content_box">
-                            <span>August 25, 2023 | <a href="blog_single.html">Design</a></span>
-                            <h2>
-                                <a href="blog_single.html">Professional Mobile Painting and Sculpting</a>
-                            </h2>
-                            <a href="#" class="relative inline-block mx-auto py-4 px-6 overflow-hidden group">
-                                <span
-                                    class="relative font-semibold text-[#1a2d62] uppercase px-6 py-4 transition-all duration-300 group-hover:text-white">
-                                    <!-- Background animation -->
-                                    <span class="absolute inset-0 flex items-center">
-                                        <span
-                                            class="w-8 h-8 bg-teal-400 rounded-full transition-all duration-300 origin-left transform scale-100 group-hover:w-full group-hover:h-full group-hover:scale-x-100"></span>
+                @foreach ($branch->posts as $post)
+                    <div class="mr-2">
+                        <div class="single_blog ">
+                            <img src="{{ asset($post->post_banner) }}" class="img-fluid" style="max-height: 354px;"
+                                alt="image" />
+                            <div class="content_box">
+                                <span>{{ \Carbon\Carbon::parse($post->post_created_date)->format('F d, Y') }} |
+                                    <a href="blog_single.html">{{ $post->category->category_title }}</a></span>
+                                <h2>
+                                    <a href="blog_single.html">{{ $post->post_title }}
+                                    </a>
+                                </h2>
+
+                                <a href="{{ route('admin-posts.show', $post->id) }}" {{-- need tobe replaced --}}
+                                    class="relative inline-block mx-auto py-4 px-6 overflow-hidden group">
+                                    <span
+                                        class="relative font-semibold text-[#1a2d62] uppercase px-6 py-4 transition-all duration-300 group-hover:text-white">
+                                        <!-- Background animation -->
+                                        <span class="absolute inset-0 flex items-center">
+                                            <span
+                                                class="w-8 h-8 bg-teal-400 rounded-full transition-all duration-300 origin-left transform scale-100 group-hover:w-full group-hover:h-full group-hover:scale-x-100"></span>
+                                        </span>
+                                        <span class="relative z-10">READ MORE <i class="fa-solid fa-caret-right ml-1"></i>
+                                        </span>
                                     </span>
-                                    <span class="relative z-10">READ MORE <i class="fa-solid fa-caret-right ml-1"></i>
-                                    </span>
-                                </span>
-                            </a>
+                                </a>
+                            </div>
                         </div>
                     </div>
-                    <div class="single_blog">
-                        <div class="content_box">
-                            <span>August 25, 2023 | <a href="blog_single.html">Design</a></span>
-                            <h2>
-                                <a href="blog_single.html">Professional Mobile Painting and Sculpting</a>
-                            </h2>
-                            <a href="#" class="relative inline-block mx-auto py-4 px-6 overflow-hidden group">
-                                <span
-                                    class="relative font-semibold text-[#1a2d62] uppercase px-6 py-4 transition-all duration-300 group-hover:text-white">
-                                    <!-- Background animation -->
-                                    <span class="absolute inset-0 flex items-center">
-                                        <span
-                                            class="w-8 h-8 bg-teal-400 rounded-full transition-all duration-300 origin-left transform scale-100 group-hover:w-full group-hover:h-full group-hover:scale-x-100"></span>
-                                    </span>
-                                    <span class="relative z-10">READ MORE <i class="fa-solid fa-caret-right ml-1"></i>
-                                    </span>
-                                </span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
+
                 <!-- END COL-->
                 <div class="mr-2">
                     <div class="single_blog ">
@@ -650,7 +638,7 @@
         </div>
         <!-- END CONTAINER  -->
     </section>
-    <!-- END BLOG -->
+    <!-- END POST -->
 
     <!-- END  HOME -->
     <script>

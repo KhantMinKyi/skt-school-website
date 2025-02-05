@@ -105,6 +105,12 @@
         line-height: 70px;
     }
 }
+@media only screen and (max-width: 500px) {
+    .home_content h1 {
+        font-size: 30px;
+        line-height: 40px;
+    }
+}
 
 @keyframes slideInFromRight {
     0% {
