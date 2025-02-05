@@ -19,7 +19,7 @@
     <!-- START HOME BANNER -->
     <section id="home" class=" min-h-screen flex items-center justify-center pt-64 md:pt-28 "
         style="background-image: url(assets/images/banner/home.png); background-size:cover; background-position: center center;">
-        <div class="grid md:grid-cols-2  ">
+        <div class="grid lg:grid-cols-2  ">
             <div class="home_content flex flex-col justify-center items-center">
                 <h1 id="fading-text" class=" text-start ml-10">
                     <span class="text-emerald-400">INSPIRING</span>
@@ -35,7 +35,7 @@
             </div>
 
             <div class="">
-                <div class="home_me_img relative">
+                <div class="home_me_img relative sm:hidden hidden lg:block">
                     <img src="{{ asset('img/banner-hero.png') }}" class=" home-banner-hero" alt="" />
                     <div
                         class="home_ps absolute top-1/2 left-0 transform -translate-y-1/2 bg-white w-48 p-5 rounded-2xl shadow-lg">

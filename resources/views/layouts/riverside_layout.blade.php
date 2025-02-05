@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="{{ asset('assets/fonts/themify-icons.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/owlcarousel/css/owl.carousel.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/owlcarousel/css/owl.theme.css') }}">
+    <link rel="stylesheet" href="{{ asset('guests/css/footer.css') }}" />
     <title>SKT International School</title>
     <link rel="icon" href="{{ asset('assets/images/icon/icon.png') }}" type="image/png">
 
@@ -89,6 +90,122 @@
     <!-- START HOME -->
     @yield('content')
     <!-- END  HOME -->
+
+    <!-- START FOOTER -->
+    <div class="footer section-padding">
+        <div class="container mx-auto">
+            <div class="grid lg:grid-cols-4 sm:grid-cols-2 ">
+                <div class="col-lg-3 col-sm-6 col-xs-12">
+                    <div class="single_footer">
+                        {{-- <a href="index.html"><img src="assets/images/all-img/logo2.png" alt="" /></a> --}}
+                        <a href="/"><img src="{{ asset('img/skt_with_tagline.png') }}" class=" max-w-72"
+                                alt=""></a>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
+                            vitae risus nec dui venenatis dignissim.
+                        </p>
+                    </div>
+                    <div class="foot_social">
+                        <ul class=" ">
+                            <li><a href="#" class="hlc  ">
+                                    <i class="ti-facebook"></i>
+                                </a></li>
+                            <li>
+                                <a href="#" class="hlc ">
+                                    <i class="ti-instagram"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="hlc ">
+                                    <i class="ti-youtube"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="hlc ">
+                                    <i class="ti-mobile"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!--- END COL -->
+                <div>
+                    {{-- <div class="single_footer">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="#">About us</a></li>
+                            <li><a href="#">Knowledge Base</a></li>
+                            <li><a href="#">Affiliate Program</a></li>
+                            <li><a href="#">Community</a></li>
+                            <li><a href="#">Market API</a></li>
+                            <li><a href="#">Support team</a></li>
+                        </ul>
+                    </div> --}}
+                </div>
+                <!--- END COL -->
+                <div>
+                    <div class="single_footer">
+                        <h4>Menu</h4>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Student Life</a></li>
+                            <li><a href="#">Education</a></li>
+                            <li><a href="#">Admission</a></li>
+                            <li><a href="#">Event</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!--- END COL -->
+
+                <div class="col-lg-3 col-sm-6 col-xs-12">
+                    <div class="single_footer">
+                        <h4>Contact Info</h4>
+                        <div class="sf_contact">
+                            <span class="ti-mobile"></span>
+                            <h3>Phone number</h3>
+                            <p>+88 457 845 695</p>
+                        </div>
+                        <div class="sf_contact">
+                            <span class="ti-email"></span>
+                            <h3>Email Address</h3>
+                            <p>info@sktcollage@gmail.com</p>
+                        </div>
+                        <div class="sf_contact">
+                            <span class="ti-map"></span>
+                            <h3>Address</h3>
+                            <p>No 54 , Shu Khin Thar Myo Pat Road , Tharkayta</p>
+                        </div>
+                    </div>
+                </div>
+                <!--- END COL -->
+            </div>
+            <!--- END ROW -->
+            <div class="row fc">
+                <div class="col-lg-6 col-sm-6 col-xs-12">
+                    <div class="footer_copyright">
+                        <p>&copy; 2025. All Rights Reserved.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-sm-6 col-xs-12">
+                    <div class="footer_menu">
+                        <ul>
+                            <li><a href="#">Terms of use</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Cookie Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- END COL -->
+            </div>
+        </div>
+        <!--- END CONTAINER -->
+    </div>
+    <!-- END FOOTER -->
+
+
+
     <!-- Latest jQuery -->
     <script src="assets/js/jquery-1.12.4.min.js"></script>
     <!-- jquery purecounter vanilla js -->
