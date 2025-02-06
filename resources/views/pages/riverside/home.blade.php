@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="{{ asset('guests/css/style.css') }}" />
     <!-- START HOME -->
     <!-- START HOME BANNER -->
-    <section id="home" class=" min-h-screen flex items-center justify-center  md:pt-28 "
+    {{-- <section id="home" class=" min-h-screen flex items-center justify-center  md:pt-28 "
         style="background-image: url(assets/images/banner/home.png); background-size:cover; background-position: center center;">
         <div class="grid lg:grid-cols-2  ">
             <div class="home_content flex flex-col justify-center items-center">
@@ -49,6 +49,28 @@
             </div>
 
         </div>
+    </section> --}}
+    <section id="home" class="relative  lg:min-h-screen flex items-center justify-center  ">
+        <!-- Background Video -->
+        <video autoplay loop muted playsinline class="lg:absolute block top-0 left-0 w-full lg:h-full object-cover">
+            <source src="{{ asset('videos/skt_riverside_campus.mp4') }}" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        {{-- <div class=" "> --}}
+        <div class="home_content container mx-auto flex flex-col justify-center items-center">
+            <h1 id="fading-text" class=" text-center ml-10">
+                <span class="text-emerald-400">INSPIRING</span>
+                <span class="text-emerald-400">BRILLIANCE</span>
+                <span>BUILDING</span>
+                <span>BRIGHTER</span>
+                <span>FUTURES</span>
+            </h1>
+            <div class="flex justify-center" style="cursor: pointer">
+                <img src="{{ asset($branch->branch_logo) }}" width="240" class="bounce-up" alt="">
+            </div>
+        </div>
+
+        {{-- </div> --}}
     </section>
     <!-- END HOME BANNER -->
 
@@ -632,31 +654,31 @@
     <!-- END  HOME -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const img = document.querySelector('.home-banner-hero');
+            // const img = document.querySelector('.home-banner-hero');
 
-            // Function to handle the scroll event
-            const handleScroll = () => {
-                // Get the scroll position of the page and the position of the image
-                const scrollTop = window.scrollY || document.documentElement.scrollTop;
-                const imgOffsetTop = img.offsetTop;
-                const imgHeight = img.offsetHeight;
-                const windowHeight = window.innerHeight;
+            // // Function to handle the scroll event
+            // const handleScroll = () => {
+            //     // Get the scroll position of the page and the position of the image
+            //     const scrollTop = window.scrollY || document.documentElement.scrollTop;
+            //     const imgOffsetTop = img.offsetTop;
+            //     const imgHeight = img.offsetHeight;
+            //     const windowHeight = window.innerHeight;
 
-                // Check if the image is within the viewport
-                if (scrollTop + windowHeight > imgOffsetTop && scrollTop < imgOffsetTop + imgHeight) {
-                    img.classList.remove('slide-out');
-                    img.classList.add('slide-in');
-                } else {
-                    img.classList.remove('slide-in');
-                    img.classList.add('slide-out');
-                }
-            };
+            //     // Check if the image is within the viewport
+            //     if (scrollTop + windowHeight > imgOffsetTop && scrollTop < imgOffsetTop + imgHeight) {
+            //         img.classList.remove('slide-out');
+            //         img.classList.add('slide-in');
+            //     } else {
+            //         img.classList.remove('slide-in');
+            //         img.classList.add('slide-out');
+            //     }
+            // };
 
-            // Attach the scroll event listener
-            window.addEventListener('scroll', handleScroll);
+            // // Attach the scroll event listener
+            // window.addEventListener('scroll', handleScroll);
 
-            // Trigger the scroll handler once to ensure the initial state is correct
-            handleScroll();
+            // // Trigger the scroll handler once to ensure the initial state is correct
+            // handleScroll();
             const words = document.querySelectorAll('#fading-text span');
 
             words.forEach((word, index) => {
