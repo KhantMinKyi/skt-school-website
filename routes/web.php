@@ -19,6 +19,7 @@ Route::group(['middleware' => ['auth', IsAdmin::class], 'prefix' => '/administra
     include __DIR__ . '/route_groups/admin/post.php';
     include __DIR__ . '/route_groups/admin/principal_message.php';
     include __DIR__ . '/route_groups/admin/history.php';
+    include __DIR__ . '/route_groups/admin/statements.php';
 });
 // staff
 Route::group(['middleware' => ['auth', IsStaff::class], 'prefix' => '/administration-panel/staff'], function () {

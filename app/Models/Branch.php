@@ -37,4 +37,8 @@ class Branch extends Model
     {
         return $this->hasOne(History::class, 'history_branch_id');
     }
+    public function statement()
+    {
+        return $this->hasOne(Statement::class, 'statement_branch_id');
+    }
 }

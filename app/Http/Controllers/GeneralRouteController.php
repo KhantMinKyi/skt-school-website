@@ -17,7 +17,8 @@ class GeneralRouteController extends Controller
                 $query->with('category')->where('event_is_show_front', 1);
             },
             'principal_message',
-            'history'
+            'history',
+            'statement'
         ])->where('branch_short_name', 'SKT-RC')->first();
         if (!$branch) {
             return response()->json([
