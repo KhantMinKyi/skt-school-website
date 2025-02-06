@@ -463,8 +463,7 @@
                                         </span>
                                     </span>
                                 </a>
-                                <div div
-                                    class="sub-menu collapse {{ request()->routeIs('admin-users.index', 'admin-branches.index', 'admin-categories.index') ? 'show' : '' }}"
+                                <div class="sub-menu collapse {{ request()->routeIs('admin-users.index', 'admin-branches.index', 'admin-categories.index') ? 'show' : '' }}"
                                     aria-expanded="{{ request()->routeIs('admin-users.index', 'admin-branches.index', 'admin-categories.index') ? 'true' : 'false' }}">
                                     <ul class="nav flex-column">
                                         <li
@@ -589,6 +588,7 @@
 
                         <div class="sidebar-item">
                             <li class="nav-item ">
+
                                 <a class="nav-link d-flex align-items-center nav-link" href="javascript:;">
                                     <span class="animated-icon">
                                         <div style="width:18px;height:18px"
@@ -604,9 +604,12 @@
                                         </span>
                                     </span>
                                 </a>
-                                <div class="sub-menu collapse " aria-expanded="false">
+                                <div class="sub-menu collapse {{ request()->routeIs('admin-principal-messages.index', 'admin-histories.index', 'admin-categories.index') ? 'show' : '' }}"
+                                    aria-expanded="{{ request()->routeIs('admin-principal-messages.index', 'admin-histories.index', 'admin-categories.index') ? 'true' : 'false' }}">
+
                                     <ul class="nav flex-column">
-                                        <li class="nav-item ">
+                                        <li
+                                            class="nav-item {{ request()->routeIs('admin-principal-messages.index') ? 'active' : '' }}">
                                             <a href="{{ route('admin-principal-messages.index') }}" class="nav-link">
                                                 <span class="animated-icon">
                                                     <div style="width:18px;height:18px"
@@ -614,6 +617,19 @@
                                                         data-anim-loop="false"></div>
                                                 </span>
                                                 <span class="mr-auto menu-name">Principal Message</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <ul class="nav flex-column">
+                                        <li
+                                            class="nav-item {{ request()->routeIs('admin-histories.index') ? 'active' : '' }}">
+                                            <a href="{{ route('admin-histories.index') }}" class="nav-link">
+                                                <span class="animated-icon">
+                                                    <div style="width:18px;height:18px"
+                                                        data-animation-path="{{ asset('admin/vendor/animated-icons/bookmark/bookmark.json') }}"
+                                                        data-anim-loop="false"></div>
+                                                </span>
+                                                <span class="mr-auto menu-name">Our History</span>
                                             </a>
                                         </li>
                                     </ul>

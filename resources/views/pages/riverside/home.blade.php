@@ -135,11 +135,11 @@
                 <div class="ab_content">
                     <h2 class=" text-4xl font-semibold">
                         History of
-                        <span class="text-emerald-400">SKT International School</span>
+                        <span class="text-emerald-400">{{ $branch->branch_name }}</span>
                     </h2>
                     <p class=" text-gray-500">
-                        Lorem ipsum dolor sit amet, consectetur notted adipisicing elit
-                        sed do eiusmod tempor incididunt ut labore et simply.
+                        {{ \Illuminate\Support\Str::words($branch->history->history_body, 20, '...') }}
+                        <a href="" class="text-teal-500 hover:text-teal-700">See More</a>
                     </p>
                 </div>
                 <div class="abmv mt-4">

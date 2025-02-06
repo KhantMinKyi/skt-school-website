@@ -33,4 +33,8 @@ class Branch extends Model
     {
         return $this->hasOne(PrincipalMessage::class, 'principal_message_branch_id');
     }
+    public function history()
+    {
+        return $this->hasOne(History::class, 'history_branch_id');
+    }
 }
