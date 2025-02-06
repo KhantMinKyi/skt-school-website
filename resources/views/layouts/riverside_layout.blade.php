@@ -47,7 +47,7 @@
                 </a>
             </div>
         </div>
-        <div class=" container mx-auto flex items-center justify-between p-4">
+        <div class="main-menu container mx-auto flex items-center justify-between p-4">
             <!-- Logo -->
             <div class="text-xl font-bold w-80 md:-mt-12">
                 <a href="/"><img src="{{ asset('img/skt_with_tagline.png') }}" alt=""></a>
@@ -56,29 +56,93 @@
             <!-- Menu (Hidden on small screens) -->
             <ul class="hidden lg:flex space-x-6 pb-2 ">
                 {{-- <li><a href="#" class="hover:text-gray-400 text-gray-700 font-bold">Home</a></li> --}}
-                <li class="relative group">
-                    <a href="#" class="text-gray-700 font-bold hover:text-gray-400 ">Home</a>
-                    <ul class="absolute hidden group-hover:block text-gray-900 bg-white mt-1 w-60 shadow-lg">
-                        <li><a href="{{ route('city.home') }}" class="block px-4 py-2 hover:bg-gray-50 pt-4">SKT City
+
+                <li class="relative group -mt-1">
+                    <a href="#" class="text-gray-700 font-bold hover:text-teal-500 px-2 py-1 block">Home</a>
+                    <ul class="absolute left-0 top-full hidden group-hover:block bg-white w-60 shadow-lg rounded-md">
+                        <li class="py-2"><a href="{{ route('city.home') }}"
+                                class="block px-4 py-2 font-bold hover:text-teal-500 pt-4">SKT City
                                 Campus</a></li>
-                        <li><a href="{{ route('river.home') }}" class="block px-4 py-2 hover:bg-gray-50 pt-4">SKT
-                                Riverside Campus</a>
+                        <li class="py-2"><a href="{{ route('river.home') }}"
+                                class="block px-4 py-2 font-bold hover:text-teal-500 pt-4">SKT
+                                Riverside Campus</a></li>
+                    </ul>
+                </li>
+                <li class="relative group -mt-1">
+                    <a href="#" class="text-gray-700 font-bold hover:text-teal-500 px-2 py-1 block">About Us</a>
+                    <ul class="absolute left-0 top-full hidden group-hover:block bg-white w-60 shadow-lg rounded-md">
+                        <li class="py-2"><a href="#" class="block px-4 py-2 font-bold hover:text-teal-500">Our
+                                Principle
+                                Message</a></li>
+                        <li class="py-2"><a href="#" class="block px-4 py-2 font-bold hover:text-teal-500">Our
+                                History</a></li>
+                        <li class="py-2"><a href="#" class="block px-4 py-2 font-bold hover:text-teal-500">Our
+                                Mission , Vision
+                                , Philosophy</a></li>
+                        <li class="py-2"><a href="#" class="block px-4 py-2 font-bold hover:text-teal-500">Our
+                                Teachers</a>
+                        </li>
+                        <li class="py-2"><a href="#"
+                                class="block px-4 py-2 font-bold hover:text-teal-500">Sister Schools</a>
                         </li>
                     </ul>
                 </li>
-                <li class="relative group">
-                    <a href="#" class="text-gray-700 font-bold hover:text-gray-400 ">About Us</a>
-                    <ul class="absolute hidden group-hover:block text-gray-900 bg-white mt-1 w-60 shadow-lg">
-                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-50 pt-4">Our Team</a></li>
-                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-50 pt-4">Mission</a></li>
-                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-50 pt-4">Vision</a></li>
+                <li class="relative group -mt-1">
+                    <a href="#" class="text-gray-700 font-bold hover:text-teal-500 px-2 py-1 block">Student
+                        Life</a>
+                    <ul class="absolute left-0 top-full hidden group-hover:block bg-white w-60 shadow-lg rounded-md">
+                        <li class="py-2"><a href="#"
+                                class="block px-4 py-2 font-bold hover:text-teal-500">Alumni</a></li>
+                        <li class="py-2"><a href="#"
+                                class="block px-4 py-2 font-bold hover:text-teal-500">News</a></li>
+                        <li class="py-2"><a href="#"
+                                class="block px-4 py-2 font-bold hover:text-teal-500">Gallery</a></li>
+                        <li class="py-2"><a href="#"
+                                class="block px-4 py-2 font-bold hover:text-teal-500">Calendar</a>
+                        </li>
                     </ul>
                 </li>
-                <li><a href="#" class="hover:text-gray-400 text-gray-700 font-bold">Student Life</a></li>
-                <li><a href="#" class="hover:text-gray-400 text-gray-700 font-bold">Education</a></li>
-                <li><a href="#" class="hover:text-gray-400 text-gray-700 font-bold">Admission</a></li>
-                <li><a href="#" class="hover:text-gray-400 text-gray-700 font-bold">Admission Event </a></li>
-                <li><a href="#" class="hover:text-gray-400 text-gray-700 font-bold">Contact</a></li>
+                <li class="relative group -mt-1">
+                    <a href="#" class="text-gray-700 font-bold hover:text-teal-500 px-2 py-1 block">Education</a>
+                    <ul class="absolute left-0 top-full hidden group-hover:block bg-white w-60 shadow-lg rounded-md">
+                        <li class="py-2"><a href="#" class="block px-4 py-2 font-bold hover:text-teal-500">Pre
+                                School</a></li>
+                        <li class="py-2"><a href="#"
+                                class="block px-4 py-2 font-bold hover:text-teal-500">Primary</a></li>
+                        <li class="py-2"><a href="#"
+                                class="block px-4 py-2 font-bold hover:text-teal-500">Secondary</a></li>
+                        <li class="py-2"><a href="#"
+                                class="block px-4 py-2 font-bold hover:text-teal-500">IGCSE</a>
+                        <li class="py-2"><a href="#" class="block px-4 py-2 font-bold hover:text-teal-500">UFP
+                                (University
+                                Foundation Program)</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="relative group -mt-1">
+                    <a href="#"
+                        class="text-gray-700 font-bold hover:text-teal-500 px-2 py-1 block">Admission</a>
+                    <ul class="absolute left-0 top-full hidden group-hover:block bg-white w-60 shadow-lg rounded-md">
+                        <li class="py-4"><a href="#"
+                                class="block px-4 py-2 font-bold hover:text-teal-500">Student
+                                Admission</a></li>
+                        <li class="py-4"><a href="#"
+                                class="block px-4 py-2 font-bold hover:text-teal-500">Admission
+                                Process</a></li>
+                        <li class="py-4"><a href="#"
+                                class="block px-4 py-2 font-bold hover:text-teal-500">Withdrawal
+                                Policy</a></li>
+                        <li class="py-4"><a href="#"
+                                class="block px-4 py-2 font-bold hover:text-teal-500">Inquiry Form</a>
+                        <li class="py-4"><a href="#"
+                                class="block px-4 py-2 font-bold hover:text-teal-500">Career</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="-mt-1"><a href="#"
+                        class="text-gray-700 font-bold hover:text-teal-500 px-2 py-1 block"> Event </a></li>
+                <li class="-mt-1"><a href="#"
+                        class="text-gray-700 font-bold hover:text-teal-500 px-2 py-1 block">Contact</a></li>
             </ul>
             <!-- Mobile Menu Button -->
             <button id="menu-btn" class="lg:hidden text-gray-900 text-2xl">☰</button>
@@ -90,7 +154,8 @@
             <a href="#" class="py-2 px-4 text-gray-900 font-bold hover:bg-gray-700 w-full text-center">About</a>
             <a href="#"
                 class="py-2 px-4 text-gray-900 font-bold hover:bg-gray-700 w-full text-center">Services</a>
-            <a href="#" class="py-2 px-4 text-gray-900 font-bold hover:bg-gray-700 w-full text-center">Contact</a>
+            <a href="#"
+                class="py-2 px-4 text-gray-900 font-bold hover:bg-gray-700 w-full text-center">Contact</a>
         </div>
     </nav>
     <!-- START HOME -->

@@ -592,30 +592,32 @@
                                 <a class="nav-link d-flex align-items-center nav-link" href="javascript:;">
                                     <span class="animated-icon">
                                         <div style="width:18px;height:18px"
-                                            data-animation-path="vendor/animated-icons/warning-1/warning-1.json"
+                                            data-animation-path="{{ asset('admin/vendor/animated-icons/bookmark-in-book/bookmark-in-book.json') }}"
                                             data-anim-loop="false"></div>
                                     </span>
-                                    <span class="mr-auto menu-name">Error</span>
+                                    <span class="mr-auto menu-name">Pages</span>
                                     <span class="caret">
                                         <span class="animated-icon">
                                             <div style="width:12px;height:12px"
-                                                data-animation-path="vendor/animated-icons/expand/expand.json"></div>
+                                                data-animation-path="{{ asset('admin/vendor/animated-icons/expand/expand.json') }}">
+                                            </div>
                                         </span>
                                     </span>
                                 </a>
                                 <div class="sub-menu collapse " aria-expanded="false">
                                     <ul class="nav flex-column">
                                         <li class="nav-item ">
-                                            <a href="404.html" class="nav-link">
-                                                <span class="mr-auto menu-name">404</span>
-                                            </a>
-                                        </li>
-                                        <li class="nav-item ">
-                                            <a href="500.html" class="nav-link">
-                                                <span class="mr-auto menu-name">Error</span>
+                                            <a href="{{ route('admin-principal-messages.index') }}" class="nav-link">
+                                                <span class="animated-icon">
+                                                    <div style="width:18px;height:18px"
+                                                        data-animation-path="{{ asset('admin/vendor/animated-icons/typing/typing.json') }}"
+                                                        data-anim-loop="false"></div>
+                                                </span>
+                                                <span class="mr-auto menu-name">Principal Message</span>
                                             </a>
                                         </li>
                                     </ul>
+
                                 </div>
                             </li>
                         </div>

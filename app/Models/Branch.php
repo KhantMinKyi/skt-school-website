@@ -29,4 +29,8 @@ class Branch extends Model
     {
         return $this->hasMany(Event::class, 'event_branch_id');
     }
+    public function principal_message()
+    {
+        return $this->hasOne(PrincipalMessage::class, 'principal_message_branch_id');
+    }
 }

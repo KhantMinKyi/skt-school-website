@@ -363,24 +363,13 @@
                 </div>
                 <div class="abmv mt-4 principal-message ">
                     <p class="text-xl italic">
-                        <b class="text-emerald-400 text-2xl"> Welcome, everyone! </b> My name is Mr. Alex, and I am
-                        the Head of School here at SKT International
-                        School, Riverside Campus. My teaching career began in 2010, and since 2016, I have been dedicated to
-                        the international school system. Over the past eight years, I have accumulated valuable experience
-                        in school management and teaching, serving in roles such as Global Perspectives Teacher, Clubs
-                        Coordinator, Operations Director, Head of School, and Vice CEO for a chain of international schools
-                        in Russia and Uzbekistan.
-                        I hold degrees in Education, Management in Education, and Project Management. In addition to my
-                        professional pursuits, I have a passion for sports, particularly football. As a natural humanist, I
-                        am committed to fostering happiness and encouraging the development of those around me.
-                        Let me extend my congratulations to all of us at the beginning of the 2024/25 academic year. May
-                        this year be productive and filled with new experiences.
+                        {{ $branch->principal_message->principal_message }}
                     </p>
                 </div>
             </div>
             <div class="flex justify-center items-center ">
                 <img class="w-[420px] h-[420px] object-cover rounded-full"
-                    src="{{ asset('img/skt_riverside/principal.jpg') }}" alt="" />
+                    src="{{ asset($branch->principal_message->principal_photo) }}" alt="" />
             </div>
         </div>
     </section>
