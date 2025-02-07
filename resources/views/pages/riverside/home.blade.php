@@ -58,16 +58,16 @@
         </video>
         {{-- <div class=" "> --}}
         <div class="home_content container mx-auto flex flex-col justify-center items-center">
-            <h1 id="fading-text" class=" text-center bg-opacity-50 bg-black rounded-md ml-10">
+            <h1 id="fading-text" class=" text-center  ml-10">
                 <span class="text-emerald-400">INSPIRING</span>
                 <span class="text-emerald-400">BRILLIANCE</span>
                 <span class="text-white">BUILDING</span>
                 <span class="text-white">BRIGHTER</span>
                 <span class="text-white">FUTURES</span>
             </h1>
-            {{-- <div class="flex justify-center" style="cursor: pointer">
+            <div class="flex justify-center" style="cursor: pointer">
                 <img src="{{ asset($branch->branch_logo) }}" width="240" class="bounce-up" alt="">
-            </div> --}}
+            </div>
         </div>
 
         {{-- </div> --}}

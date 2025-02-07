@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Branch;
+use App\Models\PrincipalMessage;
 use Illuminate\Http\Request;
 
 class GeneralRouteController extends Controller
@@ -48,5 +49,13 @@ class GeneralRouteController extends Controller
         }
         // return response()->json($branch);
         return view('pages.city.home', compact('branch'));
+    }
+    public function principalMessage($param)
+    {
+        $principal_message = PrincipalMessage::where('principal_message_branch_id', $param)->first();
+        $layout = ($principal_message && $principal_message->branch->branch_short_name === 'SKT-CC')
+            ? 'layouts.city_layout'
+            : 'layouts.riverside_layout';
+        return view('partial_view.guest.principal_message_index', compact('principal_message', 'layout'));
     }
 }

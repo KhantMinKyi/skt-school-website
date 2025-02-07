@@ -1,5 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+@php
+    use App\Models\Branch;
+    $layout_branch = Branch::where('branch_short_name', 'SKT-RC')->first();
+@endphp
 
 <head>
     <meta charset="UTF-8">
@@ -12,7 +16,7 @@
     <link rel="stylesheet" href="{{ asset('guests/css/footer.css') }}" />
     <title>SKT International School</title>
     <link rel="icon" href="{{ asset('assets/images/icon/icon.png') }}" type="image/png">
-
+    <link rel="stylesheet" href="{{ asset('guests/css/nav.css') }}" />
     <style>
         .hlc {
             position: relative;
@@ -71,7 +75,8 @@
                 <li class="relative group -mt-1">
                     <a href="#" class=" font-bold hover:text-teal-500 px-2 py-1 block">About Us</a>
                     <ul class="absolute left-0 top-full hidden group-hover:block bg-white w-60 shadow-lg rounded-md">
-                        <li class="py-2"><a href="#" class="block px-4 py-2 font-bold hover:text-teal-500">Our
+                        <li class="py-2"><a href="{{ route('principal-message.home', $layout_branch->id) }}"
+                                class="block px-4 py-2 font-bold hover:text-teal-500">Our
                                 Principle
                                 Message</a></li>
                         <li class="py-2"><a href="#" class="block px-4 py-2 font-bold hover:text-teal-500">Our
@@ -113,7 +118,8 @@
                                 class="block px-4 py-2 font-bold hover:text-teal-500">Secondary</a></li>
                         <li class="py-2"><a href="#"
                                 class="block px-4 py-2 font-bold hover:text-teal-500">IGCSE</a>
-                        <li class="py-2"><a href="#" class="block px-4 py-2 font-bold hover:text-teal-500">UFP
+                        <li class="py-2"><a href="#"
+                                class="block px-4 py-2 font-bold hover:text-teal-500">UFP
                                 (University
                                 Foundation Program)</a>
                         </li>
