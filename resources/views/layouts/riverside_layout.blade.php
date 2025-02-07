@@ -32,7 +32,7 @@
     <nav id="navbar" class="bg-transparent text-white fixed top-0 w-full z-50  transition-all duration-300">
         <div class=" mx-auto flex justify-end p-4">
             <!-- Social Icons (Hidden on small screens) -->
-            <div class="hidden md:flex  space-x-4 text-gray-700">
+            <div class="hidden md:flex  space-x-4 text-gray-100">
                 <a href="#" class="hlc ">
                     <i class="ti-facebook"></i>
                 </a>
@@ -55,10 +55,10 @@
 
             <!-- Menu (Hidden on small screens) -->
             <ul class="hidden lg:flex space-x-6 pb-2 ">
-                {{-- <li><a href="#" class="hover:text-gray-400 text-gray-700 font-bold">Home</a></li> --}}
+                {{-- <li><a href="#" class="hover:text-gray-400  font-bold">Home</a></li> --}}
 
                 <li class="relative group -mt-1">
-                    <a href="#" class="text-gray-700 font-bold hover:text-teal-500 px-2 py-1 block">Home</a>
+                    <a href="#" class=" font-bold hover:text-teal-500 px-2 py-1 block">Home</a>
                     <ul class="absolute left-0 top-full hidden group-hover:block bg-white w-60 shadow-lg rounded-md">
                         <li class="py-2"><a href="{{ route('city.home') }}"
                                 class="block px-4 py-2 font-bold hover:text-teal-500 pt-4">SKT City
@@ -69,7 +69,7 @@
                     </ul>
                 </li>
                 <li class="relative group -mt-1">
-                    <a href="#" class="text-gray-700 font-bold hover:text-teal-500 px-2 py-1 block">About Us</a>
+                    <a href="#" class=" font-bold hover:text-teal-500 px-2 py-1 block">About Us</a>
                     <ul class="absolute left-0 top-full hidden group-hover:block bg-white w-60 shadow-lg rounded-md">
                         <li class="py-2"><a href="#" class="block px-4 py-2 font-bold hover:text-teal-500">Our
                                 Principle
@@ -88,7 +88,7 @@
                     </ul>
                 </li>
                 <li class="relative group -mt-1">
-                    <a href="#" class="text-gray-700 font-bold hover:text-teal-500 px-2 py-1 block">Student
+                    <a href="#" class=" font-bold hover:text-teal-500 px-2 py-1 block">Student
                         Life</a>
                     <ul class="absolute left-0 top-full hidden group-hover:block bg-white w-60 shadow-lg rounded-md">
                         <li class="py-2"><a href="#"
@@ -103,7 +103,7 @@
                     </ul>
                 </li>
                 <li class="relative group -mt-1">
-                    <a href="#" class="text-gray-700 font-bold hover:text-teal-500 px-2 py-1 block">Education</a>
+                    <a href="#" class=" font-bold hover:text-teal-500 px-2 py-1 block">Education</a>
                     <ul class="absolute left-0 top-full hidden group-hover:block bg-white w-60 shadow-lg rounded-md">
                         <li class="py-2"><a href="#" class="block px-4 py-2 font-bold hover:text-teal-500">Pre
                                 School</a></li>
@@ -120,8 +120,7 @@
                     </ul>
                 </li>
                 <li class="relative group -mt-1">
-                    <a href="#"
-                        class="text-gray-700 font-bold hover:text-teal-500 px-2 py-1 block">Admission</a>
+                    <a href="#" class=" font-bold hover:text-teal-500 px-2 py-1 block">Admission</a>
                     <ul class="absolute left-0 top-full hidden group-hover:block bg-white w-60 shadow-lg rounded-md">
                         <li class="py-4"><a href="#"
                                 class="block px-4 py-2 font-bold hover:text-teal-500">Student
@@ -139,10 +138,10 @@
                         </li>
                     </ul>
                 </li>
+                <li class="-mt-1"><a href="#" class=" font-bold hover:text-teal-500 px-2 py-1 block"> Event
+                    </a></li>
                 <li class="-mt-1"><a href="#"
-                        class="text-gray-700 font-bold hover:text-teal-500 px-2 py-1 block"> Event </a></li>
-                <li class="-mt-1"><a href="#"
-                        class="text-gray-700 font-bold hover:text-teal-500 px-2 py-1 block">Contact</a></li>
+                        class=" font-bold hover:text-teal-500 px-2 py-1 block">Contact</a></li>
             </ul>
             <!-- Mobile Menu Button -->
             <button id="menu-btn" class="lg:hidden text-gray-900 text-2xl">☰</button>
