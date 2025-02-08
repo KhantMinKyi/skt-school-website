@@ -52,10 +52,13 @@
     </section> --}}
     <section id="home" class="relative  lg:min-h-screen flex items-center justify-center  ">
         <!-- Background Video -->
-        <video autoplay loop muted playsinline class="lg:absolute block top-0 left-0 w-full lg:h-full object-cover">
-            <source src="{{ asset('videos/skt_riverside_campus.mp4') }}" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
+        <div class="absolute inset-0 w-full h-full">
+            <video autoplay loop muted playsinline class="lg:absolute block top-0 left-0 w-full lg:h-full object-cover">
+                <source src="{{ asset('videos/skt_riverside_campus.mp4') }}" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="absolute inset-0 bg-black opacity-60"></div>
+        </div>
         {{-- <div class=" "> --}}
         <div class="home_content container mx-auto flex flex-col justify-center items-center">
             <h1 id="fading-text" class=" text-center  ml-10">

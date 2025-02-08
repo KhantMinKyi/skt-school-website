@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Branch;
+use App\Models\History;
 use App\Models\PrincipalMessage;
 use Illuminate\Http\Request;
 
@@ -57,5 +58,13 @@ class GeneralRouteController extends Controller
             ? 'layouts.city_layout'
             : 'layouts.riverside_layout';
         return view('partial_view.guest.principal_message_index', compact('principal_message', 'layout'));
+    }
+    public function ourHistory($param)
+    {
+        $our_history = History::where('slug', $param)->first();
+        $layout = ($our_history && $our_history->slug === 'SKT-CC')
+            ? 'layouts.city_layout'
+            : 'layouts.riverside_layout';
+        return view('partial_view.guest.history_index', compact('our_history', 'layout'));
     }
 }

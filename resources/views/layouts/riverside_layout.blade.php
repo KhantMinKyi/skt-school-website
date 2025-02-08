@@ -79,7 +79,8 @@
                                 class="block px-4 py-2 font-bold hover:text-teal-500">Our
                                 Principle
                                 Message</a></li>
-                        <li class="py-2"><a href="#" class="block px-4 py-2 font-bold hover:text-teal-500">Our
+                        <li class="py-2"><a href="{{ route('our-history.home', $layout_branch->branch_short_name) }}"
+                                class="block px-4 py-2 font-bold hover:text-teal-500">Our
                                 History</a></li>
                         <li class="py-2"><a href="#" class="block px-4 py-2 font-bold hover:text-teal-500">Our
                                 Mission , Vision
