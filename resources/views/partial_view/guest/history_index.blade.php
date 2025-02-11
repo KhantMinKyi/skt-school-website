@@ -28,6 +28,34 @@
                 </div>
             </div>
         </section>
-        {{ $our_history }}
+        <!-- START SCHOOL HISTORY -->
+        <section class="school_history mt-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 ">
+                <div class="flex justify-center items-center">
+                    <img src="{{ asset($our_history->branch->branch_logo) }}" style="max-height: 420px" alt="" />
+                </div>
+                <div class=" max-w-2xl p-10">
+                    <div class="ab_content">
+                        <h2 class=" text-4xl font-semibold">
+                            History of
+                            <span class="text-emerald-400">{{ $our_history->branch->branch_name }}</span>
+                        </h2>
+                        <p class=" text-gray-500">
+
+                        </p>
+                    </div>
+                    <div class="abmv mt-4">
+                        <span class="ti-medall"></span>
+                        <h4>History</h4>
+                        <p>
+                            @isset($our_history)
+                                {!! $our_history->history_body !!}
+                            @endisset
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- START SCHOOL HISTORY -->
     @endsection
 @endisset

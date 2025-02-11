@@ -42,3 +42,36 @@
 }
 
 /*  */
+.abmv {
+    margin-bottom: 30px;
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid #eee;
+    transition: 0.3s;
+}
+.abmv:hover {
+    border-left: 4px solid #2eca7f;
+}
+.abmv span {
+    background: rgba(46, 202, 127, 0.2);
+    float: left;
+    margin-right: 20px;
+    display: block;
+    width: 70px;
+    height: 70px;
+    color: #2eca7f;
+    line-height: 70px;
+    text-align: center;
+    font-size: 26px;
+    border-radius: 100px;
+}
+.abmv h4 {
+    font-weight: 800;
+    overflow: hidden;
+    margin-bottom: 10px;
+    font-size: 22px;
+}
+.abmv p {
+    overflow: hidden;
+}
