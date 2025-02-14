@@ -87,7 +87,7 @@
                 </div>
                 <div class="col-lg-6 col-sm-6 col-xs-12 d-flex justify-content-center align-items-center">
                     <div style="cursor: pointer;">
-                        <a href="{{ route('river.home') }}">
+                        <a href="{{ route('city.home') }}">
                             <img src="{{ asset('img/skt_city_campus.png') }}" class="img-fluid bounce-up"
                                 alt="">
                         </a>
