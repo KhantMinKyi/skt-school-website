@@ -36,7 +36,7 @@
     <nav id="navbar" class="bg-transparent text-white fixed top-0 w-full z-50  transition-all duration-300">
         <div class=" mx-auto flex justify-end p-4">
             <!-- Social Icons (Hidden on small screens) -->
-            <div class="hidden md:flex  space-x-4 text-gray-100">
+            <div class="hidden md:flex  space-x-4 ">
                 <a href="#" class="hlc ">
                     <i class="ti-facebook"></i>
                 </a>

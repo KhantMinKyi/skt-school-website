@@ -63,14 +63,14 @@
         <div class="home_content container mx-auto flex flex-col justify-center items-center">
             <h1 id="fading-text" class=" text-center  ml-10">
                 <span class="text-emerald-400">INSPIRING</span>
-                <span class="text-emerald-400">BRILLIANCE</span>
+                <span class="text-emerald-400">BRILLIANCE , </span> <br>
                 <span class="text-white">BUILDING</span>
                 <span class="text-white">BRIGHTER</span>
                 <span class="text-white">FUTURES</span>
             </h1>
-            <div class="flex justify-center" style="cursor: pointer">
+            {{-- <div class="flex justify-center" style="cursor: pointer">
                 <img src="{{ asset($branch->branch_logo) }}" width="240" class="bounce-up" alt="">
-            </div>
+            </div> --}}
         </div>
 
         {{-- </div> --}}
@@ -165,7 +165,8 @@
                     <p class=" text-gray-500">
                         @isset($branch->history)
                             {{ \Illuminate\Support\Str::words($branch->history->history_body, 20, '...') }}
-                            <a href="" class="text-teal-500 hover:text-teal-700">See More</a>
+                            <a href="{{ route('our-history.home', $branch->branch_short_name) }}"
+                                class="text-teal-500 hover:text-teal-700">See More</a>
                         @endisset
                     </p>
                 </div>
