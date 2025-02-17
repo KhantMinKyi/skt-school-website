@@ -13,3 +13,4 @@ Route::get('/skt-riverside-campus', [GeneralRouteController::class, 'riverHome']
 Route::get('/skt-city-campus', [GeneralRouteController::class, 'cityHome'])->name('city.home');
 Route::get('/principal_message/{param}', [GeneralRouteController::class, 'principalMessage'])->name('principal-message.home');
 Route::get('/our_history/{param}', [GeneralRouteController::class, 'ourHistory'])->name('our-history.home');
+Route::get('/our_statement/{param}', [GeneralRouteController::class, 'ourStatement'])->name('our-statement.home');
