@@ -255,6 +255,7 @@
         <!--- END CONTAINER -->
     </section>
     <!-- END SCHOOL INFO COUNTER -->
+
     <hr class=" w-1/2 mx-auto md:mt-20">
     <!-- START SCHOOL Facilities -->
     <section id="" class=" mt-10  mb-10">

@@ -70,7 +70,7 @@ class GeneralRouteController extends Controller
     }
     public function ourStatement($param)
     {
-        $our_statement = Statement::where('slug', $param)->first();
+        $our_statement = Statement::with('branch')->where('slug', $param)->first();
         $layout = ($our_statement && $our_statement->slug === 'SKT-CC')
             ? 'layouts.city_layout'
             : 'layouts.riverside_layout';
