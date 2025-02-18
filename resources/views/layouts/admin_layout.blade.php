@@ -592,10 +592,10 @@
                                 <a class="nav-link d-flex align-items-center nav-link" href="javascript:;">
                                     <span class="animated-icon">
                                         <div style="width:18px;height:18px"
-                                            data-animation-path="{{ asset('admin/vendor/animated-icons/bookmark-in-book/bookmark-in-book.json') }}"
+                                            data-animation-path="{{ asset('admin/vendor/animated-icons/double-tap/double-tap.json') }}"
                                             data-anim-loop="false"></div>
                                     </span>
-                                    <span class="mr-auto menu-name">Pages</span>
+                                    <span class="mr-auto menu-name">About Us</span>
                                     <span class="caret">
                                         <span class="animated-icon">
                                             <div style="width:12px;height:12px"
@@ -604,8 +604,8 @@
                                         </span>
                                     </span>
                                 </a>
-                                <div class="sub-menu collapse {{ request()->routeIs('admin-principal-messages.index', 'admin-histories.index', 'admin-statements.index') ? 'show' : '' }}"
-                                    aria-expanded="{{ request()->routeIs('admin-principal-messages.index', 'admin-histories.index', 'admin-statements.index') ? 'true' : 'false' }}">
+                                <div class="sub-menu collapse {{ request()->routeIs('admin-principal-messages.index', 'admin-histories.index', 'admin-statements.index', 'admin-teachers.index') ? 'show' : '' }}"
+                                    aria-expanded="{{ request()->routeIs('admin-principal-messages.index', 'admin-histories.index', 'admin-statements.index', 'admin-teachers.index') ? 'true' : 'false' }}">
 
                                     <ul class="nav flex-column">
                                         <li
@@ -646,7 +646,19 @@
                                             </a>
                                         </li>
                                     </ul>
-
+                                    <ul class="nav flex-column">
+                                        <li
+                                            class="nav-item {{ request()->routeIs('admin-teachers.index') ? 'active' : '' }}">
+                                            <a href="{{ route('admin-teachers.index') }}" class="nav-link">
+                                                <span class="animated-icon">
+                                                    <div style="width:18px;height:18px"
+                                                        data-animation-path="{{ asset('admin/vendor/animated-icons/open-letter/open-letter.json') }}"
+                                                        data-anim-loop="false"></div>
+                                                </span>
+                                                <span class="mr-auto menu-name">Our Teachers</span>
+                                            </a>
+                                        </li>
+                                    </ul>
                                 </div>
                             </li>
                         </div>

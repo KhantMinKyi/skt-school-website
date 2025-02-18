@@ -41,4 +41,8 @@ class Branch extends Model
     {
         return $this->hasOne(Statement::class, 'statement_branch_id');
     }
+    public function teachers()
+    {
+        return $this->hasMany(Teacher::class, 'teacher_branch_id');
+    }
 }
