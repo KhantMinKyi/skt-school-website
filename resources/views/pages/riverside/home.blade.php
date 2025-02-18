@@ -692,4 +692,5 @@
             });
         });
     </script>
+    <script src={{ asset('guests/js/general.js') }}></script>
 @endsection

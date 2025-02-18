@@ -23,9 +23,6 @@
                     <br>
                     <span class="text-white">Our History</span>
                 </h1>
-                <div class="flex justify-center" style="cursor: pointer">
-                    <img src="{{ asset($our_history->branch->branch_logo) }}" width="240" class="bounce-up" alt="">
-                </div>
             </div>
         </section>
         <!-- START SCHOOL HISTORY -->
@@ -58,4 +55,5 @@
         </section>
         <!-- START SCHOOL HISTORY -->
     @endsection
+    <script src={{ asset('guests/js/general.js') }}></script>
 @endisset

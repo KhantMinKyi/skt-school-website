@@ -61,4 +61,5 @@
     </section>
     <!-- START PRINCIPAL MESSAGE-->
     {{-- {{ $principal_message }} --}}
+    <script src={{ asset('guests/js/general.js') }}></script>
 @endsection

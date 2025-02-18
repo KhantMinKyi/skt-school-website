@@ -34,6 +34,9 @@
                     <input type="text" id="searchName" class="form-control" placeholder="Search by Name">
                 </div>
                 <div class="col-md-4">
+                    <input type="text" id="searchClass" class="form-control" placeholder="Search by Class">
+                </div>
+                <div class="col-md-4">
                     <select id="searchBranch" class="form-control">
                         <option value="">Select Branch</option>
                         @foreach ($branches as $branch)
@@ -220,12 +223,15 @@
 
             function filterData() {
                 let name = $("#searchName").val().toLowerCase();
+                let className = $("#searchClass").val().toLowerCase();
                 let branchId = $("#searchBranch").val();
 
                 filteredTeachers = teachers.filter(teacher => {
                     return (
                         (name === "" || teacher.teacher_name.toLowerCase().includes(name)) &&
-                        (branchId === "" || teacher.teacher_branch_id == branchId)
+                        (branchId === "" || teacher.teacher_branch_id == branchId) &&
+                        (className === "" || teacher.teacher_class.toLowerCase().includes(className))
+
                     );
                 });
 
@@ -234,7 +240,7 @@
             }
 
             // Event listeners for search filters
-            $("#searchName, #searchBranch").on("input change", function() {
+            $("#searchName, #searchBranch ,#searchClass").on("input change", function() {
                 filterData();
             });
 

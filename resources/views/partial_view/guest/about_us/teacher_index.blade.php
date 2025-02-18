@@ -81,7 +81,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         $(document).ready(function() {
-            let perPage = 5; // Number of teachers per page
+            let perPage = 10; // Number of teachers per page
             let currentPage = 1;
             let allTeachers = $(".teacher-card").toArray(); // Convert to array for better handling
             let filteredTeachers = [...allTeachers]; // Initially, all teachers are shown
@@ -140,4 +140,5 @@
             });
         });
     </script>
+    <script src={{ asset('guests/js/general.js') }}></script>
 @endsection

@@ -140,4 +140,5 @@
         <!--- END CONTAINER -->
     </section>
     <!-- END SCHOOL INFO COUNTER -->
+    <script src={{ asset('guests/js/general.js') }}></script>
 @endsection
