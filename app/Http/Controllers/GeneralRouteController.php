@@ -6,6 +6,7 @@ use App\Models\Branch;
 use App\Models\History;
 use App\Models\PrincipalMessage;
 use App\Models\Statement;
+use App\Models\Teacher;
 use Illuminate\Http\Request;
 
 class GeneralRouteController extends Controller
@@ -58,7 +59,7 @@ class GeneralRouteController extends Controller
         $layout = ($principal_message && $principal_message->branch->branch_short_name === 'SKT-CC')
             ? 'layouts.city_layout'
             : 'layouts.riverside_layout';
-        return view('partial_view.guest.principal_message_index', compact('principal_message', 'layout'));
+        return view('partial_view.guest.about_us.principal_message_index', compact('principal_message', 'layout'));
     }
     public function ourHistory($param)
     {
@@ -66,7 +67,7 @@ class GeneralRouteController extends Controller
         $layout = ($our_history && $our_history->slug === 'SKT-CC')
             ? 'layouts.city_layout'
             : 'layouts.riverside_layout';
-        return view('partial_view.guest.history_index', compact('our_history', 'layout'));
+        return view('partial_view.guest.about_us.history_index', compact('our_history', 'layout'));
     }
     public function ourStatement($param)
     {
@@ -74,6 +75,15 @@ class GeneralRouteController extends Controller
         $layout = ($our_statement && $our_statement->slug === 'SKT-CC')
             ? 'layouts.city_layout'
             : 'layouts.riverside_layout';
-        return view('partial_view.guest.statement_index', compact('our_statement', 'layout'));
+        return view('partial_view.guest.about_us.statement_index', compact('our_statement', 'layout'));
+    }
+    public function ourTeacher($param)
+    {
+        $our_teachers = Teacher::with('branch')->where('slug', $param)->get();
+        $branch = Branch::where('branch_short_name', $param)->first();
+        $layout = ($branch && $branch->branch_short_name === 'SKT-CC')
+            ? 'layouts.city_layout'
+            : 'layouts.riverside_layout';
+        return view('partial_view.guest.about_us.teacher_index', compact('our_teachers', 'layout', 'branch'));
     }
 }
