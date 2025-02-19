@@ -15,3 +15,4 @@ Route::get('/principal_message/{param}', [GeneralRouteController::class, 'princi
 Route::get('/our_history/{param}', [GeneralRouteController::class, 'ourHistory'])->name('our-history.home');
 Route::get('/our_statement/{param}', [GeneralRouteController::class, 'ourStatement'])->name('our-statement.home');
 Route::get('/our_teachers/{param}', [GeneralRouteController::class, 'ourTeacher'])->name('our-teachers.home');
+Route::get('/sister_schools/{param}', [GeneralRouteController::class, 'sisterSchool'])->name('sister-schools.home');

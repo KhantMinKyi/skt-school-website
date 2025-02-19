@@ -1,0 +1,22 @@
+.partner_title {
+}
+.partner_title h3 {
+    font-size: 24px;
+    font-weight: 700;
+    background: rgba(46, 202, 127, 0.1);
+    padding: 10px;
+    border-radius: 30px;
+    width: 60%;
+    margin: auto;
+    margin-bottom: 60px;
+    color: #2eca7f;
+}
+@media only screen and (max-width: 480px) {
+    .partner_title h3 {
+        font-size: 18px;
+        width: 100%;
+    }
+}
+.partner.owl-theme .owl-controls {
+    display: none !important;
+}

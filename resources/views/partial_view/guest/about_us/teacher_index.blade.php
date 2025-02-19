@@ -32,22 +32,22 @@
     <section id="" class="mt-10 mb-10">
         <div class="container mx-auto">
             <div class="section-title text-4xl mb-10 font-bold text-center">
-                <h2>Our <span class="text-teal-500">Teachers</span></h2>
+                <h2>Our <span class="text-green-500">Teachers</span></h2>
             </div>
 
             <!-- Filter Buttons -->
             <div class="grid md:grid-cols-2 lg:grid-cols-4 text-center mt-10 gap-5">
-                <div class="filter-btn bg-teal-500 p-4 rounded-lg hover:bg-teal-700 font-bold cursor-pointer"
+                <div class="filter-btn bg-blue-500 p-3 rounded-lg hover:bg-blue-600 font-bold cursor-pointer"
                     data-filter="all">All</div>
-                <div class="filter-btn bg-teal-500 p-4 rounded-lg hover:bg-teal-700 font-bold cursor-pointer"
+                <div class="filter-btn bg-blue-500 p-3 rounded-lg hover:bg-blue-600 font-bold cursor-pointer"
                     data-filter="secondary">Secondary</div>
-                <div class="filter-btn bg-teal-500 p-4 rounded-lg hover:bg-teal-700 font-bold cursor-pointer"
+                <div class="filter-btn bg-blue-500 p-3 rounded-lg hover:bg-blue-600 font-bold cursor-pointer"
                     data-filter="lower-secondary">Lower Secondary</div>
-                <div class="filter-btn bg-teal-500 p-4 rounded-lg hover:bg-teal-700 font-bold cursor-pointer"
+                <div class="filter-btn bg-blue-500 p-3 rounded-lg hover:bg-blue-600 font-bold cursor-pointer"
                     data-filter="primary">Primary</div>
-                <div class="filter-btn bg-teal-500 p-4 rounded-lg hover:bg-teal-700 font-bold cursor-pointer"
+                <div class="filter-btn bg-blue-500 p-3 rounded-lg hover:bg-blue-600 font-bold cursor-pointer"
                     data-filter="kg">KG</div>
-                <div class="filter-btn bg-teal-500 p-4 rounded-lg hover:bg-teal-700 font-bold cursor-pointer"
+                <div class="filter-btn bg-blue-500 p-3 rounded-lg hover:bg-blue-600 font-bold cursor-pointer"
                     data-filter="assistant">Assistant</div>
             </div>
 
@@ -55,7 +55,7 @@
             <div class="grid md:grid-cols-2 lg:grid-cols-4 text-center mt-10" id="teachersList">
                 @foreach ($our_teachers as $teacher)
                     <div class="teacher-card mx-2 mb-2" data-category="{{ strtolower($teacher->teacher_class) }}">
-                        <div class="relative group rounded-md overflow-hidden">
+                        <div class="relative group rounded-md overflow-hidden cursor-pointer">
                             <img src="{{ asset($teacher->teacher_photo) }}" class="w-full" alt="Team Member" />
                             <div
                                 class="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">

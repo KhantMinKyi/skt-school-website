@@ -86,4 +86,12 @@ class GeneralRouteController extends Controller
             : 'layouts.riverside_layout';
         return view('partial_view.guest.about_us.teacher_index', compact('our_teachers', 'layout', 'branch'));
     }
+    public function sisterSchool($param)
+    {
+        $branch = Branch::where('branch_short_name', $param)->first();
+        $layout = ($branch && $branch->branch_short_name === 'SKT-CC')
+            ? 'layouts.city_layout'
+            : 'layouts.riverside_layout';
+        return view('partial_view.guest.about_us.sister_school_index', compact('layout', 'branch'));
+    }
 }
