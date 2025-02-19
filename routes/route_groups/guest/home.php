@@ -9,10 +9,17 @@ Route::get('/', function () {
 // Route::get('/skt-city-campus', function () {
 //     return view('pages.city.home');
 // })->name('city.home');
+
+// Home
 Route::get('/skt-riverside-campus', [GeneralRouteController::class, 'riverHome'])->name('river.home');
 Route::get('/skt-city-campus', [GeneralRouteController::class, 'cityHome'])->name('city.home');
-Route::get('/principal_message/{param}', [GeneralRouteController::class, 'principalMessage'])->name('principal-message.home');
-Route::get('/our_history/{param}', [GeneralRouteController::class, 'ourHistory'])->name('our-history.home');
-Route::get('/our_statement/{param}', [GeneralRouteController::class, 'ourStatement'])->name('our-statement.home');
-Route::get('/our_teachers/{param}', [GeneralRouteController::class, 'ourTeacher'])->name('our-teachers.home');
-Route::get('/sister_schools/{param}', [GeneralRouteController::class, 'sisterSchool'])->name('sister-schools.home');
+
+// About Us
+Route::get('/about_us/principal_message/{param}', [GeneralRouteController::class, 'principalMessage'])->name('principal-message.home');
+Route::get('/about_us/our_history/{param}', [GeneralRouteController::class, 'ourHistory'])->name('our-history.home');
+Route::get('/about_us/our_statement/{param}', [GeneralRouteController::class, 'ourStatement'])->name('our-statement.home');
+Route::get('/about_us/our_teachers/{param}', [GeneralRouteController::class, 'ourTeacher'])->name('our-teachers.home');
+Route::get('/about_us/sister_schools/{param}', [GeneralRouteController::class, 'sisterSchool'])->name('sister-schools.home');
+
+// Student Life
+Route::get('/student_life/alumni/{param}', [GeneralRouteController::class, 'alumni'])->name('alumni.home');
