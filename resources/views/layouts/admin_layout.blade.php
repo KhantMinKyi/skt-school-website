@@ -662,6 +662,43 @@
                                 </div>
                             </li>
                         </div>
+                        <div class="sidebar-item">
+                            <li class="nav-item ">
+
+                                <a class="nav-link d-flex align-items-center nav-link" href="javascript:;">
+                                    <span class="animated-icon">
+                                        <div style="width:18px;height:18px"
+                                            data-animation-path="{{ asset('admin/vendor/animated-icons/in-love/in-love.json') }}"
+                                            data-anim-loop="false"></div>
+                                    </span>
+                                    <span class="mr-auto menu-name">Student Life</span>
+                                    <span class="caret">
+                                        <span class="animated-icon">
+                                            <div style="width:12px;height:12px"
+                                                data-animation-path="{{ asset('admin/vendor/animated-icons/expand/expand.json') }}">
+                                            </div>
+                                        </span>
+                                    </span>
+                                </a>
+                                <div class="sub-menu collapse {{ request()->routeIs('admin-galleries.index', 'admin-histories.index', 'admin-statements.index', 'admin-teachers.index') ? 'show' : '' }}"
+                                    aria-expanded="{{ request()->routeIs('admin-galleries.index', 'admin-histories.index', 'admin-statements.index', 'admin-teachers.index') ? 'true' : 'false' }}">
+
+                                    <ul class="nav flex-column">
+                                        <li
+                                            class="nav-item {{ request()->routeIs('admin-galleries.index') ? 'active' : '' }}">
+                                            <a href="{{ route('admin-galleries.index') }}" class="nav-link">
+                                                <span class="animated-icon">
+                                                    <div style="width:18px;height:18px"
+                                                        data-animation-path="{{ asset('admin/vendor/animated-icons/play-button-circled-click/play-button-circled-click.json') }}"
+                                                        data-anim-loop="false"></div>
+                                                </span>
+                                                <span class="mr-auto menu-name">Gallery</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </div>
                     </ul>
                 </div>
             </div>

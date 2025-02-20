@@ -161,6 +161,6 @@ class TeacherController extends Controller
             File::delete(public_path($teacher->teacher_photo));
         }
         $teacher->delete();
-        return to_route('admin-teachers.index')->with('success', 'Deteled Successfully');
+        return to_route('admin-teachers.index')->with('success', 'Deleted Successfully');
     }
 }
