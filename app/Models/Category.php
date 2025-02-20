@@ -18,4 +18,8 @@ class Category extends Model
     {
         return $this->belongsTo(User::class, 'category_created_user_id');
     }
+    public function posts()
+    {
+        return $this->hasMany(Post::class, 'post_category_id');
+    }
 }

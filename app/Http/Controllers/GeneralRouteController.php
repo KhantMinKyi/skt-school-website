@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Branch;
+use App\Models\Category;
 use App\Models\History;
 use App\Models\Post;
 use App\Models\PrincipalMessage;
@@ -111,5 +112,21 @@ class GeneralRouteController extends Controller
             ? 'layouts.city_layout'
             : 'layouts.riverside_layout';
         return view('partial_view.guest.student_life.news_index', compact('layout', 'branch', 'posts'));
+    }
+    public function showNewsDetail($param)
+    {
+        $post = Post::find($param);
+        if (!$post) {
+            return to_route('news.home');
+        }
+        $branch = Branch::find($post->post_branch_id);
+        $posts = Post::where('post_branch_id', $post->post_branch_id)->orderBy('created_at', 'desc')->limit(5)->get();
+        $categories = Category::withCount(['posts' => function ($query) use ($post) {
+            $query->where('post_branch_id', $post->post_branch_id);
+        }])->get();
+        $layout = ($branch && $branch->branch_short_name === 'SKT-CC')
+            ? 'layouts.city_layout'
+            : 'layouts.riverside_layout';
+        return view('partial_view.guest.student_life.news_detail', compact('layout', 'branch', 'post', 'posts', 'categories'));
     }
 }

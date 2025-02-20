@@ -11,16 +11,16 @@
         }
 
         /* #home {
-                height: 100vh;
-            }
-            @media (max-width: 768px) {
-                #home {
-                    height: auto;
+                    height: 100vh;
                 }
-                .home_content {
-                    min-height: 100%;
-                }
-            } */
+                @media (max-width: 768px) {
+                    #home {
+                        height: auto;
+                    }
+                    .home_content {
+                        min-height: 100%;
+                    }
+                } */
     </style>
     <link rel="stylesheet" href="{{ asset('guests/css/style.css') }}" />
     <!-- START HOME -->
@@ -547,7 +547,7 @@
                                     </a>
                                 </h2>
 
-                                <a href="{{ route('admin-posts.show', $post->id) }}" {{-- need tobe replaced --}}
+                                <a href="{{ route('news-detail.home', $post->id) }}" {{-- need tobe replaced --}}
                                     class="relative inline-block mx-auto py-4 px-6 overflow-hidden group">
                                     <span
                                         class="relative font-semibold text-[#1a2d62] uppercase px-6 py-4 transition-all duration-300 group-hover:text-white">
