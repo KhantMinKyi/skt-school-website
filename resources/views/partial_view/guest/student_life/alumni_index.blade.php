@@ -21,16 +21,16 @@
                     <h1 id="fading-text" class=" text-2xl md:text-7xl text-center  ml-10">
                         <span class="text-emerald-400">{{ $branch->branch_name }}</span>
                         <br>
-                        <span class="text-white">Our Teachers </span>
+                        <span class="text-white">Alumni </span>
                     </h1>
                 </div>
             </div>
         </div>
     </div>
     <section>
-        <div class="grid grid-cols-1 md:grid-cols-2"
-            style="background-image: url({{ asset('assets/images/banner/home.png') }}); background-size:cover; background-position: center center;">
-            <div class="flex items-center justify-center p-20">
+        <div class="grid grid-cols-1 md:grid-cols-2 py-2 md:py-20"
+            style="background-image: url({{ asset('assets/images/banner/course-bg.png') }}); background-size:cover; background-position: center center;">
+            <div class="flex items-center justify-center p-20 italic font-semibold">
                 Today's BFI represents an evolving community bred from four
                 distinct institutions – SKT, BISA,NISA and
                 MISA. These schools, each with rich histories and cultures of their own, have evolved into a cohesive
@@ -44,7 +44,9 @@
                 alumni@bfi-edu.com
             </div>
             <div class="flex items-center justify-center gap-10">
-                <img src="{{ asset('img/banner-hero.png') }}" class=" home-banner-hero" alt="" />
+                {{-- <img src="{{ asset('img/banner-hero.png') }}" class=" home-banner-hero" alt="" /> --}}
+                <img src="{{ asset($branch->branch_logo) }}" style="max-height: 420px" class=" home-banner-hero"
+                    alt="" />
             </div>
         </div>
     </section>

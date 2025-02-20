@@ -104,7 +104,7 @@
                     <ul class="absolute left-0 top-full hidden group-hover:block bg-white w-60 shadow-lg rounded-md">
                         <li class="py-2"><a href="{{ route('alumni.home', $layout_branch->branch_short_name) }}"
                                 class="block px-4 py-2 font-bold hover:text-teal-500">Alumni</a></li>
-                        <li class="py-2"><a href="#"
+                        <li class="py-2"><a href="{{ route('news.home', $layout_branch->branch_short_name) }}"
                                 class="block px-4 py-2 font-bold hover:text-teal-500">News</a></li>
                         <li class="py-2"><a href="#"
                                 class="block px-4 py-2 font-bold hover:text-teal-500">Gallery</a></li>

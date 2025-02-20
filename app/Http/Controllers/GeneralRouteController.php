@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Branch;
 use App\Models\History;
+use App\Models\Post;
 use App\Models\PrincipalMessage;
 use App\Models\Statement;
 use App\Models\Teacher;
@@ -94,12 +95,21 @@ class GeneralRouteController extends Controller
             : 'layouts.riverside_layout';
         return view('partial_view.guest.about_us.sister_school_index', compact('layout', 'branch'));
     }
-    public function alumni($param)
+    public function showAlumni($param)
     {
         $branch = Branch::where('branch_short_name', $param)->first();
         $layout = ($branch && $branch->branch_short_name === 'SKT-CC')
             ? 'layouts.city_layout'
             : 'layouts.riverside_layout';
         return view('partial_view.guest.student_life.alumni_index', compact('layout', 'branch'));
+    }
+    public function showNews($param)
+    {
+        $branch = Branch::where('branch_short_name', $param)->first();
+        $posts = Post::where('post_branch_id', $branch->id)->get();
+        $layout = ($branch && $branch->branch_short_name === 'SKT-CC')
+            ? 'layouts.city_layout'
+            : 'layouts.riverside_layout';
+        return view('partial_view.guest.student_life.news_index', compact('layout', 'branch', 'posts'));
     }
 }
