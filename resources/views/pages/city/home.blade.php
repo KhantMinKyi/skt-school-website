@@ -11,16 +11,16 @@
         }
 
         /* #home {
-                    height: 100vh;
-                }
-                @media (max-width: 768px) {
-                    #home {
-                        height: auto;
+                        height: 100vh;
                     }
-                    .home_content {
-                        min-height: 100%;
-                    }
-                } */
+                    @media (max-width: 768px) {
+                        #home {
+                            height: auto;
+                        }
+                        .home_content {
+                            min-height: 100%;
+                        }
+                    } */
     </style>
     <link rel="stylesheet" href="{{ asset('guests/css/style.css') }}" />
     <!-- START HOME -->
@@ -237,65 +237,22 @@
             </div>
             <div class="grid md:grid-cols-2 lg:grid-cols-4 text-center mt-4">
                 {{-- card --}}
-                <div class="mx-2 mb-2">
-                    <div class="relative group rounded-md overflow-hidden">
-                        <!-- Image -->
-                        <img src="{{ asset('assets/images/all-img/team1.jpg') }}" class="w-full" alt="Team Member" />
+                @foreach ($branch->galleries as $gallery)
+                    <div class="mx-2 mb-2">
+                        <div class="relative group rounded-md overflow-hidden">
+                            <!-- Image -->
+                            <img src="{{ asset($gallery->gallery_photo) }}" class="w-full min-h-80" alt="Team Member" />
 
-                        <!-- Overlay -->
-                        <div
-                            class="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            <h3 class="text-lg font-bold">Marina Mojo</h3>
-                            <p class="text-sm">Developer</p>
+                            <!-- Overlay -->
+                            <div
+                                class="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <h3 class="text-lg font-bold">{{ $gallery->gallery_title }}</h3>
+                                {{-- <p class="text-sm">Developer</p> --}}
+                            </div>
                         </div>
+
                     </div>
-
-                </div>
-                {{-- card --}}
-                <div class="mx-2 mb-2">
-                    <div class="relative group rounded-md overflow-hidden">
-                        <!-- Image -->
-                        <img src="{{ asset('assets/images/all-img/team1.jpg') }}" class="w-full" alt="Team Member" />
-
-                        <!-- Overlay -->
-                        <div
-                            class="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            <h3 class="text-lg font-bold">Marina Mojo</h3>
-                            <p class="text-sm">Developer</p>
-                        </div>
-                    </div>
-
-                </div>
-                {{-- card --}}
-                <div class="mx-2 mb-2">
-                    <div class="relative group rounded-md overflow-hidden">
-                        <!-- Image -->
-                        <img src="{{ asset('assets/images/all-img/team1.jpg') }}" class="w-full" alt="Team Member" />
-
-                        <!-- Overlay -->
-                        <div
-                            class="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            <h3 class="text-lg font-bold">Marina Mojo</h3>
-                            <p class="text-sm">Developer</p>
-                        </div>
-                    </div>
-
-                </div>
-                {{-- card --}}
-                <div class="mx-2 mb-2">
-                    <div class="relative group rounded-md overflow-hidden">
-                        <!-- Image -->
-                        <img src="{{ asset('assets/images/all-img/team1.jpg') }}" class="w-full" alt="Team Member" />
-
-                        <!-- Overlay -->
-                        <div
-                            class="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            <h3 class="text-lg font-bold">Marina Mojo</h3>
-                            <p class="text-sm">Developer</p>
-                        </div>
-                    </div>
-
-                </div>
+                @endforeach
                 <!--- END COL -->
             </div>
             <!--- END ROW -->

@@ -106,7 +106,7 @@
                                 class="block px-4 py-2 font-bold hover:text-teal-500">Alumni</a></li>
                         <li class="py-2"><a href="{{ route('news.home', $layout_branch->branch_short_name) }}"
                                 class="block px-4 py-2 font-bold hover:text-teal-500">News</a></li>
-                        <li class="py-2"><a href="#"
+                        <li class="py-2"><a href="{{ route('gallery.home', $layout_branch->branch_short_name) }}"
                                 class="block px-4 py-2 font-bold hover:text-teal-500">Gallery</a></li>
                         <li class="py-2"><a href="#"
                                 class="block px-4 py-2 font-bold hover:text-teal-500">Calendar</a>

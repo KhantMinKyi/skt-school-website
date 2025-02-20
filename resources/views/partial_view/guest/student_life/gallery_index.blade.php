@@ -3,7 +3,6 @@
 @section('content')
     <link rel="stylesheet" href="{{ asset('guests/css/news.css') }}" />
     <link rel="stylesheet" href="{{ asset('assets/css/slider.css') }}" />
-    <!-- START POST -->
     <div id="kenburns_061"
         class="carousel max-h-screen slide ps_indicators_txt_icon ps_control_txt_icon data-bs-target kbrns_zoomInOut thumb_scroll_x swipe_x ps_easeOutQuart relative w-full overflow-hidden"
         data-ride="carousel" data-pause="hover" data-interval="10000" data-duration="2000">
@@ -21,81 +20,90 @@
                     <h1 id="fading-text" class=" text-2xl md:text-7xl text-center  ml-10">
                         <span class="text-emerald-400">{{ $branch->branch_name }}</span>
                         <br>
-                        <div class="text-white mt-4">News </div>
+                        <div class="text-white mt-4">Gallery </div>
                     </h1>
                 </div>
             </div>
         </div>
     </div>
-    <section id="post" class="blog_area section-padding"
-        style="background-image: url({{ asset('assets/images/banner/course-bg.png') }}); background-size:cover; background-position: center center;">
+    <!-- START SCHOOL Facilities -->
+    <section id="" class="mt-10 mb-10">
         <div class="container mx-auto">
-            <div class="section-title">
-                <h2>News</h2>
-                <p>
-                    Our Latest <span class="text-emerald-500">News</span>
-                </p>
+            <div class="section-title text-4xl mb-6 font-bold text-center">
+                <h2>Our <span class="text-teal-500">Facilities</span></h2>
             </div>
-            <div class=" grid md:grid-cols-2 lg:grid-cols-3">
-                @foreach ($posts as $post)
-                    <div class="m-5 news-card  ">
-                        <div class="single_blog  hover:shadow-lg">
-                            <img src="{{ asset($post->post_banner) }}" class="img-fluid " style="max-height: 354px;"
-                                alt="image" />
-                            <div class="content_box ">
-                                <span>{{ \Carbon\Carbon::parse($post->post_created_date)->format('F d, Y') }} |
-                                    <a href="blog_single.html">{{ $post->category->category_title }}</a></span>
-                                <h2>
-                                    <a href="blog_single.html">{{ $post->post_title }}
-                                    </a>
-                                </h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 text-center mt-4 ">
+                @foreach ($branch->galleries as $gallery)
+                    <div class="mx-2 mb-2 gallery-card open-modal cursor-pointer"
+                        data-src="{{ asset($gallery->gallery_photo) }}" data-title="{{ $gallery->gallery_title }}">
+                        <div class="relative group rounded-md overflow-hidden">
+                            <!-- Image -->
+                            <img src="{{ asset($gallery->gallery_photo) }}" class="w-full min-h-80 cursor-pointer"
+                                alt="Gallery Image" />
 
-                                <a href="{{ route('news-detail.home', $post->id) }}" {{-- need tobe replaced --}}
-                                    class="relative inline-block mx-auto py-4 px-6 overflow-hidden group">
-                                    <span
-                                        class="relative font-semibold text-[#1a2d62] uppercase px-6 py-4 transition-all duration-300 group-hover:text-white">
-                                        <!-- Background animation -->
-                                        <span class="absolute inset-0 flex items-center">
-                                            <span
-                                                class="w-8 h-8 bg-teal-400 rounded-full transition-all duration-300 origin-left transform scale-100 group-hover:w-full group-hover:h-full group-hover:scale-x-100"></span>
-                                        </span>
-                                        <span class="relative z-10">READ MORE <i class="fa-solid fa-caret-right ml-1"></i>
-                                        </span>
-                                    </span>
-                                </a>
+                            <!-- Overlay -->
+                            <div
+                                class="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <h3 class="text-lg font-bold">{{ $gallery->gallery_title }}</h3>
                             </div>
                         </div>
                     </div>
                 @endforeach
-
-                <!-- END COL-->
-
             </div>
-            <!-- / END ROW -->
 
-            <!-- Pagination Controls -->
+            <!-- Fullscreen Modal -->
+            <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center hidden">
+                <div class="relative max-w-4xl w-full p-4">
+                    <button id="closeModal"
+                        class="absolute top-2 right-4 text-white text-3xl p-4 cursor-pointer">&times;</button>
+                    <img id="modalImage" src="" class="w-full rounded-lg shadow-lg" />
+                    <h3 id="modalTitle" class="text-white text-center mt-4 text-xl font-bold"></h3>
+                </div>
+            </div>
+
             <div class="mt-6 flex justify-between items-center">
                 <button id="prevPage" class="px-4 py-2 bg-gray-300 rounded-md cursor-pointer">Prev</button>
                 <span id="paginationInfo" class="text-lg"></span>
                 <button id="nextPage" class="px-4 py-2 bg-gray-300 rounded-md cursor-pointer">Next</button>
             </div>
         </div>
-        <!-- END CONTAINER  -->
     </section>
-    <!-- END POST -->
-
+    <!-- END SCHOOL Facilities -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const modal = document.getElementById("imageModal");
+            const modalImage = document.getElementById("modalImage");
+            const modalTitle = document.getElementById("modalTitle");
+            const closeModal = document.getElementById("closeModal");
+
+            document.querySelectorAll(".open-modal").forEach(card => {
+                card.addEventListener("click", function() {
+                    modalImage.src = this.dataset.src;
+                    modalTitle.textContent = this.dataset.title;
+                    modal.classList.remove("hidden");
+                });
+            });
+
+            closeModal.addEventListener("click", () => modal.classList.add("hidden"));
+            modal.addEventListener("click", (e) => {
+                if (e.target === modal) {
+                    modal.classList.add("hidden");
+                }
+            });
+        });
+    </script>
     <script>
         $(document).ready(function() {
             let perPage = 10; // Number of teachers per page
             let currentPage = 1;
-            let allTeachers = $(".news-card").toArray(); // Convert to array for better handling
+            let allTeachers = $(".gallery-card").toArray(); // Convert to array for better handling
             let filteredTeachers = [...allTeachers]; // Initially, all teachers are shown
 
             function showPage(page) {
                 let start = (page - 1) * perPage;
                 let end = start + perPage;
-                $(".news-card").hide(); // Hide all
+                $(".gallery-card").hide(); // Hide all
                 $(filteredTeachers.slice(start, end)).show(); // Show paginated ones
 
                 let totalItems = filteredTeachers.length;

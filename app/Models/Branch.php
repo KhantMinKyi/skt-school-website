@@ -45,4 +45,8 @@ class Branch extends Model
     {
         return $this->hasMany(Teacher::class, 'teacher_branch_id');
     }
+    public function galleries()
+    {
+        return $this->hasMany(Gallery::class, 'gallery_branch_id');
+    }
 }

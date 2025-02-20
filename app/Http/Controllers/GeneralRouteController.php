@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Branch;
 use App\Models\Category;
+use App\Models\Gallery;
 use App\Models\History;
 use App\Models\Post;
 use App\Models\PrincipalMessage;
@@ -24,7 +25,10 @@ class GeneralRouteController extends Controller
             },
             'principal_message',
             'history',
-            'statement'
+            'statement',
+            'galleries' => function ($query) {
+                $query->take(8); // Limit to 8 galleries
+            }
         ])->where('branch_short_name', 'SKT-RC')->first();
         if (!$branch) {
             return response()->json([
@@ -45,7 +49,10 @@ class GeneralRouteController extends Controller
             },
             'principal_message',
             'history',
-            'statement'
+            'statement',
+            'galleries' => function ($query) {
+                $query->take(8); // Limit to 8 galleries
+            }
         ])->where('branch_short_name', 'SKT-CC')->first();
         if (!$branch) {
             return response()->json([
@@ -128,5 +135,14 @@ class GeneralRouteController extends Controller
             ? 'layouts.city_layout'
             : 'layouts.riverside_layout';
         return view('partial_view.guest.student_life.news_detail', compact('layout', 'branch', 'post', 'posts', 'categories'));
+    }
+    public function showGallery($param)
+    {
+        $branch = Branch::where('branch_short_name', $param)->first();
+        $galleries = Gallery::where('gallery_branch_id', $branch->id)->get();
+        $layout = ($branch && $branch->branch_short_name === 'SKT-CC')
+            ? 'layouts.city_layout'
+            : 'layouts.riverside_layout';
+        return view('partial_view.guest.student_life.gallery_index', compact('layout', 'branch', 'galleries'));
     }
 }
