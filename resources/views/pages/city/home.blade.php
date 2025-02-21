@@ -11,16 +11,16 @@
         }
 
         /* #home {
-                        height: 100vh;
-                    }
-                    @media (max-width: 768px) {
-                        #home {
-                            height: auto;
+                            height: 100vh;
                         }
-                        .home_content {
-                            min-height: 100%;
-                        }
-                    } */
+                        @media (max-width: 768px) {
+                            #home {
+                                height: auto;
+                            }
+                            .home_content {
+                                min-height: 100%;
+                            }
+                        } */
     </style>
     <link rel="stylesheet" href="{{ asset('guests/css/style.css') }}" />
     <!-- START HOME -->

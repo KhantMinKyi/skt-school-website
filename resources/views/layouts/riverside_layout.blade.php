@@ -106,9 +106,9 @@
                                 class="block px-4 py-2 font-bold hover:text-teal-500">Alumni</a></li>
                         <li class="py-2"><a href="{{ route('news.home', $layout_branch->branch_short_name) }}"
                                 class="block px-4 py-2 font-bold hover:text-teal-500">News</a></li>
-                        <li class="py-2"><a href="{{route('gallery.home',$layout_branch->branch_short_name)}}"
+                        <li class="py-2"><a href="{{ route('gallery.home', $layout_branch->branch_short_name) }}"
                                 class="block px-4 py-2 font-bold hover:text-teal-500">Gallery</a></li>
-                        <li class="py-2"><a href="#"
+                        <li class="py-2"><a href="{{ route('calendar.home', $layout_branch->branch_short_name) }}"
                                 class="block px-4 py-2 font-bold hover:text-teal-500">Calendar</a>
                         </li>
                     </ul>
@@ -180,8 +180,8 @@
                 <div class="col-lg-3 col-sm-6 col-xs-12">
                     <div class="single_footer">
                         {{-- <a href="index.html"><img src="assets/images/all-img/logo2.png" alt="" /></a> --}}
-                        <a href="/"><img src="{{ asset('img/skt_with_tagline.png') }}" class=" max-w-72"
-                                alt=""></a>
+                        <a href="/"><img src="{{ asset('img/skt_with_tagline.png') }}"
+                                class=" max-w-60 sm:max-w-72" alt=""></a>
                         <p>
                             We nurture students to become lifelong learners responsible global citizens, and
                             compassionate individuals through a challenging and balanced curriculum in a safe and caring

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Branch;
+use App\Models\Calendar;
 use App\Models\Category;
 use App\Models\Gallery;
 use App\Models\History;
@@ -144,5 +145,14 @@ class GeneralRouteController extends Controller
             ? 'layouts.city_layout'
             : 'layouts.riverside_layout';
         return view('partial_view.guest.student_life.gallery_index', compact('layout', 'branch', 'galleries'));
+    }
+    public function showCalendar($param)
+    {
+        $branch = Branch::where('branch_short_name', $param)->first();
+        $calendar = Calendar::where('calendar_branch_id', $branch->id)->first();
+        $layout = ($branch && $branch->branch_short_name === 'SKT-CC')
+            ? 'layouts.city_layout'
+            : 'layouts.riverside_layout';
+        return view('partial_view.guest.student_life.calendar_index', compact('layout', 'branch', 'calendar'));
     }
 }
