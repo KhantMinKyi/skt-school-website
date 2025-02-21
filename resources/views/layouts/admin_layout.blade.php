@@ -680,8 +680,8 @@
                                         </span>
                                     </span>
                                 </a>
-                                <div class="sub-menu collapse {{ request()->routeIs('admin-galleries.index', 'admin-histories.index', 'admin-statements.index', 'admin-teachers.index') ? 'show' : '' }}"
-                                    aria-expanded="{{ request()->routeIs('admin-galleries.index', 'admin-histories.index', 'admin-statements.index', 'admin-teachers.index') ? 'true' : 'false' }}">
+                                <div class="sub-menu collapse {{ request()->routeIs('admin-galleries.index', 'admin-calendars.index', 'admin-statements.index', 'admin-teachers.index') ? 'show' : '' }}"
+                                    aria-expanded="{{ request()->routeIs('admin-galleries.index', 'admin-calendars.index', 'admin-statements.index', 'admin-teachers.index') ? 'true' : 'false' }}">
 
                                     <ul class="nav flex-column">
                                         <li
@@ -693,6 +693,17 @@
                                                         data-anim-loop="false"></div>
                                                 </span>
                                                 <span class="mr-auto menu-name">Gallery</span>
+                                            </a>
+                                        </li>
+                                        <li
+                                            class="nav-item {{ request()->routeIs('admin-calendars.index') ? 'active' : '' }}">
+                                            <a href="{{ route('admin-calendars.index') }}" class="nav-link">
+                                                <span class="animated-icon">
+                                                    <div style="width:18px;height:18px"
+                                                        data-animation-path="{{ asset('admin/vendor/animated-icons/calendar-tear/calendar-tear.json') }}"
+                                                        data-anim-loop="false"></div>
+                                                </span>
+                                                <span class="mr-auto menu-name">Calendar</span>
                                             </a>
                                         </li>
                                     </ul>
