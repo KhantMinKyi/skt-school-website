@@ -6,21 +6,9 @@
         .principal-message {
             font-family: "Roboto Slab", serif;
             font-weight: 400;
-            font-size: 48px;
+            /* font-size: 48px; */
             font-style: normal;
         }
-
-        /* #home {
-                                height: 100vh;
-                            }
-                            @media (max-width: 768px) {
-                                #home {
-                                    height: auto;
-                                }
-                                .home_content {
-                                    min-height: 100%;
-                                }
-                            } */
     </style>
     <link rel="stylesheet" href="{{ asset('guests/css/style.css') }}" />
     <!-- START HOME -->
@@ -317,13 +305,13 @@
                     </p>
                 </div>
                 <div class="abmv mt-4 principal-message ">
-                    <p class="text-xl italic">
+                    <p class="md:text-xl italic">
                         {{ $branch->principal_message->principal_message }}
                     </p>
                 </div>
             </div>
             <div class="flex justify-center items-center ">
-                <img class="w-[420px] h-[420px] object-cover rounded-full"
+                <img class=" w-[240px] h-[240px] md:w-[420px] md:h-[420px] object-cover rounded-full"
                     src="{{ asset($branch->principal_message->principal_photo) }}" alt="" />
             </div>
         </div>

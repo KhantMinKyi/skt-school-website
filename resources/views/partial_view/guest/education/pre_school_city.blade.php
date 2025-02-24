@@ -25,13 +25,13 @@
     <!-- START TOPIC-->
     <section class="topic_content_area section-padding" style="background-image: url(assets/images/banner/topic.png);">
         <div class="container mx-auto">
-            <div class="section-title">
+            <div class="section-title p-4">
                 <h2>{{ $branch->branch_name }}</h2>
                 <p>
-                    Pre School <span class="text-emerald-500">3 - 5 Year</span>
+                    Pre School <span class="text-emerald-500">2 - 5 Years</span>
                 </p>
             </div>
-            <div class=" text-lg">
+            <div class=" text-lg p-4">
                 Our International curriculum addresses social-emotional development via engaging activities and positive
                 reinforcement and by actively involving parents in our lessons and extra-curricular programs. We follow an
                 age-appropriate curriculum based on the latest research on early childhood learning. Children are free to

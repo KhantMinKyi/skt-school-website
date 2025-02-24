@@ -161,14 +161,8 @@
         </div>
 
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden flex flex-col items-center bg-white lg:hidden">
-            <a href="#" class="py-2 px-4 text-gray-900 font-bold hover:bg-gray-700 w-full text-center">Home</a>
-            <a href="#" class="py-2 px-4 text-gray-900 font-bold hover:bg-gray-700 w-full text-center">About</a>
-            <a href="#"
-                class="py-2 px-4 text-gray-900 font-bold hover:bg-gray-700 w-full text-center">Services</a>
-            <a href="#"
-                class="py-2 px-4 text-gray-900 font-bold hover:bg-gray-700 w-full text-center">Contact</a>
-        </div>
+        @include('layouts.mobile_layout')
+
     </nav>
     <!-- START HOME -->
     @yield('content')
@@ -266,7 +260,7 @@
                 <!--- END COL -->
             </div>
             <!--- END ROW -->
-            <div class="row fc">
+            <div class="grid grid-cols-1 sm:grid-cols-2 fc">
                 <div class="col-lg-6 col-sm-6 col-xs-12">
                     <div class="footer_copyright">
                         <p>&copy; 2025. All Rights Reserved.</p>
@@ -303,10 +297,24 @@
             document.getElementById('mobile-menu').classList.toggle('hidden');
         });
 
-        document.querySelector('#mobile-menu a[href="#"]').addEventListener('click', function(event) {
-            event.preventDefault();
-            document.getElementById('mobile-submenu').classList.toggle('hidden');
+        // Handle multiple dropdowns dynamically
+        document.querySelectorAll('.dropdown-btn').forEach(button => {
+            button.addEventListener('click', function(event) {
+                event.preventDefault();
+
+                // Toggle only the clicked dropdown
+                const dropdownMenu = this.nextElementSibling;
+                dropdownMenu.classList.toggle('hidden');
+
+                // Optional: Hide other dropdowns when one is clicked
+                document.querySelectorAll('.dropdown-menu').forEach(menu => {
+                    if (menu !== dropdownMenu) {
+                        menu.classList.add('hidden');
+                    }
+                });
+            });
         });
+
         document.addEventListener("scroll", function() {
             const navbar = document.getElementById("navbar");
             if (window.scrollY > 50) {
@@ -318,6 +326,7 @@
             }
         });
     </script>
+
 
 </body>
 

@@ -6,7 +6,7 @@
         .principal-message {
             font-family: "Roboto Slab", serif;
             font-weight: 400;
-            font-size: 48px;
+            /* font-size: 48px; */
             font-style: normal;
         }
     </style>
@@ -347,7 +347,7 @@
                     </p>
                 </div>
                 <div class="abmv mt-4 principal-message ">
-                    <p class="text-xl italic">
+                    <p class="md:text-xl italic">
                         {{ $branch->principal_message->principal_message }}
                     </p>
                 </div>
