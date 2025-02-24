@@ -27,3 +27,6 @@ Route::get('/student_life/news/{param}', [GeneralRouteController::class, 'showNe
 Route::get('/student_life/news-detail/{param}', [GeneralRouteController::class, 'showNewsDetail'])->name('news-detail.home');
 Route::get('/student_life/gallery/{param}', [GeneralRouteController::class, 'showGallery'])->name('gallery.home');
 Route::get('/student_life/calendar/{param}', [GeneralRouteController::class, 'showCalendar'])->name('calendar.home');
+
+//Education
+Route::get('/education/pre_school/{param}', [GeneralRouteController::class, 'showPreSchool'])->name('pre-school.home');

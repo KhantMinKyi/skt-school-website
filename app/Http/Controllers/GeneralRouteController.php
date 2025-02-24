@@ -155,4 +155,13 @@ class GeneralRouteController extends Controller
             : 'layouts.riverside_layout';
         return view('partial_view.guest.student_life.calendar_index', compact('layout', 'branch', 'calendar'));
     }
+    public function showPreSchool($param)
+    {
+        $branch = Branch::where('branch_short_name', $param)->first();
+        if ($branch && $branch->branch_short_name === 'SKT-CC') {
+            return view('partial_view.guest.education.pre_school_city', compact('branch'));
+        } else {
+            return view('partial_view.guest.education.pre_school_riverside', compact('branch'));
+        }
+    }
 }

@@ -57,11 +57,11 @@
                 <source src="{{ asset('videos/skt_riverside_campus.mp4') }}" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
-            <div class="absolute inset-0 bg-black opacity-60"></div>
+            <div class="absolute inset-0 bg-black opacity-60 hidden sm:block"></div>
         </div>
         {{-- <div class=" "> --}}
         <div class="home_content container mx-auto flex flex-col justify-center items-center">
-            <h1 id="fading-text" class=" text-center  ml-10">
+            <h1 id="fading-text" class=" text-center  ml-10 hidden sm:block">
                 <span class="text-emerald-400">INSPIRING</span>
                 <span class="text-emerald-400">BRILLIANCE , </span> <br>
                 <span class="text-white">BUILDING</span>

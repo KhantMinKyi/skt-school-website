@@ -53,7 +53,7 @@
         </div>
         <div class="main-menu container mx-auto flex items-center justify-between p-4">
             <!-- Logo -->
-            <div class="text-xl font-bold w-80 md:-mt-12">
+            <div class="text-xl font-bold w-48 md:w-80 -mt-6 md:-mt-12">
                 <a href="/"><img src="{{ asset('img/skt_with_tagline.png') }}" alt=""></a>
             </div>
 
@@ -116,7 +116,8 @@
                 <li class="relative group -mt-1">
                     <a href="#" class=" font-bold hover:text-teal-500 px-2 py-1 block">Education</a>
                     <ul class="absolute left-0 top-full hidden group-hover:block bg-white w-60 shadow-lg rounded-md">
-                        <li class="py-2"><a href="#" class="block px-4 py-2 font-bold hover:text-teal-500">Pre
+                        <li class="py-2"><a href="{{ route('pre-school.home', $layout_branch->branch_short_name) }}"
+                                class="block px-4 py-2 font-bold hover:text-teal-500">Pre
                                 School</a></li>
                         <li class="py-2"><a href="#"
                                 class="block px-4 py-2 font-bold hover:text-teal-500">Primary</a></li>
@@ -156,7 +157,7 @@
                         class=" font-bold hover:text-teal-500 px-2 py-1 block">Contact</a></li>
             </ul>
             <!-- Mobile Menu Button -->
-            <button id="menu-btn" class="lg:hidden text-gray-900 text-2xl">☰</button>
+            <button id="menu-btn" class="lg:hidden text-gray-900 text-2xl -mt-6">☰</button>
         </div>
 
         <!-- Mobile Menu -->
