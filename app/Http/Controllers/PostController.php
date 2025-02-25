@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Branch;
 use App\Models\Category;
 use App\Models\Post;
+use App\Models\PostComment;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -18,9 +19,10 @@ class PostController extends Controller
     public function index()
     {
         $posts = Post::where('post_is_active', 1)->orderBy('created_at', 'desc')->paginate(10);
+        $pendingCommentsCount = PostComment::where('post_comment_status', 'pending')->get()->count();
         $categories = Category::all();
         $branches = Branch::all();
-        return view('admin.posts.post_index', compact('posts', 'categories', 'branches'));
+        return view('admin.posts.post_index', compact('posts', 'categories', 'branches', 'pendingCommentsCount'));
     }
 
     /**

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Post;
 use App\Models\PostComment;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class PostCommentController extends Controller
 {
@@ -13,7 +14,9 @@ class PostCommentController extends Controller
      */
     public function index()
     {
-        //
+        $post_comments = PostComment::with('post')->paginate(10);
+
+        return view('partial_view.admin.posts.post_comment_index', compact('post_comments'));
     }
 
     /**
@@ -41,6 +44,7 @@ class PostCommentController extends Controller
         if (!$post) {
             return to_route('news.home');
         }
+        $data['post_comment_branch_id'] = $post->post_branch_id;
         PostComment::create($data);
         return to_route('news-detail.home', $post->id)->with('success', ' Comment Added , It will be shown after validation . ');
     }
@@ -64,16 +68,37 @@ class PostCommentController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
-    {
-        //
-    }
+    public function update(Request $request, string $id) {}
 
     /**
      * Remove the specified resource from storage.
      */
     public function destroy(string $id)
     {
-        //
+        // dd($id);
+        $post_comment = PostComment::find($id);
+        if ($post_comment) {
+            $post_comment->delete();
+        }
+        return to_route('admin-post-comments.index')->with('success', 'Deleted Successfully');
+    }
+
+    public function changeCommentStatus(Request $request)
+    {
+        // dd($request->all());
+        $data = $request->validate([
+            'post_comment_id' => 'required',
+            'post_comment_status' => 'required',
+        ]);
+        $post_comment = PostComment::find($data['post_comment_id']);
+        if ($post_comment) {
+            $post_comment->update(
+                [
+                    'post_comment_status' => $data['post_comment_status'],
+                    'post_comment_action_user_id' => Auth::user()->id,
+                ]
+            );
+        }
+        return to_route('admin-post-comments.index')->with('success', 'Updated Successfully');
     }
 }

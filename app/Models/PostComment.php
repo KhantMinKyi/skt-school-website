@@ -11,6 +11,7 @@ class PostComment extends Model
     //
     protected $fillable = [
         'post_comment_post_id',
+        'post_comment_branch_id',
         'post_comment_action_user_id',
         'post_comment_user_name',
         'post_comment_user_email',
@@ -21,6 +22,10 @@ class PostComment extends Model
     public function action_user()
     {
         return $this->belongsTo(User::class, 'post_comment_action_user_id');
+    }
+    public function branch()
+    {
+        return $this->belongsTo(Branch::class, 'post_comment_branch_id');
     }
     public function post()
     {

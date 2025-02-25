@@ -36,6 +36,23 @@
                     Archived Posts
                 </div>
             </a>
+            <a href="{{ route('admin-post-comments.index') }}" class="btn btn-primary btn-md position-relative">
+                <div class="d-flex align-items-center">
+                    <span class="animated-icon mr-2">
+                        <div style="width:14px;height:14px; cursor: pointer;"
+                            data-animation-path="{{ asset('admin/vendor/animated-icons/typing/typing.json') }}"
+                            data-anim-loop="false">
+                        </div>
+                    </span>
+                    Comments
+                    @if ($pendingCommentsCount > 0)
+                        <span class="badge badge-danger position-absolute top-0 start-100 translate-middle rounded-circle">
+                            {{ $pendingCommentsCount }}
+                        </span>
+                    @endif
+                </div>
+            </a>
+
         </div>
         <div class="card-body">
             <div class="table-responsive">
@@ -158,8 +175,8 @@
                                 <div class="row mb-3">
                                     <label for="inputEmail3" class="col-3 col-form-label"> Title </label>
                                     <div class="col-9">
-                                        <input type="text" placeholder="Choose Title " value="" name="post_title"
-                                            title="Title is required" required class="form-control">
+                                        <input type="text" placeholder="Choose Title " value=""
+                                            name="post_title" title="Title is required" required class="form-control">
                                     </div>
                                 </div>
                             </div>
