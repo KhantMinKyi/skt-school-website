@@ -70,26 +70,40 @@
 
                     <div class="comments_part mt-8">
                         <h3 class="blog_head_title text-xl font-semibold mb-4">Comments</h3>
-                        <div class="single_comment flex gap-4 border-b py-4">
-                            <div>
-                                <h4 class="font-semibold">Ayoub Fennouni</h4>
-                                <p class="text-gray-600 text-sm">Lorem ipsum dolor sit amet...</p>
+                        @foreach ($post->comments as $comment)
+                            <div class="single_comment flex gap-4 border-b py-4">
+                                <div>
+                                    <h4 class="font-semibold">{{ $comment->post_comment_user_name }}</h4>
+                                    <p class="text-gray-600 text-sm">{{ $comment->post_comment_body }}</p>
+                                </div>
                             </div>
-                        </div>
+                        @endforeach
                     </div>
 
+                    @if (Session::has('error'))
+                        <div class="bg-red-200 p-4 rounded-lg fade show w-50 mx-auto text-center" role="alert">
+                            {{ Session::get('error') }}
+                        </div>
+                    @endif
+                    @if (Session::has('success'))
+                        <div class=" bg-green-200 p-4 rounded-lg fade show w-50 mx-auto text-center" role="alert">
+                            {{ Session::get('success') }}
+                        </div>
+                    @endif
                     <div class="comment_form mt-8 bg-white p-6 shadow-lg rounded-lg">
                         <h3 class="blog_head_title text-xl font-semibold mb-4">Add a Comment</h3>
-                        <form id="contact-form" method="post">
+                        <form id="contact-form" method="post" action="{{ route('post-comment.store') }}">
+                            @csrf
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                <input type="text" name="name" class="form-control border rounded-md p-2"
-                                    placeholder="Name" required>
-                                <input type="email" name="email" class="form-control border rounded-md p-2"
-                                    placeholder="Email" required>
+                                <input type="hidden" name="post_comment_post_id" value="{{ $post->id }}">
+                                <input type="text" name="post_comment_user_name"
+                                    class="form-control border rounded-md p-2" placeholder="Name" required>
+                                <input type="email" name="post_comment_user_email"
+                                    class="form-control border rounded-md p-2" placeholder="Email" required>
                             </div>
-                            <input type="text" name="subject" class="form-control border rounded-md p-2 w-full mt-4"
-                                placeholder="Subject" required>
-                            <textarea rows="6" name="message" class="form-control border rounded-md p-2 w-full mt-4"
+                            <input type="text" name="post_comment_subject"
+                                class="form-control border rounded-md p-2 w-full mt-4" placeholder="Subject" required>
+                            <textarea rows="6" name="post_comment_body" class="form-control border rounded-md p-2 w-full mt-4"
                                 placeholder="Your Message" required></textarea>
                             <button type="submit"
                                 class="btn btn_one bg-blue-600 text-white px-4 py-2 rounded-md mt-4">Submit Comment</button>

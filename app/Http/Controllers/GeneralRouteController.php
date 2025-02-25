@@ -124,10 +124,13 @@ class GeneralRouteController extends Controller
     }
     public function showNewsDetail($param)
     {
-        $post = Post::find($param);
+        $post = Post::with(['comments' => function ($query) {
+            $query->where('post_comment_status', 'approved');
+        }])->find($param);
         if (!$post) {
             return to_route('news.home');
         }
+        // dd($post);
         $branch = Branch::find($post->post_branch_id);
         $posts = Post::where('post_branch_id', $post->post_branch_id)->orderBy('created_at', 'desc')->limit(5)->get();
         $categories = Category::withCount(['posts' => function ($query) use ($post) {

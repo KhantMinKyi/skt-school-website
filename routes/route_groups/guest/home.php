@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\GeneralRouteController;
+use App\Http\Controllers\PostCommentController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -23,10 +24,13 @@ Route::get('/about_us/sister_schools/{param}', [GeneralRouteController::class, '
 
 // Student Life
 Route::get('/student_life/alumni/{param}', [GeneralRouteController::class, 'showAlumni'])->name('alumni.home');
-Route::get('/student_life/news/{param}', [GeneralRouteController::class, 'showNews'])->name('news.home');
-Route::get('/student_life/news-detail/{param}', [GeneralRouteController::class, 'showNewsDetail'])->name('news-detail.home');
 Route::get('/student_life/gallery/{param}', [GeneralRouteController::class, 'showGallery'])->name('gallery.home');
 Route::get('/student_life/calendar/{param}', [GeneralRouteController::class, 'showCalendar'])->name('calendar.home');
+
+//  News
+Route::get('/student_life/news/{param}', [GeneralRouteController::class, 'showNews'])->name('news.home');
+Route::get('/student_life/news-detail/{param}', [GeneralRouteController::class, 'showNewsDetail'])->name('news-detail.home');
+Route::post('/student_life/news-comment', [PostCommentController::class, 'store'])->name('post-comment.store');
 
 //Education
 Route::get('/education/pre_school/{param}', [GeneralRouteController::class, 'showPreSchool'])->name('pre-school.home');
