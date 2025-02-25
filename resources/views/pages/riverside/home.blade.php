@@ -440,10 +440,11 @@
             </div>
             <div class="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1">
                 @foreach ($branch->events as $event)
-                    <div class="event-slide mr-4 hover:shadow-md ">
+                    <div class="event-slide mr-4 hover:shadow-md rounded-md ">
                         <a href="{{ route('admin-events.show', $event->id) }}"> {{-- need tobe replaced --}}
                             <div class="event-img rounded-t-md">
-                                <img src="{{ asset($event->event_banner) }}" style="max-height: 361px" alt="" />
+                                <img src="{{ asset($event->event_banner) }}" style="height: 354px; object-fit: cover;"
+                                    alt="" />
                                 <div class="event-date">
                                     <span class="date">{{ $event->event_start_date }}</span>
                                     <span class="month">{{ $event->event_end_date }}</span>

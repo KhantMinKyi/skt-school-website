@@ -30,3 +30,7 @@ Route::get('/student_life/calendar/{param}', [GeneralRouteController::class, 'sh
 
 //Education
 Route::get('/education/pre_school/{param}', [GeneralRouteController::class, 'showPreSchool'])->name('pre-school.home');
+
+// Event
+Route::get('/event/events/{param}', [GeneralRouteController::class, 'showEvents'])->name('event.home');
+Route::get('/event/event-detail/{param}', [GeneralRouteController::class, 'showEventDetail'])->name('event-detail.home');

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Branch;
 use App\Models\Calendar;
 use App\Models\Category;
+use App\Models\Event;
 use App\Models\Gallery;
 use App\Models\History;
 use App\Models\Post;
@@ -163,5 +164,30 @@ class GeneralRouteController extends Controller
         } else {
             return view('partial_view.guest.education.pre_school_riverside', compact('branch'));
         }
+    }
+    public function showEvents($param)
+    {
+        $branch = Branch::where('branch_short_name', $param)->first();
+        $events = Event::where('event_branch_id', $branch->id)->get();
+        $layout = ($branch && $branch->branch_short_name === 'SKT-CC')
+            ? 'layouts.city_layout'
+            : 'layouts.riverside_layout';
+        return view('partial_view.guest.events.event_index', compact('layout', 'branch', 'events'));
+    }
+    public function showEventDetail($param)
+    {
+        $event = Event::find($param);
+        if (!$event) {
+            return to_route('event.home');
+        }
+        $branch = Branch::find($event->event_branch_id);
+        $events = Event::where('event_branch_id', $event->event_branch_id)->orderBy('created_at', 'desc')->limit(5)->get();
+        $categories = Category::withCount(['events' => function ($query) use ($event) {
+            $query->where('event_branch_id', $event->event_branch_id);
+        }])->get();
+        $layout = ($branch && $branch->branch_short_name === 'SKT-CC')
+            ? 'layouts.city_layout'
+            : 'layouts.riverside_layout';
+        return view('partial_view.guest.events.event_detail', compact('layout', 'branch', 'event', 'events', 'categories'));
     }
 }

@@ -337,9 +337,10 @@ p.section-title-white {
 .event-slide {
     position: relative;
     background: #fff;
-    border-radius: 3px;
+    /* border-radius: 3px; */
     margin-bottom: 30px;
     transition: 0.3s;
+    border: 1px solid #eee;
 }
 .es {
     position: relative;
@@ -398,7 +399,6 @@ p.section-title-white {
 }
 .event-slide .event-content {
     padding: 30px;
-    border: 1px solid #eee;
 }
 .event-content.ec_pd {
     padding: 0;

@@ -107,6 +107,7 @@
         </div>
     </div>
     <!-- Other Menu Items (No Dropdown) -->
-    <a href="#" class="py-2 px-4 text-gray-900 font-bold hover:bg-gray-50 w-full text-center">Event</a>
+    <a href="{{ route('event.home', $layout_branch->branch_short_name) }}"
+        class="py-2 px-4 text-gray-900 font-bold hover:bg-gray-50 w-full text-center">Event</a>
     <a href="#" class="py-2 px-4 text-gray-900 font-bold hover:bg-gray-50 w-full text-center">Contact</a>
 </div>

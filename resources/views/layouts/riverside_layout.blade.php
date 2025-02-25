@@ -151,7 +151,8 @@
                         </li>
                     </ul>
                 </li>
-                <li class="-mt-1"><a href="#" class=" font-bold hover:text-teal-500 px-2 py-1 block"> Event
+                <li class="-mt-1"><a href="{{ route('event.home', $layout_branch->branch_short_name) }}"
+                        class=" font-bold hover:text-teal-500 px-2 py-1 block"> Event
                     </a></li>
                 <li class="-mt-1"><a href="#"
                         class=" font-bold hover:text-teal-500 px-2 py-1 block">Contact</a></li>
