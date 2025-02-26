@@ -44,9 +44,9 @@
                                 alt="image" />
                             <div class="content_box ">
                                 <span>{{ \Carbon\Carbon::parse($post->post_created_date)->format('F d, Y') }} |
-                                    <a href="blog_single.html">{{ $post->category->category_title }}</a></span>
+                                    <a href="#">{{ $post->category->category_title }}</a></span>
                                 <h2>
-                                    <a href="blog_single.html">{{ $post->post_title }}
+                                    <a href="{{ route('news-detail.home', $post->id) }}">{{ $post->post_title }}
                                     </a>
                                 </h2>
 

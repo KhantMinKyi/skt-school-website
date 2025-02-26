@@ -44,9 +44,9 @@
                                 style="height: 354px; object-fit: cover;" alt="image" />
                             <div class="content_box ">
                                 <span>{{ \Carbon\Carbon::parse($event->event_created_date)->format('F d, Y') }} |
-                                    <a href="blog_single.html">{{ $event->category->category_title }}</a></span>
+                                    <a href="#">{{ $event->category->category_title }}</a></span>
                                 <h2>
-                                    <a href="blog_single.html">{{ $event->event_title }}
+                                    <a href="{{ route('event-detail.home', $event->id) }}">{{ $event->event_title }}
                                     </a>
                                 </h2>
                                 <div class="event-content">

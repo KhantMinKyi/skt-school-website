@@ -452,7 +452,7 @@
                             </div>
                             <div class="event-content">
                                 <h3 class="hover:text-teal-500">
-                                    <a href="#">{{ $event->event_title }}</a>
+                                    <a href="{{ route('admin-events.show', $event->id) }}">{{ $event->event_title }}</a>
                                 </h3>
                                 <span><i class="fa fa-clock-o"></i>{{ $event->event_time }}</span>
                                 <span><i class="fa fa-table"></i><strong>{{ $event->event_location }}</strong></span>
@@ -529,9 +529,9 @@
                                 alt="image" />
                             <div class="content_box">
                                 <span>{{ \Carbon\Carbon::parse($post->post_created_date)->format('F d, Y') }} |
-                                    <a href="blog_single.html">{{ $post->category->category_title }}</a></span>
+                                    <a href="#">{{ $post->category->category_title }}</a></span>
                                 <h2>
-                                    <a href="blog_single.html">{{ $post->post_title }}
+                                    <a href="{{ route('news-detail.home', $post->id) }}">{{ $post->post_title }}
                                     </a>
                                 </h2>
 
