@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Branch;
 use App\Models\Category;
 use App\Models\Event;
+use App\Models\EventComment;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -18,9 +19,10 @@ class EventController extends Controller
     public function index()
     {
         $events = Event::where('event_is_active', 1)->orderBy('created_at', 'desc')->paginate(10);
+        $pendingCommentsCount = EventComment::where('event_comment_status', 'pending')->get()->count();
         $categories = Category::all();
         $branches = Branch::all();
-        return view('admin.events.event_index', compact('events', 'categories', 'branches'));
+        return view('admin.events.event_index', compact('events', 'categories', 'branches', 'pendingCommentsCount'));
     }
 
     /**

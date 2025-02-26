@@ -133,21 +133,6 @@
                                 </h5>
                             </div><!-- END SINGLE POPULAR POST -->
                         @endforeach
-                        {{-- <div class="single_popular">
-                            <a href="single_blog.html"><img src="assets/images/blog/blog-3.png" alt="" /></a>
-                            <h5><a href="single_blog.html">Enhancing Your E-commerce Store With AI Writing Assistants.</a>
-                            </h5>
-                        </div>
-                        <div class="single_popular">
-                            <a href="single_blog.html"><img src="assets/images/blog/blog-4.png" alt="" /></a>
-                            <h5><a href="single_blog.html">Building your content strategy cannot get easier than this.</a>
-                            </h5>
-                        </div>
-                        <div class="single_popular">
-                            <a href="single_blog.html"><img src="assets/images/blog/blog-5.png" alt="" /></a>
-                            <h5><a href="single_blog.html">This is the only read you would need before sitting down to
-                                    prepare</a></h5>
-                        </div> --}}
                     </div><!-- END SIDEBAR POST -->
                     <div class="sidebar-post">
                         <div class="sidebar_title">
@@ -179,18 +164,6 @@
                                                 class="fa-brands fa-instagram"></i><span class="item-list">350K
                                                 Followers</span></a></div>
                                 </li>
-
-                                {{-- <li>
-                                    <div class="social_item b_tumblr"><a href="#" title="rss"><i
-                                                class="fa fa-tumblr"></i><span class="item-list">901 Followers</span></a>
-                                    </div>
-                                </li>
-
-                                <li>
-                                    <div class="social_item b_rss"><a href="#" title="rss"><i
-                                                class="fa fa-rss"></i><span class="item-list">411 Followers</span></a>
-                                    </div>
-                                </li> --}}
                             </ul>
                         </div><!-- END SOCIAL MEDIA POST -->
                     </div><!-- END SIDEBAR POST -->

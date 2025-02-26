@@ -179,7 +179,9 @@ class GeneralRouteController extends Controller
     }
     public function showEventDetail($param)
     {
-        $event = Event::find($param);
+        $event = Event::with(['comments' => function ($query) {
+            $query->where('event_comment_status', 'approved');
+        }])->find($param);
         if (!$event) {
             return to_route('event.home');
         }

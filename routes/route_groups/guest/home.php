@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\EventCommentController;
 use App\Http\Controllers\GeneralRouteController;
 use App\Http\Controllers\PostCommentController;
 use Illuminate\Support\Facades\Route;
@@ -38,3 +39,4 @@ Route::get('/education/pre_school/{param}', [GeneralRouteController::class, 'sho
 // Event
 Route::get('/event/events/{param}', [GeneralRouteController::class, 'showEvents'])->name('event.home');
 Route::get('/event/event-detail/{param}', [GeneralRouteController::class, 'showEventDetail'])->name('event-detail.home');
+Route::post('/event/event-comment', [EventCommentController::class, 'store'])->name('event-comment.store');

@@ -44,4 +44,8 @@ class Event extends Model
     {
         return $this->belongsTo(Category::class, 'event_category_id');
     }
+    public function comments()
+    {
+        return $this->hasMany(EventComment::class, 'event_comment_event_id');
+    }
 }

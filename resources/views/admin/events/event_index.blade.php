@@ -36,6 +36,22 @@
                     Archived Events
                 </div>
             </a>
+            <a href="{{ route('admin-event-comments.index') }}" class="btn btn-primary btn-md position-relative">
+                <div class="d-flex align-items-center">
+                    <span class="animated-icon mr-2">
+                        <div style="width:14px;height:14px; cursor: pointer;"
+                            data-animation-path="{{ asset('admin/vendor/animated-icons/typing/typing.json') }}"
+                            data-anim-loop="false">
+                        </div>
+                    </span>
+                    Comments
+                    @if ($pendingCommentsCount > 0)
+                        <span class="badge badge-danger position-absolute top-0 start-100 translate-middle rounded-circle">
+                            {{ $pendingCommentsCount }}
+                        </span>
+                    @endif
+                </div>
+            </a>
         </div>
         <div class="card-body">
             <div class="table-responsive">
