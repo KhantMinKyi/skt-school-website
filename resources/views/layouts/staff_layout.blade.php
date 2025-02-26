@@ -434,9 +434,9 @@
                     </nav>
                     <ul class="d-block scroll-y flex-1 py-3 nav flex-column">
                         <div class="sidebar-item">
-                            <li class="nav-item  {{ request()->routeIs('admin.dashboard') ? 'active' : '' }}">
+                            <li class="nav-item  {{ request()->routeIs('staff.dashboard') ? 'active' : '' }}">
                                 <a class="nav-link d-flex align-items-center nav-link"
-                                    href="{{ route('admin.dashboard') }}">
+                                    href="{{ route('staff.dashboard') }}">
                                     <span class="animated-icon">
                                         <div style="width:18px;height:18px"
                                             data-animation-path="{{ asset('admin/vendor/animated-icons/activity/activity.json') }}"
@@ -482,9 +482,9 @@
                             </li>
                         </div>
                         <div class="sidebar-item">
-                            <li class="nav-item {{ request()->routeIs('admin-events.index') ? 'active' : '' }}">
+                            <li class="nav-item {{ request()->routeIs('staff-events.index') ? 'active' : '' }}">
                                 <a class="nav-link d-flex align-items-center nav-link"
-                                    href="{{ route('admin-events.index') }}">
+                                    href="{{ route('staff-events.index') }}">
                                     <span class="animated-icon">
                                         <div style="width:18px;height:18px"
                                             data-animation-path="{{ asset('admin/vendor/animated-icons/calendar/calendar.json') }}"

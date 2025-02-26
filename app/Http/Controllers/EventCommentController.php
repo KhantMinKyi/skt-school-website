@@ -9,14 +9,25 @@ use Illuminate\Support\Facades\Auth;
 
 class EventCommentController extends Controller
 {
+    protected $user;
+
+    public function __construct()
+    {
+        $this->user = Auth::user();
+    }
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $event_comments = EventComment::with('event')->paginate(10);
+        if ($this->user->is_admin == 1) {
 
-        return view('partial_view.admin.events.event_comment_index', compact('event_comments'));
+            $event_comments = EventComment::with('event')->paginate(10);
+            return view('partial_view.admin.events.event_comment_index', compact('event_comments'));
+        } else {
+            $event_comments = EventComment::with('event')->where('event_comment_branch_id', $this->user->branch_id)->paginate(10);
+            return view('partial_view.staff.events.event_comment_index', compact('event_comments'));
+        }
     }
 
     /**
@@ -82,7 +93,11 @@ class EventCommentController extends Controller
         if ($event_comment) {
             $event_comment->delete();
         }
-        return to_route('admin-event-comments.index')->with('success', 'Deleted Successfully');
+        if ($this->user->is_admin == 1) {
+            return to_route('admin-event-comments.index')->with('success', 'Deleted Successfully');
+        } else {
+            return to_route('staff-event-comments.index')->with('success', 'Deleted Successfully');
+        }
     }
 
     public function changeCommentStatus(Request $request)
@@ -101,6 +116,10 @@ class EventCommentController extends Controller
                 ]
             );
         }
-        return to_route('admin-event-comments.index')->with('success', 'Updated Successfully');
+        if ($this->user->is_admin == 1) {
+            return to_route('admin-event-comments.index')->with('success', 'Updated Successfully');
+        } else {
+            return to_route('staff-event-comments.index')->with('success', 'Updated Successfully');
+        }
     }
 }

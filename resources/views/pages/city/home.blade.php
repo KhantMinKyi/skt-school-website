@@ -399,7 +399,7 @@
             <div class="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1">
                 @foreach ($branch->events as $event)
                     <div class="event-slide mr-4 hover:shadow-md ">
-                        <a href="{{ route('admin-events.show', $event->id) }}"> {{-- need tobe replaced --}}
+                        <a href="{{ route('event-detail.home', $event->id) }}"> {{-- need tobe replaced --}}
                             <div class="event-img rounded-t-md">
                                 <img src="{{ asset($event->event_banner) }}" style="max-height: 361px" alt="" />
                                 <div class="event-date">
@@ -409,7 +409,7 @@
                             </div>
                             <div class="event-content">
                                 <h3 class="hover:text-teal-500">
-                                    <a href="{{ route('admin-events.show', $event->id) }}">{{ $event->event_title }}</a>
+                                    <a href="{{ route('event-detail.home', $event->id) }}">{{ $event->event_title }}</a>
                                 </h3>
                                 <span><i class="fa fa-clock-o"></i>{{ $event->event_time }}</span>
                                 <span><i class="fa fa-table"></i><strong>{{ $event->event_location }}</strong></span>

@@ -13,16 +13,29 @@ use Illuminate\Support\Facades\File;
 
 class EventController extends Controller
 {
+
+    protected $user;
+    public function __construct()
+    {
+        $this->user = Auth::user();
+    }
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $events = Event::where('event_is_active', 1)->orderBy('created_at', 'desc')->paginate(10);
-        $pendingCommentsCount = EventComment::where('event_comment_status', 'pending')->get()->count();
         $categories = Category::all();
-        $branches = Branch::all();
-        return view('admin.events.event_index', compact('events', 'categories', 'branches', 'pendingCommentsCount'));
+        if ($this->user->is_admin == 1) {
+            $branches = Branch::all();
+            $events = Event::where('event_is_active', 1)->orderBy('created_at', 'desc')->paginate(10);
+            $pendingCommentsCount = EventComment::where('event_comment_status', 'pending')->get()->count();
+            return view('admin.events.event_index', compact('events', 'categories', 'branches', 'pendingCommentsCount'));
+        } else {
+            $user = $this->user;
+            $events = Event::where('event_is_active', 1)->where('event_branch_id', $this->user->branch_id)->orderBy('created_at', 'desc')->paginate(10);
+            $pendingCommentsCount = EventComment::where('event_comment_status', 'pending')->where('event_comment_branch_id', $this->user->branch_id)->get()->count();
+            return view('staff.events.event_index', compact('events', 'categories', 'user', 'pendingCommentsCount'));
+        }
     }
 
     /**
@@ -77,7 +90,11 @@ class EventController extends Controller
         $data['event_created_user_id'] = $user_id;
         $data['event_updated_user_id'] = $user_id;
         Event::create($data);
-        return to_route('admin-events.index')->with('success', 'Event Created Successfully!');
+        if ($this->user->is_admin == 1) {
+            return to_route('admin-events.index')->with('success', 'Event Created Successfully!');
+        } else {
+            return to_route('staff-events.index')->with('success', 'Event Created Successfully!');
+        }
         // dd($data);
     }
 
@@ -87,10 +104,17 @@ class EventController extends Controller
     public function show(string $id)
     {
         $event = Event::with('branch', 'category')->find($id);
-        if (!$event) {
-            return to_route('admin-events.index')->with('error', 'Event Not Found');
+        if ($this->user->is_admin == 1) {
+            if (!$event) {
+                return to_route('admin-events.index')->with('error', 'Event Not Found');
+            }
+            return view('partial_view.admin.events.event_detail', compact('event'));
+        } else {
+            if (!$event) {
+                return to_route('staff-events.index')->with('error', 'Event Not Found');
+            }
+            return view('partial_view.staff.events.event_detail', compact('event'));
         }
-        return view('partial_view.admin.events.event_detail', compact('event'));
     }
 
     /**
@@ -101,10 +125,17 @@ class EventController extends Controller
         $event = Event::find($id);
         $categories = Category::all();
         $branches = Branch::all();
-        if (!$event) {
-            return to_route('admin-events.index')->with('error', 'Event Not Found');
+        if ($this->user->is_admin == 1) {
+            if (!$event) {
+                return to_route('admin-events.index')->with('error', 'Event Not Found');
+            }
+            return view('partial_view.admin.events.event_edit', compact('event', 'categories', 'branches'));
+        } else {
+            if (!$event) {
+                return to_route('staff-events.index')->with('error', 'Event Not Found');
+            }
+            return view('partial_view.staff.events.event_edit', compact('event', 'categories', 'branches'));
         }
-        return view('partial_view.admin.events.event_edit', compact('event', 'categories', 'branches'));
     }
 
     /**
@@ -134,8 +165,13 @@ class EventController extends Controller
         $event = Event::find($id);
         $branch = Branch::find($data['event_branch_id']);
         $user_id = Auth::user()->id;
+
         if (!$branch) {
-            return to_route('admin-events.index')->with('error', 'No Branch Found ! Please Try Again');
+            if ($this->user->is_admin == 1) {
+                return to_route('admin-events.index')->with('error', 'No Branch Found ! Please Try Again');
+            } else {
+                return to_route('staff-events.index')->with('error', 'No Branch Found ! Please Try Again');
+            }
         }
         if (isset($data['event_banner'])) {
             if (File::exists(public_path($event->event_banner))) {
@@ -157,7 +193,11 @@ class EventController extends Controller
         $data['event_updated_user_id'] = $user_id;
         $data['event_is_show_front'] = isset($data['event_is_show_front'])  ? 1 : 0;
         $event->update($data);
-        return to_route('admin-events.index')->with('success', 'Event Updated Successfully');
+        if ($this->user->is_admin == 1) {
+            return to_route('admin-events.index')->with('success', 'Event Updated Successfully');
+        } else {
+            return to_route('staff-events.index')->with('success', 'Event Updated Successfully');
+        }
     }
 
     /**
@@ -173,7 +213,11 @@ class EventController extends Controller
         // dd($event);
         if ($event) {
             $event->update(['event_is_active' => $request->status]);
-            return to_route('admin-events.index')->with('success', 'Updated Successfully!');;
+            if ($this->user->is_admin == 1) {
+                return to_route('admin-events.index')->with('success', 'Updated Successfully!');
+            } else {
+                return to_route('staff-events.index')->with('success', 'Updated Successfully!');
+            }
             // dd($user);
         } else {
             return response()->json([
@@ -183,8 +227,13 @@ class EventController extends Controller
     }
     public function showArchivedEvent()
     {
-        $archived_events = Event::where('event_is_active', 0)->paginate(10);
-        // dd($archived_events);
-        return view('partial_view.admin.events.event_archived', compact('archived_events'));
+        if ($this->user->is_admin == 1) {
+            $archived_events = Event::where('event_is_active', 0)->paginate(10);
+            // dd($archived_events);
+            return view('partial_view.admin.events.event_archived', compact('archived_events'));
+        } else {
+            $archived_events = Event::where('event_is_active', 0)->where('event_branch_id', $this->user->branch_id)->paginate(10);
+            return view('partial_view.staff.events.event_archived', compact('archived_events'));
+        }
     }
 }

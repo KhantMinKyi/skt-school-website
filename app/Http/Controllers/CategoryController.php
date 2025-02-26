@@ -8,10 +8,10 @@ use Illuminate\Support\Facades\Auth;
 
 class CategoryController extends Controller
 {
-    protected $is_admin;
+    protected $user;
     public function __construct()
     {
-        $this->is_admin  = Auth::user()->is_admin;
+        $this->user  = Auth::user();
     }
     /**
      * Display a listing of the resource.
@@ -19,7 +19,7 @@ class CategoryController extends Controller
     public function index()
     {
         $categories = Category::paginate(10);
-        if ($this->is_admin == 1) {
+        if ($this->user->is_admin == 1) {
             return view('admin.categories.category_index', compact('categories'));
         } else {
             return view('staff.categories.category_index', compact('categories'));
@@ -45,7 +45,7 @@ class CategoryController extends Controller
         ]);
         $data['category_created_user_id'] = Auth::user()->id;
         Category::create($data);
-        if ($this->is_admin == 1) {
+        if ($this->user->is_admin == 1) {
             return to_route('admin-categories.index')->with('success', 'Created Successfully!');
         } else {
             return to_route('staff-categories.index')->with('success', 'Created Successfully!');
@@ -68,7 +68,7 @@ class CategoryController extends Controller
     {
         $category = Category::find($id);
 
-        if ($this->is_admin == 1) {
+        if ($this->user->is_admin == 1) {
             if (!$category) {
                 return to_route('admin-categories.index')->with('error', 'Category not Found');
             }
@@ -92,7 +92,7 @@ class CategoryController extends Controller
         ]);
         $category = Category::find($id);
 
-        if ($this->is_admin == 1) {
+        if ($this->user->is_admin == 1) {
             if (!$category) {
                 return to_route('admin-categories.index')->with('error', 'Category not Found');
             }
