@@ -13,16 +13,30 @@ use Illuminate\Support\Facades\File;
 
 class PostController extends Controller
 {
+    protected $user;
+    public function __construct()
+    {
+        $this->user = Auth::user();
+    }
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $posts = Post::where('post_is_active', 1)->orderBy('created_at', 'desc')->paginate(10);
-        $pendingCommentsCount = PostComment::where('post_comment_status', 'pending')->get()->count();
         $categories = Category::all();
-        $branches = Branch::all();
-        return view('admin.posts.post_index', compact('posts', 'categories', 'branches', 'pendingCommentsCount'));
+        $postQuery = Post::with('category', 'branch', 'created_user')->where('post_is_active', 1);
+        $postCommentQuery = PostComment::where('post_comment_status', 'pending');
+        if ($this->user->is_admin == 1) {
+            $branches = Branch::all();
+            $posts = $postQuery->orderBy('created_at', 'desc')->paginate(10);
+            $pendingCommentsCount = $postCommentQuery->get()->count();
+            return view('admin.posts.post_index', compact('posts', 'categories', 'branches', 'pendingCommentsCount'));
+        } else {
+            $user = $this->user;
+            $posts = $postQuery->where('post_branch_id', $this->user->branch_id)->orderBy('created_at', 'desc')->paginate(10);
+            $pendingCommentsCount = $postCommentQuery->where('post_comment_branch_id', $this->user->branch_id)->get()->count();
+            return view('staff.posts.post_index', compact('posts', 'categories', 'pendingCommentsCount', 'user'));
+        }
     }
 
     /**
@@ -72,7 +86,11 @@ class PostController extends Controller
         $data['post_created_user_id'] = $user_id;
         $data['post_updated_user_id'] = $user_id;
         Post::create($data);
-        return to_route('admin-posts.index')->with('success', 'Post Created Successfully!');
+        if ($this->user->is_admin == 1) {
+            return to_route('admin-posts.index')->with('success', 'Post Created Successfully!');
+        } else {
+            return to_route('staff-posts.index')->with('success', 'Post Created Successfully!');
+        }
     }
 
     /**
@@ -82,9 +100,17 @@ class PostController extends Controller
     {
         $post = Post::with('branch', 'category')->find($id);
         if (!$post) {
-            return to_route('admin-posts.index')->with('error', 'Post Not Found');
+            if ($this->user->is_admin == 1) {
+                return to_route('admin-posts.index')->with('error', 'Post Not Found');
+            } else {
+                return to_route('staff-posts.index')->with('error', 'Post Not Found');
+            }
         }
-        return view('partial_view.admin.posts.post_detail', compact('post'));
+        if ($this->user->is_admin == 1) {
+            return view('partial_view.admin.posts.post_detail', compact('post'));
+        } else {
+            return view('partial_view.staff.posts.post_detail', compact('post'));
+        }
     }
 
     /**
@@ -96,9 +122,17 @@ class PostController extends Controller
         $categories = Category::all();
         $branches = Branch::all();
         if (!$post) {
-            return to_route('admin-posts.index')->with('error', 'Post Not Found');
+            if ($this->user->is_admin == 1) {
+                return to_route('admin-posts.index')->with('error', 'Post Not Found');
+            } else {
+                return to_route('staff-posts.index')->with('error', 'Post Not Found');
+            }
         }
-        return view('partial_view.admin.posts.post_edit', compact('post', 'categories', 'branches'));
+        if ($this->user->is_admin == 1) {
+            return view('partial_view.admin.posts.post_edit', compact('post', 'categories', 'branches'));
+        } else {
+            return view('partial_view.staff.posts.post_edit', compact('post', 'categories', 'branches'));
+        }
     }
 
     /**
@@ -123,7 +157,11 @@ class PostController extends Controller
         $branch = Branch::find($data['post_branch_id']);
         $user_id = Auth::user()->id;
         if (!$branch) {
-            return to_route('admin-posts.index')->with('error', 'No Branch Found ! Please Try Again');
+            if ($this->user->is_admin == 1) {
+                return to_route('admin-posts.index')->with('error', 'No Branch Found ! Please Try Again');
+            } else {
+                return to_route('staff-posts.index')->with('error', 'No Branch Found ! Please Try Again');
+            }
         }
         if (isset($data['post_banner'])) {
             if (File::exists(public_path($post->post_banner))) {
@@ -145,7 +183,11 @@ class PostController extends Controller
         $data['post_updated_user_id'] = $user_id;
         $data['post_is_show_front'] = isset($data['post_is_show_front'])  ? 1 : 0;
         $post->update($data);
-        return to_route('admin-posts.index')->with('success', 'Post Updated Successfully');
+        if ($this->user->is_admin == 1) {
+            return to_route('admin-posts.index')->with('success', 'Post Updated Successfully');
+        } else {
+            return to_route('staff-posts.index')->with('success', 'Post Updated Successfully');
+        }
     }
 
     /**
@@ -161,7 +203,11 @@ class PostController extends Controller
         // dd($post);
         if ($post) {
             $post->update(['post_is_active' => $request->status]);
-            return to_route('admin-posts.index')->with('success', 'Updated Successfully!');;
+            if ($this->user->is_admin == 1) {
+                return to_route('admin-posts.index')->with('success', 'Updated Successfully!');
+            } else {
+                return to_route('staff-posts.index')->with('success', 'Updated Successfully!');
+            }
             // dd($user);
         } else {
             return response()->json([
@@ -173,6 +219,10 @@ class PostController extends Controller
     {
         $archived_posts = Post::where('post_is_active', 0)->paginate(10);
         // dd($archived_posts);
-        return view('partial_view.admin.posts.post_archived', compact('archived_posts'));
+        if ($this->user->is_admin == 1) {
+            return view('partial_view.admin.posts.post_archived', compact('archived_posts'));
+        } else {
+            return view('partial_view.staff.posts.post_archived', compact('archived_posts'));
+        }
     }
 }

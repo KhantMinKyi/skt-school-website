@@ -20,12 +20,12 @@ class EventCommentController extends Controller
      */
     public function index()
     {
+        $eventCommentQuery = EventComment::with('event');
         if ($this->user->is_admin == 1) {
-
-            $event_comments = EventComment::with('event')->paginate(10);
+            $event_comments = $eventCommentQuery->paginate(10);
             return view('partial_view.admin.events.event_comment_index', compact('event_comments'));
         } else {
-            $event_comments = EventComment::with('event')->where('event_comment_branch_id', $this->user->branch_id)->paginate(10);
+            $event_comments = $eventCommentQuery->where('event_comment_branch_id', $this->user->branch_id)->paginate(10);
             return view('partial_view.staff.events.event_comment_index', compact('event_comments'));
         }
     }

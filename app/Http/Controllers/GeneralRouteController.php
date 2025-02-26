@@ -116,7 +116,7 @@ class GeneralRouteController extends Controller
     public function showNews($param)
     {
         $branch = Branch::where('branch_short_name', $param)->first();
-        $posts = Post::where('post_branch_id', $branch->id)->get();
+        $posts = Post::with('category')->where('post_branch_id', $branch->id)->where('post_is_active', 1)->get();
         $layout = ($branch && $branch->branch_short_name === 'SKT-CC')
             ? 'layouts.city_layout'
             : 'layouts.riverside_layout';
@@ -171,7 +171,7 @@ class GeneralRouteController extends Controller
     public function showEvents($param)
     {
         $branch = Branch::where('branch_short_name', $param)->first();
-        $events = Event::where('event_branch_id', $branch->id)->get();
+        $events = Event::with('category')->where('event_branch_id', $branch->id)->where('event_is_active', 1)->get();
         $layout = ($branch && $branch->branch_short_name === 'SKT-CC')
             ? 'layouts.city_layout'
             : 'layouts.riverside_layout';

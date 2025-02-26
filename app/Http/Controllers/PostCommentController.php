@@ -9,14 +9,24 @@ use Illuminate\Support\Facades\Auth;
 
 class PostCommentController extends Controller
 {
+    protected $user;
+    public function __construct()
+    {
+        $this->user = Auth::user();
+    }
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $post_comments = PostComment::with('post')->paginate(10);
-
-        return view('partial_view.admin.posts.post_comment_index', compact('post_comments'));
+        $postCommentQuery = PostComment::with('post');
+        if ($this->user->is_admin == 1) {
+            $post_comments = $postCommentQuery->paginate(10);
+            return view('partial_view.admin.posts.post_comment_index', compact('post_comments'));
+        } else {
+            $post_comments = $postCommentQuery->where('post_comment_branch_id', $this->user->branch_id)->paginate(10);
+            return view('partial_view.staff.posts.post_comment_index', compact('post_comments'));
+        }
     }
 
     /**
@@ -32,7 +42,6 @@ class PostCommentController extends Controller
      */
     public function store(Request $request)
     {
-        // dd($request->all());
         $data = $request->validate([
             'post_comment_post_id'          => 'required',
             'post_comment_user_name'        => 'required',
@@ -80,7 +89,11 @@ class PostCommentController extends Controller
         if ($post_comment) {
             $post_comment->delete();
         }
-        return to_route('admin-post-comments.index')->with('success', 'Deleted Successfully');
+        if ($this->user->is_admin == 1) {
+            return to_route('admin-post-comments.index')->with('success', 'Deleted Successfully');
+        } else {
+            return to_route('staff-post-comments.index')->with('success', 'Deleted Successfully');
+        }
     }
 
     public function changeCommentStatus(Request $request)
@@ -99,6 +112,10 @@ class PostCommentController extends Controller
                 ]
             );
         }
-        return to_route('admin-post-comments.index')->with('success', 'Updated Successfully');
+        if ($this->user->is_admin == 1) {
+            return to_route('admin-post-comments.index')->with('success', 'Updated Successfully');
+        } else {
+            return to_route('staff-post-comments.index')->with('success', 'Updated Successfully');
+        }
     }
 }

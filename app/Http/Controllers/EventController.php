@@ -25,15 +25,17 @@ class EventController extends Controller
     public function index()
     {
         $categories = Category::all();
+        $eventQuery = Event::where('event_is_active', 1);
+        $eventCommentQuery = EventComment::where('event_comment_status', 'pending');
         if ($this->user->is_admin == 1) {
             $branches = Branch::all();
-            $events = Event::where('event_is_active', 1)->orderBy('created_at', 'desc')->paginate(10);
-            $pendingCommentsCount = EventComment::where('event_comment_status', 'pending')->get()->count();
+            $events = $eventQuery->orderBy('created_at', 'desc')->paginate(10);
+            $pendingCommentsCount = $eventCommentQuery->get()->count();
             return view('admin.events.event_index', compact('events', 'categories', 'branches', 'pendingCommentsCount'));
         } else {
             $user = $this->user;
-            $events = Event::where('event_is_active', 1)->where('event_branch_id', $this->user->branch_id)->orderBy('created_at', 'desc')->paginate(10);
-            $pendingCommentsCount = EventComment::where('event_comment_status', 'pending')->where('event_comment_branch_id', $this->user->branch_id)->get()->count();
+            $events = $eventQuery->where('event_branch_id', $this->user->branch_id)->orderBy('created_at', 'desc')->paginate(10);
+            $pendingCommentsCount = $eventCommentQuery->where('event_comment_branch_id', $this->user->branch_id)->get()->count();
             return view('staff.events.event_index', compact('events', 'categories', 'user', 'pendingCommentsCount'));
         }
     }
