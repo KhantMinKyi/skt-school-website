@@ -8,13 +8,22 @@ use Illuminate\Support\Facades\Auth;
 
 class CategoryController extends Controller
 {
+    protected $is_admin;
+    public function __construct()
+    {
+        $this->is_admin  = Auth::user()->is_admin;
+    }
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
         $categories = Category::paginate(10);
-        return view('admin.categories.category_index', compact('categories'));
+        if ($this->is_admin == 1) {
+            return view('admin.categories.category_index', compact('categories'));
+        } else {
+            return view('staff.categories.category_index', compact('categories'));
+        }
     }
 
     /**
@@ -36,7 +45,11 @@ class CategoryController extends Controller
         ]);
         $data['category_created_user_id'] = Auth::user()->id;
         Category::create($data);
-        return to_route('admin-categories.index')->with('success', 'Created Successfully!');
+        if ($this->is_admin == 1) {
+            return to_route('admin-categories.index')->with('success', 'Created Successfully!');
+        } else {
+            return to_route('staff-categories.index')->with('success', 'Created Successfully!');
+        }
         // dd($request->all());
     }
 
@@ -54,10 +67,18 @@ class CategoryController extends Controller
     public function edit(string $id)
     {
         $category = Category::find($id);
-        if (!$category) {
-            return to_route('admin-categories.index')->with('error', 'Category not Found');
+
+        if ($this->is_admin == 1) {
+            if (!$category) {
+                return to_route('admin-categories.index')->with('error', 'Category not Found');
+            }
+            return view('partial_view.admin.categories.category_edit', compact('category'));
+        } else {
+            if (!$category) {
+                return to_route('staff-categories.index')->with('error', 'Category not Found');
+            }
+            return view('partial_view.staff.categories.category_edit', compact('category'));
         }
-        return view('partial_view.admin.categories.category_edit', compact('category'));
     }
 
     /**
@@ -70,11 +91,20 @@ class CategoryController extends Controller
             'category_description' => 'nullable'
         ]);
         $category = Category::find($id);
-        if (!$category) {
-            return to_route('admin-categories.index')->with('error', 'Category not Found');
+
+        if ($this->is_admin == 1) {
+            if (!$category) {
+                return to_route('admin-categories.index')->with('error', 'Category not Found');
+            }
+            $category->update($data);
+            return to_route('admin-categories.index')->with('success', 'Updated Successfully');
+        } else {
+            if (!$category) {
+                return to_route('staff-categories.index')->with('error', 'Category not Found');
+            }
+            $category->update($data);
+            return to_route('staff-categories.index')->with('success', 'Updated Successfully');
         }
-        $category->update($data);
-        return to_route('admin-categories.index')->with('success', 'Updated Successfully');
     }
 
     /**

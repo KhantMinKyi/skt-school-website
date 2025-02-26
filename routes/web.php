@@ -29,6 +29,7 @@ Route::group(['middleware' => ['auth', IsStaff::class], 'prefix' => '/administra
     Route::get('dashborad', function () {
         return view('staff.dashboard');
     })->name('staff.dashboard');
+    include __DIR__ . '/route_groups/staff/category.php';
 });
 
 
