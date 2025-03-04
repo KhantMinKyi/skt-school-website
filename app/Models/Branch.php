@@ -49,4 +49,8 @@ class Branch extends Model
     {
         return $this->hasMany(Gallery::class, 'gallery_branch_id');
     }
+    public function contact_forms()
+    {
+        return $this->hasMany(Contact::class, 'contact_branch_id');
+    }
 }

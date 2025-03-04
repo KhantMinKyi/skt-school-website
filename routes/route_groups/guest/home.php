@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\EventCommentController;
 use App\Http\Controllers\GeneralRouteController;
 use App\Http\Controllers\PostCommentController;
@@ -40,3 +41,8 @@ Route::get('/education/pre_school/{param}', [GeneralRouteController::class, 'sho
 Route::get('/event/events/{param}', [GeneralRouteController::class, 'showEvents'])->name('event.home');
 Route::get('/event/event-detail/{param}', [GeneralRouteController::class, 'showEventDetail'])->name('event-detail.home');
 Route::post('/event/event-comment', [EventCommentController::class, 'store'])->name('event-comment.store');
+
+
+//Contact Us
+Route::get('/contact_us/contact_us/{param}', [GeneralRouteController::class, 'showContactUs'])->name('contact_us.home');
+Route::post('/contact_us/contact_form_store', [ContactController::class, 'store'])->name('contact-form.store');

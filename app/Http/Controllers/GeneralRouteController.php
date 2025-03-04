@@ -195,4 +195,13 @@ class GeneralRouteController extends Controller
             : 'layouts.riverside_layout';
         return view('partial_view.guest.events.event_detail', compact('layout', 'branch', 'event', 'events', 'categories'));
     }
+    public function showContactUs($param)
+    {
+        $branch = Branch::where('branch_short_name', $param)->first();
+        if ($branch && $branch->branch_short_name === 'SKT-CC') {
+            return view('partial_view.guest.contact_us.contact_us_city', compact('branch'));
+        } else {
+            return view('partial_view.guest.contact_us.contact_us_riverside', compact('branch'));
+        }
+    }
 }
