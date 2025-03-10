@@ -4,15 +4,28 @@ namespace App\Http\Controllers;
 
 use App\Models\Contact;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ContactController extends Controller
 {
+    protected $user;
+    public function __construct()
+    {
+        $this->user = Auth::user();
+    }
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        //
+        $contacts = Contact::with('branch');
+        if ($this->user->is_admin == 1) {
+            $contacts = $contacts->paginate(10);
+            return view('partial_view.admin.contacts.contact_index', compact('contacts'));
+        } else {
+            $contacts = $contacts->where('contact_branch_id', $this->user->branch_id)->paginate(10);
+            return view('partial_view.staff.contacts.contact_index', compact('contacts'));
+        }
     }
 
     /**
@@ -69,6 +82,14 @@ class ContactController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $contact = Contact::find($id);
+        if ($contact) {
+            $contact->delete();
+        }
+        if ($this->user->is_admin == 1) {
+            return to_route('admin-contacts.index')->with('success', 'Deleted Successfully');
+        } else {
+            return to_route('staff-contacts.index')->with('success', 'Deleted Successfully');
+        }
     }
 }

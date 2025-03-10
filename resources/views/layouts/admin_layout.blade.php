@@ -710,6 +710,19 @@
                                 </div>
                             </li>
                         </div>
+                        <div class="sidebar-item">
+                            <li class="nav-item {{ request()->routeIs('admin-contacts.index') ? 'active' : '' }}">
+                                <a class="nav-link d-flex align-items-center nav-link"
+                                    href="{{ route('admin-contacts.index') }}">
+                                    <span class="animated-icon">
+                                        <div style="width:18px;height:18px"
+                                            data-animation-path="{{ asset('admin/vendor/animated-icons/document/document.json') }}"
+                                            data-anim-loop="false"></div>
+                                    </span>
+                                    <span class="mr-auto menu-name">Contact Form</span>
+                                </a>
+                            </li>
+                        </div>
                     </ul>
                 </div>
             </div>
