@@ -33,6 +33,7 @@ Route::group(['middleware' => ['auth', IsStaff::class], 'prefix' => '/administra
     include __DIR__ . '/route_groups/staff/category.php';
     include __DIR__ . '/route_groups/staff/event.php';
     include __DIR__ . '/route_groups/staff/post.php';
+    include __DIR__ . '/route_groups/staff/contact.php';
 });
 
 
