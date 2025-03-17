@@ -1,7 +1,7 @@
 <div id="mobile-menu" class="hidden flex flex-col items-center bg-white lg:hidden">
     <!-- Home with Dropdown -->
     <div class="w-full">
-        <a href="#"
+        <a href="/"
             class="dropdown-btn py-2 px-4 text-gray-900 font-bold hover:bg-gray-50 w-full text-center flex justify-between">
             Home
             <span>▼</span>
@@ -96,12 +96,12 @@
             <a href="{{ route('student-admission.home', $layout_branch->branch_short_name) }}"
                 class="py-2 px-4 text-gray-900 font-bold hover:bg-gray-50 w-full text-center">Student
                 Admission</a>
-            <a href="#" class="py-2 px-4 text-gray-900 font-bold hover:bg-gray-50 w-full text-center">Admission
+            <a href="{{ route('admission-process.home', $layout_branch->branch_short_name) }}"
+                class="py-2 px-4 text-gray-900 font-bold hover:bg-gray-50 w-full text-center">Admission
                 Process</a>
-            <a href="#" class="py-2 px-4 text-gray-900 font-bold hover:bg-gray-50 w-full text-center">Withdrawal
+            <a href="{{ route('withdrawal-policy.home', $layout_branch->branch_short_name) }}"
+                class="py-2 px-4 text-gray-900 font-bold hover:bg-gray-50 w-full text-center">Withdrawal
                 Policy</a>
-            <a href="#" class="py-2 px-4 text-gray-900 font-bold hover:bg-gray-50 w-full text-center">Inquiry
-                Form</a>
             <a href="https://www.jobnet.com.mm/companies/bfi-education-services-co-ltd/e-11033"
                 class="py-2 px-4 text-gray-900 font-bold hover:bg-gray-50 w-full text-center">Career</a>
 

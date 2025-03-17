@@ -62,7 +62,7 @@
                 {{-- <li><a href="#" class="hover:text-gray-400  font-bold">Home</a></li> --}}
 
                 <li class="relative group -mt-1">
-                    <a href="#" class=" font-bold hover:text-teal-500 px-2 py-1 block">Home</a>
+                    <a href="/" class=" font-bold hover:text-teal-500 px-2 py-1 block">Home</a>
                     <ul class="absolute left-0 top-full hidden group-hover:block bg-white w-60 shadow-lg rounded-md">
                         <li class="py-2"><a href="{{ route('city.home') }}"
                                 class="block px-4 py-2 font-bold hover:text-teal-500 pt-4">SKT City
@@ -143,11 +143,10 @@
                                 href="{{ route('admission-process.home', $layout_branch->branch_short_name) }}"
                                 class="block px-4 py-2 font-bold hover:text-teal-500">Admission
                                 Process</a></li>
-                        <li class="py-4"><a href="#"
+                        <li class="py-4"><a
+                                href="{{ route('withdrawal-policy.home', $layout_branch->branch_short_name) }}"
                                 class="block px-4 py-2 font-bold hover:text-teal-500">Withdrawal
                                 Policy</a></li>
-                        <li class="py-4"><a href="#"
-                                class="block px-4 py-2 font-bold hover:text-teal-500">Inquiry Form</a>
                         <li class="py-4"><a
                                 href="https://www.jobnet.com.mm/companies/bfi-education-services-co-ltd/e-11033"
                                 target="__blank" class="block px-4 py-2 font-bold hover:text-teal-500">Career</a>
@@ -229,7 +228,7 @@
                     <div class="single_footer">
                         <h4>Menu</h4>
                         <ul>
-                            <li><a href="#">Home</a></li>
+                            <li><a href="/">Home</a></li>
                             <li><a href="#">About Us</a></li>
                             <li><a href="#">Student Life</a></li>
                             <li><a href="#">Education</a></li>

@@ -222,4 +222,13 @@ class GeneralRouteController extends Controller
             return view('partial_view.guest.admission.admission_process_riverside', compact('branch'));
         }
     }
+    public function showWithdrawalPolicy($param)
+    {
+        $branch = Branch::where('branch_short_name', $param)->first();
+        if ($branch && $branch->branch_short_name === 'SKT-CC') {
+            return view('partial_view.guest.admission.withdrawal_policy_city', compact('branch'));
+        } else {
+            return view('partial_view.guest.admission.withdrawal_policy_riverside', compact('branch'));
+        }
+    }
 }
