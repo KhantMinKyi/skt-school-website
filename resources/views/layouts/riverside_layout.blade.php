@@ -135,7 +135,8 @@
                 <li class="relative group -mt-1">
                     <a href="#" class=" font-bold hover:text-teal-500 px-2 py-1 block">Admission</a>
                     <ul class="absolute left-0 top-full hidden group-hover:block bg-white w-60 shadow-lg rounded-md">
-                        <li class="py-4"><a href="#"
+                        <li class="py-4"><a
+                                href="{{ route('student-admission.home', $layout_branch->branch_short_name) }}"
                                 class="block px-4 py-2 font-bold hover:text-teal-500">Student
                                 Admission</a></li>
                         <li class="py-4"><a href="#"

@@ -93,7 +93,8 @@
             <span>▼</span>
         </a>
         <div class="dropdown-menu hidden flex flex-col w-full bg-gray-100">
-            <a href="#" class="py-2 px-4 text-gray-900 font-bold hover:bg-gray-50 w-full text-center">Student
+            <a href="{{ route('student-admission.home', $layout_branch->branch_short_name) }}"
+                class="py-2 px-4 text-gray-900 font-bold hover:bg-gray-50 w-full text-center">Student
                 Admission</a>
             <a href="#" class="py-2 px-4 text-gray-900 font-bold hover:bg-gray-50 w-full text-center">Admission
                 Process</a>

@@ -204,4 +204,13 @@ class GeneralRouteController extends Controller
             return view('partial_view.guest.contact_us.contact_us_riverside', compact('branch'));
         }
     }
+    public function showStudentAdmission($param)
+    {
+        $branch = Branch::where('branch_short_name', $param)->first();
+        if ($branch && $branch->branch_short_name === 'SKT-CC') {
+            return view('partial_view.guest.admission.student_admission_city', compact('branch'));
+        } else {
+            return view('partial_view.guest.admission.student_admission_riverside', compact('branch'));
+        }
+    }
 }

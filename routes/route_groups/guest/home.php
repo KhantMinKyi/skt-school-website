@@ -37,6 +37,9 @@ Route::post('/student_life/news-comment', [PostCommentController::class, 'store'
 //Education
 Route::get('/education/pre_school/{param}', [GeneralRouteController::class, 'showPreSchool'])->name('pre-school.home');
 
+// Admission
+Route::get('/admission/student_admission/{param}', [GeneralRouteController::class, 'showStudentAdmission'])->name('student-admission.home');
+
 // Event
 Route::get('/event/events/{param}', [GeneralRouteController::class, 'showEvents'])->name('event.home');
 Route::get('/event/event-detail/{param}', [GeneralRouteController::class, 'showEventDetail'])->name('event-detail.home');
