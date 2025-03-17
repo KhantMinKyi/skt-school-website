@@ -158,6 +158,11 @@
                     </a></li>
                 <li class="-mt-1"><a href="{{ route('contact_us.home', $layout_branch->branch_short_name) }}"
                         class=" font-bold hover:text-teal-500 px-2 py-1 block">Contact</a></li>
+                <li class="-mt-1">
+                    <button id="switchCampusBtn" title="Switch Campus" class="hover:text-green-500 text-xl">
+                        <i class="fa-solid fa-repeat"></i>
+                    </button>
+                </li>
             </ul>
             <!-- Mobile Menu Button -->
             <button id="menu-btn" class="lg:hidden text-gray-900 text-2xl -mt-6">☰</button>
@@ -328,7 +333,45 @@
             }
         });
     </script>
+    <script>
+        $(document).ready(function() {
+            $('#switchCampusBtn').on('click', function() {
+                const currentUrl = window.location.href;
+                let newUrl = currentUrl;
 
+                // Define branch names for switching
+                const cityBranch = 'skt-city-campus';
+                const riversideBranch = 'skt-riverside-campus';
+                if (currentUrl.includes('/event/event-detail/') || currentUrl.includes(
+                        '/student_life/news-detail/')) {
+                    return alert('You Cannot Switch Campus at that Page')
+                }
+                // Check which branch is currently active and switch
+                if (currentUrl.includes(cityBranch)) {
+                    newUrl = currentUrl.replace(cityBranch, riversideBranch);
+                } else if (currentUrl.includes(riversideBranch)) {
+                    newUrl = currentUrl.replace(riversideBranch, cityBranch);
+                } else {
+                    // For URLs with {param} like /student_life/alumni/SKT-RC
+                    const branchRegex = /\/(SKT-[A-Z]+)\b/;
+                    if (branchRegex.test(currentUrl)) {
+                        newUrl = currentUrl.replace(branchRegex, (match, branch) =>
+                            branch === 'SKT-CC' ? '/SKT-RC' : '/SKT-CC'
+                        );
+                    }
+
+                    // Handle URLs for /about_us/principal_message/{id}
+                    if (currentUrl.includes('/about_us/principal_message/')) {
+                        newUrl = currentUrl.replace('about_us/principal_message/2',
+                            'about_us/principal_message/1');
+                    }
+                }
+
+                // Reload to new URL
+                window.location.href = newUrl;
+            });
+        });
+    </script>
 </body>
 
 </html>

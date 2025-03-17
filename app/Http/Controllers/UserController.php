@@ -87,11 +87,21 @@ class UserController extends Controller
      */
     public function update(Request $request, string $id)
     {
+        $data = $request->validate([
+            'branch_id' => 'required',
+            'name' => 'required',
+            'gender' => 'required',
+            'birth_date' => 'required',
+            'phone' => 'required',
+            'email' => 'required',
+            'user_name' => 'required',
+            'user_type' => 'required',
+        ]);
         if ($request->user_type) {
             $request['is_admin'] = $request->user_type == 'admin' ? 1 : 0;
         }
         $user = User::find($request->user_id);
-        $user->update($request->all());
+        $user->update($data);
         return to_route('admin-users.index')->with('success', 'User Updated Successfully!');
     }
 
