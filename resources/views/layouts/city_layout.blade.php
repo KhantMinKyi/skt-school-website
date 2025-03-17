@@ -165,7 +165,13 @@
                 </li>
             </ul>
             <!-- Mobile Menu Button -->
-            <button id="menu-btn" class="lg:hidden text-gray-900 text-2xl -mt-6">☰</button>
+            <div class="-mt-6 lg:hidden">
+                <button id="MobileSwitchCampusBtn" title="Switch Campus"
+                    class="hover:text-green-500 text-xl mr-4 lg:hidden">
+                    <i class="fa-solid fa-repeat"></i>
+                </button>
+                <button id="menu-btn" class="lg:hidden text-gray-900 text-2xl ">☰</button>
+            </div>
         </div>
 
         <!-- Mobile Menu -->
@@ -335,7 +341,7 @@
     </script>
     <script>
         $(document).ready(function() {
-            $('#switchCampusBtn').on('click', function() {
+            $('#switchCampusBtn, #MobileSwitchCampusBtn').on('click', function() {
                 const currentUrl = window.location.href;
                 let newUrl = currentUrl;
 

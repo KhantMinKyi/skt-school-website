@@ -6,6 +6,7 @@ use App\Models\Event;
 use App\Models\EventComment;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\RateLimiter;
 
 class EventCommentController extends Controller
 {
@@ -51,6 +52,12 @@ class EventCommentController extends Controller
             'event_comment_body'             => 'required',
         ]);
         $event = Event::find($data['event_comment_event_id']);
+        $executed = RateLimiter::attempt(
+            'send-message:',
+            $perTwoMinutes  = 5,
+            function () {},
+            $decayRate = 120,
+        );
         if (!$event) {
             return to_route('event.home');
         }

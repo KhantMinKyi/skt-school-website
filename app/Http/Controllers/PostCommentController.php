@@ -6,6 +6,7 @@ use App\Models\Post;
 use App\Models\PostComment;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\RateLimiter;
 
 class PostCommentController extends Controller
 {
@@ -50,6 +51,16 @@ class PostCommentController extends Controller
             'post_comment_body'             => 'required',
         ]);
         $post = Post::find($data['post_comment_post_id']);
+        $executed = RateLimiter::attempt(
+            'send-message:',
+            $perTwoMinutes  = 5,
+            function () {},
+            $decayRate = 120,
+        );
+
+        if (! $executed) {
+            return 'Too Many Comment at Once , Please Wait for a minute and Comment Again ! ';
+        }
         if (!$post) {
             return to_route('news.home');
         }

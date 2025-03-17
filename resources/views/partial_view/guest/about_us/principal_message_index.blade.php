@@ -24,10 +24,10 @@
                 <br>
                 <span class="text-white">Principal's Message</span>
             </h1>
-            <div class="flex justify-center" style="cursor: pointer">
+            {{-- <div class="flex justify-center" style="cursor: pointer">
                 <img src="{{ asset($principal_message->branch->branch_logo) }}" width="240" class="bounce-up"
                     alt="">
-            </div>
+            </div> --}}
         </div>
 
         {{-- </div> --}}
