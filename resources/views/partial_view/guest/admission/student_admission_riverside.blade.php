@@ -64,7 +64,8 @@
                         engaging and supportive atmosphere that defines our community. Let us guide you through each step to
                         ensure a smooth and informed enrollment journey for your child.
                     </p>
-                    <a href="#" class="relative inline-block mx-auto py-4 px-6 overflow-hidden group mt-4">
+                    <a href="{{ route('admission-process.home', $branch->branch_short_name) }}"
+                        class="relative inline-block mx-auto py-4 px-6 overflow-hidden group mt-4">
                         <span
                             class="relative font-semibold text-[#1a2d62] uppercase px-6 py-4 transition-all duration-300 group-hover:text-white">
                             <!-- Background animation -->

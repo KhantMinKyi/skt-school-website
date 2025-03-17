@@ -139,7 +139,8 @@
                                 href="{{ route('student-admission.home', $layout_branch->branch_short_name) }}"
                                 class="block px-4 py-2 font-bold hover:text-teal-500">Student
                                 Admission</a></li>
-                        <li class="py-4"><a href="#"
+                        <li class="py-4"><a
+                                href="{{ route('admission-process.home', $layout_branch->branch_short_name) }}"
                                 class="block px-4 py-2 font-bold hover:text-teal-500">Admission
                                 Process</a></li>
                         <li class="py-4"><a href="#"

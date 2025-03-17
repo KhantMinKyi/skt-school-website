@@ -39,6 +39,7 @@ Route::get('/education/pre_school/{param}', [GeneralRouteController::class, 'sho
 
 // Admission
 Route::get('/admission/student_admission/{param}', [GeneralRouteController::class, 'showStudentAdmission'])->name('student-admission.home');
+Route::get('/admission/admission_process/{param}', [GeneralRouteController::class, 'showAdmissionProcess'])->name('admission-process.home');
 
 // Event
 Route::get('/event/events/{param}', [GeneralRouteController::class, 'showEvents'])->name('event.home');
