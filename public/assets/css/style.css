@@ -1150,11 +1150,7 @@ p.section-title-white {
 .home_tag a:hover {
     color: #2eca7f;
 }
-@media only screen and (max-width: 480px) {
-    #kenburns_061 {
-        margin-top: 75px;
-    }
-}
+
 /*
 * ----------------------------------------------------------------------------------------
 * 03. END HOMEPAGE CSS STYLE
@@ -5183,7 +5179,7 @@ blockquote::before,
 .home-banner-text > h3{
     font-family: "Smooch Sans", serif;
     font-weight: bold;
-    color: #34526f;
+    /* color: #34526f; */
 }
 
 /*END SHOP CSS*/

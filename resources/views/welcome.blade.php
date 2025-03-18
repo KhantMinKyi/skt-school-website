@@ -79,12 +79,13 @@
     </section> --}}
     <!-- END  HOME -->
 
+    <div id="loader-wrapper">
+        <div id="loader"></div>
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+    </div>
+
     <body>
-        <div id="loader-wrapper">
-            <div id="loader"></div>
-            <div class="loader-section section-left"></div>
-            <div class="loader-section section-right"></div>
-        </div>
 
         <!-- START POST -->
         <div id="kenburns_061"
@@ -94,12 +95,13 @@
             <div class="carousel-inner flex transition-transform duration-1000 ease-in-out" id="carouselInner">
                 <!-- First Slide -->
                 <div class="carousel-item active w-full flex-shrink-0">
-                    <img src="{{ asset('assets/images/banner/home.png') }}" alt="slider-image"
+                    {{-- <img src="{{ asset('assets/images/banner/home.png') }}" alt="slider-image" --}}
+                    <img src="{{ asset('img/banner/home_banner.jpg') }}" alt="slider-image"
                         class="w-full min-h-lvh object-cover" />
                     <div class="absolute inset-0 mx-auto flex flex-col justify-center items-center  ">
                         <h1 id="fading-text" class=" text-2xl md:text-7xl text-center  ml-10">
                             <div class="text-center home-banner-text ">
-                                <h3 class="pt-4 text-3xl">
+                                <h3 class="pt-4 text-3xl text-white">
                                     Select a Campus to View!
                                 </h3>
                             </div>
