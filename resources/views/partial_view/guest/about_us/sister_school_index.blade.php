@@ -13,23 +13,26 @@
             <div class="carousel-item active w-full flex-shrink-0">
                 <img src="{{ asset('img/banner/sister_school/bfi.jpg') }}" alt="slider-image"
                     class="w-full h-auto object-cover" />
-                {{-- <div class="kenburns_061_slide absolute inset-0 flex flex-col items-start justify-center p-8 text-white"
-                    data-animation="animated fadeInRight">
-                    <h2 class="text-2xl font-semibold">Welcome to Penn</h2>
-                    <h1 class="text-4xl font-bold">Classical <span class="underline">Education</span> For The Future</h1>
-                    <h3 class="text-lg">Lorem ipsum dolor sit amet consectetuer adipiscing elit Nam nibh</h3>
-                    <a href="about.html" class="mt-4 px-4 py-2 bg-blue-600 text-white rounded-lg">Learn More</a>
-                </div> --}}
             </div>
             <!-- Second Slide -->
             <div class="carousel-item w-full flex-shrink-0">
-                <img src="{{ asset('assets/images/all-img/clients/5.png') }}" alt="slider-image"
+                <img src="{{ asset('img/banner/sister_school/skt_city.jpg') }}" alt="slider-image"
                     class="w-full h-auto object-cover" />
 
             </div>
             <!-- Third Slide -->
             <div class="carousel-item w-full flex-shrink-0">
-                <img src="{{ asset('assets/images/banner/slide3.jpg') }}" alt="slider-image"
+                <img src="{{ asset('img/banner/sister_school/skt_riverside.jpg') }}" alt="slider-image"
+                    class="w-full h-auto object-cover" />
+            </div>
+            <!-- Fourth Slide -->
+            <div class="carousel-item w-full flex-shrink-0">
+                <img src="{{ asset('img/banner/sister_school/misa.jpg') }}" alt="slider-image"
+                    class="w-full h-auto object-cover" />
+            </div>
+            <!-- Fifth Slide -->
+            <div class="carousel-item w-full flex-shrink-0">
+                <img src="{{ asset('img/banner/sister_school/nisa.jpg') }}" alt="slider-image"
                     class="w-full h-auto object-cover" />
             </div>
         </div>

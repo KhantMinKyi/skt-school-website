@@ -10,8 +10,8 @@
         <div class="carousel-inner flex transition-transform duration-1000 ease-in-out" id="carouselInner">
             <!-- First Slide -->
             <div class="carousel-item active w-full flex-shrink-0">
-                <img src="{{ asset('img/banner/pre_school_city.jpg') }}" alt="slider-image"
-                    class="w-full h-auto object-cover" />
+                <img src="{{ asset('img/banner/education_banners/pre_school/' . $branch->branch_short_name . '.jpg') }}"
+                    alt="slider-image" class="w-full h-auto object-cover" />
                 <div class="absolute inset-0 mx-auto flex flex-col justify-center items-center  ">
                     <h1 id="fading-text" class=" text-2xl md:text-7xl text-center  ml-10">
                         <span class="text-emerald-400">{{ $branch->branch_name }}</span>
