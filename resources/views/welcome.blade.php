@@ -23,7 +23,7 @@
     <!-- Font Awesome CSS -->
 
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}" />
-    <link rel="stylesheet" href="{{ asset('assets/css/slider.css') }}" />
+    <link rel="stylesheet" href="{{ asset('assets/css/home_slider.css') }}" />
     <style>
         .bounce-up {
             display: inline-block;
@@ -99,9 +99,9 @@
                     <img src="{{ asset('img/banner/home_banner.jpg') }}" alt="slider-image"
                         class="w-full min-h-lvh object-cover" />
                     <div class="absolute inset-0 mx-auto flex flex-col justify-center items-center  ">
-                        <h1 id="fading-text" class=" text-2xl md:text-7xl text-center  ml-10">
+                        <h1 id="fading-text" class=" text-2xl md:text-7xl text-center ">
                             <div class="text-center home-banner-text ">
-                                <h3 class="pt-4 text-3xl text-white">
+                                <h3 class="pt-4 text-3xl text-gray-800">
                                     Select a Campus to View!
                                 </h3>
                             </div>

@@ -2,7 +2,7 @@
 
 @section('content')
     <link rel="stylesheet" href="{{ asset('guests/css/sister_school.css') }}" />
-    <link rel="stylesheet" href="{{ asset('assets/css/slider.css') }}" />
+    <link rel="stylesheet" href="{{ asset('assets/css/home_slider.css') }}" />
 
     <div id="kenburns_061"
         class="carousel max-h-screen slide ps_indicators_txt_icon ps_control_txt_icon data-bs-target kbrns_zoomInOut thumb_scroll_x swipe_x ps_easeOutQuart relative w-full overflow-hidden"
@@ -11,7 +11,7 @@
         <div class="carousel-inner flex transition-transform duration-1000 ease-in-out" id="carouselInner">
             <!-- First Slide -->
             <div class="carousel-item active w-full flex-shrink-0">
-                <img src="{{ asset('assets/images/banner/slide1.jpg') }}" alt="slider-image"
+                <img src="{{ asset('img/banner/sister_school/bfi.jpg') }}" alt="slider-image"
                     class="w-full h-auto object-cover" />
                 {{-- <div class="kenburns_061_slide absolute inset-0 flex flex-col items-start justify-center p-8 text-white"
                     data-animation="animated fadeInRight">

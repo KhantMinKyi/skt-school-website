@@ -84,10 +84,8 @@
             <div class="  bg-white ">
                 <div class=" bg-white p-16 mb-8  shadow border-r border-gray-50 ">
                     <h3 class="text-xl mb-4">Quality Education</h3>
-                    <p class="mb-10 font-light text-gray-500">Lorem ipsum dolor sit amet, consectetur notted adipisicing
-                        elit sed do
-                        eiusmod
-                        tempor incididunt ut labore.</p>
+                    <p class="mb-10 font-light text-gray-500">Empowering students with a well-rounded curriculum, hands-on
+                        learning, and a passion for lifelong growth</p>
                     <a href="#" class="relative inline-block mx-auto py-4 px-6 overflow-hidden group">
                         <span
                             class="relative font-semibold text-[#1a2d62] uppercase px-6 py-4 transition-all duration-300 group-hover:text-white">
@@ -107,10 +105,8 @@
             <div class="  bg-white ">
                 <div class=" bg-white p-16 mb-8  shadow border-r border-gray-50 ">
                     <h3 class="text-xl mb-4">Experienced Teachers</h3>
-                    <p class="mb-10 font-light text-gray-500">Lorem ipsum dolor sit amet, consectetur notted adipisicing
-                        elit sed do
-                        eiusmod
-                        tempor incididunt ut labore.</p>
+                    <p class="mb-10 font-light text-gray-500">Learn from dedicated educators who bring years of expertise,
+                        guiding every student toward success.</p>
                     <a href="#" class="relative inline-block mx-auto py-4 px-6 overflow-hidden group">
                         <span
                             class="relative font-semibold text-[#1a2d62] uppercase px-6 py-4 transition-all duration-300 group-hover:text-white">
@@ -129,10 +125,8 @@
             <div class="  bg-white ">
                 <div class=" bg-white p-16 mb-8  shadow border-r border-gray-50 ">
                     <h3 class="text-xl mb-4">Delicious Food</h3>
-                    <p class="mb-10 font-light text-gray-500">Lorem ipsum dolor sit amet, consectetur notted adipisicing
-                        elit sed do
-                        eiusmod
-                        tempor incididunt ut labore.</p>
+                    <p class="mb-10 font-light text-gray-500">Nutritious, tasty meals prepared with care, ensuring students
+                        enjoy a healthy and happy dining experience.</p>
                     <a href="#" class="relative inline-block mx-auto py-4 px-6 overflow-hidden group">
                         <span
                             class="relative font-semibold text-[#1a2d62] uppercase px-6 py-4 transition-all duration-300 group-hover:text-white">
@@ -174,16 +168,14 @@
                     <span class="ti-medall"></span>
                     <h4>Our Mission</h4>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipiscing elit sed do
-                        eiusmod tempor ut labore.
+                        {{ $branch->statement->statement_mission }}
                     </p>
                 </div>
                 <div class="abmv">
                     <span class="ti-wand"></span>
                     <h4>Our Vision</h4>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipiscing elit sed do
-                        eiusmod tempor ut labore.
+                        {{ $branch->statement->statement_vision }}
                     </p>
                 </div>
             </div>
