@@ -177,6 +177,15 @@ class GeneralRouteController extends Controller
             return view('partial_view.guest.education.secondary_riverside', compact('branch'));
         }
     }
+    public function showIgcse($param)
+    {
+        $branch = Branch::where('branch_short_name', $param)->first();
+        if ($branch && $branch->branch_short_name === 'SKT-CC') {
+            return view('partial_view.guest.education.igcse_city', compact('branch'));
+        } else {
+            return view('partial_view.guest.education.igcse_riverside', compact('branch'));
+        }
+    }
     public function showEvents($param)
     {
         $branch = Branch::where('branch_short_name', $param)->first();

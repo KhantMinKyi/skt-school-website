@@ -28,7 +28,7 @@
             <div class="section-title p-4">
                 <h2>{{ $branch->branch_name }}</h2>
                 <p>
-                    Secondary <span class="text-emerald-500">7 - 11 Years</span>
+                    Secondary <span class="text-emerald-500">Years 7 - 9</span>
                 </p>
             </div>
             <div class=" text-lg p-4">
@@ -49,7 +49,7 @@
         <div class="container mx-auto">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <div class=" grid grid-cols-3">
+                    <div class=" grid md:grid-cols-3">
                         <div
                             class="single_tca shadow-md p-12 border m-2 min-h-28 max-h-40 hover:shadow-lg flex justify-center items-center">
                             <img src="{{ asset('assets/images/icon/letter.svg') }}" class=" w-20" alt="" />

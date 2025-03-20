@@ -28,7 +28,7 @@
             <div class="section-title p-4">
                 <h2>{{ $branch->branch_name }}</h2>
                 <p>
-                    Pre School <span class="text-emerald-500">2 - 5 Years</span>
+                    Pre School <span class="text-emerald-500">Age 3 - 6 </span>
                 </p>
             </div>
             <div class=" text-lg p-4">
