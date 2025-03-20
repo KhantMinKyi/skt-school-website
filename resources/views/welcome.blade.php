@@ -100,11 +100,11 @@
                         class="w-full min-h-lvh object-cover" />
                     <div class="absolute inset-0 mx-auto flex flex-col justify-center items-center  ">
                         <h1 id="fading-text" class=" text-2xl md:text-7xl text-center ">
-                            <div class="text-center home-banner-text ">
+                            {{-- <div class="text-center home-banner-text ">
                                 <h3 class="pt-4 text-3xl text-gray-800">
                                     Select a Campus to View!
                                 </h3>
-                            </div>
+                            </div> --}}
                             <div class="container h-100">
                                 <div class="row align-items-center h-100 grid sm:grid-cols-2">
                                     <div class="col-lg-6 col-sm-6 col-xs-12   flex justify-center align-center">

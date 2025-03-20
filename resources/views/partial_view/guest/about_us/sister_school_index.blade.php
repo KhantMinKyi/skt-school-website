@@ -2,7 +2,7 @@
 
 @section('content')
     <link rel="stylesheet" href="{{ asset('guests/css/sister_school.css') }}" />
-    <link rel="stylesheet" href="{{ asset('assets/css/home_slider.css') }}" />
+    <link rel="stylesheet" href="{{ asset('assets/css/sister_school_banner.css') }}" />
 
     <div id="kenburns_061"
         class="carousel max-h-screen slide ps_indicators_txt_icon ps_control_txt_icon data-bs-target kbrns_zoomInOut thumb_scroll_x swipe_x ps_easeOutQuart relative w-full overflow-hidden"
