@@ -76,7 +76,7 @@
                 class="py-2 px-4 text-gray-900 font-bold hover:bg-gray-50 w-full text-center">Pre
                 School</a>
             <a href="#" class="py-2 px-4 text-gray-900 font-bold hover:bg-gray-50 w-full text-center">Primary</a>
-            <a href="#"
+            <a href="{{ route('secondary.home', $layout_branch->branch_short_name) }}"
                 class="py-2 px-4 text-gray-900 font-bold hover:bg-gray-50 w-full text-center">Secondary</a>
             <a href="#" class="py-2 px-4 text-gray-900 font-bold hover:bg-gray-50 w-full text-center">IGCSE</a>
             <a href="#" class="py-2 px-4 text-gray-900 font-bold hover:bg-gray-50 w-full text-center">UFP

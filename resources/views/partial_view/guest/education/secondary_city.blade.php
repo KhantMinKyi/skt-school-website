@@ -1,0 +1,149 @@
+@extends('layouts.riverside_layout')
+
+@section('content')
+    <link rel="stylesheet" href="{{ asset('assets/css/slider.css') }}" />
+    <link rel="stylesheet" href="{{ asset('guests/css/secondary.css') }}" />
+    <div id="kenburns_061"
+        class="carousel max-h-screen slide ps_indicators_txt_icon ps_control_txt_icon data-bs-target kbrns_zoomInOut thumb_scroll_x swipe_x ps_easeOutQuart relative w-full overflow-hidden"
+        data-ride="carousel" data-pause="hover" data-interval="10000" data-duration="2000">
+        <!-- Wrapper For Slides -->
+        <div class="carousel-inner flex transition-transform duration-1000 ease-in-out" id="carouselInner">
+            <!-- First Slide -->
+            <div class="carousel-item active w-full flex-shrink-0">
+                <img src="{{ asset('img/banner/education_banners/secondary/' . $branch->branch_short_name . '.jpg') }}"
+                    alt="slider-image" class="w-full h-auto object-cover" />
+                <div class="absolute inset-0 mx-auto flex flex-col justify-center items-center  ">
+                    <h1 id="fading-text" class=" text-2xl lg:text-5xl xl:text-7xl text-center  ml-10">
+                        <span class="text-emerald-400">{{ $branch->branch_name }}</span>
+                        <br>
+                        <div class="text-white mt-4">Secondary</div>
+                    </h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- START TOPIC-->
+    <section class="topic_content_area section-padding" style="background-image: url(assets/images/banner/topic.png);">
+        <div class="container mx-auto">
+            <div class="section-title p-4">
+                <h2>{{ $branch->branch_name }}</h2>
+                <p>
+                    Secondary <span class="text-emerald-500">7 - 11 Years</span>
+                </p>
+            </div>
+            <div class=" text-lg p-4">
+                Our Lower Secondary Program follows the Cambridge International Secondary 1 curriculum,
+            </div>
+            <!-- END ROW -->
+        </div>
+        <!-- END CONTAINER -->
+    </section>
+    <!-- END TOPIC -->
+
+    <!-- START SISTER SCHOOL  -->
+    <div class="partner-logo py-10  bg-green-50">
+        <div class="text-center mb-10 text-2xl font-bold font-serif text-teal-700">
+            {{-- Sister Schools --}}
+            building on strong foundations in
+        </div>
+        <div class="container mx-auto">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class=" grid grid-cols-3">
+                        <div
+                            class="single_tca shadow-md p-12 border m-2 min-h-28 max-h-40 hover:shadow-lg flex justify-center items-center">
+                            <img src="{{ asset('assets/images/icon/letter.svg') }}" class=" w-20" alt="" />
+                            <h2 class=""><a href="#">English</a></h2>
+                        </div>
+                        <div
+                            class="single_tca shadow-md p-12 border m-2 min-h-28 max-h-40 hover:shadow-lg flex justify-center items-center">
+                            <img src="{{ asset('assets/images/icon/math.svg') }}" class=" w-20" alt="" />
+                            <h2 class=""><a href="#">Mathematics</a></h2>
+                        </div>
+                        <div
+                            class="single_tca shadow-md p-12 border m-2 min-h-28 max-h-40 hover:shadow-lg flex justify-center items-center">
+                            <img src="{{ asset('assets/images/icon/science.svg') }}" class=" w-20" alt="" />
+                            <h2 class=""><a href="#">Science</a></h2>
+                        </div>
+                    </div>
+                </div><!-- END COL  -->
+            </div><!--END  ROW  -->
+        </div><!-- END CONTAINER  -->
+
+    </div>
+    <div class="partner-logo py-10  bg-yellow-50">
+        <div class="text-center mb-10 text-2xl font-bold font-serif text-blue-700">
+            {{-- Sister Schools --}}
+            Students also
+            explore specialized subjects such as
+        </div>
+        <div class="container mx-auto">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="partner">
+                        <div
+                            class="single_tca shadow-md p-12 border m-2 min-h-28 max-h-40 hover:shadow-lg flex justify-center items-center">
+                            <img src="{{ asset('assets/images/icon/writing.svg') }}" class=" w-20" alt="" />
+                            <h2 class=""><a href="#">Myanmar language</a></h2>
+                        </div>
+                        <div
+                            class="single_tca shadow-md p-12 border m-2 min-h-28 max-h-40 hover:shadow-lg flex justify-center items-center">
+                            <img src="{{ asset('assets/images/icon/history.svg') }}" class=" w-20" alt="" />
+                            <h2 class=""><a href="#">History</a></h2>
+                        </div>
+                        <div
+                            class="single_tca shadow-md p-12 border m-2 min-h-28 max-h-40 hover:shadow-lg flex justify-center items-center">
+                            <img src="{{ asset('assets/images/icon/geo.svg') }}" class=" w-20" alt="" />
+                            <h2 class=""><a href="#">Geography</a></h2>
+                        </div>
+                        <div
+                            class="single_tca shadow-md p-12 border m-2 min-h-28 max-h-40 hover:shadow-lg flex justify-center items-center">
+                            <img src="{{ asset('assets/images/icon/music.svg') }}" class=" w-20" alt="" />
+                            <h2 class=""><a href="#">Music</a></h2>
+                        </div>
+                        <div
+                            class="single_tca shadow-md p-12 border m-2 min-h-28 max-h-40 hover:shadow-lg flex justify-center items-center">
+                            <img src="{{ asset('assets/images/icon/art.svg') }}" class=" w-20" alt="" />
+                            <h2 class=""><a href="#">Art</a></h2>
+                        </div>
+                        <div
+                            class="single_tca shadow-md p-12 border m-2 min-h-28 max-h-40 hover:shadow-lg flex justify-center items-center">
+                            <img src="{{ asset('assets/images/icon/computer.svg') }}" class=" w-20" alt="" />
+                            <h2 class=""><a href="#">ICT</a></h2>
+                        </div>
+                        <div
+                            class="single_tca shadow-md p-12 border m-2 min-h-28 max-h-40 hover:shadow-lg flex justify-center items-center">
+                            <img src="{{ asset('assets/images/icon/sport_player.svg') }}" class=" w-20" alt="" />
+                            <h2 class=""><a href="#">PE</a></h2>
+                        </div>
+                    </div>
+                </div><!-- END COL  -->
+            </div><!--END  ROW  -->
+        </div><!-- END CONTAINER  -->
+    </div>
+    <div class="container mx-auto my-8">
+        <div class="text-lg md:text-xl">
+            equipping them with essential knowledge and skills
+            for an ever-changing world.
+        </div>
+        <div class="flex justify-center">
+            <hr class="my-10 w-60 ">
+        </div>
+        <div class="grid md:grid-cols-2">
+            <div class=" text-lg md:text-xl p-4 flex justify-center items-center">
+                Assessment includes the Cambridge International Secondary 1 Checkpoint and yearly progression tests. A range
+                of teaching methods ensures that lessons are engaging, effective, and tailored to the diverse developmental
+                needs of students. Students participate in hands-on projects, presentations, debates, experiments, and
+                inter-school competitions in subjects like math, science, English, and art. They are also encouraged to take
+                part in community service activities, fostering a sense of responsibility and empathy.
+            </div>
+            <div class="flex justify-center items-center">
+                {{-- <img src="{{ asset('img/banner/pre_school_river.jpg') }}" class="rounded-lg hover:shadow-md w-2/3"
+                    alt=""> --}}
+                <img src="{{ asset($branch->branch_logo) }}" style="max-height: 420px" alt="" />
+            </div>
+        </div>
+        <!-- END ROW -->
+    </div>
+    <!-- END SISTER SCHOOL  -->
+@endsection

@@ -121,7 +121,7 @@
                                 School</a></li>
                         <li class="py-2"><a href="#"
                                 class="block px-4 py-2 font-bold hover:text-teal-500">Primary</a></li>
-                        <li class="py-2"><a href="#"
+                        <li class="py-2"><a href="{{ route('secondary.home', $layout_branch->branch_short_name) }}"
                                 class="block px-4 py-2 font-bold hover:text-teal-500">Secondary</a></li>
                         <li class="py-2"><a href="#"
                                 class="block px-4 py-2 font-bold hover:text-teal-500">IGCSE</a>
