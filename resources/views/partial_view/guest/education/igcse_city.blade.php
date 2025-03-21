@@ -2,7 +2,7 @@
 
 @section('content')
     <link rel="stylesheet" href="{{ asset('assets/css/slider.css') }}" />
-    <link rel="stylesheet" href="{{ asset('guests/css/secondary.css') }}" />
+    <link rel="stylesheet" href="{{ asset('guests/css/igcse.css') }}" />
     <div id="kenburns_061"
         class="carousel max-h-screen slide ps_indicators_txt_icon ps_control_txt_icon data-bs-target kbrns_zoomInOut thumb_scroll_x swipe_x ps_easeOutQuart relative w-full overflow-hidden"
         data-ride="carousel" data-pause="hover" data-interval="10000" data-duration="2000">

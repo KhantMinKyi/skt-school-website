@@ -39,129 +39,340 @@
                 equipment. BFI Kindergarten Programs
             </div>
             <!-- END ROW -->
+
         </div>
         <!-- END CONTAINER -->
     </section>
     <!-- END TOPIC -->
+    <div class="py-10  bg-emerald-50">
+        <div class="grid md:grid-cols-2 gap-10 container mx-auto">
+            <div class="group   [perspective:1000px]">
+                <div
+                    class=" will-change-transform duration-1000 w-full h-full [transform-style:preserve-3d] group-hover:[transform:rotateX(180deg)]">
+                    <div
+                        class="absolute w-full h-full rounded-xl bg-white p-6 text-gray-800 shadow-lg [backface-visibility:hidden]">
+                        <div class="flex flex-col h-full">
+                            <div class="flex justify-between items-start">
+                                <div class="text-3xl font-extrabold">Creative Exploration</div>
+                                <img src="{{ asset('assets/images/icon/music.svg') }}" class=" w-20" alt="" />
+                            </div>
+                            <div class="mt-auto">
+                                <p class="text-sm opacity-75 font-semibold">Hover to flip!</p>
+                            </div>
+                        </div>
+                    </div>
 
-    <!-- START SISTER SCHOOL  -->
+                    <div
+                        class=" w-full h-full rounded-xl bg-gradient-to-br from-teal-200 to-teal-400  shadow-lg  p-6 text-black [transform:rotateX(180deg)] [backface-visibility:hidden]">
+                        <div class="flex flex-col h-full">
+                            <div class="text-2xl font-extrabold mb-4 ">Creative Exploration</div>
+                            <div class="flex-grow">
+                                <p class="text-lg ">
+                                    We provide a rich environment filled with stimulating activities like art, music,
+                                    dramatic play, building blocks, sand and water play, and more! Children explore their
+                                    world hands-on, developing their creativity and problem-solving skills.
+                                </p>
+                            </div>
+                            <div class="flex justify-end items-center mt-auto">
+                                <img src="{{ asset('assets/images/icon/music.svg') }}" class=" w-16" alt="" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="group   [perspective:1000px]">
+                <div
+                    class=" will-change-transform duration-1000 w-full h-full [transform-style:preserve-3d] group-hover:[transform:rotateX(180deg)]">
+                    <div
+                        class="absolute w-full h-full rounded-xl bg-white p-6 text-gray-800 shadow-lg [backface-visibility:hidden]">
+                        <div class="flex flex-col h-full">
+                            <div class="flex justify-between items-start">
+                                <div class="text-3xl font-extrabold">Academic Foundations</div>
+                                <img src="{{ asset('assets/images/icon/literacy.svg') }}" class=" w-20" alt="" />
+                            </div>
+                            <div class="mt-auto">
+                                <p class="text-sm opacity-75 font-semibold">Hover to flip!</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class=" w-full h-full rounded-xl bg-gradient-to-br from-teal-200 to-teal-400  shadow-lg  p-6 text-black [transform:rotateX(180deg)] [backface-visibility:hidden]">
+                        <div class="flex flex-col h-full">
+                            <div class="text-2xl font-extrabold mb-4 ">Academic Foundations</div>
+                            <div class="flex-grow">
+                                <p class="text-lg ">
+                                    Through play and inquiry, your child will build a strong foundation in literacy, math,
+                                    and science. Our engaging lessons are tailored to their age and developmental stage,
+                                    incorporating storytelling, music, and movement to make learning fun. We also introduce
+                                    important life skills, such as etiquette and safety.
+                                </p>
+                            </div>
+                            <div class="flex justify-end items-center mt-auto">
+                                <img src="{{ asset('assets/images/icon/literacy.svg') }}" class=" w-16" alt="" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="group   [perspective:1000px]">
+                <div
+                    class=" will-change-transform duration-1000 w-full h-full [transform-style:preserve-3d] group-hover:[transform:rotateX(180deg)]">
+                    <div
+                        class="absolute w-full h-full rounded-xl bg-white p-6 text-gray-800 shadow-lg [backface-visibility:hidden]">
+                        <div class="flex flex-col h-full">
+                            <div class="flex justify-between items-start">
+                                <div class="text-3xl font-extrabold">Physical Development</div>
+                                <img src="{{ asset('assets/images/icon/sport_player.svg') }}" class=" w-20"
+                                    alt="" />
+                            </div>
+
+                            <div class="mt-auto">
+                                <p class="text-sm opacity-75 font-semibold">Hover to flip!</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class=" w-full h-full rounded-xl bg-gradient-to-br from-teal-200 to-teal-400  shadow-lg  p-6 text-black [transform:rotateX(180deg)] [backface-visibility:hidden]">
+                        <div class="flex flex-col h-full">
+                            <div class="text-2xl font-extrabold mb-4 ">Physical Development</div>
+                            <div class="flex-grow">
+                                <p class="text-lg ">
+                                    We believe in the importance of physical activity for healthy development. Your child
+                                    will enjoy exciting physical education classes, gymnastics, and swimming lessons.
+                                </p>
+                            </div>
+                            <div class="flex justify-end items-center mt-auto">
+                                <img src="{{ asset('assets/images/icon/sport_player.svg') }}" class=" w-16"
+                                    alt="" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="group   [perspective:1000px]">
+                <div
+                    class=" will-change-transform duration-1000 w-full h-full [transform-style:preserve-3d] group-hover:[transform:rotateX(180deg)]">
+                    <div
+                        class="absolute w-full h-full rounded-xl bg-white p-6 text-gray-800 shadow-lg [backface-visibility:hidden]">
+                        <div class="flex flex-col h-full">
+                            <div class="flex justify-between items-start">
+                                <div class="text-3xl font-extrabold">Social-Emotional Growth</div>
+                                <img src="{{ asset('assets/images/icon/social_studies.svg') }}" class=" w-20"
+                                    alt="" />
+                            </div>
+                            <div class="mt-auto">
+                                <p class="text-sm opacity-75 font-semibold">Hover to flip!</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class=" w-full h-full rounded-xl bg-gradient-to-br from-teal-200 to-teal-400  shadow-lg  p-6 text-black [transform:rotateX(180deg)] [backface-visibility:hidden]">
+                        <div class="flex flex-col h-full">
+                            <div class="text-2xl font-extrabold mb-4 ">Social-Emotional Growth</div>
+                            <div class="flex-grow">
+                                <p class="text-lg ">
+                                    We nurture your child's social and emotional well-being through positive reinforcement,
+                                    engaging activities, and strong parent involvement. Your child will learn to cooperate,
+                                    share, and express themselves confidently.
+                                </p>
+                            </div>
+                            <div class="flex justify-end items-center mt-auto">
+                                <img src="{{ asset('assets/images/icon/social_studies.svg') }}" class=" w-16"
+                                    alt="" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{-- <div class="group   [perspective:1000px]">
+                <div
+                    class=" duration-1000 w-full h-full [transform-style:preserve-3d] group-hover:[transform:rotateX(180deg)]">
+                    <div
+                        class="absolute w-full h-full rounded-xl bg-gradient-to-br from-violet-400 to-indigo-600 p-6 text-white [backface-visibility:hidden]">
+                        <div class="flex flex-col h-full">
+                            <div class="flex justify-between items-start">
+                                <div class="text-3xl font-bold">Card Title</div>
+                                <div class="text-5xl">🌟</div>
+                            </div>
+                            <div class="mt-4">
+                                <p class="text-lg">
+                                    Front content goes here. This is visible before hovering.
+                                </p>
+                            </div>
+                            <div class="mt-auto">
+                                <p class="text-sm opacity-75">Hover to flip!</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class=" w-full h-full rounded-xl bg-gradient-to-br from-pink-400 to-purple-600 p-6 text-white [transform:rotateX(180deg)] [backface-visibility:hidden]">
+                        <div class="flex flex-col h-full">
+                            <div class="text-2xl font-bold mb-4">Back Side</div>
+                            <div class="flex-grow">
+                                <p class="text-lg">
+                                    Through play and inquiry, your child will build a strong foundation in literacy,
+                                    math,
+                                    and science. Our engaging lessons are tailored to their age and developmental stage,
+                                    incorporating storytelling, music, and movement to make learning fun. We also
+                                    introduce
+                                    important life skills, such as etiquette and safety.
+                                </p>
+                            </div>
+                            <div class="flex justify-between items-center mt-auto">
+                                <button
+                                    class="px-4 py-2 bg-white text-purple-600 rounded-lg font-semibold hover:bg-opacity-90 transition-colors">
+                                    Action
+                                </button>
+                                <span class="text-3xl">✨</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> --}}
+        </div>
+    </div>
+
+
+    <div class="partner-logo py-10  bg-yellow-50">
+        <div class="text-center mb-10 text-2xl font-bold font-serif text-teal-700">
+            {{-- Sister Schools --}}
+            Our Program Includes:
+        </div>
+        <div class="container mx-auto">
+            {{-- New Row --}}
+            <div class="grid md:grid-cols-2 my-5">
+                <div class="my-5">
+                    <p class="text-xl font-extrabold uppercase">
+                        Inquiry-Based <span class="text-emerald-500">Learning</span>
+                        <hr class="w-28 text-center my-2 border-emerald-500">
+                    </p>
+                    <p class="p-1 font-semibold text-gray-800">Children explore their interests and questions through
+                        hands-on activities
+                        and open-ended projects.
+                    </p>
+                </div>
+                <div class="my-5">
+                    <p class="text-xl font-extrabold uppercase">
+                        Play-Based <span class="text-emerald-500">Learning</span>
+                        <hr class="w-28 text-center my-2 border-emerald-500 ">
+                    </p>
+                    <p class="p-1 font-semibold text-gray-800"> Learning happens through play! We use age-appropriate
+                        materials and activities to make learning fun and engaging.
+                    </p>
+                </div>
+
+            </div>
+            {{-- New Row --}}
+            <div class="grid md:grid-cols-2 my-5">
+                <div class="my-5">
+                    <p class="text-xl font-extrabold uppercase">
+                        Music and <span class="text-emerald-500">Movement</span>
+                        <hr class="w-28 text-center my-2 border-emerald-500">
+                    </p>
+                    <p class="p-1 font-semibold text-gray-800">Singing, dancing, and musical activities enhance your
+                        child's creativity and coordination.
+                    </p>
+                </div>
+                <div class="my-5">
+                    <p class="text-xl font-extrabold uppercase">
+                        Literacy and <span class="text-emerald-500">Math</span>
+                        <hr class="w-28 text-center my-2 border-emerald-500 ">
+                    </p>
+                    <p class="p-1 font-semibold text-gray-800"> We lay a strong foundation in reading, writing and number
+                        skills.
+                    </p>
+                </div>
+            </div>
+            {{-- Seperate Line --}}
+            <div class="inline-flex items-center justify-center w-full">
+                <hr class="w-64 h-1 mb-4 bg-emerald-200 border-0 rounded-sm ">
+                <div class="absolute px-4 -translate-x-1/2 -translate-y-1/3 bg-yellow-50 left-1/2 ">
+                    <img src="{{ asset('assets/images/icon/double_quotes.svg') }}" class="w-8 text-emerald-200"
+                        alt="">
+                </div>
+            </div>
+        </div>
+
+    </div>
     <div class="partner-logo py-10  bg-green-50">
         <div class="text-center mb-10 text-2xl font-bold font-serif text-teal-700">
             {{-- Sister Schools --}}
-            A theme-based approach links the topics to different subjects such as:
         </div>
         <div class="container mx-auto">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <div class="partner">
-                        <div
-                            class="single_tca shadow-md p-12 border m-2 min-h-28 max-h-40 hover:shadow-lg flex justify-center items-center">
-                            <img src="{{ asset('assets/images/icon/music.svg') }}" class=" w-20" alt="" />
-                            <h2 class=""><a href="#">Music and Movement</a></h2>
-                        </div>
-                        <div
-                            class="single_tca shadow-md p-12 border m-2 min-h-28 max-h-40 hover:shadow-lg flex justify-center items-center">
-                            <img src="{{ asset('assets/images/icon/story.svg') }}" class=" w-20" alt="" />
-                            <h2 class=""><a href="#">Story & Music</a></h2>
-                        </div>
-                        <div
-                            class="single_tca shadow-md p-12 border m-2 min-h-28 max-h-40 hover:shadow-lg flex justify-center items-center">
-                            <img src="{{ asset('assets/images/icon/letter.svg') }}" class=" w-20" alt="" />
-                            <h2 class=""><a href="#">English Phonics: Letter & Sound</a></h2>
-                        </div>
-                        <div
-                            class="single_tca shadow-md p-12 border m-2 min-h-28 max-h-40 hover:shadow-lg flex justify-center items-center">
-                            <img src="{{ asset('assets/images/icon/writing.svg') }}" class=" w-20" alt="" />
-                            <h2 class=""><a href="#">English Writing</a></h2>
-                        </div>
-                        <div
-                            class="single_tca shadow-md p-12 border m-2 min-h-28 max-h-40 hover:shadow-lg flex justify-center items-center">
-                            <img src="{{ asset('assets/images/icon/literacy.svg') }}" class=" w-20" alt="" />
-                            <h2 class=""><a href="#">English Language & Literacy</a></h2>
-                        </div>
-                        <div
-                            class="single_tca shadow-md p-12 border m-2 min-h-28 max-h-40 hover:shadow-lg flex justify-center items-center">
-                            <img src="{{ asset('assets/images/icon/social_studies.svg') }}" class=" w-20"
-                                alt="" />
-                            <h2 class=""><a href="#">Social Studies</a></h2>
-                        </div>
-                        <div
-                            class="single_tca shadow-md p-12 border m-2 min-h-28 max-h-40 hover:shadow-lg flex justify-center items-center">
-                            <img src="{{ asset('assets/images/icon/field_trip.svg') }}" class=" w-20" alt="" />
-                            <h2 class=""><a href="#">Environmental Awareness – Field Trips</a></h2>
-                        </div>
-                    </div>
-                </div><!-- END COL  -->
-            </div><!--END  ROW  -->
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <div class="partner">
-                        <div
-                            class="single_tca shadow-md p-12 border m-2 min-h-28 max-h-40 hover:shadow-lg flex justify-center items-center">
-                            <img src="{{ asset('assets/images/icon/math.svg') }}" class=" w-20" alt="" />
-                            <h2 class=""><a href="#">Mathematics</a></h2>
-                        </div>
-                        <div
-                            class="single_tca shadow-md p-12 border m-2 min-h-28 max-h-40 hover:shadow-lg flex justify-center items-center">
-                            <img src="{{ asset('assets/images/icon/science.svg') }}" class=" w-20" alt="" />
-                            <h2 class=""><a href="#">Science</a></h2>
-                        </div>
-                        <div
-                            class="single_tca shadow-md p-12 border m-2 min-h-28 max-h-40 hover:shadow-lg flex justify-center items-center">
-                            <img src="{{ asset('assets/images/icon/art.svg') }}" class=" w-20" alt="" />
-                            <h2 class=""><a href="#">Fine Arts, Drawing & Painting</a></h2>
-                        </div>
-                        <div
-                            class="single_tca shadow-md p-12 border m-2 min-h-28 max-h-40 hover:shadow-lg flex justify-center items-center">
-                            <img src="{{ asset('assets/images/icon/computer.svg') }}" class=" w-20" alt="" />
-                            <h2 class=""><a href="#">Computer</a></h2>
-                        </div>
-                        <div
-                            class="single_tca shadow-md p-12 border m-2 min-h-28 max-h-40 hover:shadow-lg flex justify-center items-center">
-                            <img src="{{ asset('assets/images/icon/sand_and_water.svg') }}" class=" w-20"
-                                alt="" />
-                            <h2 class=""><a href="#">Physical development: Large motor skills, sand and
-                                    water</a></h2>
-                        </div>
-                        <div
-                            class="single_tca shadow-md p-12 border m-2 min-h-28 max-h-40 hover:shadow-lg flex justify-center items-center">
-                            <img src="{{ asset('assets/images/icon/blocks.svg') }}" class=" w-20" alt="" />
-                            <h2 class=""><a href="#">Blocks</a></h2>
-                        </div>
-                        <div
-                            class="single_tca shadow-md p-12 border m-2 min-h-28 max-h-40 hover:shadow-lg flex justify-center items-center">
-                            <img src="{{ asset('assets/images/icon/sport_player.svg') }}" class=" w-20"
-                                alt="" />
-                            <h2 class=""><a href="#">Gymnastics / Swimming & Various Sports</a></h2>
-                        </div>
-                        <div
-                            class="single_tca shadow-md p-12 border m-2 min-h-28 max-h-40 hover:shadow-lg flex justify-center items-center">
-                            <img src="{{ asset('assets/images/icon/health.svg') }}" class=" w-20" alt="" />
-                            <h2 class=""><a href="#">Health & Safety, and Drama</a></h2>
-                        </div>
-
-                    </div>
-                </div><!-- END COL  -->
-            </div><!--END  ROW  -->
-        </div><!-- END CONTAINER  -->
-
-    </div>
-    <div class="container mx-auto my-8">
-        <div class="grid md:grid-cols-2">
-            <div class=" text-lg md:text-xl p-4 flex justify-center items-center">
-                We also encourage children’s creativity and independence by allowing them to direct their own learning via
-                guided play periods. During these periods, children are free to explore their world using classroom toys,
-                sand,
-                water, paint, life-sized blocks and out playground equipment. Field trips, performances and family programs
-                are
-                other key components of our holistic approach designed to educate, stimulate and challenge our students.
+            <div class="grid md:grid-cols-2 my-5">
+                <div class="my-5">
+                    <p class="text-xl font-extrabold uppercase">
+                        Science and <span class="text-emerald-500">Nature</span>
+                        <hr class="w-28 text-center my-2 border-emerald-500">
+                    </p>
+                    <p class="p-1 font-semibold text-gray-800"> Hands-on exploration and discoveries spark a lifelong
+                        curiosity about the world.
+                    </p>
+                </div>
+                <div class="my-5">
+                    <p class="text-xl font-extrabold uppercase">
+                        Art and <span class="text-emerald-500">Craft</span>
+                        <hr class="w-28 text-center my-2 border-emerald-500 ">
+                    </p>
+                    <p class="p-1 font-semibold text-gray-800"> Self-expression through painting, drawing, and various
+                        craft projects.
+                    </p>
+                </div>
             </div>
-            <div class="flex justify-center items-center">
-                <img src="{{ asset('img/banner/pre_school_river.jpg') }}" class="rounded-lg hover:shadow-md w-2/3"
-                    alt="">
+            {{-- New Row --}}
+            <div class="grid md:grid-cols-2 my-5">
+                <div class="my-5">
+                    <p class="text-xl font-extrabold uppercase">
+                        <span class="text-emerald-500">Technology</span>
+                        <hr class="w-28 text-center my-2 border-emerald-500">
+                    </p>
+                    <p class="p-1 font-semibold text-gray-800">Age-appropriate introduction to technology and digital
+                        literacy.
+                    </p>
+                </div>
+                <div class="my-5">
+                    <p class="text-xl font-extrabold uppercase">
+                        Social Skills and <span class="text-emerald-500">Etiquette</span>
+                        <hr class="w-28 text-center my-2 border-emerald-500 ">
+                    </p>
+                    <p class="p-1 font-semibold text-gray-800"> Learning to interact positively with peers and adults.
+                    </p>
+                </div>
+            </div>
+            {{-- New Row --}}
+            <div class="grid md:grid-cols-2 my-5">
+                <div class="my-5">
+                    <p class="text-xl font-extrabold uppercase">
+                        Physical Education, Gymnastics and <span class="text-emerald-500">Swimming</span>
+                        <hr class="w-28 text-center my-2 border-emerald-500">
+                    </p>
+                    <p class="p-1 font-semibold text-gray-800"> Building strength, coordination and confidence.
+                    </p>
+                </div>
+                <div class="my-5">
+                    <p class="text-xl font-extrabold uppercase">
+                        Field <span class="text-emerald-500">trips</span>
+                        <hr class="w-28 text-center my-2 border-emerald-500 ">
+                    </p>
+                    <p class="p-1 font-semibold text-gray-800"> (if applicable) Exciting excursions to expand learning
+                        experiences.
+
+                    </p>
+                </div>
+            </div>
+            {{-- Seperate Line --}}
+            <div class="inline-flex items-center justify-center w-full">
+                <hr class="w-64 h-1 mb-4 bg-emerald-200 border-0 rounded-sm ">
+                <div class="absolute px-4 -translate-x-1/2 -translate-y-1/3 bg-green-50 left-1/2 ">
+                    <img src="{{ asset('assets/images/icon/double_quotes.svg') }}" class="w-8 text-emerald-200"
+                        alt="">
+                </div>
             </div>
         </div>
-        <!-- END ROW -->
+
     </div>
-    <!-- END SISTER SCHOOL  -->
 @endsection
