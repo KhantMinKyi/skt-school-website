@@ -80,9 +80,9 @@
                 class="py-2 px-4 text-gray-900 font-bold hover:bg-gray-50 w-full text-center">Secondary</a>
             <a href="{{ route('igcse.home', $layout_branch->branch_short_name) }}"
                 class="py-2 px-4 text-gray-900 font-bold hover:bg-gray-50 w-full text-center">IGCSE</a>
-            <a href="#" class="py-2 px-4 text-gray-900 font-bold hover:bg-gray-50 w-full text-center">UFP
-                (University
-                Foundation Program)</a>
+            <a href="{{ route('ib.home', $layout_branch->branch_short_name) }}"
+                class="py-2 px-4 text-gray-900 font-bold hover:bg-gray-50 w-full text-center">IB
+                Diploma Programme (IB DP)</a>
 
         </div>
     </div>

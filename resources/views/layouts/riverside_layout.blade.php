@@ -125,10 +125,9 @@
                                 class="block px-4 py-2 font-bold hover:text-teal-500">Secondary</a></li>
                         <li class="py-2"><a href="{{ route('igcse.home', $layout_branch->branch_short_name) }}"
                                 class="block px-4 py-2 font-bold hover:text-teal-500">IGCSE</a>
-                        <li class="py-2"><a href="#"
-                                class="block px-4 py-2 font-bold hover:text-teal-500">UFP
-                                (University
-                                Foundation Program)</a>
+                        <li class="py-2"><a href="{{ route('ib.home', $layout_branch->branch_short_name) }}"
+                                class="block px-4 py-2 font-bold hover:text-teal-500">IB
+                                Diploma Programme (IB DP)</a>
                         </li>
                     </ul>
                 </li>
