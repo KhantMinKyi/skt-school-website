@@ -28,7 +28,7 @@
             <div class="section-title p-4">
                 <h2>{{ $branch->branch_name }}</h2>
                 <p>
-                    IGCSE <span class="text-emerald-500">Years 10 - 11 </span>
+                    IGCSE <span class="text-emerald-500">Year 10 - 11 </span>
                 </p>
             </div>
             <div class=" text-lg p-4">

@@ -1,4 +1,4 @@
-<div id="mobile-menu" class="hidden flex flex-col items-center bg-white lg:hidden">
+<div id="mobile-menu" class="hidden flex flex-col items-center bg-white ">
     <!-- Home with Dropdown -->
     <div class="w-full">
         <a href="/"

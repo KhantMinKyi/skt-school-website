@@ -36,6 +36,7 @@ Route::post('/student_life/news-comment', [PostCommentController::class, 'store'
 
 //Education
 Route::get('/education/pre_school/{param}', [GeneralRouteController::class, 'showPreSchool'])->name('pre-school.home');
+Route::get('/education/primary/{param}', [GeneralRouteController::class, 'showPrimary'])->name('primary.home');
 Route::get('/education/secondary/{param}', [GeneralRouteController::class, 'showSecondary'])->name('secondary.home');
 Route::get('/education/igcse/{param}', [GeneralRouteController::class, 'showIgcse'])->name('igcse.home');
 Route::get('/education/ib/{param}', [GeneralRouteController::class, 'showIB'])->name('ib.home');
