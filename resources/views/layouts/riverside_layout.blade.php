@@ -171,7 +171,7 @@
                     class="hover:text-green-500 text-xl mr-4 lg:hidden">
                     <i class="fa-solid fa-repeat"></i>
                 </button>
-                <button id="menu-btn" class="lg:hidden text-gray-900 text-2xl ">☰</button>
+                <button id="menu-btn" class="lg:hidden text-2xl "><i class="fa-solid fa-bars"></i></button>
             </div>
         </div>
 
@@ -188,7 +188,7 @@
         <div class="container mx-auto">
             <div class="grid lg:grid-cols-4 sm:grid-cols-2 ">
                 <div class="col-lg-3 col-sm-6 col-xs-12">
-                    <div class="single_footer">
+                    <div class="single_footer p-4">
                         {{-- <a href="index.html"><img src="assets/images/all-img/logo2.png" alt="" /></a> --}}
                         <a href="/"><img src="{{ asset('img/skt_with_tagline.png') }}"
                                 class=" max-w-60 sm:max-w-72" alt=""></a>
@@ -198,7 +198,7 @@
                             environment.
                         </p>
                     </div>
-                    <div class="foot_social">
+                    <div class="foot_social p-4">
                         <ul class=" ">
                             <li><a href="#" class="hlc  ">
                                     <i class="ti-facebook"></i>
@@ -237,7 +237,7 @@
                 </div>
                 <!--- END COL -->
                 <div>
-                    <div class="single_footer">
+                    <div class="single_footer p-4">
                         <h4>Menu</h4>
                         <ul>
                             <li><a href="/">Home</a></li>
@@ -252,7 +252,7 @@
                 </div>
                 <!--- END COL -->
 
-                <div class="col-lg-3 col-sm-6 col-xs-12">
+                <div class="col-lg-3 col-sm-6 col-xs-12 p-4">
                     <div class="single_footer">
                         <h4>Contact Info</h4>
                         <div class="sf_contact">
@@ -275,7 +275,7 @@
                 <!--- END COL -->
             </div>
             <!--- END ROW -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 fc">
+            <div class="grid grid-cols-1 sm:grid-cols-2 fc p-4">
                 <div class="col-lg-6 col-sm-6 col-xs-12">
                     <div class="footer_copyright">
                         <p>&copy; 2025. All Rights Reserved.</p>

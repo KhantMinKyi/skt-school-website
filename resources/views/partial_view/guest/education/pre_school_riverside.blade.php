@@ -242,7 +242,7 @@
             {{-- Sister Schools --}}
             Our Program Includes:
         </div>
-        <div class="container mx-auto">
+        <div class="container mx-auto p-4">
             {{-- New Row --}}
             <div class="grid md:grid-cols-2 my-5">
                 <div class="my-5">
@@ -302,7 +302,7 @@
         <div class="text-center mb-10 text-2xl font-bold font-serif text-teal-700">
             {{-- Sister Schools --}}
         </div>
-        <div class="container mx-auto">
+        <div class="container mx-auto p-4">
             <div class="grid md:grid-cols-2 my-5">
                 <div class="my-5">
                     <p class="text-xl font-extrabold uppercase">
