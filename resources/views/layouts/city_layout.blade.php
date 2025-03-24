@@ -96,6 +96,9 @@
                                 href="{{ route('sister-schools.home', $layout_branch->branch_short_name) }}"
                                 class="block px-4 py-2 font-bold hover:text-teal-500">Sister Schools</a>
                         </li>
+                        <li class="py-2"><a href="#"
+                                class="block px-4 py-2 font-bold hover:text-teal-500">Policy</a>
+                        </li>
                     </ul>
                 </li>
                 <li class="relative group -mt-1">
@@ -110,6 +113,9 @@
                                 class="block px-4 py-2 font-bold hover:text-teal-500">Gallery</a></li>
                         <li class="py-2"><a href="{{ route('calendar.home', $layout_branch->branch_short_name) }}"
                                 class="block px-4 py-2 font-bold hover:text-teal-500">Calendar</a>
+                        </li>
+                        <li class="py-2"><a href="#"
+                                class="block px-4 py-2 font-bold hover:text-teal-500">Welfare </a>
                         </li>
                     </ul>
                 </li>
