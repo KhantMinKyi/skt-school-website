@@ -11,8 +11,8 @@
         <div class="carousel-inner flex transition-transform duration-1000 ease-in-out" id="carouselInner">
             <!-- First Slide -->
             <div class="carousel-item active w-full flex-shrink-0">
-                <img src="{{ asset('img/banner/education_banners/pre_school/' . $branch->branch_short_name . '.jpg') }}"
-                    alt="slider-image" class="w-full h-auto object-cover" />
+                <img src="{{ asset('img/banner/sister_school/bfi.jpg') }}" alt="slider-image"
+                    class="w-full h-auto object-cover" />
                 {{-- <div class=" absolute inset-0 flex flex-col items-center justify-center p-8 text-white"
                 data-animation="animated fadeInRight">
                 <h2 class=" md:text-4xl font-semibold text-teal-500 uppercase">Alumni</h2>
