@@ -24,6 +24,7 @@ Route::group(['middleware' => ['auth', IsAdmin::class], 'prefix' => '/administra
     include __DIR__ . '/route_groups/admin/gallery.php';
     include __DIR__ . '/route_groups/admin/calendar.php';
     include __DIR__ . '/route_groups/admin/contact.php';
+    include __DIR__ . '/route_groups/admin/career_job.php';
 });
 // staff
 Route::group(['middleware' => ['auth', IsStaff::class], 'prefix' => '/administration-panel/staff'], function () {

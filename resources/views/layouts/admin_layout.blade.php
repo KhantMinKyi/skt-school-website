@@ -531,63 +531,6 @@
                         </div>
                         <div class="sidebar-item">
                             <li class="nav-item ">
-                                <a class="nav-link d-flex align-items-center nav-link" href="javascript:;">
-                                    <span class="animated-icon">
-                                        <div style="width:18px;height:18px"
-                                            data-animation-path="{{ asset('admin/vendor/animated-icons/paint-roller/paint-roller.json') }}"
-                                            data-anim-loop="false"></div>
-                                    </span>
-                                    <span class="mr-auto menu-name">Appearance</span>
-                                    <span class="caret">
-                                        <span class="animated-icon">
-                                            <div style="width:12px;height:12px"
-                                                data-animation-path="{{ asset('admin/vendor/animated-icons/expand/expand.json') }}">
-                                            </div>
-                                        </span>
-                                    </span>
-                                </a>
-                                <div class="sub-menu collapse " aria-expanded="false">
-                                    <ul class="nav flex-column">
-                                        <li class="nav-item ">
-                                            <a href="{{ route('admin-users.index') }}" class="nav-link">
-                                                <span class="animated-icon">
-                                                    <div style="width:18px;height:18px"
-                                                        data-animation-path="{{ asset('admin/vendor/animated-icons/menu-forward/menu-forward.json') }}"
-                                                        data-anim-loop="false"></div>
-                                                </span>
-                                                <span class="mr-auto menu-name">Nav Bar</span>
-                                            </a>
-                                        </li>
-                                        <li class="nav-item ">
-                                            <a href="{{ route('admin-branches.index') }}" class="nav-link">
-                                                <span class="animated-icon">
-                                                    <div style="width:18px;height:18px"
-                                                        data-animation-path="{{ asset('admin/vendor/animated-icons/bookmark-in-book/bookmark-in-book.json') }}"
-                                                        data-anim-loop="false"></div>
-                                                </span>
-                                                <span class="mr-auto menu-name">Pages</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-
-                                </div>
-                            </li>
-                        </div>
-                        <div class="sidebar-item">
-                            <li class="nav-item ">
-                                <a class="nav-link d-flex align-items-center nav-link" href="calendar.html">
-                                    <span class="animated-icon">
-                                        <div style="width:18px;height:18px"
-                                            data-animation-path="{{ asset('admin/vendor/animated-icons/calendar/calendar.json') }}"
-                                            data-anim-loop="false"></div>
-                                    </span>
-                                    <span class="mr-auto menu-name">Calendar</span>
-                                </a>
-                            </li>
-                        </div>
-
-                        <div class="sidebar-item">
-                            <li class="nav-item ">
 
                                 <a class="nav-link d-flex align-items-center nav-link" href="javascript:;">
                                     <span class="animated-icon">
@@ -720,6 +663,19 @@
                                             data-anim-loop="false"></div>
                                     </span>
                                     <span class="mr-auto menu-name">Contact Form</span>
+                                </a>
+                            </li>
+                        </div>
+                        <div class="sidebar-item">
+                            <li class="nav-item {{ request()->routeIs('admin-career-jobs.index') ? 'active' : '' }}">
+                                <a class="nav-link d-flex align-items-center nav-link"
+                                    href="{{ route('admin-career-jobs.index') }}">
+                                    <span class="animated-icon">
+                                        <div style="width:18px;height:18px"
+                                            data-animation-path="{{ asset('admin/vendor/animated-icons/install/install.json') }}"
+                                            data-anim-loop="false"></div>
+                                    </span>
+                                    <span class="mr-auto menu-name">Jobs</span>
                                 </a>
                             </li>
                         </div>
