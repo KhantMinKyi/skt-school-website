@@ -152,8 +152,7 @@
                                 href="{{ route('withdrawal-policy.home', $layout_branch->branch_short_name) }}"
                                 class="block px-4 py-2 font-bold hover:text-teal-500">Withdrawal
                                 Policy</a></li>
-                        <li class="py-4"><a
-                                href="https://www.jobnet.com.mm/companies/bfi-education-services-co-ltd/e-11033"
+                        <li class="py-4"><a href="{{ route('career.home', $layout_branch->branch_short_name) }}"
                                 target="__blank" class="block px-4 py-2 font-bold hover:text-teal-500">Career</a>
                         </li>
                     </ul>
@@ -357,7 +356,8 @@
                 const cityBranch = 'skt-city-campus';
                 const riversideBranch = 'skt-riverside-campus';
                 if (currentUrl.includes('/event/event-detail/') || currentUrl.includes(
-                        '/student_life/news-detail/')) {
+                        '/student_life/news-detail/') || currentUrl.includes(
+                        '/admission/career-detail/')) {
                     return alert('You Cannot Switch Campus at that Page')
                 }
                 // Check which branch is currently active and switch

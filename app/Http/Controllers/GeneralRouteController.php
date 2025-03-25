@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Branch;
 use App\Models\Calendar;
+use App\Models\CareerJob;
 use App\Models\Category;
 use App\Models\Event;
 use App\Models\Gallery;
@@ -266,5 +267,27 @@ class GeneralRouteController extends Controller
         } else {
             return view('partial_view.guest.admission.withdrawal_policy_riverside', compact('branch'));
         }
+    }
+    public function showCareer($param)
+    {
+        $branch = Branch::where('branch_short_name', $param)->first();
+        if ($branch && $branch->branch_short_name === 'SKT-CC') {
+            return view('partial_view.guest.admission.career_riverside', compact('branch'));
+        } else {
+            return view('partial_view.guest.admission.career_city', compact('branch'));
+        }
+    }
+    public function showCareerDetail($param)
+    {
+        $job = CareerJob::find($param);
+        if (!$job) {
+            return to_route('career.home');
+        }
+        // dd($post);
+        $branch = Branch::find($job->career_job_branch_id);
+        $layout = ($branch && $branch->branch_short_name === 'SKT-CC')
+            ? 'layouts.city_layout'
+            : 'layouts.riverside_layout';
+        return view('partial_view.guest.admission.career_detail', compact('layout', 'branch', 'job'));
     }
 }

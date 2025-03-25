@@ -45,6 +45,8 @@ Route::get('/education/ib/{param}', [GeneralRouteController::class, 'showIB'])->
 Route::get('/admission/student_admission/{param}', [GeneralRouteController::class, 'showStudentAdmission'])->name('student-admission.home');
 Route::get('/admission/admission_process/{param}', [GeneralRouteController::class, 'showAdmissionProcess'])->name('admission-process.home');
 Route::get('/admission/withdrawal_policy/{param}', [GeneralRouteController::class, 'showWithdrawalPolicy'])->name('withdrawal-policy.home');
+Route::get('/admission/career/{param}', [GeneralRouteController::class, 'showCareer'])->name('career.home');
+Route::get('/admission/career-detail/{param}', [GeneralRouteController::class, 'showCareerDetail'])->name('career-detail.home');
 
 // Event
 Route::get('/event/events/{param}', [GeneralRouteController::class, 'showEvents'])->name('event.home');

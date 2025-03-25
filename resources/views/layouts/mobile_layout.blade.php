@@ -105,7 +105,7 @@
             <a href="{{ route('withdrawal-policy.home', $layout_branch->branch_short_name) }}"
                 class="py-2 px-4 text-gray-900 font-bold hover:bg-gray-50 w-full text-center">Withdrawal
                 Policy</a>
-            <a href="https://www.jobnet.com.mm/companies/bfi-education-services-co-ltd/e-11033"
+            <a href="{{ route('career.home', $layout_branch->branch_short_name) }}"
                 class="py-2 px-4 text-gray-900 font-bold hover:bg-gray-50 w-full text-center">Career</a>
 
 
