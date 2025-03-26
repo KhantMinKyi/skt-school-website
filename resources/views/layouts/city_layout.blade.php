@@ -114,7 +114,7 @@
                         <li class="py-2"><a href="{{ route('calendar.home', $layout_branch->branch_short_name) }}"
                                 class="block px-4 py-2 font-bold hover:text-teal-500">Calendar</a>
                         </li>
-                        <li class="py-2"><a href="#"
+                        <li class="py-2"><a href="{{ route('welfare.home', $layout_branch->branch_short_name) }}"
                                 class="block px-4 py-2 font-bold hover:text-teal-500">Welfare </a>
                         </li>
                     </ul>

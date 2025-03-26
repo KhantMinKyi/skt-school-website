@@ -160,6 +160,14 @@ class GeneralRouteController extends Controller
             : 'layouts.riverside_layout';
         return view('partial_view.guest.student_life.calendar_index', compact('layout', 'branch', 'calendar'));
     }
+    public function showWelfare($param)
+    {
+        $branch = Branch::where('branch_short_name', $param)->first();
+        $layout = ($branch && $branch->branch_short_name === 'SKT-CC')
+            ? 'layouts.city_layout'
+            : 'layouts.riverside_layout';
+        return view('partial_view.guest.student_life.welfare_index', compact('layout', 'branch'));
+    }
     public function showPreSchool($param)
     {
         $branch = Branch::where('branch_short_name', $param)->first();

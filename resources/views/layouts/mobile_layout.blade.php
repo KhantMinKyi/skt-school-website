@@ -62,7 +62,8 @@
                 class="py-2 px-4 text-gray-900 font-bold hover:bg-gray-50 w-full text-center">Gallery</a>
             <a href="{{ route('calendar.home', $layout_branch->branch_short_name) }}"
                 class="py-2 px-4 text-gray-900 font-bold hover:bg-gray-50 w-full text-center">Calendar</a>
-            <a href="" class="py-2 px-4 text-gray-900 font-bold hover:bg-gray-50 w-full text-center">Welfare</a>
+            <a href="{{ route('welfare.home', $layout_branch->branch_short_name) }}"
+                class="py-2 px-4 text-gray-900 font-bold hover:bg-gray-50 w-full text-center">Welfare</a>
         </div>
     </div>
 

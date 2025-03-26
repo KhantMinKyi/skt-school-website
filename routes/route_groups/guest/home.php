@@ -28,6 +28,7 @@ Route::get('/about_us/sister_schools/{param}', [GeneralRouteController::class, '
 Route::get('/student_life/alumni/{param}', [GeneralRouteController::class, 'showAlumni'])->name('alumni.home');
 Route::get('/student_life/gallery/{param}', [GeneralRouteController::class, 'showGallery'])->name('gallery.home');
 Route::get('/student_life/calendar/{param}', [GeneralRouteController::class, 'showCalendar'])->name('calendar.home');
+Route::get('/student_life/welfare/{param}', [GeneralRouteController::class, 'showWelfare'])->name('welfare.home');
 
 //  News
 Route::get('/student_life/news/{param}', [GeneralRouteController::class, 'showNews'])->name('news.home');
