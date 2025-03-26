@@ -23,6 +23,7 @@ Route::get('/about_us/our_history/{param}', [GeneralRouteController::class, 'our
 Route::get('/about_us/our_statement/{param}', [GeneralRouteController::class, 'ourStatement'])->name('our-statement.home');
 Route::get('/about_us/our_teachers/{param}', [GeneralRouteController::class, 'ourTeacher'])->name('our-teachers.home');
 Route::get('/about_us/sister_schools/{param}', [GeneralRouteController::class, 'sisterSchool'])->name('sister-schools.home');
+Route::get('/about_us/policy/{param}', [GeneralRouteController::class, 'showPolicy'])->name('policy.home');
 
 // Student Life
 Route::get('/student_life/alumni/{param}', [GeneralRouteController::class, 'showAlumni'])->name('alumni.home');

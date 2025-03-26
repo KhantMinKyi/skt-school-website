@@ -1,0 +1,171 @@
+@extends($layout)
+
+@section('content')
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.10.111/pdf.min.js"></script>
+
+    <link rel="stylesheet" href="{{ asset('assets/css/slider.css') }}" />
+    <link rel="stylesheet" href="{{ asset('guests/css/welfare.css') }}" />
+    {{-- <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}" /> --}}
+
+    <div id="kenburns_061"
+        class="carousel max-h-screen slide ps_indicators_txt_icon ps_control_txt_icon data-bs-target kbrns_zoomInOut thumb_scroll_x swipe_x ps_easeOutQuart relative w-full overflow-hidden"
+        data-ride="carousel" data-pause="hover" data-interval="10000" data-duration="2000">
+        <!-- Wrapper For Slides -->
+        <div class="carousel-inner flex transition-transform duration-1000 ease-in-out" id="carouselInner">
+            <!-- First Slide -->
+            <div class="carousel-item active w-full flex-shrink-0">
+                <img src="{{ asset('img/banner/student_life_banners/welfare/' . $branch->branch_short_name . '.jpg') }}"
+                    alt="slider-image" class="w-full h-auto object-cover" />
+                <div class="absolute inset-0 mx-auto flex flex-col justify-center items-center  ">
+                    <h1 id="fading-text" class=" text-2xl lg:text-5xl xl:text-7xl text-center  ml-10">
+                        <span class="text-emerald-400">{{ $branch->branch_name }}</span>
+                        <br>
+                        <div class="text-white mt-4">Policy </div>
+                    </h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- START TOPIC-->
+    <section class="topic_content_area section-padding" style="background-image: url(assets/images/banner/topic.png);">
+        <div class="container mx-auto">
+            <div class="section-title p-4">
+                <h2>{{ $branch->branch_name }}</h2>
+                <p class="">
+                    Out School Policies
+                </p>
+            </div>
+            <!-- END ROW -->
+        </div>
+        <!-- END CONTAINER -->
+    </section>
+    <!-- END TOPIC -->
+
+    <section>
+        <div class="mx-auto container text-black">
+            <div class="col-xs-12">
+                <div class="pd_tab_area fix">
+                    <ul class="pd_tab_btn nav nav-tabs" role="tablist">
+                        <li>
+                            <button class="tab-btn font-bold px-4 py-2 bg-green-500 rounded-xl text-white"
+                                onclick="openTab(event, 'tab1')" href="#description" role="tab"
+                                data-bs-toggle="tab">Admission </button>
+                        </li>
+                        <li>
+                            <button class="tab-btn font-bold px-4 py-2 rounded-xl" onclick="openTab(event, 'tab2')"
+                                href="#information" role="tab" data-bs-toggle="tab">
+                                Assessment</button>
+                        </li>
+                        <li>
+                            <button class="tab-btn font-bold px-4 py-2 rounded-xl" onclick="openTab(event, 'tab3')"
+                                href="#information" role="tab" data-bs-toggle="tab">
+                                Inclusion </button>
+                        </li>
+                        <li>
+                            <button class="tab-btn font-bold px-4 py-2 rounded-xl" onclick="openTab(event, 'tab4')"
+                                href="#information" role="tab" data-bs-toggle="tab">
+                                Language </button>
+                        </li>
+                        <li>
+                            <button class="tab-btn font-bold px-4 py-2 rounded-xl" onclick="openTab(event, 'tab5')"
+                                href="#information" role="tab" data-bs-toggle="tab">
+                                Academic Integrity</button>
+                        </li>
+                    </ul>
+
+                    <!-- Tab panes 1 -->
+                    <div role="tabpanel" class="tab-pane fade show tab-content " id="tab1">
+
+                        <div id="pdfThumbnails" class=" inline-block w-full ">
+                            <div class="pdf-item flex ">
+                                <canvas class="pdf-thumbnail w-48 h-auto cursor-pointer shadow-lg rounded-lg m-4"
+                                    data-pdf="{{ asset('pdf/policy/Admission Policy SKT 2023-2026' . $branch->branch_short_name . '.pdf') }}">
+                                </canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Tab panes 2 -->
+                    <div role="tabpanel" class="tab-pane fade show tab-content hidden" id="tab2">
+                        <div id="pdfThumbnails" class=" inline-block w-full ">
+                            <div class="pdf-item flex ">
+                                <canvas class="pdf-thumbnail w-48 h-auto cursor-pointer shadow-lg rounded-lg m-4"
+                                    data-pdf="{{ asset('pdf/policy/Assessment policy_SKT 2023-2026_' . $branch->branch_short_name . '.pdf') }}">
+                                </canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Tab panes 3 -->
+                    <div role="tabpanel" class="tab-pane fade show tab-content hidden" id="tab3">
+                        <div id="pdfThumbnails" class=" inline-block w-full ">
+                            <div class="pdf-item flex ">
+                                <canvas class="pdf-thumbnail w-48 h-auto cursor-pointer shadow-lg rounded-lg m-4"
+                                    data-pdf="{{ asset('pdf/policy/Inclusion Policy 2023-2026' . $branch->branch_short_name . '.pdf') }}">
+                                </canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Tab panes 4 -->
+                    <div role="tabpanel" class="tab-pane fade show tab-content hidden" id="tab4">
+                        <div id="pdfThumbnails" class=" inline-block w-full ">
+                            <div class="pdf-item flex ">
+                                <canvas class="pdf-thumbnail w-48 h-auto cursor-pointer shadow-lg rounded-lg m-4"
+                                    data-pdf="{{ asset('pdf/policy/Language Policy SKT 2023-2026' . $branch->branch_short_name . '.pdf') }}">
+                                </canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Tab panes 5 -->
+                    <div role="tabpanel" class="tab-pane fade show tab-content hidden" id="tab5">
+                        <div id="pdfThumbnails" class=" inline-block w-full ">
+                            <div class="pdf-item flex ">
+                                <canvas class="pdf-thumbnail w-48 h-auto cursor-pointer shadow-lg rounded-lg m-4"
+                                    data-pdf="{{ asset('pdf/policy/SKT Final Academic Integrity policy 2023-2026' . $branch->branch_short_name . '.pdf') }}">
+                                </canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <script src="{{ asset('assets/js/jquery-1.12.4.min.js') }}"></script>
+    <script>
+        function openTab(event, tabId) {
+            document.querySelectorAll('.tab-content').forEach(tab => tab.classList.add('hidden'));
+            document.getElementById(tabId).classList.remove('hidden');
+
+            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('bg-green-500', 'border-green-500',
+                'text-white'));
+            event.currentTarget.classList.add('bg-green-500', 'border-green-500',
+                'text-white');
+        }
+    </script>
+    <script>
+        const pdfjsLib = window['pdfjs-dist/build/pdf'];
+        pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.10.111/pdf.worker.min.js';
+
+        document.querySelectorAll('.pdf-thumbnail').forEach(async (canvas) => {
+            const pdfUrl = canvas.dataset.pdf;
+            const pdf = await pdfjsLib.getDocument(pdfUrl).promise;
+            const page = await pdf.getPage(1); // First page as cover
+            const viewport = page.getViewport({
+                scale: 0.5
+            });
+            const context = canvas.getContext('2d');
+            canvas.width = viewport.width;
+            canvas.height = viewport.height;
+            page.render({
+                canvasContext: context,
+                viewport: viewport
+            });
+        });
+    </script>
+    <script>
+        $(document).on('click', '.pdf-thumbnail', function() {
+            const pdfUrl = $(this).data('pdf');
+            window.open(pdfUrl, '_blank');
+        });
+    </script>
+@endsection
