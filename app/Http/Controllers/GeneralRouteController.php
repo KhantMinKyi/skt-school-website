@@ -284,6 +284,14 @@ class GeneralRouteController extends Controller
             return view('partial_view.guest.admission.withdrawal_policy_riverside', compact('branch'));
         }
     }
+    public function showCollegeCounselingService($param)
+    {
+        $branch = Branch::where('branch_short_name', $param)->first();
+        $layout = ($branch && $branch->branch_short_name === 'SKT-CC')
+            ? 'layouts.city_layout'
+            : 'layouts.riverside_layout';
+        return view('partial_view.guest.admission.college_counseling_service_index', compact('layout', 'branch'));
+    }
     public function showCareer($param)
     {
         $branch = Branch::where('branch_short_name', $param)->first();

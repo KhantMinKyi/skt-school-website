@@ -107,6 +107,9 @@
             <a href="{{ route('withdrawal-policy.home', $layout_branch->branch_short_name) }}"
                 class="py-2 px-4 text-gray-900 font-bold hover:bg-gray-50 w-full text-center">Withdrawal
                 Policy</a>
+            <a href="{{ route('college-counseling-service.home', $layout_branch->branch_short_name) }}"
+                class="py-2 px-4 text-gray-900 font-bold hover:bg-gray-50 w-full text-center">College Counseling
+                Service</a>
             <a href="{{ route('career.home', $layout_branch->branch_short_name) }}"
                 class="py-2 px-4 text-gray-900 font-bold hover:bg-gray-50 w-full text-center">Career</a>
 

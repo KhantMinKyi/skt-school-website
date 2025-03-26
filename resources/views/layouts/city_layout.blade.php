@@ -152,6 +152,9 @@
                                 href="{{ route('withdrawal-policy.home', $layout_branch->branch_short_name) }}"
                                 class="block px-4 py-2 font-bold hover:text-teal-500">Withdrawal
                                 Policy</a></li>
+                                <li class="py-4"><a
+                                    href="{{ route('college-counseling-service.home',$layout_branch->branch_short_name) }}"
+                                    class="block px-4 py-2 font-bold hover:text-teal-500">College Counseling Service</a></li>
                         <li class="py-4"><a href="{{ route('career.home', $layout_branch->branch_short_name) }}"
                                 target="__blank" class="block px-4 py-2 font-bold hover:text-teal-500">Career</a>
                         </li>
@@ -260,17 +263,19 @@
                         <div class="sf_contact">
                             <span class="ti-mobile"></span>
                             <h3>Phone number</h3>
-                            <p>+88 457 845 695</p>
+                            <p>(01) 543926 ,+959 456 481 950</p>
+                            <p>09940993141</p>
                         </div>
                         <div class="sf_contact">
                             <span class="ti-email"></span>
                             <h3>Email Address</h3>
-                            <p>info@sktcollage@gmail.com</p>
+                            <p>contact@bisa.edu.mm</p>
                         </div>
                         <div class="sf_contact">
                             <span class="ti-map"></span>
                             <h3>Address</h3>
-                            <p>No 54 , Shu Khin Thar Myo Pat Road , Tharkayta</p>
+                            <p>City Campus Pre School :🏦Address - 5/A, Pho Sein Road, Bahan Tsp, Yangon.</p>
+                            <p>City Campus : 🏦 No 25, Pho Sein Road, Bahan Tsp, Yangon.</p>
                         </div>
                     </div>
                 </div>
