@@ -72,7 +72,7 @@
         /* Smooth zoom-in effect */
         .zoom-click {
             width: 600px;
-            transition: width 2s;
+            transition: width 1s;
         }
 
         /* Fullscreen zoom effect */
@@ -94,7 +94,7 @@
         @media (max-width: 1024px) {
             .zoom-click {
                 width: 300px;
-                transition: width 2s;
+                transition: width 1s;
             }
 
             .zoom-click:hover {
@@ -105,7 +105,7 @@
         @media (max-width: 768px) {
             .zoom-click {
                 width: 250px;
-                transition: width 2s;
+                transition: width 1s;
             }
 
             .zoom-click:hover {
