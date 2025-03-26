@@ -126,14 +126,14 @@
                     <span class="ti-medall"></span>
                     <h4>Our Mission</h4>
                     <p>
-                        {{ $branch->statement->statement_mission }}
+                        {!! $branch->statement->statement_mission !!}
                     </p>
                 </div>
                 <div class="abmv">
                     <span class="ti-wand"></span>
                     <h4>Our Vision</h4>
                     <p>
-                        {{ $branch->statement->statement_vision }}
+                        {!! $branch->statement->statement_vision !!}
                     </p>
                 </div>
             </div>

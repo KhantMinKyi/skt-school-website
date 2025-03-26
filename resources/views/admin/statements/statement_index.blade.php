@@ -11,7 +11,18 @@
             {{ Session::get('success') }}
         </div>
     @endif
+    <script src="{{ asset('tinymce/tinymce.min.js') }}"></script>
 
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            tinymce.init({
+                selector: '.tinymceBox',
+                plugins: 'advlist autolink lists link charmap print preview anchor',
+                toolbar: 'undo redo | formatselect | bold italic underline | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link',
+                height: 300,
+            });
+        });
+    </script>
 
     <div class="card">
         <div class="card-header font-weight-bold h5">Statement</div>
@@ -51,9 +62,9 @@
                                     <td>
                                         <img src="{{ asset($statement->statement_photo) }}" alt="" width="80px">
                                     </td>
-                                    <td>{{ $statement->statement_vision }}</td>
-                                    <td>{{ $statement->statement_mission }}</td>
-                                    <td>{{ $statement->statement_philosophy }}</td>
+                                    <td>{!! $statement->statement_vision !!}</td>
+                                    <td>{!! $statement->statement_mission !!}</td>
+                                    <td>{!! $statement->statement_philosophy !!}</td>
                                     <td class="">
                                         <div class="d-flex justify-content-center align-items-center">
                                             <a class="animated-icon mr-2"
@@ -118,8 +129,9 @@
                                 <div class="row mb-3">
                                     <label for="inputEmail3" class="col-3 col-form-label"> Our Vision </label>
                                     <div class="col-9">
-                                        <textarea class="form-control" placeholder="Enter a Our Mission " name="statement_vision" id="" cols="30"
-                                            rows="10" required></textarea>
+                                        {{-- <textarea class="form-control" placeholder="Enter a Our Mission " name="statement_vision" id="" cols="30"
+                                            rows="10" required></textarea> --}}
+                                        <textarea class="form-control tinymceBox" name="statement_mission"></textarea>
                                     </div>
                                 </div>
                             </div>
@@ -127,8 +139,9 @@
                                 <div class="row mb-3">
                                     <label for="inputEmail3" class="col-3 col-form-label"> Our Mission</label>
                                     <div class="col-9">
-                                        <textarea class="form-control" placeholder="Enter a Our Mission " name="statement_mission" id="" cols="30"
-                                            rows="10" required></textarea>
+                                        {{-- <textarea class="form-control" placeholder="Enter a Our Mission " name="statement_mission" id="" cols="30"
+                                            rows="10" required></textarea> --}}
+                                        <textarea class="form-control tinymceBox" name="statement_mission"></textarea>
                                     </div>
                                 </div>
                             </div>
@@ -136,8 +149,9 @@
                                 <div class="row mb-3">
                                     <label for="inputEmail3" class="col-3 col-form-label"> Our Philosophy</label>
                                     <div class="col-9">
-                                        <textarea class="form-control" placeholder="Enter a Our Mission " name="statement_philosophy" id=""
-                                            cols="30" rows="10" required></textarea>
+                                        {{-- <textarea class="form-control" placeholder="Enter a Our Mission " name="statement_philosophy" id=""
+                                            cols="30" rows="10" required></textarea> --}}
+                                        <textarea class="form-control tinymceBox" name="statement_philosophy"></textarea>
                                     </div>
                                 </div>
                             </div>
@@ -157,4 +171,16 @@
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function confirmDelete(event) {
+            // Prevent the form submission
+            event.preventDefault();
+
+            // Ask for confirmation
+            if (confirm("Are you sure you want to delete this job?")) {
+                // If user confirms, submit the form
+                document.getElementById('deleteJobForm').submit();
+            }
+        }
+    </script>
 @endsection

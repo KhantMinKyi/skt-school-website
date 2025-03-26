@@ -41,7 +41,7 @@
                         <span class="text-emerald-400">Vision</span>
                     </h2>
                     <p class=" text-gray-500 mt-4">
-                        {{ $our_statement->statement_vision }}
+                        {!! $our_statement->statement_vision !!}
                     </p>
                 </div>
             </div>
@@ -54,7 +54,7 @@
                         <span class="text-emerald-400">Mission</span>
                     </h2>
                     <p class=" text-gray-500 mt-4">
-                        {{ $our_statement->statement_mission }}
+                        {!! $our_statement->statement_mission !!}
                     </p>
                 </div>
             </div>
@@ -65,7 +65,7 @@
                         <span class="text-emerald-400">Philosophy</span>
                     </h2>
                     <p class=" text-gray-500 mt-4">
-                        {{ $our_statement->statement_philosophy }}
+                        {!! $our_statement->statement_philosophy !!}
                     </p>
                 </div>
             </div>

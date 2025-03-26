@@ -1,6 +1,18 @@
 @extends('layouts.admin_layout')
 
 @section('content')
+    <script src="{{ asset('tinymce/tinymce.min.js') }}"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            tinymce.init({
+                selector: '.tinymceBox',
+                plugins: 'advlist autolink lists link charmap print preview anchor',
+                toolbar: 'undo redo | formatselect | bold italic underline | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link',
+                height: 300,
+            });
+        });
+    </script>
     <div class="card">
         <div class="card-header font-weight-bold h5">Edit Statement - {{ $statement->branch->branch_name }}</div>
         <form action="{{ route('admin-statements.update', $statement->id) }}" method="post" enctype="multipart/form-data">
@@ -41,8 +53,9 @@
                         <div class="row mb-3">
                             <label for="inputEmail3" class="col-3 col-form-label"> Our Vision </label>
                             <div class="col-9">
-                                <textarea class="form-control" name="statement_vision" id="" cols="30" rows="5" required
-                                    placeholder="Enter  Our Vision ">{{ $statement->statement_vision }}</textarea>
+                                {{-- <textarea class="form-control" name="statement_vision" id="" cols="30" rows="5" required
+                                    placeholder="Enter  Our Vision ">{{ $statement->statement_vision }}</textarea> --}}
+                                <textarea class="form-control tinymceBox" name="statement_vision" required>{{ $statement->statement_vision }}</textarea>
                             </div>
                         </div>
                     </div>
@@ -50,8 +63,9 @@
                         <div class="row mb-3">
                             <label for="inputEmail3" class="col-3 col-form-label"> Our Mission </label>
                             <div class="col-9">
-                                <textarea class="form-control" name="statement_mission" id="" cols="30" rows="5" required
-                                    placeholder="Enter  Our Mission ">{{ $statement->statement_mission }}</textarea>
+                                {{-- <textarea class="form-control" name="statement_mission" id="" cols="30" rows="5" required
+                                    placeholder="Enter  Our Mission ">{{ $statement->statement_mission }}</textarea> --}}
+                                <textarea class="form-control tinymceBox" name="statement_mission" required>{{ $statement->statement_mission }}</textarea>
                             </div>
                         </div>
                     </div>
@@ -59,8 +73,9 @@
                         <div class="row mb-3">
                             <label for="inputEmail3" class="col-3 col-form-label"> Our Philosophy </label>
                             <div class="col-9">
-                                <textarea class="form-control" name="statement_philosophy" id="" cols="30" rows="5" required
-                                    placeholder="Enter  Our Philosophy ">{{ $statement->statement_philosophy }}</textarea>
+                                {{-- <textarea class="form-control" name="statement_philosophy" id="" cols="30" rows="5" required
+                                    placeholder="Enter  Our Philosophy ">{{ $statement->statement_philosophy }}</textarea> --}}
+                                <textarea class="form-control tinymceBox" name="statement_philosophy" required>{{ $statement->statement_philosophy }}</textarea>
                             </div>
                         </div>
                     </div>
