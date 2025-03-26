@@ -57,26 +57,30 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <div class="partner">
-                        <a href="#"><img src="{{ asset('img/carousel-logos/bfi.png') }}" alt="image"
+                        <a href="https://www.bfi.edu.mm/" target="__blank"><img
+                                src="{{ asset('img/carousel-logos/bfi.png') }}" alt="image" class=" max-h-48"></a>
+                        <a href="https://misa.edu.mm/" target="__blank"><img
+                                src="{{ asset('img/carousel-logos/misa_b.png') }}" alt="image" class=" max-h-48"></a>
+                        <a href="https://nisa.edu.mm/" target="__blank"><img
+                                src="{{ asset('img/carousel-logos/nisa_b.png') }}" alt="image" class=" max-h-48"></a>
+                        <a href="#" target="__blank"><img
+                                src="{{ asset('img/carousel-logos/skt_city_campus_b.png') }}" alt="image"
                                 class=" max-h-48"></a>
-                        <a href="#"><img src="{{ asset('img/carousel-logos/misa_b.png') }}" alt="image"
+                        <a href="#" target="__blank"><img
+                                src="{{ asset('img/carousel-logos/skt_riverside_campus_b.png') }}" alt="image"
                                 class=" max-h-48"></a>
-                        <a href="#"><img src="{{ asset('img/carousel-logos/nisa_b.png') }}" alt="image"
+                        <a href="https://www.bfi.edu.mm/" target="__blank"><img
+                                src="{{ asset('img/carousel-logos/bfi.png') }}" alt="image" class=" max-h-48"></a>
+                        <a href="https://misa.edu.mm/" target="__blank"><img
+                                src="{{ asset('img/carousel-logos/misa_b.png') }}" alt="image" class=" max-h-48"></a>
+                        <a href="https://nisa.edu.mm/" target="__blank"><img
+                                src="{{ asset('img/carousel-logos/nisa_b.png') }}" alt="image" class=" max-h-48"></a>
+                        <a href="#" target="__blank"><img
+                                src="{{ asset('img/carousel-logos/skt_city_campus_b.png') }}" alt="image"
                                 class=" max-h-48"></a>
-                        <a href="#"><img src="{{ asset('img/carousel-logos/skt_city_campus_b.png') }}" alt="image"
+                        <a href="#" target="__blank"><img
+                                src="{{ asset('img/carousel-logos/skt_riverside_campus_b.png') }}" alt="image"
                                 class=" max-h-48"></a>
-                        <a href="#"><img src="{{ asset('img/carousel-logos/skt_riverside_campus_b.png') }}"
-                                alt="image" class=" max-h-48"></a>
-                        <a href="#"><img src="{{ asset('img/carousel-logos/bfi.png') }}" alt="image"
-                                class=" max-h-48"></a>
-                        <a href="#"><img src="{{ asset('img/carousel-logos/misa_b.png') }}" alt="image"
-                                class=" max-h-48"></a>
-                        <a href="#"><img src="{{ asset('img/carousel-logos/nisa_b.png') }}" alt="image"
-                                class=" max-h-48"></a>
-                        <a href="#"><img src="{{ asset('img/carousel-logos/skt_city_campus_b.png') }}" alt="image"
-                                class=" max-h-48"></a>
-                        <a href="#"><img src="{{ asset('img/carousel-logos/skt_riverside_campus_b.png') }}"
-                                alt="image" class=" max-h-48"></a>
 
                     </div>
                 </div><!-- END COL  -->

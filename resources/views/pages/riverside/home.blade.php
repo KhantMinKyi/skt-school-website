@@ -279,13 +279,12 @@
         <!--- END CONTAINER -->
     </section>
     <!-- END SCHOOL Facilities -->
-    <hr class=" w-1/2 mx-auto md:my-20">
+    {{-- <hr class=" w-1/2 mx-auto md:my-20"> --}}
 
 
     <!-- START SISTER SCHOOL  -->
-    <div class="partner-logo py-10  bg-gray-950">
+    {{-- <div class="partner-logo py-10  bg-gray-950">
         <div class="text-center mb-10 text-2xl font-bold font-serif text-teal-500">
-            {{-- Sister Schools --}}
         </div>
         <div class="container mx-auto">
             <div class="row">
@@ -316,7 +315,7 @@
                 </div><!-- END COL  -->
             </div><!--END  ROW  -->
         </div><!-- END CONTAINER  -->
-    </div>
+    </div> --}}
     <!-- END SISTER SCHOOL  -->
     <hr class=" w-1/2 mx-auto md:my-20">
 

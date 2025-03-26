@@ -362,7 +362,8 @@
                 const riversideBranch = 'skt-riverside-campus';
                 if (currentUrl.includes('/event/event-detail/') || currentUrl.includes(
                         '/student_life/news-detail/') || currentUrl.includes(
-                        '/admission/career-detail/')) {
+                        '/admission/career-detail/') || currentUrl.includes(
+                        '/education/ib/')) {
                     return alert('You Cannot Switch Campus at that Page')
                 }
                 // Check which branch is currently active and switch

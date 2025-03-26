@@ -18,7 +18,7 @@
                 <h2 class=" md:text-4xl font-semibold text-teal-500 uppercase">Alumni</h2>
             </div> --}}
                 <div class="absolute inset-0 mx-auto flex flex-col justify-center items-center  ">
-                    <h1 id="fading-text" class=" text-2xl lg:text-5xl xl:text-7xl text-center  ml-10">
+                    <h1 id="fading-text" class=" text-xl sm:text-5xl lg:text-7xl text-center  ml-10">
                         <span class="text-emerald-400">{{ $branch->branch_name }}</span>
                         <br>
                         <div class="text-white mt-4">Events </div>
