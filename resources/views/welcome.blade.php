@@ -25,15 +25,92 @@
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}" />
     <link rel="stylesheet" href="{{ asset('assets/css/home_slider.css') }}" />
     <style>
-        .bounce-up {
+        /* .bounce-up {
             display: inline-block;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .bounce-up:hover {
             transform: translateY(-10px);
-            /* Move up by 10px */
-            /* box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); Optional shadow for visual effect */
+        } */
+        /* Move up by 10px */
+        /* box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); Optional shadow for visual effect */
+
+        @keyframes slideInLeftScale {
+            0% {
+                transform: translateX(-100%) scale(0.6);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateX(0) scale(1);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInRightScale {
+            0% {
+                transform: translateX(100%) scale(0.6);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateX(0) scale(1);
+                opacity: 1;
+            }
+        }
+
+        /* Apply animations */
+        .left-animate {
+            animation: slideInLeftScale 1.5s ease-out forwards;
+        }
+
+        .right-animate {
+            animation: slideInRightScale 1.5s ease-out forwards;
+        }
+
+        /* Smooth zoom-in effect */
+        .zoom-click {
+            width: 600px;
+            transition: width 2s;
+        }
+
+        /* Fullscreen zoom effect */
+        .image-zoomed {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+            z-index: 50;
+            transform: scale(1.1);
+        }
+
+        .zoom-click:hover {
+            width: 1200px;
+        }
+
+        @media (max-width: 1024px) {
+            .zoom-click {
+                width: 300px;
+                transition: width 2s;
+            }
+
+            .zoom-click:hover {
+                width: 500px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .zoom-click {
+                width: 250px;
+                transition: width 2s;
+            }
+
+            .zoom-click:hover {
+                width: 450px;
+            }
         }
 
         @import url('https://fonts.googleapis.com/css2?family=Smooch+Sans:wght@100..900&display=swap');
@@ -79,11 +156,11 @@
     </section> --}}
     <!-- END  HOME -->
 
-    <div id="loader-wrapper">
+    {{-- <div id="loader-wrapper">
         <div id="loader"></div>
         <div class="loader-section section-left"></div>
         <div class="loader-section section-right"></div>
-    </div>
+    </div> --}}
 
     <body>
 
@@ -110,8 +187,9 @@
                                     <div class="col-lg-6 col-sm-6 col-xs-12   flex justify-center align-center">
                                         <div style="cursor: pointer;">
                                             <a href="{{ route('river.home') }}">
+                                                {{-- <a href="#"> --}}
                                                 <img src="{{ asset('img/skt_riverside_campus.png') }}"
-                                                    class="img-fluid bounce-up" alt="">
+                                                    class="img-fluid left-animate bounce-up zoom-click" alt="">
                                             </a>
                                         </div>
                                     </div>
@@ -120,7 +198,7 @@
                                         <div style="cursor: pointer;">
                                             <a href="{{ route('city.home') }}">
                                                 <img src="{{ asset('img/skt_city_campus.png') }}"
-                                                    class="img-fluid bounce-up" alt="">
+                                                    class="img-fluid right-animate bounce-up zoom-click" alt="">
                                             </a>
                                         </div>
                                     </div>
@@ -135,6 +213,25 @@
         <script src="{{ asset('assets/js/jquery-1.12.4.min.js') }}"></script>
         <!-- scripts js -->
         <script src="{{ asset('assets/js/scripts.js') }}"></script>
+        {{-- <script>
+            document.querySelectorAll('.zoom-click').forEach(image => {
+                image.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const targetUrl = image.closest('a').href;
+
+                    // Apply zoom effect to the clicked image
+                    image.classList.add('image-zoomed');
+
+                    // Wait for animation to finish, then navigate
+                    setTimeout(() => {
+                        window.location.href = targetUrl;
+                    }, 800); // Matches the CSS transition time
+                });
+            });
+        </script> --}}
+
+
+
     </body>
 
 </html>
