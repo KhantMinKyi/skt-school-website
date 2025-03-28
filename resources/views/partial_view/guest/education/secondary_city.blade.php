@@ -32,7 +32,7 @@
                 </p>
             </div>
             <div class=" text-lg p-4">
-                Our Lower Secondary Program follows the Cambridge International Secondary 1 curriculum,
+                Secondary School Programme is designed according to Cambridge International Secondary 1 curriculum.
             </div>
             <!-- END ROW -->
         </div>
@@ -40,11 +40,9 @@
     </section>
     <!-- END TOPIC -->
 
-    <!-- START SISTER SCHOOL  -->
     <div class="partner-logo py-10  bg-green-50">
         <div class="text-center mb-10 text-2xl font-bold font-serif text-teal-700">
-            {{-- Sister Schools --}}
-            building on strong foundations in
+            Students build on the solid foundations laid in the earlier years in the core subjects of
         </div>
         <div class="container mx-auto">
             <div class="row">
@@ -73,9 +71,7 @@
     </div>
     <div class="partner-logo py-10  bg-yellow-50">
         <div class="text-center mb-10 text-2xl font-bold font-serif text-blue-700">
-            {{-- Sister Schools --}}
-            Students also
-            explore specialized subjects such as
+            In addition, they enjoy the more specialized subjects of
         </div>
         <div class="container mx-auto">
             <div class="row">
@@ -98,11 +94,6 @@
                         </div>
                         <div
                             class="single_tca shadow-md p-12 border m-2 min-h-28 max-h-40 hover:shadow-lg flex justify-center items-center">
-                            <img src="{{ asset('assets/images/icon/music.svg') }}" class=" w-20" alt="" />
-                            <h2 class=""><a href="#">Music</a></h2>
-                        </div>
-                        <div
-                            class="single_tca shadow-md p-12 border m-2 min-h-28 max-h-40 hover:shadow-lg flex justify-center items-center">
                             <img src="{{ asset('assets/images/icon/art.svg') }}" class=" w-20" alt="" />
                             <h2 class=""><a href="#">Art</a></h2>
                         </div>
@@ -122,28 +113,85 @@
         </div><!-- END CONTAINER  -->
     </div>
     <div class="container mx-auto my-8">
-        <div class="text-lg md:text-xl">
-            equipping them with essential knowledge and skills
-            for an ever-changing world.
+        <div class="text-lg md:text-xl p-2">
+            This curriculum provides them with the knowledge, skills and values needed in a fast changing world.
         </div>
         <div class="flex justify-center">
             <hr class="my-10 w-60 ">
         </div>
         <div class="grid md:grid-cols-2">
             <div class=" text-lg md:text-xl p-4 flex justify-center items-center">
-                Assessment includes the Cambridge International Secondary 1 Checkpoint and yearly progression tests. A range
-                of teaching methods ensures that lessons are engaging, effective, and tailored to the diverse developmental
-                needs of students. Students participate in hands-on projects, presentations, debates, experiments, and
-                inter-school competitions in subjects like math, science, English, and art. They are also encouraged to take
-                part in community service activities, fostering a sense of responsibility and empathy.
+                Students are assessed through two rigorous testing options: Cambridge International Secondary 1 Checkpoint
+                and yearly progression tests.
+                A variety of teaching techniques are employed to ensure that instruction is meaningful, effective and
+                relevant to the diversity of the developmental needs of this age group.
             </div>
             <div class="flex justify-center items-center">
-                {{-- <img src="{{ asset('img/banner/pre_school_river.jpg') }}" class="rounded-lg hover:shadow-md w-2/3"
-                    alt=""> --}}
                 <img src="{{ asset($branch->branch_logo) }}" style="max-height: 420px" alt="" />
             </div>
         </div>
         <!-- END ROW -->
     </div>
-    <!-- END SISTER SCHOOL  -->
+
+    <div class="partner-logo py-10  bg-green-50">
+        <div class="text-center mb-10 text-2xl font-bold font-serif text-green-700">
+            Students are involved in more structured activities like
+        </div>
+        <div class="container mx-auto">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="partner">
+                        <div
+                            class="single_tca shadow-md p-12 border m-2 min-h-28 max-h-40 hover:shadow-lg flex justify-center items-center">
+                            <img src="{{ asset('assets/images/icon/project.svg') }}" class=" w-20" alt="" />
+                            <h2 class=""><a href="#">Projects</a></h2>
+                        </div>
+                        <div
+                            class="single_tca shadow-md p-12 border m-2 min-h-28 max-h-40 hover:shadow-lg flex justify-center items-center">
+                            <img src="{{ asset('assets/images/icon/presentation.svg') }}" class=" w-20"
+                                alt="" />
+                            <h2 class=""><a href="#">Presentations</a></h2>
+                        </div>
+                        <div
+                            class="single_tca shadow-md p-12 border m-2 min-h-28 max-h-40 hover:shadow-lg flex justify-center items-center">
+                            <img src="{{ asset('assets/images/icon/experiment.svg') }}" class=" w-20" alt="" />
+                            <h2 class=""><a href="#">Experiments</a></h2>
+                        </div>
+                        <div
+                            class="single_tca shadow-md p-12 border m-2 min-h-28 max-h-40 hover:shadow-lg flex justify-center items-center">
+                            <img src="{{ asset('assets/images/icon/writing.svg') }}" class=" w-20" alt="" />
+                            <h2 class=""><a href="#">Essays</a></h2>
+                        </div>
+                        <div
+                            class="single_tca shadow-md p-12 border m-2 min-h-28 max-h-40 hover:shadow-lg flex justify-center items-center">
+                            <img src="{{ asset('assets/images/icon/social_studies.svg') }}" class=" w-20"
+                                alt="" />
+                            <h2 class=""><a href="#">Debates</a></h2>
+                        </div>
+                        <div
+                            class="single_tca shadow-md p-12 border m-2 min-h-28 max-h-40 hover:shadow-lg flex justify-center items-center">
+                            <img src="{{ asset('assets/images/icon/olympiad_studies.svg') }}" class=" w-20"
+                                alt="" />
+                            <h2 class=""><a href="#">Olympiad Studies</a></h2>
+                        </div>
+                        <div
+                            class="single_tca shadow-md p-12 border m-2 min-h-28 max-h-40 hover:shadow-lg flex justify-center items-center">
+                            <img src="{{ asset('assets/images/icon/research.svg') }}" class=" w-20" alt="" />
+                            <h2 class=""><a href="#">Research papers</a></h2>
+                        </div>
+                        <div
+                            class="single_tca shadow-md p-12 border m-2 min-h-28 max-h-40 hover:shadow-lg flex justify-center items-center">
+                            <img src="{{ asset('assets/images/icon/competition.svg') }}" class=" w-20"
+                                alt="" />
+                            <h2 class=""><a href="#">Inter-school competitions</a></h2>
+                        </div>
+                    </div>
+                </div><!-- END COL  -->
+            </div><!--END  ROW  -->
+            <div class="text-lg md:text-xl">
+                in various fields such as math, science, sports, English language and art.Students are encouraged to take
+                part in community service activities such as visiting homes for the elderly and/or orphanages.
+            </div>
+        </div><!-- END CONTAINER  -->
+    </div>
 @endsection

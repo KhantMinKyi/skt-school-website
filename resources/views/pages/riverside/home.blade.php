@@ -198,7 +198,7 @@
                         {{-- <i class="fa-solid fa-chalkboard-user"></i> --}}
                         {{-- <span id="counter" class="text-3xl font-bold text-gray-800 mx-4">0</span> --}}
                         <div>
-                            <span data-purecounter-start="0" data-purecounter-end="52" data-purecounter-duration="1"
+                            <span data-purecounter-start="0" data-purecounter-end="152" data-purecounter-duration="1"
                                 class="purecounter"></span>
                             <p>Teachers</p>
                         </div>
@@ -234,7 +234,7 @@
                         {{-- <i class="fa fa-graduation-cap text-red-500" style="color: #bb0852"></i> --}}
                         <img src="{{ asset('assets/images/icon/student2.svg') }}" class="mr-4" alt="" />
                         <div>
-                            <span data-purecounter-start="0" data-purecounter-end="356" data-purecounter-duration="1"
+                            <span data-purecounter-start="0" data-purecounter-end="645" data-purecounter-duration="1"
                                 class="purecounter"></span>
                             <p> Students</p>
                         </div>

@@ -70,6 +70,41 @@
                 </div>
             </div>
         </div>
+        <div class="  container mx-auto ">
+            <div class=" max-w-2xl p-10 flex justify-center items-center">
+                <div class="ab_content">
+                    <h2 class=" text-4xl font-semibold">
+                        Our
+                        <span class="text-emerald-400">Value</span>
+                    </h2>
+                    <p class="mt-4">
+                        <span class="text-xl font-bold ">Respect</span>
+                    <p class="pb-2 pt-4">We place great value on the importance of having honour and regard for the worth of
+                        oneself and
+                        others.</p>
+                    <span class="text-xl font-bold ">Responsibility</span>
+                    <p class="pb-2 pt-4">We hold in high esteem the notion of individual and collective responsibility
+                        towards ourselves, the
+                        wider community, and the environment.</p>
+                    <span class="text-xl font-bold ">
+                        Integrity
+                    </span>
+                    <p class="pb-2 pt-4">We focus on the state of being whole and undivided; having the strength of
+                        character
+                        and conscience.
+                    </p>
+                    <span class="text-xl font-bold ">Compassion</span>
+                    <p class="pb-2 pt-4">We encourage and uphold the sense of having concern for the sufferings or
+                        misfortunes of others and
+                        using this to strive towards selﬂessness.</p>
+                    <span class="text-xl font-bold ">Excellence</span>
+                    <p class="pb-2 pt-4"> We value the process of striving for excellence, for individual and collective
+                        achievement in all
+                        aspects of schooling and community action.</p>
+                    </p>
+                </div>
+            </div>
+        </div>
     </section>
     <!-- START SCHOOL Statement -->
 
@@ -91,7 +126,7 @@
                         {{-- <i class="fa-solid fa-chalkboard-user"></i> --}}
                         {{-- <span id="counter" class="text-3xl font-bold text-gray-800 mx-4">0</span> --}}
                         <div>
-                            <span data-purecounter-start="0" data-purecounter-end="52" data-purecounter-duration="1"
+                            <span data-purecounter-start="0" data-purecounter-end="152" data-purecounter-duration="1"
                                 class="purecounter"></span>
                             <p>Teachers</p>
                         </div>
@@ -127,7 +162,7 @@
                         {{-- <i class="fa fa-graduation-cap text-red-500" style="color: #bb0852"></i> --}}
                         <img src="{{ asset('assets/images/icon/student2.svg') }}" class="mr-4" alt="" />
                         <div>
-                            <span data-purecounter-start="0" data-purecounter-end="356" data-purecounter-duration="1"
+                            <span data-purecounter-start="0" data-purecounter-end="645" data-purecounter-duration="1"
                                 class="purecounter"></span>
                             <p> Students</p>
                         </div>

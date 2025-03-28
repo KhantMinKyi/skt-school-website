@@ -13,7 +13,9 @@
     <meta name="author" content="theme_ocean">
     <!-- SITE TITLE -->
     <title>SKT International School</title>
-    @vite('resources/css/app.css')
+    {{-- @vite('resources/css/app.css') --}}
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link rel="icon" href="{{ asset('assets/images/icon/icon.png') }}" type="image/png">
     <!-- Latest Bootstrap min CSS -->
 

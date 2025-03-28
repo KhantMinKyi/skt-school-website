@@ -28,7 +28,7 @@
             <div class="section-title p-4">
                 <h2>{{ $branch->branch_name }}</h2>
                 <p>
-                    Primary <span class="text-emerald-500">Year 2 - 6 </span>
+                    Primary <span class="text-emerald-500">Year 3 - 6 </span>
                 </p>
             </div>
             <div class=" text-lg p-4">
@@ -312,7 +312,7 @@
                         ✔ Diverse & <span class="text-emerald-500">Inclusive Community</span>
                         <hr class="w-28 text-center my-2 border-emerald-500 ">
                     </p>
-                    <p class="p-1 font-semibold text-gray-800"> WEncouraging intercultural understanding and respect.
+                    <p class="p-1 font-semibold text-gray-800"> Encouraging intercultural understanding and respect.
                     </p>
                 </div>
                 <div class="my-5">

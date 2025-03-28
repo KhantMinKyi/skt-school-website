@@ -32,11 +32,11 @@
                 </p>
             </div>
             <div class=" text-lg p-4">
-                Our International curriculum addresses social-emotional development via engaging activities and positive
-                reinforcement and by actively involving parents in our lessons and extra-curricular programs. We follow an
-                age-appropriate curriculum based on the latest research on early childhood learning. Children are free to
-                explore their world using classroom toys, sand, water, paint, life-sized blocks and out playground
-                equipment. BFI Kindergarten Programs
+                At SKT International Preschool, we believe in nurturing the whole child through a playful and engaging
+                learning approach. We're a Candidate School for the IB PYP Early Years Programme, meaning our curriculum is
+                designed to foster your child's natural curiosity and love of learning. Our play-based, inquiry-driven
+                program focuses on holistic development, covering:
+
             </div>
             <!-- END ROW -->
 

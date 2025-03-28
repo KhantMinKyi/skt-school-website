@@ -1,7 +1,9 @@
 @extends('layouts.admin_layout')
 
 @section('content')
-    @vite('resources/css/app.css')
+    {{-- @vite('resources/css/app.css') --}}
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <!-- Font Awesome CSS -->
     {{-- <link rel="stylesheet" href="{{ asset('assets/fonts/font-awesome.min.css') }}"> --}}
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
