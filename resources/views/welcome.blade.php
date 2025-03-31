@@ -175,7 +175,7 @@
                 <!-- First Slide -->
                 <div class="carousel-item active w-full flex-shrink-0">
                     {{-- <img src="{{ asset('assets/images/banner/home.png') }}" alt="slider-image" --}}
-                    <img src="{{ asset('img/banner/home_banner.jpg') }}" alt="slider-image"
+                    <img src="{{ asset('img/banner/home_banner3.jpg') }}" alt="slider-image"
                         class="w-full min-h-lvh object-cover" />
                     <div class="absolute inset-0 mx-auto flex flex-col justify-center items-center  ">
                         <h1 id="fading-text" class=" text-2xl md:text-7xl text-center ">

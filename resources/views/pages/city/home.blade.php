@@ -10,6 +10,10 @@
             /* font-size: 48px; */
             font-style: normal;
         }
+
+        html {
+            scroll-behavior: smooth;
+        }
     </style>
     <link rel="stylesheet" href="{{ asset('guests/css/style.css') }}" />
     <!-- START HOME -->
@@ -44,7 +48,7 @@
                     <h3 class="text-xl mb-4">Quality Education</h3>
                     <p class="mb-10 font-light text-gray-500">Providing students with a rich learning experience, blending
                         academics, creativity, and critical thinking.</p>
-                    <a href="#" class="relative inline-block mx-auto py-4 px-6 overflow-hidden group">
+                    <a href="#topic_content_area" class="relative inline-block mx-auto py-4 px-6 overflow-hidden group">
                         <span
                             class="relative font-semibold text-[#1a2d62] uppercase px-6 py-4 transition-all duration-300 group-hover:text-white">
                             <!-- Background animation -->
@@ -65,7 +69,7 @@
                     <h3 class="text-xl mb-4">Experienced Teachers</h3>
                     <p class="mb-10 font-light text-gray-500">Passionate educators committed to nurturing potential and
                         inspiring a love for learning.</p>
-                    <a href="#" class="relative inline-block mx-auto py-4 px-6 overflow-hidden group">
+                    <a href="#topic_content_area" class="relative inline-block mx-auto py-4 px-6 overflow-hidden group">
                         <span
                             class="relative font-semibold text-[#1a2d62] uppercase px-6 py-4 transition-all duration-300 group-hover:text-white">
                             <!-- Background animation -->
@@ -85,7 +89,7 @@
                     <h3 class="text-xl mb-4">Delicious Food</h3>
                     <p class="mb-10 font-light text-gray-500">Wholesome, flavorful meals crafted daily to keep students
                         energized and satisfied.</p>
-                    <a href="#" class="relative inline-block mx-auto py-4 px-6 overflow-hidden group">
+                    <a href="#topic_content_area" class="relative inline-block mx-auto py-4 px-6 overflow-hidden group">
                         <span
                             class="relative font-semibold text-[#1a2d62] uppercase px-6 py-4 transition-all duration-300 group-hover:text-white">
                             <!-- Background animation -->
@@ -312,7 +316,8 @@
     <hr class=" w-1/2 mx-auto md:my-20">
 
     <!-- START TOPIC-->
-    <section class="topic_content_area section-padding" style="background-image: url(assets/images/banner/topic.png);">
+    <section class="topic_content_area section-padding" style="background-image: url(assets/images/banner/topic.png);"
+        id="topic_content_area">
         <div class="container mx-auto">
             <div class="section-title">
                 <h2>What We Provide</h2>

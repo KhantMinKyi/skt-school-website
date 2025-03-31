@@ -80,7 +80,7 @@
                         <div id="pdfThumbnails" class=" inline-block w-full ">
                             <div class="pdf-item flex ">
                                 <canvas class="pdf-thumbnail w-48 h-auto cursor-pointer shadow-lg rounded-lg m-4"
-                                    data-pdf="{{ asset('pdf/policy/Admission Policy SKT 2023-2026' . $branch->branch_short_name . '.pdf') }}">
+                                    data-pdf="{{ asset('pdf/policy/' . $branch->branch_short_name . '/Admission Policy SKT 2023-2026.pdf') }}">
                                 </canvas>
                             </div>
                         </div>
@@ -90,7 +90,7 @@
                         <div id="pdfThumbnails" class=" inline-block w-full ">
                             <div class="pdf-item flex ">
                                 <canvas class="pdf-thumbnail w-48 h-auto cursor-pointer shadow-lg rounded-lg m-4"
-                                    data-pdf="{{ asset('pdf/policy/Assessment policy_SKT 2023-2026_' . $branch->branch_short_name . '.pdf') }}">
+                                    data-pdf="{{ asset('pdf/policy/' . $branch->branch_short_name . '/Assessment policy_SKT 2023-2026_.pdf') }}">
                                 </canvas>
                             </div>
                         </div>
@@ -100,7 +100,7 @@
                         <div id="pdfThumbnails" class=" inline-block w-full ">
                             <div class="pdf-item flex ">
                                 <canvas class="pdf-thumbnail w-48 h-auto cursor-pointer shadow-lg rounded-lg m-4"
-                                    data-pdf="{{ asset('pdf/policy/Inclusion Policy 2023-2026' . $branch->branch_short_name . '.pdf') }}">
+                                    data-pdf="{{ asset('pdf/policy/' . $branch->branch_short_name . '/Inclusion Policy 2023-2026.pdf') }}">
                                 </canvas>
                             </div>
                         </div>
@@ -110,7 +110,7 @@
                         <div id="pdfThumbnails" class=" inline-block w-full ">
                             <div class="pdf-item flex ">
                                 <canvas class="pdf-thumbnail w-48 h-auto cursor-pointer shadow-lg rounded-lg m-4"
-                                    data-pdf="{{ asset('pdf/policy/Language Policy SKT 2023-2026' . $branch->branch_short_name . '.pdf') }}">
+                                    data-pdf="{{ asset('pdf/policy/' . $branch->branch_short_name . '/Language Policy SKT 2023-2026.pdf') }}">
                                 </canvas>
                             </div>
                         </div>
@@ -120,7 +120,7 @@
                         <div id="pdfThumbnails" class=" inline-block w-full ">
                             <div class="pdf-item flex ">
                                 <canvas class="pdf-thumbnail w-48 h-auto cursor-pointer shadow-lg rounded-lg m-4"
-                                    data-pdf="{{ asset('pdf/policy/SKT Final Academic Integrity policy 2023-2026' . $branch->branch_short_name . '.pdf') }}">
+                                    data-pdf="{{ asset('pdf/policy/' . $branch->branch_short_name . '/SKT Final Academic Integrity policy 2023-2026.pdf') }}">
                                 </canvas>
                             </div>
                         </div>
