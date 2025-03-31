@@ -22,7 +22,7 @@
             <h1 id="fading-text" class=" text-center  ml-10">
                 <span class="text-emerald-400">{{ $principal_message->branch->branch_name }}</span>
                 <br>
-                <span class="text-white">Principal's Message</span>
+                <span class="text-white hidden sm:block">Principal's Message</span>
             </h1>
             {{-- <div class="flex justify-center" style="cursor: pointer">
                 <img src="{{ asset($principal_message->branch->branch_logo) }}" width="240" class="bounce-up"
@@ -37,7 +37,7 @@
         <div class="grid grid-cols-1 lg:grid-cols-3 ">
             <div class=" lg:col-span-2  mx-auto p-10">
                 <div class="ab_content">
-                    <h2 class=" text-xl font-light text-gray-500">
+                    <h2 class=" text-2xl font-light text-gray-500 mb-2">
                         {{ $principal_message->branch->branch_name }}
                     </h2>
                     <h2 class=" text-4xl font-semibold">

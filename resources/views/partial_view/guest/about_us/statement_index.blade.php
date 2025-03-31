@@ -19,7 +19,7 @@
             <h1 id="fading-text" class=" text-center  ml-10">
                 <span class="text-emerald-400">{{ $our_statement->branch->branch_name }}</span>
                 <br>
-                <span class="text-white">Our Statement</span>
+                <span class="text-white hidden sm:block">Our Statement</span>
             </h1>
             {{-- <div class="flex justify-center" style="cursor: pointer">
                 <img src="{{ asset($our_statement->branch->branch_logo) }}" width="240" class="bounce-up" alt="">
@@ -111,7 +111,7 @@
     <hr class=" w-1/2 mx-auto">
 
     <!-- START SCHOOL INFO COUNTER -->
-    <section id="" class=" mt-10 mb-10">
+    <section id="" class=" m-6">
         <div class="container  mx-auto">
             <div class="section-title text-4xl mb-6 font-bold">
                 <h2>Explore Our <span class="text-teal-500">School</span></h2>

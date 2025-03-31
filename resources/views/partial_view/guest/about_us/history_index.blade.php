@@ -21,7 +21,7 @@
                 <h1 id="fading-text" class=" text-center  ml-10">
                     <span class="text-emerald-400">{{ $our_history->branch->branch_name }}</span>
                     <br>
-                    <span class="text-white">Our History</span>
+                    <span class="text-white hidden sm:block">Our History</span>
                 </h1>
             </div>
         </section>
@@ -41,7 +41,7 @@
 
                         </p>
                     </div>
-                    <div class="abmv mt-4">
+                    <div class="abmv mt-4 flex flex-col">
                         <span class="ti-medall"></span>
                         <h4>History</h4>
                         <p>

@@ -20,9 +20,9 @@
         {{-- <div class=" "> --}}
         <div class="home_content container mx-auto flex flex-col justify-center items-center  ">
             <h1 id="fading-text" class=" text-center  ml-10">
-                <span class="text-emerald-400">{{ $branch->branch_name }}</span>
+                <span class="text-emerald-400 ">{{ $branch->branch_name }}</span>
                 <br>
-                <span class="text-white">Our Teachers </span>
+                <span class="text-white hidden sm:block">Our Teachers </span>
             </h1>
         </div>
 
