@@ -20,7 +20,7 @@
                     <h1 id="fading-text" class=" text-2xl md:text-7xl text-center  ml-10">
                         <span class="text-emerald-400">{{ $branch->branch_name }}</span>
                         <br>
-                        <div class="text-white mt-4">{{ $post->post_title }} </div>
+                        <div class="text-white mt-4 hidden sm:block">{{ $post->post_title }} </div>
                     </h1>
                 </div>
             </div>
@@ -33,8 +33,8 @@
                 <div class="col-lg-7 col-sm-12 col-xs-12 w-full lg:w-7/12">
                     <div class="arti_single bg-white p-6 rounded-lg shadow-lg">
                         <div class="arti_img_two mb-4">
-                            <img src="{{ asset($post->post_banner) }}" class="img-fluid w-full rounded-lg"
-                                alt="Blog image" />
+                            {{-- <img src="{{ asset($post->post_banner) }}" class="img-fluid w-full rounded-lg"
+                                alt="Blog image" /> --}}
                         </div>
                         <div class="arti_content text-gray-700 leading-relaxed">
                             <p></p>
@@ -46,13 +46,30 @@
                             <p>{{ $post->post_body }}</p>
                         </div>
                         <div class="share_sp mt-6">
-                            <h4 class="text-lg font-semibold">Share</h4>
-                            <ul class="flex gap-4 mt-2">
-                                <li><a href="#" class="text-blue-600 hover:text-blue-800">Facebook</a></li>
-                                <li><a href="#" class="text-blue-400 hover:text-blue-600">Twitter</a></li>
-                                <li><a href="#" class="text-pink-500 hover:text-pink-700">Instagram</a></li>
-                                <li><a href="#" class="text-blue-700 hover:text-blue-900">Linkedin</a></li>
-                            </ul>
+                            {{-- <h4 class="text-lg font-semibold">Share</h4> --}}
+                            @if ($branch->branch_short_name == 'SKT-RC')
+                                <ul class="flex gap-4 mt-2">
+                                    <li><a href="https://www.facebook.com/SKTinternationalCollege/" target="__blank"
+                                            class="text-blue-600 hover:text-blue-800">Facebook</a></li>
+                                    <li><a href="https://www.youtube.com/@sktinternationalcollege6656" target="__blank"
+                                            class="text-blue-400 hover:text-blue-600">Youtube</a></li>
+                                    <li><a href="https://www.instagram.com/skt_riverside_campus/" target="__blank"
+                                            class="text-pink-500 hover:text-pink-700">Instagram</a></li>
+                                    <li><a href="https://mm.linkedin.com/school/skt-international-school-riverside-campus/"
+                                            target="__blank" class="text-blue-700 hover:text-blue-900">Linkedin</a></li>
+                                </ul>
+                            @else
+                                <ul class="flex gap-4 mt-2">
+                                    <li><a href="https://www.facebook.com/BahanInternationalScienceAcademy/"
+                                            target="__blank" class="text-blue-600 hover:text-blue-800">Facebook</a></li>
+                                    <li><a href="https://www.youtube.com/@bahaninternationalsciencea7001" target="__blank"
+                                            class="text-blue-400 hover:text-blue-600">Youtube</a></li>
+                                    <li><a href="https://www.instagram.com/skt_city_campus/" target="__blank"
+                                            class="text-pink-500 hover:text-pink-700">Instagram</a></li>
+                                    <li><a href="https://mm.linkedin.com/school/skt-international-school-citycampus/"
+                                            target="__blank" class="text-blue-700 hover:text-blue-900">Linkedin</a></li>
+                                </ul>
+                            @endif
                         </div>
                     </div>
 
@@ -111,7 +128,7 @@
                 </div>
 
                 <div class="col-lg-5 col-sm-12 col-xs-12 w-full lg:w-5/12 mt-8 lg:mt-0">
-                    <div class="sidebar-post bg-gray-100 p-6 rounded-lg">
+                    {{-- <div class="sidebar-post bg-gray-100 p-6 rounded-lg">
                         <h4 class="font-semibold">Subscribe for updates</h4>
                         <form action="#" class="subscribe mt-4">
                             <input type="text" class="subscribe__input border rounded-md p-2 w-full"
@@ -119,7 +136,7 @@
                             <button type="button"
                                 class="sub_btn bg-green-600 text-white px-4 py-2 rounded-md mt-2 w-full">Subscribe</button>
                         </form>
-                    </div>
+                    </div> --}}
                     <div class="sidebar-post">
                         <div class="sidebar_title">
                             <h4>Popular post</h4>
@@ -138,34 +155,70 @@
                         <div class="sidebar_title">
                             <h4>Follow us</h4>
                         </div>
-                        <div class="single_social">
-                            <ul>
-                                <li>
-                                    <div class="social_item b_facebook"><a href="#" title="facebook"><i
-                                                class="fa-brands fa-facebook-f"></i></i><span class="item-list">150K
-                                                Likes</span></a>
-                                    </div>
-                                </li>
+                        @if ($branch->branch_short_name == 'SKT-RC')
+                            <div class="single_social">
+                                <ul>
+                                    <li>
+                                        <div class="social_item b_facebook"><a
+                                                href="https://www.facebook.com/SKTinternationalCollege/"
+                                                title="facebook"><i class="fa-brands fa-facebook-f"></i></i><span
+                                                    class="item-list">150K
+                                                    Likes</span></a>
+                                        </div>
+                                    </li>
+                                    {{-- <li>
+                                        <div class="social_item b_tiktok"><a href="#" title="tiktok"><i
+                                                    class="fa-brands fa-tiktok"></i></i><span class="item-list">138K
+                                                    Followers</span></a></div>
+                                    </li> --}}
+                                    <li>
+                                        <div class="social_item b_youtube"><a
+                                                href="https://www.youtube.com/@sktinternationalcollege6656"
+                                                title="youtube"><i class="fa-brands fa-youtube"></i><span
+                                                    class="item-list">90K
+                                                    Subscribers</span></a></div>
+                                    </li>
+                                    {{-- <li>
+                                        <div class="social_item b_instagram"><a href="#" title="pinterest"><i
+                                                    class="fa-brands fa-instagram"></i><span class="item-list">350K
+                                                    Followers</span></a></div>
+                                    </li> --}}
+                                </ul>
+                            </div><!-- END SOCIAL MEDIA POST -->
+                        @else
+                            <div class="single_social">
+                                <ul>
+                                    <li>
+                                        <div class="social_item b_facebook"><a
+                                                href="https://www.facebook.com/BahanInternationalScienceAcademy/"
+                                                title="facebook"><i class="fa-brands fa-facebook-f"></i></i><span
+                                                    class="item-list">150K
+                                                    Likes</span></a>
+                                        </div>
+                                    </li>
 
-                                <li>
-                                    <div class="social_item b_tiktok"><a href="#" title="tiktok"><i
-                                                class="fa-brands fa-tiktok"></i></i><span class="item-list">138K
-                                                Followers</span></a></div>
-                                </li>
+                                    {{-- <li>
+                                        <div class="social_item b_tiktok"><a href="#" title="tiktok"><i
+                                                    class="fa-brands fa-tiktok"></i></i><span class="item-list">138K
+                                                    Followers</span></a></div>
+                                    </li> --}}
 
-                                <li>
-                                    <div class="social_item b_youtube"><a href="#" title="youtube"><i
-                                                class="fa-brands fa-youtube"></i><span class="item-list">90K
-                                                Subscribers</span></a></div>
-                                </li>
+                                    <li>
+                                        <div class="social_item b_youtube"><a
+                                                href="https://www.youtube.com/@bahaninternationalsciencea7001"
+                                                title="youtube"><i class="fa-brands fa-youtube"></i><span
+                                                    class="item-list">90K
+                                                    Subscribers</span></a></div>
+                                    </li>
 
-                                <li>
-                                    <div class="social_item b_instagram"><a href="#" title="pinterest"><i
-                                                class="fa-brands fa-instagram"></i><span class="item-list">350K
-                                                Followers</span></a></div>
-                                </li>
-                            </ul>
-                        </div><!-- END SOCIAL MEDIA POST -->
+                                    {{-- <li>
+                                        <div class="social_item b_instagram"><a href="#" title="pinterest"><i
+                                                    class="fa-brands fa-instagram"></i><span class="item-list">350K
+                                                    Followers</span></a></div>
+                                    </li> --}}
+                                </ul>
+                            </div><!-- END SOCIAL MEDIA POST -->
+                        @endif
                     </div><!-- END SIDEBAR POST -->
                     <div class="sidebar-post">
                         <div class="sidebar_title">

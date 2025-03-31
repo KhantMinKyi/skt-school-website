@@ -20,7 +20,7 @@
                     <h1 id="fading-text" class=" text-xl sm:text-5xl lg:text-7xl  text-center  ml-10">
                         <span class="text-emerald-400">{{ $branch->branch_name }}</span>
                         <br>
-                        <div class="text-white mt-4">Gallery </div>
+                        <div class="text-white mt-4 hidden sm:block">Gallery </div>
                     </h1>
                 </div>
             </div>

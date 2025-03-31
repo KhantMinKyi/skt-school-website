@@ -21,7 +21,7 @@
                     <h1 id="fading-text" class=" text-xl sm:text-5xl lg:text-7xl  text-center  ml-10">
                         <span class="text-emerald-400">{{ $branch->branch_name }}</span>
                         <br>
-                        <span class="text-white">Alumni </span>
+                        <span class="text-white hidden sm:block">Alumni </span>
                     </h1>
                 </div>
             </div>
@@ -72,13 +72,13 @@
                 <!-- Labels above progress bar segments -->
                 <div class="flex justify-between">
                     <div class="w-2/3 text-center">
-                        <span class="text-xl font-bold text-blue-900">Local</span>
+                        <span class="text-sm md:text-xl font-bold text-blue-900">Local</span>
                     </div>
                     <div class="w-1/6 text-center">
-                        <span class="text-xl font-bold text-green-400">Asia</span>
+                        <span class="text-sm md:text-xl font-bold text-green-400">Asia</span>
                     </div>
                     <div class="w-1/6 text-center">
-                        <span class="text-xl font-bold text-blue-500">Western</span>
+                        <span class="text-sm md:text-xl font-bold text-blue-500">Western</span>
                     </div>
                 </div>
                 <!-- Progress Bar -->
