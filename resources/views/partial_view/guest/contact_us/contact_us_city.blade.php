@@ -17,7 +17,7 @@
                     <h1 id="fading-text" class=" text-xl sm:text-5xl lg:text-7xl text-center  ml-10">
                         <span class="text-emerald-400">{{ $branch->branch_name }}</span>
                         <br>
-                        <div class="text-white mt-4">Contact Us</div>
+                        <div class="text-white mt-4 hidden sm:block">Contact Us</div>
                     </h1>
                 </div>
             </div>
@@ -77,7 +77,7 @@
             <div class="section-title-two">
                 <h2>Send your message.</h2>
             </div>
-            <div class="row grid-cols-1 lg:grid-cols-2">
+            <div class="row grid-cols-1 lg:grid-cols-2 p-4">
                 <div class="offset-lg-1 col-lg-10 col-sm-12 col-xs-12  wow fadeInUp" data-wow-duration="1s"
                     data-wow-delay="0.2s" data-wow-offset="0">
                     <div class="contact">
