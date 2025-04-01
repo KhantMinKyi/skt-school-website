@@ -16,7 +16,7 @@
                     <h1 id="fading-text" class=" text-xl sm:text-5xl lg:text-7xl text-center  ml-10">
                         <span class="text-emerald-400">{{ $branch->branch_name }}</span>
                         <br>
-                        <div class="text-white mt-4">Student Admission </div>
+                        <div class="text-white mt-4 hidden sm:block">Student Admission </div>
                     </h1>
                 </div>
             </div>
@@ -65,10 +65,9 @@
                         ensure a smooth and informed enrollment journey for your child.
                     </p>
                     <a href="{{ route('admission-process.home', $branch->branch_short_name) }}"
-                        class="relative inline-block mx-auto py-4 px-6 overflow-hidden group mt-4">
+                        class="relative inline-block mx-auto py-2 lg:py-4 lg:px-6  overflow-hidden group mt-4">
                         <span
                             class="relative font-semibold text-[#1a2d62] uppercase px-6 py-4 transition-all duration-300 group-hover:text-white">
-                            <!-- Background animation -->
                             <span class="absolute inset-0 flex items-center">
                                 <span
                                     class="w-8 h-8 bg-teal-400 rounded-full transition-all duration-300 origin-left transform scale-100 group-hover:w-full group-hover:h-full group-hover:scale-x-100"></span>

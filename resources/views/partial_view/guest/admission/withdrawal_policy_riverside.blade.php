@@ -17,7 +17,7 @@
                     <h1 id="fading-text" class=" text-xl sm:text-5xl lg:text-7xl text-center  ml-10">
                         <span class="text-emerald-400">{{ $branch->branch_name }}</span>
                         <br>
-                        <div class="text-white mt-4">Withdrawal Policy</div>
+                        <div class="text-white mt-4 hidden sm:block">Withdrawal Policy</div>
                     </h1>
                 </div>
             </div>
@@ -42,7 +42,7 @@
             </div>
             <div class=" max-w-2xl p-10">
                 <div class="ab_content">
-                    <h2 class=" text-4xl font-semibold">
+                    <h2 class=" text-2xl sm:text-4xl font-semibold">
                         Once a student has
                         <span class="text-emerald-400">terminated his or her enrolment</span>
                     </h2>
