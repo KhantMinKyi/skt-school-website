@@ -16,7 +16,7 @@
                     <h1 id="fading-text" class=" text-xl sm:text-5xl lg:text-7xl text-center  ml-10">
                         <span class="text-emerald-400">{{ $branch->branch_name }}</span>
                         <br>
-                        <div class="text-white mt-4">Secondary</div>
+                        <div class="text-white mt-4 hidden sm:block">Secondary</div>
                     </h1>
                 </div>
             </div>
@@ -122,7 +122,7 @@
         </div><!-- END CONTAINER  -->
     </div>
     <div class="container mx-auto my-8">
-        <div class="text-lg md:text-xl">
+        <div class="text-lg md:text-xl p-4">
             equipping them with essential knowledge and skills
             for an ever-changing world.
         </div>

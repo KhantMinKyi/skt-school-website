@@ -16,7 +16,7 @@
                     <h1 id="fading-text" class=" text-xl sm:text-5xl lg:text-7xl text-center  ml-10">
                         <span class="text-emerald-400">{{ $branch->branch_name }}</span>
                         <br>
-                        <div class="text-white mt-4">IGCSE</div>
+                        <div class="text-white mt-4 hidden sm:block">IGCSE</div>
                     </h1>
                 </div>
             </div>
@@ -174,7 +174,7 @@
         </div><!-- END CONTAINER  -->
     </div>
     <div class="container mx-auto my-8">
-        <div class="text-lg md:text-xl">
+        <div class="text-lg md:text-xl p-4">
             To ensure students are fully prepared for their IGCSE exams, we provide a rigorous preparation period,
             including study camps, mock exams, and ongoing revision support.
         </div>
