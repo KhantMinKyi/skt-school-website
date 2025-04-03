@@ -72,10 +72,10 @@
         }
 
         /* Smooth zoom-in effect */
-        .zoom-click {
+        /* .zoom-click {
             width: 600px;
             transition: width 1s;
-        }
+        } */
 
         /* Fullscreen zoom effect */
         .image-zoomed {
@@ -89,8 +89,12 @@
             transform: scale(1.1);
         }
 
+        .zoom-click {
+            transition: transform 0.3s ease;
+        }
+
         .zoom-click:hover {
-            width: 1200px;
+            transform: scale(1.2);
         }
 
         @media (max-width: 1024px) {
@@ -175,7 +179,7 @@
                 <!-- First Slide -->
                 <div class="carousel-item active w-full flex-shrink-0">
                     {{-- <img src="{{ asset('assets/images/banner/home.png') }}" alt="slider-image" --}}
-                    <img src="{{ asset('img/banner/home_banner3.jpg') }}" alt="slider-image"
+                    <img src="{{ asset('img/banner/home_banner.jpg') }}" alt="slider-image"
                         class="w-full min-h-lvh object-cover" />
                     <div class="absolute inset-0 mx-auto flex flex-col justify-center items-center  ">
                         <h1 id="fading-text" class=" text-2xl md:text-7xl text-center ">
@@ -190,8 +194,14 @@
                                         <div style="cursor: pointer;">
                                             <a href="{{ route('river.home') }}">
                                                 {{-- <a href="#"> --}}
-                                                <img src="{{ asset('img/skt_riverside_campus.png') }}"
-                                                    class="img-fluid left-animate bounce-up zoom-click" alt="">
+                                                <img src="{{ asset('img/skt_riverside_campus_aniamted_logo.webp') }}"
+                                                    class="img-fluid bounce-up zoom-click" alt="">
+                                                {{-- <video class="img-fluid left-animate bounce-up zoom-click" autoplay loop
+                                                    muted playsinline>
+                                                    <source src="{{ asset('videos/riverside_logo_animation.mov') }}"
+                                                        type="video/mp4">
+                                                    Your browser does not support the video tag.
+                                                </video> --}}
                                             </a>
                                         </div>
                                     </div>
@@ -199,8 +209,8 @@
                                         class="col-lg-6 col-sm-6 col-xs-12 d-flex justify-content-center align-items-center">
                                         <div style="cursor: pointer;">
                                             <a href="{{ route('city.home') }}">
-                                                <img src="{{ asset('img/skt_city_campus.png') }}"
-                                                    class="img-fluid right-animate bounce-up zoom-click" alt="">
+                                                <img src="{{ asset('img/skt_city_campus_aniamted_logo.webp') }}"
+                                                    class="img-fluid  bounce-up zoom-click" alt="">
                                             </a>
                                         </div>
                                     </div>
