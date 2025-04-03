@@ -258,7 +258,7 @@
             <div class="section-title text-4xl mb-6 font-bold text-center">
                 <h2>Our <span class="text-teal-500">Facilities</span></h2>
             </div>
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 text-center mt-4">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 text-center mt-4">
                 {{-- card --}}
                 @foreach ($branch->galleries as $gallery)
                     <div class="mx-2 mb-2">
