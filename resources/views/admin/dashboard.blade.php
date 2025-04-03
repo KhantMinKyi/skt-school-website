@@ -1,7 +1,7 @@
 @extends('layouts.admin_layout')
 
 @section('content')
-    <div class="page-inner bg-light ">
+    {{-- <div class="page-inner bg-light ">
         <div class="row">
             <div class="col">
                 <div class="card">
@@ -376,5 +376,5 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
 @endsection

@@ -38,29 +38,29 @@
     <nav id="navbar" class="bg-transparent text-white fixed top-0 w-full z-50  transition-all duration-300">
         <div class=" mx-auto flex justify-end p-4">
             <!-- Social Icons (Hidden on small screens) -->
-            <div class="hidden md:flex  space-x-4 ">
-                <a href="#" class="hlc ">
+            <div class="hidden md:flex  space-x-4 text-emerald-700">
+                <a href="https://www.facebook.com/BahanInternationalScienceAcademy/" class="hlc" target="__blank">
                     <i class="ti-facebook"></i>
                 </a>
-                <a href="#" class="hlc">
+                <a href="https://www.instagram.com/skt_city_campus/" class="hlc" target="__blank">
                     <i class="ti-instagram"></i>
                 </a>
-                <a href="#" class="hlc">
+                <a href="https://www.youtube.com/@bahaninternationalsciencea7001" class="hlc" target="__blank">
                     <i class="ti-youtube"></i>
                 </a>
-                <a href="#" class="hlc">
+                {{-- <a href="#" class="hlc" target="__blank">
                     <i class="ti-mobile"></i>
-                </a>
+                </a> --}}
             </div>
         </div>
         <div class="main-menu container mx-auto flex items-center justify-between p-4">
             <!-- Logo -->
             <div class="text-xl font-bold w-48 md:w-80 -mt-6 md:-mt-12">
-                <a href="/"><img src="{{ asset('img/skt_with_tagline.png') }}" alt=""></a>
+                <a href="/"><img src="{{ asset('img/skt_city_with_tagline.png') }}" alt=""></a>
             </div>
 
             <!-- Menu (Hidden on small screens) -->
-            <ul class="hidden lg:flex space-x-6 pb-2 ">
+            <ul class="hidden  space-x-6 pb-2 " id="navbarUl">
                 {{-- <li><a href="#" class="hover:text-gray-400  font-bold">Home</a></li> --}}
 
                 <li class="relative group -mt-1">
@@ -198,7 +198,7 @@
                 <div class="col-lg-3 col-sm-6 col-xs-12">
                     <div class="single_footer p-4">
                         {{-- <a href="index.html"><img src="assets/images/all-img/logo2.png" alt="" /></a> --}}
-                        <a href="/"><img src="{{ asset('img/skt_with_tagline.png') }}"
+                        <a href="/"><img src="{{ asset('img/skt_city_with_tagline.png') }}"
                                 class=" max-w-60 sm:max-w-72" alt=""></a>
                         <p>
                             We nurture students to become lifelong learners responsible global citizens, and
@@ -342,12 +342,15 @@
 
         document.addEventListener("scroll", function() {
             const navbar = document.getElementById("navbar");
+            const navbarUl = document.getElementById("navbarUl");
             if (window.scrollY > 50) {
                 navbar.classList.add("bg-white", "text-black", 'shadow-lg');
                 navbar.classList.remove("bg-transparent", "text-white");
+                navbarUl.classList.add("lg:flex");
             } else {
                 navbar.classList.add("bg-transparent", "text-white");
                 navbar.classList.remove("bg-white", "text-black", 'shadow-lg');
+                navbarUl.classList.remove("lg:flex");
             }
         });
     </script>

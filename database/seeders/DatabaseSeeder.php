@@ -25,11 +25,13 @@ class DatabaseSeeder extends Seeder
             'branch_name' => 'SKT International School - Riverside Campus',
             'branch_short_name' => 'SKT-RC',
             'branch_location' => 'Thar Kay Ta',
+            'branch_logo' => '/img/branch_data/SKT-RC/branch_67db8cd9b8e439.87070570.png',
         ]);
         Branch::create([
             'branch_name' => 'SKT International School - City Campus',
             'branch_short_name' => 'SKT-CC',
             'branch_location' => 'Bahan',
+            'branch_logo' => '/img/branch_data/SKT-CC/branch_67db8ce0a16d09.02754591.png',
         ]);
         User::factory()->create([
             'name' => 'Test User',

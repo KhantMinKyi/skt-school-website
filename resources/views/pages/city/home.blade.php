@@ -332,7 +332,7 @@
                         <img src="{{ asset('assets/images/icon/ct3.svg') }}" alt="" />
                         {{-- <i class="fa-solid fa-book-open text-3xl"></i> --}}
                         <h2><a href="#">Cambridge Curriculum</a></h2>
-                        <span>Year 2 to IB</span>
+                        <span>Year 2 to IGCSE</span>
                     </div>
                 </div>
                 <!-- END COL -->
