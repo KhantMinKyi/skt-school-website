@@ -112,9 +112,9 @@
                         </p>
                         <div id="pdfThumbnails">
                             <div class="pdf-item">
-                                <canvas class="pdf-thumbnail w-48 h-auto cursor-pointer shadow-lg rounded-lg"
+                                {{-- <canvas class="pdf-thumbnail w-48 h-auto cursor-pointer shadow-lg rounded-lg"
                                     data-pdf="{{ asset('pdf/welfare/1 - Walking the Honest Way.pdf') }}">
-                                </canvas>
+                                </canvas> --}}
                             </div>
                         </div>
                     </div>
@@ -131,9 +131,9 @@
                         </p>
                         <div id="pdfThumbnails">
                             <div class="pdf-item">
-                                <canvas class="pdf-thumbnail w-48 h-auto cursor-pointer shadow-lg rounded-lg"
+                                {{-- <canvas class="pdf-thumbnail w-48 h-auto cursor-pointer shadow-lg rounded-lg"
                                     data-pdf="{{ asset('pdf/welfare/2- Navigating the Road of Duty.pdf') }}">
-                                </canvas>
+                                </canvas> --}}
                             </div>
                         </div>
                     </div>
@@ -149,9 +149,9 @@
                         </p>
                         <div id="pdfThumbnails">
                             <div class="pdf-item">
-                                <canvas class="pdf-thumbnail w-48 h-auto cursor-pointer shadow-lg rounded-lg"
+                                {{-- <canvas class="pdf-thumbnail w-48 h-auto cursor-pointer shadow-lg rounded-lg"
                                     data-pdf="{{ asset('pdf/welfare/3 - Journeying Through Just Acts.pdf') }}">
-                                </canvas>
+                                </canvas> --}}
                             </div>
                         </div>
                     </div>
@@ -170,9 +170,9 @@
                         </p>
                         <div id="pdfThumbnails">
                             <div class="pdf-item">
-                                <canvas class="pdf-thumbnail w-48 h-auto cursor-pointer shadow-lg rounded-lg"
+                                {{-- <canvas class="pdf-thumbnail w-48 h-auto cursor-pointer shadow-lg rounded-lg"
                                     data-pdf="{{ asset('pdf/welfare/4 - Building Bridges of Unity.pdf') }}">
-                                </canvas>
+                                </canvas> --}}
                             </div>
                         </div>
                     </div>
@@ -190,9 +190,9 @@
                         </p>
                         <div id="pdfThumbnails">
                             <div class="pdf-item">
-                                <canvas class="pdf-thumbnail w-48 h-auto cursor-pointer shadow-lg rounded-lg"
+                                {{-- <canvas class="pdf-thumbnail w-48 h-auto cursor-pointer shadow-lg rounded-lg"
                                     data-pdf="{{ asset('pdf/welfare/5 - The Golden Path of Respect.pdf') }}">
-                                </canvas>
+                                </canvas> --}}
                             </div>
                         </div>
                     </div>
@@ -207,9 +207,9 @@
                         </p>
                         <div id="pdfThumbnails">
                             <div class="pdf-item">
-                                <canvas class="pdf-thumbnail w-48 h-auto cursor-pointer shadow-lg rounded-lg"
+                                {{-- <canvas class="pdf-thumbnail w-48 h-auto cursor-pointer shadow-lg rounded-lg"
                                     data-pdf="{{ asset('pdf/welfare/6 - Generous Walks of Altruism.pdf') }}">
-                                </canvas>
+                                </canvas> --}}
                             </div>
                         </div>
                     </div>
@@ -226,9 +226,9 @@
                         </p>
                         <div id="pdfThumbnails">
                             <div class="pdf-item">
-                                <canvas class="pdf-thumbnail w-48 h-auto cursor-pointer shadow-lg rounded-lg"
+                                {{-- <canvas class="pdf-thumbnail w-48 h-auto cursor-pointer shadow-lg rounded-lg"
                                     data-pdf="{{ asset('pdf/welfare/7 - Gratitude Along the Way.pdf') }}">
-                                </canvas>
+                                </canvas> --}}
                             </div>
                         </div>
                     </div>
@@ -246,9 +246,9 @@
                         </p>
                         <div id="pdfThumbnails">
                             <div class="pdf-item">
-                                <canvas class="pdf-thumbnail w-48 h-auto cursor-pointer shadow-lg rounded-lg"
+                                {{-- <canvas class="pdf-thumbnail w-48 h-auto cursor-pointer shadow-lg rounded-lg"
                                     data-pdf="{{ asset('pdf/welfare/8 - Understanding Through Empathy.pdf') }}">
-                                </canvas>
+                                </canvas> --}}
                             </div>
                         </div>
                     </div>
@@ -266,9 +266,9 @@
                         </p>
                         <div id="pdfThumbnails">
                             <div class="pdf-item">
-                                <canvas class="pdf-thumbnail w-48 h-auto cursor-pointer shadow-lg rounded-lg"
+                                {{-- <canvas class="pdf-thumbnail w-48 h-auto cursor-pointer shadow-lg rounded-lg"
                                     data-pdf="{{ asset('pdf/welfare/9 - Steps of Trustworthiness.pdf') }}">
-                                </canvas>
+                                </canvas> --}}
                             </div>
                         </div>
                     </div>
@@ -284,9 +284,9 @@
                         </p>
                         <div id="pdfThumbnails">
                             <div class="pdf-item">
-                                <canvas class="pdf-thumbnail w-48 h-auto cursor-pointer shadow-lg rounded-lg"
+                                {{-- <canvas class="pdf-thumbnail w-48 h-auto cursor-pointer shadow-lg rounded-lg"
                                     data-pdf="{{ asset('pdf/welfare/10 - Compassionate Pathways.pdf') }}">
-                                </canvas>
+                                </canvas> --}}
                             </div>
                         </div>
                     </div>

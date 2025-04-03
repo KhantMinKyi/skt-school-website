@@ -57,7 +57,8 @@
         <div class="main-menu container mx-auto flex items-center justify-between p-4">
             <!-- Logo -->
             <div class="text-xl font-bold w-48 md:w-80 -mt-6 md:-mt-12">
-                <a href="/"><img src="{{ asset('img/skt_riverside_with_tagline.png') }}" alt=""></a>
+                <a href="{{ route('river.home') }}"><img src="{{ asset('img/skt_riverside_with_tagline.png') }}"
+                        alt=""></a>
             </div>
 
             <!-- Menu (Hidden on small screens) -->
@@ -202,8 +203,9 @@
                 <div class="col-lg-3 col-sm-6 col-xs-12">
                     <div class="single_footer p-4">
                         {{-- <a href="index.html"><img src="assets/images/all-img/logo2.png" alt="" /></a> --}}
-                        <a href="/"><img src="{{ asset('img/skt_riverside_with_tagline.png') }}"
-                                class=" max-w-60 sm:max-w-72" alt=""></a>
+                        <a href="{{ route('river.home') }}"><img
+                                src="{{ asset('img/skt_riverside_with_tagline.png') }}" class=" max-w-60 sm:max-w-72"
+                                alt=""></a>
                         <p>
                             We nurture students to become lifelong learners responsible global citizens, and
                             compassionate individuals through a challenging and balanced curriculum in a safe and caring

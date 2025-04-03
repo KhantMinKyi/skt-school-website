@@ -97,7 +97,7 @@
             transform: scale(1.2);
         }
 
-        @media (max-width: 1024px) {
+        /* @media (max-width: 1024px) {
             .zoom-click {
                 width: 300px;
                 transition: width 1s;
@@ -117,7 +117,7 @@
             .zoom-click:hover {
                 width: 450px;
             }
-        }
+        } */
 
         @import url('https://fonts.googleapis.com/css2?family=Smooch+Sans:wght@100..900&display=swap');
     </style>
@@ -196,12 +196,6 @@
                                                 {{-- <a href="#"> --}}
                                                 <img src="{{ asset('img/skt_riverside_campus_aniamted_logo.webp') }}"
                                                     class="img-fluid bounce-up zoom-click" alt="">
-                                                {{-- <video class="img-fluid left-animate bounce-up zoom-click" autoplay loop
-                                                    muted playsinline>
-                                                    <source src="{{ asset('videos/riverside_logo_animation.mov') }}"
-                                                        type="video/mp4">
-                                                    Your browser does not support the video tag.
-                                                </video> --}}
                                             </a>
                                         </div>
                                     </div>

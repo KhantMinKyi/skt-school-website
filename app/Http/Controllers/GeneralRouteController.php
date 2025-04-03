@@ -216,7 +216,9 @@ class GeneralRouteController extends Controller
     {
         $branch = Branch::where('branch_short_name', $param)->first();
         if ($branch && $branch->branch_short_name === 'SKT-CC') {
-            return view('partial_view.guest.education.ib_city', compact('branch'));
+            // No IB In City
+            // return view('partial_view.guest.education.ib_city', compact('branch'));
+            return to_route('city.home');
         } else {
             return view('partial_view.guest.education.ib_riverside', compact('branch'));
         }
