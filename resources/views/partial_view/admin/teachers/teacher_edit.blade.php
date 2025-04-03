@@ -60,7 +60,7 @@
                                     </option>
                                     <option @if ($teacher->teacher_class == 'lower-secondary') selected @endif value='lower-secondary'>Lower
                                         Secondary</option>
-                                    <option @if ($teacher->teacher_class == 'secondary') selected @endif value='secondary'>Primary
+                                    <option @if ($teacher->teacher_class == 'secondary') selected @endif value='secondary'>Secondary
                                     </option>
                                 </select>
                             </div>

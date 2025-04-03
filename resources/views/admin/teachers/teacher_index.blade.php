@@ -144,7 +144,7 @@
                                             <option value='kg'>KG </option>
                                             <option value='primary'>Primary</option>
                                             <option value='lower-secondary'>Lower Secondary</option>
-                                            <option value='secondary'>Primary</option>
+                                            <option value='secondary'>Secondary</option>
                                         </select>
                                     </div>
                                 </div>

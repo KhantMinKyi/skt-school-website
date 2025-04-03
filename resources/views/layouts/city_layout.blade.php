@@ -344,19 +344,37 @@
         document.addEventListener("scroll", function() {
             const navbar = document.getElementById("navbar");
             const navbarUl = document.getElementById("navbarUl");
+            const currentRoute = window.location.pathname;
+
+            const isCampusRoute = ["/skt-riverside-campus", "/skt-city-campus"].includes(currentRoute);
             if (window.scrollY > 50) {
                 navbar.classList.add("bg-white", "text-black", 'shadow-lg');
                 navbar.classList.remove("bg-transparent", "text-white");
-                navbarUl.classList.add("lg:flex");
+                if (isCampusRoute) {
+                    navbarUl.classList.add("lg:flex");
+
+                }
             } else {
                 navbar.classList.add("bg-transparent", "text-white");
                 navbar.classList.remove("bg-white", "text-black", 'shadow-lg');
-                navbarUl.classList.remove("lg:flex");
+                if (isCampusRoute) {
+                    navbarUl.classList.remove("lg:flex");
+                } else {
+                    navbarUl.classList.add("lg:flex");
+                }
             }
         });
     </script>
     <script>
         $(document).ready(function() {
+            const currentRoute = window.location.pathname;
+            const navbarUl = document.getElementById("navbarUl");
+            const isCampusRoute = ["/skt-riverside-campus", "/skt-city-campus"].includes(currentRoute);
+            if (isCampusRoute) {
+                navbarUl.classList.remove("lg:flex");
+            } else {
+                navbarUl.classList.add("lg:flex");
+            }
             $('#switchCampusBtn, #MobileSwitchCampusBtn').on('click', function() {
                 const currentUrl = window.location.href;
                 let newUrl = currentUrl;
