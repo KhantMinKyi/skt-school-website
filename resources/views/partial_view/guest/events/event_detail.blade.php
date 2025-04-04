@@ -20,7 +20,7 @@
                     <h1 id="fading-text" class=" text-2xl md:text-7xl text-center  ml-10">
                         <span class="text-emerald-400">{{ $branch->branch_name }}</span>
                         <br>
-                        <div class="text-white mt-4 hidden sm:block">{{ $event->event_title }} </div>
+                        {{-- <div class="text-white mt-4 hidden sm:block">{{ $event->event_title }} </div> --}}
                     </h1>
                 </div>
             </div>
@@ -33,8 +33,8 @@
                 <div class="col-lg-7 col-sm-12 col-xs-12 w-full lg:w-7/12">
                     <div class="arti_single bg-white p-6 rounded-lg shadow-lg">
                         <div class="arti_img_two mb-4">
-                            <img src="{{ asset($event->event_banner) }}" class="img-fluid w-full rounded-lg"
-                                alt="Blog image" />
+                            {{-- <img src="{{ asset($event->event_banner) }}" class="img-fluid w-full rounded-lg"
+                                alt="Blog image" /> --}}
                         </div>
                         <div class="arti_content text-gray-700 leading-relaxed">
                             <p></p>
