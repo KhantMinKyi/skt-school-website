@@ -607,35 +607,45 @@
         <!-- END CONTAINER  -->
     </section>
     <!-- END POST -->
+    <section class="relative bg-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="relative h-[500px] shadow-md">
+                <!-- Right Image -->
+                <div class="absolute  w-full md:w-[100%] h-[100%]">
+                    <img src="{{ asset('img/banner/student_life_banners/gallery/SKT-CC.jpg') }}" alt="School Campus"
+                        class="w-full h-full object-cover rounded-lg ">
+                </div>
+
+                <!-- Left Red Box (Smaller Height than image) -->
+                <div
+                    class="absolute top-0 left-0 bg-green-600 text-white p-4 sm:p-16 w-full sm:w-[60%] h-[70%] flex flex-col justify-center z-10 rounded-lg">
+                    <h2 class="text-3xl md:text-4xl font-semibold mb-6">What would you like to do?</h2>
+                    <div class="flex space-x-4 md:space-x-20">
+                        <div class="flex flex-col items-center">
+                            <i class="fa-solid fa-pencil-alt text-lg"></i>
+                            <a href="#" class="uppercase text-sm font-semibold mt-2">Apply Now</a>
+                            <div class="w-8 h-1 bg-white mt-1"></div>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <i class="fa-solid fa-eye text-lg"></i>
+                            <a href="#" class="uppercase text-sm font-semibold mt-2">Book a Tour</a>
+                            <div class="w-8 h-1 bg-white mt-1"></div>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <i class="fa-solid fa-book text-lg"></i>
+                            <a href="#" class="uppercase text-sm font-semibold mt-2">Request a Prospectus</a>
+                            <div class="w-8 h-1 bg-white mt-1"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- END  HOME -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // const img = document.querySelector('.home-banner-hero');
 
-            // // Function to handle the scroll event
-            // const handleScroll = () => {
-            //     // Get the scroll position of the page and the position of the image
-            //     const scrollTop = window.scrollY || document.documentElement.scrollTop;
-            //     const imgOffsetTop = img.offsetTop;
-            //     const imgHeight = img.offsetHeight;
-            //     const windowHeight = window.innerHeight;
-
-            //     // Check if the image is within the viewport
-            //     if (scrollTop + windowHeight > imgOffsetTop && scrollTop < imgOffsetTop + imgHeight) {
-            //         img.classList.remove('slide-out');
-            //         img.classList.add('slide-in');
-            //     } else {
-            //         img.classList.remove('slide-in');
-            //         img.classList.add('slide-out');
-            //     }
-            // };
-
-            // // Attach the scroll event listener
-            // window.addEventListener('scroll', handleScroll);
-
-            // // Trigger the scroll handler once to ensure the initial state is correct
-            // handleScroll();
             const words = document.querySelectorAll('#fading-text span');
 
             words.forEach((word, index) => {
