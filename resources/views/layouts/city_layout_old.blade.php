@@ -2,7 +2,7 @@
 <html lang="en">
 @php
     use App\Models\Branch;
-    $layout_branch = Branch::where('branch_short_name', 'SKT-RC')->first();
+    $layout_branch = Branch::where('branch_short_name', 'SKT-CC')->first();
 @endphp
 
 <head>
@@ -11,9 +11,8 @@
     {{-- <script src="https://cdn.tailwindcss.com"></script> --}}
     {{-- @vite('resources/css/app.css') --}}
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('assets/fonts/themify-icons.css') }}">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="{{ asset('assets/fonts/themify-icons.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/owlcarousel/css/owl.carousel.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/owlcarousel/css/owl.theme.css') }}">
     <link rel="stylesheet" href="{{ asset('guests/css/footer.css') }}" />
@@ -36,33 +35,35 @@
 </head>
 
 <body>
-    <nav id="navbar"
-        class="bg-transparent text-white fixed top-0 w-full z-50  transition-all duration-300 bg-gray-900 bg-opacity-90">
+    <nav id="navbar" class="bg-transparent text-white fixed top-0 w-full z-50  transition-all duration-300">
         <div class=" mx-auto flex justify-end p-4">
-
-            {{-- <div class="hidden md:flex  space-x-4 text-emerald-700">
-                <a href="https://www.facebook.com/SKTinternationalCollege/" class="hlc" target="__blank">
+            <!-- Social Icons (Hidden on small screens) -->
+            <div class="hidden md:flex  space-x-4 text-emerald-700">
+                <a href="https://www.facebook.com/BahanInternationalScienceAcademy/" class="hlc" target="__blank">
                     <i class="ti-facebook"></i>
                 </a>
-                <a href="https://www.instagram.com/skt_riverside_campus/" class="hlc" target="__blank">
+                <a href="https://www.instagram.com/skt_city_campus/" class="hlc" target="__blank">
                     <i class="ti-instagram"></i>
                 </a>
-                <a href="https://www.youtube.com/@sktinternationalcollege6656" class="hlc" target="__blank">
+                <a href="https://www.youtube.com/@bahaninternationalsciencea7001" class="hlc" target="__blank">
                     <i class="ti-youtube"></i>
                 </a>
-            </div> --}}
+                {{-- <a href="#" class="hlc" target="__blank">
+                    <i class="ti-mobile"></i>
+                </a> --}}
+            </div>
         </div>
-        <div class="main-menu  flex items-center justify-between p-4 md:mt-4">
+        <div class="main-menu container mx-auto flex items-center justify-between p-4">
             <!-- Logo -->
-            <div class="text-xl font-bold  md:w-80 -mt-8 md:-mt-12">
-                <a href="{{ route('river.home') }}" class="hidden md:block"><img
-                        src="{{ asset('img/skt-bnw-logo.png') }}" alt="" class="w-60"></a>
-                <a href="{{ route('river.home') }}" class=" md:hidden"><img
-                        src="{{ asset('img/mobile_bnw_logo.png') }}" alt="" class="w-16"></a>
+            <div class="text-xl font-bold w-48 md:w-80 -mt-6 md:-mt-12">
+                <a href="{{ route('city.home') }}"><img src="{{ asset('img/skt_city_with_tagline.png') }}"
+                        alt=""></a>
             </div>
 
             <!-- Menu (Hidden on small screens) -->
-            {{-- <ul class="hidden  space-x-6 pb-2 " id="navbarUl">
+            <ul class="hidden  space-x-6 pb-2 " id="navbarUl">
+                {{-- <li><a href="#" class="hover:text-gray-400  font-bold">Home</a></li> --}}
+
                 <li class="relative group -mt-1">
                     <a href="/" class=" font-bold hover:text-teal-500 px-2 py-1 block">Home</a>
                     <ul class="absolute left-0 top-full hidden group-hover:block bg-white w-60 shadow-lg rounded-md">
@@ -133,9 +134,9 @@
                                 class="block px-4 py-2 font-bold hover:text-teal-500">Secondary</a></li>
                         <li class="py-2"><a href="{{ route('igcse.home', $layout_branch->branch_short_name) }}"
                                 class="block px-4 py-2 font-bold hover:text-teal-500">IGCSE</a>
-                        <li class="py-2"><a href="{{ route('ib.home', $layout_branch->branch_short_name) }}"
+                            {{-- <li class="py-2"><a href="{{ route('ib.home', $layout_branch->branch_short_name) }}"
                                 class="block px-4 py-2 font-bold hover:text-teal-500">IB
-                                Diploma Programme (IB DP)</a>
+                                Diploma Programme (IB DP)</a> --}}
                         </li>
                     </ul>
                 </li>
@@ -173,30 +174,19 @@
                         <i class="fa-solid fa-repeat"></i>
                     </button>
                 </li>
-
-            </ul> --}}
-
+            </ul>
             <!-- Mobile Menu Button -->
-            <div class="-mt-8 flex h-full items-stretch">
-                <div class="flex align-middle justify-evenly items-center">
-                    <img src="{{ asset('img/river_line.png') }}" alt="" class="h-4 mr-2 hidden sm:block">
-                    <button id="MobileSwitchCampusBtn" title="Switch Campus"
-                        class="hover:text-green-500 text-xl text-white mr-4 ">
-                        <i class="fa-solid fa-repeat"></i>
-                    </button>
-                </div>
-                <div class="h-full">
-                    <button id="menu-btn"
-                        class="w-full h-full text-2xl  hover:bg-emerald-800 rounded-lg px-4 py-2 flex items-center justify-center">
-                        <i class="fa-solid fa-bars"></i>
-                    </button>
-                </div>
+            <div class="-mt-6 lg:hidden">
+                <button id="MobileSwitchCampusBtn" title="Switch Campus"
+                    class="hover:text-green-500 text-xl mr-4 lg:hidden">
+                    <i class="fa-solid fa-repeat"></i>
+                </button>
+                <button id="menu-btn" class="lg:hidden text-2xl "><i class="fa-solid fa-bars"></i></button>
             </div>
         </div>
 
         <!-- Mobile Menu -->
         @include('layouts.mobile_layout')
-
     </nav>
     <!-- START HOME -->
     @yield('content')
@@ -209,9 +199,8 @@
                 <div class="col-lg-3 col-sm-6 col-xs-12">
                     <div class="single_footer p-4">
                         {{-- <a href="index.html"><img src="assets/images/all-img/logo2.png" alt="" /></a> --}}
-                        <a href="{{ route('river.home') }}"><img
-                                src="{{ asset('img/skt_riverside_with_tagline.png') }}" class=" max-w-60 sm:max-w-72"
-                                alt=""></a>
+                        <a href="{{ route('city.home') }}"><img src="{{ asset('img/skt_city_with_tagline.png') }}"
+                                class=" max-w-60 sm:max-w-72" alt=""></a>
                         <p>
                             We nurture students to become lifelong learners responsible global citizens, and
                             compassionate individuals through a challenging and balanced curriculum in a safe and caring
@@ -278,18 +267,19 @@
                         <div class="sf_contact">
                             <span class="ti-mobile"></span>
                             <h3>Phone number</h3>
-                            <p> 019410010-20</p>
-                            <p>09424463220</p>
+                            <p>(01) 543926 ,+959 456 481 950</p>
+                            <p>09940993141</p>
                         </div>
                         <div class="sf_contact">
                             <span class="ti-email"></span>
                             <h3>Email Address</h3>
-                            <p>contact@sktcollege.edu.mm</p>
+                            <p>contact@bisa.edu.mm</p>
                         </div>
                         <div class="sf_contact">
                             <span class="ti-map"></span>
                             <h3>Address</h3>
-                            <p>235, Shu Khinn Thar Myo Pat Rd. Thaketa Tsp, Yangon</p>
+                            <p>City Campus Pre School :🏦Address - 5/A, Pho Sein Road, Bahan Tsp, Yangon.</p>
+                            <p>City Campus : 🏦 No 25, Pho Sein Road, Bahan Tsp, Yangon.</p>
                         </div>
                     </div>
                 </div>
@@ -351,45 +341,49 @@
             });
         });
 
-        // document.addEventListener("scroll", function() {
-        //     const navbar = document.getElementById("navbar");
-        //     const navbarUl = document.getElementById("navbarUl");
-        //     const currentRoute = window.location.pathname;
+        document.addEventListener("scroll", function() {
+            const navbar = document.getElementById("navbar");
+            const navbarUl = document.getElementById("navbarUl");
+            const currentRoute = window.location.pathname;
 
-        //     const isCampusRoute = ["/skt-riverside-campus", "/skt-city-campus"].includes(currentRoute);
+            const isCampusRoute = ["/skt-riverside-campus", "/skt-city-campus"].includes(currentRoute);
+            if (window.scrollY > 50) {
+                navbar.classList.add("bg-white", "text-black", 'shadow-lg');
+                navbar.classList.remove("bg-transparent", "text-white");
+                if (isCampusRoute) {
+                    navbarUl.classList.add("lg:flex");
 
-        //     if (window.scrollY > 50) {
-        //         // navbar.classList.add("bg-white", "text-black", 'shadow-lg');
-        //         // navbar.classList.remove("bg-transparent", "text-white");
-        //         if (isCampusRoute) {
-        //             navbarUl.classList.add("lg:flex");
-
-        //         }
-        //     } else {
-        //         // navbar.classList.add("bg-transparent", "text-white");
-        //         // navbar.classList.remove("bg-white", "text-black", 'shadow-lg');
-        //         if (isCampusRoute) {
-        //             navbarUl.classList.remove("lg:flex");
-        //         } else {
-        //             navbarUl.classList.add("lg:flex");
-        //         }
-        //     }
-        // });
+                }
+            } else {
+                navbar.classList.add("bg-transparent", "text-white");
+                navbar.classList.remove("bg-white", "text-black", 'shadow-lg');
+                if (isCampusRoute) {
+                    navbarUl.classList.remove("lg:flex");
+                } else {
+                    navbarUl.classList.add("lg:flex");
+                }
+            }
+        });
     </script>
     <script>
         $(document).ready(function() {
             const currentRoute = window.location.pathname;
+            const navbarUl = document.getElementById("navbarUl");
             const isCampusRoute = ["/skt-riverside-campus", "/skt-city-campus"].includes(currentRoute);
-            $('#MobileSwitchCampusBtn').on('click', function() {
+            if (isCampusRoute) {
+                navbarUl.classList.remove("lg:flex");
+            } else {
+                navbarUl.classList.add("lg:flex");
+            }
+            $('#switchCampusBtn, #MobileSwitchCampusBtn').on('click', function() {
                 const currentUrl = window.location.href;
                 let newUrl = currentUrl;
+
                 // Define branch names for switching
                 const cityBranch = 'skt-city-campus';
                 const riversideBranch = 'skt-riverside-campus';
                 if (currentUrl.includes('/event/event-detail/') || currentUrl.includes(
-                        '/student_life/news-detail/') || currentUrl.includes(
-                        '/admission/career-detail/') || currentUrl.includes(
-                        '/education/ib/')) {
+                        '/student_life/news-detail/')) {
                     return alert('You Cannot Switch Campus at that Page')
                 }
                 // Check which branch is currently active and switch
@@ -408,8 +402,8 @@
 
                     // Handle URLs for /about_us/principal_message/{id}
                     if (currentUrl.includes('/about_us/principal_message/')) {
-                        newUrl = currentUrl.replace('about_us/principal_message/1',
-                            'about_us/principal_message/2');
+                        newUrl = currentUrl.replace('about_us/principal_message/2',
+                            'about_us/principal_message/1');
                     }
                 }
 
@@ -418,7 +412,6 @@
             });
         });
     </script>
-
 </body>
 
 </html>

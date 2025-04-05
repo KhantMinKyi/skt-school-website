@@ -36,11 +36,10 @@
 </head>
 
 <body>
-    <nav id="navbar"
-        class="bg-transparent text-white fixed top-0 w-full z-50  transition-all duration-300 bg-gray-900 bg-opacity-90">
+    <nav id="navbar" class="bg-transparent text-white fixed top-0 w-full z-50  transition-all duration-300">
         <div class=" mx-auto flex justify-end p-4">
-
-            {{-- <div class="hidden md:flex  space-x-4 text-emerald-700">
+            <!-- Social Icons (Hidden on small screens) -->
+            <div class="hidden md:flex  space-x-4 text-emerald-700">
                 <a href="https://www.facebook.com/SKTinternationalCollege/" class="hlc" target="__blank">
                     <i class="ti-facebook"></i>
                 </a>
@@ -50,19 +49,22 @@
                 <a href="https://www.youtube.com/@sktinternationalcollege6656" class="hlc" target="__blank">
                     <i class="ti-youtube"></i>
                 </a>
-            </div> --}}
+                {{-- <a href="#" class="hlc" target="__blank">
+                    <i class="ti-mobile"></i>
+                </a> --}}
+            </div>
         </div>
-        <div class="main-menu  flex items-center justify-between p-4 md:mt-4">
+        <div class="main-menu container mx-auto flex items-center justify-between p-4">
             <!-- Logo -->
-            <div class="text-xl font-bold  md:w-80 -mt-8 md:-mt-12">
-                <a href="{{ route('river.home') }}" class="hidden md:block"><img
-                        src="{{ asset('img/skt-bnw-logo.png') }}" alt="" class="w-60"></a>
-                <a href="{{ route('river.home') }}" class=" md:hidden"><img
-                        src="{{ asset('img/mobile_bnw_logo.png') }}" alt="" class="w-16"></a>
+            <div class="text-xl font-bold w-48 md:w-80 -mt-6 md:-mt-12">
+                <a href="{{ route('river.home') }}"><img src="{{ asset('img/skt_riverside_with_tagline.png') }}"
+                        alt=""></a>
             </div>
 
             <!-- Menu (Hidden on small screens) -->
-            {{-- <ul class="hidden  space-x-6 pb-2 " id="navbarUl">
+            <ul class="hidden  space-x-6 pb-2 " id="navbarUl">
+                {{-- <li><a href="#" class="hover:text-gray-400  font-bold">Home</a></li> --}}
+
                 <li class="relative group -mt-1">
                     <a href="/" class=" font-bold hover:text-teal-500 px-2 py-1 block">Home</a>
                     <ul class="absolute left-0 top-full hidden group-hover:block bg-white w-60 shadow-lg rounded-md">
@@ -174,23 +176,15 @@
                     </button>
                 </li>
 
-            </ul> --}}
+            </ul>
 
             <!-- Mobile Menu Button -->
-            <div class="-mt-8 flex h-full items-stretch">
-                <div class="flex align-middle justify-evenly items-center">
-                    <img src="{{ asset('img/river_line.png') }}" alt="" class="h-4 mr-2 hidden sm:block">
-                    <button id="MobileSwitchCampusBtn" title="Switch Campus"
-                        class="hover:text-green-500 text-xl text-white mr-4 ">
-                        <i class="fa-solid fa-repeat"></i>
-                    </button>
-                </div>
-                <div class="h-full">
-                    <button id="menu-btn"
-                        class="w-full h-full text-2xl  hover:bg-emerald-800 rounded-lg px-4 py-2 flex items-center justify-center">
-                        <i class="fa-solid fa-bars"></i>
-                    </button>
-                </div>
+            <div class="-mt-6 lg:hidden">
+                <button id="MobileSwitchCampusBtn" title="Switch Campus"
+                    class="hover:text-green-500 text-xl mr-4 lg:hidden">
+                    <i class="fa-solid fa-repeat"></i>
+                </button>
+                <button id="menu-btn" class="lg:hidden text-2xl "><i class="fa-solid fa-bars"></i></button>
             </div>
         </div>
 
@@ -351,38 +345,45 @@
             });
         });
 
-        // document.addEventListener("scroll", function() {
-        //     const navbar = document.getElementById("navbar");
-        //     const navbarUl = document.getElementById("navbarUl");
-        //     const currentRoute = window.location.pathname;
+        document.addEventListener("scroll", function() {
+            const navbar = document.getElementById("navbar");
+            const navbarUl = document.getElementById("navbarUl");
+            const currentRoute = window.location.pathname;
 
-        //     const isCampusRoute = ["/skt-riverside-campus", "/skt-city-campus"].includes(currentRoute);
+            const isCampusRoute = ["/skt-riverside-campus", "/skt-city-campus"].includes(currentRoute);
 
-        //     if (window.scrollY > 50) {
-        //         // navbar.classList.add("bg-white", "text-black", 'shadow-lg');
-        //         // navbar.classList.remove("bg-transparent", "text-white");
-        //         if (isCampusRoute) {
-        //             navbarUl.classList.add("lg:flex");
+            if (window.scrollY > 50) {
+                navbar.classList.add("bg-white", "text-black", 'shadow-lg');
+                navbar.classList.remove("bg-transparent", "text-white");
+                if (isCampusRoute) {
+                    navbarUl.classList.add("lg:flex");
 
-        //         }
-        //     } else {
-        //         // navbar.classList.add("bg-transparent", "text-white");
-        //         // navbar.classList.remove("bg-white", "text-black", 'shadow-lg');
-        //         if (isCampusRoute) {
-        //             navbarUl.classList.remove("lg:flex");
-        //         } else {
-        //             navbarUl.classList.add("lg:flex");
-        //         }
-        //     }
-        // });
+                }
+            } else {
+                navbar.classList.add("bg-transparent", "text-white");
+                navbar.classList.remove("bg-white", "text-black", 'shadow-lg');
+                if (isCampusRoute) {
+                    navbarUl.classList.remove("lg:flex");
+                } else {
+                    navbarUl.classList.add("lg:flex");
+                }
+            }
+        });
     </script>
     <script>
         $(document).ready(function() {
             const currentRoute = window.location.pathname;
+            const navbarUl = document.getElementById("navbarUl");
             const isCampusRoute = ["/skt-riverside-campus", "/skt-city-campus"].includes(currentRoute);
-            $('#MobileSwitchCampusBtn').on('click', function() {
+            if (isCampusRoute) {
+                navbarUl.classList.remove("lg:flex");
+            } else {
+                navbarUl.classList.add("lg:flex");
+            }
+            $('#switchCampusBtn, #MobileSwitchCampusBtn').on('click', function() {
                 const currentUrl = window.location.href;
                 let newUrl = currentUrl;
+
                 // Define branch names for switching
                 const cityBranch = 'skt-city-campus';
                 const riversideBranch = 'skt-riverside-campus';
@@ -408,8 +409,16 @@
 
                     // Handle URLs for /about_us/principal_message/{id}
                     if (currentUrl.includes('/about_us/principal_message/')) {
+                        // Switch between SKT-CC and SKT-RC in /about_us/principal_message/{id}
                         newUrl = currentUrl.replace('about_us/principal_message/1',
                             'about_us/principal_message/2');
+                        // if (currentUrl.includes(riversideBranch)) {
+                        //     alert('as');
+                        //     newUrl = currentUrl.replace(riversideBranch, 'cityBranch');
+                        // } else if (currentUrl.includes(cityBranch)) {
+                        //     alert('asss');
+                        //     newUrl = currentUrl.replace(cityBranch, riversideBranch);
+                        // }
                     }
                 }
 
