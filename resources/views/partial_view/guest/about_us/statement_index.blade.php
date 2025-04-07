@@ -13,9 +13,11 @@
                 Your browser does not support the video tag.
             </video>
 
-            <div class="absolute inset-0 bg-black opacity-80"></div>
+            <div class="absolute inset-0 bg-black opacity-80 fade-in-out-background "></div>
         </div>
-        <div class="home_content container mx-auto flex flex-col justify-center items-center  ">
+        {{-- <div class="home_content container mx-auto flex flex-col justify-center items-center  "> --}}
+        <div id=""
+            class="home_content fade-in-out container mx-auto flex flex-col justify-center items-center will_hide_div">
             <h1 id="fading-text" class=" text-center  ml-10">
                 <span class="text-emerald-400">{{ $our_statement->branch->branch_name }}</span>
                 <br>

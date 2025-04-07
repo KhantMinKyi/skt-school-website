@@ -8,9 +8,10 @@
 }
 .home_content h1 {
     font-size: 80px;
-    font-weight: 700;
+    /* font-weight: 700; */
     line-height: 100px;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
+    font-family: "Red Hat Display", sans-serif;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -38,5 +39,7 @@
         line-height: 40px;
     }
 }
-
+.section-title h2{
+    font-family: "Red Hat Display", sans-serif;
+}
 /*  */

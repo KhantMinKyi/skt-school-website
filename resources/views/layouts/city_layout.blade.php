@@ -20,16 +20,63 @@
     <link rel="icon" href="{{ asset('assets/images/icon/icon.png') }}" type="image/png">
     <link rel="stylesheet" href="{{ asset('guests/css/nav.css') }}" />
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Smooch+Sans:wght@100..900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+
         .hlc {
             position: relative;
             margin-right: 10px;
             display: inline-block;
         }
 
-        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Smooch+Sans:wght@100..900&display=swap');
 
         body {
             font-family: 'Montserrat', sans-serif;
+        }
+
+        @keyframes fadeInOut {
+            0% {
+                opacity: 0;
+            }
+
+            10% {
+                opacity: 1;
+            }
+
+            90% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+
+        @keyframes fadeInOutBackground {
+            0% {
+                opacity: 0;
+            }
+
+            10% {
+                opacity: 0.7;
+            }
+
+            90% {
+                opacity: 0.7;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+
+        .fade-in-out {
+            animation: fadeInOut 2s ease-in-out forwards;
+        }
+
+        .fade-in-out-background {
+            animation: fadeInOutBackground 2s ease-in-out forwards;
         }
     </style>
 </head>

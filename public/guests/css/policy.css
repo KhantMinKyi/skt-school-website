@@ -1,0 +1,120 @@
+.section-title {
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.section-title h2 {
+  font-size: 14px;
+  font-weight: 700;
+  padding: 0;
+  margin: 0 0 10px 0;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #2eca7f;
+  line-height: 30px;
+}
+.section-title h2::after {
+  content: "";
+  width: 120px;
+  height: 1px;
+  display: inline-block;
+  background: #2eca7f;
+  margin: 4px 10px;
+}
+.section-title p {
+  width: 60%;
+  margin: 0;
+  font-size: 42px;
+  font-weight: 800;
+  text-transform: capitalize;
+  line-height: 46px;
+  color: #1a2d62;
+}
+@media only screen and (max-width: 480px) {
+  .section-title p {
+      width: 100%;
+      font-size: 24px;
+  }
+}
+h1.section-title-white {
+  color: #fff;
+}
+p.section-title-white {
+  color: #fff;
+}
+.section-title-two {
+  margin-bottom: 60px;
+}
+.section-title-two h2 {
+  font-weight: 800;
+  font-size: 50px;
+  text-align: center;
+}
+.section-title-two h2 span {
+  color: #2eca7f;
+}
+.single_tca {
+  background: #fff;
+  border-radius: 5px;
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+.single_tca img,
+.single_tca i {
+  float: left;
+  margin-right: 20px;
+}
+.single_tca h2 {
+  overflow: hidden;
+}
+.single_tca h2 a {
+  color: #1a2d62;
+
+  font-weight: 700;
+  transition: 0.3s;
+  margin-bottom: 10px;
+  display: block;
+}
+.single_tca span {
+  color: #2eca7f;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.pd_tab_area {
+  margin-top: 30px;
+  background: #fff none repeat scroll 0 0;
+  border: 1px solid rgba(0, 0, 0, 0.02);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.02);
+  display: block;
+  padding: 31px 32px;
+}
+.pd_tab_area p {
+  margin-bottom: 15px;
+  /* display: inline-block; */
+}
+.pd_tab_btn {
+  margin-bottom: 10px;
+  border: none;
+}
+.pd_tab_btn li {
+  display: block;
+  float: left;
+  margin-right: 10px;
+  padding-bottom: 11px;
+  position: relative;
+}
+.pd_tab_btn li a {
+  color: #000;
+  display: block;
+  font-weight: 400;
+  text-transform: capitalize;
+  padding: 7px 20px;
+  border-radius: 20px;
+  transition: 0.5s;
+}
+.pd_tab_btn li a.active {
+  background: #2eca7f;
+  color: #fff;
+  box-shadow: 4px 3px 5px rgba(0, 0, 0, 0.07);
+}

@@ -1,13 +1,17 @@
 @extends($layout)
 
 @section('content')
+    <style>
+
+    </style>
+
     <link rel="stylesheet" href="{{ asset('guests/css/principal_message.css') }}" />
 
 
     <section id="home" class="relative  lg:min-h-screen flex items-center justify-center  ">
         <!-- Background Video -->
-        <div class="absolute inset-0 w-full h-full">
-            <video autoplay loop muted playsinline class="lg:absolute block top-0 left-0 w-full lg:h-full object-cover">
+        <div class="absolute inset-0 w-full h-full ">
+            <video autoplay loop muted playsinline class="lg:absolute block top-0 left-0 w-full lg:h-full object-cover ">
                 @if ($principal_message->branch->branch_short_name == 'SKT-RC')
                     <source src="{{ asset('videos/skt_riverside_campus.mp4') }}" type="video/mp4">
                 @else
@@ -15,19 +19,16 @@
                 @endif
                 Your browser does not support the video tag.
             </video>
-            <div class="absolute inset-0 bg-black opacity-80"></div>
+            <div class="absolute inset-0 bg-black opacity-80 fade-in-out-background  "></div>
         </div>
-        {{-- <div class=" "> --}}
-        <div class="home_content container mx-auto flex flex-col justify-center items-center  ">
+        {{-- <div class="home_content container mx-auto flex flex-col justify-center items-center  "> --}}
+        <div id=""
+            class="home_content fade-in-out container mx-auto flex flex-col justify-center items-center will_hide_div">
             <h1 id="fading-text" class=" text-center  ml-10">
                 <span class="text-emerald-400">{{ $principal_message->branch->branch_name }}</span>
                 <br>
                 <span class="text-white hidden sm:block">Principal's Message</span>
             </h1>
-            {{-- <div class="flex justify-center" style="cursor: pointer">
-                <img src="{{ asset($principal_message->branch->branch_logo) }}" width="240" class="bounce-up"
-                    alt="">
-            </div> --}}
         </div>
 
         {{-- </div> --}}
