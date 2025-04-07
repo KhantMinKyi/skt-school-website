@@ -82,9 +82,8 @@
                 <div class="col-lg-3 col-sm-6 col-xs-12">
                     <div class="single_footer p-4">
                         {{-- <a href="index.html"><img src="assets/images/all-img/logo2.png" alt="" /></a> --}}
-                        <a href="{{ route('river.home') }}"><img
-                                src="{{ asset('img/skt_riverside_with_tagline.png') }}" class=" max-w-60 sm:max-w-72"
-                                alt=""></a>
+                        <a href="{{ route('river.home') }}"><img src="{{ asset('img/footer_logo.png') }}"
+                                class=" max-w-60 sm:max-w-72" alt=""></a>
                         <p>
                             We nurture students to become lifelong learners responsible global citizens, and
                             compassionate individuals through a challenging and balanced curriculum in a safe and caring
@@ -93,21 +92,24 @@
                     </div>
                     <div class="foot_social p-4">
                         <ul class=" ">
-                            <li><a href="#" class="hlc  ">
+                            <li><a href="https://www.facebook.com/SKTinternationalCollege/" target="__blank"
+                                    class="hlc  ">
                                     <i class="ti-facebook"></i>
                                 </a></li>
                             <li>
-                                <a href="#" class="hlc ">
+                                <a href="https://www.instagram.com/skt_riverside_campus/" target="__blank"
+                                    class="hlc ">
                                     <i class="ti-instagram"></i>
                                 </a>
                             </li>
                             <li>
-                                <a href="#" class="hlc ">
+                                <a href="https://www.youtube.com/@sktinternationalcollege6656" target="__blank"
+                                    class="hlc ">
                                     <i class="ti-youtube"></i>
                                 </a>
                             </li>
                             <li>
-                                <a href="#" class="hlc ">
+                                <a href="tel:019410010" target="__blank" class="hlc ">
                                     <i class="ti-mobile"></i>
                                 </a>
                             </li>
@@ -133,13 +135,25 @@
                     <div class="single_footer p-4">
                         <h4>Menu</h4>
                         <ul>
-                            <li><a href="/">Home</a></li>
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">Student Life</a></li>
-                            <li><a href="#">Education</a></li>
-                            <li><a href="#">Admission</a></li>
-                            <li><a href="#">Event</a></li>
-                            <li><a href="#">Contact</a></li>
+                            <li class=" hover:text-emerald-500"><a href="/">Home</a></li>
+                            <li class=" hover:text-emerald-500"><a
+                                    href="{{ route('our-history.home', $layout_branch->branch_short_name) }}">About
+                                    Us</a></li>
+                            <li class=" hover:text-emerald-500"><a
+                                    href="{{ route('alumni.home', $layout_branch->branch_short_name) }}">Student
+                                    Life</a>
+                            </li>
+                            <li class=" hover:text-emerald-500"><a
+                                    href="{{ route('pre-school.home', $layout_branch->branch_short_name) }}">Education</a>
+                            </li>
+                            <li class=" hover:text-emerald-500"><a
+                                    href="{{ route('student-admission.home', $layout_branch->branch_short_name) }}">Admission</a>
+                            </li>
+                            <li class=" hover:text-emerald-500"><a
+                                    href="{{ route('event.home', $layout_branch->branch_short_name) }}">Event</a></li>
+                            <li class=" hover:text-emerald-500"><a
+                                    href="{{ route('contact_us.home', $layout_branch->branch_short_name) }}">Contact</a>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -230,31 +244,6 @@
                 });
             });
         });
-
-        // document.addEventListener("scroll", function() {
-        //     const navbar = document.getElementById("navbar");
-        //     const navbarUl = document.getElementById("navbarUl");
-        //     const currentRoute = window.location.pathname;
-
-        //     const isCampusRoute = ["/skt-riverside-campus", "/skt-city-campus"].includes(currentRoute);
-
-        //     if (window.scrollY > 50) {
-        //         // navbar.classList.add("bg-white", "text-black", 'shadow-lg');
-        //         // navbar.classList.remove("bg-transparent", "text-white");
-        //         if (isCampusRoute) {
-        //             navbarUl.classList.add("lg:flex");
-
-        //         }
-        //     } else {
-        //         // navbar.classList.add("bg-transparent", "text-white");
-        //         // navbar.classList.remove("bg-white", "text-black", 'shadow-lg');
-        //         if (isCampusRoute) {
-        //             navbarUl.classList.remove("lg:flex");
-        //         } else {
-        //             navbarUl.classList.add("lg:flex");
-        //         }
-        //     }
-        // });
     </script>
     <script>
         $(document).ready(function() {
@@ -300,32 +289,45 @@
     </script>
     <script>
         $(document).ready(function() {
-            // Open menu
-            $("#open-menu").on("click", function() {
-                $("#mobile-wrapper").css("width", "300px");
+            let isOpen = false;
+
+            // Toggle menu open/close
+            $("#open-menu").on("click", function(e) {
+                e.stopPropagation();
+                if (!isOpen) {
+                    $("#mobile-wrapper").css("width", "300px");
+                    isOpen = true;
+                } else {
+                    $("#mobile-wrapper").css("width", "0");
+                    isOpen = false;
+                }
             });
 
-            // Close menu
+            // Close when clicking the close button
             $("#close-menu").on("click", function() {
                 $("#mobile-wrapper").css("width", "0");
+                isOpen = false;
             });
 
-            // Dropdown toggle
-            // $(".dropdown-btn").on("click", function(e) {
-            //     e.preventDefault();
+            // Close when clicking outside the menu
+            $(document).on("click", function(e) {
+                const menuWrapper = $("#mobile-wrapper");
+                const openBtn = $("#open-menu");
 
-            //     const $menu = $(this).next(".dropdown-menu");
-
-            //     // Close other menus
-            //     $(".dropdown-menu").not($menu).slideUp().addClass("hidden");
-
-            //     // Toggle current
-            //     $menu.stop(true, true).slideToggle(300, function() {
-            //         $(this).toggleClass("hidden", !$menu.is(":visible"));
-            //     });
-            // });
+                // If click is not on the menu or the open button
+                if (
+                    !menuWrapper.is(e.target) &&
+                    menuWrapper.has(e.target).length === 0 &&
+                    !openBtn.is(e.target) &&
+                    openBtn.has(e.target).length === 0
+                ) {
+                    menuWrapper.css("width", "0");
+                    isOpen = false;
+                }
+            });
         });
     </script>
+
 </body>
 
 </html>

@@ -344,9 +344,10 @@
                     </p>
                 </div>
             </div>
-            <div class="flex justify-center items-center ">
+            <div class="flex flex-col justify-center items-center ">
                 <img class=" w-[240px] h-[240px] md:w-[420px] md:h-[420px]  object-cover rounded-full"
                     src="{{ asset($branch->principal_message->principal_photo) }}" alt="" />
+                <p class="mt-4 bold text-xl md:text-2xl italic">{{ $branch->principal_message->principal_name }}</p>
             </div>
         </div>
     </section>
