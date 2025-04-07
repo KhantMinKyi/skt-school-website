@@ -10,6 +10,7 @@
     font-weight: 700;
     margin-left: 60px;
     margin-bottom: 30px;
+    font-family: "Red Hat Display", sans-serif;
 }
 .arti_sp img {
     margin-bottom: 30px;
@@ -290,3 +291,6 @@
     text-decoration: underline;
 }
 /*End category*/
+.will_hide_div h2{
+    font-family: "Red Hat Display", sans-serif;
+}

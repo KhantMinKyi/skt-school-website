@@ -5,10 +5,10 @@
     <link rel="stylesheet" href="{{ asset('assets/css/slider.css') }}" />
 
     <div id="kenburns_061"
-        class="carousel max-h-screen slide ps_indicators_txt_icon ps_control_txt_icon data-bs-target kbrns_zoomInOut thumb_scroll_x swipe_x ps_easeOutQuart relative w-full overflow-hidden"
+        class="carousel  max-h-screen slide ps_indicators_txt_icon ps_control_txt_icon data-bs-target kbrns_zoomInOut thumb_scroll_x swipe_x ps_easeOutQuart relative w-full overflow-hidden"
         data-ride="carousel" data-pause="hover" data-interval="10000" data-duration="2000">
         <!-- Wrapper For Slides -->
-        <div class="carousel-inner flex transition-transform duration-1000 ease-in-out" id="carouselInner">
+        <div class="carousel-inner flex transition-transform duration-1000 ease-in-out mt-20 sm:mt-0" id="carouselInner">
             <!-- First Slide -->
             <div class="carousel-item active w-full flex-shrink-0">
                 <img src="{{ asset('img/banner/student_life_banners/alumini/' . $branch->branch_short_name . '.jpg') }}"
@@ -17,8 +17,8 @@
                     data-animation="animated fadeInRight">
                     <h2 class=" md:text-4xl font-semibold text-teal-500 uppercase">Alumni</h2>
                 </div> --}}
-                <div class="absolute inset-0 mx-auto flex flex-col justify-center items-center  ">
-                    <h1 id="fading-text" class=" text-xl sm:text-5xl lg:text-7xl  text-center  ml-10">
+                <div class="absolute inset-0 mx-auto flex flex-col justify-center items-center  fade-in-out will_hide_div">
+                    <h1 id="fading-text" class=" text-xl sm:text-5xl lg:text-7xl  text-center  ml-10 mt-20 sm:mt-0">
                         <span class="text-emerald-400">{{ $branch->branch_name }}</span>
                         <br>
                         <span class="text-white hidden sm:block">Alumni </span>
@@ -51,9 +51,9 @@
         </div>
     </section>
 
-    <div class="bg-gradient-to-b from-gray-100 to-white py-16 px-6 md:px-16">
+    <div class="bg-gradient-to-b from-gray-100 to-white py-16 px-6 md:px-16 nationalities_div">
         <!-- Heading -->
-        <h2 class="text-center text-3xl md:text-4xl font-semibold text-blue-900 uppercase">
+        <h2 class="text-center text-3xl md:text-4xl font-semibold text-blue-900 uppercase ">
             Students' Nationalities
         </h2>
 
@@ -72,13 +72,13 @@
                 <!-- Labels above progress bar segments -->
                 <div class="flex justify-between">
                     <div class="w-2/3 text-center">
-                        <span class="text-sm md:text-xl font-bold text-blue-900">Local</span>
+                        <span class="text-sm md:text-xl font-bold text-blue-900">Western</span>
                     </div>
                     <div class="w-1/6 text-center">
                         <span class="text-sm md:text-xl font-bold text-green-400">Asia</span>
                     </div>
                     <div class="w-1/6 text-center">
-                        <span class="text-sm md:text-xl font-bold text-blue-500">Western</span>
+                        <span class="text-sm md:text-xl font-bold text-blue-500">Local</span>
                     </div>
                 </div>
                 <!-- Progress Bar -->
