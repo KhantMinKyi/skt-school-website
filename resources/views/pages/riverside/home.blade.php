@@ -456,47 +456,7 @@
                         </a>
                     </div>
                 @endforeach
-                <!-- END COL -->
-                <div class="event-slide mr-4 hover:shadow-md hover:cursor-pointer">
-                    <div class="event-img rounded-t-md">
-                        <img src="{{ asset('assets/images/event/e1.png') }}" alt="" />
-                        <div class="event-date">
-                            <span class="date">20</span>
-                            <span class="month">Oct</span>
-                        </div>
-                    </div>
-                    <div class="event-content">
-                        <h3 class="hover:text-teal-500">
-                            <a href="#">Electrical Engineering of Batparder new event</a>
-                        </h3>
-                        <span><i class="fa fa-clock-o"></i>10.00AM - 12.00PM</span>
-                        <span><i class="fa fa-table"></i><strong>At Penn School</strong></span>
-                        <p>
-                            Lorem ipsum dolor sit amet magna consectetur adipisicing elit.
-                        </p>
-                    </div>
-                </div>
-                <!-- END COL -->
-                <div class="event-slide mr-4 hover:shadow-md hover:cursor-pointer">
-                    <div class="event-img rounded-t-md">
-                        <img src="{{ asset('assets/images/event/e1.png') }}" alt="" />
-                        <div class="event-date">
-                            <span class="date">20</span>
-                            <span class="month">Oct</span>
-                        </div>
-                    </div>
-                    <div class="event-content">
-                        <h3 class="hover:text-teal-500">
-                            <a href="#">Electrical Engineering of Batparder new event</a>
-                        </h3>
-                        <span><i class="fa fa-clock-o"></i>10.00AM - 12.00PM</span>
-                        <span><i class="fa fa-table"></i><strong>At Penn School</strong></span>
-                        <p>
-                            Lorem ipsum dolor sit amet magna consectetur adipisicing elit.
-                        </p>
-                    </div>
-                </div>
-                <!-- END COL -->
+
 
             </div>
             <!-- END ROW -->
@@ -546,61 +506,7 @@
                     </div>
                 @endforeach
 
-                <!-- END COL-->
-                <div class="mr-2">
-                    <div class="single_blog ">
-                        <img src="assets/images/blog/3.png" class="img-fluid" alt="image" />
-                        <div class="content_box">
-                            <span>August 28, 2023 |
-                                <a href="blog_single.html">Programing</a></span>
-                            <h2>
-                                <a href="blog_single.html">Education Is About Create Leaders For Tomorrow
-                                </a>
-                            </h2>
 
-                            <a href="#" class="relative inline-block mx-auto py-4 px-6 overflow-hidden group">
-                                <span
-                                    class="relative font-semibold text-[#1a2d62] uppercase px-6 py-4 transition-all duration-300 group-hover:text-white">
-                                    <!-- Background animation -->
-                                    <span class="absolute inset-0 flex items-center">
-                                        <span
-                                            class="w-8 h-8 bg-teal-400 rounded-full transition-all duration-300 origin-left transform scale-100 group-hover:w-full group-hover:h-full group-hover:scale-x-100"></span>
-                                    </span>
-                                    <span class="relative z-10">READ MORE <i class="fa-solid fa-caret-right ml-1"></i>
-                                    </span>
-                                </span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <!-- END COL-->
-                <div class="mr-2" data-wow-duration="1s" data-wow-delay="0.3s" data-wow-offset="0">
-                    <div class="single_blog">
-                        <img src="assets/images/blog/3.png" class="img-fluid" alt="image" />
-                        <div class="content_box">
-                            <span>August 28, 2023 |
-                                <a href="blog_single.html">Programing</a></span>
-                            <h2>
-                                <a href="blog_single.html">Education Is About Create Leaders For Tomorrow
-                                </a>
-                            </h2>
-
-                            <a href="#" class="relative inline-block mx-auto py-4 px-6 overflow-hidden group">
-                                <span
-                                    class="relative font-semibold text-[#1a2d62] uppercase px-6 py-4 transition-all duration-300 group-hover:text-white">
-                                    <!-- Background animation -->
-                                    <span class="absolute inset-0 flex items-center">
-                                        <span
-                                            class="w-8 h-8 bg-teal-400 rounded-full transition-all duration-300 origin-left transform scale-100 group-hover:w-full group-hover:h-full group-hover:scale-x-100"></span>
-                                    </span>
-                                    <span class="relative z-10">READ MORE <i class="fa-solid fa-caret-right ml-1"></i>
-                                    </span>
-                                </span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <!-- END COL-->
             </div>
             <!-- / END ROW -->
         </div>
@@ -612,23 +518,25 @@
             <div class="relative h-[500px] shadow-md">
                 <!-- Right Image -->
                 <div class="absolute  w-full md:w-[100%] h-[100%]">
-                    <img src="{{ asset('img/banner/student_life_banners/gallery/SKT-CC.jpg') }}" alt="School Campus"
+                    <img src="{{ asset('img/banner/student_life_banners/news/SKT-RC.jpg') }}" alt="School Campus"
                         class="w-full h-full object-cover rounded-lg ">
                 </div>
 
                 <!-- Left Red Box (Smaller Height than image) -->
                 <div
-                    class="absolute top-0 left-0 bg-green-600 text-white p-4 sm:p-16 w-full sm:w-[60%] h-[70%] flex flex-col justify-center z-10 rounded-lg">
+                    class="absolute top-0 left-0 bg-green-600 bg-opacity-80 text-white p-4 sm:p-16 w-full sm:w-[60%] h-[70%] flex flex-col justify-center z-10 rounded-lg">
                     <h2 class="text-3xl md:text-4xl font-semibold mb-6">What would you like to do?</h2>
                     <div class="flex space-x-4 md:space-x-20">
                         <div class="flex flex-col items-center">
                             <i class="fa-solid fa-pencil-alt text-lg"></i>
-                            <a href="#" class="uppercase text-sm font-semibold mt-2">Apply Now</a>
+                            <a href="{{ route('student-admission.home', $branch->branch_short_name) }}"
+                                class="uppercase text-sm font-semibold mt-2">Apply Now</a>
                             <div class="w-8 h-1 bg-white mt-1"></div>
                         </div>
                         <div class="flex flex-col items-center">
                             <i class="fa-solid fa-eye text-lg"></i>
-                            <a href="#" class="uppercase text-sm font-semibold mt-2">Book a Tour</a>
+                            <a href="{{ route('contact_us.home', $branch->branch_short_name) }}"
+                                class="uppercase text-sm font-semibold mt-2">Book a Tour</a>
                             <div class="w-8 h-1 bg-white mt-1"></div>
                         </div>
                         <div class="flex flex-col items-center">

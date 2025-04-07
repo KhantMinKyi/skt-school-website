@@ -37,20 +37,8 @@
 
 <body>
     <nav id="navbar"
-        class="bg-transparent text-white fixed top-0 w-full z-50  transition-all duration-300 bg-gray-900 bg-opacity-90">
+        class=" text-white fixed top-0 w-full z-50  transition-all duration-300 bg-gray-900 bg-opacity-90">
         <div class=" mx-auto flex justify-end p-4">
-
-            {{-- <div class="hidden md:flex  space-x-4 text-emerald-700">
-                <a href="https://www.facebook.com/SKTinternationalCollege/" class="hlc" target="__blank">
-                    <i class="ti-facebook"></i>
-                </a>
-                <a href="https://www.instagram.com/skt_riverside_campus/" class="hlc" target="__blank">
-                    <i class="ti-instagram"></i>
-                </a>
-                <a href="https://www.youtube.com/@sktinternationalcollege6656" class="hlc" target="__blank">
-                    <i class="ti-youtube"></i>
-                </a>
-            </div> --}}
         </div>
         <div class="main-menu  flex items-center justify-between p-4 md:mt-4">
             <!-- Logo -->
@@ -60,122 +48,6 @@
                 <a href="{{ route('river.home') }}" class=" md:hidden"><img
                         src="{{ asset('img/mobile_bnw_logo.png') }}" alt="" class="w-16"></a>
             </div>
-
-            <!-- Menu (Hidden on small screens) -->
-            {{-- <ul class="hidden  space-x-6 pb-2 " id="navbarUl">
-                <li class="relative group -mt-1">
-                    <a href="/" class=" font-bold hover:text-teal-500 px-2 py-1 block">Home</a>
-                    <ul class="absolute left-0 top-full hidden group-hover:block bg-white w-60 shadow-lg rounded-md">
-                        <li class="py-2"><a href="{{ route('city.home') }}"
-                                class="block px-4 py-2 font-bold hover:text-teal-500 pt-4">SKT City
-                                Campus</a></li>
-                        <li class="py-2"><a href="{{ route('river.home') }}"
-                                class="block px-4 py-2 font-bold hover:text-teal-500 pt-4">SKT
-                                Riverside Campus</a></li>
-                    </ul>
-                </li>
-                <li class="relative group -mt-1">
-                    <a href="#" class=" font-bold hover:text-teal-500 px-2 py-1 block">About Us</a>
-                    <ul class="absolute left-0 top-full hidden group-hover:block bg-white w-60 shadow-lg rounded-md">
-                        <li class="py-2"><a href="{{ route('principal-message.home', $layout_branch->id) }}"
-                                class="block px-4 py-2 font-bold hover:text-teal-500">Our
-                                Principle
-                                Message</a></li>
-                        <li class="py-2"><a href="{{ route('our-history.home', $layout_branch->branch_short_name) }}"
-                                class="block px-4 py-2 font-bold hover:text-teal-500">Our
-                                History</a></li>
-                        <li class="py-2"><a
-                                href="{{ route('our-statement.home', $layout_branch->branch_short_name) }}"
-                                class="block px-4 py-2 font-bold hover:text-teal-500">Our
-                                Mission , Vision
-                                , Philosophy</a></li>
-                        <li class="py-2"><a
-                                href="{{ route('our-teachers.home', $layout_branch->branch_short_name) }}"
-                                class="block px-4 py-2 font-bold hover:text-teal-500">Our
-                                Teachers</a>
-                        </li>
-                        <li class="py-2"><a
-                                href="{{ route('sister-schools.home', $layout_branch->branch_short_name) }}"
-                                class="block px-4 py-2 font-bold hover:text-teal-500">Sister Schools</a>
-                        </li>
-                        <li class="py-2"><a href="{{ route('policy.home', $layout_branch->branch_short_name) }}"
-                                class="block px-4 py-2 font-bold hover:text-teal-500">Policy</a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="relative group -mt-1">
-                    <a href="#" class=" font-bold hover:text-teal-500 px-2 py-1 block">Student
-                        Life</a>
-                    <ul class="absolute left-0 top-full hidden group-hover:block bg-white w-60 shadow-lg rounded-md">
-                        <li class="py-2"><a href="{{ route('alumni.home', $layout_branch->branch_short_name) }}"
-                                class="block px-4 py-2 font-bold hover:text-teal-500">Alumni</a></li>
-                        <li class="py-2"><a href="{{ route('news.home', $layout_branch->branch_short_name) }}"
-                                class="block px-4 py-2 font-bold hover:text-teal-500">News</a></li>
-                        <li class="py-2"><a href="{{ route('gallery.home', $layout_branch->branch_short_name) }}"
-                                class="block px-4 py-2 font-bold hover:text-teal-500">Gallery</a></li>
-                        <li class="py-2"><a href="{{ route('calendar.home', $layout_branch->branch_short_name) }}"
-                                class="block px-4 py-2 font-bold hover:text-teal-500">Calendar</a>
-                        </li>
-                        <li class="py-2"><a href="{{ route('welfare.home', $layout_branch->branch_short_name) }}"
-                                class="block px-4 py-2 font-bold hover:text-teal-500">Welfare </a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="relative group -mt-1">
-                    <a href="#" class=" font-bold hover:text-teal-500 px-2 py-1 block">Education</a>
-                    <ul class="absolute left-0 top-full hidden group-hover:block bg-white w-60 shadow-lg rounded-md">
-                        <li class="py-2"><a href="{{ route('pre-school.home', $layout_branch->branch_short_name) }}"
-                                class="block px-4 py-2 font-bold hover:text-teal-500">Pre
-                                School</a></li>
-                        <li class="py-2"><a href="{{ route('primary.home', $layout_branch->branch_short_name) }}"
-                                class="block px-4 py-2 font-bold hover:text-teal-500">Primary</a></li>
-                        <li class="py-2"><a href="{{ route('secondary.home', $layout_branch->branch_short_name) }}"
-                                class="block px-4 py-2 font-bold hover:text-teal-500">Secondary</a></li>
-                        <li class="py-2"><a href="{{ route('igcse.home', $layout_branch->branch_short_name) }}"
-                                class="block px-4 py-2 font-bold hover:text-teal-500">IGCSE</a>
-                        <li class="py-2"><a href="{{ route('ib.home', $layout_branch->branch_short_name) }}"
-                                class="block px-4 py-2 font-bold hover:text-teal-500">IB
-                                Diploma Programme (IB DP)</a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="relative group -mt-1">
-                    <a href="#" class=" font-bold hover:text-teal-500 px-2 py-1 block">Admission</a>
-                    <ul class="absolute left-0 top-full hidden group-hover:block bg-white w-60 shadow-lg rounded-md">
-                        <li class="py-4"><a
-                                href="{{ route('student-admission.home', $layout_branch->branch_short_name) }}"
-                                class="block px-4 py-2 font-bold hover:text-teal-500">Student
-                                Admission</a></li>
-                        <li class="py-4"><a
-                                href="{{ route('admission-process.home', $layout_branch->branch_short_name) }}"
-                                class="block px-4 py-2 font-bold hover:text-teal-500">Admission
-                                Process</a></li>
-                        <li class="py-4"><a
-                                href="{{ route('withdrawal-policy.home', $layout_branch->branch_short_name) }}"
-                                class="block px-4 py-2 font-bold hover:text-teal-500">Withdrawal
-                                Policy</a></li>
-                        <li class="py-4"><a
-                                href="{{ route('college-counseling-service.home', $layout_branch->branch_short_name) }}"
-                                class="block px-4 py-2 font-bold hover:text-teal-500">College Counseling Service</a>
-                        </li>
-                        <li class="py-4"><a href="{{ route('career.home', $layout_branch->branch_short_name) }}"
-                                target="__blank" class="block px-4 py-2 font-bold hover:text-teal-500">Career</a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="-mt-1"><a href="{{ route('event.home', $layout_branch->branch_short_name) }}"
-                        class=" font-bold hover:text-teal-500 px-2 py-1 block"> Event
-                    </a></li>
-                <li class="-mt-1"><a href="{{ route('contact_us.home', $layout_branch->branch_short_name) }}"
-                        class=" font-bold hover:text-teal-500 px-2 py-1 block">Contact</a></li>
-                <li class="-mt-1">
-                    <button id="switchCampusBtn" title="Switch Campus" class="hover:text-green-500 text-xl">
-                        <i class="fa-solid fa-repeat"></i>
-                    </button>
-                </li>
-
-            </ul> --}}
-
             <!-- Mobile Menu Button -->
             <div class="-mt-8 flex h-full items-stretch">
                 <div class="flex align-middle justify-evenly items-center">
@@ -186,7 +58,7 @@
                     </button>
                 </div>
                 <div class="h-full">
-                    <button id="menu-btn"
+                    <button id="open-menu"
                         class="w-full h-full text-2xl  hover:bg-emerald-800 rounded-lg px-4 py-2 flex items-center justify-center">
                         <i class="fa-solid fa-bars"></i>
                     </button>
@@ -198,12 +70,13 @@
         @include('layouts.mobile_layout')
 
     </nav>
+
     <!-- START HOME -->
     @yield('content')
     <!-- END  HOME -->
 
     <!-- START FOOTER -->
-    <div class="footer section-padding">
+    <div class="footer section-padding bg-gray-900">
         <div class="container mx-auto">
             <div class="grid lg:grid-cols-4 sm:grid-cols-2 ">
                 <div class="col-lg-3 col-sm-6 col-xs-12">
@@ -329,9 +202,9 @@
     <!-- scripts js -->
     <script src="{{ asset('guests/js/script.js') }}"></script>
     <script>
-        document.getElementById('menu-btn').addEventListener('click', function() {
-            document.getElementById('mobile-menu').classList.toggle('hidden');
-        });
+        // document.getElementById('menu-btn').addEventListener('click', function() {
+        //     document.getElementById('mobile-menu').classList.toggle('hidden');
+        // });
 
         // Handle multiple dropdowns dynamically
         document.querySelectorAll('.dropdown-btn').forEach(button => {
@@ -347,6 +220,13 @@
                     if (menu !== dropdownMenu) {
                         menu.classList.add('hidden');
                     }
+                });
+                // Close other menus
+                $(".dropdown-menu").not($menu).slideUp().addClass("hidden");
+
+                // Toggle current
+                $menu.stop(true, true).slideToggle(300, function() {
+                    $(this).toggleClass("hidden", !$menu.is(":visible"));
                 });
             });
         });
@@ -418,7 +298,34 @@
             });
         });
     </script>
+    <script>
+        $(document).ready(function() {
+            // Open menu
+            $("#open-menu").on("click", function() {
+                $("#mobile-wrapper").css("width", "300px");
+            });
 
+            // Close menu
+            $("#close-menu").on("click", function() {
+                $("#mobile-wrapper").css("width", "0");
+            });
+
+            // Dropdown toggle
+            // $(".dropdown-btn").on("click", function(e) {
+            //     e.preventDefault();
+
+            //     const $menu = $(this).next(".dropdown-menu");
+
+            //     // Close other menus
+            //     $(".dropdown-menu").not($menu).slideUp().addClass("hidden");
+
+            //     // Toggle current
+            //     $menu.stop(true, true).slideToggle(300, function() {
+            //         $(this).toggleClass("hidden", !$menu.is(":visible"));
+            //     });
+            // });
+        });
+    </script>
 </body>
 
 </html>

@@ -36,7 +36,7 @@
 
 <body>
     <nav id="navbar"
-        class="bg-transparent text-white fixed top-0 w-full z-50  transition-all duration-300 bg-gray-900 bg-opacity-90">
+        class=" text-white fixed top-0 w-full z-50  transition-all duration-300 bg-gray-900 bg-opacity-90">
         <div class=" mx-auto flex justify-end p-4">
             {{-- <div class="hidden md:flex  space-x-4 text-emerald-700">
                 <a href="https://www.facebook.com/BahanInternationalScienceAcademy/" class="hlc" target="__blank">
@@ -180,10 +180,11 @@
                     </button>
                 </div>
                 <div class="h-full">
-                    <button id="menu-btn"
+                    <button id="open-menu"
                         class="w-full h-full text-2xl  hover:bg-emerald-800 rounded-lg px-4 py-2 flex items-center justify-center">
                         <i class="fa-solid fa-bars"></i>
                     </button>
+
                 </div>
             </div>
         </div>
@@ -196,7 +197,7 @@
     <!-- END  HOME -->
 
     <!-- START FOOTER -->
-    <div class="footer section-padding">
+    <div class="footer section-padding bg-gray-900">
         <div class="container mx-auto">
             <div class="grid lg:grid-cols-4 sm:grid-cols-2 ">
                 <div class="col-lg-3 col-sm-6 col-xs-12">
@@ -322,9 +323,9 @@
     <!-- scripts js -->
     <script src="{{ asset('guests/js/script.js') }}"></script>
     <script>
-        document.getElementById('menu-btn').addEventListener('click', function() {
-            document.getElementById('mobile-menu').classList.toggle('hidden');
-        });
+        // document.getElementById('menu-btn').addEventListener('click', function() {
+        //     document.getElementById('mobile-menu').classList.toggle('hidden');
+        // });
 
         // Handle multiple dropdowns dynamically
         document.querySelectorAll('.dropdown-btn').forEach(button => {
@@ -340,6 +341,13 @@
                     if (menu !== dropdownMenu) {
                         menu.classList.add('hidden');
                     }
+                });
+                // Close other menus
+                $(".dropdown-menu").not($menu).slideUp().addClass("hidden");
+
+                // Toggle current
+                $menu.stop(true, true).slideToggle(300, function() {
+                    $(this).toggleClass("hidden", !$menu.is(":visible"));
                 });
             });
         });
@@ -407,6 +415,34 @@
                 // Reload to new URL
                 window.location.href = newUrl;
             });
+        });
+    </script>
+    <script>
+        $(document).ready(function() {
+            // Open menu
+            $("#open-menu").on("click", function() {
+                $("#mobile-wrapper").css("width", "300px");
+            });
+
+            // Close menu
+            $("#close-menu").on("click", function() {
+                $("#mobile-wrapper").css("width", "0");
+            });
+
+            // Dropdown toggle
+            // $(".dropdown-btn").on("click", function(e) {
+            //     e.preventDefault();
+
+            //     const $menu = $(this).next(".dropdown-menu");
+
+            //     // Close other menus
+            //     $(".dropdown-menu").not($menu).slideUp().addClass("hidden");
+
+            //     // Toggle current
+            //     $menu.stop(true, true).slideToggle(300, function() {
+            //         $(this).toggleClass("hidden", !$menu.is(":visible"));
+            //     });
+            // });
         });
     </script>
 </body>
