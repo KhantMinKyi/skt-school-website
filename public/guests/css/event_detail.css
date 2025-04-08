@@ -317,3 +317,6 @@
     display: inline-block;
     margin-right: 20px;
 }
+.will_hide_div h1{
+    font-family: "Red Hat Display", sans-serif;
+  }

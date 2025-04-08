@@ -81,3 +81,9 @@ p.section-title-white {
   font-size: 18px;
   font-weight: 600;
 }
+.will_hide_div h1{
+  font-family: "Red Hat Display", sans-serif;
+}
+.ab_content h2 ,.ab_content p{
+  font-family: "Red Hat Display", sans-serif;
+}
