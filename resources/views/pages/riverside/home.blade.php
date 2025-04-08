@@ -525,7 +525,7 @@
 
                 <!-- Left Red Box (Smaller Height than image) -->
                 <div
-                    class="absolute top-0 left-0 bg-green-600 bg-opacity-80 text-white p-4 sm:p-16 w-full sm:w-[60%] h-[70%] flex flex-col justify-center z-10 rounded-lg">
+                    class="absolute top-0 left-0 bg-gray-900 bg-opacity-95 text-white p-4 sm:p-16 w-full sm:w-[60%] h-[70%] flex flex-col justify-center z-10 rounded-tl-lg">
                     <h2 class="text-3xl md:text-4xl font-semibold mb-6">What would you like to do?</h2>
                     <div class="flex space-x-4 md:space-x-20">
                         <div class="flex flex-col items-center">

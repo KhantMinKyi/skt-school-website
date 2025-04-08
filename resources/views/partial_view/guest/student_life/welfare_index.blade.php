@@ -33,6 +33,155 @@
             <div class="section-title p-4">
                 <h2>{{ $branch->branch_name }}</h2>
                 <p class="">
+                    Welfare Department
+                </p>
+            </div>
+            <!-- END ROW -->
+        </div>
+        <!-- END CONTAINER -->
+    </section>
+    <!-- END TOPIC -->
+
+    @if ($branch->branch_short_name == 'SKT-RC')
+        <section class="principal_message container mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-2 ">
+                <div class="   mx-auto p-10">
+                    <div class="ab_content">
+                        {{-- <h2 class=" text-2xl font-light text-gray-500 mb-2">
+                        asdfsad
+                    </h2> --}}
+                        <h2 class=" text-4xl font-semibold mb-4">
+                            <span class="text-emerald-400">Message from the Head of Welfare</span>
+                        </h2>
+                        <p class=" text-gray-500">
+                            Welcome to the Welfare Department at SKT International School. I’m <b class="text-emerald-400">
+                                Guvanch Odeniyazov </b>, and
+                            as <b class="text-emerald-400"> Head of Welfare </b>, my role is to support the overall
+                            well-being
+                            of our students—socially,
+                            emotionally, and
+                            morally—while helping them grow into responsible and compassionate individuals.
+
+                            We implement the Character Education Program, built on the foundation of Character First
+                            Education,
+                            the world’s largest character-based initiative for schools. This program helps students
+                            understand
+                            and live by core universal values such as respect, honesty, and fairness.For <b
+                                class="text-emerald-400"> Years 7–9 </b>, we use the
+                            <b class="text-emerald-400"> Pathways: Values in Action </b> book, which turns these values into
+                            lived experiences that shape our
+                            students into engaged, empathetic global citizens.
+
+                            Beyond the classroom, we offer a wide range of welfare activities that promote connection,
+                            confidence, and character.<b class="text-emerald-400"> For example, our indoor/outdoor
+                                activities
+                                like picnics, movie nights,
+                                and BBQs encourage teamwork and social bonding, while donation programs teach compassion and
+                                social
+                                responsibility through giving and community support. </b> Other activities include DEAR
+                            Time,
+                            birthday
+                            celebrations, sports tournaments, clubs, fundraising events, holiday celebrations, and
+                            excursions.
+
+                            We also conduct home visits to better understand each student’s background and provide
+                            personalized
+                            care and support.
+
+                            Please feel free to reach out—we’re here to help every student thrive.
+                            Warm regards,
+                        </p>
+                    </div>
+                    <div class="abmv mt-4 principal-message ">
+                        <p class="text-xl italic">
+                            Guvanch Odeniyazov
+                        </p>
+                        <p class="text-md italic">
+                            Head of Welfare
+                        </p>
+                    </div>
+                </div>
+                <div class="flex justify-center items-center flex-col">
+                    <img class="w-[240px] h-[240px] md:w-[420px] md:h-[420px] object-cover rounded-full"
+                        src="{{ asset('img/welfare_data/' . $branch->branch_short_name . '.jpg') }}" alt="" />
+                    <p class="mt-4 bold text-xl md:text-2xl italic"> Guvanch Odeniyazov</p>
+                </div>
+            </div>
+        </section>
+    @else
+        <section class="principal_message container mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-2 ">
+                <div class="   mx-auto p-10">
+                    <div class="ab_content">
+                        {{-- <h2 class=" text-2xl font-light text-gray-500 mb-2">
+                    asdfsad
+                </h2> --}}
+                        <h2 class=" text-4xl font-semibold mb-4">
+                            <span class="text-emerald-400">Message from the Head of Welfare CC</span>
+                        </h2>
+                        <p class=" text-gray-500">
+                            Welcome to the Welfare Department at SKT International School. I’m <b class="text-emerald-400">
+                                Guvanch Odeniyazov </b>, and
+                            as <b class="text-emerald-400"> Head of Welfare </b>, my role is to support the overall
+                            well-being
+                            of our students—socially,
+                            emotionally, and
+                            morally—while helping them grow into responsible and compassionate individuals.
+
+                            We implement the Character Education Program, built on the foundation of Character First
+                            Education,
+                            the world’s largest character-based initiative for schools. This program helps students
+                            understand
+                            and live by core universal values such as respect, honesty, and fairness.For <b
+                                class="text-emerald-400"> Years 7–9 </b>, we use the
+                            <b class="text-emerald-400"> Pathways: Values in Action </b> book, which turns these values into
+                            lived experiences that shape our
+                            students into engaged, empathetic global citizens.
+
+                            Beyond the classroom, we offer a wide range of welfare activities that promote connection,
+                            confidence, and character.<b class="text-emerald-400"> For example, our indoor/outdoor
+                                activities
+                                like picnics, movie nights,
+                                and BBQs encourage teamwork and social bonding, while donation programs teach compassion and
+                                social
+                                responsibility through giving and community support. </b> Other activities include DEAR
+                            Time,
+                            birthday
+                            celebrations, sports tournaments, clubs, fundraising events, holiday celebrations, and
+                            excursions.
+
+                            We also conduct home visits to better understand each student’s background and provide
+                            personalized
+                            care and support.
+
+                            Please feel free to reach out—we’re here to help every student thrive.
+                            Warm regards,
+                        </p>
+                    </div>
+                    <div class="abmv mt-4 principal-message ">
+                        <p class="text-xl italic">
+                            Guvanch Odeniyazov
+                        </p>
+                        <p class="text-md italic">
+                            Head of Welfare
+                        </p>
+                    </div>
+                </div>
+                <div class="flex justify-center items-center flex-col">
+                    <img class="w-[240px] h-[240px] md:w-[420px] md:h-[420px] object-cover rounded-full"
+                        src="{{ asset('img/welfare_data/' . $branch->branch_short_name . '.jpg') }}" alt="" />
+                    <p class="mt-4 bold text-xl md:text-2xl italic"> Guvanch Odeniyazov</p>
+                </div>
+            </div>
+        </section>
+    @endif
+
+    <!-- START TOPIC-->
+    <section class="topic_content_area section-padding" style="background-image: url(assets/images/banner/topic.png);">
+        <div class="container mx-auto">
+            <div class="section-title p-4">
+                <h2>{{ $branch->branch_name }}</h2>
+                <p class="">
                     PATHWAYS
                     Values in Action
                 </p>

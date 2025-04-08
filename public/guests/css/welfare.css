@@ -122,3 +122,24 @@ p.section-title-white {
 .will_hide_div h2{
   font-family: "Red Hat Display", sans-serif;
 }
+.ab_content {
+  margin-bottom: 30px;
+  position: relative;
+}
+/* .ab_content h2 {
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-transform: capitalize;
+  line-height: 54px;
+  font-size: 44px;
+}*/
+.ab_content h2 span {
+  font-family: "Red Hat Display", sans-serif;
+} 
+.ab_content h2 u {
+  color: #2eca7f;
+  
+}
+.ab_content p {
+  margin-bottom: 30px;
+}

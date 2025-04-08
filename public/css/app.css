@@ -11452,6 +11452,10 @@ video {
   margin-top: 0.5rem;
 }
 
+.mt-20 {
+  margin-top: 5rem;
+}
+
 .mt-3 {
   margin-top: 0.75rem;
 }
@@ -11470,18 +11474,6 @@ video {
 
 .mt-auto {
   margin-top: auto;
-}
-
-.mt-20 {
-  margin-top: 5rem;
-}
-
-.mt-24 {
-  margin-top: 6rem;
-}
-
-.mt-16 {
-  margin-top: 4rem;
 }
 
 .block {
@@ -11722,10 +11714,6 @@ video {
 
 .min-w-0 {
   min-width: 0px;
-}
-
-.min-w-full {
-  min-width: 100%;
 }
 
 .max-w-2xl {
@@ -12018,6 +12006,11 @@ video {
   border-top-right-radius: 0.375rem;
 }
 
+.rounded-s-lg {
+  border-start-start-radius: 0.5rem;
+  border-end-start-radius: 0.5rem;
+}
+
 .rounded-bl-\[100\%\] {
   border-bottom-left-radius: 100%;
 }
@@ -12032,6 +12025,10 @@ video {
 
 .rounded-tr-\[15px\] {
   border-top-right-radius: 15px;
+}
+
+.rounded-tl-lg {
+  border-top-left-radius: 0.5rem;
 }
 
 .border {
@@ -12232,6 +12229,11 @@ video {
   background-color: rgb(254 252 232 / var(--tw-bg-opacity, 1));
 }
 
+.bg-gray-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(75 85 99 / var(--tw-bg-opacity, 1));
+}
+
 .bg-opacity-50 {
   --tw-bg-opacity: 0.5;
 }
@@ -12242,6 +12244,10 @@ video {
 
 .bg-opacity-90 {
   --tw-bg-opacity: 0.9;
+}
+
+.bg-opacity-95 {
+  --tw-bg-opacity: 0.95;
 }
 
 .bg-gradient-to-b {
@@ -12443,14 +12449,6 @@ video {
 
 .pt-96 {
   padding-top: 24rem;
-}
-
-.pt-20 {
-  padding-top: 5rem;
-}
-
-.pt-24 {
-  padding-top: 6rem;
 }
 
 .text-left {
@@ -13145,12 +13143,12 @@ video {
     grid-column: span 2 / span 2;
   }
 
-  .sm\:mt-10 {
-    margin-top: 2.5rem;
-  }
-
   .sm\:mt-0 {
     margin-top: 0px;
+  }
+
+  .sm\:mt-10 {
+    margin-top: 2.5rem;
   }
 
   .sm\:block {
@@ -13412,6 +13410,10 @@ video {
     grid-column: span 2 / span 2;
   }
 
+  .lg\:col-span-1 {
+    grid-column: span 1 / span 1;
+  }
+
   .lg\:mt-0 {
     margin-top: 0px;
   }
@@ -13504,11 +13506,6 @@ video {
     line-height: 1.25rem;
   }
 
-  .lg\:text-4xl {
-    font-size: 2.25rem;
-    line-height: 2.5rem;
-  }
-
   .default\:lg\:col-span-6:default {
     grid-column: span 6 / span 6;
   }
@@ -13523,14 +13520,14 @@ video {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
-  .xl\:text-7xl {
-    font-size: 4.5rem;
-    line-height: 1;
-  }
-
   .xl\:text-4xl {
     font-size: 2.25rem;
     line-height: 2.5rem;
+  }
+
+  .xl\:text-7xl {
+    font-size: 4.5rem;
+    line-height: 1;
   }
 }
 
