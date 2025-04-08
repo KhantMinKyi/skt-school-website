@@ -119,3 +119,6 @@ p.section-title-white {
     border-radius: 15px;
     transition: all 0.5s;
   }
+  .will_hide_div h2{
+    font-family: "Red Hat Display", sans-serif;
+}
