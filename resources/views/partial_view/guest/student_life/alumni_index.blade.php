@@ -120,7 +120,8 @@
                                 great
                                 enthusiasm. Families, students, and teachers shared laughter, enjoyed fun stage activities,
                                 and
-                                dined together. The principal’s inspiring message focused on building a brighter future and
+                                dined together. The Head of School’s inspiring message focused on building a brighter future
+                                and
                                 celebrating the spirit of togetherness at SKT.</p>
                             <div class="grid grid-cols-2 lg:grid-cols-4 my-4 gap-10">
                                 <img src="{{ asset('img/alumni_data/2025/SKT-RC1.jpg') }}"
@@ -149,7 +150,7 @@
                                 in
                                 Yangon.
                                 The night was filled with colorful performances, delicious food, and warm memories. Our
-                                principal
+                                Head of School
                                 delivered a touching speech on progress, achievements, and the importance of staying
                                 connected
                                 as a
@@ -181,7 +182,8 @@
                                 and
                                 families came together to celebrate another successful school year. The event featured
                                 musical
-                                performances, laughter-filled games, and a shared meal. The principal's inspiring speech
+                                performances, laughter-filled games, and a shared meal. The Head of School's inspiring
+                                speech
                                 emphasized
                                 student growth and appreciation for the SKT community.</p>
                             <div class="grid grid-cols-2 lg:grid-cols-4 my-4 gap-10">
@@ -258,7 +260,8 @@
                                 great
                                 enthusiasm. Families, students, and teachers shared laughter, enjoyed fun stage activities,
                                 and
-                                dined together. The principal’s inspiring message focused on building a brighter future and
+                                dined together. The Head of School’s inspiring message focused on building a brighter future
+                                and
                                 celebrating the spirit of togetherness at SKT.</p>
                             <div class="grid grid-cols-2 lg:grid-cols-4 my-4 gap-10">
                                 <img src="{{ asset('img/alumni_data/2025/SKT-RC1.jpg') }}"
@@ -287,7 +290,7 @@
                                 in
                                 Yangon.
                                 The night was filled with colorful performances, delicious food, and warm memories. Our
-                                principal
+                                Head of School
                                 delivered a touching speech on progress, achievements, and the importance of staying
                                 connected
                                 as a
@@ -319,7 +322,8 @@
                                 and
                                 families came together to celebrate another successful school year. The event featured
                                 musical
-                                performances, laughter-filled games, and a shared meal. The principal's inspiring speech
+                                performances, laughter-filled games, and a shared meal. The Head of School's inspiring
+                                speech
                                 emphasized
                                 student growth and appreciation for the SKT community.</p>
                             <div class="grid grid-cols-2 lg:grid-cols-4 my-4 gap-10">

@@ -42,9 +42,9 @@
                 <div class="filter-btn bg-blue-500 p-3 rounded-lg hover:bg-blue-600 font-bold cursor-pointer"
                     data-filter="all">All</div>
                 <div class="filter-btn bg-blue-500 p-3 rounded-lg hover:bg-blue-600 font-bold cursor-pointer"
-                    data-filter="principal">Principal</div>
+                    data-filter="principal">Head of School</div>
                 <div class="filter-btn bg-blue-500 p-3 rounded-lg hover:bg-blue-600 font-bold cursor-pointer"
-                    data-filter="vice-principal">Vice Principal</div>
+                    data-filter="vice-principal">Deputy Head of School</div>
                 <div class="filter-btn bg-blue-500 p-3 rounded-lg hover:bg-blue-600 font-bold cursor-pointer"
                     data-filter="secondary">Secondary</div>
                 <div class="filter-btn bg-blue-500 p-3 rounded-lg hover:bg-blue-600 font-bold cursor-pointer"
@@ -60,9 +60,10 @@
             <!-- Teachers List -->
             <div class="grid md:grid-cols-2 lg:grid-cols-4 text-center mt-10" id="teachersList">
                 @foreach ($our_teachers as $teacher)
-                    <div class="teacher-card mx-2 mb-2" data-category="{{ strtolower($teacher->teacher_class) }}">
+                    <div class="teacher-card mx-2 mb-2 open-modal" data-category="{{ strtolower($teacher->teacher_class) }}"
+                        data-src="{{ asset($teacher->teacher_photo) }}" data-title="{{ $teacher->teacher_name }}">
                         <div class="relative group rounded-md overflow-hidden cursor-pointer">
-                            <img src="{{ asset($teacher->teacher_photo) }}" class="w-full" alt="Team Member" />
+                            <img src="{{ asset($teacher->teacher_photo) }}" class="w-full " alt="Team Member" />
                             <div
                                 class="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                 <h3 class="text-lg font-bold">{{ $teacher->teacher_name }}</h3>
@@ -82,12 +83,19 @@
         </div>
     </section>
     <!-- END SCHOOL Teachers -->
-
+    <!-- Fullscreen Modal -->
+    <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center hidden z-50">
+        <div class="relative max-w-4xl w-full p-4">
+            <button id="closeModal" class="absolute top-2 right-4 text-white text-3xl p-4 cursor-pointer">&times;</button>
+            <img id="modalImage" src="" class="w-full rounded-lg shadow-lg" />
+            <h3 id="modalTitle" class="text-white text-center mt-4 text-xl font-bold"></h3>
+        </div>
+    </div>
     <!-- jQuery Script -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         $(document).ready(function() {
-            let perPage = 10; // Number of teachers per page
+            let perPage = 8; // Number of teachers per page
             let currentPage = 1;
             let allTeachers = $(".teacher-card").toArray(); // Convert to array for better handling
             let filteredTeachers = [...allTeachers]; // Initially, all teachers are shown
@@ -143,6 +151,29 @@
             $(".filter-btn").click(function() {
                 let filter = $(this).data("filter");
                 applyFilter(filter);
+            });
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const modal = document.getElementById("imageModal");
+            const modalImage = document.getElementById("modalImage");
+            const modalTitle = document.getElementById("modalTitle");
+            const closeModal = document.getElementById("closeModal");
+
+            document.querySelectorAll(".open-modal").forEach(card => {
+                card.addEventListener("click", function() {
+                    modalImage.src = this.dataset.src;
+                    modalTitle.textContent = this.dataset.title;
+                    modal.classList.remove("hidden");
+                });
+            });
+
+            closeModal.addEventListener("click", () => modal.classList.add("hidden"));
+            modal.addEventListener("click", (e) => {
+                if (e.target === modal) {
+                    modal.classList.add("hidden");
+                }
             });
         });
     </script>

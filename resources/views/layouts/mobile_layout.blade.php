@@ -29,8 +29,8 @@
             </a>
             <div class="dropdown-menu hidden flex flex-col w-full bg-gray-900 bg-opacity-90">
                 <a href="{{ route('principal-message.home', $layout_branch->id) }}"
-                    class="py-4 px-4 text-gray-100 font-bold hover:bg-gray-900 bg-opacity-90 w-full text-left">Our
-                    Principle
+                    class="py-4 px-4 text-gray-100 font-bold hover:bg-gray-900 bg-opacity-90 w-full text-left">
+                    Our Head of School
                     Message</a>
                 <a href="{{ route('our-history.home', $layout_branch->branch_short_name) }}"
                     class="py-4 px-4 text-gray-100 font-bold hover:bg-gray-900 bg-opacity-90 w-full text-left">Our

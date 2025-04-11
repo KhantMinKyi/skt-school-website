@@ -466,10 +466,10 @@
                         );
                     }
 
-                    // Handle URLs for /about_us/principal_message/{id}
-                    if (currentUrl.includes('/about_us/principal_message/')) {
-                        newUrl = currentUrl.replace('about_us/principal_message/2',
-                            'about_us/principal_message/1');
+                    // Handle URLs for /about_us/head_of_school_message/{id}
+                    if (currentUrl.includes('/about_us/head_of_school_message/')) {
+                        newUrl = currentUrl.replace('about_us/head_of_school_message/2',
+                            'about_us/head_of_school_message/1');
                     }
                 }
 

@@ -27,7 +27,7 @@
             <h1 id="fading-text" class=" text-center  ml-10">
                 <span class="text-emerald-400">{{ $principal_message->branch->branch_name }}</span>
                 <br>
-                <span class="text-white hidden sm:block">Principal's Message</span>
+                <span class="text-white hidden sm:block">Our Head of School's Message</span>
             </h1>
         </div>
 
@@ -42,7 +42,7 @@
                         {{ $principal_message->branch->branch_name }}
                     </h2>
                     <h2 class=" text-4xl font-semibold">
-                        <span class="text-emerald-400">Principal's Message</span>
+                        <span class="text-emerald-400">Our Head of School's Message</span>
                     </h2>
                     <p class=" text-gray-500">
 

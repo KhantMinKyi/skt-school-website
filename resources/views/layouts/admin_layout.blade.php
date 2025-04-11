@@ -559,7 +559,7 @@
                                                         data-animation-path="{{ asset('admin/vendor/animated-icons/typing/typing.json') }}"
                                                         data-anim-loop="false"></div>
                                                 </span>
-                                                <span class="mr-auto menu-name">Principal Message</span>
+                                                <span class="mr-auto menu-name">Our Head of School Message</span>
                                             </a>
                                         </li>
                                     </ul>

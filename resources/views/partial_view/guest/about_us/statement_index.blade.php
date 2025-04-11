@@ -107,7 +107,7 @@
             </div>
         </div>
         {{-- <hr class=" w-1/2 mx-auto py-6 border-emerald-500"> --}}
-        <div class="text-center">
+        <div class="text-center pb-10 ">
             <span class="inline-block w-1 h-1 rounded-full bg-emerald-500 ml-1"></span>
             <span class="inline-block w-3 h-1 rounded-full bg-emerald-500 ml-1"></span>
             <span class="inline-block w-40 h-1 rounded-full bg-emerald-500"></span>

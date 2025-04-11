@@ -14,16 +14,16 @@
 
 
     <div class="card">
-        <div class="card-header font-weight-bold h5">Principal Message</div>
+        <div class="card-header font-weight-bold h5">Our Head of School Message</div>
         <div class="text-right m-4 ">
             <a href="#" class="btn btn-success btn-md" data-bs-toggle="modal" data-bs-target="#modalNewPrincipalMessage">
                 <div class="d-flex  align-items-center">
                     <span class="animated-icon mr-2 ">
                         <div style="width:14px;height:14px; cursor: pointer;"
                             data-animation-path="{{ asset('admin/vendor/animated-icons/add/add.json') }}"
-                            data-anim-loop="false" title="Add Principal Messsage"></div>
+                            data-anim-loop="false" title="Add Our Head of School Messsage"></div>
                     </span>
-                    Add New Principal Message
+                    Add New Head of School Message
                 </div>
             </a>
 
@@ -80,7 +80,7 @@
                 <form action="{{ route('admin-principal-messages.store') }}" method="post" enctype="multipart/form-data">
                     @csrf
                     <div class="modal-header">
-                        <h5 class="modal-title">Add New Principal Message</h5>
+                        <h5 class="modal-title">Add New Head of School Message</h5>
                         <button type="button" class="btn btn-icon btn-sm btn-active-light-primary ms-2"
                             data-bs-dismiss="modal" aria-label="Close">
                             <span class="svg-icon svg-icon-2x"><i class="fa-solid fa-xmark"></i></span>
@@ -114,7 +114,7 @@
                             </div>
                             <div class="col-12">
                                 <div class="row mb-3">
-                                    <label for="inputEmail3" class="col-3 col-form-label"> Principal Name </label>
+                                    <label for="inputEmail3" class="col-3 col-form-label"> Head of School Name </label>
                                     <div class="col-9">
                                         <input type="text" class="form-control" placeholder="Enter Principal Name "
                                             required name="principal_name">
@@ -123,7 +123,7 @@
                             </div>
                             <div class="col-12">
                                 <div class="row mb-3">
-                                    <label for="inputEmail3" class="col-3 col-form-label"> Principal Message </label>
+                                    <label for="inputEmail3" class="col-3 col-form-label"> Head of School Message </label>
                                     <div class="col-9">
                                         <textarea class="form-control" placeholder="Enter a Principal Message " name="principal_message" id=""
                                             cols="30" rows="10" required></textarea>

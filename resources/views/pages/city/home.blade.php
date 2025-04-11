@@ -294,7 +294,7 @@
                         Our
                     </h2>
                     <h2 class=" text-4xl font-semibold">
-                        <span class="text-emerald-400">Principal's Message</span>
+                        <span class="text-emerald-400">Our Head of School's Message</span>
                     </h2>
                     <p class=" text-gray-500">
 
@@ -500,7 +500,8 @@
                         </div>
                         <div class="flex flex-col items-center">
                             <i class="fa-solid fa-book text-lg"></i>
-                            <a href="{{ route('contact_us.home', $branch->branch_short_name) }}" class="uppercase text-sm font-semibold mt-2">Request a Prospectus</a>
+                            <a href="{{ route('contact_us.home', $branch->branch_short_name) }}"
+                                class="uppercase text-sm font-semibold mt-2">Request a Prospectus</a>
                             <div class="w-8 h-1 bg-white mt-1"></div>
                         </div>
                     </div>

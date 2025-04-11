@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="card">
-        <div class="card-header font-weight-bold h5">Edit Principal - {{ $principal_message->principal_name }}</div>
+        <div class="card-header font-weight-bold h5">Edit Head of School - {{ $principal_message->principal_name }}</div>
         <form action="{{ route('admin-principal-messages.update', $principal_message->id) }}" method="post"
             enctype="multipart/form-data">
             @csrf

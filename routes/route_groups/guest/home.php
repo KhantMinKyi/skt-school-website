@@ -18,7 +18,7 @@ Route::get('/skt-riverside-campus', [GeneralRouteController::class, 'riverHome']
 Route::get('/skt-city-campus', [GeneralRouteController::class, 'cityHome'])->name('city.home');
 
 // About Us
-Route::get('/about_us/principal_message/{param}', [GeneralRouteController::class, 'principalMessage'])->name('principal-message.home');
+Route::get('/about_us/head_of_school_message/{param}', [GeneralRouteController::class, 'principalMessage'])->name('principal-message.home');
 Route::get('/about_us/our_history/{param}', [GeneralRouteController::class, 'ourHistory'])->name('our-history.home');
 Route::get('/about_us/our_statement/{param}', [GeneralRouteController::class, 'ourStatement'])->name('our-statement.home');
 Route::get('/about_us/our_teachers/{param}', [GeneralRouteController::class, 'ourTeacher'])->name('our-teachers.home');

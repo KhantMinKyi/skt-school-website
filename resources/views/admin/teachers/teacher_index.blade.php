@@ -145,8 +145,8 @@
                                             <option value='primary'>Primary</option>
                                             <option value='lower-secondary'>Lower Secondary</option>
                                             <option value='secondary'>Secondary</option>
-                                            <option value='principal'>Principal</option>
-                                            <option value='vice-principal'>Vice Principal</option>
+                                            <option value='principal'> Head of School</option>
+                                            <option value='vice-principal'>Deputy Head of School</option>
                                         </select>
                                     </div>
                                 </div>
