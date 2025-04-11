@@ -31,12 +31,13 @@
 
 
     <!-- START SCHOOL Statement -->
-    <section class="statement mt-10">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 ">
-            <div class="flex justify-center items-center">
-                <img src="{{ asset($our_statement->branch->branch_logo) }}" style="max-height: 420px" alt="" />
-            </div>
-            <div class=" max-w-2xl p-10 flex justify-center items-center">
+    <section class="statement "
+        style="background-image: url({{ asset('assets/images/banner/course-bg.png') }}); background-size:cover; background-position: center center;">
+        <div class="flex justify-center items-center">
+            <img src="{{ asset($our_statement->branch->branch_logo) }}" style="max-height: 420px" alt="" />
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 mt-10">
+            <div class=" max-w-2xl p-10 flex justify-center items-center mx-auto">
                 <div class="ab_content">
                     <h2 class=" text-4xl font-semibold">
                         Our
@@ -47,9 +48,7 @@
                     </p>
                 </div>
             </div>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 mt-10">
-            <div class=" max-w-2xl p-10 flex justify-center items-center mx-auto">
+            <div class=" max-w-2xl p-10 flex justify-center items-center">
                 <div class="ab_content">
                     <h2 class=" text-4xl font-semibold">
                         Our
@@ -60,20 +59,9 @@
                     </p>
                 </div>
             </div>
-            <div class=" max-w-2xl p-10 flex justify-center items-center">
-                <div class="ab_content">
-                    <h2 class=" text-4xl font-semibold">
-                        Our
-                        <span class="text-emerald-400">Philosophy</span>
-                    </h2>
-                    <p class=" text-gray-500 mt-4">
-                        {!! $our_statement->statement_philosophy !!}
-                    </p>
-                </div>
-            </div>
         </div>
-        <div class="  container mx-auto ">
-            <div class=" max-w-2xl p-10 flex justify-center items-center">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 mt-10">
+            <div class=" max-w-2xl p-10 flex justify-center items-center mx-auto">
                 <div class="ab_content">
                     <h2 class=" text-4xl font-semibold">
                         Our
@@ -106,15 +94,27 @@
                     </p>
                 </div>
             </div>
+            <div class=" max-w-2xl p-10 flex justify-center items-center">
+                <div class="ab_content">
+                    <h2 class=" text-4xl font-semibold">
+                        Our
+                        <span class="text-emerald-400">Philosophy</span>
+                    </h2>
+                    <p class=" text-gray-500 mt-4">
+                        {!! $our_statement->statement_philosophy !!}
+                    </p>
+                </div>
+            </div>
         </div>
-    </section>
-    <!-- START SCHOOL Statement -->
-
-    <hr class=" w-1/2 mx-auto">
-
-    <!-- START SCHOOL INFO COUNTER -->
-    <section id="" class=" m-6">
-        <div class="container  mx-auto">
+        {{-- <hr class=" w-1/2 mx-auto py-6 border-emerald-500"> --}}
+        <div class="text-center">
+            <span class="inline-block w-1 h-1 rounded-full bg-emerald-500 ml-1"></span>
+            <span class="inline-block w-3 h-1 rounded-full bg-emerald-500 ml-1"></span>
+            <span class="inline-block w-40 h-1 rounded-full bg-emerald-500"></span>
+            <span class="inline-block w-3 h-1 rounded-full bg-emerald-500 ml-1"></span>
+            <span class="inline-block w-1 h-1 rounded-full bg-emerald-500 ml-1"></span>
+        </div>
+        <div class="container  mx-auto pb-4">
             <div class="section-title text-4xl mb-6 font-bold">
                 <h2>Explore Our <span class="text-teal-500">School</span></h2>
 
@@ -174,8 +174,6 @@
             </div>
             <!--- END ROW -->
         </div>
-        <!--- END CONTAINER -->
     </section>
-    <!-- END SCHOOL INFO COUNTER -->
     <script src={{ asset('guests/js/general.js') }}></script>
 @endsection

@@ -1,8 +1,8 @@
 @extends($layout)
 
-@isset($our_history->branch)
+@section('content')
     <link rel="stylesheet" href="{{ asset('guests/css/our_history.css') }}" />
-    @section('content')
+    @isset($our_history->branch)
         <section id="home" class="relative  lg:min-h-screen flex items-center justify-center  ">
             <!-- Background Video -->
             <div class="absolute inset-0 w-full h-full">
@@ -56,6 +56,6 @@
             </div>
         </section>
         <!-- START SCHOOL HISTORY -->
-    @endsection
+    @endisset
     <script src={{ asset('guests/js/general.js') }}></script>
-@endisset
+@endsection
