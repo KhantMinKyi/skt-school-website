@@ -42,6 +42,10 @@
                 <div class="filter-btn bg-blue-500 p-3 rounded-lg hover:bg-blue-600 font-bold cursor-pointer"
                     data-filter="all">All</div>
                 <div class="filter-btn bg-blue-500 p-3 rounded-lg hover:bg-blue-600 font-bold cursor-pointer"
+                    data-filter="principal">Principal</div>
+                <div class="filter-btn bg-blue-500 p-3 rounded-lg hover:bg-blue-600 font-bold cursor-pointer"
+                    data-filter="vice-principal">Vice Principal</div>
+                <div class="filter-btn bg-blue-500 p-3 rounded-lg hover:bg-blue-600 font-bold cursor-pointer"
                     data-filter="secondary">Secondary</div>
                 <div class="filter-btn bg-blue-500 p-3 rounded-lg hover:bg-blue-600 font-bold cursor-pointer"
                     data-filter="lower-secondary">Lower Secondary</div>

@@ -17,7 +17,7 @@ return new class extends Migration
             $table->foreignId('teacher_updated_user_id')->constrained('users');
             $table->foreignId('teacher_branch_id')->constrained('branches');
             $table->string('teacher_name')->nullable();
-            $table->enum('teacher_class', ['primary', 'secondary', 'lower-secondary', 'kg', 'assistant']);
+            $table->enum('teacher_class', ['primary', 'secondary', 'lower-secondary', 'kg', 'assistant', 'principal', 'vice-principal']);
             $table->string('teacher_photo');
             $table->string('slug');
             $table->timestamps();

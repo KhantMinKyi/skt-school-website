@@ -62,6 +62,11 @@
                                         Secondary</option>
                                     <option @if ($teacher->teacher_class == 'secondary') selected @endif value='secondary'>Secondary
                                     </option>
+                                    <option @if ($teacher->teacher_class == 'principal') selected @endif value='principal'>Principal
+                                    </option>
+                                    <option @if ($teacher->teacher_class == 'vice-principal') selected @endif value='vice-principal'>Vice
+                                        Principal
+                                    </option>
                                 </select>
                             </div>
                         </div>
