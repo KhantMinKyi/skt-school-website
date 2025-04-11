@@ -41,95 +41,215 @@
         <!-- END CONTAINER -->
     </section>
     <!-- END TOPIC -->
+    @if ($branch->branch_short_name == 'SKT-RC')
+        <section>
+            <div class="mx-auto container text-black">
+                <div class="col-xs-12">
+                    <div class="pd_tab_area fix">
+                        <ul class="pd_tab_btn nav nav-tabs" role="tablist">
+                            <li>
+                                <button class="tab-btn font-bold px-4 py-2 bg-green-500 rounded-xl text-white"
+                                    onclick="openTab(event, 'tab1')" href="#description" role="tab"
+                                    data-bs-toggle="tab">Admission </button>
+                            </li>
+                            <li>
+                                <button class="tab-btn font-bold px-4 py-2 rounded-xl" onclick="openTab(event, 'tab2')"
+                                    href="#information" role="tab" data-bs-toggle="tab">
+                                    Assessment</button>
+                            </li>
+                            <li>
+                                <button class="tab-btn font-bold px-4 py-2 rounded-xl" onclick="openTab(event, 'tab3')"
+                                    href="#information" role="tab" data-bs-toggle="tab">
+                                    Inclusion </button>
+                            </li>
+                            <li>
+                                <button class="tab-btn font-bold px-4 py-2 rounded-xl" onclick="openTab(event, 'tab4')"
+                                    href="#information" role="tab" data-bs-toggle="tab">
+                                    Language </button>
+                            </li>
+                            <li>
+                                <button class="tab-btn font-bold px-4 py-2 rounded-xl" onclick="openTab(event, 'tab5')"
+                                    href="#information" role="tab" data-bs-toggle="tab">
+                                    Academic Integrity</button>
+                            </li>
+                        </ul>
 
-    <section>
-        <div class="mx-auto container text-black">
-            <div class="col-xs-12">
-                <div class="pd_tab_area fix">
-                    <ul class="pd_tab_btn nav nav-tabs" role="tablist">
-                        <li>
-                            <button class="tab-btn font-bold px-4 py-2 bg-green-500 rounded-xl text-white"
-                                onclick="openTab(event, 'tab1')" href="#description" role="tab"
-                                data-bs-toggle="tab">Admission </button>
-                        </li>
-                        <li>
-                            <button class="tab-btn font-bold px-4 py-2 rounded-xl" onclick="openTab(event, 'tab2')"
-                                href="#information" role="tab" data-bs-toggle="tab">
-                                Assessment</button>
-                        </li>
-                        <li>
-                            <button class="tab-btn font-bold px-4 py-2 rounded-xl" onclick="openTab(event, 'tab3')"
-                                href="#information" role="tab" data-bs-toggle="tab">
-                                Inclusion </button>
-                        </li>
-                        <li>
-                            <button class="tab-btn font-bold px-4 py-2 rounded-xl" onclick="openTab(event, 'tab4')"
-                                href="#information" role="tab" data-bs-toggle="tab">
-                                Language </button>
-                        </li>
-                        <li>
-                            <button class="tab-btn font-bold px-4 py-2 rounded-xl" onclick="openTab(event, 'tab5')"
-                                href="#information" role="tab" data-bs-toggle="tab">
-                                Academic Integrity</button>
-                        </li>
-                    </ul>
+                        <!-- Tab panes 1 -->
+                        <div role="tabpanel" class="tab-pane fade show tab-content " id="tab1">
 
-                    <!-- Tab panes 1 -->
-                    <div role="tabpanel" class="tab-pane fade show tab-content " id="tab1">
-
-                        <div id="pdfThumbnails" class=" inline-block w-full ">
-                            <div class="pdf-item flex ">
-                                <canvas class="pdf-thumbnail w-48 h-auto cursor-pointer shadow-lg rounded-lg m-4"
-                                    data-pdf="{{ asset('pdf/policy/' . $branch->branch_short_name . '/Admission Policy SKT 2023-2026.pdf') }}">
-                                </canvas>
+                            <div id="pdfThumbnails" class=" inline-block w-full ">
+                                <div class="pdf-item flex ">
+                                    <canvas class="pdf-thumbnail w-48 h-auto cursor-pointer shadow-lg rounded-lg m-4"
+                                        data-pdf="{{ asset('pdf/policy/' . $branch->branch_short_name . '/Admission Policy SKT 2023-2026.pdf') }}">
+                                    </canvas>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <!-- Tab panes 2 -->
-                    <div role="tabpanel" class="tab-pane fade show tab-content hidden" id="tab2">
-                        <div id="pdfThumbnails" class=" inline-block w-full ">
-                            <div class="pdf-item flex ">
-                                <canvas class="pdf-thumbnail w-48 h-auto cursor-pointer shadow-lg rounded-lg m-4"
-                                    data-pdf="{{ asset('pdf/policy/' . $branch->branch_short_name . '/Assessment policy_SKT 2023-2026_.pdf') }}">
-                                </canvas>
+                        <!-- Tab panes 2 -->
+                        <div role="tabpanel" class="tab-pane fade show tab-content hidden" id="tab2">
+                            <div id="pdfThumbnails" class=" inline-block w-full ">
+                                <div class="pdf-item flex ">
+                                    <canvas class="pdf-thumbnail w-48 h-auto cursor-pointer shadow-lg rounded-lg m-4"
+                                        data-pdf="{{ asset('pdf/policy/' . $branch->branch_short_name . '/Assessment policy_SKT 2023-2026_.pdf') }}">
+                                    </canvas>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <!-- Tab panes 3 -->
-                    <div role="tabpanel" class="tab-pane fade show tab-content hidden" id="tab3">
-                        <div id="pdfThumbnails" class=" inline-block w-full ">
-                            <div class="pdf-item flex ">
-                                <canvas class="pdf-thumbnail w-48 h-auto cursor-pointer shadow-lg rounded-lg m-4"
-                                    data-pdf="{{ asset('pdf/policy/' . $branch->branch_short_name . '/Inclusion Policy 2023-2026.pdf') }}">
-                                </canvas>
+                        <!-- Tab panes 3 -->
+                        <div role="tabpanel" class="tab-pane fade show tab-content hidden" id="tab3">
+                            <div id="pdfThumbnails" class=" inline-block w-full ">
+                                <div class="pdf-item flex ">
+                                    <canvas class="pdf-thumbnail w-48 h-auto cursor-pointer shadow-lg rounded-lg m-4"
+                                        data-pdf="{{ asset('pdf/policy/' . $branch->branch_short_name . '/Inclusion Policy 2023-2026.pdf') }}">
+                                    </canvas>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <!-- Tab panes 4 -->
-                    <div role="tabpanel" class="tab-pane fade show tab-content hidden" id="tab4">
-                        <div id="pdfThumbnails" class=" inline-block w-full ">
-                            <div class="pdf-item flex ">
-                                <canvas class="pdf-thumbnail w-48 h-auto cursor-pointer shadow-lg rounded-lg m-4"
-                                    data-pdf="{{ asset('pdf/policy/' . $branch->branch_short_name . '/Language Policy SKT 2023-2026.pdf') }}">
-                                </canvas>
+                        <!-- Tab panes 4 -->
+                        <div role="tabpanel" class="tab-pane fade show tab-content hidden" id="tab4">
+                            <div id="pdfThumbnails" class=" inline-block w-full ">
+                                <div class="pdf-item flex ">
+                                    <canvas class="pdf-thumbnail w-48 h-auto cursor-pointer shadow-lg rounded-lg m-4"
+                                        data-pdf="{{ asset('pdf/policy/' . $branch->branch_short_name . '/Language Policy SKT 2023-2026.pdf') }}">
+                                    </canvas>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <!-- Tab panes 5 -->
-                    <div role="tabpanel" class="tab-pane fade show tab-content hidden" id="tab5">
-                        <div id="pdfThumbnails" class=" inline-block w-full ">
-                            <div class="pdf-item flex ">
-                                <canvas class="pdf-thumbnail w-48 h-auto cursor-pointer shadow-lg rounded-lg m-4"
-                                    data-pdf="{{ asset('pdf/policy/' . $branch->branch_short_name . '/SKT Final Academic Integrity policy 2023-2026.pdf') }}">
-                                </canvas>
+                        <!-- Tab panes 5 -->
+                        <div role="tabpanel" class="tab-pane fade show tab-content hidden" id="tab5">
+                            <div id="pdfThumbnails" class=" inline-block w-full ">
+                                <div class="pdf-item flex ">
+                                    <canvas class="pdf-thumbnail w-48 h-auto cursor-pointer shadow-lg rounded-lg m-4"
+                                        data-pdf="{{ asset('pdf/policy/' . $branch->branch_short_name . '/SKT Final Academic Integrity policy 2023-2026.pdf') }}">
+                                    </canvas>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        </div>
-    </section>
+            </div>
+        </section>
+    @else
+        <section>
+            <div class="mx-auto container text-black">
+                <div class="col-xs-12">
+                    <div class="pd_tab_area fix">
+                        <ul class="pd_tab_btn nav nav-tabs" role="tablist">
+                            <li>
+                                <button class="tab-btn font-bold px-4 py-2 bg-green-500 rounded-xl text-white"
+                                    onclick="openTab(event, 'tab1')" href="#description" role="tab"
+                                    data-bs-toggle="tab">Admission </button>
+                            </li>
+                            <li>
+                                <button class="tab-btn font-bold px-4 py-2 rounded-xl" onclick="openTab(event, 'tab2')"
+                                    href="#information" role="tab" data-bs-toggle="tab">
+                                    Assessment</button>
+                            </li>
+                            <li>
+                                <button class="tab-btn font-bold px-4 py-2 rounded-xl" onclick="openTab(event, 'tab3')"
+                                    href="#information" role="tab" data-bs-toggle="tab">
+                                    Inclusion </button>
+                            </li>
+                            <li>
+                                <button class="tab-btn font-bold px-4 py-2 rounded-xl" onclick="openTab(event, 'tab4')"
+                                    href="#information" role="tab" data-bs-toggle="tab">
+                                    Language </button>
+                            </li>
+                            <li>
+                                <button class="tab-btn font-bold px-4 py-2 rounded-xl" onclick="openTab(event, 'tab5')"
+                                    href="#information" role="tab" data-bs-toggle="tab">
+                                    Academic Integrity</button>
+                            </li>
+                            <li>
+                                <button class="tab-btn font-bold px-4 py-2 rounded-xl" onclick="openTab(event, 'tab6')"
+                                    href="#information" role="tab" data-bs-toggle="tab">
+                                    Child Protection</button>
+                            </li>
+                            <li>
+                                <button class="tab-btn font-bold px-4 py-2 rounded-xl" onclick="openTab(event, 'tab7')"
+                                    href="#information" role="tab" data-bs-toggle="tab">
+                                    Homework</button>
+                            </li>
+                        </ul>
+
+                        <!-- Tab panes 1 -->
+                        <div role="tabpanel" class="tab-pane fade show tab-content " id="tab1">
+
+                            <div id="pdfThumbnails" class=" inline-block w-full ">
+                                <div class="pdf-item flex ">
+                                    <canvas class="pdf-thumbnail w-48 h-auto cursor-pointer shadow-lg rounded-lg m-4"
+                                        data-pdf="{{ asset('pdf/policy/' . $branch->branch_short_name . '/Admission Policy 2025-2026 City Campus.pdf') }}">
+                                    </canvas>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Tab panes 2 -->
+                        <div role="tabpanel" class="tab-pane fade show tab-content hidden" id="tab2">
+                            <div id="pdfThumbnails" class=" inline-block w-full ">
+                                <div class="pdf-item flex ">
+                                    <canvas class="pdf-thumbnail w-48 h-auto cursor-pointer shadow-lg rounded-lg m-4"
+                                        data-pdf="{{ asset('pdf/policy/' . $branch->branch_short_name . '/Assessment policy_SKT 2025-2026 City Campus.pdf') }}">
+                                    </canvas>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Tab panes 3 -->
+                        <div role="tabpanel" class="tab-pane fade show tab-content hidden" id="tab3">
+                            <div id="pdfThumbnails" class=" inline-block w-full ">
+                                <div class="pdf-item flex ">
+                                    <canvas class="pdf-thumbnail w-48 h-auto cursor-pointer shadow-lg rounded-lg m-4"
+                                        data-pdf="{{ asset('pdf/policy/' . $branch->branch_short_name . '/Inclusion and Diversity Policy 2025-2026 City Campus.pdf') }}">
+                                    </canvas>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Tab panes 4 -->
+                        <div role="tabpanel" class="tab-pane fade show tab-content hidden" id="tab4">
+                            <div id="pdfThumbnails" class=" inline-block w-full ">
+                                <div class="pdf-item flex ">
+                                    <canvas class="pdf-thumbnail w-48 h-auto cursor-pointer shadow-lg rounded-lg m-4"
+                                        data-pdf="{{ asset('pdf/policy/' . $branch->branch_short_name . '/Language Policy 2025-2026 City Campus.pdf') }}">
+                                    </canvas>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Tab panes 5 -->
+                        <div role="tabpanel" class="tab-pane fade show tab-content hidden" id="tab5">
+                            <div id="pdfThumbnails" class=" inline-block w-full ">
+                                <div class="pdf-item flex ">
+                                    <canvas class="pdf-thumbnail w-48 h-auto cursor-pointer shadow-lg rounded-lg m-4"
+                                        data-pdf="{{ asset('pdf/policy/' . $branch->branch_short_name . '/Academic Integrity policy 2025-2026 City Campus.pdf') }}">
+                                    </canvas>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Tab panes 6 -->
+                        <div role="tabpanel" class="tab-pane fade show tab-content hidden" id="tab6">
+                            <div id="pdfThumbnails" class=" inline-block w-full ">
+                                <div class="pdf-item flex ">
+                                    <canvas class="pdf-thumbnail w-48 h-auto cursor-pointer shadow-lg rounded-lg m-4"
+                                        data-pdf="{{ asset('pdf/policy/' . $branch->branch_short_name . '/Child protection Policy 2025-2026 SKT City Campus.pdf') }}">
+                                    </canvas>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Tab panes 7 -->
+                        <div role="tabpanel" class="tab-pane fade show tab-content hidden" id="tab7">
+                            <div id="pdfThumbnails" class=" inline-block w-full ">
+                                <div class="pdf-item flex ">
+                                    <canvas class="pdf-thumbnail w-48 h-auto cursor-pointer shadow-lg rounded-lg m-4"
+                                        data-pdf="{{ asset('pdf/policy/' . $branch->branch_short_name . '/Homework Policy 2025-2026 City Campus.pdf') }}">
+                                    </canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+    @endif
     <script src="{{ asset('assets/js/jquery-1.12.4.min.js') }}"></script>
     <script>
         function openTab(event, tabId) {
