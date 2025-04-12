@@ -41,17 +41,17 @@
 
     <!-- START TOP PROMO FEATURES -->
     <section class="tp_feature">
-        <div class="grid md:grid-cols-1 lg:grid-cols-3">
+        <div class="grid md:grid-cols-1 lg:grid-cols-3 gap-6">
             <!-- Quality Education -->
-            <div class="  bg-white ">
-                <div class=" bg-white p-16 mb-8  shadow border-r border-gray-50 ">
+            <div class="h-full flex">
+                <div class="bg-white p-16 mb-8 shadow border-r border-gray-50 w-full">
                     <h3 class="text-xl mb-4">Quality Education</h3>
-                    <p class="mb-10 font-light text-gray-500">Providing students with a rich learning experience, blending
-                        academics, creativity, and critical thinking.</p>
+                    <p class="mb-10 font-light text-gray-500">
+                        Providing students with a rich learning experience, blending academics, and critical thinking.
+                    </p>
                     <a href="#topic_content_area" class="relative inline-block mx-auto py-4 px-6 overflow-hidden group">
                         <span
                             class="relative font-semibold text-[#1a2d62] uppercase px-6 py-4 transition-all duration-300 group-hover:text-white">
-                            <!-- Background animation -->
                             <span class="absolute inset-0 flex items-center">
                                 <span
                                     class="w-8 h-8 bg-teal-400 rounded-full transition-all duration-300 origin-left transform scale-100 group-hover:w-full group-hover:h-full group-hover:scale-x-100"></span>
@@ -59,20 +59,19 @@
                             <span class="relative z-10">Explore</span>
                         </span>
                     </a>
-
                 </div>
             </div>
 
             <!-- Experienced Teachers -->
-            <div class="  bg-white ">
-                <div class=" bg-white p-16 mb-8  shadow border-r border-gray-50 ">
+            <div class="h-full flex">
+                <div class="bg-white p-16 mb-8 shadow border-r border-gray-50 w-full">
                     <h3 class="text-xl mb-4">Experienced Teachers</h3>
-                    <p class="mb-10 font-light text-gray-500">Passionate educators committed to nurturing potential and
-                        inspiring a love for learning.</p>
+                    <p class="mb-10 font-light text-gray-500">
+                        Passionate educators committed to nurturing potential and inspiring a love for learning.
+                    </p>
                     <a href="#topic_content_area" class="relative inline-block mx-auto py-4 px-6 overflow-hidden group">
                         <span
                             class="relative font-semibold text-[#1a2d62] uppercase px-6 py-4 transition-all duration-300 group-hover:text-white">
-                            <!-- Background animation -->
                             <span class="absolute inset-0 flex items-center">
                                 <span
                                     class="w-8 h-8 bg-teal-400 rounded-full transition-all duration-300 origin-left transform scale-100 group-hover:w-full group-hover:h-full group-hover:scale-x-100"></span>
@@ -84,15 +83,15 @@
             </div>
 
             <!-- Delicious Food -->
-            <div class="  bg-white ">
-                <div class=" bg-white p-16 mb-8  shadow border-r border-gray-50 ">
+            <div class="h-full flex">
+                <div class="bg-white p-16 mb-8 shadow border-r border-gray-50 w-full">
                     <h3 class="text-xl mb-4">Delicious Food</h3>
-                    <p class="mb-10 font-light text-gray-500">Wholesome, flavorful meals crafted daily to keep students
-                        energized and satisfied.</p>
+                    <p class="mb-10 font-light text-gray-500">
+                        Wholesome, flavorful meals thoughtfully crafted daily to keep students energized and satisfied.
+                    </p>
                     <a href="#topic_content_area" class="relative inline-block mx-auto py-4 px-6 overflow-hidden group">
                         <span
                             class="relative font-semibold text-[#1a2d62] uppercase px-6 py-4 transition-all duration-300 group-hover:text-white">
-                            <!-- Background animation -->
                             <span class="absolute inset-0 flex items-center">
                                 <span
                                     class="w-8 h-8 bg-teal-400 rounded-full transition-all duration-300 origin-left transform scale-100 group-hover:w-full group-hover:h-full group-hover:scale-x-100"></span>
@@ -103,12 +102,13 @@
                 </div>
             </div>
         </div>
+
     </section>
     <!-- END TOP PROMO FEATURES -->
 
     <!-- START SCHOOL HISTORY -->
     <section class="school_history mt-10">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 ">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 items-stretch ">
             <div class="flex justify-center items-center">
                 <img src="{{ asset($branch->branch_logo) }}" style="max-height: 420px" alt="" />
             </div>
@@ -226,7 +226,8 @@
                     <div class="mx-2 mb-2">
                         <div class="relative group rounded-md overflow-hidden">
                             <!-- Image -->
-                            <img src="{{ asset($gallery->gallery_photo) }}" class="w-full min-h-80" alt="Team Member" />
+                            <img src="{{ asset($gallery->gallery_photo) }}" class="w-full min-h-80 object-cover"
+                                alt="Team Member" />
 
                             <!-- Overlay -->
                             <div
@@ -286,30 +287,30 @@
     <hr class=" w-1/2 mx-auto md:my-20">
 
     <!-- START PRINCIPAL MESSAGE -->
-    <section class="principal_message mt-10">
+    <section class="principal_message mt-10 container mx-auto">
         <div class="grid grid-cols-1 lg:grid-cols-3 ">
-            <div class=" lg:col-span-2  mx-auto p-10">
+            <div class=" lg:col-span-2  mx-auto p-4">
                 <div class="ab_content">
                     <h2 class=" text-xl font-light text-gray-500">
                         Our
                     </h2>
-                    <h2 class=" text-4xl font-semibold">
-                        <span class="text-emerald-400">Our Head of School's Message</span>
+                    <h2 class=" text-2xl xl:text-4xl font-semibold">
+                        <span class="text-emerald-400"> Head of School's Message</span>
                     </h2>
                     <p class=" text-gray-500">
 
                     </p>
                 </div>
                 <div class="abmv mt-4 principal-message ">
-                    <p class="md:text-xl italic">
+                    <p class="text-md xl:text-xl italic">
                         {{ $branch->principal_message->principal_message }}
                     </p>
                 </div>
             </div>
             <div class="flex flex-col justify-center items-center">
-                <img class=" w-[240px] h-[240px] md:w-[420px] md:h-[420px] object-cover rounded-full"
+                <img class=" w-[240px] h-[240px] md:w-[300px] md:h-[300px] xl:w-[420px] xl:h-[420px] object-cover rounded-full"
                     src="{{ asset($branch->principal_message->principal_photo) }}" alt="" />
-                <p class="mt-4 bold text-xl md:text-2xl italic">{{ $branch->principal_message->principal_name }}</p>
+                <p class="mt-4 bold text-xl xl:text-2xl italic">{{ $branch->principal_message->principal_name }}</p>
             </div>
         </div>
     </section>
@@ -319,7 +320,7 @@
     <!-- START TOPIC-->
     <section class="topic_content_area section-padding" style="background-image: url(assets/images/banner/topic.png);"
         id="topic_content_area">
-        <div class="container mx-auto">
+        <div class="container mx-auto p-4">
             <div class="section-title">
                 <h2>What We Provide</h2>
                 <p>
@@ -387,7 +388,7 @@
 
     <!-- START EVENT-->
     <section class=" section_event section-padding">
-        <div class="container mx-auto">
+        <div class="container mx-auto p-4">
             <div class="section-title">
                 <h2>Upcoming Events</h2>
                 <p>
@@ -396,7 +397,7 @@
             </div>
             <div class="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1">
                 @foreach ($branch->events as $event)
-                    <div class="event-slide mr-4 hover:shadow-md ">
+                    <div class="event-slide  hover:shadow-md ">
                         <a href="{{ route('event-detail.home', $event->id) }}"> {{-- need tobe replaced --}}
                             <div class="event-img rounded-t-md">
                                 <img src="{{ asset($event->event_banner) }}" style="max-height: 361px" alt="" />
@@ -428,7 +429,7 @@
 
     <!-- START POST -->
     <section id="post" class="blog_area section-padding">
-        <div class="container mx-auto">
+        <div class="container mx-auto p-4">
             <div class="section-title">
                 <h2>News</h2>
                 <p>
@@ -437,7 +438,7 @@
             </div>
             <div class=" grid sm:grid-cols-3">
                 @foreach ($branch->posts as $post)
-                    <div class="mr-2">
+                    <div class="">
                         <div class="single_blog ">
                             <img src="{{ asset($post->post_banner) }}" class="img-fluid" style="max-height: 354px;"
                                 alt="image" />
