@@ -137,7 +137,7 @@ class GeneralRouteController extends Controller
             $query->where('post_comment_status', 'approved');
         }])->find($param);
         if (!$post) {
-            return to_route('news.home');
+            return view('pages.not_found');
         }
         // dd($post);
         $branch = Branch::find($post->post_branch_id);
@@ -238,7 +238,7 @@ class GeneralRouteController extends Controller
             $query->where('event_comment_status', 'approved');
         }])->find($param);
         if (!$event) {
-            return to_route('event.home');
+            return view('pages.not_found');
         }
         $branch = Branch::find($event->event_branch_id);
         $events = Event::where('event_branch_id', $event->event_branch_id)->orderBy('created_at', 'desc')->limit(5)->get();
@@ -307,7 +307,7 @@ class GeneralRouteController extends Controller
     {
         $job = CareerJob::find($param);
         if (!$job) {
-            return to_route('career.home');
+            return view('pages.not_found');
         }
         // dd($post);
         $branch = Branch::find($job->career_job_branch_id);
