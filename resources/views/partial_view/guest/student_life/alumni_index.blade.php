@@ -28,9 +28,9 @@
         </div>
     </div>
     <section>
-        <div class="grid grid-cols-1 md:grid-cols-2 py-2 md:py-20"
+        <div class="grid grid-cols-1 lg:grid-cols-2 py-2 lg:py-20"
             style="background-image: url({{ asset('assets/images/banner/course-bg.png') }}); background-size:cover; background-position: center center;">
-            <div class="flex items-center justify-center p-20 italic font-semibold">
+            <div class="flex items-center justify-center p-4 md:p-20 italic font-semibold text-xs md:text-lg">
                 Today's BFI represents an evolving community bred from four
                 distinct institutions – SKT, BISA,NISA and
                 MISA. These schools, each with rich histories and cultures of their own, have evolved into a cohesive
@@ -51,7 +51,7 @@
         </div>
     </section>
     <section>
-        <div class="grid grid-cols-1 md:grid-cols-2 py-2 md:py-20"
+        <div class="grid grid-cols-1 lg:grid-cols-2 py-2 lg:py-20"
             style="background-image: url({{ asset('assets/images/banner/course-bg.png') }}); background-size:cover; background-position: center center;">
             <div class="flex flex-col items-center justify-center gap-2 mt-10 lg:mt-0">
                 {{-- <img src="{{ asset('img/banner-hero.png') }}" class=" home-banner-hero" alt="" /> --}}
@@ -61,7 +61,7 @@
                 <p class="font-semibold">Ismail</p>
                 <p class="italic font-semibold">Alumni Principal</p>
             </div>
-            <div class="flex items-center justify-center p-20 italic font-semibold">
+            <div class="flex items-center justify-center p-4 md:p-20 italic font-semibold text-xs md:text-lg">
                 Today's BFI represents an evolving community bred from four
                 distinct institutions – SKT, BISA,NISA and
                 MISA. These schools, each with rich histories and cultures of their own, have evolved into a cohesive
@@ -402,7 +402,8 @@
         <div class="w-full bg-white border-gray-200 px-5  text-gray-800">
             <div class="w-full max-w-6xl mx-auto">
                 <div class="text-center max-w-xl mx-auto">
-                    <h1 class="text-6xl md:text-7xl font-bold mb-5 text-gray-600">What people <br>are saying.</h1>
+                    <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold mb-5 text-gray-600">What people <br>are saying.
+                    </h1>
                     <h3 class="text-xl mb-5 font-light">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
                     <div class="text-center mb-10">
                         <span class="inline-block w-1 h-1 rounded-full bg-emerald-500 ml-1"></span>
