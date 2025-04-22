@@ -29,6 +29,18 @@
                                     <img src="{{ asset($post->post_banner) }}" class="img-fluid w-full rounded-lg my-4"
                                         alt="Blog image" />
                                     <p>{{ $post->post_body }}</p>
+                                    @php
+                                        $post_images = explode(',', $post->post_image);
+                                    @endphp
+                                    <div class="mt-6 flex flex-wrap gap-4 justify-start">
+                                        @foreach ($post_images as $post_image)
+                                            <div class="flex-shrink-0 rounded-lg overflow-hidden ">
+                                                <img src="{{ asset($post_image) }}"
+                                                    class="h-auto max-h-32 md:max-h-40 xl:max-h-96 w-auto max-w-full object-cover rounded-lg shadow-md hover:shadow-lg transition cursor-pointer"
+                                                    alt="">
+                                            </div>
+                                        @endforeach
+                                    </div>
                                 </div>
                                 <div class="share_sp mt-6">
                                     <h4 class="text-lg font-semibold">Share</h4>

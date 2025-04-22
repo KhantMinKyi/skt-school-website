@@ -60,7 +60,7 @@ class PostController extends Controller
             'post_category_id' => 'required',
             'post_body' => 'required',
             'post_video' => 'nullable',
-            'post_image' => 'nullable',
+            'post_image' => 'nullable|array',
             'post_is_show_front' => 'nullable',
         ]);
         $branch = Branch::find($data['post_branch_id']);
@@ -68,8 +68,9 @@ class PostController extends Controller
         if (!$branch) {
             return to_route('admin-posts.index')->with('error', 'No Branch Found ! Please Try Again');
         }
+        $postUid = uniqid('', true);
         if (isset($data['post_banner'])) {
-            $filePath = "img/post_data/" . $branch->branch_short_name;
+            $filePath = "img/post_data/" . $branch->branch_short_name . '/' . $postUid;
             if (!File::exists($filePath)) {
                 $result = File::makeDirectory($filePath, 0755, true);
             }
@@ -81,6 +82,25 @@ class PostController extends Controller
 
             $photo->move($filePath, "/post_" . $imageUid . "." . $extension);
             $data['post_banner'] = "/" . $photoName;
+        }
+
+        if (isset($data['post_image'])) {
+            $images = '';
+            foreach ($data['post_image'] as $post_image) {
+                $filePath = "img/post_data/" . $branch->branch_short_name . '/' . $postUid;
+                if (!File::exists($filePath)) {
+                    $result = File::makeDirectory($filePath, 0755, true);
+                }
+                $photo = $post_image;
+                $extension = $photo->getClientOriginalExtension();
+                $imageUid = uniqid('', true);
+                $name = $photo->getClientOriginalName();
+                $singlePhotoName = $filePath . "/post_" . $imageUid . "." . $extension;
+                $photo->move($filePath, "/post_" . $imageUid . "." . $extension);
+                $imagePaths[] = $singlePhotoName;
+            }
+            $images = implode(',', $imagePaths);
+            $data['post_image'] = $images;
         }
         $data['post_created_date'] = Carbon::now();
         $data['post_created_user_id'] = $user_id;
@@ -163,11 +183,17 @@ class PostController extends Controller
                 return to_route('staff-posts.index')->with('error', 'No Branch Found ! Please Try Again');
             }
         }
+        // Explode the path into parts
+        $parts = explode('/', $post->post_banner);
+
+        // Get the second-to-last part (the folder name)
+        $folderName = $parts[count($parts) - 2];
+        $postUid = $folderName;
         if (isset($data['post_banner'])) {
             if (File::exists(public_path($post->post_banner))) {
                 File::delete(public_path($post->post_banner));
             }
-            $filePath = "img/post_data/" . $branch->branch_short_name;
+            $filePath = "img/post_data/" . $branch->branch_short_name . '/' . $postUid;
             if (!File::exists($filePath)) {
                 $result = File::makeDirectory($filePath, 0755, true);
             }
@@ -180,6 +206,34 @@ class PostController extends Controller
             $photo->move($filePath, "/post_" . $imageUid . "." . $extension);
             $data['post_banner'] = "/" . $photoName;
         }
+
+        if (isset($data['post_image'])) {
+            $images = '';
+            $old_post_images = explode(',', $post->post_image);
+            foreach ($old_post_images as $opm) {
+                if (File::exists(public_path($opm))) {
+                    File::delete(public_path($opm));
+                }
+            }
+            foreach ($data['post_image'] as $post_image) {
+                $filePath = "img/post_data/" . $branch->branch_short_name . '/' . $postUid;
+                if (!File::exists($filePath)) {
+                    $result = File::makeDirectory($filePath, 0755, true);
+                }
+                $photo = $post_image;
+                $extension = $photo->getClientOriginalExtension();
+                $imageUid = uniqid('', true);
+                $name = $photo->getClientOriginalName();
+                $singlePhotoName = $filePath . "/post_" . $imageUid . "." . $extension;
+                $photo->move($filePath, "/post_" . $imageUid . "." . $extension);
+                $imagePaths[] = $singlePhotoName;
+            }
+            $images = implode(',', $imagePaths);
+            $data['post_image'] = $images;
+        }
+
+
+
         $data['post_updated_user_id'] = $user_id;
         $data['post_is_show_front'] = isset($data['post_is_show_front'])  ? 1 : 0;
         $post->update($data);

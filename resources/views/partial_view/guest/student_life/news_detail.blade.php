@@ -45,10 +45,23 @@
                                 alt="Blog image" />
                             <p>{{ $post->post_body }}</p>
                         </div>
+                        @php
+                            $post_images = explode(',', $post->post_image);
+                        @endphp
+                        <div class="mt-6 flex flex-wrap gap-4 justify-between">
+                            @foreach ($post_images as $post_image)
+                                <div
+                                    class="flex-shrink-0 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition cursor-pointer">
+                                    <img src="{{ asset($post_image) }}"
+                                        class="h-auto max-h-32 md:max-h-40 xl:max-h-80 w-auto max-w-full object-cover rounded-lg"
+                                        alt="">
+                                </div>
+                            @endforeach
+                        </div>
                         <div class="share_sp mt-6">
                             {{-- <h4 class="text-lg font-semibold">Share</h4> --}}
                             @if ($branch->branch_short_name == 'SKT-RC')
-                                <ul class="flex gap-4 mt-2">
+                                <ul class="grid grid-cols-2 lg:grid-cols-4 gap-4 mt-2">
                                     <li><a href="https://www.facebook.com/SKTinternationalCollege/" target="__blank"
                                             class="text-blue-600 hover:text-blue-800">Facebook</a></li>
                                     <li><a href="https://www.youtube.com/@sktinternationalcollege6656" target="__blank"
@@ -59,7 +72,7 @@
                                             target="__blank" class="text-blue-700 hover:text-blue-900">Linkedin</a></li>
                                 </ul>
                             @else
-                                <ul class="flex gap-4 mt-2">
+                                <ul class="grid grid-cols-2 lg:grid-cols-4 gap-4 mt-2">
                                     <li><a href="https://www.facebook.com/BahanInternationalScienceAcademy/"
                                             target="__blank" class="text-blue-600 hover:text-blue-800">Facebook</a></li>
                                     <li><a href="https://www.youtube.com/@bahaninternationalsciencea7001" target="__blank"

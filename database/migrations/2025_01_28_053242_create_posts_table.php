@@ -23,7 +23,7 @@ return new class extends Migration
             $table->boolean('post_is_show_front')->default(0);
             $table->text('post_body');
             $table->string('post_video')->nullable();
-            $table->string('post_image')->nullable();
+            $table->longText('post_image')->nullable();
             $table->boolean('post_is_active')->default(1);
             $table->timestamps();
         });
