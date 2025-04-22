@@ -94,7 +94,7 @@
                     </div> --}}
                     <div class="col-12">
                         <div class="row mb-3">
-                            <label for="inputEmail3" class="col-3 col-form-label"> Banner </label>
+                            <label for="inputEmail3" class="col-3 col-form-label"> Images </label>
                             <div class="col-9 mb-3">
                                 <input type="file" placeholder="Choose Banner " value="{{ $post->post_image }}"
                                     name="post_image[]" title="Logo is required" class="form-control" multiple>

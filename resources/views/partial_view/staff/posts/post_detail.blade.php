@@ -1,94 +1,84 @@
 @extends('layouts.staff_layout')
 
 @section('content')
+    {{-- @vite('resources/css/app.css') --}}
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <!-- Font Awesome CSS -->
     {{-- <link rel="stylesheet" href="{{ asset('assets/fonts/font-awesome.min.css') }}"> --}}
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
 
     <link rel="stylesheet" href="{{ asset('assets/fonts/themify-icons.css') }}">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Smooch+Sans:wght@100..900&display=swap');
 
-        .post-header {
-            font-family: "Smooch Sans", serif;
+    <link rel="stylesheet" href="{{ asset('guests/css/news_detail.css') }}" />
+    <link rel="stylesheet" href="{{ asset('assets/css/slider.css') }}" />
 
-        }
-
-        .post_header {}
-
-        .post_header h4 {
-            font-size: 36px;
-            font-weight: 700;
-            margin-bottom: 20px;
-            margin-top: 20px;
-        }
-
-        .post_header {}
-
-        .post_header span i {
-            color: #2eca7f;
-            margin-right: 8px;
-        }
-
-        .post_header span {
-            color: #333;
-            margin-bottom: 5px;
-            display: inline-block;
-            margin-right: 20px;
-        }
-
-        .post_header p {
-            margin-top: 20px;
-        }
-
-        .post_header_description {
-            margin-top: 30px;
-        }
-
-        .post_header_description h3 {
-            font-size: 36px;
-            font-weight: 700;
-            margin-bottom: 15px;
-        }
-
-        .post_header_description p {}
-    </style>
     <div class="card">
         <div class="card-body">
-            {{-- {{ $post }} --}}
-            <div class="row">
-                {{-- <div class="col-4"></div> --}}
-                <div class="col-12 col-sm-8  col-md-6">
-                    <div class="">
-                        <img class="border rounded shadow img-fluid" src="{{ asset($post->post_banner) }}" alt="">
-                    </div>
-                    <div class="post_header ">
-                        <h4>{{ $post->post_title }}</h4>
-                        <span><i class="fa fa-calendar"></i>{{ date('d-m-Y', strToTime($post->post_created_date)) }}</span>
-                        <span><i class="fa-solid fa-check"></i>{{ $post->category->category_title }}</span>
-                        <span><i
-                                class="fa-solid fa-location-dot"></i></i><strong>{{ $post->branch->branch_name }}</strong></span>
-                        {{-- <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                            industry's standard dummy text ever since the when an unknown printer.</p> --}}
-                    </div>
-                    <div class="post_header_description ">
-                        <h3>Post Descriptions</h3>
-                        <p>{{ $post->post_body }}</p>
-                    </div>
-                    @if ($post->post_video)
-                        <div class="post_header_description ">
-                            <h3>Post Video</h3>
-                            {{-- <video src="{{ $post->post_video }}"></video> --}}
-                            <iframe width="100%" height="315"
-                                src="https://www.youtube.com/embed/{{ $post->post_video }}" frameborder="0"
-                                allow="autoplay; encrypted-media" allowfullscreen>
-                            </iframe>
-                            <p></p>
-                        </div>
-                    @endif
-                </div>
-            </div>
+            <section class="blog-page section-padding py-12">
+                <div class="container mx-auto px-4">
+                    <div class="row flex flex-wrap">
+                        <div class="w-full ">
+                            <div class="arti_single bg-white p-6 rounded-lg shadow-lg">
 
+                                <div class="arti_content text-gray-700 leading-relaxed">
+                                    <p></p>
+                                </div>
+                                <div class="arti_sp mt-6">
+                                    <h2 class="text-2xl font-bold text-gray-800">{{ $post->post_title }}</h2>
+                                    <img src="{{ asset($post->post_banner) }}" class="img-fluid w-full rounded-lg my-4"
+                                        alt="Blog image" />
+                                    <p>{{ $post->post_body }}</p>
+                                    @php
+                                        $post_images = explode(',', $post->post_image);
+                                    @endphp
+                                    <div class="mt-6 flex flex-wrap gap-4 justify-start">
+                                        @foreach ($post_images as $post_image)
+                                            <div class="flex-shrink-0 rounded-lg overflow-hidden ">
+                                                <img src="{{ asset($post_image) }}"
+                                                    class="h-auto max-h-32 md:max-h-40 xl:max-h-96 w-auto max-w-full object-cover rounded-lg shadow-md hover:shadow-lg transition cursor-pointer"
+                                                    alt="">
+                                            </div>
+                                        @endforeach
+                                    </div>
+                                </div>
+                                <div class="share_sp mt-6">
+                                    <h4 class="text-lg font-semibold">Share</h4>
+                                    <ul class="flex gap-4 mt-2">
+                                        <li><a href="#" class="text-blue-600 hover:text-blue-800">Facebook</a></li>
+                                        <li><a href="#" class="text-blue-400 hover:text-blue-600">Twitter</a></li>
+                                        <li><a href="#" class="text-pink-500 hover:text-pink-700">Instagram</a></li>
+                                        <li><a href="#" class="text-blue-700 hover:text-blue-900">Linkedin</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            {{-- <div class="author_part mt-8 bg-gray-100 p-6 rounded-lg">
+                        <h3 class="blog_head_title text-xl font-semibold mb-4">About the author</h3>
+                        <div class="single_author flex items-center gap-4">
+                            <img src="{{ asset($post->post_banner) }}" class="w-16 h-16 rounded-full" alt="" />
+                            <div>
+                                <h4 class="text-lg font-semibold">{{ $post->created_user->name }}</h4>
+                                <p class="text-gray-600 text-sm">Lorem ipsum dolor sit amet...</p>
+                            </div>
+                        </div>
+                    </div> --}}
+
+                            <div class="comments_part mt-8">
+                                <h3 class="blog_head_title text-xl font-semibold mb-4">Comments</h3>
+                                @foreach ($post->comments as $comment)
+                                    <div class="single_comment flex gap-4 border-b py-4">
+                                        <div>
+                                            <h4 class="font-semibold">{{ $comment->post_comment_user_name }}</h4>
+                                            <p class="text-gray-600 text-sm">{{ $comment->post_comment_body }}</p>
+                                        </div>
+                                    </div>
+                                @endforeach
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
     </div>
 @endsection

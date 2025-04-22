@@ -70,11 +70,19 @@
                     </div>
                     <div class="col-12">
                         <div class="row mb-3">
-                            <label for="inputEmail3" class="col-3 col-form-label"> Image </label>
-                            <div class="col-9">
-                                <span><small>You can add an image link if there is an image</small></span>
-                                <input type="text" placeholder="Choose Post Image Link (Optional)"
-                                    value="{{ $post->post_image }}" name="post_image" class="form-control">
+                            <label for="inputEmail3" class="col-3 col-form-label"> Images </label>
+                            <div class="col-9 mb-3">
+                                <input type="file" placeholder="Choose Banner " value="{{ $post->post_image }}"
+                                    name="post_image[]" title="Logo is required" class="form-control" multiple>
+                            </div>
+                            <div class="col-3"></div>
+                            <div class="col-6">
+                                @php
+                                    $post_images = explode(',', $post->post_image);
+                                @endphp
+                                @foreach ($post_images as $post_image)
+                                    <img src="{{ asset($post_image) }}" width="120px" alt="old banner" title="old banner">
+                                @endforeach
                             </div>
                         </div>
                     </div>
