@@ -50,10 +50,9 @@
                         @endphp
                         <div class="mt-6 flex flex-wrap gap-4 justify-between">
                             @foreach ($post_images as $post_image)
-                                <div
-                                    class="flex-shrink-0 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition cursor-pointer">
+                                <div class="flex-shrink-0 rounded-lg overflow-hidden ">
                                     <img src="{{ asset($post_image) }}"
-                                        class="h-auto max-h-32 md:max-h-40 xl:max-h-80 w-auto max-w-full object-cover rounded-lg"
+                                        class="h-auto max-h-32 md:max-h-40 xl:max-h-80 w-auto max-w-full object-cover rounded-lg shadow-md hover:shadow-lg transition cursor-pointer"
                                         alt="">
                                 </div>
                             @endforeach

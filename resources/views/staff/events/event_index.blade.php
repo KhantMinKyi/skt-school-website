@@ -208,6 +208,17 @@
                             </div> --}}
                             <div class="col-12">
                                 <div class="row mb-3">
+                                    <label for="inputEmail3" class="col-3 col-form-label"> Images </label>
+                                    <div class="col-9">
+                                        <span class="text-danger">Images Size have to be 370x260!</span>
+                                        <input type="file" placeholder="Choose Event Images " value=""
+                                            name="event_image[]" title="Event Images is required" required multiple
+                                            class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="row mb-3">
                                     <label for="inputEmail3" class="col-3 col-form-label"> From/To Date </label>
                                     <div class="col-4">
                                         <input type="date" placeholder="Choose Event Start Date" value=""

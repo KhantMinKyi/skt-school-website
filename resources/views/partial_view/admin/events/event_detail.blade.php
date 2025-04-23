@@ -80,6 +80,18 @@
                                                 class="fa fa-table"></i><strong>{{ $event->event_location }}</strong></span>
                                     </div>
                                     <p>{{ $event->event_body }}</p>
+                                    @php
+                                        $event_images = explode(',', $event->event_image);
+                                    @endphp
+                                    <div class="mt-6 flex flex-wrap gap-4 justify-start">
+                                        @foreach ($event_images as $event_image)
+                                            <div class="flex-shrink-0 rounded-lg overflow-hidden ">
+                                                <img src="{{ asset($event_image) }}"
+                                                    class="h-auto max-h-32 md:max-h-40 xl:max-h-96 w-auto max-w-full object-cover rounded-lg shadow-md hover:shadow-lg transition cursor-pointer"
+                                                    alt="">
+                                            </div>
+                                        @endforeach
+                                    </div>
                                 </div>
                                 <div class="share_sp mt-6">
                                     <h4 class="text-lg font-semibold">Share</h4>

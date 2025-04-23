@@ -48,10 +48,22 @@
                                 <span><i class="fa fa-table"></i><strong>{{ $event->event_location }}</strong></span>
                             </div>
                             <p>{{ $event->event_body }}</p>
+                            @php
+                                $event_images = explode(',', $event->event_image);
+                            @endphp
+                            <div class="mt-6 flex flex-wrap gap-4 justify-between">
+                                @foreach ($event_images as $event_image)
+                                    <div class="flex-shrink-0 rounded-lg overflow-hidden ">
+                                        <img src="{{ asset($event_image) }}"
+                                            class="h-auto max-h-32 md:max-h-40 xl:max-h-80 w-auto max-w-full object-cover rounded-lg shadow-md hover:shadow-lg transition cursor-pointer"
+                                            alt="">
+                                    </div>
+                                @endforeach
+                            </div>
                         </div>
                         <div class="share_sp mt-6">
                             <h4 class="text-lg font-semibold">Share</h4>
-                            <ul class="flex gap-4 mt-2">
+                            <ul class="grid grid-cols-2 lg:grid-cols-4 gap-4 mt-2">
                                 <li><a href="#" class="text-blue-600 hover:text-blue-800">Facebook</a></li>
                                 <li><a href="#" class="text-blue-400 hover:text-blue-600">Twitter</a></li>
                                 <li><a href="#" class="text-pink-500 hover:text-pink-700">Instagram</a></li>
@@ -151,26 +163,30 @@
                             <ul>
                                 <li>
                                     <div class="social_item b_facebook"><a href="#" title="facebook"><i
-                                                class="fa-brands fa-facebook-f"></i></i><span class="item-list">150K
+                                                class="fa-brands fa-facebook-f"></i><span
+                                                class="item-list hidden sm:block">150K
                                                 Likes</span></a>
                                     </div>
                                 </li>
 
                                 <li>
                                     <div class="social_item b_tiktok"><a href="#" title="tiktok"><i
-                                                class="fa-brands fa-tiktok"></i></i><span class="item-list">138K
+                                                class="fa-brands fa-tiktok"></i><span
+                                                class="item-list hidden sm:block">138K
                                                 Followers</span></a></div>
                                 </li>
 
                                 <li>
                                     <div class="social_item b_youtube"><a href="#" title="youtube"><i
-                                                class="fa-brands fa-youtube"></i><span class="item-list">90K
+                                                class="fa-brands fa-youtube"></i><span
+                                                class="item-list hidden sm:block">90K
                                                 Subscribers</span></a></div>
                                 </li>
 
                                 <li>
                                     <div class="social_item b_instagram"><a href="#" title="pinterest"><i
-                                                class="fa-brands fa-instagram"></i><span class="item-list">350K
+                                                class="fa-brands fa-instagram"></i><span
+                                                class="item-list hidden sm:block">350K
                                                 Followers</span></a></div>
                                 </li>
 

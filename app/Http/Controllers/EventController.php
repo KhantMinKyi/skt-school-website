@@ -74,8 +74,9 @@ class EventController extends Controller
         if (!$branch) {
             return to_route('admin-events.index')->with('error', 'No Branch Found ! Please Try Again');
         }
+        $eventUid = uniqid('', true);
         if (isset($data['event_banner'])) {
-            $filePath = "img/event_data/" . $branch->branch_short_name;
+            $filePath = "img/event_data/" . $branch->branch_short_name . '/' . $eventUid;
             if (!File::exists($filePath)) {
                 $result = File::makeDirectory($filePath, 0755, true);
             }
@@ -87,6 +88,25 @@ class EventController extends Controller
 
             $photo->move($filePath, "/event_" . $imageUid . "." . $extension);
             $data['event_banner'] = "/" . $photoName;
+        }
+
+        if (isset($data['event_image'])) {
+            $images = '';
+            foreach ($data['event_image'] as $event_image) {
+                $filePath = "img/event_data/" . $branch->branch_short_name . '/' . $eventUid;
+                if (!File::exists($filePath)) {
+                    $result = File::makeDirectory($filePath, 0755, true);
+                }
+                $photo = $event_image;
+                $extension = $photo->getClientOriginalExtension();
+                $imageUid = uniqid('', true);
+                $name = $photo->getClientOriginalName();
+                $singlePhotoName = $filePath . "/event_" . $imageUid . "." . $extension;
+                $photo->move($filePath, "/event_" . $imageUid . "." . $extension);
+                $imagePaths[] = $singlePhotoName;
+            }
+            $images = implode(',', $imagePaths);
+            $data['event_image'] = $images;
         }
         $data['event_created_date'] = Carbon::now();
         $data['event_created_user_id'] = $user_id;
@@ -175,11 +195,17 @@ class EventController extends Controller
                 return to_route('staff-events.index')->with('error', 'No Branch Found ! Please Try Again');
             }
         }
+        // Explode the path into parts
+        $parts = explode('/', $event->event_banner);
+
+        // Get the second-to-last part (the folder name)
+        $folderName = $parts[count($parts) - 2];
+        $eventUid = $folderName;
         if (isset($data['event_banner'])) {
             if (File::exists(public_path($event->event_banner))) {
                 File::delete(public_path($event->event_banner));
             }
-            $filePath = "img/event_data/" . $branch->branch_short_name;
+            $filePath = "img/event_data/" . $branch->branch_short_name . '/' . $eventUid;
             if (!File::exists($filePath)) {
                 $result = File::makeDirectory($filePath, 0755, true);
             }
@@ -192,6 +218,32 @@ class EventController extends Controller
             $photo->move($filePath, "/event_" . $imageUid . "." . $extension);
             $data['event_banner'] = "/" . $photoName;
         }
+
+        if (isset($data['event_image'])) {
+            $images = '';
+            $old_event_images = explode(',', $event->event_image);
+            foreach ($old_event_images as $opm) {
+                if (File::exists(public_path($opm))) {
+                    File::delete(public_path($opm));
+                }
+            }
+            foreach ($data['event_image'] as $event_image) {
+                $filePath = "img/event_data/" . $branch->branch_short_name . '/' . $eventUid;
+                if (!File::exists($filePath)) {
+                    $result = File::makeDirectory($filePath, 0755, true);
+                }
+                $photo = $event_image;
+                $extension = $photo->getClientOriginalExtension();
+                $imageUid = uniqid('', true);
+                $name = $photo->getClientOriginalName();
+                $singlePhotoName = $filePath . "/event_" . $imageUid . "." . $extension;
+                $photo->move($filePath, "/event_" . $imageUid . "." . $extension);
+                $imagePaths[] = $singlePhotoName;
+            }
+            $images = implode(',', $imagePaths);
+            $data['event_image'] = $images;
+        }
+
         $data['event_updated_user_id'] = $user_id;
         $data['event_is_show_front'] = isset($data['event_is_show_front'])  ? 1 : 0;
         $event->update($data);

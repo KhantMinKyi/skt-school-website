@@ -79,6 +79,25 @@
                     </div> --}}
                     <div class="col-12">
                         <div class="row mb-3">
+                            <label for="inputEmail3" class="col-3 col-form-label"> Images </label>
+                            <div class="col-9 mb-3">
+                                <input type="file" placeholder="Choose Banner " value="{{ $event->event_image }}"
+                                    name="event_image[]" title="Logo is required" class="form-control" multiple>
+                            </div>
+                            <div class="col-3"></div>
+                            <div class="col-6">
+                                @php
+                                    $event_images = explode(',', $event->event_image);
+                                @endphp
+                                @foreach ($event_images as $event_image)
+                                    <img src="{{ asset($event_image) }}" width="120px" alt="old banner"
+                                        title="old banner">
+                                @endforeach
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="row mb-3">
                             <label for="inputEmail3" class="col-3 col-form-label"> From/To Date </label>
                             <div class="col-4">
                                 <input type="date" placeholder="Choose Event Start Date"
