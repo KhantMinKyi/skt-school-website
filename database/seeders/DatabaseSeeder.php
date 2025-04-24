@@ -126,7 +126,7 @@ A warm welcome to all to SKT City Campus!',
             'statement_updated_user_id' => 1,
             'statement_branch_id' => 2,
             'statement_photo' => '/img/statement_data/SKT-CC/statement_photo_67e3c019e9fef6.28635348.png',
-            'statement_vision' => '<p>We nurture students to become lifelong learners responsible global citizens, and compassionate individuals through a challenging and balanced curriculum in a safe and caring environment.</p>',
+            'statement_vision' => '<p>We empower our students to join world class universities and become lifelong learners and compassionate global citizens.</p>',
             'statement_mission' => '<p>We nurture students to become lifelong learners responsible global citizens, and compassionate individuals through a challenging and balanced curriculum in a safe and caring environment.</p>',
             'statement_philosophy' => '<p>Our school philosophy revolves around five pillars, each representing a core aspect of our commitment to excellence and holistic development.</p>
 <p><strong>Science and Mathematics: Building Foundations for Inquiry and Discovery</strong><br>Our curriculum is designed to ignite curiosity, encourage critical thinking, and instill a passion for inquiry-based learning. We empower our students to tackle real-world challenges and contribute meaningfully to a rapidly evolving global society.</p>

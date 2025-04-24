@@ -3,18 +3,23 @@
     <div class="w-[300px] h-full flex flex-col items-left">
         <button id="close-menu" class="self-end py-4 px-4 text-gray-100 text-xl">✕</button>
         <!-- Home with Dropdown -->
-        <div class="w-full">
+        <div class="w-full ">
             <a href="/"
-                class="dropdown-btn py-4 px-4 text-gray-100 font-bold hover:bg-gray-900 bg-opacity-90 w-full text-left flex justify-between">
-                Home
-                <span>▼</span>
+                class="dropdown-btn py-4 px-4 text-gray-100 font-bold hover:bg-gray-900 bg-opacity-90 w-full text-left flex justify-between ">
+                <div>
+                    <i class="fa-solid fa-house mr-2"></i>
+                    Home
+                </div>
+                <span class="toggle-icon"><i class="fa-solid fa-angle-down"></i></span>
             </a>
-            <div class="dropdown-menu hidden flex flex-col w-full bg-gray-900 bg-opacity-90">
+            <div class="dropdown-menu  hidden flex flex-col w-full bg-gray-900 bg-opacity-0  ">
                 <a href="{{ route('city.home') }}"
-                    class="py-4 px-4 text-gray-100 font-bold hover:bg-gray-900 bg-opacity-90 w-full text-left">SKT City
+                    class="py-4 pl-8 text-gray-100 font-bold hover:bg-gray-900 bg-opacity-0 w-full text-left ">
+                    SKT City
                     Campus</a>
                 <a href="{{ route('river.home') }}"
-                    class="py-4 px-4 text-gray-100 font-bold hover:bg-gray-900 bg-opacity-90 w-full text-left">SKT
+                    class="py-4 pl-8 text-gray-100 font-bold hover:bg-gray-900 bg-opacity-0 w-full text-left">
+                    SKT
                     Riverside
                     Campus</a>
             </div>
@@ -24,30 +29,34 @@
         <div class="w-full">
             <a href="#"
                 class="dropdown-btn py-4 px-4 text-gray-100 font-bold hover:bg-gray-900 bg-opacity-90 w-full text-left flex justify-between">
-                About Us
-                <span>▼</span>
+                <div>
+                    <i class="fa-solid fa-circle-info mr-2"></i>
+                    About Us
+                </div>
+                <span class="toggle-icon"><i class="fa-solid fa-angle-down"></i></span>
             </a>
-            <div class="dropdown-menu hidden flex flex-col w-full bg-gray-900 bg-opacity-90">
+            <div class="dropdown-menu hidden flex flex-col w-full bg-gray-900 bg-opacity-0 ">
                 <a href="{{ route('principal-message.home', $layout_branch->id) }}"
-                    class="py-4 px-4 text-gray-100 font-bold hover:bg-gray-900 bg-opacity-90 w-full text-left">
+                    class="py-4 pl-8 text-gray-100 font-bold hover:bg-gray-900 bg-opacity-0 w-full text-left">
                     Our Head of School
                     Message</a>
                 <a href="{{ route('our-history.home', $layout_branch->branch_short_name) }}"
-                    class="py-4 px-4 text-gray-100 font-bold hover:bg-gray-900 bg-opacity-90 w-full text-left">Our
+                    class="py-4 pl-8 text-gray-100 font-bold hover:bg-gray-900 bg-opacity-0 w-full text-left"> Our
                     History</a>
                 <a href="{{ route('our-statement.home', $layout_branch->branch_short_name) }}"
-                    class="py-4 px-4 text-gray-100 font-bold hover:bg-gray-900 bg-opacity-90 w-full text-left">Our
+                    class="py-4 pl-8 text-gray-100 font-bold hover:bg-gray-900 bg-opacity-0 w-full text-left"> Our
                     Mission , Vision
                     , Philosophy</a>
                 <a href="{{ route('our-teachers.home', $layout_branch->branch_short_name) }}"
-                    class="py-4 px-4 text-gray-100 font-bold hover:bg-gray-900 bg-opacity-90 w-full text-left">Our
+                    class="py-4 pl-8 text-gray-100 font-bold hover:bg-gray-900 bg-opacity-0 w-full text-left"> Our
                     Teachers</a>
 
                 <a href="{{ route('sister-schools.home', $layout_branch->branch_short_name) }}"
-                    class="py-4 px-4 text-gray-100 font-bold hover:bg-gray-900 bg-opacity-90 w-full text-left">Sister
+                    class="py-4 pl-8 text-gray-100 font-bold hover:bg-gray-900 bg-opacity-0 w-full text-left"> Sister
                     Schools</a>
                 <a href="{{ route('policy.home', $layout_branch->branch_short_name) }}"
-                    class="py-4 px-4 text-gray-100 font-bold hover:bg-gray-900 bg-opacity-90 w-full text-left">Policy</a>
+                    class="py-4 pl-8 text-gray-100 font-bold hover:bg-gray-900 bg-opacity-0 w-full text-left">
+                    Policy</a>
 
             </div>
         </div>
@@ -56,20 +65,27 @@
         <div class="w-full">
             <a href="#"
                 class="dropdown-btn py-4 px-4 text-gray-100 font-bold hover:bg-gray-900 bg-opacity-90 w-full text-left flex justify-between">
-                Student Life
-                <span>▼</span>
+                <div>
+                    <i class="fa-solid fa-heart mr-2"></i>
+                    Student Life
+                </div>
+                <span class="toggle-icon"><i class="fa-solid fa-angle-down"></i></span>
             </a>
-            <div class="dropdown-menu hidden flex flex-col w-full bg-gray-900 bg-opacity-90">
+            <div class="dropdown-menu hidden flex flex-col w-full bg-gray-900 bg-opacity-0 ">
                 <a href="{{ route('alumni.home', $layout_branch->branch_short_name) }}"
-                    class="py-4 px-4 text-gray-100 font-bold hover:bg-gray-900 bg-opacity-90 w-full text-left">Alumni</a>
+                    class="py-4 pl-8 text-gray-100 font-bold hover:bg-gray-900 bg-opacity-0 w-full text-left">
+                    Alumni</a>
                 <a href="{{ route('news.home', $layout_branch->branch_short_name) }}"
-                    class="py-4 px-4 text-gray-100 font-bold hover:bg-gray-900 bg-opacity-90 w-full text-left">News</a>
+                    class="py-4 pl-8 text-gray-100 font-bold hover:bg-gray-900 bg-opacity-0 w-full text-left"> News</a>
                 <a href="{{ route('gallery.home', $layout_branch->branch_short_name) }}"
-                    class="py-4 px-4 text-gray-100 font-bold hover:bg-gray-900 bg-opacity-90 w-full text-left">Gallery</a>
+                    class="py-4 pl-8 text-gray-100 font-bold hover:bg-gray-900 bg-opacity-0 w-full text-left">
+                    Gallery</a>
                 <a href="{{ route('calendar.home', $layout_branch->branch_short_name) }}"
-                    class="py-4 px-4 text-gray-100 font-bold hover:bg-gray-900 bg-opacity-90 w-full text-left">Calendar</a>
+                    class="py-4 pl-8 text-gray-100 font-bold hover:bg-gray-900 bg-opacity-0 w-full text-left">
+                    Calendar</a>
                 <a href="{{ route('welfare.home', $layout_branch->branch_short_name) }}"
-                    class="py-4 px-4 text-gray-100 font-bold hover:bg-gray-900 bg-opacity-90 w-full text-left">Welfare</a>
+                    class="py-4 pl-8 text-gray-100 font-bold hover:bg-gray-900 bg-opacity-0 w-full text-left">
+                    Welfare</a>
             </div>
         </div>
 
@@ -77,22 +93,28 @@
         <div class="w-full">
             <a href="#"
                 class="dropdown-btn py-4 px-4 text-gray-100 font-bold hover:bg-gray-900 bg-opacity-90 w-full text-left flex justify-between">
-                Education
-                <span>▼</span>
+                <div>
+                    <i class="fa-solid fa-graduation-cap mr-2"></i>
+                    Education
+                </div>
+                <span class="toggle-icon"><i class="fa-solid fa-angle-down"></i></span>
             </a>
-            <div class="dropdown-menu hidden flex flex-col w-full bg-gray-900 bg-opacity-90">
+            <div class="dropdown-menu hidden flex flex-col w-full bg-gray-900 bg-opacity-0 ">
                 <a href="{{ route('pre-school.home', $layout_branch->branch_short_name) }}"
-                    class="py-4 px-4 text-gray-100 font-bold hover:bg-gray-900 bg-opacity-90 w-full text-left">Pre
+                    class="py-4 pl-8 text-gray-100 font-bold hover:bg-gray-900 bg-opacity-0 w-full text-left"> Pre
                     School</a>
                 <a href="{{ route('primary.home', $layout_branch->branch_short_name) }}"
-                    class="py-4 px-4 text-gray-100 font-bold hover:bg-gray-900 bg-opacity-90 w-full text-left">Primary</a>
+                    class="py-4 pl-8 text-gray-100 font-bold hover:bg-gray-900 bg-opacity-0 w-full text-left">
+                    Primary</a>
                 <a href="{{ route('secondary.home', $layout_branch->branch_short_name) }}"
-                    class="py-4 px-4 text-gray-100 font-bold hover:bg-gray-900 bg-opacity-90 w-full text-left">Secondary</a>
+                    class="py-4 pl-8 text-gray-100 font-bold hover:bg-gray-900 bg-opacity-0 w-full text-left">
+                    Secondary</a>
                 <a href="{{ route('igcse.home', $layout_branch->branch_short_name) }}"
-                    class="py-4 px-4 text-gray-100 font-bold hover:bg-gray-900 bg-opacity-90 w-full text-left">IGCSE</a>
+                    class="py-4 pl-8 text-gray-100 font-bold hover:bg-gray-900 bg-opacity-0 w-full text-left"> IGCSE</a>
                 @if ($layout_branch->branch_short_name == 'SKT-RC')
                     <a href="{{ route('ib.home', $layout_branch->branch_short_name) }}"
-                        class="py-4 px-4 text-gray-100 font-bold hover:bg-gray-900 bg-opacity-90 w-full text-left">IB
+                        class="py-4 pl-8 text-gray-100 font-bold hover:bg-gray-900 bg-opacity-0 w-full text-left"> <i
+                            class="fa-solid fa-diamond text-xs mr-2 text-gray-950"></i>IB
                         Diploma Programme (IB DP)</a>
                 @endif
 
@@ -102,32 +124,39 @@
         <div class="w-full">
             <a href="#"
                 class="dropdown-btn py-4 px-4 text-gray-100 font-bold hover:bg-gray-900 bg-opacity-90 w-full text-left flex justify-between">
-                Admission
-                <span>▼</span>
+                <div>
+                    <i class="fa-solid fa-users mr-2"></i>
+                    Admission
+                </div>
+                <span class="toggle-icon"><i class="fa-solid fa-angle-down"></i></span>
             </a>
-            <div class="dropdown-menu hidden flex flex-col w-full bg-gray-900 bg-opacity-90">
+            <div class="dropdown-menu hidden flex flex-col w-full bg-gray-900 bg-opacity-0 ">
                 <a href="{{ route('student-admission.home', $layout_branch->branch_short_name) }}"
-                    class="py-4 px-4 text-gray-100 font-bold hover:bg-gray-900 bg-opacity-90 w-full text-left">Student
+                    class="py-4 pl-8 text-gray-100 font-bold hover:bg-gray-900 bg-opacity-0 w-full text-left"> Student
                     Admission</a>
                 <a href="{{ route('admission-process.home', $layout_branch->branch_short_name) }}"
-                    class="py-4 px-4 text-gray-100 font-bold hover:bg-gray-900 bg-opacity-90 w-full text-left">Admission
+                    class="py-4 pl-8 text-gray-100 font-bold hover:bg-gray-900 bg-opacity-0 w-full text-left"> Admission
                     Process</a>
                 <a href="{{ route('withdrawal-policy.home', $layout_branch->branch_short_name) }}"
-                    class="py-4 px-4 text-gray-100 font-bold hover:bg-gray-900 bg-opacity-90 w-full text-left">Withdrawal
+                    class="py-4 pl-8 text-gray-100 font-bold hover:bg-gray-900 bg-opacity-0 w-full text-left">
+                    Withdrawal
                     Policy</a>
                 <a href="{{ route('college-counseling-service.home', $layout_branch->branch_short_name) }}"
-                    class="py-4 px-4 text-gray-100 font-bold hover:bg-gray-900 bg-opacity-90 w-full text-left">College
+                    class="py-4 pl-8 text-gray-100 font-bold hover:bg-gray-900 bg-opacity-0 w-full text-left"> College
                     Counseling
                     Service</a>
                 <a href="{{ route('career.home', $layout_branch->branch_short_name) }}"
-                    class="py-4 px-4 text-gray-100 font-bold hover:bg-gray-900 bg-opacity-90 w-full text-left">Career</a>
+                    class="py-4 pl-8 text-gray-100 font-bold hover:bg-gray-900 bg-opacity-0 w-full text-left">
+                    Career</a>
 
 
             </div>
         </div>
         <!-- Other Menu Items (No Dropdown) -->
         <a href="{{ route('event.home', $layout_branch->branch_short_name) }}"
-            class="py-4 px-4 text-gray-100 font-bold hover:bg-gray-900 bg-opacity-90 w-full text-left">Event</a>
+            class="py-4 px-4 text-gray-100 font-bold hover:bg-gray-900 bg-opacity-90 w-full text-left"> <i
+                class="fa-solid fa-calendar-check mr-2"></i> Event</a>
         <a href="{{ route('contact_us.home', $layout_branch->branch_short_name) }}"
-            class="py-4 px-4 text-gray-100 font-bold hover:bg-gray-900 bg-opacity-90 w-full text-left">Contact</a>
+            class="py-4 px-4 text-gray-100 font-bold hover:bg-gray-900 bg-opacity-90 w-full text-left"> <i
+                class="fa-solid fa-circle-check mr-2"></i> Contact</a>
     </div>

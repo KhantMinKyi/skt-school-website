@@ -393,6 +393,9 @@
             button.addEventListener('click', function(event) {
                 event.preventDefault();
 
+                const $icon = $(this).find('.toggle-icon i');
+                $icon.toggleClass('fa-angle-down fa-angle-up');
+
                 // Toggle only the clicked dropdown
                 const dropdownMenu = this.nextElementSibling;
                 dropdownMenu.classList.toggle('hidden');
@@ -404,12 +407,12 @@
                     }
                 });
                 // Close other menus
-                $(".dropdown-menu").not($menu).slideUp().addClass("hidden");
+                // $(".dropdown-menu").not($menu).slideUp().addClass("hidden");
 
-                // Toggle current
-                $menu.stop(true, true).slideToggle(300, function() {
-                    $(this).toggleClass("hidden", !$menu.is(":visible"));
-                });
+                // // Toggle current
+                // $menu.stop(true, true).slideToggle(300, function() {
+                //     $(this).toggleClass("hidden", !$menu.is(":visible"));
+                // });
             });
         });
 
