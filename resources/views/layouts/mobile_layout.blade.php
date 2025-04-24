@@ -1,5 +1,5 @@
 <div id="mobile-wrapper"
-    class="fixed top-22 right-0 h-[calc(100%-4rem)] w-0 overflow-hidden bg-gray-900 bg-opacity-90 shadow-lg transition-all duration-300 z-40">
+    class="fixed top-22 right-0 h-[calc(100%-4rem)] w-0 overflow-auto bg-gray-900 bg-opacity-90 shadow-lg transition-all duration-300 z-40">
     <div class="w-[300px] h-full flex flex-col items-left">
         <button id="close-menu" class="self-end py-4 px-4 text-gray-100 text-xl">✕</button>
         <!-- Home with Dropdown -->
@@ -113,8 +113,7 @@
                     class="py-4 pl-8 text-gray-100 font-bold hover:bg-gray-900 bg-opacity-0 w-full text-left"> IGCSE</a>
                 @if ($layout_branch->branch_short_name == 'SKT-RC')
                     <a href="{{ route('ib.home', $layout_branch->branch_short_name) }}"
-                        class="py-4 pl-8 text-gray-100 font-bold hover:bg-gray-900 bg-opacity-0 w-full text-left"> <i
-                            class="fa-solid fa-diamond text-xs mr-2 text-gray-950"></i>IB
+                        class="py-4 pl-8 text-gray-100 font-bold hover:bg-gray-900 bg-opacity-0 w-full text-left"> IB
                         Diploma Programme (IB DP)</a>
                 @endif
 

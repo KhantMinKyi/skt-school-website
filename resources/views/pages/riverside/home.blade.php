@@ -151,11 +151,11 @@
     <section class="school_history mt-10">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 ">
             <div class="flex justify-center items-center">
-                <img src="{{ asset($branch->branch_logo) }}" style="max-height: 420px" alt="" />
+                <img src="{{ asset($branch->branch_logo) }}" class=" max-h-[240px] lg:max-h-[420px]" alt="" />
             </div>
             <div class=" max-w-2xl p-10">
                 <div class="ab_content">
-                    <h2 class=" text-4xl font-semibold">
+                    <h2 class=" text-xl lg:text-4xl font-semibold">
                         History of
                         <span class="text-emerald-400">{{ $branch->branch_name }}</span>
                     </h2>
@@ -196,7 +196,7 @@
 
 
             </div>
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 text-center mt-4">
+            <div class="grid md:grid-cols-2 xl:grid-cols-4 text-center mt-4">
                 <div class="mx-2 mb-2">
                     <div class="count-box rounded-lg flex justify-center">
                         {{-- <i class="ti-face-smile"></i> --}}
@@ -260,14 +260,14 @@
             <div class="section-title text-4xl mb-6 font-bold text-center">
                 <h2>Our <span class="text-teal-500">Facilities</span></h2>
             </div>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 text-center mt-4">
+            <div class="grid grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 text-center mt-4">
                 {{-- card --}}
                 @foreach ($branch->galleries as $gallery)
                     <div class="mx-2 mb-2">
                         <div class="relative group rounded-md overflow-hidden">
                             <!-- Image -->
-                            <img src="{{ asset($gallery->gallery_photo) }}" class="w-full min-h-80 object-cover"
-                                alt="Team Member" />
+                            <img src="{{ asset($gallery->gallery_photo) }}"
+                                class="w-full min-h-40 md:min-h-60 lg:min-h-80 object-cover" alt="Team Member" />
 
                             <!-- Overlay -->
                             <div
@@ -343,7 +343,7 @@
                 </div>
                 <div class="abmv mt-4 principal-message ">
                     <p class="text-md xl:text-xl italic">
-                        {{ $branch->principal_message->principal_message }}
+                        {{ \Illuminate\Support\Str::words($branch->principal_message->principal_message, 100, '...') }}
                     </p>
                 </div>
             </div>

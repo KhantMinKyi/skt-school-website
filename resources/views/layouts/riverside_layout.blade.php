@@ -98,7 +98,7 @@
             <!-- Mobile Menu Button -->
             <div class="-mt-8 flex h-full items-stretch">
                 <div class="flex align-middle justify-evenly items-center">
-                    <img src="{{ asset('img/river_line.png') }}" alt="" class="h-4 mr-2 hidden sm:block">
+                    <img src="{{ asset('img/river_line.png') }}" alt="" class="h-4 mr-2 ">
                     <button id="MobileSwitchCampusBtn" title="Switch Campus"
                         class="hover:text-green-500 text-xl text-white mr-4 ">
                         <i class="fa-solid fa-repeat"></i>
@@ -106,8 +106,8 @@
                 </div>
                 <div class="h-full">
                     <button id="open-menu"
-                        class="w-full h-full text-2xl  hover:bg-emerald-800 rounded-lg px-4 py-2 flex items-center justify-center">
-                        <i class="fa-solid fa-bars"></i>
+                        class="w-full h-full text-2xl   rounded-lg px-4 py-2 flex items-center justify-center">
+                        <i class="fa-solid fa-bars hover:text-yellow-400" id="menuIcon"></i>
                     </button>
                 </div>
             </div>
@@ -263,35 +263,36 @@
     <!-- scripts js -->
     <script src="{{ asset('guests/js/script.js') }}"></script>
     <script>
-        // document.getElementById('menu-btn').addEventListener('click', function() {
-        //     document.getElementById('mobile-menu').classList.toggle('hidden');
-        // });
-
-        // Handle multiple dropdowns dynamically
         document.querySelectorAll('.dropdown-btn').forEach(button => {
             button.addEventListener('click', function(event) {
                 event.preventDefault();
 
-                const $icon = $(this).find('.toggle-icon i');
-                $icon.toggleClass('fa-angle-down fa-angle-up');
-
-                // Toggle only the clicked dropdown
                 const dropdownMenu = this.nextElementSibling;
-                dropdownMenu.classList.toggle('hidden');
 
-                // Optional: Hide other dropdowns when one is clicked
+                // Close all dropdowns and reset all icons
                 document.querySelectorAll('.dropdown-menu').forEach(menu => {
                     if (menu !== dropdownMenu) {
                         menu.classList.add('hidden');
                     }
                 });
-                // Close other menus
-                // $(".dropdown-menu").not($menu).slideUp().addClass("hidden");
 
-                // // Toggle current
-                // $menu.stop(true, true).slideToggle(300, function() {
-                //     $(this).toggleClass("hidden", !$menu.is(":visible"));
-                // });
+                document.querySelectorAll('.dropdown-btn .toggle-icon i').forEach(icon => {
+                    icon.classList.remove('fa-angle-up');
+                    icon.classList.add('fa-angle-down');
+                    icon.classList.remove('text-yellow-400');
+                });
+
+                // Toggle this dropdown
+                const isOpen = !dropdownMenu.classList.contains('hidden');
+                dropdownMenu.classList.toggle('hidden');
+
+                // Update icon only if open
+                const icon = this.querySelector('.toggle-icon i');
+                if (!isOpen) {
+                    icon.classList.remove('fa-angle-down');
+                    icon.classList.add('fa-angle-up');
+                    icon.classList.add('text-yellow-400');
+                }
             });
         });
     </script>
@@ -347,9 +348,11 @@
                 e.stopPropagation();
                 if (!isOpen) {
                     $("#mobile-wrapper").css("width", "300px");
+                    $('#menuIcon').addClass('text-yellow-400');
                     isOpen = true;
                 } else {
                     $("#mobile-wrapper").css("width", "0");
+                    $('#menuIcon').removeClass('text-yellow-400');
                     isOpen = false;
                 }
             });
@@ -357,6 +360,7 @@
             // Close when clicking the close button
             $("#close-menu").on("click", function() {
                 $("#mobile-wrapper").css("width", "0");
+                $('#menuIcon').removeClass('text-yellow-400');
                 isOpen = false;
             });
 
@@ -374,6 +378,7 @@
                 ) {
                     menuWrapper.css("width", "0");
                     isOpen = false;
+                    $('#menuIcon').removeClass('text-yellow-400');
                 }
             });
         });
