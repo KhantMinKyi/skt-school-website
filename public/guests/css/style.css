@@ -340,6 +340,16 @@ p.section-title-white {
     font-size: 18px;
     font-weight: 600;
 }
+@media only screen and  (max-width: 320px) {
+    .single_tca h2 a {
+        font-size: 14px;
+        font-weight: 700;
+    }
+    .single_tca span {
+        font-size: 12px;
+        font-weight: 600;
+    } 
+}
 .event-slide {
     position: relative;
     background: #fff;

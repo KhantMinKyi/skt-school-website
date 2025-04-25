@@ -14,46 +14,11 @@
             scroll-behavior: smooth;
         }
     </style>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
     <link rel="stylesheet" href="{{ asset('guests/css/style.css') }}" />
     <!-- START HOME -->
     <!-- START HOME BANNER -->
-    {{-- <section id="home" class=" min-h-screen flex items-center justify-center  md:pt-28 "
-        style="background-image: url(assets/images/banner/home.png); background-size:cover; background-position: center center;">
-        <div class="grid lg:grid-cols-2  ">
-            <div class="home_content flex flex-col justify-center items-center">
-                <h1 id="fading-text" class=" text-start ml-10">
-                    <span class="text-emerald-400">INSPIRING</span>
-                    <span class="text-emerald-400">BRILLIANCE</span>
-                    <span>BUILDING</span>
-                    <span>BRIGHTER</span>
-                    <span>FUTURES</span>
-                </h1>
-                <div class="flex justify-center" style="cursor: pointer">
-                    <img src="{{ asset($branch->branch_logo) }}" width="240" class="bounce-up" alt="">
-                </div>
-            </div>
-
-            <div class="">
-                <div class="home_me_img relative sm:hidden hidden lg:block">
-                    <img src="{{ asset('img/banner-hero.png') }}" class=" home-banner-hero" alt="" />
-                    <div
-                        class="home_ps absolute top-1/2 left-0 transform -translate-y-1/2 bg-white w-48 p-5 rounded-2xl shadow-lg">
-                        <img src="{{ asset('assets/images/icon/student.svg') }}" class="mt-1 w-10 float-left mr-2"
-                            alt="" />
-                        <h2 class="font-extrabold overflow-hidden">700+</h2>
-                        <span class="text-sm">Active student</span>
-                    </div>
-                    <div class="home_ps2 absolute top-10 right-0 bg-white w-48 p-5 rounded-2xl shadow-lg">
-                        <img src="{{ asset('assets/images/icon/teacher.svg') }}" class="mt-1 w-10 float-left mr-2"
-                            alt="" />
-                        <h2 class="font-extrabold overflow-hidden">200+</h2>
-                        <span class="text-sm">Teachers</span>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section> --}}
     <section id="home" class="relative  lg:min-h-screen flex items-center justify-center  ">
         <!-- Background Video -->
         <div class="absolute inset-0 w-full h-full">
@@ -61,20 +26,7 @@
                 <source src="{{ asset('videos/skt_riverside_campus.mp4') }}" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
-            {{-- <div class="absolute inset-0 bg-black opacity-60 hidden sm:block"></div> --}}
         </div>
-        {{-- <div class=" "> --}}
-        {{-- <div class="home_content container mx-auto flex flex-col justify-center items-center">
-            <h1 id="fading-text" class=" text-center  ml-10 hidden sm:block">
-                <span class="text-emerald-400">INSPIRING</span>
-                <span class="text-emerald-400">BRILLIANCE , </span> <br>
-                <span class="text-white">BUILDING</span>
-                <span class="text-white">BRIGHTER</span>
-                <span class="text-white">FUTURES</span>
-            </h1>
-        </div> --}}
-
-        {{-- </div> --}}
     </section>
     <!-- END HOME BANNER -->
 
@@ -150,8 +102,13 @@
     <!-- START SCHOOL HISTORY -->
     <section class="school_history mt-10">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 ">
-            <div class="flex justify-center items-center">
-                <img src="{{ asset($branch->branch_logo) }}" class=" max-h-[240px] lg:max-h-[420px]" alt="" />
+            <div x-data="{ show: false }" x-init="IntersectionObserver = new IntersectionObserver(([entry]) => {
+                if (entry.isIntersecting) show = true
+            }, { threshold: 0.8 });
+            IntersectionObserver.observe($el);"
+                x-bind:class="show ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'"
+                class="flex justify-center items-center transition-all duration-1000 ease-out transform">
+                <img src="{{ asset($branch->branch_logo) }}" class="max-h-[240px] lg:max-h-[420px]" alt="" />
             </div>
             <div class=" max-w-2xl p-10">
                 <div class="ab_content">
@@ -190,7 +147,7 @@
 
     <!-- START SCHOOL INFO COUNTER -->
     <section id="" class=" mt-10 mb-10">
-        <div class="container  mx-auto">
+        <div class="container  mx-auto p-4">
             <div class="section-title text-4xl mb-6 font-bold">
                 <h2>Explore Our <span class="text-teal-500">School</span></h2>
 
@@ -529,25 +486,25 @@
                 <!-- Left Red Box (Smaller Height than image) -->
                 <div
                     class="absolute top-0 left-0 bg-gray-900 bg-opacity-95 text-white p-4 sm:p-16 w-full sm:w-[60%] h-[70%] flex flex-col justify-center z-10 rounded-tl-lg">
-                    <h2 class="text-3xl md:text-4xl font-semibold mb-6">What would you like to do?</h2>
+                    <h2 class="text-2xl md:text-4xl font-semibold mb-6">What would you like to do?</h2>
                     <div class="flex space-x-4 md:space-x-20">
-                        <div class="flex flex-col items-center">
-                            <i class="fa-solid fa-pencil-alt text-lg"></i>
+                        <div class="flex flex-col items-center text-center">
+                            <i class="fa-solid fa-pencil-alt text-sm md:text-lg "></i>
                             <a href="{{ route('student-admission.home', $branch->branch_short_name) }}"
-                                class="uppercase text-sm font-semibold mt-2">Apply Now</a>
-                            <div class="w-8 h-1 bg-white mt-1"></div>
+                                class="uppercase text-xs sm:text-sm  font-semibold mt-2">Apply Now</a>
+                            <div class="w-5 sm:w-8 h-1 bg-white mt-1"></div>
                         </div>
-                        <div class="flex flex-col items-center">
-                            <i class="fa-solid fa-eye text-lg"></i>
+                        <div class="flex flex-col items-center text-center">
+                            <i class="fa-solid fa-eye text-sm md:text-lg"></i>
                             <a href="{{ route('contact_us.home', $branch->branch_short_name) }}"
-                                class="uppercase text-sm font-semibold mt-2">Book a Tour</a>
-                            <div class="w-8 h-1 bg-white mt-1"></div>
+                                class="uppercase text-xs sm:text-sm font-semibold mt-2">Book a Tour</a>
+                            <div class="w-5 sm:w-8 h-1 bg-white mt-1"></div>
                         </div>
-                        <div class="flex flex-col items-center">
-                            <i class="fa-solid fa-book text-lg"></i>
+                        <div class="flex flex-col items-center text-center">
+                            <i class="fa-solid fa-book text-sm md:text-lg"></i>
                             <a href="{{ route('contact_us.home', $branch->branch_short_name) }}"
-                                class="uppercase text-sm font-semibold mt-2">Request a Prospectus</a>
-                            <div class="w-8 h-1 bg-white mt-1"></div>
+                                class="uppercase text-xs sm:text-sm font-semibold mt-2">Request a Prospectus</a>
+                            <div class="w-5 sm:w-8 h-1 bg-white mt-1"></div>
                         </div>
                     </div>
                 </div>

@@ -15,6 +15,7 @@
             scroll-behavior: smooth;
         }
     </style>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <link rel="stylesheet" href="{{ asset('guests/css/style.css') }}" />
     <!-- START HOME -->
     <!-- START HOME BANNER -->
@@ -109,8 +110,13 @@
     <!-- START SCHOOL HISTORY -->
     <section class="school_history mt-10">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 items-stretch ">
-            <div class="flex justify-center items-center">
-                <img src="{{ asset($branch->branch_logo) }}"class=" max-h-[240px] lg:max-h-[420px]" alt="" />
+            <div x-data="{ show: false }" x-init="IntersectionObserver = new IntersectionObserver(([entry]) => {
+                if (entry.isIntersecting) show = true
+            }, { threshold: 0.8 });
+            IntersectionObserver.observe($el);"
+                x-bind:class="show ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'"
+                class="flex justify-center items-center transition-all duration-1000 ease-out transform">
+                <img src="{{ asset($branch->branch_logo) }}" class="max-h-[240px] lg:max-h-[420px]" alt="" />
             </div>
             <div class=" max-w-2xl p-10">
                 <div class="ab_content">
@@ -149,7 +155,7 @@
 
     <!-- START SCHOOL INFO COUNTER -->
     <section id="" class=" mt-10 mb-10">
-        <div class="container  mx-auto">
+        <div class="container  mx-auto p-4">
             <div class="section-title text-4xl mb-6 font-bold">
                 <h2>Explore Our <span class="text-teal-500">School</span></h2>
 
@@ -485,25 +491,25 @@
                 <!-- Left Red Box (Smaller Height than image) -->
                 <div
                     class="absolute top-0 left-0 bg-gray-900 bg-opacity-95 text-white p-4 sm:p-16 w-full sm:w-[60%] h-[70%] flex flex-col justify-center z-10 rounded-tl-lg">
-                    <h2 class="text-3xl md:text-4xl font-semibold mb-6">What would you like to do?</h2>
+                    <h2 class="text-2xl md:text-4xl font-semibold mb-6">What would you like to do?</h2>
                     <div class="flex space-x-4 md:space-x-20">
-                        <div class="flex flex-col items-center">
-                            <i class="fa-solid fa-pencil-alt text-lg"></i>
+                        <div class="flex flex-col items-center text-center">
+                            <i class="fa-solid fa-pencil-alt text-sm md:text-lg"></i>
                             <a href="{{ route('student-admission.home', $branch->branch_short_name) }}"
-                                class="uppercase text-sm font-semibold mt-2">Apply Now</a>
-                            <div class="w-8 h-1 bg-white mt-1"></div>
+                                class="uppercase text-xs sm:text-sm font-semibold mt-2">Apply Now</a>
+                            <div class="w-5 sm:w-8 h-1 bg-white mt-1"></div>
                         </div>
-                        <div class="flex flex-col items-center">
-                            <i class="fa-solid fa-eye text-lg"></i>
+                        <div class="flex flex-col items-center text-center">
+                            <i class="fa-solid fa-eye text-sm md:text-lg"></i>
                             <a href="{{ route('contact_us.home', $branch->branch_short_name) }}"
-                                class="uppercase text-sm font-semibold mt-2">Book a Tour</a>
-                            <div class="w-8 h-1 bg-white mt-1"></div>
+                                class="uppercase text-xs sm:text-sm font-semibold mt-2">Book a Tour</a>
+                            <div class="w-5 sm:w-8 h-1 bg-white mt-1"></div>
                         </div>
-                        <div class="flex flex-col items-center">
-                            <i class="fa-solid fa-book text-lg"></i>
+                        <div class="flex flex-col items-center text-center">
+                            <i class="fa-solid fa-book text-sm md:text-lg"></i>
                             <a href="{{ route('contact_us.home', $branch->branch_short_name) }}"
-                                class="uppercase text-sm font-semibold mt-2">Request a Prospectus</a>
-                            <div class="w-8 h-1 bg-white mt-1"></div>
+                                class="uppercase text-xs sm:text-sm font-semibold mt-2">Request a Prospectus</a>
+                            <div class="w-5 sm:w-8 h-1 bg-white mt-1"></div>
                         </div>
                     </div>
                 </div>
