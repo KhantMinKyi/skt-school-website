@@ -19,24 +19,35 @@
     <link rel="stylesheet" href="{{ asset('guests/css/style.css') }}" />
     <!-- START HOME -->
     <!-- START HOME BANNER -->
-    <section id="home" class="relative  md:min-h-screen flex items-center justify-center  ">
+    {{-- <section id="home" class="relative  md:min-h-screen flex items-center justify-center  ">
         <!-- Background Video -->
         <div class="absolute inset-0 w-full h-full">
             <video autoplay loop muted playsinline class="md:absolute block top-0 left-0 w-full md:h-full object-cover">
                 <source src="{{ asset('videos/skt_city_campus.mp4') }}" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
-            {{-- <div class="absolute inset-0 bg-black opacity-60 hidden sm:block"></div> --}}
         </div>
-        {{-- <div class="home_content container mx-auto flex flex-col justify-center items-center">
-            <h1 id="fading-text" class=" text-center  ml-10 hidden sm:block">
-                <span class="text-emerald-400">INSPIRING</span>
-                <span class="text-emerald-400">BRILLIANCE , </span> <br>
-                <span class="text-white">BUILDING</span>
-                <span class="text-white">BRIGHTER</span>
-                <span class="text-white">FUTURES</span>
-            </h1>
-        </div> --}}
+    </section> --}}
+    <section id="home" class="relative hidden md:block  md:min-h-screen flex items-center justify-center  ">
+        <!-- Background Video -->
+        <div class="absolute inset-0 w-full h-full">
+            <video autoplay loop muted playsinline class="lg:absolute block top-0 left-0 w-full lg:h-full object-cover">
+                <source src="{{ asset('videos/skt_city_campus.mp4') }}" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </section>
+    <section id="home" class="relative md:hidden h-96 flex items-center justify-center">
+        <!-- Fallback Image for Mobile -->
+        <div class="absolute inset-0 w-full h-full">
+            <img src="{{ asset('img/banner/home_banner.jpg') }}" alt="Background" class="w-full h-full object-cover" />
+        </div>
+
+        <!-- Centered Text -->
+        <div class="z-10 text-black text-center px-4">
+            <h1 class="text-2xl font-extrabold">Welcome to <span class=" text-emerald-600">SKT City Campus </span></h1>
+            <p class="text-md mt-2">Experience innovation and learning</p>
+        </div>
     </section>
     <!-- END HOME BANNER -->
 
@@ -50,7 +61,8 @@
                     <p class="mb-10 font-light text-gray-500">
                         Providing students with a rich learning experience, blending academics, and critical thinking.
                     </p>
-                    <a href="#topic_content_area" class="relative inline-block mx-auto py-4 px-6 overflow-hidden group">
+                    <a href="{{ route('pre-school.home', $branch->branch_short_name) }}"
+                        class="relative inline-block mx-auto py-4 px-6 overflow-hidden group">
                         <span
                             class="relative font-semibold text-[#1a2d62] uppercase px-6 py-4 transition-all duration-300 group-hover:text-white">
                             <span class="absolute inset-0 flex items-center">
@@ -70,7 +82,8 @@
                     <p class="mb-10 font-light text-gray-500">
                         Passionate educators committed to nurturing potential and inspiring a love for learning.
                     </p>
-                    <a href="#topic_content_area" class="relative inline-block mx-auto py-4 px-6 overflow-hidden group">
+                    <a href="{{ route('our-teachers.home', $branch->branch_short_name) }}"
+                        class="relative inline-block mx-auto py-4 px-6 overflow-hidden group">
                         <span
                             class="relative font-semibold text-[#1a2d62] uppercase px-6 py-4 transition-all duration-300 group-hover:text-white">
                             <span class="absolute inset-0 flex items-center">
@@ -90,7 +103,8 @@
                     <p class="mb-10 font-light text-gray-500">
                         Wholesome, flavorful meals thoughtfully crafted daily to keep students energized and satisfied.
                     </p>
-                    <a href="#topic_content_area" class="relative inline-block mx-auto py-4 px-6 overflow-hidden group">
+                    <a href="{{ route('gallery.home', $branch->branch_short_name) }}"
+                        class="relative inline-block mx-auto py-4 px-6 overflow-hidden group">
                         <span
                             class="relative font-semibold text-[#1a2d62] uppercase px-6 py-4 transition-all duration-300 group-hover:text-white">
                             <span class="absolute inset-0 flex items-center">
@@ -169,9 +183,11 @@
                         {{-- <i class="fa-solid fa-chalkboard-user"></i> --}}
                         {{-- <span id="counter" class="text-3xl font-bold text-gray-800 mx-4">0</span> --}}
                         <div>
-                            <span data-purecounter-start="0" data-purecounter-end="152" data-purecounter-duration="1"
-                                class="purecounter"></span>
-                            <p>Teachers</p>
+                            <div class="flex justify-center">
+                                <span data-purecounter-start="0" data-purecounter-end="92" data-purecounter-duration="1"
+                                    class="purecounter"></span> <span>%</span>
+                            </div>
+                            <p>Foreign Teachers</p>
                         </div>
                     </div>
                 </div>
@@ -398,7 +414,7 @@
             <div class="section-title">
                 <h2>Upcoming Events</h2>
                 <p>
-                    Join With Us <a href="#" class="text-emerald-500 ">Our Events</a>
+                    Join Us With <a href="#" class="text-emerald-500 ">Our Events</a>
                 </p>
             </div>
             <div class="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1">
