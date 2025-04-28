@@ -7,10 +7,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="Penn - Education HTML Template">
+    <meta name="description"
+        content="Welcome to SKT International School. Experience innovation, education, and growth in a world-class environment.">
     <meta name="keywords"
-        content="theme_ocean, college, course, e-learning, education, high school, kids, learning, online, online courses, school, student, teacher, tutor, university">
-    <meta name="author" content="theme_ocean">
+        content="SKT International School, Education, Innovation, Learning, Riverside, International School, Citycampus, Preschool, Yangon">
+    <meta name="author" content="BFI Education Services">
+
+    <meta property="og:title" content="SKT International School - Experience Innovation and Learning">
+    <meta property="og:description"
+        content="Welcome to SKT International School. Experience innovation, education, and growth in a world-class environment.">
+    <meta property="og:image" content="{{ asset('assets/images/icon/icon.png') }}">
+    <meta property="og:url" content="{{ url('/') }}">
+    <meta property="og:type" content="website">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SKT International School - Experience Innovation and Learning">
+    <meta name="twitter:description"
+        content="Welcome to SKT International School. Experience innovation, education, and growth in a world-class environment.">
+    <meta name="twitter:image" content="{{ asset('assets/images/icon/icon.png') }}">
     <!-- SITE TITLE -->
     <title>SKT International School</title>
     {{-- @vite('resources/css/app.css') --}}
@@ -194,8 +208,11 @@
                                         <div style="cursor: pointer;">
                                             <a href="{{ route('river.home') }}">
                                                 {{-- <a href="#"> --}}
-                                                <img src="{{ asset('img/skt_riverside_campus_aniamted_logo.webp') }}"
-                                                    class="img-fluid bounce-up zoom-click" alt="">
+                                                <img src="{{ asset('img/skt_riverside_campus.png') }}"
+                                                    class="img-fluid bounce-up zoom-click min-h-10 max-h-96 left-animate"
+                                                    alt="">
+                                                {{-- <img src="{{ asset('img/skt_riverside_campus_aniamted_logo.webp') }}"
+                                                    class="img-fluid bounce-up zoom-click" alt=""> --}}
                                             </a>
                                         </div>
                                     </div>
@@ -203,8 +220,11 @@
                                         class="col-lg-6 col-sm-6 col-xs-12 d-flex justify-content-center align-items-center">
                                         <div style="cursor: pointer;">
                                             <a href="{{ route('city.home') }}">
-                                                <img src="{{ asset('img/skt_city_campus_aniamted_logo.webp') }}"
-                                                    class="img-fluid  bounce-up zoom-click" alt="">
+                                                <img src="{{ asset('img/skt_city_campus.png') }}"
+                                                    class="img-fluid  bounce-up zoom-click min-h-10 max-h-96 right-animate"
+                                                    alt="">
+                                                {{-- <img src="{{ asset('img/skt_city_campus_aniamted_logo.webp') }}"
+                                                    class="img-fluid  bounce-up zoom-click" alt=""> --}}
                                             </a>
                                         </div>
                                     </div>
