@@ -130,8 +130,8 @@
                     <div class="single_footer p-4">
                         {{-- <a href="index.html"><img src="assets/images/all-img/logo2.png" alt="" /></a> --}}
                         <a href="{{ route('river.home') }}"><img src="{{ asset('img/footer_logo.png') }}"
-                                class=" max-w-60 sm:max-w-72" alt=""></a>
-                        <p>
+                                class=" max-w-52 sm:max-w-72" alt=""></a>
+                        <p class=" text-sm md:text-lg">
                             We nurture students to become lifelong learners responsible global citizens, and
                             compassionate individuals through a challenging and balanced curriculum in a safe and caring
                             environment.
@@ -181,7 +181,7 @@
                 <div>
                     <div class="single_footer p-4">
                         <h4>Menu</h4>
-                        <ul>
+                        <ul class="grid grid-cols-2 list-disc">
                             <li class=" hover:text-emerald-500"><a href="/">Home</a></li>
                             <li class=" hover:text-emerald-500"><a
                                     href="{{ route('our-history.home', $layout_branch->branch_short_name) }}">About
@@ -209,20 +209,28 @@
                 <div class="col-lg-3 col-sm-6 col-xs-12 p-4">
                     <div class="single_footer">
                         <h4>Contact Info</h4>
-                        <div class="sf_contact">
-                            <span class="ti-mobile"></span>
-                            <h3>Phone number</h3>
-                            <p> 019410010-20</p>
-                            <p>09424463220</p>
+                        <div class="sf_contact grid grid-cols-2 gap-2">
+                            <div>
+                                <span class="ti-mobile"></span>
+                                <h3 class="hidden sm:block">Phone number</h3>
+                            </div>
+                            <div>
+                                <p> 019410010-20</p>
+                                <p>09424463220</p>
+                            </div>
                         </div>
-                        <div class="sf_contact">
-                            <span class="ti-email"></span>
-                            <h3>Email Address</h3>
+                        <div class="sf_contact grid grid-cols-2 gap-2">
+                            <div>
+                                <span class="ti-email"></span>
+                                <h3 class="hidden sm:block">Email </h3>
+                            </div>
                             <p>contact@sktcollege.edu.mm</p>
                         </div>
-                        <div class="sf_contact">
-                            <span class="ti-map"></span>
-                            <h3>Address</h3>
+                        <div class="sf_contact grid grid-cols-2 gap-2">
+                            <div>
+                                <span class="ti-map"></span>
+                                <h3 class="hidden sm:block">Address</h3>
+                            </div>
                             <p>235, Shu Khinn Thar Myo Pat Rd. Thaketa Tsp, Yangon</p>
                         </div>
                     </div>

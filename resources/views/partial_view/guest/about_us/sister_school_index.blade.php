@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="{{ asset('assets/css/sister_school_banner.css') }}" />
 
     <div id="kenburns_061"
-        class="carousel max-h-screen slide ps_indicators_txt_icon ps_control_txt_icon data-bs-target kbrns_zoomInOut thumb_scroll_x swipe_x ps_easeOutQuart relative w-full overflow-hidden"
+        class="carousel mt-[89px] sm:mt-0 max-h-screen slide ps_indicators_txt_icon ps_control_txt_icon data-bs-target kbrns_zoomInOut thumb_scroll_x swipe_x ps_easeOutQuart relative w-full overflow-hidden"
         data-ride="carousel" data-pause="hover" data-interval="10000" data-duration="2000">
         <!-- Wrapper For Slides -->
         <div class="carousel-inner flex transition-transform duration-1000 ease-in-out" id="carouselInner">
@@ -50,37 +50,44 @@
     </div>
     <!-- START SISTER SCHOOL  -->
     <div class="partner-logo py-10  bg-gray-950">
-        <div class="text-center mb-10 text-2xl font-bold font-serif text-teal-500">
-            {{-- Sister Schools --}}
+        <div class="text-center mb-10 text-2xl font-bold font-serif text-white">
+            Our
+            <span class=" text-emerald-400"> Sister Schools </span>
         </div>
         <div class="container mx-auto">
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <div class="partner">
                         <a href="https://www.bfi.edu.mm/" target="__blank"><img
-                                src="{{ asset('img/carousel-logos/bfi.png') }}" alt="image" class=" max-h-48"></a>
+                                src="{{ asset('img/carousel-logos/bfi.png') }}" alt="image"
+                                class=" max-h-32 md:max-h-48"></a>
                         <a href="https://misa.edu.mm/" target="__blank"><img
-                                src="{{ asset('img/carousel-logos/misa_b.png') }}" alt="image" class=" max-h-48"></a>
+                                src="{{ asset('img/carousel-logos/misa_b.png') }}" alt="image"
+                                class=" max-h-32 md:max-h-48"></a>
                         <a href="https://nisa.edu.mm/" target="__blank"><img
-                                src="{{ asset('img/carousel-logos/nisa_b.png') }}" alt="image" class=" max-h-48"></a>
+                                src="{{ asset('img/carousel-logos/nisa_b.png') }}" alt="image"
+                                class=" max-h-32 md:max-h-48"></a>
                         <a href="#" target="__blank"><img
                                 src="{{ asset('img/carousel-logos/skt_city_campus_b.png') }}" alt="image"
-                                class=" max-h-48"></a>
+                                class=" max-h-32 md:max-h-48"></a>
                         <a href="#" target="__blank"><img
                                 src="{{ asset('img/carousel-logos/skt_riverside_campus_b.png') }}" alt="image"
-                                class=" max-h-48"></a>
+                                class=" max-h-32 md:max-h-48"></a>
                         <a href="https://www.bfi.edu.mm/" target="__blank"><img
-                                src="{{ asset('img/carousel-logos/bfi.png') }}" alt="image" class=" max-h-48"></a>
+                                src="{{ asset('img/carousel-logos/bfi.png') }}" alt="image"
+                                class=" max-h-32 md:max-h-48"></a>
                         <a href="https://misa.edu.mm/" target="__blank"><img
-                                src="{{ asset('img/carousel-logos/misa_b.png') }}" alt="image" class=" max-h-48"></a>
+                                src="{{ asset('img/carousel-logos/misa_b.png') }}" alt="image"
+                                class=" max-h-32 md:max-h-48"></a>
                         <a href="https://nisa.edu.mm/" target="__blank"><img
-                                src="{{ asset('img/carousel-logos/nisa_b.png') }}" alt="image" class=" max-h-48"></a>
+                                src="{{ asset('img/carousel-logos/nisa_b.png') }}" alt="image"
+                                class=" max-h-32 md:max-h-48"></a>
                         <a href="#" target="__blank"><img
                                 src="{{ asset('img/carousel-logos/skt_city_campus_b.png') }}" alt="image"
-                                class=" max-h-48"></a>
+                                class=" max-h-32 md:max-h-48"></a>
                         <a href="#" target="__blank"><img
                                 src="{{ asset('img/carousel-logos/skt_riverside_campus_b.png') }}" alt="image"
-                                class=" max-h-48"></a>
+                                class=" max-h-32 md:max-h-48"></a>
 
                     </div>
                 </div><!-- END COL  -->

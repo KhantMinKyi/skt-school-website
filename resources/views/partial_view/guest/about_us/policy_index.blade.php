@@ -11,7 +11,8 @@
         class="carousel max-h-screen slide ps_indicators_txt_icon ps_control_txt_icon data-bs-target kbrns_zoomInOut thumb_scroll_x swipe_x ps_easeOutQuart relative w-full overflow-hidden"
         data-ride="carousel" data-pause="hover" data-interval="10000" data-duration="2000">
         <!-- Wrapper For Slides -->
-        <div class="carousel-inner flex transition-transform duration-1000 ease-in-out mt-20 sm:mt-0 " id="carouselInner">
+        <div class="carousel-inner flex transition-transform duration-1000 ease-in-out mt-[89px] sm:mt-0 "
+            id="carouselInner">
             <!-- First Slide -->
             <div class="carousel-item active w-full flex-shrink-0 ">
                 <img src="{{ asset('img/banner/about_us_banners/policy/' . $branch->branch_short_name . '.jpg') }}"
@@ -32,8 +33,8 @@
         <div class="container mx-auto">
             <div class="section-title p-4">
                 <h2>{{ $branch->branch_name }}</h2>
-                <p class="">
-                    Out School Policies
+                <p>
+                    Our School Policies
                 </p>
             </div>
             <!-- END ROW -->
@@ -48,28 +49,33 @@
                     <div class="pd_tab_area fix">
                         <ul class="pd_tab_btn nav nav-tabs" role="tablist">
                             <li>
-                                <button class="tab-btn font-bold px-4 py-2 bg-green-500 rounded-xl text-white"
+                                <button
+                                    class="tab-btn text-sm md:text-lg font-bold px-4 py-2 bg-green-500 rounded-xl text-white"
                                     onclick="openTab(event, 'tab1')" href="#description" role="tab"
                                     data-bs-toggle="tab">Admission </button>
                             </li>
                             <li>
-                                <button class="tab-btn font-bold px-4 py-2 rounded-xl" onclick="openTab(event, 'tab2')"
-                                    href="#information" role="tab" data-bs-toggle="tab">
+                                <button class="tab-btn text-sm md:text-lg font-bold px-4 py-2 rounded-xl"
+                                    onclick="openTab(event, 'tab2')" href="#information" role="tab"
+                                    data-bs-toggle="tab">
                                     Assessment</button>
                             </li>
                             <li>
-                                <button class="tab-btn font-bold px-4 py-2 rounded-xl" onclick="openTab(event, 'tab3')"
-                                    href="#information" role="tab" data-bs-toggle="tab">
+                                <button class="tab-btn text-sm md:text-lg font-bold px-4 py-2 rounded-xl"
+                                    onclick="openTab(event, 'tab3')" href="#information" role="tab"
+                                    data-bs-toggle="tab">
                                     Inclusion </button>
                             </li>
                             <li>
-                                <button class="tab-btn font-bold px-4 py-2 rounded-xl" onclick="openTab(event, 'tab4')"
-                                    href="#information" role="tab" data-bs-toggle="tab">
+                                <button class="tab-btn text-sm md:text-lg font-bold px-4 py-2 rounded-xl"
+                                    onclick="openTab(event, 'tab4')" href="#information" role="tab"
+                                    data-bs-toggle="tab">
                                     Language </button>
                             </li>
                             <li>
-                                <button class="tab-btn font-bold px-4 py-2 rounded-xl" onclick="openTab(event, 'tab5')"
-                                    href="#information" role="tab" data-bs-toggle="tab">
+                                <button class="tab-btn text-sm md:text-lg font-bold px-4 py-2 rounded-xl"
+                                    onclick="openTab(event, 'tab5')" href="#information" role="tab"
+                                    data-bs-toggle="tab">
                                     Academic Integrity</button>
                             </li>
                         </ul>
@@ -137,38 +143,45 @@
                     <div class="pd_tab_area fix">
                         <ul class="pd_tab_btn nav nav-tabs" role="tablist">
                             <li>
-                                <button class="tab-btn font-bold px-4 py-2 bg-green-500 rounded-xl text-white"
+                                <button
+                                    class="tab-btn text-sm md:text-lg font-bold px-4 py-2 bg-green-500 rounded-xl text-white"
                                     onclick="openTab(event, 'tab1')" href="#description" role="tab"
                                     data-bs-toggle="tab">Admission </button>
                             </li>
                             <li>
-                                <button class="tab-btn font-bold px-4 py-2 rounded-xl" onclick="openTab(event, 'tab2')"
-                                    href="#information" role="tab" data-bs-toggle="tab">
+                                <button class="tab-btn text-sm md:text-lg font-bold px-4 py-2 rounded-xl"
+                                    onclick="openTab(event, 'tab2')" href="#information" role="tab"
+                                    data-bs-toggle="tab">
                                     Assessment</button>
                             </li>
                             <li>
-                                <button class="tab-btn font-bold px-4 py-2 rounded-xl" onclick="openTab(event, 'tab3')"
-                                    href="#information" role="tab" data-bs-toggle="tab">
+                                <button class="tab-btn text-sm md:text-lg font-bold px-4 py-2 rounded-xl"
+                                    onclick="openTab(event, 'tab3')" href="#information" role="tab"
+                                    data-bs-toggle="tab">
                                     Inclusion </button>
                             </li>
                             <li>
-                                <button class="tab-btn font-bold px-4 py-2 rounded-xl" onclick="openTab(event, 'tab4')"
-                                    href="#information" role="tab" data-bs-toggle="tab">
+                                <button class="tab-btn text-sm md:text-lg font-bold px-4 py-2 rounded-xl"
+                                    onclick="openTab(event, 'tab4')" href="#information" role="tab"
+                                    data-bs-toggle="tab">
                                     Language </button>
                             </li>
                             <li>
-                                <button class="tab-btn font-bold px-4 py-2 rounded-xl" onclick="openTab(event, 'tab5')"
-                                    href="#information" role="tab" data-bs-toggle="tab">
+                                <button class="tab-btn text-sm md:text-lg font-bold px-4 py-2 rounded-xl"
+                                    onclick="openTab(event, 'tab5')" href="#information" role="tab"
+                                    data-bs-toggle="tab">
                                     Academic Integrity</button>
                             </li>
                             <li>
-                                <button class="tab-btn font-bold px-4 py-2 rounded-xl" onclick="openTab(event, 'tab6')"
-                                    href="#information" role="tab" data-bs-toggle="tab">
+                                <button class="tab-btn text-sm md:text-lg font-bold px-4 py-2 rounded-xl"
+                                    onclick="openTab(event, 'tab6')" href="#information" role="tab"
+                                    data-bs-toggle="tab">
                                     Child Protection</button>
                             </li>
                             <li>
-                                <button class="tab-btn font-bold px-4 py-2 rounded-xl" onclick="openTab(event, 'tab7')"
-                                    href="#information" role="tab" data-bs-toggle="tab">
+                                <button class="tab-btn text-sm md:text-lg font-bold px-4 py-2 rounded-xl"
+                                    onclick="openTab(event, 'tab7')" href="#information" role="tab"
+                                    data-bs-toggle="tab">
                                     Homework</button>
                             </li>
                         </ul>

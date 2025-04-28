@@ -1,45 +1,39 @@
 @extends($layout)
 @section('content')
     <link rel="stylesheet" href="{{ asset('guests/css/our_statement.css') }}" />
-    <section id="home" class="relative  lg:min-h-screen flex items-center justify-center  ">
-        <!-- Background Video -->
-        <div class="absolute inset-0 w-full h-full">
-            <video autoplay loop muted playsinline class="lg:absolute block top-0 left-0 w-full lg:h-full object-cover">
-                @if ($our_statement->branch->branch_short_name == 'SKT-RC')
-                    <source src="{{ asset('videos/skt_riverside_campus.mp4') }}" type="video/mp4">
-                @else
-                    <source src="{{ asset('videos/skt_city_campus.mp4') }}" type="video/mp4">
-                @endif
-                Your browser does not support the video tag.
-            </video>
-
-            <div class="absolute inset-0 bg-black opacity-80 fade-in-out-background "></div>
+    <div id="kenburns_061"
+        class="carousel max-h-screen slide ps_indicators_txt_icon ps_control_txt_icon data-bs-target kbrns_zoomInOut thumb_scroll_x swipe_x ps_easeOutQuart relative w-full overflow-hidden"
+        data-ride="carousel" data-pause="hover" data-interval="10000" data-duration="2000">
+        <!-- Wrapper For Slides -->
+        <div class="carousel-inner flex transition-transform duration-1000 ease-in-out mt-[89px]sm:mt-0" id="carouselInner">
+            <!-- First Slide -->
+            <div class="carousel-item active w-full flex-shrink-0">
+                <img src="{{ asset('img/banner/contact_banners/' . $our_statement->branch->branch_short_name . '.jpg') }}"
+                    alt="slider-image" class="w-full h-auto object-cover" />
+                <div
+                    class="absolute inset-0 mx-auto flex flex-col justify-center items-center  fade-in-out will_hide_div  ">
+                    <h1 id="fading-text" class=" text-xl sm:text-5xl lg:text-7xl text-center  ml-10 mt-20 sm:mt-0">
+                        <span class="text-emerald-400">{{ $our_statement->branch->branch_name }}</span>
+                        <br>
+                        <div class="text-white mt-4 hidden sm:block">Our Statement </div>
+                    </h1>
+                </div>
+            </div>
         </div>
-        {{-- <div class="home_content container mx-auto flex flex-col justify-center items-center  "> --}}
-        <div id=""
-            class="home_content fade-in-out container mx-auto flex flex-col justify-center items-center will_hide_div">
-            <h1 id="fading-text" class=" text-center  ml-10">
-                <span class="text-emerald-400">{{ $our_statement->branch->branch_name }}</span>
-                <br>
-                <span class="text-white hidden sm:block">Our Statement</span>
-            </h1>
-            {{-- <div class="flex justify-center" style="cursor: pointer">
-                <img src="{{ asset($our_statement->branch->branch_logo) }}" width="240" class="bounce-up" alt="">
-            </div> --}}
-        </div>
-    </section>
+    </div>
 
 
     <!-- START SCHOOL Statement -->
     <section class="statement "
         style="background-image: url({{ asset('assets/images/banner/course-bg.png') }}); background-size:cover; background-position: center center;">
         <div class="flex justify-center items-center">
-            <img src="{{ asset($our_statement->branch->branch_logo) }}" style="max-height: 420px" alt="" />
+            <img src="{{ asset($our_statement->branch->branch_logo) }}" class=" max-h-[200px] md:max-h-[360px]"
+                alt="" />
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 mt-10">
             <div class=" max-w-2xl p-10 flex justify-center items-center mx-auto">
                 <div class="ab_content">
-                    <h2 class=" text-4xl font-semibold">
+                    <h2 class=" text-2xl md:text-4xl font-semibold">
                         Our
                         <span class="text-emerald-400">Vision</span>
                     </h2>
@@ -50,7 +44,7 @@
             </div>
             <div class=" max-w-2xl p-10 flex justify-center items-center">
                 <div class="ab_content">
-                    <h2 class=" text-4xl font-semibold">
+                    <h2 class=" text-2xl md:text-4xl font-semibold">
                         Our
                         <span class="text-emerald-400">Mission</span>
                     </h2>
@@ -63,7 +57,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 mt-10">
             <div class=" max-w-2xl p-10 flex justify-center items-center mx-auto">
                 <div class="ab_content">
-                    <h2 class=" text-4xl font-semibold">
+                    <h2 class=" text-2xl md:text-4xl font-semibold">
                         Our
                         <span class="text-emerald-400">Value</span>
                     </h2>
@@ -96,7 +90,7 @@
             </div>
             <div class=" max-w-2xl p-10 flex justify-center items-center">
                 <div class="ab_content">
-                    <h2 class=" text-4xl font-semibold">
+                    <h2 class=" text-2xl md:text-4xl font-semibold">
                         Our
                         <span class="text-emerald-400">Philosophy</span>
                     </h2>
@@ -114,8 +108,8 @@
             <span class="inline-block w-3 h-1 rounded-full bg-emerald-500 ml-1"></span>
             <span class="inline-block w-1 h-1 rounded-full bg-emerald-500 ml-1"></span>
         </div>
-        <div class="container  mx-auto pb-4">
-            <div class="section-title text-4xl mb-6 font-bold">
+        <div class="container  mx-auto p-4">
+            <div class="section-title text-2xl md:text-4xl mb-6 font-bold">
                 <h2>Explore Our <span class="text-teal-500">School</span></h2>
 
 

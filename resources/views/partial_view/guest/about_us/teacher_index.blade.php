@@ -2,63 +2,55 @@
 
 @section('content')
     <link rel="stylesheet" href="{{ asset('guests/css/our_teachers.css') }}" />
-
-
-    <section id="home" class="relative  lg:min-h-screen flex items-center justify-center  ">
-        <!-- Background Video -->
-        <div class="absolute inset-0 w-full h-full">
-            <video autoplay loop muted playsinline class="lg:absolute block top-0 left-0 w-full lg:h-full object-cover">
-                @if ($branch->branch_short_name == 'SKT-RC')
-                    <source src="{{ asset('videos/skt_riverside_campus.mp4') }}" type="video/mp4">
-                @else
-                    <source src="{{ asset('videos/skt_city_campus.mp4') }}" type="video/mp4">
-                @endif
-                Your browser does not support the video tag.
-            </video>
-            <div class="absolute inset-0 bg-black opacity-80 fade-in-out-background"></div>
+    <div id="kenburns_061"
+        class="carousel max-h-screen slide ps_indicators_txt_icon ps_control_txt_icon data-bs-target kbrns_zoomInOut thumb_scroll_x swipe_x ps_easeOutQuart relative w-full overflow-hidden"
+        data-ride="carousel" data-pause="hover" data-interval="10000" data-duration="2000">
+        <!-- Wrapper For Slides -->
+        <div class="carousel-inner flex transition-transform duration-1000 ease-in-out mt-[89px] sm:mt-0" id="carouselInner">
+            <!-- First Slide -->
+            <div class="carousel-item active w-full flex-shrink-0">
+                <img src="{{ asset('img/banner/contact_banners/' . $branch->branch_short_name . '.jpg') }}"
+                    alt="slider-image" class="w-full h-auto object-cover" />
+                <div
+                    class="absolute inset-0 mx-auto flex flex-col justify-center items-center  fade-in-out will_hide_div  ">
+                    <h1 id="fading-text" class=" text-xl sm:text-5xl lg:text-7xl text-center  ml-10 mt-20 sm:mt-0">
+                        <span class="text-emerald-400">{{ $branch->branch_name }}</span>
+                        <br>
+                        <div class="text-white mt-4 hidden sm:block">Our Teachers </div>
+                    </h1>
+                </div>
+            </div>
         </div>
-        {{-- <div class=" "> --}}
-        {{-- <div class="home_content container mx-auto flex flex-col justify-center items-center  "> --}}
-        <div id=""
-            class="home_content fade-in-out container mx-auto flex flex-col justify-center items-center will_hide_div">
-            <h1 id="fading-text" class=" text-center  ml-10">
-                <span class="text-emerald-400 ">{{ $branch->branch_name }}</span>
-                <br>
-                <span class="text-white hidden sm:block">Our Teachers </span>
-            </h1>
-        </div>
-
-        {{-- </div> --}}
-    </section>
+    </div>
     <!-- START SCHOOL Teachers -->
     <section id="" class="mt-10 mb-10">
         <div class="container mx-auto">
-            <div class="section-title text-4xl mb-10 font-bold text-center">
+            <div class="section-title text-2xl md:text-4xl mb-10 font-bold text-center">
                 <h2>Our <span class="text-green-500">Teachers</span></h2>
             </div>
 
             <!-- Filter Buttons -->
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 text-center mt-10 gap-5">
-                <div class="filter-btn bg-blue-500 p-3 rounded-lg hover:bg-blue-600 font-bold cursor-pointer"
+            <div class="grid grid-cols-2 lg:grid-cols-4 text-center mt-10 gap-1 md:gap-5 text-white text-xs md:text-lg">
+                <div class="filter-btn bg-gray-800 p-3 m-2 rounded-lg hover:bg-gray-900 font-semibold cursor-pointer"
                     data-filter="all">All</div>
-                <div class="filter-btn bg-blue-500 p-3 rounded-lg hover:bg-blue-600 font-bold cursor-pointer"
+                <div class="filter-btn bg-gray-800 p-3 m-2 rounded-lg hover:bg-gray-900 font-semibold cursor-pointer"
                     data-filter="principal">Head of School</div>
-                <div class="filter-btn bg-blue-500 p-3 rounded-lg hover:bg-blue-600 font-bold cursor-pointer"
+                <div class="filter-btn bg-gray-800 p-3 m-2 rounded-lg hover:bg-gray-900 font-semibold cursor-pointer"
                     data-filter="vice-principal">Deputy Head of School</div>
-                <div class="filter-btn bg-blue-500 p-3 rounded-lg hover:bg-blue-600 font-bold cursor-pointer"
+                <div class="filter-btn bg-gray-800 p-3 m-2 rounded-lg hover:bg-gray-900 font-semibold cursor-pointer"
                     data-filter="secondary">Secondary</div>
-                <div class="filter-btn bg-blue-500 p-3 rounded-lg hover:bg-blue-600 font-bold cursor-pointer"
+                <div class="filter-btn bg-gray-800 p-3 m-2 rounded-lg hover:bg-gray-900 font-semibold cursor-pointer"
                     data-filter="lower-secondary">Lower Secondary</div>
-                <div class="filter-btn bg-blue-500 p-3 rounded-lg hover:bg-blue-600 font-bold cursor-pointer"
+                <div class="filter-btn bg-gray-800 p-3 m-2 rounded-lg hover:bg-gray-900 font-semibold cursor-pointer"
                     data-filter="primary">Primary</div>
-                <div class="filter-btn bg-blue-500 p-3 rounded-lg hover:bg-blue-600 font-bold cursor-pointer"
+                <div class="filter-btn bg-gray-800 p-3 m-2 rounded-lg hover:bg-gray-900 font-semibold cursor-pointer"
                     data-filter="kg">KG</div>
-                <div class="filter-btn bg-blue-500 p-3 rounded-lg hover:bg-blue-600 font-bold cursor-pointer"
+                <div class="filter-btn bg-gray-800 p-3 m-2 rounded-lg hover:bg-gray-900 font-semibold cursor-pointer"
                     data-filter="assistant">Assistant</div>
             </div>
 
             <!-- Teachers List -->
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 text-center mt-10" id="teachersList">
+            <div class="grid grid-cols-2 lg:grid-cols-4 text-center mt-10" id="teachersList">
                 @foreach ($our_teachers as $teacher)
                     <div class="teacher-card mx-2 mb-2 open-modal" data-category="{{ strtolower($teacher->teacher_class) }}"
                         data-src="{{ asset($teacher->teacher_photo) }}" data-title="{{ $teacher->teacher_name }}">
@@ -76,9 +68,11 @@
 
             <!-- Pagination Controls -->
             <div class="mt-6 flex justify-between items-center">
-                <button id="prevPage" class="px-4 py-2 bg-gray-300 rounded-md cursor-pointer">Prev</button>
-                <span id="paginationInfo" class="text-lg"></span>
-                <button id="nextPage" class="px-4 py-2 bg-gray-300 rounded-md cursor-pointer">Next</button>
+                <button id="prevPage"
+                    class=" px-2 py-1 md:px-4  md:py-2 m-2 bg-gray-900 text-white rounded-md cursor-pointer">Prev</button>
+                <span id="paginationInfo" class="text-sm md:text-lg m-4"></span>
+                <button id="nextPage"
+                    class=" px-2 py-1 md:px-4  md:py-2 m-2 bg-gray-900 text-white rounded-md cursor-pointer">Next</button>
             </div>
         </div>
     </section>

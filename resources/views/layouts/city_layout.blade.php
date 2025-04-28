@@ -251,7 +251,7 @@
                     <div class="single_footer p-4">
                         {{-- <a href="index.html"><img src="assets/images/all-img/logo2.png" alt="" /></a> --}}
                         <a href="{{ route('city.home') }}"><img src="{{ asset('img/footer_logo.png') }}"
-                                class=" max-w-60 sm:max-w-72" alt=""></a>
+                                class="max-w-52 sm:max-w-72" alt=""></a>
                         <p>
                             We nurture students to become lifelong learners responsible global citizens, and
                             compassionate individuals through a challenging and balanced curriculum in a safe and caring
@@ -301,7 +301,7 @@
                 <div>
                     <div class="single_footer p-4">
                         <h4>Menu</h4>
-                        <ul>
+                        <ul class="grid grid-cols-2 list-disc">
                             <li class=" hover:text-emerald-500"><a href="/">Home</a></li>
                             <li class=" hover:text-emerald-500"><a
                                     href="{{ route('our-history.home', $layout_branch->branch_short_name) }}">About
@@ -329,22 +329,33 @@
                 <div class="col-lg-3 col-sm-6 col-xs-12 p-4">
                     <div class="single_footer">
                         <h4>Contact Info</h4>
-                        <div class="sf_contact">
-                            <span class="ti-mobile"></span>
-                            <h3>Phone number</h3>
-                            <p>(01) 543926 ,+959 456 481 950</p>
-                            <p>09940993141</p>
+                        <div class="sf_contact grid grid-cols-2 gap-2">
+                            <div>
+                                <span class="ti-mobile"></span>
+                                <h3 class="hidden sm:block">Phone number</h3>
+                            </div>
+                            <div>
+                                <p>(01) 543926 ,+959 456 481 950</p>
+                                <p>09940993141</p>
+                            </div>
                         </div>
-                        <div class="sf_contact">
-                            <span class="ti-email"></span>
-                            <h3>Email Address</h3>
+                        <div class="sf_contact grid grid-cols-2 gap-2">
+                            <div>
+                                <span class="ti-email"></span>
+                                <h3 class="hidden sm:block">Email </h3>
+                            </div>
                             <p>contact@bisa.edu.mm</p>
                         </div>
-                        <div class="sf_contact">
-                            <span class="ti-map"></span>
-                            <h3>Address</h3>
-                            <p>City Campus Pre School :🏦Address - 5/A, Pho Sein Road, Bahan Tsp, Yangon.</p>
-                            <p>City Campus : 🏦 No 25, Pho Sein Road, Bahan Tsp, Yangon.</p>
+                        <div class="sf_contact grid grid-cols-2 gap-2">
+                            <div>
+                                <span class="ti-map"></span>
+                                <h3 class="hidden sm:block">Address</h3>
+                            </div>
+                            <div>
+                                <p>City Campus Pre School :🏦Address - 5/A, Pho Sein Road, Bahan Tsp, Yangon.</p>
+                                <hr class="my-1">
+                                <p>City Campus : 🏦 No 25, Pho Sein Road, Bahan Tsp, Yangon.</p>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -79,3 +79,16 @@
 .abmv p {
     overflow: hidden;
 }
+@media only screen and (max-width: 480px) {
+    .abmv span {
+        /* display: none; */
+        width: 42px;
+        height: 42px;
+        line-height: 42px;
+    }
+}
+@media only screen and (max-width: 480px) {
+    .abmv p {
+        font-size: 16px;
+    }
+}
