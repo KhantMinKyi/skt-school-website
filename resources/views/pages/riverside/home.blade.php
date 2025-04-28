@@ -19,25 +19,27 @@
     <link rel="stylesheet" href="{{ asset('guests/css/style.css') }}" />
     <!-- START HOME -->
     <!-- START HOME BANNER -->
-    <section id="home" class="relative hidden md:block  md:min-h-screen flex items-center justify-center  ">
+    <section id="home-desktop" class="relative hidden md:block min-h-96  lg:min-h-screen flex items-center justify-center">
         <!-- Background Video -->
         <div class="absolute inset-0 w-full h-full">
-            <video autoplay loop muted playsinline class="lg:absolute block top-0 left-0 w-full lg:h-full object-cover">
-                <source src="{{ asset('videos/skt_riverside_campus.mp4') }}" type="video/mp4">
-                Your browser does not support the video tag.
+            <video id="desktopVideo" autoplay loop muted playsinline
+                class="lg:absolute block top-0 left-0 w-full h-96 lg:h-full object-cover">
+                <!-- Video source will be inserted by JS -->
             </video>
         </div>
     </section>
-    <section id="home" class="relative md:hidden h-96 flex items-center justify-center">
+
+    <section id="home-mobile" class="relative md:hidden h-96 flex items-center justify-center">
         <!-- Fallback Image for Mobile -->
         <div class="absolute inset-0 w-full h-full">
-            <img src="{{ asset('img/banner/home_banner.jpg') }}" alt="Background" class="w-full h-full object-cover" />
+            <img src="{{ asset('img/banner/contact_banners/SKT-RC.jpg') }}" alt="Background"
+                class="w-full h-full object-cover blur-[1px]" />
         </div>
 
         <!-- Centered Text -->
         <div class="z-10 text-black text-center px-4">
-            <h1 class="text-2xl font-extrabold">Welcome to <span class=" text-emerald-600">SKT Riverside Campus </span></h1>
-            <p class="text-md mt-2">Experience innovation and learning</p>
+            <h1 class="text-2xl font-extrabold">Welcome to <span class="text-emerald-600">SKT Riverside Campus</span></h1>
+            <p class="text-md font-bold mt-2">Experience innovation and learning</p>
         </div>
     </section>
     <!-- END HOME BANNER -->
@@ -47,7 +49,7 @@
         <div class="grid md:grid-cols-1 lg:grid-cols-3 gap-6">
             <!-- Quality Education -->
             <div class="h-full flex">
-                <div class="bg-white p-16 mb-8 shadow border-r border-gray-50 w-full">
+                <div class="bg-white p-8 md:p-16 mb-8 shadow border-r border-gray-50 w-full">
                     <h3 class="text-xl mb-4">Quality Education</h3>
                     <p class="mb-10 font-light text-gray-500">
                         Empowering students with a well-rounded curriculum, hands-on learning, and a passion for lifelong
@@ -69,7 +71,7 @@
 
             <!-- Experienced Teachers -->
             <div class="h-full flex">
-                <div class="bg-white p-16 mb-8 shadow border-r border-gray-50 w-full">
+                <div class="bg-white p-8 md:p-16 mb-8 shadow border-r border-gray-50 w-full">
                     <h3 class="text-xl mb-4">Experienced Teachers</h3>
                     <p class="mb-10 font-light text-gray-500">
                         Learn from dedicated educators who bring years of expertise, guiding every student toward success.
@@ -90,7 +92,7 @@
 
             <!-- Delicious Food -->
             <div class="h-full flex">
-                <div class="bg-white p-16 mb-8 shadow border-r border-gray-50 w-full">
+                <div class="bg-white p-8 md:p-16 mb-8 shadow border-r border-gray-50 w-full">
                     <h3 class="text-xl mb-4">Delicious Food</h3>
                     <p class="mb-10 font-light text-gray-500">
                         Nutritious, tasty meals prepared with care, ensuring students enjoy a healthy and happy dining
@@ -264,39 +266,45 @@
 
 
     <!-- START SISTER SCHOOL  -->
-    {{-- <div class="partner-logo py-10  bg-gray-950">
-        <div class="text-center mb-10 text-2xl font-bold font-serif text-teal-500">
+    <div class="partner-logo py-10  bg-gray-950">
+        <div class="text-center mb-10 text-2xl font-bold font-serif text-white">
+            Our
+            <span class=" text-emerald-400"> Sister Schools </span>
         </div>
         <div class="container mx-auto">
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <div class="partner">
-                        <a href="#"><img src="{{ asset('img/carousel-logos/bfi.png') }}" alt="image"
+                        <a href="https://www.bfi.edu.mm/" target="__blank"><img
+                                src="{{ asset('img/carousel-logos/bfi.png') }}" alt="image" class=" max-h-48"></a>
+                        <a href="https://misa.edu.mm/" target="__blank"><img
+                                src="{{ asset('img/carousel-logos/misa_b.png') }}" alt="image" class=" max-h-48"></a>
+                        <a href="https://nisa.edu.mm/" target="__blank"><img
+                                src="{{ asset('img/carousel-logos/nisa_b.png') }}" alt="image" class=" max-h-48"></a>
+                        <a href="{{ route('city.home') }}"><img
+                                src="{{ asset('img/carousel-logos/skt_city_campus_b.png') }}" alt="image"
                                 class=" max-h-48"></a>
-                        <a href="#"><img src="{{ asset('img/carousel-logos/misa_b.png') }}" alt="image"
+                        <a href="{{ route('river.home') }}"><img
+                                src="{{ asset('img/carousel-logos/skt_riverside_campus_b.png') }}" alt="image"
                                 class=" max-h-48"></a>
-                        <a href="#"><img src="{{ asset('img/carousel-logos/nisa_b.png') }}" alt="image"
+                        <a href="https://www.bfi.edu.mm/" target="__blank"><img
+                                src="{{ asset('img/carousel-logos/bfi.png') }}" alt="image" class=" max-h-48"></a>
+                        <a href="https://misa.edu.mm/" target="__blank"><img
+                                src="{{ asset('img/carousel-logos/misa_b.png') }}" alt="image" class=" max-h-48"></a>
+                        <a href="https://nisa.edu.mm/" target="__blank"><img
+                                src="{{ asset('img/carousel-logos/nisa_b.png') }}" alt="image" class=" max-h-48"></a>
+                        <a href="{{ route('city.home') }}"><img
+                                src="{{ asset('img/carousel-logos/skt_city_campus_b.png') }}" alt="image"
                                 class=" max-h-48"></a>
-                        <a href="#"><img src="{{ asset('img/carousel-logos/skt_city_campus_b.png') }}"
-                                alt="image" class=" max-h-48"></a>
-                        <a href="#"><img src="{{ asset('img/carousel-logos/skt_riverside_campus_b.png') }}"
-                                alt="image" class=" max-h-48"></a>
-                        <a href="#"><img src="{{ asset('img/carousel-logos/bfi.png') }}" alt="image"
+                        <a href="{{ route('river.home') }}"><img
+                                src="{{ asset('img/carousel-logos/skt_riverside_campus_b.png') }}" alt="image"
                                 class=" max-h-48"></a>
-                        <a href="#"><img src="{{ asset('img/carousel-logos/misa_b.png') }}" alt="image"
-                                class=" max-h-48"></a>
-                        <a href="#"><img src="{{ asset('img/carousel-logos/nisa_b.png') }}" alt="image"
-                                class=" max-h-48"></a>
-                        <a href="#"><img src="{{ asset('img/carousel-logos/skt_city_campus_b.png') }}"
-                                alt="image" class=" max-h-48"></a>
-                        <a href="#"><img src="{{ asset('img/carousel-logos/skt_riverside_campus_b.png') }}"
-                                alt="image" class=" max-h-48"></a>
 
                     </div>
                 </div><!-- END COL  -->
             </div><!--END  ROW  -->
         </div><!-- END CONTAINER  -->
-    </div> --}}
+    </div>
     <!-- END SISTER SCHOOL  -->
     <hr class=" w-1/2 mx-auto md:my-20">
 
@@ -305,10 +313,10 @@
         <div class="grid grid-cols-1 lg:grid-cols-3 ">
             <div class=" lg:col-span-2  mx-auto p-4">
                 <div class="ab_content">
-                    <h2 class=" text-xl font-light text-gray-500">
+                    <h2 class=" text-md md:text-xl font-light text-gray-500">
                         Our
                     </h2>
-                    <h2 class="text-2xl xl:text-4xl  font-semibold">
+                    <h2 class="text-xl md:text-2xl xl:text-4xl  font-semibold">
                         <span class="text-emerald-400"> Head of School's Message</span>
                     </h2>
                     <p class=" text-gray-500">
@@ -316,7 +324,7 @@
                     </p>
                 </div>
                 <div class="abmv mt-4 principal-message ">
-                    <p class="text-md xl:text-xl italic">
+                    <p class="text-sm md:text-md xl:text-xl italic">
                         {{ \Illuminate\Support\Str::words($branch->principal_message->principal_message, 100, '...') }}
                     </p>
                 </div>
@@ -324,7 +332,7 @@
             <div class="flex flex-col justify-center items-center ">
                 <img class=" w-[240px] h-[240px] md:w-[300px] md:h-[300px] xl:w-[420px] xl:h-[420px] object-cover rounded-full"
                     src="{{ asset($branch->principal_message->principal_photo) }}" alt="" />
-                <p class="mt-4 bold text-xl md:text-2xl italic">{{ $branch->principal_message->principal_name }}</p>
+                <p class="mt-4 bold text-lg md:text-2xl italic">{{ $branch->principal_message->principal_name }}</p>
             </div>
         </div>
     </section>
@@ -341,13 +349,14 @@
                     Discover <span class="text-emerald-500">Our Campus & Services</span> Today
                 </p>
             </div>
-            <div class="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1">
+            <div class="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-2">
                 <div class="col-lg-4 col-sm-6 col-xs-12">
                     <div class="single_tca shadow-md p-12 border m-2 min-h-48 max-h-52">
 
                         <img src="{{ asset('assets/images/icon/ct3.svg') }}" alt="" />
                         {{-- <i class="fa-solid fa-book-open text-3xl"></i> --}}
                         <h2><a href="#">Cambridge Curriculum</a></h2>
+                        <br>
                         <span>Year 2 to IB</span>
                     </div>
                 </div>
@@ -356,7 +365,7 @@
                     <div class="single_tca shadow-md p-12 border m-2 min-h-48 max-h-52">
                         <img src="{{ asset('assets/images/icon/campus.svg') }}" alt="" />
                         <h2><a href="#">Modern Campus</a></h2>
-                        <span>Clean & Joyful environment</span>
+                        <span> Joyful environment</span>
                     </div>
                 </div>
                 <!-- END COL -->
@@ -503,22 +512,22 @@
                 <!-- Left Red Box (Smaller Height than image) -->
                 <div
                     class="absolute top-0 left-0 bg-gray-900 bg-opacity-95 text-white p-4 sm:p-16 w-full sm:w-[60%] h-[70%] flex flex-col justify-center z-10 rounded-tl-lg">
-                    <h2 class="text-2xl md:text-4xl font-semibold mb-6">What would you like to do?</h2>
+                    <h2 class="text-2xl lg:text-4xl font-semibold mb-6">What would you like to do?</h2>
                     <div class="flex space-x-4 md:space-x-20">
                         <div class="flex flex-col items-center text-center">
-                            <i class="fa-solid fa-pencil-alt text-sm md:text-lg "></i>
+                            <i class="fa-solid fa-pencil-alt text-sm lg:text-lg "></i>
                             <a href="{{ route('student-admission.home', $branch->branch_short_name) }}"
                                 class="uppercase text-xs sm:text-sm  font-semibold mt-2">Apply Now</a>
                             <div class="w-5 sm:w-8 h-1 bg-white mt-1"></div>
                         </div>
                         <div class="flex flex-col items-center text-center">
-                            <i class="fa-solid fa-eye text-sm md:text-lg"></i>
+                            <i class="fa-solid fa-eye text-sm lg:text-lg"></i>
                             <a href="{{ route('contact_us.home', $branch->branch_short_name) }}"
                                 class="uppercase text-xs sm:text-sm font-semibold mt-2">Book a Tour</a>
                             <div class="w-5 sm:w-8 h-1 bg-white mt-1"></div>
                         </div>
                         <div class="flex flex-col items-center text-center">
-                            <i class="fa-solid fa-book text-sm md:text-lg"></i>
+                            <i class="fa-solid fa-book text-sm lg:text-lg"></i>
                             <a href="{{ route('contact_us.home', $branch->branch_short_name) }}"
                                 class="uppercase text-xs sm:text-sm font-semibold mt-2">Request a Prospectus</a>
                             <div class="w-5 sm:w-8 h-1 bg-white mt-1"></div>
@@ -538,6 +547,17 @@
             words.forEach((word, index) => {
                 word.style.setProperty('--index', index); // Set custom index for animation delay
             });
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            if (window.innerWidth >= 768) { // md: breakpoint in Tailwind
+                const video = document.getElementById('desktopVideo');
+                const source = document.createElement('source');
+                source.src = "{{ asset('videos/skt_riverside_campus.mp4') }}";
+                source.type = "video/mp4";
+                video.appendChild(source);
+            }
         });
     </script>
     <script src={{ asset('guests/js/general.js') }}></script>

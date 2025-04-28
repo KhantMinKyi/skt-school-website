@@ -28,25 +28,27 @@
             </video>
         </div>
     </section> --}}
-    <section id="home" class="relative hidden md:block  md:min-h-screen flex items-center justify-center  ">
+    <section id="home-desktop" class="relative hidden md:block min-h-96  lg:min-h-screen flex items-center justify-center">
         <!-- Background Video -->
         <div class="absolute inset-0 w-full h-full">
-            <video autoplay loop muted playsinline class="lg:absolute block top-0 left-0 w-full lg:h-full object-cover">
-                <source src="{{ asset('videos/skt_city_campus.mp4') }}" type="video/mp4">
-                Your browser does not support the video tag.
+            <video id="desktopVideo" autoplay loop muted playsinline
+                class="lg:absolute block top-0 left-0 w-full h-96 lg:h-full object-cover">
+                <!-- Video source will be injected here -->
             </video>
         </div>
     </section>
-    <section id="home" class="relative md:hidden h-96 flex items-center justify-center">
+
+    <section id="home-mobile" class="relative md:hidden h-96 flex items-center justify-center">
         <!-- Fallback Image for Mobile -->
         <div class="absolute inset-0 w-full h-full">
-            <img src="{{ asset('img/banner/home_banner.jpg') }}" alt="Background" class="w-full h-full object-cover" />
+            <img src="{{ asset('img/banner/contact_banners/SKT-CC.jpg') }}" alt="Background"
+                class="w-full h-full object-cover blur-[1px]" />
         </div>
 
         <!-- Centered Text -->
         <div class="z-10 text-black text-center px-4">
-            <h1 class="text-2xl font-extrabold">Welcome to <span class=" text-emerald-600">SKT City Campus </span></h1>
-            <p class="text-md mt-2">Experience innovation and learning</p>
+            <h1 class="text-2xl font-extrabold">Welcome to <span class="text-emerald-400">SKT City Campus</span></h1>
+            <p class="text-md mt-2 font-bold text-white">Experience innovation and learning</p>
         </div>
     </section>
     <!-- END HOME BANNER -->
@@ -272,39 +274,45 @@
 
 
     <!-- START SISTER SCHOOL  -->
-    {{-- <div class="partner-logo py-10  bg-gray-950">
-        <div class="text-center mb-10 text-2xl font-bold font-serif text-teal-500">
+    <div class="partner-logo py-10  bg-gray-950">
+        <div class="text-center mb-10 text-2xl font-bold font-serif text-white">
+            Our
+            <span class=" text-emerald-400"> Sister Schools </span>
         </div>
         <div class="container mx-auto">
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <div class="partner">
-                        <a href="#"><img src="{{ asset('img/carousel-logos/bfi.png') }}" alt="image"
+                        <a href="https://www.bfi.edu.mm/" target="__blank"><img
+                                src="{{ asset('img/carousel-logos/bfi.png') }}" alt="image" class=" max-h-48"></a>
+                        <a href="https://misa.edu.mm/" target="__blank"><img
+                                src="{{ asset('img/carousel-logos/misa_b.png') }}" alt="image" class=" max-h-48"></a>
+                        <a href="https://nisa.edu.mm/" target="__blank"><img
+                                src="{{ asset('img/carousel-logos/nisa_b.png') }}" alt="image" class=" max-h-48"></a>
+                        <a href="{{ route('city.home') }}"><img
+                                src="{{ asset('img/carousel-logos/skt_city_campus_b.png') }}" alt="image"
                                 class=" max-h-48"></a>
-                        <a href="#"><img src="{{ asset('img/carousel-logos/misa_b.png') }}" alt="image"
+                        <a href="{{ route('river.home') }}"><img
+                                src="{{ asset('img/carousel-logos/skt_riverside_campus_b.png') }}" alt="image"
                                 class=" max-h-48"></a>
-                        <a href="#"><img src="{{ asset('img/carousel-logos/nisa_b.png') }}" alt="image"
+                        <a href="https://www.bfi.edu.mm/" target="__blank"><img
+                                src="{{ asset('img/carousel-logos/bfi.png') }}" alt="image" class=" max-h-48"></a>
+                        <a href="https://misa.edu.mm/" target="__blank"><img
+                                src="{{ asset('img/carousel-logos/misa_b.png') }}" alt="image" class=" max-h-48"></a>
+                        <a href="https://nisa.edu.mm/" target="__blank"><img
+                                src="{{ asset('img/carousel-logos/nisa_b.png') }}" alt="image" class=" max-h-48"></a>
+                        <a href="{{ route('city.home') }}"><img
+                                src="{{ asset('img/carousel-logos/skt_city_campus_b.png') }}" alt="image"
                                 class=" max-h-48"></a>
-                        <a href="#"><img src="{{ asset('img/carousel-logos/skt_city_campus_b.png') }}"
-                                alt="image" class=" max-h-48"></a>
-                        <a href="#"><img src="{{ asset('img/carousel-logos/skt_riverside_campus_b.png') }}"
-                                alt="image" class=" max-h-48"></a>
-                        <a href="#"><img src="{{ asset('img/carousel-logos/bfi.png') }}" alt="image"
+                        <a href="{{ route('river.home') }}"><img
+                                src="{{ asset('img/carousel-logos/skt_riverside_campus_b.png') }}" alt="image"
                                 class=" max-h-48"></a>
-                        <a href="#"><img src="{{ asset('img/carousel-logos/misa_b.png') }}" alt="image"
-                                class=" max-h-48"></a>
-                        <a href="#"><img src="{{ asset('img/carousel-logos/nisa_b.png') }}" alt="image"
-                                class=" max-h-48"></a>
-                        <a href="#"><img src="{{ asset('img/carousel-logos/skt_city_campus_b.png') }}"
-                                alt="image" class=" max-h-48"></a>
-                        <a href="#"><img src="{{ asset('img/carousel-logos/skt_riverside_campus_b.png') }}"
-                                alt="image" class=" max-h-48"></a>
 
                     </div>
                 </div><!-- END COL  -->
             </div><!--END  ROW  -->
         </div><!-- END CONTAINER  -->
-    </div> --}}
+    </div>
     <!-- END SISTER SCHOOL  -->
     <hr class=" w-1/2 mx-auto md:my-20">
 
@@ -313,10 +321,10 @@
         <div class="grid grid-cols-1 lg:grid-cols-3 ">
             <div class=" lg:col-span-2  mx-auto p-4">
                 <div class="ab_content">
-                    <h2 class=" text-xl font-light text-gray-500">
+                    <h2 class=" text-md md:text-xl font-light text-gray-500">
                         Our
                     </h2>
-                    <h2 class=" text-2xl xl:text-4xl font-semibold">
+                    <h2 class=" text-xl md:text-2xl xl:text-4xl font-semibold">
                         <span class="text-emerald-400"> Head of School's Message</span>
                     </h2>
                     <p class=" text-gray-500">
@@ -324,7 +332,7 @@
                     </p>
                 </div>
                 <div class="abmv mt-4 principal-message ">
-                    <p class="text-md xl:text-xl italic">
+                    <p class="text-sm md:text-md xl:text-xl italic">
                         {{ \Illuminate\Support\Str::words($branch->principal_message->principal_message, 100, '...') }}
                     </p>
                 </div>
@@ -332,7 +340,7 @@
             <div class="flex flex-col justify-center items-center">
                 <img class=" w-[240px] h-[240px] md:w-[300px] md:h-[300px] xl:w-[420px] xl:h-[420px] object-cover rounded-full"
                     src="{{ asset($branch->principal_message->principal_photo) }}" alt="" />
-                <p class="mt-4 bold text-xl xl:text-2xl italic">{{ $branch->principal_message->principal_name }}</p>
+                <p class="mt-4 bold text-lg xl:text-2xl italic">{{ $branch->principal_message->principal_name }}</p>
             </div>
         </div>
     </section>
@@ -349,7 +357,7 @@
                     Discover <span class="text-emerald-500">Our Campus & Services</span> Today
                 </p>
             </div>
-            <div class="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1">
+            <div class="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-2">
                 <div class="col-lg-4 col-sm-6 col-xs-12">
                     <div class="single_tca shadow-md p-12 border m-2 min-h-48 max-h-52">
 
@@ -364,7 +372,7 @@
                     <div class="single_tca shadow-md p-12 border m-2 min-h-48 max-h-52">
                         <img src="{{ asset('assets/images/icon/campus.svg') }}" alt="" />
                         <h2><a href="#">Modern Campus</a></h2>
-                        <span>Clean & Joyful environment</span>
+                        <span>Joyful environment</span>
                     </div>
                 </div>
                 <!-- END COL -->
@@ -535,36 +543,22 @@
     <!-- END  HOME -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // const img = document.querySelector('.home-banner-hero');
-
-            // // Function to handle the scroll event
-            // const handleScroll = () => {
-            //     // Get the scroll position of the page and the position of the image
-            //     const scrollTop = window.scrollY || document.documentElement.scrollTop;
-            //     const imgOffsetTop = img.offsetTop;
-            //     const imgHeight = img.offsetHeight;
-            //     const windowHeight = window.innerHeight;
-
-            //     // Check if the image is within the viewport
-            //     if (scrollTop + windowHeight > imgOffsetTop && scrollTop < imgOffsetTop + imgHeight) {
-            //         img.classList.remove('slide-out');
-            //         img.classList.add('slide-in');
-            //     } else {
-            //         img.classList.remove('slide-in');
-            //         img.classList.add('slide-out');
-            //     }
-            // };
-
-            // // Attach the scroll event listener
-            // window.addEventListener('scroll', handleScroll);
-
-            // // Trigger the scroll handler once to ensure the initial state is correct
-            // handleScroll();
             const words = document.querySelectorAll('#fading-text span');
 
             words.forEach((word, index) => {
                 word.style.setProperty('--index', index); // Set custom index for animation delay
             });
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            if (window.innerWidth >= 768) { // md: Tailwind breakpoint (768px)
+                const video = document.getElementById('desktopVideo');
+                const source = document.createElement('source');
+                source.src = "{{ asset('videos/skt_city_campus.mp4') }}";
+                source.type = "video/mp4";
+                video.appendChild(source);
+            }
         });
     </script>
     <script src={{ asset('guests/js/general.js') }}></script>

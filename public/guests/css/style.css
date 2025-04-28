@@ -184,6 +184,14 @@
     font-size: 26px;
     border-radius: 100px;
 }
+@media only screen and (max-width: 480px) {
+    .abmv span {
+        /* display: none; */
+        width: 42px;
+        height: 42px;
+        line-height: 42px;
+    }
+}
 .abmv h4 {
     font-weight: 800;
     overflow: hidden;
@@ -293,7 +301,13 @@
 @media only screen and (max-width: 480px) {
     .section-title p {
         width: 100%;
-        font-size: 24px;
+        font-size: 22px;
+    }
+}
+@media only screen and (max-width: 1024px) {
+    .section-title p {
+        width: 100%;
+        font-size: 30px;
     }
 }
 h1.section-title-white {
@@ -340,13 +354,13 @@ p.section-title-white {
     font-size: 18px;
     font-weight: 600;
 }
-@media only screen and  (max-width: 320px) {
+@media only screen and  (max-width: 430px) {
     .single_tca h2 a {
-        font-size: 14px;
+        font-size: 16px;
         font-weight: 700;
     }
     .single_tca span {
-        font-size: 12px;
+        font-size: 14px;
         font-weight: 600;
     } 
 }
