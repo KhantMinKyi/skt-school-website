@@ -7,7 +7,7 @@
         class="carousel max-h-screen slide ps_indicators_txt_icon ps_control_txt_icon data-bs-target kbrns_zoomInOut thumb_scroll_x swipe_x ps_easeOutQuart relative w-full overflow-hidden"
         data-ride="carousel" data-pause="hover" data-interval="10000" data-duration="2000">
         <!-- Wrapper For Slides -->
-        <div class="carousel-inner flex transition-transform duration-1000 ease-in-out  mt-20 sm:mt-0" id="carouselInner">
+        <div class="carousel-inner flex transition-transform duration-1000 ease-in-out  mt-[89px] sm:mt-0" id="carouselInner">
             <!-- First Slide -->
             <div class="carousel-item active w-full flex-shrink-0">
                 <img src="{{ asset('img/banner/student_life_banners/gallery/' . $branch->branch_short_name . '.jpg') }}"
@@ -29,17 +29,17 @@
     <!-- START SCHOOL Facilities -->
     <section id="" class="mt-10 mb-10">
         <div class="container mx-auto">
-            <div class="section-title text-4xl mb-6 font-bold text-center">
+            <div class="section-title text-2xl md:text-4xl mb-6 font-bold text-center">
                 <h2>Our <span class="text-teal-500">Facilities</span></h2>
             </div>
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 text-center mt-4 ">
+            <div class="grid grid-cols-2 lg:grid-cols-4 text-center mt-4 ">
                 @foreach ($branch->galleries as $gallery)
                     <div class="mx-2 mb-2 gallery-card open-modal cursor-pointer"
                         data-src="{{ asset($gallery->gallery_photo) }}" data-title="{{ $gallery->gallery_title }}">
                         <div class="relative group rounded-md overflow-hidden">
                             <!-- Image -->
-                            <img src="{{ asset($gallery->gallery_photo) }}" class="w-full min-h-80 cursor-pointer"
-                                alt="Gallery Image" />
+                            <img src="{{ asset($gallery->gallery_photo) }}"
+                                class="w-full min-h-40 md:min-h-80 cursor-pointer" alt="Gallery Image" />
 
                             <!-- Overlay -->
                             <div
@@ -61,10 +61,13 @@
                 </div>
             </div>
 
+            <!-- Pagination Controls -->
             <div class="mt-6 flex justify-between items-center">
-                <button id="prevPage" class="px-4 py-2 bg-gray-300 rounded-md cursor-pointer">Prev</button>
-                <span id="paginationInfo" class="text-lg"></span>
-                <button id="nextPage" class="px-4 py-2 bg-gray-300 rounded-md cursor-pointer">Next</button>
+                <button id="prevPage"
+                    class=" px-2 py-1 md:px-4  md:py-2 m-2 bg-gray-900 text-white rounded-md cursor-pointer">Prev</button>
+                <span id="paginationInfo" class="text-sm md:text-lg m-4"></span>
+                <button id="nextPage"
+                    class=" px-2 py-1 md:px-4  md:py-2 m-2 bg-gray-900 text-white rounded-md cursor-pointer">Next</button>
             </div>
         </div>
     </section>

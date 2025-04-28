@@ -11,7 +11,8 @@
         class="carousel max-h-screen slide ps_indicators_txt_icon ps_control_txt_icon data-bs-target kbrns_zoomInOut thumb_scroll_x swipe_x ps_easeOutQuart relative w-full overflow-hidden"
         data-ride="carousel" data-pause="hover" data-interval="10000" data-duration="2000">
         <!-- Wrapper For Slides -->
-        <div class="carousel-inner flex transition-transform duration-1000 ease-in-out mt-20 sm:mt-0" id="carouselInner">
+        <div class="carousel-inner flex transition-transform duration-1000 ease-in-out mt-[89px] sm:mt-0"
+            id="carouselInner">
             <!-- First Slide -->
             <div class="carousel-item active w-full flex-shrink-0">
                 <img src="{{ asset('img/banner/student_life_banners/welfare/' . $branch->branch_short_name . '.jpg') }}"
@@ -50,7 +51,7 @@
                         {{-- <h2 class=" text-2xl font-light text-gray-500 mb-2">
                         asdfsad
                     </h2> --}}
-                        <h2 class=" text-4xl font-semibold mb-4">
+                        <h2 class=" text-2xl md:text-4xl font-semibold mb-4">
                             <span class="text-emerald-400">Message from the Head of Welfare</span>
                         </h2>
                         <p class=" text-gray-500">
@@ -93,16 +94,16 @@
                         </p>
                     </div>
                     <div class="abmv mt-4 principal-message ">
-                        <p class="text-xl italic">
+                        <p class=" text-lg md:text-xl italic">
                             Guvanch Odeniyazov
                         </p>
-                        <p class="text-md italic">
+                        <p class=" text-sm md:text-md italic">
                             Head of Welfare
                         </p>
                     </div>
                 </div>
                 <div class="flex justify-center items-center flex-col">
-                    <img class="w-[240px] h-[240px] md:w-[420px] md:h-[420px] object-cover rounded-full"
+                    <img class="w-[200px] h-[200px] md:w-[420px] md:h-[420px] object-cover rounded-full"
                         src="{{ asset('img/welfare_data/' . $branch->branch_short_name . '.jpg') }}" alt="" />
                     <p class="mt-4 bold text-xl md:text-2xl italic"> Guvanch Odeniyazov</p>
                 </div>
@@ -116,7 +117,7 @@
                         {{-- <h2 class=" text-2xl font-light text-gray-500 mb-2">
                     asdfsad
                 </h2> --}}
-                        <h2 class=" text-4xl font-semibold mb-4">
+                        <h2 class=" text-2xl md:text-4xl font-semibold mb-4">
                             <span class="text-emerald-400">Message from the Head of Welfare CC</span>
                         </h2>
                         <p class=" text-gray-500">
@@ -159,16 +160,16 @@
                         </p>
                     </div>
                     <div class="abmv mt-4 principal-message ">
-                        <p class="text-xl italic">
+                        <p class=" text-lg md:text-xl italic">
                             Guvanch Odeniyazov
                         </p>
-                        <p class="text-md italic">
+                        <p class=" text-sm md:text-md italic">
                             Head of Welfare
                         </p>
                     </div>
                 </div>
                 <div class="flex justify-center items-center flex-col">
-                    <img class="w-[240px] h-[240px] md:w-[420px] md:h-[420px] object-cover rounded-full"
+                    <img class="w-[200px] h-[200px] md:w-[420px] md:h-[420px] object-cover rounded-full"
                         src="{{ asset('img/welfare_data/' . $branch->branch_short_name . '.jpg') }}" alt="" />
                     <p class="mt-4 bold text-xl md:text-2xl italic"> Guvanch Odeniyazov</p>
                 </div>
@@ -177,7 +178,7 @@
     @endif
 
     <!-- START TOPIC-->
-    <section class="topic_content_area section-padding" style="background-image: url(assets/images/banner/topic.png);">
+    <section class="topic_content_area mt-10" style="background-image: url(assets/images/banner/topic.png);">
         <div class="container mx-auto">
             <div class="section-title p-4">
                 <h2>{{ $branch->branch_name }}</h2>

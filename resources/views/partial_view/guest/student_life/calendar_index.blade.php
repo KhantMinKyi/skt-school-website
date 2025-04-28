@@ -4,10 +4,11 @@
     <link rel="stylesheet" href="{{ asset('guests/css/calendar.css') }}" />
     <link rel="stylesheet" href="{{ asset('assets/css/slider.css') }}" />
     <div id="kenburns_061"
-        class="carousel max-h-screen slide ps_indicators_txt_icon ps_control_txt_icon data-bs-target kbrns_zoomInOut thumb_scroll_x swipe_x ps_easeOutQuart relative w-full overflow-hidden"
+        class="carousel max-h-screen slide ps_indicators_txt_icon ps_control_txt_icon data-bs-target  kbrns_zoomInOut thumb_scroll_x swipe_x ps_easeOutQuart relative w-full overflow-hidden"
         data-ride="carousel" data-pause="hover" data-interval="10000" data-duration="2000">
         <!-- Wrapper For Slides -->
-        <div class="carousel-inner flex transition-transform duration-1000 ease-in-out  mt-20 sm:mt-0" id="carouselInner">
+        <div class="carousel-inner flex transition-transform duration-1000 ease-in-out  mt-[89px] sm:mt-0"
+            id="carouselInner">
             <!-- First Slide -->
             <div class="carousel-item active w-full flex-shrink-0">
                 <img src="{{ asset('img/banner/student_life_banners/calendar/' . $branch->branch_short_name . '.jpg') }}"
@@ -28,7 +29,7 @@
     </div>
     <section id="post" class="blog_area section-padding"
         style="background-image: url({{ asset('assets/images/banner/course-bg.png') }}); background-size:cover; background-position: center center;">
-        <div class="container mx-auto">
+        <div class="container mx-auto p-4">
             <div class="section-title">
                 <h2>{{ $branch->branch_name }}</h2>
                 <p>

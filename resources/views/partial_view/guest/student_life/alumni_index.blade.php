@@ -8,7 +8,8 @@
         class="carousel  max-h-screen slide ps_indicators_txt_icon ps_control_txt_icon data-bs-target kbrns_zoomInOut thumb_scroll_x swipe_x ps_easeOutQuart relative w-full overflow-hidden"
         data-ride="carousel" data-pause="hover" data-interval="10000" data-duration="2000">
         <!-- Wrapper For Slides -->
-        <div class="carousel-inner flex transition-transform duration-1000 ease-in-out mt-20 sm:mt-0" id="carouselInner">
+        <div class="carousel-inner flex transition-transform duration-1000 ease-in-out mt-[89px] sm:mt-0"
+            id="carouselInner">
             <!-- First Slide -->
             <div class="carousel-item active w-full flex-shrink-0">
                 <img src="{{ asset('img/banner/student_life_banners/alumini/' . $branch->branch_short_name . '.jpg') }}"
@@ -45,8 +46,8 @@
             </div>
             <div class="flex items-center justify-center gap-10">
                 {{-- <img src="{{ asset('img/banner-hero.png') }}" class=" home-banner-hero" alt="" /> --}}
-                <img src="{{ asset($branch->branch_logo) }}" style="max-height: 420px" class=" home-banner-hero"
-                    alt="" />
+                <img src="{{ asset($branch->branch_logo) }}" class=" max-h-[200px] md:max-h-[360px]"
+                    class=" home-banner-hero" alt="" />
             </div>
         </div>
     </section>
@@ -55,24 +56,18 @@
             style="background-image: url({{ asset('assets/images/banner/course-bg.png') }}); background-size:cover; background-position: center center;">
             <div class="flex flex-col items-center justify-center gap-2 mt-10 lg:mt-0">
                 {{-- <img src="{{ asset('img/banner-hero.png') }}" class=" home-banner-hero" alt="" /> --}}
-                <img src="{{ asset('img/skt_riverside/principal.jpg') }}"
+                <img src="{{ asset('img/user-dummy.png') }}"
                     class=" home-banner-hero rounded-full object-cover h-[240px] w-[240px] lg:h-[420px] lg:w-[420px]"
                     alt="" />
-                <p class="font-semibold">Ismail</p>
+                <p class="font-semibold">John Doe</p>
                 <p class="italic font-semibold">Alumni Principal</p>
             </div>
             <div class="flex items-center justify-center p-4 md:p-20 italic font-semibold text-xs md:text-lg">
-                Today's BFI represents an evolving community bred from four
-                distinct institutions – SKT, BISA,NISA and
-                MISA. These schools, each with rich histories and cultures of their own, have evolved into a cohesive
-                community that embraces the diverse traditions and values of its founding institutions. There is no better
-                representation of the important history that makes up the fabric of today’s BFI than our alumni community.
-                As you value the memories and mission of your own alma mater, take the time to visit our campus, read Quest
-                magazine, and connect with your favourite faculty members who are still at BFI – you’ll see these values
-                reflected and celebrated in our current culture.
-                Please join us at an event, consider volunteering and contact our Development Office to learn more about the
-                many ways you can get involved! For more information please contact the Development Office at
-                alumni@bfi-edu.com
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. A voluptatem, aut quibusdam incidunt est provident
+                neque tempora libero hic unde? Ipsa nihil enim distinctio delectus consectetur voluptatem dolorem, ex
+                mollitia. Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium quibusdam nam minima placeat
+                voluptatibus quam, sunt alias ea, officia ullam molestiae eaque, porro cum! Repellendus cumque
+                necessitatibus repudiandae est porro?
             </div>
 
         </div>
