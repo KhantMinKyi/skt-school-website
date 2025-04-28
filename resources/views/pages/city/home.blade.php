@@ -359,53 +359,80 @@
             </div>
             <div class="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-2">
                 <div class="col-lg-4 col-sm-6 col-xs-12">
-                    <div class="single_tca shadow-md p-12 border m-2 min-h-48 max-h-52">
-
-                        <img src="{{ asset('assets/images/icon/ct3.svg') }}" alt="" />
-                        {{-- <i class="fa-solid fa-book-open text-3xl"></i> --}}
-                        <h2><a href="#">Cambridge Curriculum</a></h2>
-                        <span>Year 2 to IGCSE</span>
+                    <div
+                        class="single_tca shadow-md p-6 sm:p-12 border m-2 h-56 grid grid-cols-1 sm:grid-cols-2  sm:gap-2 ">
+                        <div class="flex justify-center">
+                            <img src="{{ asset('assets/images/icon/ct3.svg') }}" alt="" />
+                        </div>
+                        <div class="text-center">
+                            <h2><a href="#">Cambridge Curriculum</a></h2>
+                            <span>Year 2 to IGCSE</span>
+                        </div>
                     </div>
                 </div>
                 <!-- END COL -->
                 <div class="col-lg-4 col-sm-6 col-xs-12">
-                    <div class="single_tca shadow-md p-12 border m-2 min-h-48 max-h-52">
-                        <img src="{{ asset('assets/images/icon/campus.svg') }}" alt="" />
-                        <h2><a href="#">Modern Campus</a></h2>
-                        <span>Joyful environment</span>
+                    <div
+                        class="single_tca shadow-md p-6 sm:p-12 border m-2 h-56 grid grid-cols-1 sm:grid-cols-2  sm:gap-2 ">
+                        <div class="flex justify-center">
+                            <img src="{{ asset('assets/images/icon/campus.svg') }}" alt="" />
+                        </div>
+                        <div class="text-center">
+                            <h2><a href="#">Modern Campus</a></h2>
+                            <span>Joyful environment</span>
+                        </div>
                     </div>
                 </div>
                 <!-- END COL -->
                 <div class="col-lg-4 col-sm-6 col-xs-12">
-                    <div class="single_tca shadow-md p-12 border m-2 min-h-48 max-h-52">
-                        <img src="{{ asset('assets/images/icon/lab.svg') }}" alt="" />
-                        <h2><a href="#">Science labs</a></h2>
-                        <span>Full Lab Equipment</span>
+                    <div
+                        class="single_tca shadow-md p-6 sm:p-12 border m-2 h-56 grid grid-cols-1 sm:grid-cols-2  sm:gap-2 ">
+                        <div class="flex justify-center">
+                            <img src="{{ asset('assets/images/icon/lab.svg') }}" alt="" />
+                        </div>
+                        <div class="text-center">
+                            <h2><a href="#">Science labs</a></h2>
+                            <span>Full Lab Equipment</span>
+                        </div>
                     </div>
                 </div>
                 <!-- END COL -->
                 <div class="col-lg-4 col-sm-6 col-xs-12">
-                    <div class="single_tca shadow-md p-12 border m-2 min-h-48 max-h-52">
-
-                        <img src="{{ asset('assets/images/icon/ct6.svg') }}" alt="" />
-                        <h2><a href="#">Playgounds & Stadiums</a></h2>
-                        <span>Over 10 sports</span>
+                    <div
+                        class="single_tca shadow-md p-6 sm:p-12 border m-2 h-56 grid grid-cols-1 sm:grid-cols-2  sm:gap-2 ">
+                        <div class="flex justify-center">
+                            <img src="{{ asset('assets/images/icon/ct6.svg') }}" alt="" />
+                        </div>
+                        <div class="text-center">
+                            <h2><a href="#">Playgounds & Stadiums</a></h2>
+                            <span>Over 10 sports</span>
+                        </div>
                     </div>
                 </div>
                 <!-- END COL -->
                 <div class="col-lg-4 col-sm-6 col-xs-12">
-                    <div class="single_tca shadow-md p-12 border m-2 min-h-48 max-h-52">
-                        <img src="{{ asset('assets/images/icon/facility.svg') }}" alt="" />
-                        <h2><a href="#">The Best Facilities</a></h2>
-                        <span>Smart Teaching Equipment </span>
+                    <div
+                        class="single_tca shadow-md p-6 sm:p-12 border m-2 h-56 grid grid-cols-1 sm:grid-cols-2  sm:gap-2 ">
+                        <div class="flex justify-center">
+                            <img src="{{ asset('assets/images/icon/facility.svg') }}" alt="" />
+                        </div>
+                        <div class="text-center">
+                            <h2><a href="#">The Best Facilities</a></h2>
+                            <span>Smart Teaching Equipment </span>
+                        </div>
                     </div>
                 </div>
                 <!-- END COL -->
                 <div class="col-lg-4 col-sm-6 col-xs-12">
-                    <div class="single_tca shadow-md p-12 border m-2 min-h-48 max-h-52">
-                        <img src="{{ asset('assets/images/icon/safe.svg') }}" alt="" />
-                        <h2><a href="#">24hr Safety</a></h2>
-                        <span>100% Safety Enviroment</span>
+                    <div
+                        class="single_tca shadow-md p-6 sm:p-12 border m-2 h-56 grid grid-cols-1 sm:grid-cols-2  sm:gap-2 ">
+                        <div class="flex justify-center">
+                            <img src="{{ asset('assets/images/icon/safe.svg') }}" alt="" />
+                        </div>
+                        <div class="text-center">
+                            <h2><a href="#">24hr Safety</a></h2>
+                            <span>100% Safety Enviroment</span>
+                        </div>
                     </div>
                 </div>
                 <!-- END COL -->

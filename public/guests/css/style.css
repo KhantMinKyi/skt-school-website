@@ -298,18 +298,20 @@
     line-height: 46px;
     color: #1a2d62;
 }
-@media only screen and (max-width: 480px) {
-    .section-title p {
-        width: 100%;
-        font-size: 22px;
-    }
-}
 @media only screen and (max-width: 1024px) {
     .section-title p {
         width: 100%;
         font-size: 30px;
     }
 }
+
+@media only screen and (max-width: 480px) {
+    .section-title p {
+        width: 100%;
+        font-size: 22px;
+    }
+}
+
 h1.section-title-white {
     color: #fff;
 }
@@ -343,7 +345,7 @@ p.section-title-white {
 }
 .single_tca h2 a {
     color: #1a2d62;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 700;
     transition: 0.3s;
     margin-bottom: 10px;
@@ -351,18 +353,38 @@ p.section-title-white {
 }
 .single_tca span {
     color: #2eca7f;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 600;
 }
-@media only screen and  (max-width: 430px) {
+@media only screen and  (max-width: 768px) {
     .single_tca h2 a {
-        font-size: 16px;
+        font-size: 15px;
         font-weight: 700;
     }
     .single_tca span {
         font-size: 14px;
         font-weight: 600;
     } 
+    .single_tca img,
+    .single_tca i {
+    float: left;
+    margin-right: 0px;
+}
+}
+@media only screen and  (max-width: 430px) {
+    .single_tca h2 a {
+        font-size: 12px;
+        font-weight: 700;
+    }
+    .single_tca span {
+        font-size: 10px;
+        font-weight: 600;
+    } 
+    .single_tca img,
+    .single_tca i {
+    float: left;
+    margin-right: 0px;
+}
 }
 .event-slide {
     position: relative;
