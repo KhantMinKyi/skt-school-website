@@ -7,7 +7,8 @@
         class="carousel max-h-screen slide ps_indicators_txt_icon ps_control_txt_icon data-bs-target kbrns_zoomInOut thumb_scroll_x swipe_x ps_easeOutQuart relative w-full overflow-hidden"
         data-ride="carousel" data-pause="hover" data-interval="10000" data-duration="2000">
         <!-- Wrapper For Slides -->
-        <div class="carousel-inner flex transition-transform duration-1000 ease-in-out mt-20 sm:mt-0" id="carouselInner">
+        <div class="carousel-inner flex transition-transform duration-1000 ease-in-out mt-[89px] sm:mt-0"
+            id="carouselInner">
             <!-- First Slide -->
             <div class="carousel-item active w-full flex-shrink-0">
                 <img src="{{ asset('img/banner/education_banners/pre_school/' . $branch->branch_short_name . '.jpg') }}"
@@ -31,7 +32,7 @@
                     Pre School <span class="text-emerald-500">Age 3 - 6</span>
                 </p>
             </div>
-            <div class=" text-lg p-4">
+            <div class=" text-sm md:text-lg p-4">
                 At SKT International Preschool, we believe in nurturing the whole child through a playful and engaging
                 learning approach. We're a Candidate School for the IB PYP Early Years Programme, meaning our curriculum is
                 designed to foster your child's natural curiosity and love of learning. Our play-based, inquiry-driven
@@ -53,11 +54,11 @@
                         class="absolute w-full h-full rounded-xl bg-white p-6 text-gray-800 shadow-lg [backface-visibility:hidden]">
                         <div class="flex flex-col h-full">
                             <div class="flex justify-between items-start">
-                                <div class="text-3xl font-extrabold">Creative Exploration</div>
+                                <div class="text-lg md:text-3xl font-extrabold">Creative Exploration</div>
                                 <img src="{{ asset('assets/images/icon/music.svg') }}" class=" w-20" alt="" />
                             </div>
                             <div class="mt-auto">
-                                <p class="text-sm opacity-75 font-semibold">Hover to flip!</p>
+                                <p class="text-xs md:text-sm opacity-75 font-semibold">Hover to flip!</p>
                             </div>
                         </div>
                     </div>
@@ -65,9 +66,9 @@
                     <div
                         class=" w-full h-full rounded-xl bg-gradient-to-br from-teal-200 to-teal-400  shadow-lg  p-6 text-black [transform:rotateX(180deg)] [backface-visibility:hidden]">
                         <div class="flex flex-col h-full">
-                            <div class="text-2xl font-extrabold mb-4 ">Creative Exploration</div>
+                            <div class="text-lg md:text-3xl font-extrabold mb-4 ">Creative Exploration</div>
                             <div class="flex-grow">
-                                <p class="text-lg ">
+                                <p class=" text-xs md:text-lg ">
                                     We provide a rich environment filled with stimulating activities like art, music,
                                     dramatic play, building blocks, sand and water play, and more! Children explore their
                                     world hands-on, developing their creativity and problem-solving skills.
@@ -87,11 +88,11 @@
                         class="absolute w-full h-full rounded-xl bg-white p-6 text-gray-800 shadow-lg [backface-visibility:hidden]">
                         <div class="flex flex-col h-full">
                             <div class="flex justify-between items-start">
-                                <div class="text-3xl font-extrabold">Academic Foundations</div>
+                                <div class="text-lg md:text-3xl font-extrabold">Academic Foundations</div>
                                 <img src="{{ asset('assets/images/icon/literacy.svg') }}" class=" w-20" alt="" />
                             </div>
                             <div class="mt-auto">
-                                <p class="text-sm opacity-75 font-semibold">Hover to flip!</p>
+                                <p class="text-xs md:text-sm opacity-75 font-semibold">Hover to flip!</p>
                             </div>
                         </div>
                     </div>
@@ -99,9 +100,9 @@
                     <div
                         class=" w-full h-full rounded-xl bg-gradient-to-br from-teal-200 to-teal-400  shadow-lg  p-6 text-black [transform:rotateX(180deg)] [backface-visibility:hidden]">
                         <div class="flex flex-col h-full">
-                            <div class="text-2xl font-extrabold mb-4 ">Academic Foundations</div>
+                            <div class="text-lg md:text-3xl font-extrabold mb-4 ">Academic Foundations</div>
                             <div class="flex-grow">
-                                <p class="text-lg ">
+                                <p class="text-xs md:text-lg ">
                                     Through play and inquiry, your child will build a strong foundation in literacy, math,
                                     and science. Our engaging lessons are tailored to their age and developmental stage,
                                     incorporating storytelling, music, and movement to make learning fun. We also introduce
@@ -122,13 +123,13 @@
                         class="absolute w-full h-full rounded-xl bg-white p-6 text-gray-800 shadow-lg [backface-visibility:hidden]">
                         <div class="flex flex-col h-full">
                             <div class="flex justify-between items-start">
-                                <div class="text-3xl font-extrabold">Physical Development</div>
+                                <div class="text-lg md:text-3xl font-extrabold">Physical Development</div>
                                 <img src="{{ asset('assets/images/icon/sport_player.svg') }}" class=" w-20"
                                     alt="" />
                             </div>
 
                             <div class="mt-auto">
-                                <p class="text-sm opacity-75 font-semibold">Hover to flip!</p>
+                                <p class="text-xs md:text-sm opacity-75 font-semibold">Hover to flip!</p>
                             </div>
                         </div>
                     </div>
@@ -136,9 +137,9 @@
                     <div
                         class=" w-full h-full rounded-xl bg-gradient-to-br from-teal-200 to-teal-400  shadow-lg  p-6 text-black [transform:rotateX(180deg)] [backface-visibility:hidden]">
                         <div class="flex flex-col h-full">
-                            <div class="text-2xl font-extrabold mb-4 ">Physical Development</div>
+                            <div class="text-lg md:text-3xl font-extrabold mb-4 ">Physical Development</div>
                             <div class="flex-grow">
-                                <p class="text-lg ">
+                                <p class="text-xs md:text-lg ">
                                     We believe in the importance of physical activity for healthy development. Your child
                                     will enjoy exciting physical education classes, gymnastics, and swimming lessons.
                                 </p>
@@ -158,12 +159,12 @@
                         class="absolute w-full h-full rounded-xl bg-white p-6 text-gray-800 shadow-lg [backface-visibility:hidden]">
                         <div class="flex flex-col h-full">
                             <div class="flex justify-between items-start">
-                                <div class="text-3xl font-extrabold">Social-Emotional Growth</div>
+                                <div class="text-lg md:text-3xl font-extrabold">Social-Emotional Growth</div>
                                 <img src="{{ asset('assets/images/icon/social_studies.svg') }}" class=" w-20"
                                     alt="" />
                             </div>
                             <div class="mt-auto">
-                                <p class="text-sm opacity-75 font-semibold">Hover to flip!</p>
+                                <p class="text-xs md:text-sm opacity-75 font-semibold">Hover to flip!</p>
                             </div>
                         </div>
                     </div>
@@ -171,9 +172,9 @@
                     <div
                         class=" w-full h-full rounded-xl bg-gradient-to-br from-teal-200 to-teal-400  shadow-lg  p-6 text-black [transform:rotateX(180deg)] [backface-visibility:hidden]">
                         <div class="flex flex-col h-full">
-                            <div class="text-2xl font-extrabold mb-4 ">Social-Emotional Growth</div>
+                            <div class="text-lg md:text-3xl font-extrabold mb-4 ">Social-Emotional Growth</div>
                             <div class="flex-grow">
-                                <p class="text-lg ">
+                                <p class="text-xs md:text-lg ">
                                     We nurture your child's social and emotional well-being through positive reinforcement,
                                     engaging activities, and strong parent involvement. Your child will learn to cooperate,
                                     share, and express themselves confidently.
@@ -238,7 +239,7 @@
 
 
     <div class="partner-logo py-10  bg-yellow-50">
-        <div class="text-center mb-10 text-2xl font-bold font-serif text-teal-700">
+        <div class="text-center mb-10 text:xl md:text-2xl font-bold font-serif text-teal-700">
             {{-- Sister Schools --}}
             Our Program Includes:
         </div>
@@ -246,21 +247,23 @@
             {{-- New Row --}}
             <div class="grid md:grid-cols-2 my-5">
                 <div class="my-5">
-                    <p class="text-xl font-extrabold uppercase">
+                    <p class="text:lg md:text-xl font-extrabold uppercase">
                         Inquiry-Based <span class="text-emerald-500">Learning</span>
                         <hr class="w-28 text-center my-2 border-emerald-500">
                     </p>
-                    <p class="p-1 font-semibold text-gray-800">Children explore their interests and questions through
+                    <p class="p-1 font-semibold text-gray-800 text-sm md:text-lg">Children explore their interests and
+                        questions through
                         hands-on activities
                         and open-ended projects.
                     </p>
                 </div>
                 <div class="my-5">
-                    <p class="text-xl font-extrabold uppercase">
+                    <p class="text:lg md:text-xl font-extrabold uppercase">
                         Play-Based <span class="text-emerald-500">Learning</span>
                         <hr class="w-28 text-center my-2 border-emerald-500 ">
                     </p>
-                    <p class="p-1 font-semibold text-gray-800"> Learning happens through play! We use age-appropriate
+                    <p class="p-1 font-semibold text-gray-800 text-sm md:text-lg"> Learning happens through play! We use
+                        age-appropriate
                         materials and activities to make learning fun and engaging.
                     </p>
                 </div>
@@ -269,20 +272,22 @@
             {{-- New Row --}}
             <div class="grid md:grid-cols-2 my-5">
                 <div class="my-5">
-                    <p class="text-xl font-extrabold uppercase">
+                    <p class="text:lg md:text-xl font-extrabold uppercase">
                         Music and <span class="text-emerald-500">Movement</span>
                         <hr class="w-28 text-center my-2 border-emerald-500">
                     </p>
-                    <p class="p-1 font-semibold text-gray-800">Singing, dancing, and musical activities enhance your
+                    <p class="p-1 font-semibold text-gray-800 text-sm md:text-lg">Singing, dancing, and musical activities
+                        enhance your
                         child's creativity and coordination.
                     </p>
                 </div>
                 <div class="my-5">
-                    <p class="text-xl font-extrabold uppercase">
+                    <p class="text:lg md:text-xl font-extrabold uppercase">
                         Literacy and <span class="text-emerald-500">Math</span>
                         <hr class="w-28 text-center my-2 border-emerald-500 ">
                     </p>
-                    <p class="p-1 font-semibold text-gray-800"> We lay a strong foundation in reading, writing and number
+                    <p class="p-1 font-semibold text-gray-800 text-sm md:text-lg"> We lay a strong foundation in reading,
+                        writing and number
                         skills.
                     </p>
                 </div>
@@ -305,20 +310,22 @@
         <div class="container mx-auto p-4">
             <div class="grid md:grid-cols-2 my-5">
                 <div class="my-5">
-                    <p class="text-xl font-extrabold uppercase">
+                    <p class="text:lg md:text-xl font-extrabold uppercase">
                         Science and <span class="text-emerald-500">Nature</span>
                         <hr class="w-28 text-center my-2 border-emerald-500">
                     </p>
-                    <p class="p-1 font-semibold text-gray-800"> Hands-on exploration and discoveries spark a lifelong
+                    <p class="p-1 font-semibold text-gray-800 text-sm md:text-lg"> Hands-on exploration and discoveries
+                        spark a lifelong
                         curiosity about the world.
                     </p>
                 </div>
                 <div class="my-5">
-                    <p class="text-xl font-extrabold uppercase">
+                    <p class="text:lg md:text-xl font-extrabold uppercase">
                         Art and <span class="text-emerald-500">Craft</span>
                         <hr class="w-28 text-center my-2 border-emerald-500 ">
                     </p>
-                    <p class="p-1 font-semibold text-gray-800"> Self-expression through painting, drawing, and various
+                    <p class="p-1 font-semibold text-gray-800 text-sm md:text-lg"> Self-expression through painting,
+                        drawing, and various
                         craft projects.
                     </p>
                 </div>
@@ -326,39 +333,43 @@
             {{-- New Row --}}
             <div class="grid md:grid-cols-2 my-5">
                 <div class="my-5">
-                    <p class="text-xl font-extrabold uppercase">
+                    <p class="text:lg md:text-xl font-extrabold uppercase">
                         <span class="text-emerald-500">Technology</span>
                         <hr class="w-28 text-center my-2 border-emerald-500">
                     </p>
-                    <p class="p-1 font-semibold text-gray-800">Age-appropriate introduction to technology and digital
+                    <p class="p-1 font-semibold text-gray-800 text-sm md:text-lg">Age-appropriate introduction to
+                        technology and digital
                         literacy.
                     </p>
                 </div>
                 <div class="my-5">
-                    <p class="text-xl font-extrabold uppercase">
+                    <p class="text:lg md:text-xl font-extrabold uppercase">
                         Social Skills and <span class="text-emerald-500">Etiquette</span>
                         <hr class="w-28 text-center my-2 border-emerald-500 ">
                     </p>
-                    <p class="p-1 font-semibold text-gray-800"> Learning to interact positively with peers and adults.
+                    <p class="p-1 font-semibold text-gray-800 text-sm md:text-lg"> Learning to interact positively with
+                        peers and adults.
                     </p>
                 </div>
             </div>
             {{-- New Row --}}
             <div class="grid md:grid-cols-2 my-5">
                 <div class="my-5">
-                    <p class="text-xl font-extrabold uppercase">
+                    <p class="text:lg md:text-xl font-extrabold uppercase">
                         Physical Education, Gymnastics and <span class="text-emerald-500">Swimming</span>
                         <hr class="w-28 text-center my-2 border-emerald-500">
                     </p>
-                    <p class="p-1 font-semibold text-gray-800"> Building strength, coordination and confidence.
+                    <p class="p-1 font-semibold text-gray-800 text-sm md:text-lg"> Building strength, coordination and
+                        confidence.
                     </p>
                 </div>
                 <div class="my-5">
-                    <p class="text-xl font-extrabold uppercase">
+                    <p class="text:lg md:text-xl font-extrabold uppercase">
                         Field <span class="text-emerald-500">trips</span>
                         <hr class="w-28 text-center my-2 border-emerald-500 ">
                     </p>
-                    <p class="p-1 font-semibold text-gray-800"> (if applicable) Exciting excursions to expand learning
+                    <p class="p-1 font-semibold text-gray-800 text-sm md:text-lg"> (if applicable) Exciting excursions to
+                        expand learning
                         experiences.
 
                     </p>
