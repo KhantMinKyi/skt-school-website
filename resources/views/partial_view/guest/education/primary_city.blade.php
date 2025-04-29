@@ -32,14 +32,14 @@
                     Primary <span class="text-emerald-500">Year 3 - 6 </span>
                 </p>
             </div>
-            <div class=" text-lg p-4">
+            <div class=" text-sm md:text-base lg:text-lg p-4">
                 The primary school curriculum is engineered for the holistic development of all of its students. The school
                 provides the highest standard of individualized education by fostering love of learning in children.
                 Teachers aim to enhance each child's self-confidence and self-esteem while, at the same time, challenging
                 them academically. This is achieved by...
                 Internationally recognized Cambridge Primary Curriculum and assessments which includes Cambridge
                 International Primary Checkpoint and yearly progression tests from Year 3 to Year 6.
-                <ul class="list-disc text-gray-800 mt-2">
+                <ul class="list-disc list-inside text-gray-800 text-sm md:text-base lg:text-lg mt-2">
                     <li>Aiming to produce competent learners, who are able to communicate effectively.</li>
                     <li>Excursions and field trips that broaden the students' experiences.</li>
                     <li>Projects and activities that encourage students to explore, inquire, question and apply what they
@@ -58,7 +58,7 @@
     <!-- END TOPIC -->
 
     <div class="partner-logo py-10  bg-green-50">
-        <div class="text-center mb-10 text-2xl font-bold font-serif text-teal-700">
+        <div class="text-center mb-10 text-xl md:text-2xl font-bold font-serif text-teal-700">
             {{-- Sister Schools --}}
             Developing students’ 21st Century skills such as
         </div>
@@ -67,32 +67,35 @@
                 <div class="col-lg-12 text-center">
                     <div class=" grid md:grid-cols-3">
                         <div
-                            class="single_tca shadow-md p-12 border m-2 min-h-28 max-h-40 hover:shadow-lg flex justify-center items-center">
-                            <img src="{{ asset('assets/images/icon/problem_solving.svg') }}" class=" w-20"
+                            class="single_tca shadow-md p-6 lg:p-8 border m-2 min-h-28 max-h-40 hover:shadow-lg flex justify-center items-center">
+                            <img src="{{ asset('assets/images/icon/problem_solving.svg') }}" class=" w-14 lg:w-20"
                                 alt="" />
-                            <h2 class=""><a href="#">Critical Thinking</a></h2>
+                            <h2 class=" text-sm lg:text-lg"><a href="#">Critical Thinking</a></h2>
                         </div>
                         <div
-                            class="single_tca shadow-md p-12 border m-2 min-h-28 max-h-40 hover:shadow-lg flex justify-center items-center">
-                            <img src="{{ asset('assets/images/icon/language.svg') }}" class=" w-20" alt="" />
-                            <h2 class=""><a href="#">Communication</a></h2>
+                            class="single_tca shadow-md p-6 lg:p-8 border m-2 min-h-28 max-h-40 hover:shadow-lg flex justify-center items-center">
+                            <img src="{{ asset('assets/images/icon/language.svg') }}" class=" w-14 lg:w-20"
+                                alt="" />
+                            <h2 class=" text-sm lg:text-lg"><a href="#">Communication</a></h2>
                         </div>
                         <div
-                            class="single_tca shadow-md p-12 border m-2 min-h-28 max-h-40 hover:shadow-lg flex justify-center items-center">
-                            <img src="{{ asset('assets/images/icon/community.svg') }}" class=" w-20" alt="" />
-                            <h2 class=""><a href="#">Collaboration</a></h2>
+                            class="single_tca shadow-md p-6 lg:p-8 border m-2 min-h-28 max-h-40 hover:shadow-lg flex justify-center items-center">
+                            <img src="{{ asset('assets/images/icon/community.svg') }}" class=" w-14 lg:w-20"
+                                alt="" />
+                            <h2 class=" text-sm lg:text-lg"><a href="#">Collaboration</a></h2>
                         </div>
                     </div>
                     <div class=" grid md:grid-cols-2">
                         <div
-                            class="single_tca shadow-md p-12 border m-2 min-h-28 max-h-40 hover:shadow-lg flex justify-center items-center">
-                            <img src="{{ asset('assets/images/icon/add_math.svg') }}" class=" w-20" alt="" />
-                            <h2 class=""><a href="#">Problem Solving</a></h2>
+                            class="single_tca shadow-md p-6 lg:p-8 border m-2 min-h-28 max-h-40 hover:shadow-lg flex justify-center items-center">
+                            <img src="{{ asset('assets/images/icon/add_math.svg') }}" class=" w-14 lg:w-20"
+                                alt="" />
+                            <h2 class=" text-sm lg:text-lg"><a href="#">Problem Solving</a></h2>
                         </div>
                         <div
-                            class="single_tca shadow-md p-12 border m-2 min-h-28 max-h-40 hover:shadow-lg flex justify-center items-center">
-                            <img src="{{ asset('assets/images/icon/leader.svg') }}" class=" w-20" alt="" />
-                            <h2 class=""><a href="#">Leadership</a></h2>
+                            class="single_tca shadow-md p-6 lg:p-8 border m-2 min-h-28 max-h-40 hover:shadow-lg flex justify-center items-center">
+                            <img src="{{ asset('assets/images/icon/leader.svg') }}" class=" w-14 lg:w-20" alt="" />
+                            <h2 class=" text-sm lg:text-lg"><a href="#">Leadership</a></h2>
                         </div>
                     </div>
                 </div><!-- END COL  -->
@@ -108,31 +111,37 @@
             {{-- New Row --}}
             <div class="grid md:grid-cols-3 my-5 gap-10">
                 <div class="my-5">
-                    <p class="text-xl font-extrabold uppercase">
+                    <p class="text:lg lg:text-xl font-extrabold uppercase">
                         English <span class="text-emerald-500">Language</span>
                         <hr class="w-28 text-center my-2 border-emerald-500">
                     </p>
-                    <p class="p-1 font-semibold text-gray-800"> Develops confident communication, critical thinking, and
+                    <p class="p-1 font-semibold text-gray-800 text-sm md:text-base lg:text-lg"> Develops confident
+                        communication,
+                        critical thinking, and
                         writing skills. Opportunities include research papers, speech contests, essay competitions, debates,
                         and Spelling Bee contests.
                     </p>
                 </div>
                 <div class="my-5">
-                    <p class="text-xl font-extrabold uppercase">
+                    <p class="text:lg lg:text-xl font-extrabold uppercase">
                         <span class="text-emerald-500"> Mathematics</span>
                         <hr class="w-28 text-center my-2 border-emerald-500 ">
                     </p>
-                    <p class="p-1 font-semibold text-gray-800"> Provides a strong foundation through six key
+                    <p class="p-1 font-semibold text-gray-800 text-sm md:text-base lg:text-lg"> Provides a strong foundation
+                        through six
+                        key
                         concepts—number, algebra, geometry, measure, data handling, and problem-solving—encouraging
                         collaboration and real-world application.
                     </p>
                 </div>
                 <div class="my-5">
-                    <p class="text-xl font-extrabold uppercase">
+                    <p class="text:lg lg:text-xl font-extrabold uppercase">
                         <span class="text-emerald-500">Science</span>
                         <hr class="w-28 text-center my-2 border-emerald-500 ">
                     </p>
-                    <p class="p-1 font-semibold text-gray-800">Covers scientific inquiry, biology, chemistry, and physics,
+                    <p class="p-1 font-semibold text-gray-800 text-sm md:text-base lg:text-lg">Covers scientific inquiry,
+                        biology,
+                        chemistry, and physics,
                         with hands-on experiments in well-equipped labs and an emphasis on environmental awareness.
                     </p>
                 </div>
@@ -141,30 +150,36 @@
             {{-- New Row --}}
             <div class="grid md:grid-cols-3 my-5 gap-10">
                 <div class="my-5">
-                    <p class="text-xl font-extrabold uppercase">
+                    <p class="text:lg lg:text-xl font-extrabold uppercase">
                         Physical <span class="text-emerald-500">Education</span>
                         <hr class="w-28 text-center my-2 border-emerald-500">
                     </p>
-                    <p class="p-1 font-semibold text-gray-800"> Enhances agility, coordination, and flexibility through
+                    <p class="p-1 font-semibold text-gray-800 text-sm md:text-base lg:text-lg"> Enhances agility,
+                        coordination, and
+                        flexibility through
                         various sports, gymnastics, and tournaments, encouraging active participation in school
                         competitions.
                     </p>
                 </div>
                 <div class="my-5">
-                    <p class="text-xl font-extrabold uppercase">
+                    <p class="text:lg lg:text-xl font-extrabold uppercase">
                         <span class="text-emerald-500">ICT</span>
                         <hr class="w-28 text-center my-2 border-emerald-500 ">
                     </p>
-                    <p class="p-1 font-semibold text-gray-800"> Focuses on modern technology, integrating smart tools,
+                    <p class="p-1 font-semibold text-gray-800 text-sm md:text-base lg:text-lg"> Focuses on modern
+                        technology, integrating
+                        smart tools,
                         robotics, and extracurricular activities to keep students updated with advancements in computing.
                     </p>
                 </div>
                 <div class="my-5">
-                    <p class="text-xl font-extrabold uppercase">
+                    <p class="text:lg lg:text-xl font-extrabold uppercase">
                         Social <span class="text-emerald-500">Studies</span>
                         <hr class="w-28 text-center my-2 border-emerald-500 ">
                     </p>
-                    <p class="p-1 font-semibold text-gray-800"> Encourages critical thinking and independent learning by
+                    <p class="p-1 font-semibold text-gray-800 text-sm md:text-base lg:text-lg"> Encourages critical thinking
+                        and
+                        independent learning by
                         focusing on historical lessons rather than rote memorization. Explores global and regional issues,
                         focusing on population, settlements, natural environments, and socio-economic development.
                     </p>
@@ -173,29 +188,35 @@
             {{-- New Row --}}
             <div class="grid md:grid-cols-3 my-5 gap-10">
                 <div class="my-5">
-                    <p class="text-xl font-extrabold uppercase">
+                    <p class="text:lg lg:text-xl font-extrabold uppercase">
                         <span class="text-emerald-500">Art</span>
                         <hr class="w-28 text-center my-2 border-emerald-500">
                     </p>
-                    <p class="p-1 font-semibold text-gray-800"> Inspires creativity and critical thinking through drawing,
+                    <p class="p-1 font-semibold text-gray-800 text-sm md:text-base lg:text-lg"> Inspires creativity and
+                        critical
+                        thinking through drawing,
                         painting, and design projects.
                     </p>
                 </div>
                 <div class="my-5">
-                    <p class="text-xl font-extrabold uppercase">
+                    <p class="text:lg lg:text-xl font-extrabold uppercase">
                         Myanmar <span class="text-emerald-500">Language</span>
                         <hr class="w-28 text-center my-2 border-emerald-500 ">
                     </p>
-                    <p class="p-1 font-semibold text-gray-800"> Helps students, both local and non-local, understand
+                    <p class="p-1 font-semibold text-gray-800 text-sm md:text-base lg:text-lg"> Helps students, both local
+                        and
+                        non-local, understand
                         Myanmar language and culture for better integration and communication.
                     </p>
                 </div>
                 <div class="my-5">
-                    <p class="text-xl font-extrabold uppercase">
+                    <p class="text:lg lg:text-xl font-extrabold uppercase">
                         <span class="text-emerald-500">Music</span>
                         <hr class="w-28 text-center my-2 border-emerald-500 ">
                     </p>
-                    <p class="p-1 font-semibold text-gray-800"> The primary school music curriculum fosters an
+                    <p class="p-1 font-semibold text-gray-800 text-sm md:text-base lg:text-lg"> The primary school music
+                        curriculum
+                        fosters an
                         understanding and appreciation of music through aural perception, singing, and recognizing different
                         instruments.
                     </p>
