@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="{{ asset('guests/css/style.css') }}" />
     <!-- START HOME -->
     <!-- START HOME BANNER -->
-    {{-- <section id="home-desktop" class="relative hidden md:block min-h-96  lg:min-h-screen flex items-center justify-center">
+    <section id="home-desktop" class="relative hidden lg:block min-h-96  lg:min-h-screen flex items-center justify-center">
         <!-- Background Video -->
         <div class="absolute inset-0 w-full h-full">
             <video id="desktopVideo" autoplay loop muted playsinline
@@ -29,7 +29,7 @@
         </div>
     </section>
 
-    <section id="home-mobile" class="relative md:hidden h-96 flex items-center justify-center">
+    <section id="home-mobile" class="relative lg:hidden h-96 flex items-center justify-center">
         <!-- Fallback Image for Mobile -->
         <div class="absolute inset-0 w-full h-full">
             <img src="{{ asset('img/banner/contact_banners/SKT-RC.jpg') }}" alt="Background"
@@ -40,16 +40,6 @@
         <div class="z-10 text-black text-center px-4">
             <h1 class="text-2xl font-extrabold">Welcome to <span class="text-emerald-600">SKT Riverside Campus</span></h1>
             <p class="text-md font-bold mt-2">Experience innovation and learning</p>
-        </div>
-    </section> --}}
-    <section id="home-desktop" class="relative min-h-96  lg:min-h-screen flex items-center justify-center">
-        <!-- Background Video -->
-        <div class="absolute inset-0 w-full h-full">
-            <video id="desktopVideo" autoplay loop muted playsinline preload="metadata"
-                class="lg:absolute block top-0 left-0 w-full h-96 lg:h-full object-cover"
-                src="{{ asset('videos/skt_riverside_campus.mp4') }}" type="video/mp4">
-                <!-- Video source will be inserted by JS -->
-            </video>
         </div>
     </section>
     <!-- END HOME BANNER -->
@@ -583,7 +573,7 @@
     </script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            if (window.innerWidth >= 768) { // md: breakpoint in Tailwind
+            if (window.innerWidth >= 1000) { // md: breakpoint in Tailwind
                 const video = document.getElementById('desktopVideo');
                 const source = document.createElement('source');
                 source.src = "{{ asset('videos/skt_riverside_campus.mp4') }}";

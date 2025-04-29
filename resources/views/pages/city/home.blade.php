@@ -28,7 +28,7 @@
             </video>
         </div>
     </section> --}}
-    <section id="home-desktop" class="relative hidden md:block min-h-96  lg:min-h-screen flex items-center justify-center">
+    <section id="home-desktop" class="relative hidden lg:block min-h-96  lg:min-h-screen flex items-center justify-center">
         <!-- Background Video -->
         <div class="absolute inset-0 w-full h-full">
             <video id="desktopVideo" autoplay loop muted playsinline
@@ -38,7 +38,7 @@
         </div>
     </section>
 
-    <section id="home-mobile" class="relative md:hidden h-96 flex items-center justify-center">
+    <section id="home-mobile" class="relative lg:hidden h-96 flex items-center justify-center">
         <!-- Fallback Image for Mobile -->
         <div class="absolute inset-0 w-full h-full">
             <img src="{{ asset('img/banner/contact_banners/SKT-CC.jpg') }}" alt="Background"
@@ -579,7 +579,7 @@
     </script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            if (window.innerWidth >= 768) { // md: Tailwind breakpoint (768px)
+            if (window.innerWidth >= 1000) { // md: Tailwind breakpoint (1000px)
                 const video = document.getElementById('desktopVideo');
                 const source = document.createElement('source');
                 source.src = "{{ asset('videos/skt_city_campus.mp4') }}";
