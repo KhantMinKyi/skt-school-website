@@ -31,6 +31,12 @@
     line-height: 46px;
     color: #1a2d62;
 }
+@media only screen and (max-width: 768px) {
+    .section-title p {
+        width: 100%;
+        font-size: 32px;
+    }
+}
 @media only screen and (max-width: 480px) {
     .section-title p {
         width: 100%;
@@ -62,8 +68,8 @@ p.section-title-white {
 }
 .single_tca img,
 .single_tca i {
-    float: left;
-    margin-right: 20px;
+    /* float: left; */
+    /* margin-right: 20px; */
 }
 .single_tca h2 {
     overflow: hidden;

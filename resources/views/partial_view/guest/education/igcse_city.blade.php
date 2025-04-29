@@ -32,7 +32,7 @@
                     IGCSE <span class="text-emerald-500">Year 10 - 11 </span>
                 </p>
             </div>
-            <div class=" text-lg p-4">
+            <div class="text-base md:text-lg p-4">
                 Our IGCSE program offers a diverse and comprehensive curriculum designed to prepare students for academic
                 success and future opportunities.
             </div>
@@ -44,7 +44,7 @@
 
     <!-- START SISTER SCHOOL  -->
     <div class="partner-logo py-10  bg-green-50">
-        <div class="text-center mb-10 text-2xl font-bold font-serif text-teal-700">
+        <div class="text-center mb-10 text-lg md:text-xl lg:text-2xl  font-bold font-serif text-teal-700">
             {{-- Sister Schools --}}
             Following the Cambridge IGCSE framework, students study core subjects such
             as
@@ -52,34 +52,39 @@
         <div class="container mx-auto">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <div class=" grid xl:grid-cols-3 lg:grid-cols-2">
+                    <div class=" grid grid-cols-3 ">
                         <div
-                            class="single_tca  shadow-md p-12 border m-2 min-h-28 max-h-40 hover:shadow-lg hover:shadow-green-400 flex justify-center items-center">
-                            <img src="{{ asset('assets/images/icon/letter.svg') }}" class=" w-20" alt="" />
-                            <h2 class=""><a href="#">English</a></h2>
+                            class="single_tca  shadow-md p-6 lg:p-8 border m-2 min-h-28 max-h-40 hover:shadow-lg hover:shadow-green-400 flex justify-center items-center flex-col md:flex-row">
+                            <img src="{{ asset('assets/images/icon/letter.svg') }}"
+                                class=" w-10 sm:w-14 lg:w-20 md:mr-2 mb-2 md:mb-0" alt="" />
+                            <h2 class="text-xs sm:text-sm lg:text-lg"><a href="#">English</a></h2>
                         </div>
                         <div
-                            class="single_tca shadow-md p-12 border m-2 min-h-28 max-h-40 hover:shadow-lg hover:shadow-green-400 flex justify-center items-center">
-                            <img src="{{ asset('assets/images/icon/math.svg') }}" class=" w-20" alt="" />
-                            <h2 class=""><a href="#">Mathematics</a></h2>
+                            class="single_tca shadow-md p-6 lg:p-8 border m-2 min-h-28 max-h-40 hover:shadow-lg hover:shadow-green-400 flex justify-center items-center flex-col md:flex-row">
+                            <img src="{{ asset('assets/images/icon/math.svg') }}"
+                                class=" w-10 sm:w-14 lg:w-20 md:mr-2 mb-2 md:mb-0" alt="" />
+                            <h2 class="text-xs sm:text-sm lg:text-lg"><a href="#">Mathematics</a></h2>
                         </div>
                         <div
-                            class="single_tca shadow-md p-12 border m-2 min-h-28 max-h-40 hover:shadow-lg hover:shadow-green-400 flex justify-center items-center">
-                            <img src="{{ asset('assets/images/icon/add_math.svg') }}" class=" w-20" alt="" />
-                            <h2 class=""><a href="#">Additional Mathematics</a></h2>
+                            class="single_tca shadow-md p-6 lg:p-8 border m-2 min-h-28 max-h-40 hover:shadow-lg hover:shadow-green-400 flex justify-center items-center flex-col md:flex-row">
+                            <img src="{{ asset('assets/images/icon/add_math.svg') }}"
+                                class=" w-10 sm:w-14 lg:w-20 md:mr-2 mb-2 md:mb-0" alt="" />
+                            <h2 class="text-xs sm:text-sm lg:text-lg"><a href="#">Additional Mathematics</a></h2>
+                        </div>
+                    </div>
+                    <div class=" grid grid-cols-2">
+                        <div
+                            class="single_tca shadow-md p-6 lg:p-8 border m-2 min-h-28 max-h-40 hover:shadow-lg hover:shadow-green-400 flex justify-center items-center flex-col md:flex-row">
+                            <img src="{{ asset('assets/images/icon/science.svg') }}"
+                                class=" w-10 sm:w-14 lg:w-20 md:mr-2 mb-2 md:mb-0" alt="" />
+                            <h2 class="text-xs sm:text-sm lg:text-lg"><a href="#">All Science</a></h2>
                         </div>
                         <div
-                            class="single_tca shadow-md p-12 border m-2 min-h-28 max-h-40 hover:shadow-lg hover:shadow-green-400 flex justify-center items-center">
-                            <img src="{{ asset('assets/images/icon/science.svg') }}" class=" w-20" alt="" />
-                            <h2 class=""><a href="#">All Science</a></h2>
+                            class="single_tca shadow-md p-6 lg:p-8 border m-2 min-h-28 max-h-40 hover:shadow-lg hover:shadow-green-400 flex justify-center items-center flex-col md:flex-row">
+                            <img src="{{ asset('assets/images/icon/computer_science.svg') }}"
+                                class=" w-10 sm:w-14 lg:w-20 md:mr-2 mb-2 md:mb-0" alt="" />
+                            <h2 class="text-xs sm:text-sm lg:text-lg"><a href="#">Computer Science</a></h2>
                         </div>
-                        <div
-                            class="single_tca shadow-md p-12 border m-2 min-h-28 max-h-40 hover:shadow-lg hover:shadow-green-400 flex justify-center items-center">
-                            <img src="{{ asset('assets/images/icon/computer_science.svg') }}" class=" w-20"
-                                alt="" />
-                            <h2 class=""><a href="#">Computer Science</a></h2>
-                        </div>
-
                     </div>
                 </div><!-- END COL  -->
             </div><!--END  ROW  -->
@@ -87,7 +92,7 @@
 
     </div>
     <div class="partner-logo py-10  bg-blue-50">
-        <div class="text-center mb-10 text-2xl font-bold font-serif text-blue-700">
+        <div class="text-center mb-10 text-lg md:text-xl lg:text-2xl  font-bold font-serif text-blue-700">
             {{-- Sister Schools --}}
             They also choose from a
             wide range of electives, including
@@ -95,21 +100,24 @@
         <div class="container mx-auto">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <div class=" grid lg:grid-cols-3">
+                    <div class=" grid grid-cols-3">
                         <div
-                            class="single_tca  shadow-md p-12 border m-2 min-h-28 max-h-40 hover:shadow-lg hover:shadow-blue-400 flex justify-center items-center">
-                            <img src="{{ asset('assets/images/icon/gp.svg') }}" class=" w-20" alt="" />
-                            <h2 class=""><a href="#">Global perspectives (GP)</a></h2>
+                            class="single_tca  shadow-md p-6 lg:p-8 border m-2 min-h-28 max-h-40 hover:shadow-lg hover:shadow-blue-400 flex justify-center items-center flex-col md:flex-row">
+                            <img src="{{ asset('assets/images/icon/gp.svg') }}" class=" w-14 lg:w-20  md:mr-2 mb-2 md:mb-0"
+                                alt="" />
+                            <h2 class="text-xs sm:text-sm lg:text-lg"><a href="#">Global perspectives (GP)</a></h2>
                         </div>
                         <div
-                            class="single_tca shadow-md p-12 border m-2 min-h-28 max-h-40 hover:shadow-lg hover:shadow-blue-400 flex justify-center items-center">
-                            <img src="{{ asset('assets/images/icon/business.svg') }}" class=" w-20" alt="" />
-                            <h2 class=""><a href="#">Business</a></h2>
+                            class="single_tca shadow-md p-6 lg:p-8 border m-2 min-h-28 max-h-40 hover:shadow-lg hover:shadow-blue-400 flex justify-center items-center flex-col md:flex-row">
+                            <img src="{{ asset('assets/images/icon/business.svg') }}"
+                                class=" w-14 lg:w-20  md:mr-2 mb-2 md:mb-0" alt="" />
+                            <h2 class="text-xs sm:text-sm lg:text-lg"><a href="#">Business</a></h2>
                         </div>
                         <div
-                            class="single_tca shadow-md p-12 border m-2 min-h-28 max-h-40 hover:shadow-lg hover:shadow-blue-400 flex justify-center items-center">
-                            <img src="{{ asset('assets/images/icon/economy.svg') }}" class=" w-20" alt="" />
-                            <h2 class=""><a href="#">Economics</a></h2>
+                            class="single_tca shadow-md p-6 lg:p-8 border m-2 min-h-28 max-h-40 hover:shadow-lg hover:shadow-blue-400 flex justify-center items-center flex-col md:flex-row">
+                            <img src="{{ asset('assets/images/icon/economy.svg') }}"
+                                class=" w-14 lg:w-20  md:mr-2 mb-2 md:mb-0" alt="" />
+                            <h2 class="text-xs sm:text-sm lg:text-lg"><a href="#">Economics</a></h2>
                         </div>
                     </div>
                 </div><!-- END COL  -->
@@ -118,23 +126,25 @@
 
     </div>
     <div class="partner-logo py-10  bg-yellow-50">
-        <div class="text-center mb-10 text-2xl font-bold font-serif text-yellow-700">
+        <div class="text-center mb-10 text-lg md:text-xl lg:text-2xl  font-bold font-serif text-yellow-700">
             {{-- Sister Schools --}}
             Foreign languages like
         </div>
         <div class="container mx-auto">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <div class=" grid md:grid-cols-2 ">
+                    <div class=" grid grid-cols-2 ">
                         <div
-                            class="single_tca  shadow-md p-12 border m-2 min-h-28 max-h-40 hover:shadow-lg hover:shadow-yellow-400 flex justify-center items-center">
-                            <img src="{{ asset('assets/images/icon/germany.svg') }}" class=" w-20" alt="" />
-                            <h2 class=""><a href="#">German</a></h2>
+                            class="single_tca  shadow-md p-6 lg:p-8 border m-2 min-h-28 max-h-40 hover:shadow-lg hover:shadow-yellow-400 flex justify-center items-center flex-col md:flex-row">
+                            <img src="{{ asset('assets/images/icon/germany.svg') }}"
+                                class=" w-14 lg:w-20 md:mr-2 mb-2 md:mb-0" alt="" />
+                            <h2 class="text-sm lg:text-lg"><a href="#">German</a></h2>
                         </div>
                         <div
-                            class="single_tca shadow-md p-12 border m-2 min-h-28 max-h-40 hover:shadow-lg hover:shadow-yellow-400 flex justify-center items-center">
-                            <img src="{{ asset('assets/images/icon/china.svg') }}" class=" w-20" alt="" />
-                            <h2 class=""><a href="#">Chinese</a></h2>
+                            class="single_tca shadow-md p-6 lg:p-8 border m-2 min-h-28 max-h-40 hover:shadow-lg hover:shadow-yellow-400 flex justify-center items-center flex-col md:flex-row">
+                            <img src="{{ asset('assets/images/icon/china.svg') }}"
+                                class=" w-14 lg:w-20 md:mr-2 mb-2 md:mb-0" alt="" />
+                            <h2 class="text-sm lg:text-lg"><a href="#">Chinese</a></h2>
                         </div>
                     </div>
                 </div><!-- END COL  -->
@@ -149,25 +159,27 @@
                 <div class="col-lg-12 text-center">
                     <div class="partner">
                         <div
-                            class="single_tca shadow-md p-12 border m-2 min-h-28 max-h-40 hover:shadow-lg flex justify-center items-center">
-                            <img src="{{ asset('assets/images/icon/art.svg') }}" class=" w-20" alt="" />
-                            <h2 class=""><a href="#">Art</a></h2>
+                            class="single_tca shadow-md p-6 lg:p-8 border m-2 min-h-28 max-h-40 hover:shadow-lg flex justify-center items-center">
+                            <img src="{{ asset('assets/images/icon/art.svg') }}" class=" w-14 lg:w-20" alt="" />
+                            <h2 class="text-sm lg:text-lg"><a href="#">Art</a></h2>
                         </div>
                         <div
-                            class="single_tca shadow-md p-12 border m-2 min-h-28 max-h-40 hover:shadow-lg flex justify-center items-center">
-                            <img src="{{ asset('assets/images/icon/music.svg') }}" class=" w-20" alt="" />
-                            <h2 class=""><a href="#">Music</a></h2>
-                        </div>
-                        <div
-                            class="single_tca shadow-md p-12 border m-2 min-h-28 max-h-40 hover:shadow-lg flex justify-center items-center">
-                            <img src="{{ asset('assets/images/icon/sport_player.svg') }}" class=" w-20"
+                            class="single_tca shadow-md p-6 lg:p-8 border m-2 min-h-28 max-h-40 hover:shadow-lg flex justify-center items-center">
+                            <img src="{{ asset('assets/images/icon/music.svg') }}" class=" w-14 lg:w-20"
                                 alt="" />
-                            <h2 class=""><a href="#">PE</a></h2>
+                            <h2 class="text-sm lg:text-lg"><a href="#">Music</a></h2>
                         </div>
                         <div
-                            class="single_tca shadow-md p-12 border m-2 min-h-28 max-h-40 hover:shadow-lg flex justify-center items-center">
-                            <img src="{{ asset('assets/images/icon/writing.svg') }}" class=" w-20" alt="" />
-                            <h2 class=""><a href="#">Myanmar language</a></h2>
+                            class="single_tca shadow-md p-6 lg:p-8 border m-2 min-h-28 max-h-40 hover:shadow-lg flex justify-center items-center">
+                            <img src="{{ asset('assets/images/icon/sport_player.svg') }}" class=" w-14 lg:w-20"
+                                alt="" />
+                            <h2 class="text-sm lg:text-lg"><a href="#">PE</a></h2>
+                        </div>
+                        <div
+                            class="single_tca shadow-md p-6 lg:p-8 border m-2 min-h-28 max-h-40 hover:shadow-lg flex justify-center items-center">
+                            <img src="{{ asset('assets/images/icon/writing.svg') }}" class=" w-14 lg:w-20"
+                                alt="" />
+                            <h2 class="text-sm lg:text-lg"><a href="#">Myanmar language</a></h2>
                         </div>
                     </div>
                 </div><!-- END COL  -->
@@ -175,7 +187,7 @@
         </div><!-- END CONTAINER  -->
     </div>
     <div class="container mx-auto my-8">
-        <div class="text-lg md:text-xl p-4">
+        <div class="text-base md:text-lg p-4">
             To ensure students are fully prepared for their IGCSE exams, we provide a rigorous preparation period,
             including study camps, mock exams, and ongoing revision support.
         </div>
@@ -183,7 +195,7 @@
             <hr class="my-10 w-60 ">
         </div>
         <div class="grid md:grid-cols-2">
-            <div class=" text-lg md:text-xl p-4 flex justify-center items-center">
+            <div class=" text-base md:text-lg p-4 flex justify-center items-center">
                 Assessment is conducted through exams and
                 coursework, offering a well-rounded evaluation of student progress. Beyond academics, students participate
                 in extracurricular activities, inter-school competitions, and community service, fostering leadership,
@@ -193,7 +205,7 @@
             <div class="flex justify-center items-center">
                 {{-- <img src="{{ asset('img/banner/pre_school_river.jpg') }}" class="rounded-lg hover:shadow-md w-2/3"
                     alt=""> --}}
-                <img src="{{ asset($branch->branch_logo) }}" style="max-height: 420px" alt="" />
+                <img src="{{ asset($branch->branch_logo) }}" class=" max-h-[200px] md:max-h-[360px]" alt="" />
             </div>
         </div>
         <!-- END ROW -->

@@ -32,7 +32,7 @@
                     Secondary <span class="text-emerald-500">Year 7 - 9</span>
                 </p>
             </div>
-            <div class=" text-lg p-4">
+            <div class=" text-base md:text-lg p-4">
                 Secondary School Programme is designed according to Cambridge International Secondary 1 curriculum.
             </div>
             <!-- END ROW -->
@@ -42,7 +42,7 @@
     <!-- END TOPIC -->
 
     <div class="partner-logo py-10  bg-green-50">
-        <div class="text-center mb-10 text-2xl font-bold font-serif text-teal-700">
+        <div class="text-center mb-10 text-lg md:text-xl lg:text-2xl font-bold font-serif text-teal-700">
             Students build on the solid foundations laid in the earlier years in the core subjects of
         </div>
         <div class="container mx-auto">
@@ -50,19 +50,19 @@
                 <div class="col-lg-12 text-center">
                     <div class=" grid md:grid-cols-3">
                         <div
-                            class="single_tca shadow-md p-12 border m-2 min-h-28 max-h-40 hover:shadow-lg flex justify-center items-center">
-                            <img src="{{ asset('assets/images/icon/letter.svg') }}" class=" w-20" alt="" />
-                            <h2 class=""><a href="#">English</a></h2>
+                            class="single_tca shadow-md p-6 lg:p-8 border m-2 min-h-28 max-h-40 hover:shadow-lg flex justify-center items-center">
+                            <img src="{{ asset('assets/images/icon/letter.svg') }}" class="w-14 lg:w-20" alt="" />
+                            <h2 class="text-sm lg:text-lg"><a href="#">English</a></h2>
                         </div>
                         <div
-                            class="single_tca shadow-md p-12 border m-2 min-h-28 max-h-40 hover:shadow-lg flex justify-center items-center">
-                            <img src="{{ asset('assets/images/icon/math.svg') }}" class=" w-20" alt="" />
-                            <h2 class=""><a href="#">Mathematics</a></h2>
+                            class="single_tca shadow-md p-6 lg:p-8 border m-2 min-h-28 max-h-40 hover:shadow-lg flex justify-center items-center">
+                            <img src="{{ asset('assets/images/icon/math.svg') }}" class="w-14 lg:w-20" alt="" />
+                            <h2 class="text-sm lg:text-lg"><a href="#">Mathematics</a></h2>
                         </div>
                         <div
-                            class="single_tca shadow-md p-12 border m-2 min-h-28 max-h-40 hover:shadow-lg flex justify-center items-center">
-                            <img src="{{ asset('assets/images/icon/science.svg') }}" class=" w-20" alt="" />
-                            <h2 class=""><a href="#">Science</a></h2>
+                            class="single_tca shadow-md p-6 lg:p-8 border m-2 min-h-28 max-h-40 hover:shadow-lg flex justify-center items-center">
+                            <img src="{{ asset('assets/images/icon/science.svg') }}" class="w-14 lg:w-20" alt="" />
+                            <h2 class="text-sm lg:text-lg"><a href="#">Science</a></h2>
                         </div>
                     </div>
                 </div><!-- END COL  -->
@@ -71,7 +71,7 @@
 
     </div>
     <div class="partner-logo py-10  bg-yellow-50">
-        <div class="text-center mb-10 text-2xl font-bold font-serif text-blue-700">
+        <div class="text-center mb-10 text-lg md:text-xl lg:text-2xl font-bold font-serif text-blue-700">
             In addition, they enjoy the more specialized subjects of
         </div>
         <div class="container mx-auto">
@@ -80,33 +80,35 @@
                     <div class="partner">
                         <div
                             class="single_tca shadow-md p-12 border m-2 min-h-28 max-h-40 hover:shadow-lg flex justify-center items-center">
-                            <img src="{{ asset('assets/images/icon/writing.svg') }}" class=" w-20" alt="" />
-                            <h2 class=""><a href="#">Myanmar language</a></h2>
+                            <img src="{{ asset('assets/images/icon/writing.svg') }}" class=" w-14 lg:w-20" alt="" />
+                            <h2 class=" text-sm lg:text-lg"><a href="#">Myanmar language</a></h2>
                         </div>
                         <div
                             class="single_tca shadow-md p-12 border m-2 min-h-28 max-h-40 hover:shadow-lg flex justify-center items-center">
-                            <img src="{{ asset('assets/images/icon/history.svg') }}" class=" w-20" alt="" />
-                            <h2 class=""><a href="#">History</a></h2>
+                            <img src="{{ asset('assets/images/icon/history.svg') }}" class=" w-14 lg:w-20" alt="" />
+                            <h2 class=" text-sm lg:text-lg"><a href="#">History</a></h2>
                         </div>
                         <div
                             class="single_tca shadow-md p-12 border m-2 min-h-28 max-h-40 hover:shadow-lg flex justify-center items-center">
-                            <img src="{{ asset('assets/images/icon/geo.svg') }}" class=" w-20" alt="" />
-                            <h2 class=""><a href="#">Geography</a></h2>
+                            <img src="{{ asset('assets/images/icon/geo.svg') }}" class=" w-14 lg:w-20" alt="" />
+                            <h2 class=" text-sm lg:text-lg"><a href="#">Geography</a></h2>
                         </div>
                         <div
                             class="single_tca shadow-md p-12 border m-2 min-h-28 max-h-40 hover:shadow-lg flex justify-center items-center">
-                            <img src="{{ asset('assets/images/icon/art.svg') }}" class=" w-20" alt="" />
-                            <h2 class=""><a href="#">Art</a></h2>
+                            <img src="{{ asset('assets/images/icon/art.svg') }}" class=" w-14 lg:w-20" alt="" />
+                            <h2 class=" text-sm lg:text-lg"><a href="#">Art</a></h2>
                         </div>
                         <div
                             class="single_tca shadow-md p-12 border m-2 min-h-28 max-h-40 hover:shadow-lg flex justify-center items-center">
-                            <img src="{{ asset('assets/images/icon/computer.svg') }}" class=" w-20" alt="" />
-                            <h2 class=""><a href="#">ICT</a></h2>
+                            <img src="{{ asset('assets/images/icon/computer.svg') }}" class=" w-14 lg:w-20"
+                                alt="" />
+                            <h2 class=" text-sm lg:text-lg"><a href="#">ICT</a></h2>
                         </div>
                         <div
                             class="single_tca shadow-md p-12 border m-2 min-h-28 max-h-40 hover:shadow-lg flex justify-center items-center">
-                            <img src="{{ asset('assets/images/icon/sport_player.svg') }}" class=" w-20" alt="" />
-                            <h2 class=""><a href="#">PE</a></h2>
+                            <img src="{{ asset('assets/images/icon/sport_player.svg') }}" class=" w-14 lg:w-20"
+                                alt="" />
+                            <h2 class=" text-sm lg:text-lg"><a href="#">PE</a></h2>
                         </div>
                     </div>
                 </div><!-- END COL  -->
@@ -114,28 +116,28 @@
         </div><!-- END CONTAINER  -->
     </div>
     <div class="container mx-auto my-8">
-        <div class="text-lg md:text-xl p-2">
+        <div class=" text-base lg:text-lg  p-2">
             This curriculum provides them with the knowledge, skills and values needed in a fast changing world.
         </div>
         <div class="flex justify-center">
             <hr class="my-10 w-60 ">
         </div>
         <div class="grid md:grid-cols-2">
-            <div class=" text-lg md:text-xl p-4 flex justify-center items-center">
+            <div class="  text-base lg:text-lg  p-4 flex justify-center items-center">
                 Students are assessed through two rigorous testing options: Cambridge International Secondary 1 Checkpoint
                 and yearly progression tests.
                 A variety of teaching techniques are employed to ensure that instruction is meaningful, effective and
                 relevant to the diversity of the developmental needs of this age group.
             </div>
             <div class="flex justify-center items-center">
-                <img src="{{ asset($branch->branch_logo) }}" style="max-height: 420px" alt="" />
+                <img src="{{ asset($branch->branch_logo) }}" class=" max-h-[200px] md:max-h-[360px]" alt="" />
             </div>
         </div>
         <!-- END ROW -->
     </div>
 
     <div class="partner-logo py-10  bg-green-50">
-        <div class="text-center mb-10 text-2xl font-bold font-serif text-green-700">
+        <div class="text-center mb-10 text-lg md:text-xl lg:text-2xl font-bold font-serif text-green-700">
             Students are involved in more structured activities like
         </div>
         <div class="container mx-auto">
@@ -144,52 +146,56 @@
                     <div class="partner">
                         <div
                             class="single_tca shadow-md p-12 border m-2 min-h-28 max-h-40 hover:shadow-lg flex justify-center items-center">
-                            <img src="{{ asset('assets/images/icon/project.svg') }}" class=" w-20" alt="" />
-                            <h2 class=""><a href="#">Projects</a></h2>
-                        </div>
-                        <div
-                            class="single_tca shadow-md p-12 border m-2 min-h-28 max-h-40 hover:shadow-lg flex justify-center items-center">
-                            <img src="{{ asset('assets/images/icon/presentation.svg') }}" class=" w-20"
+                            <img src="{{ asset('assets/images/icon/project.svg') }}" class=" w-14 lg:w-20"
                                 alt="" />
-                            <h2 class=""><a href="#">Presentations</a></h2>
+                            <h2 class=" text-sm lg:text-lg"><a href="#">Projects</a></h2>
                         </div>
                         <div
                             class="single_tca shadow-md p-12 border m-2 min-h-28 max-h-40 hover:shadow-lg flex justify-center items-center">
-                            <img src="{{ asset('assets/images/icon/experiment.svg') }}" class=" w-20" alt="" />
-                            <h2 class=""><a href="#">Experiments</a></h2>
-                        </div>
-                        <div
-                            class="single_tca shadow-md p-12 border m-2 min-h-28 max-h-40 hover:shadow-lg flex justify-center items-center">
-                            <img src="{{ asset('assets/images/icon/writing.svg') }}" class=" w-20" alt="" />
-                            <h2 class=""><a href="#">Essays</a></h2>
-                        </div>
-                        <div
-                            class="single_tca shadow-md p-12 border m-2 min-h-28 max-h-40 hover:shadow-lg flex justify-center items-center">
-                            <img src="{{ asset('assets/images/icon/social_studies.svg') }}" class=" w-20"
+                            <img src="{{ asset('assets/images/icon/presentation.svg') }}" class=" w-14 lg:w-20"
                                 alt="" />
-                            <h2 class=""><a href="#">Debates</a></h2>
+                            <h2 class=" text-sm lg:text-lg"><a href="#">Presentations</a></h2>
                         </div>
                         <div
                             class="single_tca shadow-md p-12 border m-2 min-h-28 max-h-40 hover:shadow-lg flex justify-center items-center">
-                            <img src="{{ asset('assets/images/icon/olympiad_studies.svg') }}" class=" w-20"
+                            <img src="{{ asset('assets/images/icon/experiment.svg') }}" class=" w-14 lg:w-20"
                                 alt="" />
-                            <h2 class=""><a href="#">Olympiad Studies</a></h2>
+                            <h2 class=" text-sm lg:text-lg"><a href="#">Experiments</a></h2>
                         </div>
                         <div
                             class="single_tca shadow-md p-12 border m-2 min-h-28 max-h-40 hover:shadow-lg flex justify-center items-center">
-                            <img src="{{ asset('assets/images/icon/research.svg') }}" class=" w-20" alt="" />
-                            <h2 class=""><a href="#">Research papers</a></h2>
-                        </div>
-                        <div
-                            class="single_tca shadow-md p-12 border m-2 min-h-28 max-h-40 hover:shadow-lg flex justify-center items-center">
-                            <img src="{{ asset('assets/images/icon/competition.svg') }}" class=" w-20"
+                            <img src="{{ asset('assets/images/icon/writing.svg') }}" class=" w-14 lg:w-20"
                                 alt="" />
-                            <h2 class=""><a href="#">Inter-school competitions</a></h2>
+                            <h2 class=" text-sm lg:text-lg"><a href="#">Essays</a></h2>
+                        </div>
+                        <div
+                            class="single_tca shadow-md p-12 border m-2 min-h-28 max-h-40 hover:shadow-lg flex justify-center items-center">
+                            <img src="{{ asset('assets/images/icon/social_studies.svg') }}" class=" w-14 lg:w-20"
+                                alt="" />
+                            <h2 class=" text-sm lg:text-lg"><a href="#">Debates</a></h2>
+                        </div>
+                        <div
+                            class="single_tca shadow-md p-12 border m-2 min-h-28 max-h-40 hover:shadow-lg flex justify-center items-center">
+                            <img src="{{ asset('assets/images/icon/olympiad_studies.svg') }}" class=" w-14 lg:w-20"
+                                alt="" />
+                            <h2 class=" text-sm lg:text-lg"><a href="#">Olympiad Studies</a></h2>
+                        </div>
+                        <div
+                            class="single_tca shadow-md p-12 border m-2 min-h-28 max-h-40 hover:shadow-lg flex justify-center items-center">
+                            <img src="{{ asset('assets/images/icon/research.svg') }}" class=" w-14 lg:w-20"
+                                alt="" />
+                            <h2 class=" text-sm lg:text-lg"><a href="#">Research papers</a></h2>
+                        </div>
+                        <div
+                            class="single_tca shadow-md p-12 border m-2 min-h-28 max-h-40 hover:shadow-lg flex justify-center items-center">
+                            <img src="{{ asset('assets/images/icon/competition.svg') }}" class=" w-14 lg:w-20"
+                                alt="" />
+                            <h2 class=" text-sm lg:text-lg"><a href="#">Inter-school competitions</a></h2>
                         </div>
                     </div>
                 </div><!-- END COL  -->
             </div><!--END  ROW  -->
-            <div class="text-lg md:text-xl">
+            <div class="text-base lg:text-lg">
                 in various fields such as math, science, sports, English language and art.Students are encouraged to take
                 part in community service activities such as visiting homes for the elderly and/or orphanages.
             </div>

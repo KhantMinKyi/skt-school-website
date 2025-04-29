@@ -62,8 +62,8 @@ p.section-title-white {
 }
 .single_tca img,
 .single_tca i {
-    float: left;
-    margin-right: 20px;
+    /* float: left; */
+    /* margin-right: 20px; */
 }
 .single_tca h2 {
     overflow: hidden;

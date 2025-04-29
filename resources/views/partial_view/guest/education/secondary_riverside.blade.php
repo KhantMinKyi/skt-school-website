@@ -32,7 +32,7 @@
                     Secondary <span class="text-emerald-500">Year 7 - 9</span>
                 </p>
             </div>
-            <div class=" text-lg p-4">
+            <div class=" text-base md:text-lg p-4">
                 Our Lower Secondary Program follows the Cambridge International Secondary 1 curriculum,
             </div>
             <!-- END ROW -->
@@ -43,7 +43,7 @@
 
     <!-- START SISTER SCHOOL  -->
     <div class="partner-logo py-10  bg-green-50">
-        <div class="text-center mb-10 text-2xl font-bold font-serif text-teal-700">
+        <div class="text-center mb-10 text-lg md:text-xl lg:text-2xl font-bold font-serif text-teal-700">
             {{-- Sister Schools --}}
             building on strong foundations in
         </div>
@@ -52,19 +52,19 @@
                 <div class="col-lg-12 text-center">
                     <div class=" grid md:grid-cols-3">
                         <div
-                            class="single_tca shadow-md p-12 border m-2 min-h-28 max-h-40 hover:shadow-lg flex justify-center items-center">
-                            <img src="{{ asset('assets/images/icon/letter.svg') }}" class=" w-20" alt="" />
-                            <h2 class=""><a href="#">English</a></h2>
+                            class="single_tca shadow-md p-6 lg:p-8 border m-2 min-h-28 max-h-40 hover:shadow-lg flex justify-center items-center">
+                            <img src="{{ asset('assets/images/icon/letter.svg') }}" class="w-14 lg:w-20" alt="" />
+                            <h2 class="text-sm lg:text-lg"><a href="#">English</a></h2>
                         </div>
                         <div
-                            class="single_tca shadow-md p-12 border m-2 min-h-28 max-h-40 hover:shadow-lg flex justify-center items-center">
-                            <img src="{{ asset('assets/images/icon/math.svg') }}" class=" w-20" alt="" />
-                            <h2 class=""><a href="#">Mathematics</a></h2>
+                            class="single_tca shadow-md p-6 lg:p-8 border m-2 min-h-28 max-h-40 hover:shadow-lg flex justify-center items-center">
+                            <img src="{{ asset('assets/images/icon/math.svg') }}" class="w-14 lg:w-20" alt="" />
+                            <h2 class="text-sm lg:text-lg"><a href="#">Mathematics</a></h2>
                         </div>
                         <div
-                            class="single_tca shadow-md p-12 border m-2 min-h-28 max-h-40 hover:shadow-lg flex justify-center items-center">
-                            <img src="{{ asset('assets/images/icon/science.svg') }}" class=" w-20" alt="" />
-                            <h2 class=""><a href="#">Science</a></h2>
+                            class="single_tca shadow-md p-6 lg:p-8 border m-2 min-h-28 max-h-40 hover:shadow-lg flex justify-center items-center">
+                            <img src="{{ asset('assets/images/icon/science.svg') }}" class="w-14 lg:w-20" alt="" />
+                            <h2 class="text-sm lg:text-lg"><a href="#">Science</a></h2>
                         </div>
                     </div>
                 </div><!-- END COL  -->
@@ -73,7 +73,7 @@
 
     </div>
     <div class="partner-logo py-10  bg-yellow-50">
-        <div class="text-center mb-10 text-2xl font-bold font-serif text-blue-700">
+        <div class="text-center mb-10 text-lg md:text-xl lg:text-2xl font-bold font-serif text-blue-700">
             {{-- Sister Schools --}}
             Students also
             explore specialized subjects such as
@@ -84,38 +84,40 @@
                     <div class="partner">
                         <div
                             class="single_tca shadow-md p-12 border m-2 min-h-28 max-h-40 hover:shadow-lg flex justify-center items-center">
-                            <img src="{{ asset('assets/images/icon/writing.svg') }}" class=" w-20" alt="" />
-                            <h2 class=""><a href="#">Myanmar language</a></h2>
+                            <img src="{{ asset('assets/images/icon/writing.svg') }}" class="w-14 lg:w-20" alt="" />
+                            <h2 class=" text-sm lg:text-lg"><a href="#">Myanmar language</a></h2>
                         </div>
                         <div
                             class="single_tca shadow-md p-12 border m-2 min-h-28 max-h-40 hover:shadow-lg flex justify-center items-center">
-                            <img src="{{ asset('assets/images/icon/history.svg') }}" class=" w-20" alt="" />
-                            <h2 class=""><a href="#">History</a></h2>
+                            <img src="{{ asset('assets/images/icon/history.svg') }}" class="w-14 lg:w-20" alt="" />
+                            <h2 class=" text-sm lg:text-lg"><a href="#">History</a></h2>
                         </div>
                         <div
                             class="single_tca shadow-md p-12 border m-2 min-h-28 max-h-40 hover:shadow-lg flex justify-center items-center">
-                            <img src="{{ asset('assets/images/icon/geo.svg') }}" class=" w-20" alt="" />
-                            <h2 class=""><a href="#">Geography</a></h2>
+                            <img src="{{ asset('assets/images/icon/geo.svg') }}" class="w-14 lg:w-20" alt="" />
+                            <h2 class=" text-sm lg:text-lg"><a href="#">Geography</a></h2>
                         </div>
                         <div
                             class="single_tca shadow-md p-12 border m-2 min-h-28 max-h-40 hover:shadow-lg flex justify-center items-center">
-                            <img src="{{ asset('assets/images/icon/music.svg') }}" class=" w-20" alt="" />
-                            <h2 class=""><a href="#">Music</a></h2>
+                            <img src="{{ asset('assets/images/icon/music.svg') }}" class="w-14 lg:w-20" alt="" />
+                            <h2 class=" text-sm lg:text-lg"><a href="#">Music</a></h2>
                         </div>
                         <div
                             class="single_tca shadow-md p-12 border m-2 min-h-28 max-h-40 hover:shadow-lg flex justify-center items-center">
-                            <img src="{{ asset('assets/images/icon/art.svg') }}" class=" w-20" alt="" />
-                            <h2 class=""><a href="#">Art</a></h2>
+                            <img src="{{ asset('assets/images/icon/art.svg') }}" class="w-14 lg:w-20" alt="" />
+                            <h2 class=" text-sm lg:text-lg"><a href="#">Art</a></h2>
                         </div>
                         <div
                             class="single_tca shadow-md p-12 border m-2 min-h-28 max-h-40 hover:shadow-lg flex justify-center items-center">
-                            <img src="{{ asset('assets/images/icon/computer.svg') }}" class=" w-20" alt="" />
-                            <h2 class=""><a href="#">ICT</a></h2>
+                            <img src="{{ asset('assets/images/icon/computer.svg') }}" class="w-14 lg:w-20"
+                                alt="" />
+                            <h2 class=" text-sm lg:text-lg"><a href="#">ICT</a></h2>
                         </div>
                         <div
                             class="single_tca shadow-md p-12 border m-2 min-h-28 max-h-40 hover:shadow-lg flex justify-center items-center">
-                            <img src="{{ asset('assets/images/icon/sport_player.svg') }}" class=" w-20" alt="" />
-                            <h2 class=""><a href="#">PE</a></h2>
+                            <img src="{{ asset('assets/images/icon/sport_player.svg') }}" class="w-14 lg:w-20"
+                                alt="" />
+                            <h2 class=" text-sm lg:text-lg"><a href="#">PE</a></h2>
                         </div>
                     </div>
                 </div><!-- END COL  -->
@@ -123,7 +125,7 @@
         </div><!-- END CONTAINER  -->
     </div>
     <div class="container mx-auto my-8">
-        <div class="text-lg md:text-xl p-4">
+        <div class=" text-base lg:text-lg  p-4">
             equipping them with essential knowledge and skills
             for an ever-changing world.
         </div>
@@ -131,7 +133,7 @@
             <hr class="my-10 w-60 ">
         </div>
         <div class="grid md:grid-cols-2">
-            <div class=" text-lg md:text-xl p-4 flex justify-center items-center">
+            <div class="  text-base lg:text-lg  p-4 flex justify-center items-center">
                 Assessment includes the Cambridge International Secondary 1 Checkpoint and yearly progression tests. A range
                 of teaching methods ensures that lessons are engaging, effective, and tailored to the diverse developmental
                 needs of students. Students participate in hands-on projects, presentations, debates, experiments, and
@@ -141,7 +143,7 @@
             <div class="flex justify-center items-center">
                 {{-- <img src="{{ asset('img/banner/pre_school_river.jpg') }}" class="rounded-lg hover:shadow-md w-2/3"
                     alt=""> --}}
-                <img src="{{ asset($branch->branch_logo) }}" style="max-height: 420px" alt="" />
+                <img src="{{ asset($branch->branch_logo) }}" class=" max-h-[200px] md:max-h-[360px]" alt="" />
             </div>
         </div>
         <!-- END ROW -->
