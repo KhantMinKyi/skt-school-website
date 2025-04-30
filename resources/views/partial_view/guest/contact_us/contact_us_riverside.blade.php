@@ -11,7 +11,7 @@
         <div class="carousel-inner flex transition-transform duration-1000 ease-in-out mt-20 sm:mt-0" id="carouselInner">
             <!-- First Slide -->
             <div class="carousel-item active w-full flex-shrink-0">
-                <img src="{{ asset('img/banner/contact_banners/' . $branch->branch_short_name . '.jpg') }}"
+                <img src="{{ asset('img/banner/contact_banners/' . $branch->branch_short_name . '.webp') }}"
                     alt="slider-image" class="w-full h-auto object-cover" />
                 <div class="absolute inset-0 mx-auto flex flex-col justify-center items-center fade-in-out will_hide_div ">
                     <h1 id="fading-text" class=" text-xl sm:text-5xl lg:text-7xl text-center  ml-10 mt-20 sm:mt-0">

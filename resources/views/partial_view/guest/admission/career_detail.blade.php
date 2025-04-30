@@ -12,12 +12,8 @@
             id="carouselInner">
             <!-- First Slide -->
             <div class="carousel-item active w-full flex-shrink-0">
-                <img src="{{ asset('img/banner/sister_school/bfi.jpg') }}" alt="slider-image"
+                <img src="{{ asset('img/banner/sister_school/bfi.webp') }}" alt="slider-image" loading="lazy"
                     class="w-full h-auto object-cover" />
-                {{-- <div class=" absolute inset-0 flex flex-col items-center justify-center p-8 text-white"
-                data-animation="animated fadeInRight">
-                <h2 class=" md:text-4xl font-semibold text-teal-500 uppercase">Alumni</h2>
-            </div> --}}
                 <div class="absolute inset-0 mx-auto flex flex-col justify-center items-center fade-in-out will_hide_div ">
                     <h1 id="fading-text" class=" text-2xl md:text-7xl text-center  ml-10 mt-20 sm:mt-0">
                         <span class="text-emerald-400">{{ $branch->branch_name }}</span>
@@ -136,15 +132,23 @@
                             <i class="fa-solid fa-check text-lg md:text-xl lg:text-2xl mr-4 text-teal-400 "></i>
                         </div>
                         <div class="ml-4  ">
-                            <p class="text-lg md:text-xl font-bold text-teal-600 ">Benefits</p>
+                            <p class="text-lg md:text-xl font-bold text-teal-600 ">Other Benefits</p>
                             <p class=" text-sm md:text-lg text-black mt-4">
                             <div class="prose max-w-none">
                                 {!! $job->career_job_benefits !!}
                             </div>
+                            <hr class="my-2">
+                            <div class="prose max-w-none">
+                                {!! $job->career_job_highlights !!}
+                            </div>
+                            <hr class="my-2">
+                            <div class="prose max-w-none">
+                                {!! $job->career_job_career_growth !!}
+                            </div>
                             </p>
                         </div>
                     </div>
-                    <div class="my-1  flex align-middle  justify-items-start shadow-xl p-4 rounded-2xl">
+                    {{-- <div class="my-1  flex align-middle  justify-items-start shadow-xl p-4 rounded-2xl">
                         <div class="hidden sm:block">
                             <i class="fa-solid fa-check text-lg md:text-xl lg:text-2xl mr-4 text-teal-400 "></i>
                         </div>
@@ -169,7 +173,7 @@
                             </div>
                             </p>
                         </div>
-                    </div>
+                    </div> --}}
                 </div>
                 <div class="mt-10 font-bold text-sm md:text-lg">
                     Interested candidates can send their CV and other necessary documents to <span

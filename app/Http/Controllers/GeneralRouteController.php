@@ -68,6 +68,9 @@ class GeneralRouteController extends Controller
     public function principalMessage($param)
     {
         $principal_message = PrincipalMessage::where('principal_message_branch_id', $param)->first();
+        if (!$principal_message) {
+            return view('pages.not_found');
+        }
         $layout = ($principal_message && $principal_message->branch->branch_short_name === 'SKT-CC')
             ? 'layouts.city_layout'
             : 'layouts.riverside_layout';
@@ -76,6 +79,9 @@ class GeneralRouteController extends Controller
     public function ourHistory($param)
     {
         $our_history = History::where('slug', $param)->first();
+        if (!$our_history) {
+            return view('pages.not_found');
+        }
         $layout = ($our_history && $our_history->slug === 'SKT-CC')
             ? 'layouts.city_layout'
             : 'layouts.riverside_layout';
@@ -84,6 +90,9 @@ class GeneralRouteController extends Controller
     public function ourStatement($param)
     {
         $our_statement = Statement::with('branch')->where('slug', $param)->first();
+        if (!$our_statement) {
+            return view('pages.not_found');
+        }
         $layout = ($our_statement && $our_statement->slug === 'SKT-CC')
             ? 'layouts.city_layout'
             : 'layouts.riverside_layout';
@@ -93,6 +102,9 @@ class GeneralRouteController extends Controller
     {
         $our_teachers = Teacher::with('branch')->where('slug', $param)->get();
         $branch = Branch::where('branch_short_name', $param)->first();
+        if (!$branch) {
+            return view('pages.not_found');
+        }
         $layout = ($branch && $branch->branch_short_name === 'SKT-CC')
             ? 'layouts.city_layout'
             : 'layouts.riverside_layout';
@@ -101,6 +113,9 @@ class GeneralRouteController extends Controller
     public function sisterSchool($param)
     {
         $branch = Branch::where('branch_short_name', $param)->first();
+        if (!$branch) {
+            return view('pages.not_found');
+        }
         $layout = ($branch && $branch->branch_short_name === 'SKT-CC')
             ? 'layouts.city_layout'
             : 'layouts.riverside_layout';
@@ -109,6 +124,9 @@ class GeneralRouteController extends Controller
     public function showPolicy($param)
     {
         $branch = Branch::where('branch_short_name', $param)->first();
+        if (!$branch) {
+            return view('pages.not_found');
+        }
         $layout = ($branch && $branch->branch_short_name === 'SKT-CC')
             ? 'layouts.city_layout'
             : 'layouts.riverside_layout';
@@ -117,6 +135,9 @@ class GeneralRouteController extends Controller
     public function showAlumni($param)
     {
         $branch = Branch::where('branch_short_name', $param)->first();
+        if (!$branch) {
+            return view('pages.not_found');
+        }
         $layout = ($branch && $branch->branch_short_name === 'SKT-CC')
             ? 'layouts.city_layout'
             : 'layouts.riverside_layout';
@@ -125,6 +146,9 @@ class GeneralRouteController extends Controller
     public function showNews($param)
     {
         $branch = Branch::where('branch_short_name', $param)->first();
+        if (!$branch) {
+            return view('pages.not_found');
+        }
         $posts = Post::with('category')->where('post_branch_id', $branch->id)->where('post_is_active', 1)->get();
         $layout = ($branch && $branch->branch_short_name === 'SKT-CC')
             ? 'layouts.city_layout'
@@ -153,6 +177,9 @@ class GeneralRouteController extends Controller
     public function showGallery($param)
     {
         $branch = Branch::where('branch_short_name', $param)->first();
+        if (!$branch) {
+            return view('pages.not_found');
+        }
         $galleries = Gallery::where('gallery_branch_id', $branch->id)->get();
         $layout = ($branch && $branch->branch_short_name === 'SKT-CC')
             ? 'layouts.city_layout'
@@ -162,6 +189,9 @@ class GeneralRouteController extends Controller
     public function showCalendar($param)
     {
         $branch = Branch::where('branch_short_name', $param)->first();
+        if (!$branch) {
+            return view('pages.not_found');
+        }
         $calendar = Calendar::where('calendar_branch_id', $branch->id)->first();
         $layout = ($branch && $branch->branch_short_name === 'SKT-CC')
             ? 'layouts.city_layout'
@@ -171,6 +201,9 @@ class GeneralRouteController extends Controller
     public function showWelfare($param)
     {
         $branch = Branch::where('branch_short_name', $param)->first();
+        if (!$branch) {
+            return view('pages.not_found');
+        }
         $layout = ($branch && $branch->branch_short_name === 'SKT-CC')
             ? 'layouts.city_layout'
             : 'layouts.riverside_layout';
@@ -179,6 +212,9 @@ class GeneralRouteController extends Controller
     public function showPreSchool($param)
     {
         $branch = Branch::where('branch_short_name', $param)->first();
+        if (!$branch) {
+            return view('pages.not_found');
+        }
         if ($branch && $branch->branch_short_name === 'SKT-CC') {
             return view('partial_view.guest.education.pre_school_city', compact('branch'));
         } else {
@@ -188,6 +224,9 @@ class GeneralRouteController extends Controller
     public function showPrimary($param)
     {
         $branch = Branch::where('branch_short_name', $param)->first();
+        if (!$branch) {
+            return view('pages.not_found');
+        }
         if ($branch && $branch->branch_short_name === 'SKT-CC') {
             return view('partial_view.guest.education.primary_city', compact('branch'));
         } else {
@@ -197,6 +236,9 @@ class GeneralRouteController extends Controller
     public function showSecondary($param)
     {
         $branch = Branch::where('branch_short_name', $param)->first();
+        if (!$branch) {
+            return view('pages.not_found');
+        }
         if ($branch && $branch->branch_short_name === 'SKT-CC') {
             return view('partial_view.guest.education.secondary_city', compact('branch'));
         } else {
@@ -206,6 +248,9 @@ class GeneralRouteController extends Controller
     public function showIgcse($param)
     {
         $branch = Branch::where('branch_short_name', $param)->first();
+        if (!$branch) {
+            return view('pages.not_found');
+        }
         if ($branch && $branch->branch_short_name === 'SKT-CC') {
             return view('partial_view.guest.education.igcse_city', compact('branch'));
         } else {
@@ -215,6 +260,9 @@ class GeneralRouteController extends Controller
     public function showIb($param)
     {
         $branch = Branch::where('branch_short_name', $param)->first();
+        if (!$branch) {
+            return view('pages.not_found');
+        }
         if ($branch && $branch->branch_short_name === 'SKT-CC') {
             // No IB In City
             // return view('partial_view.guest.education.ib_city', compact('branch'));
@@ -226,6 +274,9 @@ class GeneralRouteController extends Controller
     public function showEvents($param)
     {
         $branch = Branch::where('branch_short_name', $param)->first();
+        if (!$branch) {
+            return view('pages.not_found');
+        }
         $events = Event::with('category')->where('event_branch_id', $branch->id)->where('event_is_active', 1)->get();
         $layout = ($branch && $branch->branch_short_name === 'SKT-CC')
             ? 'layouts.city_layout'
@@ -253,6 +304,9 @@ class GeneralRouteController extends Controller
     public function showContactUs($param)
     {
         $branch = Branch::where('branch_short_name', $param)->first();
+        if (!$branch) {
+            return view('pages.not_found');
+        }
         if ($branch && $branch->branch_short_name === 'SKT-CC') {
             return view('partial_view.guest.contact_us.contact_us_city', compact('branch'));
         } else {
@@ -262,6 +316,9 @@ class GeneralRouteController extends Controller
     public function showStudentAdmission($param)
     {
         $branch = Branch::where('branch_short_name', $param)->first();
+        if (!$branch) {
+            return view('pages.not_found');
+        }
         if ($branch && $branch->branch_short_name === 'SKT-CC') {
             return view('partial_view.guest.admission.student_admission_city', compact('branch'));
         } else {
@@ -271,6 +328,9 @@ class GeneralRouteController extends Controller
     public function showAdmissionProcess($param)
     {
         $branch = Branch::where('branch_short_name', $param)->first();
+        if (!$branch) {
+            return view('pages.not_found');
+        }
         if ($branch && $branch->branch_short_name === 'SKT-CC') {
             return view('partial_view.guest.admission.admission_process_city', compact('branch'));
         } else {
@@ -280,6 +340,9 @@ class GeneralRouteController extends Controller
     public function showWithdrawalPolicy($param)
     {
         $branch = Branch::where('branch_short_name', $param)->first();
+        if (!$branch) {
+            return view('pages.not_found');
+        }
         if ($branch && $branch->branch_short_name === 'SKT-CC') {
             return view('partial_view.guest.admission.withdrawal_policy_city', compact('branch'));
         } else {
@@ -289,6 +352,9 @@ class GeneralRouteController extends Controller
     public function showCollegeCounselingService($param)
     {
         $branch = Branch::where('branch_short_name', $param)->first();
+        if (!$branch) {
+            return view('pages.not_found');
+        }
         $layout = ($branch && $branch->branch_short_name === 'SKT-CC')
             ? 'layouts.city_layout'
             : 'layouts.riverside_layout';
@@ -297,6 +363,9 @@ class GeneralRouteController extends Controller
     public function showCareer($param)
     {
         $branch = Branch::where('branch_short_name', $param)->first();
+        if (!$branch) {
+            return view('pages.not_found');
+        }
         if ($branch && $branch->branch_short_name === 'SKT-CC') {
             return view('partial_view.guest.admission.career_riverside', compact('branch'));
         } else {

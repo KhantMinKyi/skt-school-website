@@ -11,10 +11,11 @@
         class="carousel max-h-screen slide ps_indicators_txt_icon ps_control_txt_icon data-bs-target kbrns_zoomInOut thumb_scroll_x swipe_x ps_easeOutQuart relative w-full overflow-hidden"
         data-ride="carousel" data-pause="hover" data-interval="10000" data-duration="2000">
         <!-- Wrapper For Slides -->
-        <div class="carousel-inner flex transition-transform duration-1000 ease-in-out mt-[89px] sm:mt-0" id="carouselInner">
+        <div class="carousel-inner flex transition-transform duration-1000 ease-in-out mt-[89px] sm:mt-0"
+            id="carouselInner">
             <!-- First Slide -->
             <div class="carousel-item active w-full flex-shrink-0">
-                <img src="{{ asset('img/banner/sister_school/bfi.jpg') }}" alt="slider-image"
+                <img src="{{ asset('img/banner/sister_school/bfi.webp') }}" alt="slider-image"
                     class="w-full h-auto object-cover" />
                 <div class="absolute inset-0 mx-auto flex flex-col justify-center items-center fade-in-out will_hide_div ">
                     <h1 id="fading-text" class=" text-xl sm:text-5xl lg:text-7xl text-center  ml-10 mt-20 sm:mt-0">
@@ -79,7 +80,7 @@
                         </div>
 
                         <div
-                            class=" w-full h-full rounded-xl bg-gradient-to-br from-teal-200 to-teal-400  shadow-lg  p-6 text-black [transform:rotateX(180deg)] [backface-visibility:hidden]">
+                            class=" w-full h-full rounded-xl bg-white shadow-lg  p-6 text-black [transform:rotateX(180deg)] [backface-visibility:hidden]">
                             <div class="flex flex-col h-full">
                                 <div class="text-lg md:text-xl lg:text-2xl font-extrabold mb-4 ">
                                     {{ $job->career_job_title }}</div>
@@ -132,7 +133,7 @@
                                     </div>
                                     <div class="flex justify-end">
                                         <a href="{{ route('career-detail.home', $job->id) }}"
-                                            class="p-3 bg-white rounded-lg font-bold hover:bg-teal-500 hover:text-white hover:shadow-lg text-xs sm:text-sm md:text-base lg:text-lg">See
+                                            class="p-3 bg-gray-900 rounded-lg font-bold hover:bg-teal-500 text-white hover:shadow-lg text-xs sm:text-sm md:text-base lg:text-lg">See
                                             more</a>
                                     </div>
                                 </div>

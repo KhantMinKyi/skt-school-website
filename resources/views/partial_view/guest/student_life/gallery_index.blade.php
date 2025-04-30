@@ -10,7 +10,7 @@
         <div class="carousel-inner flex transition-transform duration-1000 ease-in-out  mt-[89px] sm:mt-0" id="carouselInner">
             <!-- First Slide -->
             <div class="carousel-item active w-full flex-shrink-0">
-                <img src="{{ asset('img/banner/student_life_banners/gallery/' . $branch->branch_short_name . '.jpg') }}"
+                <img src="{{ asset('img/banner/student_life_banners/gallery/' . $branch->branch_short_name . '.webp') }}"
                     alt="slider-image" class="w-full h-auto object-cover" />
                 {{-- <div class=" absolute inset-0 flex flex-col items-center justify-center p-8 text-white"
                 data-animation="animated fadeInRight">

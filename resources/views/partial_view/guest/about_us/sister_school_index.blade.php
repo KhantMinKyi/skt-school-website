@@ -11,28 +11,28 @@
         <div class="carousel-inner flex transition-transform duration-1000 ease-in-out" id="carouselInner">
             <!-- First Slide -->
             <div class="carousel-item active w-full flex-shrink-0">
-                <img src="{{ asset('img/banner/sister_school/bfi.jpg') }}" alt="slider-image"
+                <img src="{{ asset('img/banner/sister_school/bfi.webp') }}" alt="slider-image"
                     class="w-full h-auto object-cover" />
             </div>
             <!-- Second Slide -->
             <div class="carousel-item w-full flex-shrink-0">
-                <img src="{{ asset('img/banner/sister_school/skt_city.jpg') }}" alt="slider-image"
+                <img src="{{ asset('img/banner/sister_school/skt_city.webp') }}" alt="slider-image"
                     class="w-full h-auto object-cover" />
 
             </div>
             <!-- Third Slide -->
             <div class="carousel-item w-full flex-shrink-0">
-                <img src="{{ asset('img/banner/sister_school/skt_riverside.jpg') }}" alt="slider-image"
+                <img src="{{ asset('img/banner/sister_school/skt_riverside.webp') }}" alt="slider-image"
                     class="w-full h-auto object-cover" />
             </div>
             <!-- Fourth Slide -->
             <div class="carousel-item w-full flex-shrink-0">
-                <img src="{{ asset('img/banner/sister_school/misa.jpg') }}" alt="slider-image"
+                <img src="{{ asset('img/banner/sister_school/misa.webp') }}" alt="slider-image"
                     class="w-full h-auto object-cover" />
             </div>
             <!-- Fifth Slide -->
             <div class="carousel-item w-full flex-shrink-0">
-                <img src="{{ asset('img/banner/sister_school/nisa.jpg') }}" alt="slider-image"
+                <img src="{{ asset('img/banner/sister_school/nisa.webp') }}" alt="slider-image"
                     class="w-full h-auto object-cover" />
             </div>
         </div>

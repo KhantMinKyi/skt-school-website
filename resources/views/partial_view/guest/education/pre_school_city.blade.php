@@ -11,7 +11,7 @@
             id="carouselInner">
             <!-- First Slide -->
             <div class="carousel-item active w-full flex-shrink-0">
-                <img src="{{ asset('img/banner/education_banners/pre_school/' . $branch->branch_short_name . '.jpg') }}"
+                <img src="{{ asset('img/banner/education_banners/pre_school/' . $branch->branch_short_name . '.webp') }}"
                     alt="slider-image" class="w-full h-auto object-cover" />
                 <div class="absolute inset-0 mx-auto flex flex-col justify-center items-center fade-in-out will_hide_div ">
                     <h1 id="fading-text" class=" text-xl sm:text-5xl lg:text-7xl text-center  ml-10 mt-20 sm:mt-0">
@@ -64,7 +64,7 @@
                     </div>
 
                     <div
-                        class=" w-full h-full rounded-xl bg-gradient-to-br from-teal-200 to-teal-400  shadow-lg  p-6 text-black [transform:rotateX(180deg)] [backface-visibility:hidden]">
+                        class=" w-full h-full rounded-xl bg-white shadow-lg  p-6 text-black [transform:rotateX(180deg)] [backface-visibility:hidden]">
                         <div class="flex flex-col h-full">
                             <div class="text-lg md:text-3xl font-extrabold mb-4 ">Creative Exploration</div>
                             <div class="flex-grow">
@@ -98,7 +98,7 @@
                     </div>
 
                     <div
-                        class=" w-full h-full rounded-xl bg-gradient-to-br from-teal-200 to-teal-400  shadow-lg  p-6 text-black [transform:rotateX(180deg)] [backface-visibility:hidden]">
+                        class=" w-full h-full rounded-xl bg-white shadow-lg  p-6 text-black [transform:rotateX(180deg)] [backface-visibility:hidden]">
                         <div class="flex flex-col h-full">
                             <div class="text-lg md:text-3xl font-extrabold mb-4 ">Academic Foundations</div>
                             <div class="flex-grow">
@@ -135,7 +135,7 @@
                     </div>
 
                     <div
-                        class=" w-full h-full rounded-xl bg-gradient-to-br from-teal-200 to-teal-400  shadow-lg  p-6 text-black [transform:rotateX(180deg)] [backface-visibility:hidden]">
+                        class=" w-full h-full rounded-xl bg-white shadow-lg  p-6 text-black [transform:rotateX(180deg)] [backface-visibility:hidden]">
                         <div class="flex flex-col h-full">
                             <div class="text-lg md:text-3xl font-extrabold mb-4 ">Physical Development</div>
                             <div class="flex-grow">
@@ -170,7 +170,7 @@
                     </div>
 
                     <div
-                        class=" w-full h-full rounded-xl bg-gradient-to-br from-teal-200 to-teal-400  shadow-lg  p-6 text-black [transform:rotateX(180deg)] [backface-visibility:hidden]">
+                        class=" w-full h-full rounded-xl bg-white shadow-lg  p-6 text-black [transform:rotateX(180deg)] [backface-visibility:hidden]">
                         <div class="flex flex-col h-full">
                             <div class="text-lg md:text-3xl font-extrabold mb-4 ">Social-Emotional Growth</div>
                             <div class="flex-grow">

@@ -11,7 +11,7 @@
             id="carouselInner">
             <!-- First Slide -->
             <div class="carousel-item active w-full flex-shrink-0">
-                <img src="{{ asset('img/banner/student_life_banners/calendar/' . $branch->branch_short_name . '.jpg') }}"
+                <img src="{{ asset('img/banner/student_life_banners/calendar/' . $branch->branch_short_name . '.webp') }}"
                     alt="slider-image" class="w-full h-auto object-cover" />
                 {{-- <div class=" absolute inset-0 flex flex-col items-center justify-center p-8 text-white"
             data-animation="animated fadeInRight">
