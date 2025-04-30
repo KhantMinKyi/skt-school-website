@@ -37,7 +37,7 @@
         </div>
 
         <!-- Title Overlay -->
-        <div class="absolute inset-0 flex items-center justify-center z-10 text-center px-4">
+        <div class="absolute inset-0 flex items-center justify-center z-10 text-center px-4 sm:hidden">
             <h1 class="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold drop-shadow-lg">
                 <span class=" ">
                     Inspiring Brilliance,
