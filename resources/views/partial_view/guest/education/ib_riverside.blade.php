@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="{{ asset('assets/css/slider.css') }}" />
     <link rel="stylesheet" href="{{ asset('guests/css/ib.css') }}" />
     <div id="kenburns_061"
-        class="carousel max-h-screen slide ps_indicators_txt_icon ps_control_txt_icon data-bs-target kbrns_zoomInOut thumb_scroll_x swipe_x ps_easeOutQuart relative w-full overflow-hidden"
+        class="carousel hidden lg:block max-h-screen slide ps_indicators_txt_icon ps_control_txt_icon data-bs-target kbrns_zoomInOut thumb_scroll_x swipe_x ps_easeOutQuart relative w-full overflow-hidden"
         data-ride="carousel" data-pause="hover" data-interval="10000" data-duration="2000">
         <!-- Wrapper For Slides -->
         <div class="carousel-inner flex transition-transform duration-1000 ease-in-out  mt-[89px] sm:mt-0"
@@ -24,7 +24,8 @@
         </div>
     </div>
     <!-- START TOPIC-->
-    <section class="topic_content_area section-padding" style="background-image: url(assets/images/banner/topic.png);">
+    <section class="topic_content_area section-padding mt-[89px] lg:mt-0"
+        style="background-image: url(assets/images/banner/topic.png);">
         <div class="container mx-auto">
             <div class="section-title p-4">
                 <h2>{{ $branch->branch_name }}</h2>

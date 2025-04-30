@@ -28,17 +28,26 @@
             </video>
         </div>
     </section> --}}
-    <section id="home-desktop" class="relative hidden lg:block min-h-96  lg:min-h-screen flex items-center justify-center">
+    <section id="home-desktop" class="relative min-h-[80vh] md:min-h-[80vh] lg:min-h-screen flex items-center justify-center">
         <!-- Background Video -->
         <div class="absolute inset-0 w-full h-full">
-            <video id="desktopVideo" autoplay loop muted playsinline
-                class="lg:absolute block top-0 left-0 w-full h-96 lg:h-full object-cover">
-                <!-- Video source will be injected here -->
+            <video id="desktopVideo" autoplay loop muted playsinline preload="metadata"
+                class="absolute top-0 left-0 w-full h-full object-cover">
             </video>
+        </div>
+
+        <!-- Title Overlay -->
+        <div class="absolute inset-0 flex items-center justify-center z-10 text-center px-4">
+            <h1 class="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold drop-shadow-lg">
+                <span class=" ">
+                    Inspiring Brilliance,
+                </span>
+                <span class=" text-emerald-500">Building Brighter Futures.</span>
+            </h1>
         </div>
     </section>
 
-    <section id="home-mobile" class="relative lg:hidden h-96 flex items-center justify-center">
+    {{-- <section id="home-mobile" class="relative lg:hidden h-96 flex items-center justify-center">
         <!-- Fallback Image for Mobile -->
         <div class="absolute inset-0 w-full h-full">
             <img src="{{ asset('img/banner/contact_banners/SKT-CC.jpg') }}" alt="Background"
@@ -50,7 +59,7 @@
             <h1 class="text-2xl font-extrabold">Welcome to <span class="text-emerald-400">SKT City Campus</span></h1>
             <p class="text-md mt-2 font-bold text-white">Experience innovation and learning</p>
         </div>
-    </section>
+    </section> --}}
     <!-- END HOME BANNER -->
 
     <!-- START TOP PROMO FEATURES -->
@@ -583,10 +592,16 @@
     </script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            if (window.innerWidth >= 1000) { // md: Tailwind breakpoint (1000px)
+            if (window.innerWidth <= 1000) { // md: Tailwind breakpoint (1000px)
                 const video = document.getElementById('desktopVideo');
                 const source = document.createElement('source');
                 source.src = "{{ asset('videos/skt_city_campus.mp4') }}";
+                source.type = "video/mp4";
+                video.appendChild(source);
+            } else {
+                const video = document.getElementById('desktopVideo');
+                const source = document.createElement('source');
+                source.src = "{{ asset('videos/skt_city_campus1.mp4') }}";
                 source.type = "video/mp4";
                 video.appendChild(source);
             }

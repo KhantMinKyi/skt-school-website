@@ -11994,10 +11994,6 @@ video {
   margin-top: 89px;
 }
 
-.mt-\[90px\] {
-  margin-top: 90px;
-}
-
 .mt-auto {
   margin-top: auto;
 }
@@ -12158,8 +12154,8 @@ video {
   min-height: 10rem;
 }
 
-.min-h-96 {
-  min-height: 24rem;
+.min-h-\[80vh\] {
+  min-height: 80vh;
 }
 
 .min-h-lvh {
@@ -12890,12 +12886,6 @@ video {
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
-.from-teal-200 {
-  --tw-gradient-from: #99f6e4 var(--tw-gradient-from-position);
-  --tw-gradient-to: rgb(153 246 228 / 0) var(--tw-gradient-to-position);
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-}
-
 .from-violet-400 {
   --tw-gradient-from: #a78bfa var(--tw-gradient-from-position);
   --tw-gradient-to: rgb(167 139 250 / 0) var(--tw-gradient-to-position);
@@ -12908,10 +12898,6 @@ video {
 
 .to-purple-600 {
   --tw-gradient-to: #9333ea var(--tw-gradient-to-position);
-}
-
-.to-teal-400 {
-  --tw-gradient-to: #2dd4bf var(--tw-gradient-to-position);
 }
 
 .to-white {
@@ -13492,6 +13478,11 @@ video {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
+.drop-shadow-lg {
+  --tw-drop-shadow: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
 .filter {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
@@ -13676,11 +13667,6 @@ video {
 .hover\:text-teal-700:hover {
   --tw-text-opacity: 1;
   color: rgb(15 118 110 / var(--tw-text-opacity, 1));
-}
-
-.hover\:text-white:hover {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
 
 .hover\:text-yellow-400:hover {
@@ -13912,6 +13898,11 @@ video {
     line-height: 2.25rem;
   }
 
+  .sm\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+
   .sm\:text-5xl {
     font-size: 3rem;
     line-height: 1;
@@ -14016,6 +14007,10 @@ video {
 
   .md\:min-h-80 {
     min-height: 20rem;
+  }
+
+  .md\:min-h-\[80vh\] {
+    min-height: 80vh;
   }
 
   .md\:min-h-screen {
@@ -14145,6 +14140,11 @@ video {
   .md\:text-4xl {
     font-size: 2.25rem;
     line-height: 2.5rem;
+  }
+
+  .md\:text-5xl {
+    font-size: 3rem;
+    line-height: 1;
   }
 
   .md\:text-6xl {
@@ -14308,6 +14308,11 @@ video {
 
   .lg\:text-5xl {
     font-size: 3rem;
+    line-height: 1;
+  }
+
+  .lg\:text-6xl {
+    font-size: 3.75rem;
     line-height: 1;
   }
 

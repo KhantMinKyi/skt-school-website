@@ -78,67 +78,70 @@
                                 </div>
                             </div>
                         </div>
-
-                        <div
-                            class=" w-full h-full rounded-xl bg-white  shadow-lg  p-6 text-black [transform:rotateX(180deg)] [backface-visibility:hidden]">
-                            <div class="flex flex-col h-full">
-                                <div class="text-lg md:text-xl lg:text-2xl font-extrabold mb-4 ">
-                                    {{ $job->career_job_title }}</div>
-                                <div class="flex-grow">
-                                    <div class="grid grid-cols-2">
-                                        <div class="my-1  flex align-middle text-gray-800 justify-items-start">
-                                            <div class="hidden sm:block">
-                                                <i class="fa-solid fa-gears text-lg lg:text-xl"></i>
+                        <a href="{{ route('career-detail.home', $job->id) }}">
+                            <div
+                                class=" w-full h-full rounded-xl bg-white  shadow-lg  p-6 text-black [transform:rotateX(180deg)] [backface-visibility:hidden]">
+                                <div class="flex flex-col h-full">
+                                    <div class="text-lg md:text-xl lg:text-2xl font-extrabold mb-4 ">
+                                        {{ $job->career_job_title }}</div>
+                                    <div class="flex-grow">
+                                        <div class="grid grid-cols-2">
+                                            <div class="my-1  flex align-middle text-gray-800 justify-items-start">
+                                                <div class="hidden sm:block">
+                                                    <i class="fa-solid fa-gears text-lg lg:text-xl"></i>
+                                                </div>
+                                                <div class="ml-4  ">
+                                                    <p class="text-sm sm:text-base md:text-lg font-bold">Experience level
+                                                    </p>
+                                                    <p class=" text-xs sm:text-sm md:text-base text-stone-950">
+                                                        {{ $job->career_job_experience_level }}
+                                                    </p>
+                                                </div>
                                             </div>
-                                            <div class="ml-4  ">
-                                                <p class="text-sm sm:text-base md:text-lg font-bold">Experience level</p>
-                                                <p class=" text-xs sm:text-sm md:text-base text-stone-950">
-                                                    {{ $job->career_job_experience_level }}
-                                                </p>
+                                            <div class="my-1  flex align-middle text-gray-800 justify-items-start">
+                                                <div class="hidden sm:block">
+                                                    <i class="fa-solid fa-bars-progress text-lg lg:text-xl"></i>
+                                                </div>
+                                                <div class="ml-4  ">
+                                                    <p class="text-sm sm:text-base md:text-lg font-bold">Job Function</p>
+                                                    <p class=" text-xs sm:text-sm md:text-base text-stone-950">
+                                                        {{ $job->career_job_function }}
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="my-1  flex align-middle text-gray-800 justify-items-start">
+                                                <div class="hidden sm:block">
+                                                    <i class="fa-solid fa-user-plus text-lg lg:text-xl"></i>
+                                                </div>
+                                                <div class="ml-4  ">
+                                                    <p class="text-sm sm:text-base md:text-lg font-bold">Number of Position
+                                                    </p>
+                                                    <p class=" text-xs sm:text-sm md:text-base text-stone-950">
+                                                        {{ $job->career_job_number_of_post }}
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="my-1  flex align-middle text-gray-800 justify-items-start">
+                                                <div class="hidden sm:block">
+                                                    <i class="fa-solid fa-clock text-lg lg:text-xl"></i>
+                                                </div>
+                                                <div class="ml-4  ">
+                                                    <p class="text-sm sm:text-base md:text-lg font-bold">Job Type</p>
+                                                    <p class=" text-xs sm:text-sm md:text-base text-stone-950">
+                                                        {{ $job->career_job_type }}
+                                                    </p>
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="my-1  flex align-middle text-gray-800 justify-items-start">
-                                            <div class="hidden sm:block">
-                                                <i class="fa-solid fa-bars-progress text-lg lg:text-xl"></i>
-                                            </div>
-                                            <div class="ml-4  ">
-                                                <p class="text-sm sm:text-base md:text-lg font-bold">Job Function</p>
-                                                <p class=" text-xs sm:text-sm md:text-base text-stone-950">
-                                                    {{ $job->career_job_function }}
-                                                </p>
-                                            </div>
+                                        <div class="flex justify-end">
+                                            <a href="{{ route('career-detail.home', $job->id) }}"
+                                                class="p-3 bg-gray-900 rounded-lg font-bold hover:bg-teal-500 text-white hover:shadow-lg text-xs sm:text-sm md:text-base lg:text-lg">See
+                                                more</a>
                                         </div>
-                                        <div class="my-1  flex align-middle text-gray-800 justify-items-start">
-                                            <div class="hidden sm:block">
-                                                <i class="fa-solid fa-user-plus text-lg lg:text-xl"></i>
-                                            </div>
-                                            <div class="ml-4  ">
-                                                <p class="text-sm sm:text-base md:text-lg font-bold">Number of Position</p>
-                                                <p class=" text-xs sm:text-sm md:text-base text-stone-950">
-                                                    {{ $job->career_job_number_of_post }}
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <div class="my-1  flex align-middle text-gray-800 justify-items-start">
-                                            <div class="hidden sm:block">
-                                                <i class="fa-solid fa-clock text-lg lg:text-xl"></i>
-                                            </div>
-                                            <div class="ml-4  ">
-                                                <p class="text-sm sm:text-base md:text-lg font-bold">Job Type</p>
-                                                <p class=" text-xs sm:text-sm md:text-base text-stone-950">
-                                                    {{ $job->career_job_type }}
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="flex justify-end">
-                                        <a href="{{ route('career-detail.home', $job->id) }}"
-                                            class="p-3 bg-gray-900 rounded-lg font-bold hover:bg-teal-500 text-white hover:shadow-lg text-xs sm:text-sm md:text-base lg:text-lg">See
-                                            more</a>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
             @endforeach
