@@ -67,7 +67,7 @@
         <div class="grid md:grid-cols-1 lg:grid-cols-3 gap-6">
             <!-- Quality Education -->
             <div class="h-full flex">
-                <div class="bg-white p-16 mb-8 shadow border-r border-gray-50 w-full">
+                <div class="bg-white p-8 md:p-16  mb-8 shadow border-r border-gray-50 w-full">
                     <h3 class="text-xl mb-4">Quality Education</h3>
                     <p class="mb-10 font-light text-gray-500">
                         Providing students with a rich learning experience, blending academics, and critical thinking.
@@ -88,7 +88,7 @@
 
             <!-- Experienced Teachers -->
             <div class="h-full flex">
-                <div class="bg-white p-16 mb-8 shadow border-r border-gray-50 w-full">
+                <div class="bg-white p-8 md:p-16  mb-8 shadow border-r border-gray-50 w-full">
                     <h3 class="text-xl mb-4">Experienced Teachers</h3>
                     <p class="mb-10 font-light text-gray-500">
                         Passionate educators committed to nurturing potential and inspiring a love for learning.
@@ -109,7 +109,7 @@
 
             <!-- Delicious Food -->
             <div class="h-full flex">
-                <div class="bg-white p-16 mb-8 shadow border-r border-gray-50 w-full">
+                <div class="bg-white p-8 md:p-16  mb-8 shadow border-r border-gray-50 w-full">
                     <h3 class="text-xl mb-4">Delicious Food</h3>
                     <p class="mb-10 font-light text-gray-500">
                         Wholesome, flavorful meals thoughtfully crafted daily to keep students energized and satisfied.
