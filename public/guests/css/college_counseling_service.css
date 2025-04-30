@@ -31,6 +31,12 @@
     line-height: 46px;
     color: #1a2d62;
 }
+@media only screen and (max-width: 768px) {
+    .section-title p {
+        width: 100%;
+        font-size: 32px;
+    }
+}
 @media only screen and (max-width: 480px) {
     .section-title p {
         width: 100%;

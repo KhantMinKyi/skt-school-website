@@ -141,19 +141,23 @@
                         @endisset
                     </p>
                 </div>
-                <div class="abmv mt-4">
+                <div class="abmv mt-4 hidden lg:block">
                     <span class="ti-medall"></span>
                     <h4>Our Mission</h4>
-                    <p>
-                        {!! $branch->statement->statement_mission !!}
-                    </p>
+                    <div class="prose max-w-none">
+                        <p>
+                            {!! $branch->statement->statement_mission !!}
+                        </p>
+                    </div>
                 </div>
-                <div class="abmv">
+                <div class="abmv hidden lg:block">
                     <span class="ti-wand"></span>
                     <h4>Our Vision</h4>
-                    <p>
-                        {!! $branch->statement->statement_vision !!}
-                    </p>
+                    <div class="prose max-w-none">
+                        <p>
+                            {!! $branch->statement->statement_vision !!}
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -324,7 +328,7 @@
                     </p>
                 </div>
                 <div class="abmv mt-4 principal-message ">
-                    <p class="text-sm md:text-md xl:text-xl italic">
+                    <p class="text-sm md:text-base xl:text-xl italic">
                         {{ \Illuminate\Support\Str::words($branch->principal_message->principal_message, 100, '...') }}
                     </p>
                 </div>

@@ -11,7 +11,7 @@
         class="carousel max-h-screen slide ps_indicators_txt_icon ps_control_txt_icon data-bs-target kbrns_zoomInOut thumb_scroll_x swipe_x ps_easeOutQuart relative w-full overflow-hidden"
         data-ride="carousel" data-pause="hover" data-interval="10000" data-duration="2000">
         <!-- Wrapper For Slides -->
-        <div class="carousel-inner flex transition-transform duration-1000 ease-in-out mt-20 sm:mt-0" id="carouselInner">
+        <div class="carousel-inner flex transition-transform duration-1000 ease-in-out mt-[89px] sm:mt-0" id="carouselInner">
             <!-- First Slide -->
             <div class="carousel-item active w-full flex-shrink-0">
                 <img src="{{ asset('img/banner/sister_school/bfi.jpg') }}" alt="slider-image"
@@ -35,7 +35,7 @@
                     Join <span class="text-emerald-500">Our Team</span>
                 </p>
             </div>
-            <div class=" text-lg p-4">
+            <div class="text-base md:text-lg p-4">
                 Our International curriculum addresses social-emotional development via engaging activities and positive
                 reinforcement and by actively involving parents in our lessons and extra-curricular programs. We follow an
                 age-appropriate curriculum based on the latest research on early childhood learning. Children are free to
@@ -58,21 +58,22 @@
                             class="absolute w-full h-full rounded-xl bg-white p-6 text-gray-800 shadow-lg [backface-visibility:hidden]">
                             <div class="flex flex-col h-full">
                                 <div class="flex justify-between items-start">
-                                    <div class="text-3xl font-extrabold">{{ $job->career_job_title }}</div>
+                                    <div class="text-xl md:text-2xl lg:text-3xl font-extrabold">{{ $job->career_job_title }}
+                                    </div>
                                     {{-- <img src="{{ asset('assets/images/icon/music.svg') }}" class=" w-20" alt="" /> --}}
                                 </div>
                                 <div>
-                                    <div class="my-1 text-teal-600">
+                                    <div class="my-1 text-teal-600 text-sm sm:text-base">
                                         <i class="fa-solid fa-school"></i>
                                         {{ $job->branch->branch_name }}
                                     </div>
-                                    <div class="my-1 text-gray-700">
+                                    <div class="my-1 text-gray-700 text-sm sm:text-base">
                                         <i class="fa fa-location-pin"></i>
                                         {{ $job->branch->branch_location }}
                                     </div>
                                 </div>
                                 <div class="mt-auto">
-                                    <p class="text-sm opacity-75 font-semibold">Hover to flip!</p>
+                                    <p class="text-xs sm:text-base opacity-75 font-semibold">Hover to flip!</p>
                                 </div>
                             </div>
                         </div>
@@ -80,49 +81,50 @@
                         <div
                             class=" w-full h-full rounded-xl bg-gradient-to-br from-teal-200 to-teal-400  shadow-lg  p-6 text-black [transform:rotateX(180deg)] [backface-visibility:hidden]">
                             <div class="flex flex-col h-full">
-                                <div class="text-2xl font-extrabold mb-4 ">{{ $job->career_job_title }}</div>
+                                <div class="text-lg md:text-xl lg:text-2xl font-extrabold mb-4 ">
+                                    {{ $job->career_job_title }}</div>
                                 <div class="flex-grow">
                                     <div class="grid grid-cols-2">
                                         <div class="my-1  flex align-middle text-gray-800 justify-items-start">
                                             <div class="hidden sm:block">
-                                                <i class="fa-solid fa-gears text-2xl"></i>
+                                                <i class="fa-solid fa-gears text-lg lg:text-xl"></i>
                                             </div>
                                             <div class="ml-4  ">
-                                                <p class="text-lg md:text-xl font-bold">Experience level</p>
-                                                <p class=" text-sm md:text-lg text-stone-950">
+                                                <p class="text-sm sm:text-base md:text-lg font-bold">Experience level</p>
+                                                <p class=" text-xs sm:text-sm md:text-base text-stone-950">
                                                     {{ $job->career_job_experience_level }}
                                                 </p>
                                             </div>
                                         </div>
                                         <div class="my-1  flex align-middle text-gray-800 justify-items-start">
                                             <div class="hidden sm:block">
-                                                <i class="fa-solid fa-bars-progress text-2xl"></i>
+                                                <i class="fa-solid fa-bars-progress text-lg lg:text-xl"></i>
                                             </div>
                                             <div class="ml-4  ">
-                                                <p class="text-lg md:text-xl font-bold">Job Function</p>
-                                                <p class=" text-sm md:text-lg text-stone-950">
+                                                <p class="text-sm sm:text-base md:text-lg font-bold">Job Function</p>
+                                                <p class=" text-xs sm:text-sm md:text-base text-stone-950">
                                                     {{ $job->career_job_function }}
                                                 </p>
                                             </div>
                                         </div>
                                         <div class="my-1  flex align-middle text-gray-800 justify-items-start">
                                             <div class="hidden sm:block">
-                                                <i class="fa-solid fa-user-plus text-2xl"></i>
+                                                <i class="fa-solid fa-user-plus text-lg lg:text-xl"></i>
                                             </div>
                                             <div class="ml-4  ">
-                                                <p class="text-lg md:text-xl font-bold">Number of Position</p>
-                                                <p class=" text-sm md:text-lg text-stone-950">
+                                                <p class="text-sm sm:text-base md:text-lg font-bold">Number of Position</p>
+                                                <p class=" text-xs sm:text-sm md:text-base text-stone-950">
                                                     {{ $job->career_job_number_of_post }}
                                                 </p>
                                             </div>
                                         </div>
                                         <div class="my-1  flex align-middle text-gray-800 justify-items-start">
                                             <div class="hidden sm:block">
-                                                <i class="fa-solid fa-clock text-2xl"></i>
+                                                <i class="fa-solid fa-clock text-lg lg:text-xl"></i>
                                             </div>
                                             <div class="ml-4  ">
-                                                <p class="text-lg md:text-xl font-bold">Job Type</p>
-                                                <p class=" text-sm md:text-lg text-stone-950">
+                                                <p class="text-sm sm:text-base md:text-lg font-bold">Job Type</p>
+                                                <p class=" text-xs sm:text-sm md:text-base text-stone-950">
                                                     {{ $job->career_job_type }}
                                                 </p>
                                             </div>
@@ -130,7 +132,7 @@
                                     </div>
                                     <div class="flex justify-end">
                                         <a href="{{ route('career-detail.home', $job->id) }}"
-                                            class="p-3 bg-white rounded-lg font-bold hover:bg-teal-500 hover:text-white hover:shadow-lg">See
+                                            class="p-3 bg-white rounded-lg font-bold hover:bg-teal-500 hover:text-white hover:shadow-lg text-xs sm:text-sm md:text-base lg:text-lg">See
                                             more</a>
                                     </div>
                                 </div>

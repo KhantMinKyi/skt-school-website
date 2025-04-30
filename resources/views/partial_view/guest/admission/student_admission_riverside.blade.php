@@ -7,7 +7,8 @@
         class="carousel max-h-screen slide ps_indicators_txt_icon ps_control_txt_icon data-bs-target kbrns_zoomInOut thumb_scroll_x swipe_x ps_easeOutQuart relative w-full overflow-hidden"
         data-ride="carousel" data-pause="hover" data-interval="10000" data-duration="2000">
         <!-- Wrapper For Slides -->
-        <div class="carousel-inner flex transition-transform duration-1000 ease-in-out mt-20 sm:mt-0" id="carouselInner">
+        <div class="carousel-inner flex transition-transform duration-1000 ease-in-out mt-[89px] sm:mt-0"
+            id="carouselInner">
             <!-- First Slide -->
             <div class="carousel-item active w-full flex-shrink-0">
                 <img src="{{ asset('img/banner/admission_banners/student_admission/' . $branch->branch_short_name . '.jpg') }}"
@@ -46,11 +47,11 @@
     <section class="school_history ">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 ">
             <div class="flex justify-center items-center">
-                <img src="{{ asset($branch->branch_logo) }}" style="max-height: 420px" alt="" />
+                <img src="{{ asset($branch->branch_logo) }}" class=" max-h-[200px] md:max-h-[360px]"alt="" />
             </div>
             <div class=" max-w-2xl p-10">
                 <div class="ab_content">
-                    <h2 class=" text-4xl font-semibold">
+                    <h2 class="  text-2xl   lg:text-4xl font-semibold">
                         Welcome to Our
                         <span class="text-emerald-400">Learning Community</span>
                     </h2>
@@ -72,7 +73,7 @@
                                 <span
                                     class="w-8 h-8 bg-teal-400 rounded-full transition-all duration-300 origin-left transform scale-100 group-hover:w-full group-hover:h-full group-hover:scale-x-100"></span>
                             </span>
-                            <span class="relative z-10">Admission Process</span>
+                            <span class="relative z-10 text-sm md:text-base lg:text-lg">Admission Process</span>
                         </span>
                     </a>
                 </div>

@@ -8,7 +8,7 @@
         class="carousel max-h-screen slide ps_indicators_txt_icon ps_control_txt_icon data-bs-target kbrns_zoomInOut thumb_scroll_x swipe_x ps_easeOutQuart relative w-full overflow-hidden"
         data-ride="carousel" data-pause="hover" data-interval="10000" data-duration="2000">
         <!-- Wrapper For Slides -->
-        <div class="carousel-inner flex transition-transform duration-1000 ease-in-out mt-20 sm:mt-0" id="carouselInner">
+        <div class="carousel-inner flex transition-transform duration-1000 ease-in-out mt-[89px] sm:mt-0" id="carouselInner">
             <!-- First Slide -->
             <div class="carousel-item active w-full flex-shrink-0">
                 <img src="{{ asset('img/banner/admission_banners/admission_process/' . $branch->branch_short_name . '.jpg') }}"
@@ -58,7 +58,7 @@
                     </ul>
 
                     <!-- Tab panes -->
-                    <div role="tabpanel" class="tab-pane fade show tab-content " id="tab1">
+                    <div role="tabpanel" class="tab-pane fade show tab-content text-sm md:text-base" id="tab1">
                         <p>We are excited that you are considering SKT International School City Campus for your child. We
                             will support you throughout the admissions process and look forward to welcoming you to the SKT
                             International School City Campus.
@@ -91,7 +91,7 @@
                                 (01) 543926 ,+959 456 481 950 </b></p>
                     </div>
 
-                    <div role="tabpanel" class="tab-pane fade tab-content hidden " id="tab2">
+                    <div role="tabpanel" class="tab-pane fade tab-content hidden text-sm md:text-base" id="tab2">
                         <p>သင်၏ကလေးများအတွက် ကျွန်ုပ်တို့၏SKT International School City Campus ကိုစိတ်ဝင်စားသည့်အတွက်
                             စိတ်လှုပ်ရှားမိပါသည်။ ကျွန်ုပ်တို့သည် ကျောင်းဝင်ခွင့်လျှောက်လွှာတင်မှု တစ်လျှောက်လုံးတွင်
                             သင့်အားပံ့ပိုးပေးသွားမည်ဖြစ်ပြီး SKT International School City Campus မှသင့်အား

@@ -68,11 +68,13 @@
                     <div class="abmv mt-4 flex flex-col">
                         <span class="ti-medall"></span>
                         <h4>History</h4>
-                        <p>
-                            @isset($our_history)
-                                {!! $our_history->history_body !!}
-                            @endisset
-                        </p>
+                        <div class="prose max-w-none">
+                            <p>
+                                @isset($our_history)
+                                    {!! $our_history->history_body !!}
+                                @endisset
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>

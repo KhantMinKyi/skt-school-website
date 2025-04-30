@@ -31,6 +31,12 @@
   line-height: 46px;
   color: #1a2d62;
 }
+@media only screen and (max-width: 768px) {
+  .section-title p {
+      width: 100%;
+      font-size: 32px;
+  }
+}
 @media only screen and (max-width: 480px) {
   .section-title p {
       width: 100%;
@@ -83,7 +89,7 @@ p.section-title-white {
 }
 
 .pd_tab_area {
-  margin-top: 30px;
+ 
   background: #fff none repeat scroll 0 0;
   border: 1px solid rgba(0, 0, 0, 0.02);
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.02);

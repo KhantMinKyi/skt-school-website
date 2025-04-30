@@ -38,7 +38,9 @@
                         <span class="text-emerald-400">Vision</span>
                     </h2>
                     <p class=" text-gray-500 mt-4">
+                    <div class="prose max-w-none">
                         {!! $our_statement->statement_vision !!}
+                    </div>
                     </p>
                 </div>
             </div>
@@ -49,13 +51,15 @@
                         <span class="text-emerald-400">Mission</span>
                     </h2>
                     <p class=" text-gray-500 mt-4">
+                    <div class="prose max-w-none">
                         {!! $our_statement->statement_mission !!}
+                    </div>
                     </p>
                 </div>
             </div>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 mt-10">
-            <div class=" max-w-2xl p-10 flex justify-center items-center mx-auto">
+            <div class=" max-w-2xl p-10 flex justify-center  mx-auto">
                 <div class="ab_content">
                     <h2 class=" text-2xl md:text-4xl font-semibold">
                         Our
@@ -95,7 +99,9 @@
                         <span class="text-emerald-400">Philosophy</span>
                     </h2>
                     <p class=" text-gray-500 mt-4">
+                    <div class="prose max-w-none">
                         {!! $our_statement->statement_philosophy !!}
+                    </div>
                     </p>
                 </div>
             </div>
