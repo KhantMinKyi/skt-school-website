@@ -125,9 +125,8 @@
         </div><!-- END CONTAINER  -->
 
     </div>
-    <div class="partner-logo py-10  bg-yellow-50">
+    {{-- <div class="partner-logo py-10  bg-yellow-50">
         <div class="text-center mb-10 text-lg md:text-xl lg:text-2xl  font-bold font-serif text-yellow-700">
-            {{-- Sister Schools --}}
             Foreign languages like
         </div>
         <div class="container mx-auto">
@@ -151,7 +150,7 @@
             </div><!--END  ROW  -->
         </div><!-- END CONTAINER  -->
 
-    </div>
+    </div> --}}
     <div class="partner-logo py-10">
 
         <div class="container mx-auto">
