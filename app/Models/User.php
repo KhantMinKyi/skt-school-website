@@ -61,6 +61,10 @@ class User extends Authenticatable
     {
         return $this->hasMany(Post::class, 'post_created_user_id');
     }
+    public function created_events()
+    {
+        return $this->hasMany(Event::class, 'event_created_user_id');
+    }
     public function created_categories()
     {
         return $this->hasMany(Category::class, 'category_created_user_id');

@@ -21,11 +21,11 @@ class PostCommentController extends Controller
     public function index()
     {
         $postCommentQuery = PostComment::with('post');
+        $post_comments = $postCommentQuery->paginate(10);
         if ($this->user->is_admin == 1) {
-            $post_comments = $postCommentQuery->paginate(10);
             return view('partial_view.admin.posts.post_comment_index', compact('post_comments'));
         } else {
-            $post_comments = $postCommentQuery->where('post_comment_branch_id', $this->user->branch_id)->paginate(10);
+            // $post_comments = $postCommentQuery->where('post_comment_branch_id', $this->user->branch_id)->paginate(10);
             return view('partial_view.staff.posts.post_comment_index', compact('post_comments'));
         }
     }

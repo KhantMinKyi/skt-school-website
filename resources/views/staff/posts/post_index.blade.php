@@ -131,8 +131,21 @@
 
                     <div class="modal-body">
                         <div class="row">
-                            <input type="hidden" value="{{ $user->branch_id }}" name="post_branch_id">
-
+                            {{-- <input type="hidden" value="{{ $user->branch_id }}" name="post_branch_id"> --}}
+                            <div class="col-12">
+                                <div class="row mb-3">
+                                    <label for="inputEmail3" class="col-3 col-form-label"> Branch</label>
+                                    <div class="col-sm-9">
+                                        <select class="form-control select2" name="post_branch_id" required
+                                            title="Branch is required">
+                                            <option disabled selected>Select a Branch</option>
+                                            @foreach ($branches as $key => $data)
+                                                <option value='{{ $data->id }}'>{{ $data->branch_name }}</option>
+                                            @endforeach
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="col-12">
                                 <div class="row mb-3">
                                     <label for="inputEmail3" class="col-3 col-form-label"> Category</label>
@@ -177,7 +190,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-12">
+                            {{-- <div class="col-12">
                                 <div class="row mb-3">
                                     <label for="inputEmail3" class="col-3 col-form-label"> Video </label>
                                     <div class="col-9">
@@ -186,7 +199,7 @@
                                             value="" name="post_video" class="form-control">
                                     </div>
                                 </div>
-                            </div>
+                            </div> --}}
                             {{-- <div class="col-12">
                                 <div class="row mb-3">
                                     <label for="inputEmail3" class="col-3 col-form-label"> Image </label>

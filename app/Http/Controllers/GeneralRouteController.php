@@ -159,7 +159,9 @@ class GeneralRouteController extends Controller
     {
         $post = Post::with(['comments' => function ($query) {
             $query->where('post_comment_status', 'approved');
-        }])->find($param);
+        }])
+            ->where('post_is_active', 1)
+            ->find($param);
         if (!$post) {
             return view('pages.not_found');
         }

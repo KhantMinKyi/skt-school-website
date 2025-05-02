@@ -26,16 +26,16 @@ class PostController extends Controller
         $categories = Category::all();
         $postQuery = Post::with('category', 'branch', 'created_user')->where('post_is_active', 1);
         $postCommentQuery = PostComment::where('post_comment_status', 'pending');
+        $branches = Branch::all();
+        $posts = $postQuery->orderBy('created_at', 'desc')->paginate(10);
+        $pendingCommentsCount = $postCommentQuery->get()->count();
         if ($this->user->is_admin == 1) {
-            $branches = Branch::all();
-            $posts = $postQuery->orderBy('created_at', 'desc')->paginate(10);
-            $pendingCommentsCount = $postCommentQuery->get()->count();
             return view('admin.posts.post_index', compact('posts', 'categories', 'branches', 'pendingCommentsCount'));
         } else {
-            $user = $this->user;
-            $posts = $postQuery->where('post_branch_id', $this->user->branch_id)->orderBy('created_at', 'desc')->paginate(10);
-            $pendingCommentsCount = $postCommentQuery->where('post_comment_branch_id', $this->user->branch_id)->get()->count();
-            return view('staff.posts.post_index', compact('posts', 'categories', 'pendingCommentsCount', 'user'));
+            // $user = $this->user;
+            // $posts = $postQuery->where('post_branch_id', $this->user->branch_id)->orderBy('created_at', 'desc')->paginate(10);
+            // $pendingCommentsCount = $postCommentQuery->where('post_comment_branch_id', $this->user->branch_id)->get()->count();
+            return view('staff.posts.post_index', compact('posts', 'categories', 'branches', 'pendingCommentsCount'));
         }
     }
 
