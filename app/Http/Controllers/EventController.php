@@ -27,16 +27,16 @@ class EventController extends Controller
         $categories = Category::all();
         $eventQuery = Event::where('event_is_active', 1);
         $eventCommentQuery = EventComment::where('event_comment_status', 'pending');
+        $branches = Branch::all();
+        $events = $eventQuery->orderBy('created_at', 'desc')->paginate(10);
+        $pendingCommentsCount = $eventCommentQuery->get()->count();
         if ($this->user->is_admin == 1) {
-            $branches = Branch::all();
-            $events = $eventQuery->orderBy('created_at', 'desc')->paginate(10);
-            $pendingCommentsCount = $eventCommentQuery->get()->count();
             return view('admin.events.event_index', compact('events', 'categories', 'branches', 'pendingCommentsCount'));
         } else {
-            $user = $this->user;
-            $events = $eventQuery->where('event_branch_id', $this->user->branch_id)->orderBy('created_at', 'desc')->paginate(10);
-            $pendingCommentsCount = $eventCommentQuery->where('event_comment_branch_id', $this->user->branch_id)->get()->count();
-            return view('staff.events.event_index', compact('events', 'categories', 'user', 'pendingCommentsCount'));
+            // $user = $this->user;
+            // $events = $eventQuery->where('event_branch_id', $this->user->branch_id)->orderBy('created_at', 'desc')->paginate(10);
+            // $pendingCommentsCount = $eventCommentQuery->where('event_comment_branch_id', $this->user->branch_id)->get()->count();
+            return view('staff.events.event_index', compact('events', 'categories', 'branches', 'pendingCommentsCount'));
         }
     }
 
@@ -281,12 +281,12 @@ class EventController extends Controller
     }
     public function showArchivedEvent()
     {
+        $archived_events = Event::where('event_is_active', 0)->paginate(10);
         if ($this->user->is_admin == 1) {
-            $archived_events = Event::where('event_is_active', 0)->paginate(10);
             // dd($archived_events);
             return view('partial_view.admin.events.event_archived', compact('archived_events'));
         } else {
-            $archived_events = Event::where('event_is_active', 0)->where('event_branch_id', $this->user->branch_id)->paginate(10);
+            // $archived_events = Event::where('event_is_active', 0)->where('event_branch_id', $this->user->branch_id)->paginate(10);
             return view('partial_view.staff.events.event_archived', compact('archived_events'));
         }
     }
