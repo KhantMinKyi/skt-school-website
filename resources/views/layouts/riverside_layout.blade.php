@@ -277,7 +277,7 @@
     <script src="{{ asset('assets/js/scrolltopcontrol.js') }}"></script>
     <script src="{{ asset('assets/owlcarousel/js/owl.carousel.min.js') }}"></script>
     <script src="{{ asset('guests/js/script.js') }}"></script>
-    <script src="{{ asset('assets/js/riverside-layout.js') }}" defer></script>
+    <script src="{{ asset('guests/js/riverside-layout.js') }}" defer></script>
 
 
 

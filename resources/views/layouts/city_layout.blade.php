@@ -548,7 +548,7 @@
     <script src="{{ asset('assets/owlcarousel/js/owl.carousel.min.js') }}"></script>
     <script src="{{ asset('guests/js/script.js') }}"></script>
     <!-- Custom script after all dependencies -->
-    <script src="{{ asset('assets/js/city-layout.js') }}" defer></script>
+    <script src="{{ asset('guests/js/city-layout.js') }}" defer></script>
 
 
 </body>
