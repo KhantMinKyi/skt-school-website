@@ -60,3 +60,7 @@ Route::post('/event/event-comment', [EventCommentController::class, 'store'])->n
 //Contact Us
 Route::get('/contact_us/contact_us/{param}', [GeneralRouteController::class, 'showContactUs'])->name('contact_us.home');
 Route::post('/contact_us/contact_form_store', [ContactController::class, 'store'])->name('contact-form.store');
+
+// Policy
+Route::get('/policy/privacy_policy/{param}', [GeneralRouteController::class, 'showPrivacyPolicy'])->name('privacy-policy.home');
+Route::get('/policy/term_of_use/{param}', [GeneralRouteController::class, 'showTermOfUse'])->name('term-of-use.home');

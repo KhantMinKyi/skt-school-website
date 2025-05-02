@@ -385,4 +385,20 @@ class GeneralRouteController extends Controller
             : 'layouts.riverside_layout';
         return view('partial_view.guest.admission.career_detail', compact('layout', 'branch', 'job'));
     }
+    public function showPrivacyPolicy($param)
+    {
+        $branch = Branch::where('branch_short_name', $param)->first();
+        $layout = ($branch && $branch->branch_short_name === 'SKT-CC')
+            ? 'layouts.city_layout'
+            : 'layouts.riverside_layout';
+        return view('pages.policy', compact('layout', 'branch'));
+    }
+    public function showTermOfUse($param)
+    {
+        $branch = Branch::where('branch_short_name', $param)->first();
+        $layout = ($branch && $branch->branch_short_name === 'SKT-CC')
+            ? 'layouts.city_layout'
+            : 'layouts.riverside_layout';
+        return view('pages.term_of_use', compact('layout', 'branch'));
+    }
 }

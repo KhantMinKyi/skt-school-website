@@ -224,7 +224,7 @@
                                 <span class="ti-email"></span>
                                 <h3 class="hidden sm:block">Email </h3>
                             </div>
-                            <p>contact@sktcollege.edu.mm</p>
+                            <p class="break-words ">contact@sktcollege.edu.mm</p>
                         </div>
                         <div class="sf_contact grid grid-cols-2 gap-2">
                             <div>
@@ -247,9 +247,11 @@
                 <div class="col-lg-6 col-sm-6 col-xs-12">
                     <div class="footer_menu">
                         <ul>
-                            <li><a href="#">Terms of use</a></li>
-                            <li><a href="#">Privacy Policy</a></li>
-                            <li><a href="#">Cookie Policy</a></li>
+                            <li><a href="{{ route('term-of-use.home', $layout_branch->branch_short_name) }}">Terms of
+                                    use</a></li>
+                            <li><a href="{{ route('privacy-policy.home', $layout_branch->branch_short_name) }}">Privacy
+                                    Policy</a></li>
+                            {{-- <li><a href="#">Cookie Policy</a></li> --}}
                         </ul>
                     </div>
                 </div>
