@@ -289,7 +289,9 @@ class GeneralRouteController extends Controller
     {
         $event = Event::with(['comments' => function ($query) {
             $query->where('event_comment_status', 'approved');
-        }])->find($param);
+        }])
+            ->where('event_is_active', 1)
+            ->find($param);
         if (!$event) {
             return view('pages.not_found');
         }
