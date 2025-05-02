@@ -3,7 +3,7 @@
 @section('content')
     @php
         use App\Models\CareerJob;
-        $jobs = CareerJob::where('career_job_is_active', 1)->orderBy('created_at', 'desc')->limit(3)->get();
+        $jobs = CareerJob::where('career_job_is_active', 1)->orderBy('created_at', 'desc')->get();
     @endphp
     <link rel="stylesheet" href="{{ asset('assets/css/slider.css') }}" />
     <link rel="stylesheet" href="{{ asset('guests/css/pre_school.css') }}" />
@@ -52,7 +52,7 @@
     <div class="py-10  bg-emerald-50">
         <div class="grid md:grid-cols-2 gap-10 container mx-auto">
             @foreach ($jobs as $job)
-                <div class="group   [perspective:1000px]">
+                <div class="group   [perspective:1000px] job-card">
                     <div
                         class=" will-change-transform duration-1000 w-full h-full [transform-style:preserve-3d] group-hover:[transform:rotateX(180deg)] cursor-pointer">
                         <div
@@ -146,5 +146,73 @@
                 </div>
             @endforeach
         </div>
+        <!-- Pagination Controls -->
+        <div class="mt-6 flex justify-between items-center">
+            <button id="prevPage"
+                class=" px-2 py-1 md:px-4  md:py-2 m-2 bg-gray-900 text-white rounded-md cursor-pointer">Prev</button>
+            <span id="paginationInfo" class="text-sm md:text-lg m-4"></span>
+            <button id="nextPage"
+                class=" px-2 py-1 md:px-4  md:py-2 m-2 bg-gray-900 text-white rounded-md cursor-pointer">Next</button>
+        </div>
     </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const perPage = 4;
+            let currentPage = 1;
+
+            const $jobCards = $(".job-card");
+            const allJobs = $jobCards.toArray();
+            let filteredJobs = [...allJobs];
+
+            const $paginationInfo = $("#paginationInfo");
+            const $prevPage = $("#prevPage");
+            const $nextPage = $("#nextPage");
+
+            const modal = document.getElementById("imageModal");
+            const modalImage = document.getElementById("modalImage");
+            const modalTitle = document.getElementById("modalTitle");
+            const closeModal = document.getElementById("closeModal");
+
+            function showPage(page) {
+                const start = (page - 1) * perPage;
+                const end = start + perPage;
+
+                $jobCards.hide();
+                $(filteredJobs.slice(start, end)).show();
+
+                const totalItems = filteredJobs.length;
+                const totalPages = Math.max(1, Math.ceil(totalItems / perPage));
+
+                $paginationInfo.text(
+                    `Page ${page} of ${totalPages} | Showing ${start + 1}-${Math.min(end, totalItems)} of ${totalItems} items`
+                );
+
+                $prevPage.prop("disabled", page === 1);
+                $nextPage.prop("disabled", page >= totalPages);
+            }
+            // Pagination
+            $prevPage.on("click", () => {
+                if (currentPage > 1) {
+                    currentPage--;
+                    showPage(currentPage);
+                }
+            });
+
+            $nextPage.on("click", () => {
+                if (currentPage * perPage < filteredJobs.length) {
+                    currentPage++;
+                    showPage(currentPage);
+                }
+            });
+
+            // Filters
+            $(".filter-btn").on("click", function() {
+                applyFilter(this.dataset.filter);
+            });
+
+            // Initial render
+            showPage(currentPage);
+        });
+    </script>
 @endsection

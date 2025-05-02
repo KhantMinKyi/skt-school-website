@@ -367,9 +367,9 @@ class GeneralRouteController extends Controller
             return view('pages.not_found');
         }
         if ($branch && $branch->branch_short_name === 'SKT-CC') {
-            return view('partial_view.guest.admission.career_riverside', compact('branch'));
-        } else {
             return view('partial_view.guest.admission.career_city', compact('branch'));
+        } else {
+            return view('partial_view.guest.admission.career_riverside', compact('branch'));
         }
     }
     public function showCareerDetail($param)

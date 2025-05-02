@@ -81,9 +81,11 @@
 
             <!-- Pagination Controls -->
             <div class="mt-6 flex justify-between items-center">
-                <button id="prevPage" class="px-4 py-2 bg-gray-300 rounded-md cursor-pointer">Prev</button>
-                <span id="paginationInfo" class="text-lg"></span>
-                <button id="nextPage" class="px-4 py-2 bg-gray-300 rounded-md cursor-pointer">Next</button>
+                <button id="prevPage"
+                    class=" px-2 py-1 md:px-4  md:py-2 m-2 bg-gray-900 text-white rounded-md cursor-pointer">Prev</button>
+                <span id="paginationInfo" class="text-sm md:text-lg m-4"></span>
+                <button id="nextPage"
+                    class=" px-2 py-1 md:px-4  md:py-2 m-2 bg-gray-900 text-white rounded-md cursor-pointer">Next</button>
             </div>
         </div>
         <!-- END CONTAINER  -->

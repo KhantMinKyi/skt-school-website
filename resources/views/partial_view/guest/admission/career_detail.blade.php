@@ -93,7 +93,7 @@
                     <div class=" flex align-middle justify-start">
                         <i class="fa-solid fa-check text-lg lg:text-xl  mr-4 text-teal-400"></i>
                         <p class="text-base md:text-lg lg:text-xl  ">
-                            {{ $job->career_job_gender }}
+                            {{ $job->career_job_gender == 'Both' ? 'Male/Famale' : $job->career_job_gender }}
                         </p>
                     </div>
                     <p class="text-base md:text-lg lg:text-xl  my-2">Employee Type</p>

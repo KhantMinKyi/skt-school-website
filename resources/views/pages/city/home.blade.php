@@ -583,29 +583,24 @@
     <!-- END  HOME -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const words = document.querySelectorAll('#fading-text span');
+            // Animate fading text
+            document.querySelectorAll('#fading-text span')
+                .forEach((word, index) => word.style.setProperty('--index', index));
 
-            words.forEach((word, index) => {
-                word.style.setProperty('--index', index); // Set custom index for animation delay
-            });
-        });
-    </script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            if (window.innerWidth <= 1000) { // md: Tailwind breakpoint (1000px)
-                const video = document.getElementById('desktopVideo');
+            // Append video source based on screen width (only once)
+            const video = document.getElementById('desktopVideo');
+            if (video && !video.querySelector('source')) {
                 const source = document.createElement('source');
-                source.src = "{{ asset('videos/skt_city_campus.mp4') }}";
-                source.type = "video/mp4";
-                video.appendChild(source);
-            } else {
-                const video = document.getElementById('desktopVideo');
-                const source = document.createElement('source');
-                source.src = "{{ asset('videos/skt_city_campus1.mp4') }}";
+                const isMobile = window.innerWidth <= 1000;
+                source.src = isMobile ?
+                    "{{ asset('videos/skt_city_campus.mp4') }}" :
+                    "{{ asset('videos/skt_city_campus1.mp4') }}";
                 source.type = "video/mp4";
                 video.appendChild(source);
             }
         });
     </script>
-    <script src={{ asset('guests/js/general.js') }}></script>
+
+    <!-- External JS loaded after core logic -->
+    <script src="{{ asset('guests/js/general.js') }}"></script>
 @endsection

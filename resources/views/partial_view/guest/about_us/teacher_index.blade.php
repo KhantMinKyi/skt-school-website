@@ -88,88 +88,88 @@
     <!-- jQuery Script -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
-        $(document).ready(function() {
-            let perPage = 8; // Number of teachers per page
+        document.addEventListener("DOMContentLoaded", () => {
+            const perPage = 8;
             let currentPage = 1;
-            let allTeachers = $(".teacher-card").toArray(); // Convert to array for better handling
-            let filteredTeachers = [...allTeachers]; // Initially, all teachers are shown
+
+            const $teacherCards = $(".teacher-card");
+            const allTeachers = $teacherCards.toArray();
+            let filteredTeachers = [...allTeachers];
+
+            const $paginationInfo = $("#paginationInfo");
+            const $prevPage = $("#prevPage");
+            const $nextPage = $("#nextPage");
+
+            const modal = document.getElementById("imageModal");
+            const modalImage = document.getElementById("modalImage");
+            const modalTitle = document.getElementById("modalTitle");
+            const closeModal = document.getElementById("closeModal");
 
             function showPage(page) {
-                let start = (page - 1) * perPage;
-                let end = start + perPage;
-                $(".teacher-card").hide(); // Hide all
-                $(filteredTeachers.slice(start, end)).show(); // Show paginated ones
+                const start = (page - 1) * perPage;
+                const end = start + perPage;
 
-                let totalItems = filteredTeachers.length;
-                let totalPages = Math.ceil(totalItems / perPage) || 1;
+                $teacherCards.hide();
+                $(filteredTeachers.slice(start, end)).show();
 
-                // Update pagination info
-                $("#paginationInfo").text(
+                const totalItems = filteredTeachers.length;
+                const totalPages = Math.max(1, Math.ceil(totalItems / perPage));
+
+                $paginationInfo.text(
                     `Page ${page} of ${totalPages} | Showing ${start + 1}-${Math.min(end, totalItems)} of ${totalItems} items`
                 );
 
-                // Enable/disable buttons
-                $("#prevPage").prop("disabled", page === 1);
-                $("#nextPage").prop("disabled", page >= totalPages);
+                $prevPage.prop("disabled", page === 1);
+                $nextPage.prop("disabled", page >= totalPages);
             }
 
             function applyFilter(filter) {
-                if (filter === "all") {
-                    filteredTeachers = [...allTeachers]; // Reset to full list
-                } else {
-                    filteredTeachers = allTeachers.filter(el => $(el).data("category") === filter);
-                }
-                currentPage = 1; // Reset to first page
+                filteredTeachers = (filter === "all") ? [...allTeachers] :
+                    allTeachers.filter(el => el.dataset.category === filter);
+                currentPage = 1;
                 showPage(currentPage);
             }
 
-            // Initial display
-            showPage(currentPage);
+            // Event delegation for modal
+            document.body.addEventListener("click", (e) => {
+                const target = e.target.closest(".open-modal");
+                if (target) {
+                    modalImage.src = target.dataset.src;
+                    modalTitle.textContent = target.dataset.title;
+                    modal.classList.remove("hidden");
+                }
+            });
 
-            // Pagination click events
-            $("#prevPage").click(function() {
+            // Modal close events
+            closeModal.addEventListener("click", () => modal.classList.add("hidden"));
+            modal.addEventListener("click", (e) => {
+                if (e.target === modal) modal.classList.add("hidden");
+            });
+
+            // Pagination
+            $prevPage.on("click", () => {
                 if (currentPage > 1) {
                     currentPage--;
                     showPage(currentPage);
                 }
             });
 
-            $("#nextPage").click(function() {
+            $nextPage.on("click", () => {
                 if (currentPage * perPage < filteredTeachers.length) {
                     currentPage++;
                     showPage(currentPage);
                 }
             });
 
-            // Filter event
-            $(".filter-btn").click(function() {
-                let filter = $(this).data("filter");
-                applyFilter(filter);
-            });
-        });
-    </script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const modal = document.getElementById("imageModal");
-            const modalImage = document.getElementById("modalImage");
-            const modalTitle = document.getElementById("modalTitle");
-            const closeModal = document.getElementById("closeModal");
-
-            document.querySelectorAll(".open-modal").forEach(card => {
-                card.addEventListener("click", function() {
-                    modalImage.src = this.dataset.src;
-                    modalTitle.textContent = this.dataset.title;
-                    modal.classList.remove("hidden");
-                });
+            // Filters
+            $(".filter-btn").on("click", function() {
+                applyFilter(this.dataset.filter);
             });
 
-            closeModal.addEventListener("click", () => modal.classList.add("hidden"));
-            modal.addEventListener("click", (e) => {
-                if (e.target === modal) {
-                    modal.classList.add("hidden");
-                }
-            });
+            // Initial render
+            showPage(currentPage);
         });
     </script>
+
     <script src={{ asset('guests/js/general.js') }}></script>
 @endsection

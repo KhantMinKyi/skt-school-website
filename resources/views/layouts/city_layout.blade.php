@@ -386,7 +386,7 @@
 
 
 
-    <!-- Latest jQuery -->
+    {{-- <!-- Latest jQuery -->
     <script src="{{ asset('assets/js/jquery-1.12.4.min.js') }}"></script>
     <!-- jquery purecounter vanilla js -->
     <script src="{{ asset('assets/js/purecounter_vanilla.js') }}"></script>
@@ -537,7 +537,19 @@
                 }
             });
         });
-    </script>
+    </script> --}}
+
+    <!-- jQuery (should load first, no defer) -->
+    <script src="{{ asset('assets/js/jquery-1.12.4.min.js') }}"></script>
+
+    <!-- Non-jQuery scripts with defer -->
+    <script src="{{ asset('assets/js/purecounter_vanilla.js') }}"></script>
+    <script src="{{ asset('assets/js/scrolltopcontrol.js') }}"></script>
+    <script src="{{ asset('assets/owlcarousel/js/owl.carousel.min.js') }}"></script>
+    <script src="{{ asset('guests/js/script.js') }}"></script>
+    <!-- Custom script after all dependencies -->
+    <script src="{{ asset('assets/js/city-layout.js') }}" defer></script>
+
 
 </body>
 

@@ -219,7 +219,7 @@
                                 <p>09424463220</p>
                             </div>
                         </div>
-                        <div class="sf_contact grid grid-cols-2 gap-2">
+                        <div class="sf_contact grid grid-cols-2 gap-2 over">
                             <div>
                                 <span class="ti-email"></span>
                                 <h3 class="hidden sm:block">Email </h3>
@@ -263,14 +263,25 @@
 
 
     <!-- Latest jQuery -->
-    <script src="{{ asset('assets/js/jquery-1.12.4.min.js') }}"></script>
+    {{-- <script src="{{ asset('assets/js/jquery-1.12.4.min.js') }}"></script>
     <!-- jquery purecounter vanilla js -->
     <script src="{{ asset('assets/js/purecounter_vanilla.js') }}"></script>
     <script src="{{ asset('assets/js/scrolltopcontrol.js') }}"></script>
     <script src="{{ asset('assets/owlcarousel/js/owl.carousel.min.js') }}"></script>
     <!-- scripts js -->
+    <script src="{{ asset('guests/js/script.js') }}"></script> --}}
+
+    <!-- Combined JS files -->
+    <script src="{{ asset('assets/js/jquery-1.12.4.min.js') }}"></script>
+    <script src="{{ asset('assets/js/purecounter_vanilla.js') }}"></script>
+    <script src="{{ asset('assets/js/scrolltopcontrol.js') }}"></script>
+    <script src="{{ asset('assets/owlcarousel/js/owl.carousel.min.js') }}"></script>
     <script src="{{ asset('guests/js/script.js') }}"></script>
-    <script>
+    <script src="{{ asset('assets/js/riverside-layout.js') }}" defer></script>
+
+
+
+    {{-- <script>
         document.querySelectorAll('.dropdown-btn').forEach(button => {
             button.addEventListener('click', function(event) {
                 event.preventDefault();
@@ -390,7 +401,7 @@
                 }
             });
         });
-    </script>
+    </script> --}}
 
 </body>
 
