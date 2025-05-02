@@ -84,22 +84,22 @@
                             Negotiable
                         </div>
                     @else
-                        <i class="fa-solid fa-dollar-sign mr-4"></i>
-                        <p>{{ $job->career_job_maximun_salary }}</p>
+                        {{-- <i class="fa-solid fa-dollar-sign mr-4"></i> --}}
+                        <p> Up to - {{ $job->career_job_maximun_salary }} Kyats</p>
                     @endif
                 </div>
                 <div class="mt-10">
-                    <p class="text-base md:text-lg lg:text-xl  my-2">Open To</p>
+                    <p class="text-base md:text-lg lg:text-lg  my-2">Open To</p>
                     <div class=" flex align-middle justify-start">
-                        <i class="fa-solid fa-check text-lg lg:text-xl  mr-4 text-teal-400"></i>
-                        <p class="text-base md:text-lg lg:text-xl  ">
+                        <i class="fa-solid fa-check text-lg lg:text-lg  mr-4 text-teal-400"></i>
+                        <p class="text-base md:text-lg lg:text-lg  ">
                             {{ $job->career_job_gender == 'Both' ? 'Male/Famale' : $job->career_job_gender }}
                         </p>
                     </div>
-                    <p class="text-base md:text-lg lg:text-xl  my-2">Employee Type</p>
+                    <p class="text-base md:text-lg lg:text-lg  my-2">Employee Type</p>
                     <div class=" flex align-middle justify-start">
-                        <i class="fa-solid fa-check text-lg lg:text-xl  mr-4 text-teal-400"></i>
-                        <p class="text-base md:text-lg lg:text-xl  ">
+                        <i class="fa-solid fa-check text-lg lg:text-lg  mr-4 text-teal-400"></i>
+                        <p class="text-base md:text-lg lg:text-lg  ">
                             {{ $job->career_job_employee_type == 'Both' ? 'Local/Foreign' : $job->career_job_employee_type }}
                         </p>
                     </div>
