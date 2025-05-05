@@ -12130,8 +12130,8 @@ video {
   max-height: 12rem;
 }
 
-.max-h-96 {
-  max-height: 24rem;
+.max-h-52 {
+  max-height: 13rem;
 }
 
 .max-h-\[200px\] {
@@ -13999,6 +13999,10 @@ video {
 
   .md\:max-h-48 {
     max-height: 12rem;
+  }
+
+  .md\:max-h-96 {
+    max-height: 24rem;
   }
 
   .md\:max-h-\[360px\] {

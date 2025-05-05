@@ -209,7 +209,7 @@
                                             <a href="{{ route('river.home') }}">
                                                 {{-- <a href="#"> --}}
                                                 <img src="{{ asset('img/skt_riverside_campus.png') }}"
-                                                    class="img-fluid bounce-up zoom-click min-h-10 max-h-96 left-animate"
+                                                    class="img-fluid bounce-up zoom-click min-h-10 max-h-52 md:max-h-96 left-animate"
                                                     alt="">
                                                 {{-- <img src="{{ asset('img/skt_riverside_campus_aniamted_logo.webp') }}"
                                                     class="img-fluid bounce-up zoom-click" alt=""> --}}
@@ -221,7 +221,7 @@
                                         <div style="cursor: pointer;">
                                             <a href="{{ route('city.home') }}">
                                                 <img src="{{ asset('img/skt_city_campus.png') }}"
-                                                    class="img-fluid  bounce-up zoom-click min-h-10 max-h-96 right-animate"
+                                                    class="img-fluid  bounce-up zoom-click min-h-10 max-h-52 md:max-h-96 right-animate"
                                                     alt="">
                                                 {{-- <img src="{{ asset('img/skt_city_campus_aniamted_logo.webp') }}"
                                                     class="img-fluid  bounce-up zoom-click" alt=""> --}}
