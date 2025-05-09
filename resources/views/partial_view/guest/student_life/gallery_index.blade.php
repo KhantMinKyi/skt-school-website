@@ -7,7 +7,7 @@
         class="carousel max-h-screen slide ps_indicators_txt_icon ps_control_txt_icon data-bs-target kbrns_zoomInOut thumb_scroll_x swipe_x ps_easeOutQuart relative w-full overflow-hidden"
         data-ride="carousel" data-pause="hover" data-interval="10000" data-duration="2000">
         <!-- Wrapper For Slides -->
-        <div class="carousel-inner flex transition-transform duration-1000 ease-in-out  mt-[89px] sm:mt-0" id="carouselInner">
+        <div class="carousel-inner  transition-transform duration-1000 ease-in-out hidden sm:flex" id="carouselInner">
             <!-- First Slide -->
             <div class="carousel-item active w-full flex-shrink-0">
                 <img src="{{ asset('img/banner/student_life_banners/gallery/' . $branch->branch_short_name . '.webp') }}"
@@ -27,7 +27,7 @@
         </div>
     </div>
     <!-- START SCHOOL Facilities -->
-    <section id="" class="mt-10 mb-10">
+    <section id="" class="mb-10 mt-[89px] sm:mt-0">
         <div class="container mx-auto">
             <div class="section-title text-2xl md:text-4xl mb-6 font-bold text-center">
                 <h2>Our <span class="text-teal-500">Facilities</span></h2>
@@ -72,7 +72,7 @@
         </div>
     </section>
     <!-- END SCHOOL Facilities -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    {{-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> --}}
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             const modal = document.getElementById("imageModal");

@@ -8,8 +8,7 @@
         class="carousel  max-h-screen slide ps_indicators_txt_icon ps_control_txt_icon data-bs-target kbrns_zoomInOut thumb_scroll_x swipe_x ps_easeOutQuart relative w-full overflow-hidden"
         data-ride="carousel" data-pause="hover" data-interval="10000" data-duration="2000">
         <!-- Wrapper For Slides -->
-        <div class="carousel-inner flex transition-transform duration-1000 ease-in-out mt-[89px] sm:mt-0"
-            id="carouselInner">
+        <div class="carousel-inner  transition-transform duration-1000 ease-in-out hidden sm:flex" id="carouselInner">
             <!-- First Slide -->
             <div class="carousel-item active w-full flex-shrink-0">
                 <img src="{{ asset('img/banner/student_life_banners/alumini/' . $branch->branch_short_name . '.webp') }}"
@@ -29,7 +28,7 @@
         </div>
     </div>
     <section>
-        <div class="grid grid-cols-1 lg:grid-cols-2 py-2 lg:py-20"
+        <div class="grid grid-cols-1 lg:grid-cols-2 py-2 lg:py-20 mt-[89px] sm:mt-0"
             style="background-image: url({{ asset('assets/images/banner/course-bg.png') }}); background-size:cover; background-position: center center;">
             <div class="flex items-center justify-center p-4 md:p-20 italic font-semibold text-xs md:text-lg">
                 Today's BFI represents an evolving community bred from four

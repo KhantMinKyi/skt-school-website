@@ -5,7 +5,7 @@
         class="carousel max-h-screen slide ps_indicators_txt_icon ps_control_txt_icon data-bs-target kbrns_zoomInOut thumb_scroll_x swipe_x ps_easeOutQuart relative w-full overflow-hidden"
         data-ride="carousel" data-pause="hover" data-interval="10000" data-duration="2000">
         <!-- Wrapper For Slides -->
-        <div class="carousel-inner flex transition-transform duration-1000 ease-in-out mt-[89px] sm:mt-0" id="carouselInner">
+        <div class="carousel-inner flex transition-transform duration-1000 ease-in-out hidden sm:block" id="carouselInner">
             <!-- First Slide -->
             <div class="carousel-item active w-full flex-shrink-0">
                 <img src="{{ asset('img/banner/contact_banners/' . $our_statement->branch->branch_short_name . '.jpg') }}"
@@ -24,7 +24,7 @@
 
 
     <!-- START SCHOOL Statement -->
-    <section class="statement "
+    <section class="statement mt-[89px] sm:mt-0"
         style="background-image: url({{ asset('assets/images/banner/course-bg.png') }}); background-size:cover; background-position: center center;">
         <div class="flex justify-center items-center">
             <img src="{{ asset($our_statement->branch->branch_logo) }}" class=" max-h-[200px] md:max-h-[360px]"

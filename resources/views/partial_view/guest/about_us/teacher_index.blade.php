@@ -6,7 +6,7 @@
         class="carousel max-h-screen slide ps_indicators_txt_icon ps_control_txt_icon data-bs-target kbrns_zoomInOut thumb_scroll_x swipe_x ps_easeOutQuart relative w-full overflow-hidden"
         data-ride="carousel" data-pause="hover" data-interval="10000" data-duration="2000">
         <!-- Wrapper For Slides -->
-        <div class="carousel-inner flex transition-transform duration-1000 ease-in-out mt-[89px] sm:mt-0" id="carouselInner">
+        <div class="carousel-inner flex transition-transform duration-1000 ease-in-out hidden sm:block" id="carouselInner">
             <!-- First Slide -->
             <div class="carousel-item active w-full flex-shrink-0">
                 <img src="{{ asset('img/banner/contact_banners/' . $branch->branch_short_name . '.jpg') }}"
@@ -23,7 +23,7 @@
         </div>
     </div>
     <!-- START SCHOOL Teachers -->
-    <section id="" class="mt-10 mb-10">
+    <section id="" class="mt-[89px] sm:mt-0 mb-10 ">
         <div class="container mx-auto">
             <div class="section-title text-2xl md:text-4xl mb-10 font-bold text-center">
                 <h2>Our <span class="text-green-500">Teachers</span></h2>
@@ -86,7 +86,7 @@
         </div>
     </div>
     <!-- jQuery Script -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    {{-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> --}}
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             const perPage = 8;

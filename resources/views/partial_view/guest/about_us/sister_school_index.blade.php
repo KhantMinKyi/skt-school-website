@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="{{ asset('assets/css/sister_school_banner.css') }}" />
 
     <div id="kenburns_061"
-        class="carousel mt-[89px] sm:mt-0 max-h-screen slide ps_indicators_txt_icon ps_control_txt_icon data-bs-target kbrns_zoomInOut thumb_scroll_x swipe_x ps_easeOutQuart relative w-full overflow-hidden"
+        class="carousel hidden sm:block max-h-screen slide ps_indicators_txt_icon ps_control_txt_icon data-bs-target kbrns_zoomInOut thumb_scroll_x swipe_x ps_easeOutQuart relative w-full overflow-hidden"
         data-ride="carousel" data-pause="hover" data-interval="10000" data-duration="2000">
         <!-- Wrapper For Slides -->
         <div class="carousel-inner flex transition-transform duration-1000 ease-in-out" id="carouselInner">
@@ -49,7 +49,7 @@
         </button>
     </div>
     <!-- START SISTER SCHOOL  -->
-    <div class="partner-logo py-10  bg-gray-950">
+    <div class="partner-logo py-10  bg-gray-950 mt-[86px] sm:mt-0">
         <div class="text-center mb-10 text-2xl font-bold font-serif text-white">
             Our
             <span class=" text-emerald-400"> Sister Schools </span>

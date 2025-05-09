@@ -7,8 +7,7 @@
         class="carousel max-h-screen slide ps_indicators_txt_icon ps_control_txt_icon data-bs-target kbrns_zoomInOut thumb_scroll_x swipe_x ps_easeOutQuart relative w-full overflow-hidden"
         data-ride="carousel" data-pause="hover" data-interval="10000" data-duration="2000">
         <!-- Wrapper For Slides -->
-        <div class="carousel-inner flex transition-transform duration-1000 ease-in-out mt-[89px] sm:mt-0"
-            id="carouselInner">
+        <div class="carousel-inner  transition-transform duration-1000 ease-in-out hidden sm:flex" id="carouselInner">
             <!-- First Slide -->
             <div class="carousel-item active w-full flex-shrink-0">
                 <img src="{{ asset('img/banner/admission_banners/college_counseling_service/' . $branch->branch_short_name . '.webp') }}"
@@ -24,7 +23,8 @@
         </div>
     </div>
     <!-- START TOPIC-->
-    <section class="topic_content_area section-padding" style="background-image: url(assets/images/banner/topic.png);">
+    <section class="topic_content_area section-padding mt-[89px] sm:mt-0"
+        style="background-image: url(assets/images/banner/topic.png);">
         <div class="container mx-auto">
             <div class="section-title p-4">
                 <h2>{{ $branch->branch_name }}</h2>

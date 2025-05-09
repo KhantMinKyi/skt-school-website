@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="{{ asset('assets/css/slider.css') }}" />
     <!-- START POST -->
     <div id="kenburns_061"
-        class="carousel max-h-screen slide ps_indicators_txt_icon ps_control_txt_icon data-bs-target kbrns_zoomInOut thumb_scroll_x swipe_x ps_easeOutQuart relative w-full overflow-hidden"
+        class="carousel hidden sm:block max-h-screen slide ps_indicators_txt_icon ps_control_txt_icon data-bs-target kbrns_zoomInOut thumb_scroll_x swipe_x ps_easeOutQuart relative w-full overflow-hidden"
         data-ride="carousel" data-pause="hover" data-interval="10000" data-duration="2000">
         <!-- Wrapper For Slides -->
         <div class="carousel-inner flex transition-transform duration-1000 ease-in-out mt-20 sm:mt-0" id="carouselInner">
@@ -27,7 +27,7 @@
             </div>
         </div>
     </div>
-    <section id="post" class="blog_area section-padding"
+    <section id="post" class="blog_area section-padding mt-[89px] sm:mt-0"
         style="background-image: url({{ asset('assets/images/banner/course-bg.png') }}); background-size:cover; background-position: center center;">
         <div class="container mx-auto">
             <div class="section-title">
@@ -92,7 +92,7 @@
     </section>
     <!-- END POST -->
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    {{-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> --}}
     <script>
         $(document).ready(function() {
             let perPage = 10; // Number of teachers per page

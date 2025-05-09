@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="{{ asset('guests/css/contact_us.css') }}" />
     {{-- <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}" /> --}}
     <div id="kenburns_061"
-        class="carousel max-h-screen slide ps_indicators_txt_icon ps_control_txt_icon data-bs-target kbrns_zoomInOut thumb_scroll_x swipe_x ps_easeOutQuart relative w-full overflow-hidden"
+        class="carousel hidden sm:block max-h-screen slide ps_indicators_txt_icon ps_control_txt_icon data-bs-target kbrns_zoomInOut thumb_scroll_x swipe_x ps_easeOutQuart relative w-full overflow-hidden"
         data-ride="carousel" data-pause="hover" data-interval="10000" data-duration="2000">
         <!-- Wrapper For Slides -->
         <div class="carousel-inner flex transition-transform duration-1000 ease-in-out mt-20 sm:mt-0" id="carouselInner">
@@ -25,7 +25,7 @@
     </div>
 
     <!-- START ADDRESS -->
-    <section class="address_area section-padding">
+    <section class="address_area section-padding mt-[89px] sm:mt-0">
         <div class="container mx-auto">
             <div class=" text-center grid sm:grid-cols-3">
                 <div class="col-lg-4 col-sm-4 col-xs-12 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.1s"
