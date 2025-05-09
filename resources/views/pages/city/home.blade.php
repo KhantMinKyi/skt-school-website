@@ -137,7 +137,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 items-stretch ">
             <div x-data="{ show: false }" x-init="IntersectionObserver = new IntersectionObserver(([entry]) => {
                 if (entry.isIntersecting) show = true
-            }, { threshold: 0.8 });
+            }, { threshold: 0.5 });
             IntersectionObserver.observe($el);"
                 x-bind:class="show ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'"
                 class="flex justify-center items-center transition-all duration-1000 ease-out transform">
