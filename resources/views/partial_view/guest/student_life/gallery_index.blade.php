@@ -52,7 +52,7 @@
             </div>
 
             <!-- Fullscreen Modal -->
-            <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center hidden">
+            <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-80  items-center justify-center hidden">
                 <div class="relative max-w-4xl w-full p-4">
                     <button id="closeModal"
                         class="absolute top-2 right-4 text-white text-3xl p-4 cursor-pointer">&times;</button>
@@ -85,6 +85,7 @@
                     modalImage.src = this.dataset.src;
                     modalTitle.textContent = this.dataset.title;
                     modal.classList.remove("hidden");
+                    modal.classList.add("flex");
                 });
             });
 

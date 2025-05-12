@@ -6,7 +6,7 @@
         class="carousel max-h-screen slide ps_indicators_txt_icon ps_control_txt_icon data-bs-target kbrns_zoomInOut thumb_scroll_x swipe_x ps_easeOutQuart relative w-full overflow-hidden"
         data-ride="carousel" data-pause="hover" data-interval="10000" data-duration="2000">
         <!-- Wrapper For Slides -->
-        <div class="carousel-inner flex transition-transform duration-1000 ease-in-out hidden sm:block" id="carouselInner">
+        <div class="carousel-inner  transition-transform duration-1000 ease-in-out hidden sm:flex" id="carouselInner">
             <!-- First Slide -->
             <div class="carousel-item active w-full flex-shrink-0">
                 <img src="{{ asset('img/banner/contact_banners/' . $branch->branch_short_name . '.jpg') }}"
@@ -78,7 +78,7 @@
     </section>
     <!-- END SCHOOL Teachers -->
     <!-- Fullscreen Modal -->
-    <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center hidden z-50">
+    <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-80  items-center justify-center hidden z-50">
         <div class="relative max-w-4xl w-full p-4">
             <button id="closeModal" class="absolute top-2 right-4 text-white text-3xl p-4 cursor-pointer">&times;</button>
             <img id="modalImage" src="" class="w-full rounded-lg shadow-lg" />
@@ -137,6 +137,7 @@
                     modalImage.src = target.dataset.src;
                     modalTitle.textContent = target.dataset.title;
                     modal.classList.remove("hidden");
+                    modal.classList.add("flex");
                 }
             });
 
