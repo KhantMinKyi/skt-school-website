@@ -21,10 +21,10 @@ class GeneralRouteController extends Controller
     {
         $branch = Branch::with([
             'posts' => function ($query) {
-                $query->with('category')->where('post_is_show_front', 1)->where('post_is_active', 1);
+                $query->with('category')->where('post_is_show_front', 1)->where('post_is_active', 1)->orderBy('created_at','desc')->take(3);
             },
             'events' => function ($query) {
-                $query->with('category')->where('event_is_show_front', 1)->where('event_is_active', 1);
+                $query->with('category')->where('event_is_show_front', 1)->where('event_is_active', 1)->orderBy('created_at','desc')->take(3);
             },
             'principal_message',
             'history',
@@ -45,10 +45,10 @@ class GeneralRouteController extends Controller
     {
         $branch = Branch::with([
             'posts' => function ($query) {
-                $query->with('category')->where('post_is_show_front', 1)->where('post_is_active', 1);
+                $query->with('category')->where('post_is_show_front', 1)->where('post_is_active', 1)->orderBy('created_at','desc')->take(3);
             },
             'events' => function ($query) {
-                $query->with('category')->where('event_is_show_front', 1)->where('event_is_active', 1);
+                $query->with('category')->where('event_is_show_front', 1)->where('event_is_active', 1)->orderBy('created_at','desc')->take(3);
             },
             'principal_message',
             'history',
