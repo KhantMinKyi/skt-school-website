@@ -14,14 +14,14 @@ return new class extends Migration
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
             $table->string('post_banner');
-            $table->string('post_title', 100);
+            $table->longText('post_title');
             $table->date('post_created_date');
             $table->foreignId('post_created_user_id')->constrained('users');
             $table->foreignId('post_updated_user_id')->constrained('users');
             $table->foreignId('post_branch_id')->constrained('branches');
             $table->foreignId('post_category_id')->constrained('categories');
             $table->boolean('post_is_show_front')->default(0);
-            $table->text('post_body');
+            $table->longText('post_body');
             $table->string('post_video')->nullable();
             $table->longText('post_image')->nullable();
             $table->boolean('post_is_active')->default(1);
