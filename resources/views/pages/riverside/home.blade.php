@@ -589,7 +589,7 @@
                 const isMobile = window.innerWidth <= 1000;
                 source.src = isMobile ?
                     "{{ asset('videos/skt_riverside_campus.mp4') }}" :
-                    "{{ asset('videos/skt_riverside_campus1.mp4') }}";
+                    "{{ asset('videos/skt_riverside_campus.mp4') }}";
                 source.type = "video/mp4";
                 video.appendChild(source);
             }
