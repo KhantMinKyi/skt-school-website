@@ -47,11 +47,108 @@
                 students to take ownership of their learning.
             </div>
             <!-- END ROW -->
-
+            <hr>
         </div>
         <!-- END CONTAINER -->
     </section>
     <!-- END TOPIC -->
+
+
+    {{-- PYP Tab --}}
+    <section class="container mx-auto p-4">
+        <div>
+            <h2 class=" text-xl lg:text-2xl  mb-8 font-bold text-emerald-500">
+                Primary Years Programme (PYP) at SKT Riverside Campus
+            </h2>
+            <h3 class=" text-lg lg:text-xl  my-8 font-bold text-gray-700">
+                Inspiring Young Minds, Nurturing Global Citizens
+            </h3>
+            <p>
+                At SKT Riverside Campus, we are proud to implement the International Baccalaureate (IB) Primary Years
+                Programme (PYP) — a world-renowned curriculum framework designed for students aged 3 to 12.
+                The PYP nurtures and challenges young learners to become inquirers, thinkers, and communicators who are
+                empowered to take ownership of their learning and make a positive difference in the world around them.
+
+            </p>
+        </div>
+
+        <div class="w-full  mx-auto px-4 py-6">
+            <!-- Tab Navigation -->
+            <div class="flex border-b border-gray-200 space-x-4 overflow-x-auto" id="pypTabs">
+                <button data-tab="unique"
+                    class="pyp-tab py-2 px-4 font-semibold text-gray-600 whitespace-nowrap border-b-2 border-transparent">What
+                    Makes PYP Unique</button>
+                <button data-tab="components"
+                    class="pyp-tab py-2 px-4 font-semibold text-gray-600 whitespace-nowrap border-b-2 border-transparent">Key
+                    PYP Components</button>
+                <button data-tab="environment"
+                    class="pyp-tab py-2 px-4 font-semibold text-gray-600 whitespace-nowrap border-b-2 border-transparent">Learning
+                    at Riverside</button>
+            </div>
+
+            <!-- Tab Content -->
+            <div class="mt-6 space-y-4 text-gray-700">
+                <!-- Tab 1 -->
+                <div id="tab-unique" class="pyp-content">
+                    <h2 class="text-xl font-bold mb-2">What Makes the PYP Unique at SKT Riverside?</h2>
+                    <ul class="list-disc ml-6 space-y-2">
+                        <li><strong>Inquiry-Based Learning:</strong> Learning is driven by students’ natural curiosity. Our
+                            classrooms are dynamic spaces where students ask meaningful questions, explore concepts deeply,
+                            and reflect on their learning journeys.</li>
+                        <li><strong>Concept-Driven Curriculum:</strong> The PYP focuses on big ideas that go across subject
+                            boundaries. Through transdisciplinary themes, students learn to make connections between local
+                            and global contexts.</li>
+                        <li><strong>Student Agency:</strong>At SKT Riverside, students have voice, choice, and ownership.
+                            They are actively involved in planning, goal-setting, and assessing their own learning.</li>
+                        <li><strong>Whole-Child Development:</strong> We focus on academic excellence while nurturing
+                            social-emotional well-being, international-mindedness, and lifelong learning habits</li>
+                        <li><strong>Action-Oriented Learning:</strong> We encourage students to take action based on what
+                            they’ve learned — whether it’s helping their peers, initiating a community project, or spreading
+                            awareness about global issue</li>
+                    </ul>
+                </div>
+
+                <!-- Tab 2 -->
+                <div id="tab-components" class="pyp-content hidden">
+                    <h2 class="text-xl font-bold mb-2">Key Components of the PYP</h2>
+                    <p class="font-semibold mt-4">Transdisciplinary Themes:</p>
+                    <p class=" my-4">Learning is framed around six engaging themes that cross subject areas and promote
+                        global understanding.</p>
+                    <ul class="list-disc ml-6 space-y-1">
+                        <li>Who We Are</li>
+                        <li>Where We Are in Place and Time</li>
+                        <li>How We Express Ourselves</li>
+                        <li>How the World Works</li>
+                        <li>How We Organize Ourselves</li>
+                        <li>Sharing the Planet</li>
+                    </ul>
+
+                    <p class="font-semibold mt-4">The Learner Profile:</p>
+                    <p class="ml-4"><em>The IB Learner Profile is at the heart of all we do. We strive to develop students
+                            who are:</em></p>
+                    <ul class="list-disc ml-6 space-y-1">
+                        <li>Inquirers, Knowledgeable, Thinkers, Communicators, Principled, Open-minded, Caring, Risk-takers,
+                            Balanced, and Reflective.</li>
+                    </ul>
+                    <p class="font-semibold mt-4">Assessment for Learning:</p>
+                    <p class="ml-4">Ongoing assessments are used to inform teaching and guide students in understanding
+                        their progress. We emphasize growth, reflection, and goal setting over one-time test scores.</p>
+                </div>
+
+                <!-- Tab 3 -->
+                <div id="tab-environment" class="pyp-content hidden">
+                    <h2 class="text-xl font-bold mb-2">A Learning Environment Like No Other</h2>
+                    <p>Our Riverside Campus provides a safe, stimulating, and inclusive environment where learning is
+                        personalized and meaningful. Classrooms are rich with student voice, collaborative inquiry, and
+                        hands-on exploration.
+                    </p>
+                    <p class="mt-2">Whether in the classroom, on the playground, or in the community, SKT learners are
+                        constantly growing — not just academically, but as responsible, compassionate individuals prepared
+                        for the future.</p>
+                </div>
+            </div>
+        </div>
+    </section>
     <div class="py-10  bg-emerald-50">
         <h2 class=" text-xl lg:text-2xl text-center mb-8 font-bold text-gray-700">
             Key Features:
@@ -131,7 +228,8 @@
                         <div class="flex flex-col h-full">
                             <div class="flex justify-between items-start">
                                 <div class="text-lg lg:text-2xl font-extrabold">Assessment for Learning</div>
-                                <img src="{{ asset('assets/images/icon/assessment.svg') }}" class=" w-20" alt="" />
+                                <img src="{{ asset('assets/images/icon/assessment.svg') }}" class=" w-20"
+                                    alt="" />
                             </div>
 
                             <div class="mt-auto">
@@ -166,7 +264,8 @@
                             <div class="flex justify-between items-start">
                                 <div class="text-lg lg:text-2xl font-extrabold">Action & Community Engagement
                                 </div>
-                                <img src="{{ asset('assets/images/icon/community.svg') }}" class=" w-20" alt="" />
+                                <img src="{{ asset('assets/images/icon/community.svg') }}" class=" w-20"
+                                    alt="" />
                             </div>
                             <div class="mt-auto">
                                 <p class="text-xs md:text-sm opacity-75 font-semibold">Hover to flip!</p>
@@ -631,4 +730,30 @@
             </p>
         </div>
     </div>
+    <!-- Vanilla JS to handle tab switching -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabs = document.querySelectorAll('.pyp-tab');
+            const contents = document.querySelectorAll('.pyp-content');
+
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    const selected = tab.getAttribute('data-tab');
+
+                    // Update tab styles
+                    tabs.forEach(t => t.classList.remove('border-emerald-600', 'text-emerald-600'));
+                    tab.classList.add('border-emerald-600', 'text-emerald-600');
+
+                    // Show/Hide tab content
+                    contents.forEach(content => {
+                        content.classList.add('hidden');
+                    });
+                    document.getElementById(`tab-${selected}`).classList.remove('hidden');
+                });
+            });
+
+            // Set default active tab
+            tabs[0].click();
+        });
+    </script>
 @endsection
