@@ -237,10 +237,10 @@
                         <img src="{{ asset('assets/images/icon/student2.svg') }}" class="mr-4" alt="" />
                         <div>
                             <div class="flex justify-center">
-                                <span data-purecounter-start="0" data-purecounter-end="90" data-purecounter-duration="1"
-                                    class="purecounter"></span> <span>%</span>
+                                <span data-purecounter-start="0" data-purecounter-end="300" data-purecounter-duration="1"
+                                    class="purecounter"></span> <span>+</span>
                             </div>
-                            <p>Foreign Students</p>
+                            <p>Alumni Worldwide </p>
                         </div>
                     </div>
                 </div>
