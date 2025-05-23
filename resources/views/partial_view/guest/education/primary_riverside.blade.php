@@ -36,11 +36,6 @@
                 At SKT-Riverside Campus, we are committed to developing inquisitive, knowledgeable, and caring learners. As
                 a candidate school for the International Baccalaureate (IB) Primary Years Programme (PYP), we provide a
                 globally recognized inquiry-based approach to education that nurtures critical thinking, creativity, and
-                international-mindedness. We're a Candidate School for the IB Primary Years Programme.
-                <br><br>
-                We are committed to developing inquisitive, knowledgeable, and caring learners. As a candidate school for
-                the International Baccalaureate (IB) Primary Years Programme (PYP), we provide a globally recognized
-                inquiry-based approach to education that nurtures critical thinking, creativity, and
                 international-mindedness.
                 <br><br>
                 The IB PYP curriculum for Years 2-6 fosters a concept-driven and inquiry-led learning experience, empowering
@@ -101,10 +96,10 @@
                         <li><strong>Student Agency:</strong>At SKT Riverside, students have voice, choice, and ownership.
                             They are actively involved in planning, goal-setting, and assessing their own learning.</li>
                         <li><strong>Whole-Child Development:</strong> We focus on academic excellence while nurturing
-                            social-emotional well-being, international-mindedness, and lifelong learning habits</li>
+                            social-emotional well-being, international-mindedness, and lifelong learning habits.</li>
                         <li><strong>Action-Oriented Learning:</strong> We encourage students to take action based on what
                             they’ve learned — whether it’s helping their peers, initiating a community project, or spreading
-                            awareness about global issue</li>
+                            awareness about global issue.</li>
                     </ul>
                 </div>
 
@@ -614,7 +609,7 @@
     <div class="partner-logo py-10  bg-yellow-50">
         <div class="text-center text-lg lg:text-2xl font-bold font-serif text-teal-700">
             {{-- Sister Schools --}}
-            We aim our students to embody the IB PYP Learners Profile
+            We aim our students to embody the IB PYP Learner Profile
         </div>
         <div class="container mx-auto p-4">
             {{-- New Row --}}

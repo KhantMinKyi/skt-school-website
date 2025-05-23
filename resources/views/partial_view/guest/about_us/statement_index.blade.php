@@ -63,7 +63,7 @@
                 <div class="ab_content">
                     <h2 class=" text-2xl md:text-4xl font-semibold">
                         Our
-                        <span class="text-emerald-400">Value</span>
+                        <span class="text-emerald-400">Values</span>
                     </h2>
                     <p class="mt-4">
                         <span class="text-xl font-bold ">Respect</span>
@@ -97,7 +97,7 @@
                     <h2 class=" text-2xl md:text-4xl font-semibold">
                         Our
                         <span class="text-emerald-400">Philosophy</span>
-                    </h2>
+                    </h2>s
                     <p class=" text-gray-500 mt-4">
                     <div class="prose max-w-none">
                         {!! $our_statement->statement_philosophy !!}
