@@ -3393,7 +3393,7 @@ blockquote::before,
 * ----------------------------------------------------------------------------------------
 */
 .footer {
-    background: #1a2d62;
+    background: rgb(17 24 39 / var(--tw-bg-opacity, 1));
     padding-bottom: 40px;
 }
 .single_footer {
@@ -3591,7 +3591,7 @@ blockquote::before,
 .section-top {
     padding-top: 200px;
     position: relative;
-    background: url(../images/banner/section-top.png);
+    background: url(../../img/banner/sister_school/bfi.webp);
     background-size: cover;
     background-position: center;
     padding-bottom: 120px;
