@@ -71,13 +71,13 @@
             <!-- Tab Navigation -->
             <div class="flex border-b border-gray-200 space-x-4 overflow-x-auto" id="pypTabs">
                 <button data-tab="unique"
-                    class="pyp-tab py-2 px-4 font-semibold text-gray-600 whitespace-nowrap border-b-2 border-transparent text-sm sm:text-base">What
+                    class="pyp-tab py-2 px-4 font-semibold  whitespace-nowrap border-b-2 border-transparent text-sm sm:text-base">What
                     Makes PYP Unique</button>
                 <button data-tab="components"
-                    class="pyp-tab py-2 px-4 font-semibold text-gray-600 whitespace-nowrap border-b-2 border-transparent text-sm sm:text-base">Key
+                    class="pyp-tab py-2 px-4 font-semibold  whitespace-nowrap border-b-2 border-transparent text-sm sm:text-base">Key
                     PYP Components</button>
                 <button data-tab="environment"
-                    class="pyp-tab py-2 px-4 font-semibold text-gray-600 whitespace-nowrap border-b-2 border-transparent text-sm sm:text-base">Learning
+                    class="pyp-tab py-2 px-4 font-semibold  whitespace-nowrap border-b-2 border-transparent text-sm sm:text-base">Learning
                     at Riverside</button>
             </div>
 
