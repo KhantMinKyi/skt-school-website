@@ -8,9 +8,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description"
-        content="Welcome to SKT International School. Experience innovation, education, and growth in a world-class environment.">
+        content="Welcome to SKT International School in Yangon, Myanmar — offering world-class international education with certified teachers, a global curriculum, and modern facilities. Enroll now to experience innovation, academic excellence, and personal growth in a truly international environment. Discover why SKT is recognized as one of the top international schools in Yangon and across Myanmar.">
     <meta name="keywords"
-        content="SKT International School, Education, Innovation, Learning, Riverside, International School, Citycampus, Preschool, Yangon">
+        content="SKT International School, Education, Innovation, Learning, Riverside, International School, Citycampus, Preschool, Yangon , Myanmar , Rangoon , International school in yangon , International School in Myanmar , School , College , International ,international school Yangon, international school Myanmar, best school in Yangon, Myanmar education, SKT International, global curriculum, study in Yangon">
     <meta name="author" content="BFI Education Services">
 
     <meta property="og:title" content="SKT International School - Experience Innovation and Learning">
