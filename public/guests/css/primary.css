@@ -128,3 +128,40 @@ p.section-title-white {
   .will_hide_div h2{
     font-family: "Red Hat Display", sans-serif;
 }
+.pd_tab_area {
+  margin-top: 30px;
+  background: #fff none repeat scroll 0 0;
+  border: 1px solid rgba(0, 0, 0, 0.02);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.02);
+  display: block;
+  padding: 31px 32px;
+}
+.pd_tab_area p {
+  margin-bottom: 15px;
+  /* display: inline-block; */
+}
+.pd_tab_btn {
+  margin-bottom: 10px;
+  border: none;
+}
+.pd_tab_btn li {
+  display: block;
+  float: left;
+  margin-right: 10px;
+  padding-bottom: 11px;
+  position: relative;
+}
+.pd_tab_btn li a {
+  color: #000;
+  display: block;
+  font-weight: 400;
+  text-transform: capitalize;
+  padding: 7px 20px;
+  border-radius: 20px;
+  transition: 0.5s;
+}
+.pd_tab_btn li a.active {
+  background: #2eca7f;
+  color: #fff;
+  box-shadow: 4px 3px 5px rgba(0, 0, 0, 0.07);
+}

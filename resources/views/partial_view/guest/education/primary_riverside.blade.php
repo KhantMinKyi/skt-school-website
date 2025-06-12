@@ -1,6 +1,7 @@
 @extends('layouts.riverside_layout')
 
 @section('content')
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.10.111/pdf.min.js"></script>
     <link rel="stylesheet" href="{{ asset('assets/css/slider.css') }}" />
     <link rel="stylesheet" href="{{ asset('guests/css/primary.css') }}" />
     <div id="kenburns_061"
@@ -373,7 +374,7 @@
                     </p>
                     <p class="p-1 font-semibold text-gray-800 text-sm md:text-base lg:text-lg"> Aligning with global best
                         practices in
-                        education.
+                        education.We aim our students to embody the IB PYP Learner Profile
                     </p>
                 </div>
                 <div class="my-5">
@@ -713,6 +714,74 @@
             </div>
         </div>
     </div>
+
+
+    <section class="py-10">
+        <div class="mx-auto container text-black">
+            <div class="text-center text-lg lg:text-2xl font-bold font-serif text-teal-700">
+                NewsLetters
+            </div>
+            <div class="col-xs-12">
+                <div class="pd_tab_area fix">
+                    <ul class="pd_tab_btn nav nav-tabs" role="tablist">
+                        <li>
+                            <button
+                                class="tab-btn text-sm md:text-lg font-bold px-4 py-2 bg-green-500 rounded-xl text-white"
+                                onclick="openTab(event, 'tab1')" href="#description" role="tab"
+                                data-bs-toggle="tab">Newsletter 1</button>
+                        </li>
+                        {{-- <li>
+                                <button class="tab-btn text-sm md:text-lg font-bold px-4 py-2 rounded-xl"
+                                    onclick="openTab(event, 'tab2')" href="#information" role="tab"
+                                    data-bs-toggle="tab">
+                                    Assessment</button>
+                            </li>
+                            <li>
+                                <button class="tab-btn text-sm md:text-lg font-bold px-4 py-2 rounded-xl"
+                                    onclick="openTab(event, 'tab3')" href="#information" role="tab"
+                                    data-bs-toggle="tab">
+                                    Inclusion </button>
+                            </li> --}}
+                    </ul>
+
+                    <!-- Tab panes 1 -->
+                    <div role="tabpanel" class="tab-pane fade show tab-content " id="tab1">
+
+                        <div id="pdfThumbnails" class=" inline-block w-full ">
+                            <div class="pdf-item flex ">
+                                <canvas class="pdf-thumbnail w-48 h-auto cursor-pointer shadow-lg rounded-lg m-4"
+                                    data-pdf="{{ asset('pdf/newsletter/SKT-RC/2025 Newsletter 1.pdf') }}">
+                                </canvas>
+                            </div>
+                        </div>
+                    </div>
+                    {{-- <!-- Tab panes 2 -->
+                        <div role="tabpanel" class="tab-pane fade show tab-content hidden" id="tab2">
+                            <div id="pdfThumbnails" class=" inline-block w-full ">
+                                <div class="pdf-item flex ">
+                                    <canvas class="pdf-thumbnail w-48 h-auto cursor-pointer shadow-lg rounded-lg m-4"
+                                        data-pdf="{{ asset('pdf/policy/' . $branch->branch_short_name . '/Assessment policy_SKT 2023-2026_.pdf') }}">
+                                    </canvas>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Tab panes 3 -->
+                        <div role="tabpanel" class="tab-pane fade show tab-content hidden" id="tab3">
+                            <div id="pdfThumbnails" class=" inline-block w-full ">
+                                <div class="pdf-item flex ">
+                                    <canvas class="pdf-thumbnail w-48 h-auto cursor-pointer shadow-lg rounded-lg m-4"
+                                        data-pdf="{{ asset('pdf/policy/' . $branch->branch_short_name . '/Inclusion Policy 2023-2026.pdf') }}">
+                                    </canvas>
+                                </div>
+                            </div>
+                        </div> --}}
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+
     <div class="container mx-auto">
         <div class="p-4">
             <h2 class="text-lg lg:text-xl font-bold my-4">
@@ -749,6 +818,44 @@
 
             // Set default active tab
             tabs[0].click();
+        });
+    </script>
+    <script src="{{ asset('assets/js/jquery-1.12.4.min.js') }}"></script>
+    <script>
+        function openTab(event, tabId) {
+            document.querySelectorAll('.tab-content').forEach(tab => tab.classList.add('hidden'));
+            document.getElementById(tabId).classList.remove('hidden');
+
+            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('bg-green-500', 'border-green-500',
+                'text-white'));
+            event.currentTarget.classList.add('bg-green-500', 'border-green-500',
+                'text-white');
+        }
+    </script>
+    <script>
+        const pdfjsLib = window['pdfjs-dist/build/pdf'];
+        pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.10.111/pdf.worker.min.js';
+
+        document.querySelectorAll('.pdf-thumbnail').forEach(async (canvas) => {
+            const pdfUrl = canvas.dataset.pdf;
+            const pdf = await pdfjsLib.getDocument(pdfUrl).promise;
+            const page = await pdf.getPage(1); // First page as cover
+            const viewport = page.getViewport({
+                scale: 0.5
+            });
+            const context = canvas.getContext('2d');
+            canvas.width = viewport.width;
+            canvas.height = viewport.height;
+            page.render({
+                canvasContext: context,
+                viewport: viewport
+            });
+        });
+    </script>
+    <script>
+        $(document).on('click', '.pdf-thumbnail', function() {
+            const pdfUrl = $(this).data('pdf');
+            window.open(pdfUrl, '_blank');
         });
     </script>
 @endsection
