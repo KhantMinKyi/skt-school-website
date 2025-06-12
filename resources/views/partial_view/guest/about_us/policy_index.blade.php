@@ -20,7 +20,7 @@
                     <h1 id="fading-text" class=" text-2xl lg:text-5xl xl:text-7xl text-center  ml-10">
                         <span class="text-emerald-400">{{ $branch->branch_name }}</span>
                         <br>
-                        <div class="text-white mt-4 hidden sm:block">Policy </div>
+                        <div class="text-white mt-4 hidden sm:block">Our Policies </div>
                     </h1>
                 </div>
             </div>
@@ -87,6 +87,12 @@
                                 <div class="pdf-item flex ">
                                     <canvas class="pdf-thumbnail w-48 h-auto cursor-pointer shadow-lg rounded-lg m-4"
                                         data-pdf="{{ asset('pdf/policy/' . $branch->branch_short_name . '/Admission Policy SKT 2023-2026.pdf') }}">
+                                    </canvas>
+                                    <canvas class="pdf-thumbnail w-48 h-auto cursor-pointer shadow-lg rounded-lg m-4"
+                                        data-pdf="{{ asset('pdf/policy/' . $branch->branch_short_name . '/240821 Communication Policy.pdf') }}">
+                                    </canvas>
+                                    <canvas class="pdf-thumbnail w-48 h-auto cursor-pointer shadow-lg rounded-lg m-4"
+                                        data-pdf="{{ asset('pdf/policy/' . $branch->branch_short_name . '/250520 SKT Riverside Parents&Students Handbook 25-26.pdf') }}">
                                     </canvas>
                                 </div>
                             </div>

@@ -13988,6 +13988,10 @@ video {
     margin-top: 1rem;
   }
 
+  .md\:mt-10 {
+    margin-top: 2.5rem;
+  }
+
   .md\:block {
     display: block;
   }

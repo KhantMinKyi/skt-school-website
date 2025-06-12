@@ -90,6 +90,15 @@
                         achievement in all
                         aspects of schooling and community action.</p>
                     </p>
+                    {{-- new Statement --}}
+                    <h2 class=" text-2xl md:text-4xl font-semibold mt-4 md:mt-10">
+                       Our 
+                        <span class="text-emerald-400">Just Cause</span>
+                    </h2>
+                    <p class="text-xl font-bold  pb-2 pt-4"> Keeping every student engaged</p>
+                    </p>
+                </div>
+                <div class="ab_content">
                 </div>
             </div>
             <div class=" max-w-2xl p-10 flex justify-center items-center">
@@ -97,7 +106,7 @@
                     <h2 class=" text-2xl md:text-4xl font-semibold">
                         Our
                         <span class="text-emerald-400">Philosophy</span>
-                    </h2>s
+                    </h2>
                     <p class=" text-gray-500 mt-4">
                     <div class="prose max-w-none">
                         {!! $our_statement->statement_philosophy !!}
@@ -120,7 +129,7 @@
 
 
             </div>
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 text-center mt-4">
+         <div class="grid md:grid-cols-2 xl:grid-cols-4 text-center mt-4">
                 <div class="mx-2 mb-2">
                     <div class="count-box rounded-lg flex justify-center">
                         {{-- <i class="ti-face-smile"></i> --}}
@@ -128,9 +137,11 @@
                         {{-- <i class="fa-solid fa-chalkboard-user"></i> --}}
                         {{-- <span id="counter" class="text-3xl font-bold text-gray-800 mx-4">0</span> --}}
                         <div>
-                            <span data-purecounter-start="0" data-purecounter-end="152" data-purecounter-duration="1"
-                                class="purecounter"></span>
-                            <p>Teachers</p>
+                            <div class="flex justify-center">
+                                <span data-purecounter-start="0" data-purecounter-end="92" data-purecounter-duration="1"
+                                    class="purecounter"></span> <span>%</span>
+                            </div>
+                            <p>Foreign Teachers</p>
                         </div>
                     </div>
                 </div>
@@ -164,9 +175,11 @@
                         {{-- <i class="fa fa-graduation-cap text-red-500" style="color: #bb0852"></i> --}}
                         <img src="{{ asset('assets/images/icon/student2.svg') }}" class="mr-4" alt="" />
                         <div>
-                            <span data-purecounter-start="0" data-purecounter-end="645" data-purecounter-duration="1"
-                                class="purecounter"></span>
-                            <p> Students</p>
+                            <div class="flex justify-center">
+                                <span data-purecounter-start="0" data-purecounter-end="300" data-purecounter-duration="1"
+                                    class="purecounter"></span> <span>+</span>
+                            </div>
+                            <p> Alumni Worldwide </p>
                         </div>
                     </div>
                 </div>

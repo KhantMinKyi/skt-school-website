@@ -36,8 +36,7 @@
                 MISA. These schools, each with rich histories and cultures of their own, have evolved into a cohesive
                 community that embraces the diverse traditions and values of its founding institutions. There is no better
                 representation of the important history that makes up the fabric of today’s BFI than our alumni community.
-                As you value the memories and mission of your own alma mater, take the time to visit our campus, read Quest
-                magazine, and connect with your favourite faculty members who are still at BFI – you’ll see these values
+                As you value the memories and mission of your own alma mater, take the time to visit our campus and connect with your favourite faculty members who are still at BFI – you’ll see these values
                 reflected and celebrated in our current culture.
                 Please join us at an event, consider volunteering and contact our Development Office to learn more about the
                 many ways you can get involved! For more information please contact the Development Office at

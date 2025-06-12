@@ -30,7 +30,7 @@
             <div class="section-title p-4">
                 <h2>{{ $branch->branch_name }}</h2>
                 <p>
-                    Primary <span class="text-emerald-500">Year 3 - 6 </span>
+                    Primary <span class="text-emerald-500">Year 2 - 6 </span>
                 </p>
             </div>
             <div class=" text-sm md:text-base lg:text-lg p-4">

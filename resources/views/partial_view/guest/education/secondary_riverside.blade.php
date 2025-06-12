@@ -33,7 +33,8 @@
                 </p>
             </div>
             <div class=" text-base md:text-lg p-4">
-                Our Lower Secondary Program follows the Cambridge International Secondary 1 curriculum,
+                Our Lower Secondary Program follows the Cambridge International Secondary 1 curriculum, equipping them with essential knowledge and skills
+            for an ever-changing world.
             </div>
             <!-- END ROW -->
         </div>
@@ -126,8 +127,7 @@
     </div>
     <div class="container mx-auto my-8">
         <div class=" text-base lg:text-lg  p-4">
-            equipping them with essential knowledge and skills
-            for an ever-changing world.
+
         </div>
         <div class="flex justify-center">
             <hr class="my-10 w-60 ">

@@ -44,9 +44,7 @@
                     class="py-4 pl-8 text-gray-100 font-bold hover:bg-gray-900 bg-opacity-0 w-full text-left"> Our
                     History</a>
                 <a href="{{ route('our-statement.home', $layout_branch->branch_short_name) }}"
-                    class="py-4 pl-8 text-gray-100 font-bold hover:bg-gray-900 bg-opacity-0 w-full text-left"> Our
-                    Mission , Vision
-                    , Philosophy</a>
+                    class="py-4 pl-8 text-gray-100 font-bold hover:bg-gray-900 bg-opacity-0 w-full text-left"> Our Mission and Vision</a>
                 <a href="{{ route('our-teachers.home', $layout_branch->branch_short_name) }}"
                     class="py-4 pl-8 text-gray-100 font-bold hover:bg-gray-900 bg-opacity-0 w-full text-left"> Our
                     Teachers</a>
@@ -56,7 +54,7 @@
                     Schools</a>
                 <a href="{{ route('policy.home', $layout_branch->branch_short_name) }}"
                     class="py-4 pl-8 text-gray-100 font-bold hover:bg-gray-900 bg-opacity-0 w-full text-left">
-                    Policy</a>
+                    Our Policies</a>
 
             </div>
         </div>

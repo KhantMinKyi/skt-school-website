@@ -36,17 +36,17 @@
                 <div class="filter-btn bg-gray-800 p-3 m-2 rounded-lg hover:bg-gray-900 font-semibold cursor-pointer"
                     data-filter="principal">Head of School</div>
                 <div class="filter-btn bg-gray-800 p-3 m-2 rounded-lg hover:bg-gray-900 font-semibold cursor-pointer"
-                    data-filter="vice-principal">Deputy Head of School</div>
+                    data-filter="vice-principal">Senior Leadership Team</div>
                 <div class="filter-btn bg-gray-800 p-3 m-2 rounded-lg hover:bg-gray-900 font-semibold cursor-pointer"
                     data-filter="secondary">Secondary</div>
-                <div class="filter-btn bg-gray-800 p-3 m-2 rounded-lg hover:bg-gray-900 font-semibold cursor-pointer"
-                    data-filter="lower-secondary">Lower Secondary</div>
+                {{-- <div class="filter-btn bg-gray-800 p-3 m-2 rounded-lg hover:bg-gray-900 font-semibold cursor-pointer"
+                    data-filter="lower-secondary">Lower Secondary</div> --}}
                 <div class="filter-btn bg-gray-800 p-3 m-2 rounded-lg hover:bg-gray-900 font-semibold cursor-pointer"
                     data-filter="primary">Primary</div>
                 <div class="filter-btn bg-gray-800 p-3 m-2 rounded-lg hover:bg-gray-900 font-semibold cursor-pointer"
                     data-filter="kg">KG</div>
                 <div class="filter-btn bg-gray-800 p-3 m-2 rounded-lg hover:bg-gray-900 font-semibold cursor-pointer"
-                    data-filter="assistant">Assistant</div>
+                    data-filter="assistant">Other Academic Staff</div>
             </div>
 
             <!-- Teachers List -->
