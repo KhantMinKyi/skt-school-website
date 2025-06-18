@@ -56,46 +56,35 @@
                         </h2>
                         <p class=" text-gray-500">
                             Welcome to the Welfare Department at SKT International School. I’m <b class="text-emerald-400">
-                                Guvanch Odeniyazov </b>, and
-                            as <b class="text-emerald-400"> Head of Welfare </b>, my role is to support the overall
-                            well-being
-                            of our students—socially,
-                            emotionally, and
-                            morally—while helping them grow into responsible and compassionate individuals.
+                                Dovran Abdyrahmanov </b>, and
+                            as <b class="text-emerald-400"> Head of Welfare </b>, it is my privilege to support the overall
+                            wellbeing of our students—socially, emotionally, and morally—while guiding them to grow into
+                            responsible, compassionate individuals.
 
-                            We implement the Character Education Program, built on the foundation of Character First
-                            Education,
-                            the world’s largest character-based initiative for schools. This program helps students
-                            understand
-                            and live by core universal values such as respect, honesty, and fairness.For <b
+                            Our department leads the Character Education Program, based on Character First Education, the
+                            world’s largest character-based initiative for schools. This program helps students understand
+                            and embody universal values such as respect, honesty, empathy and fairness. For <b
                                 class="text-emerald-400"> Years 7–9 </b>, we use the
-                            <b class="text-emerald-400"> Pathways: Values in Action </b> book, which turns these values into
-                            lived experiences that shape our
-                            students into engaged, empathetic global citizens.
+                            <b class="text-emerald-400"> Pathways: Values in Action </b> book, which transforms these values
+                            into practical, lived experiences, shaping our students into empathetic, engaged global
+                            citizens.
 
-                            Beyond the classroom, we offer a wide range of welfare activities that promote connection,
-                            confidence, and character.<b class="text-emerald-400"> For example, our indoor/outdoor
-                                activities
-                                like picnics, movie nights,
-                                and BBQs encourage teamwork and social bonding, while donation programs teach compassion and
-                                social
-                                responsibility through giving and community support. </b> Other activities include DEAR
-                            Time,
-                            birthday
-                            celebrations, sports tournaments, clubs, fundraising events, holiday celebrations, and
-                            excursions.
-
-                            We also conduct home visits to better understand each student’s background and provide
-                            personalized
-                            care and support.
-
-                            Please feel free to reach out—we’re here to help every student thrive.
-                            Warm regards,
+                            Beyond the classroom, we offer a wide range of welfare activities designed to build connection,
+                            confidence, and character. These include <b class="text-emerald-400"> indoor/outdoor events like
+                                picnics, movie nights, BBQs, and donation drives </b> that encourage teamwork, social
+                            bonding, and community spirit. Other initiatives such as DEAR Time, birthday celebrations,
+                            sports tournaments, clubs, fundraising events, holiday celebrations, and excursions help create
+                            a vibrant and inclusive school culture.
+                            <br>
+                            We also conduct home visits to better understand each student’s background and offer tailored care and support. Please don’t hesitate to reach out—our door is always open. We are here to help every student feel supported, valued, and ready to thrive.
                         </p>
                     </div>
                     <div class="abmv mt-4 principal-message ">
+                        <p class=" text-base md:text-lg italic">
+                            Warm regards,
+                        </p>
                         <p class=" text-lg md:text-xl italic">
-                            Guvanch Odeniyazov
+                            Dovran Abdyrahmanov
                         </p>
                         <p class=" text-sm md:text-md italic">
                             Head of Welfare
@@ -105,7 +94,7 @@
                 <div class="flex justify-center items-center flex-col">
                     <img class="w-[200px] h-[200px] md:w-[420px] md:h-[420px] object-cover rounded-full"
                         src="{{ asset('img/welfare_data/' . $branch->branch_short_name . '.jpg') }}" alt="" />
-                    <p class="mt-4 bold text-xl md:text-2xl italic"> Guvanch Odeniyazov</p>
+                    <p class="mt-4 bold text-xl md:text-2xl italic"> Dovran Abdyrahmanov</p>
                 </div>
             </div>
         </section>

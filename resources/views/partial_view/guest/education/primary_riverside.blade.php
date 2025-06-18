@@ -728,7 +728,7 @@
                             <button
                                 class="tab-btn text-sm md:text-lg font-bold px-4 py-2 bg-green-500 rounded-xl text-white"
                                 onclick="openTab(event, 'tab1')" href="#description" role="tab"
-                                data-bs-toggle="tab">Newsletter 1</button>
+                                data-bs-toggle="tab">Newsletter </button>
                         </li>
                         {{-- <li>
                                 <button class="tab-btn text-sm md:text-lg font-bold px-4 py-2 rounded-xl"
@@ -751,6 +751,9 @@
                             <div class="pdf-item flex ">
                                 <canvas class="pdf-thumbnail w-48 h-auto cursor-pointer shadow-lg rounded-lg m-4"
                                     data-pdf="{{ asset('pdf/newsletter/SKT-RC/2025 Newsletter 1.pdf') }}">
+                                </canvas>
+                                <canvas class="pdf-thumbnail w-48 h-auto cursor-pointer shadow-lg rounded-lg m-4"
+                                    data-pdf="{{ asset('pdf/newsletter/SKT-RC/2025 Newsletter 2.pdf') }}">
                                 </canvas>
                             </div>
                         </div>

@@ -54,10 +54,10 @@
             style="background-image: url({{ asset('assets/images/banner/course-bg.png') }}); background-size:cover; background-position: center center;">
             <div class="flex flex-col items-center justify-center gap-2 mt-10 lg:mt-0">
                 {{-- <img src="{{ asset('img/banner-hero.png') }}" class=" home-banner-hero" alt="" /> --}}
-                <img src="{{ asset('img/user-dummy.png') }}"
+                <img src="{{ asset('img/alumni_data/alumni.jpg') }}"
                     class=" home-banner-hero rounded-full object-cover h-[240px] w-[240px] lg:h-[420px] lg:w-[420px]"
                     alt="" />
-                <p class="font-semibold">John Doe</p>
+                <p class="font-semibold">Ismail @ Nay Win</p>
                 <p class="italic font-semibold">Alumni Principal</p>
             </div>
             <div class="flex items-center justify-center p-4 md:p-20 italic font-semibold text-xs md:text-lg">

@@ -94,6 +94,9 @@
                                     <canvas class="pdf-thumbnail w-48 h-auto cursor-pointer shadow-lg rounded-lg m-4"
                                         data-pdf="{{ asset('pdf/policy/' . $branch->branch_short_name . '/250520 SKT Riverside Parents&Students Handbook 25-26.pdf') }}">
                                     </canvas>
+                                    <canvas class="pdf-thumbnail w-48 h-auto cursor-pointer shadow-lg rounded-lg m-4"
+                                        data-pdf="{{ asset('pdf/policy/' . $branch->branch_short_name . '/240914 SKT Fire safety Policy.pdf') }}">
+                                    </canvas>
                                 </div>
                             </div>
                         </div>
