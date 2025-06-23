@@ -142,9 +142,9 @@
                     class="py-4 pl-8 text-gray-100 font-bold hover:bg-gray-900 bg-opacity-0 w-full text-left"> College
                     Counseling
                     Service</a>
-                <a href="{{ route('career.home', $layout_branch->branch_short_name) }}"
+                {{-- <a href="{{ route('career.home', $layout_branch->branch_short_name) }}"
                     class="py-4 pl-8 text-gray-100 font-bold hover:bg-gray-900 bg-opacity-0 w-full text-left">
-                    Career</a>
+                    Career</a> --}}
 
 
             </div>
@@ -156,4 +156,7 @@
         <a href="{{ route('contact_us.home', $layout_branch->branch_short_name) }}"
             class="py-4 px-4 text-gray-100 font-bold hover:bg-gray-900 bg-opacity-90 w-full text-left"> <i
                 class="fa-solid fa-circle-check mr-2"></i> Contact</a>
+        <a href="{{ route('career.home', $layout_branch->branch_short_name) }}"
+            class="py-4 px-4 text-gray-100 font-bold hover:bg-gray-900 bg-opacity-90 w-full text-left"> <i
+                class="fa-solid fa-briefcase mr-2"></i> Join Us</a>
     </div>
