@@ -36,7 +36,8 @@
                 MISA. These schools, each with rich histories and cultures of their own, have evolved into a cohesive
                 community that embraces the diverse traditions and values of its founding institutions. There is no better
                 representation of the important history that makes up the fabric of today’s BFI than our alumni community.
-                As you value the memories and mission of your own alma mater, take the time to visit our campus and connect with your favourite faculty members who are still at BFI – you’ll see these values
+                As you value the memories and mission of your own alma mater, take the time to visit our campus and connect
+                with your favourite faculty members who are still at BFI – you’ll see these values
                 reflected and celebrated in our current culture.
                 Please join us at an event, consider volunteering and contact our Development Office to learn more about the
                 many ways you can get involved! For more information please contact the Development Office at
@@ -85,21 +86,21 @@
                         <button data-tab="profile"
                             class="tab-btn active-tab inline-flex items-center px-4 py-3 text-white bg-green-700 rounded-lg w-full dark:bg-green-600">
                             <i class="fa fa-check svg-button w-4 h-4 me-2"></i>
-                            2025
+                            2024
                         </button>
                     </li>
                     <li>
                         <button data-tab="dashboard"
                             class="tab-btn inline-flex items-center px-4 py-3 rounded-lg  bg-gray-50 w-full dark:bg-gray-800 ">
                             <i class="fa fa-check svg-button w-4 h-4 me-2"></i>
-                            2024
+                            2023
                         </button>
                     </li>
                     <li>
                         <button data-tab="settings"
                             class="tab-btn inline-flex items-center px-4 py-3 rounded-lg  bg-gray-50 w-full dark:bg-gray-800 ">
                             <i class="fa fa-check svg-button w-4 h-4 me-2"></i>
-                            2023
+                            2022
                         </button>
                     </li>
                 </ul>
@@ -108,93 +109,124 @@
                 <div class="p-6 bg-gray-50 text-medium text-gray-500 dark:text-gray-400 dark:bg-gray-800 rounded-lg w-full">
                     <div class="tab-content" id="tab-profile">
                         <div class="mt-4 div-tab-data">
-                            <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2">Alumni Dinner Night 2025</h3>
-                            <p>The 2025 Dinner Night was a memorable celebration of unity and success, hosted in Yangon with
-                                great
-                                enthusiasm. Families, students, and teachers shared laughter, enjoyed fun stage activities,
-                                and
-                                dined together. The Head of School’s inspiring message focused on building a brighter future
-                                and
-                                celebrating the spirit of togetherness at SKT.</p>
+                            <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2">Alumni movie night (Oct 2024)
+                            </h3>
+                            <p>🎬 Thank You for Joining Our Alumni Movie Night on September 21st! 🎉
+                                A big thank you to everyone who joined us for an unforgettable night at our Alumni Movie
+                                Night on September 21st! We had an amazing time reconnecting and enjoying the film together.
+                                Here’s a short recap video from the event! 🎥👇
+                                But the fun doesn’t stop here! We’re excited to announce our Alumni Reconnect Visits and
+                                other exciting alumni events coming up. If you’d like to join or get more information, feel
+                                free to reach out to our Alumni Officer at 09953483883.
+                                Let’s keep the alumni spirit alive! 🌟</p>
                             <div class="grid grid-cols-2 lg:grid-cols-4 my-4 gap-10">
-                                <img src="{{ asset('img/alumni_data/2025/SKT-RC1.jpg') }}"
+                                <img src="{{ asset('img/alumni_data/events/2024/SKT (1).png') }}"
                                     class=" hover:shadow-md home-banner-hero  object-cover cursor-pointer rounded  open-modal"
-                                    alt="" data-src="{{ asset('img/alumni_data/2025/SKT-RC1.jpg') }}"
+                                    alt="" data-src="{{ asset('img/alumni_data/events/2024/SKT (1).png') }}"
                                     data-title="Alumni Dinner Night 2025" />
-                                <img src="{{ asset('img/alumni_data/2025/SKT-RC2.jpg') }}"
+                                <img src="{{ asset('img/alumni_data/events/2024/SKT (2).png') }}"
                                     class=" hover:shadow-md home-banner-hero  object-cover cursor-pointer rounded  open-modal"
-                                    alt="" data-src="{{ asset('img/alumni_data/2025/SKT-RC2.jpg') }}"
+                                    alt="" data-src="{{ asset('img/alumni_data/events/2024/SKT (2).png') }}"
                                     data-title="Alumni Dinner Night 2025" />
-                                <img src="{{ asset('img/alumni_data/2025/SKT-RC3.jpg') }}"
+                                <img src="{{ asset('img/alumni_data/events/2024/SKT (3).png') }}"
                                     class=" hover:shadow-md home-banner-hero  object-cover cursor-pointer rounded  open-modal"
-                                    alt="" data-src="{{ asset('img/alumni_data/2025/SKT-RC3.jpg') }}"
+                                    alt="" data-src="{{ asset('img/alumni_data/events/2024/SKT (3).png') }}"
                                     data-title="Alumni Dinner Night 2025" />
-                                <img src="{{ asset('img/alumni_data/2025/SKT-RC4.jpg') }}"
+                                <img src="{{ asset('img/alumni_data/events/2024/SKT (4).png') }}"
                                     class=" hover:shadow-md home-banner-hero  object-cover cursor-pointer rounded  open-modal"
-                                    alt="" data-src="{{ asset('img/alumni_data/2025/SKT-RC4.jpg') }}"
+                                    alt="" data-src="{{ asset('img/alumni_data/events/2024/SKT (4).png') }}"
+                                    data-title="Alumni Dinner Night 2025" />
+                            </div>
+                        </div>
+                        <div class="mt-4 div-tab-data">
+                            <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2">Alumni Dinner (jan 2024 at
+                                Parkroyal Hotel)
+                            </h3>
+                            <p>🎉 Throwback to an unforgettable evening! 🌟
+                                A month ago, we gathered for our Alumni Reunion 2024, bringing together cherished memories,
+                                laughter, and lifelong connections. Here's a glimpse into the magical night—check out the
+                                photos below! 📸
+                                Tag your friends and share your favorite moments from the event. Let's keep the spirit
+                                alive! 💬💙 </p>
+                            <div class="grid grid-cols-2 lg:grid-cols-4 my-4 gap-10">
+                                <img src="{{ asset('img/alumni_data/events/2024/SKT (5).jpg') }}"
+                                    class=" hover:shadow-md home-banner-hero  object-cover cursor-pointer rounded  open-modal"
+                                    alt="" data-src="{{ asset('img/alumni_data/events/2024/SKT (5).jpg') }}"
+                                    data-title="Alumni Dinner Night 2025" />
+                                <img src="{{ asset('img/alumni_data/events/2024/SKT (6).jpg') }}"
+                                    class=" hover:shadow-md home-banner-hero  object-cover cursor-pointer rounded  open-modal"
+                                    alt="" data-src="{{ asset('img/alumni_data/events/2024/SKT (6).jpg') }}"
+                                    data-title="Alumni Dinner Night 2025" />
+                                <img src="{{ asset('img/alumni_data/events/2024/SKT (7).jpg') }}"
+                                    class=" hover:shadow-md home-banner-hero  object-cover cursor-pointer rounded  open-modal"
+                                    alt="" data-src="{{ asset('img/alumni_data/events/2024/SKT (7).jpg') }}"
+                                    data-title="Alumni Dinner Night 2025" />
+                                <img src="{{ asset('img/alumni_data/events/2024/SKT (8).jpg') }}"
+                                    class=" hover:shadow-md home-banner-hero  object-cover cursor-pointer rounded  open-modal"
+                                    alt="" data-src="{{ asset('img/alumni_data/events/2024/SKT (8).jpg') }}"
                                     data-title="Alumni Dinner Night 2025" />
                             </div>
                         </div>
                     </div>
                     <div class="tab-content hidden" id="tab-dashboard">
                         <div class="mt-4 div-tab-data">
-                            <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2">Alumni Dinner Night 2024</h3>
-                            <p>Dinner Night 2024 brought even more excitement and joy as the SKT family gathered once again
-                                in
-                                Yangon.
-                                The night was filled with colorful performances, delicious food, and warm memories. Our
-                                Head of School
-                                delivered a touching speech on progress, achievements, and the importance of staying
-                                connected
-                                as a
-                                school community.</p>
+                            <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2">Alumni Dinner Night 2023</h3>
+                            <p> 🤝👨‍🎤🎪"Reveling in the memories, reigniting friendships, and celebrating shared stories
+                                at our spectacular Alumni Night!"🎪👨‍🎤🤝 </p>
                             <div class="grid grid-cols-2 lg:grid-cols-4 my-4 gap-10">
-                                <img src="{{ asset('img/alumni_data/2025/SKT-RC1.jpg') }}"
+                                <img src="{{ asset('img/alumni_data/events/2023/SKT-RC1.jpg') }}"
                                     class=" hover:shadow-md home-banner-hero  object-cover cursor-pointer rounded  open-modal"
-                                    alt="" data-src="{{ asset('img/alumni_data/2025/SKT-RC1.jpg') }}"
-                                    data-title="Alumni Dinner Night 2025" />
-                                <img src="{{ asset('img/alumni_data/2025/SKT-RC2.jpg') }}"
+                                    alt="" data-src="{{ asset('img/alumni_data/events/2023/SKT-RC1.jpg') }}"
+                                    data-title="Alumni Dinner Night 2023" />
+                                <img src="{{ asset('img/alumni_data/events/2023/SKT-RC2.jpg') }}"
                                     class=" hover:shadow-md home-banner-hero  object-cover cursor-pointer rounded  open-modal"
-                                    alt="" data-src="{{ asset('img/alumni_data/2025/SKT-RC2.jpg') }}"
-                                    data-title="Alumni Dinner Night 2025" />
-                                <img src="{{ asset('img/alumni_data/2025/SKT-RC3.jpg') }}"
+                                    alt="" data-src="{{ asset('img/alumni_data/events/2023/SKT-RC2.jpg') }}"
+                                    data-title="Alumni Dinner Night 2023" />
+                                <img src="{{ asset('img/alumni_data/events/2023/SKT-RC3.jpg') }}"
                                     class=" hover:shadow-md home-banner-hero  object-cover cursor-pointer rounded  open-modal"
-                                    alt="" data-src="{{ asset('img/alumni_data/2025/SKT-RC3.jpg') }}"
-                                    data-title="Alumni Dinner Night 2025" />
-                                <img src="{{ asset('img/alumni_data/2025/SKT-RC4.jpg') }}"
+                                    alt="" data-src="{{ asset('img/alumni_data/events/2023/SKT-RC3.jpg') }}"
+                                    data-title="Alumni Dinner Night 2023" />
+                                <img src="{{ asset('img/alumni_data/events/2023/SKT-RC4.jpg') }}"
                                     class=" hover:shadow-md home-banner-hero  object-cover cursor-pointer rounded  open-modal"
-                                    alt="" data-src="{{ asset('img/alumni_data/2025/SKT-RC4.jpg') }}"
-                                    data-title="Alumni Dinner Night 2025" />
+                                    alt="" data-src="{{ asset('img/alumni_data/events/2023/SKT-RC4.jpg') }}"
+                                    data-title="Alumni Dinner Night 2023" />
                             </div>
                         </div>
                     </div>
                     <div class="tab-content hidden" id="tab-settings">
                         <div class="mt-4 div-tab-data">
-                            <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2">Alumni Dinner Night 2023</h3>
-                            <p>The 2023 Dinner Night was a heartwarming evening held in Yangon, where students, teachers,
-                                and
-                                families came together to celebrate another successful school year. The event featured
-                                musical
-                                performances, laughter-filled games, and a shared meal. The Head of School's inspiring
-                                speech
-                                emphasized
-                                student growth and appreciation for the SKT community.</p>
+                            <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2">BFI Alumni Reunion at SKT
+                                International College on December 10, 2022</h3>
+                            <p>We organised this year's BFI Alumni Reunion at SKT International College on December 10,
+                                2022. It was a wonderful evening full of chit-chat and laughter. Our alumni reminisced about
+                                their school days with their teachers, mentors and friends. We also played some games like
+                                the old times, and then had a delightful dinner.
+                                We thank all our alumni and teachers for joining us and please keep in touch for the
+                                upcoming events.
+                                ပြီးခဲ့သော 2022 ခုနှစ် ဒီဇင်ဘာလ 10 ရက်နေ့ SKT International Collegeတွင် BFI Alumni Reunion
+                                ပွဲကို ကျင်းပခဲ့ပါတယ်။ ညနေခင်းတလျှောက် စပ်မိစပ်ရာများ ပြောဆိုရယ်မောခဲ့ကြပါတယ်။
+                                ကျွန်ုပ်တို့ရဲ့ ကျောင်းသားဟောင်းများဟာ သူတို့ရဲ့ ဆရာ၊ ဆရာမ၊ သူငယ်ချင်းများနဲ့ အတူ
+                                ကျောင်းနေစဉ် အမှတ်တရများအကြောင်း ပြန်လည်ပြောဆိုနေကြတာကို ကြည်နူးစရာ မြင်တွေ့ခဲ့ရပါတယ်။
+                                တချိန်ကျောင်းတက်စဉ်ကလို ပျော်စရာဂိမ်းများကို ကစားကြပြီး အတူတကွ ညစာစားခဲ့ကြပါတယ်။
+                                နောက်နှစ်တွေမှာလဲ ပြန်လည်လာရောက် ဆုံတွေ့ခွင့်ရဖို့ မျှော်လင့်ရင်း ယခု BFI Alumini Reunion
+                                ပွဲမှာ ပူးပေါင်းပါဝင်ပေးကြသော ကျောင်းသူ/သားဟောင်းများနှင့် ဆရာ၊ ဆရာမများအားလုံးကို
+                                ကျေးဇူးအထူးတင်ရှိကြောင်း ဤနေရာမှ ပြောကြားလိုပါတယ်။</p>
                             <div class="grid grid-cols-2 lg:grid-cols-4 my-4 gap-10">
-                                <img src="{{ asset('img/alumni_data/2025/SKT-RC1.jpg') }}"
+                                <img src="{{ asset('img/alumni_data/events/2022/SKT (1).jpg') }}"
                                     class=" hover:shadow-md home-banner-hero  object-cover cursor-pointer rounded  open-modal"
-                                    alt="" data-src="{{ asset('img/alumni_data/2025/SKT-RC1.jpg') }}"
+                                    alt="" data-src="{{ asset('img/alumni_data/events/2022/SKT (1).jpg') }}"
                                     data-title="Alumni Dinner Night 2025" />
-                                <img src="{{ asset('img/alumni_data/2025/SKT-RC2.jpg') }}"
+                                <img src="{{ asset('img/alumni_data/events/2022/SKT (2).jpg') }}"
                                     class=" hover:shadow-md home-banner-hero  object-cover cursor-pointer rounded  open-modal"
-                                    alt="" data-src="{{ asset('img/alumni_data/2025/SKT-RC2.jpg') }}"
+                                    alt="" data-src="{{ asset('img/alumni_data/events/2022/SKT (2).jpg') }}"
                                     data-title="Alumni Dinner Night 2025" />
-                                <img src="{{ asset('img/alumni_data/2025/SKT-RC3.jpg') }}"
+                                <img src="{{ asset('img/alumni_data/events/2022/SKT (3).jpg') }}"
                                     class=" hover:shadow-md home-banner-hero  object-cover cursor-pointer rounded  open-modal"
-                                    alt="" data-src="{{ asset('img/alumni_data/2025/SKT-RC3.jpg') }}"
+                                    alt="" data-src="{{ asset('img/alumni_data/events/2022/SKT (3).jpg') }}"
                                     data-title="Alumni Dinner Night 2025" />
-                                <img src="{{ asset('img/alumni_data/2025/SKT-RC4.jpg') }}"
+                                <img src="{{ asset('img/alumni_data/events/2022/SKT (4).jpg') }}"
                                     class=" hover:shadow-md home-banner-hero  object-cover cursor-pointer rounded  open-modal"
-                                    alt="" data-src="{{ asset('img/alumni_data/2025/SKT-RC4.jpg') }}"
+                                    alt="" data-src="{{ asset('img/alumni_data/events/2022/SKT (4).jpg') }}"
                                     data-title="Alumni Dinner Night 2025" />
                             </div>
                         </div>
@@ -224,21 +256,21 @@
                         <button data-tab="profile"
                             class="tab-btn-project active-tab inline-flex items-center px-4 py-3 text-white bg-green-700 rounded-lg w-full dark:bg-green-600">
                             <i class="fa fa-check svg-button-project w-4 h-4 me-2"></i>
-                            2025
-                        </button>
-                    </li>
-                    <li>
-                        <button data-tab="dashboard"
-                            class="tab-btn-project inline-flex items-center px-4 py-3 rounded-lg  bg-gray-50 w-full dark:bg-gray-800 ">
-                            <i class="fa fa-check svg-button-project w-4 h-4 me-2"></i>
                             2024
                         </button>
                     </li>
+                    {{-- <li>
+                        <button data-tab="dashboard"
+                            class="tab-btn-project inline-flex items-center px-4 py-3 rounded-lg  bg-gray-50 w-full dark:bg-gray-800 ">
+                            <i class="fa fa-check svg-button-project w-4 h-4 me-2"></i>
+                            2023
+                        </button>
+                    </li> --}}
                     <li>
                         <button data-tab="settings"
                             class="tab-btn-project inline-flex items-center px-4 py-3 rounded-lg  bg-gray-50 w-full dark:bg-gray-800 ">
                             <i class="fa fa-check svg-button-project w-4 h-4 me-2"></i>
-                            2023
+                            2020
                         </button>
                     </li>
                 </ul>
@@ -248,31 +280,42 @@
                     class="p-6 bg-gray-50 text-medium text-gray-500 dark:text-gray-400 dark:bg-gray-800 rounded-lg w-full">
                     <div class="tab-content-project" id="tab-profile">
                         <div class="mt-4 div-tab-data">
-                            <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2">Alumni Dinner Night 2025</h3>
-                            <p>The 2025 Dinner Night was a memorable celebration of unity and success, hosted in Yangon with
-                                great
-                                enthusiasm. Families, students, and teachers shared laughter, enjoyed fun stage activities,
-                                and
-                                dined together. The Head of School’s inspiring message focused on building a brighter future
-                                and
-                                celebrating the spirit of togetherness at SKT.</p>
+                            <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2">Alumni Donation Jan 2024</h3>
+                            <p>🌟 100 Bags of Hope: Spreading Joy Through Giving 🌟
+                                We are delighted to share the success of our 100 Bags of Hope event at SKT International
+                                School, where our incredible alumni, parents, teachers, SKT office team, and students came
+                                together to make a meaningful impact in the lives of children in need.
+                                🎨 A Day to Remember 🎨
+                                The event was filled with smiles and laughter as we enjoyed creative art activities, a
+                                delicious lunch, and a movie experience that brought the magic of cinema to our conference
+                                hall.
+                                🎒 Gifts of Hope 🎒
+                                To support their educational journey, we gifted schoolbags filled with essential stationery,
+                                umbrellas, and tasty snacks, ensuring the kids left with both joy and tools for a brighter
+                                future.
+                                🙏 Thank You to Our Amazing Community 🙏
+                                A heartfelt thank-you to everyone who contributed to this beautiful cause. Your kindness and
+                                generosity continue to inspire and bring hope to our community. Let’s keep spreading love
+                                and making a difference, together!
+                                #BFIAlumni #100BagsOfHope #CommunityGivingBack #BFI #SKTInternationalSchool
+                                #MakingADifference #JoyOfGiving #TogetherWeCan #HopeInAction #SchoolBag #Charity</p>
                             <div class="grid grid-cols-2 lg:grid-cols-4 my-4 gap-10">
-                                <img src="{{ asset('img/alumni_data/2025/SKT-RC1.jpg') }}"
+                                <img src="{{ asset('img/alumni_data/projects/2024/SKT-RC1.jpg') }}"
                                     class=" hover:shadow-md home-banner-hero  object-cover cursor-pointer rounded  open-modal"
-                                    alt="" data-src="{{ asset('img/alumni_data/2025/SKT-RC1.jpg') }}"
-                                    data-title="Alumni Dinner Night 2025" />
-                                <img src="{{ asset('img/alumni_data/2025/SKT-RC2.jpg') }}"
+                                    alt="" data-src="{{ asset('img/alumni_data/projects/2024/SKT-RC1.jpg') }}"
+                                    data-title="Alumni Donation Jan 2024" />
+                                <img src="{{ asset('img/alumni_data/projects/2024/SKT-RC2.jpg') }}"
                                     class=" hover:shadow-md home-banner-hero  object-cover cursor-pointer rounded  open-modal"
-                                    alt="" data-src="{{ asset('img/alumni_data/2025/SKT-RC2.jpg') }}"
-                                    data-title="Alumni Dinner Night 2025" />
-                                <img src="{{ asset('img/alumni_data/2025/SKT-RC3.jpg') }}"
+                                    alt="" data-src="{{ asset('img/alumni_data/projects/2024/SKT-RC2.jpg') }}"
+                                    data-title="Alumni Donation Jan 2024" />
+                                <img src="{{ asset('img/alumni_data/projects/2024/SKT-RC3.jpg') }}"
                                     class=" hover:shadow-md home-banner-hero  object-cover cursor-pointer rounded  open-modal"
-                                    alt="" data-src="{{ asset('img/alumni_data/2025/SKT-RC3.jpg') }}"
-                                    data-title="Alumni Dinner Night 2025" />
-                                <img src="{{ asset('img/alumni_data/2025/SKT-RC4.jpg') }}"
+                                    alt="" data-src="{{ asset('img/alumni_data/projects/2024/SKT-RC3.jpg') }}"
+                                    data-title="Alumni Donation Jan 2024" />
+                                <img src="{{ asset('img/alumni_data/projects/2024/SKT-RC4.jpg') }}"
                                     class=" hover:shadow-md home-banner-hero  object-cover cursor-pointer rounded  open-modal"
-                                    alt="" data-src="{{ asset('img/alumni_data/2025/SKT-RC4.jpg') }}"
-                                    data-title="Alumni Dinner Night 2025" />
+                                    alt="" data-src="{{ asset('img/alumni_data/projects/2024/SKT-RC4.jpg') }}"
+                                    data-title="Alumni Donation Jan 2024" />
                             </div>
                         </div>
                     </div>
@@ -310,31 +353,26 @@
                     </div>
                     <div class="tab-content-project hidden" id="tab-settings">
                         <div class="mt-4 div-tab-data">
-                            <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2">Alumni Dinner Night 2023</h3>
-                            <p>The 2023 Dinner Night was a heartwarming evening held in Yangon, where students, teachers,
-                                and
-                                families came together to celebrate another successful school year. The event featured
-                                musical
-                                performances, laughter-filled games, and a shared meal. The Head of School's inspiring
-                                speech
-                                emphasized
-                                student growth and appreciation for the SKT community.</p>
+                            <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2"> BFI Family and Alumni
+                                donation to over 1100 families who were severely affected by Covid -19. (Sep 2020)</h3>
+                            <p>Highlights video of our BFI Family and Alumni donation to over 1100 families who were
+                                severely affected by Covid -19.</p>
                             <div class="grid grid-cols-2 lg:grid-cols-4 my-4 gap-10">
-                                <img src="{{ asset('img/alumni_data/2025/SKT-RC1.jpg') }}"
+                                <img src="{{ asset('img/alumni_data/projects/2022/SKT (1).png') }}"
                                     class=" hover:shadow-md home-banner-hero  object-cover cursor-pointer rounded  open-modal"
-                                    alt="" data-src="{{ asset('img/alumni_data/2025/SKT-RC1.jpg') }}"
+                                    alt="" data-src="{{ asset('img/alumni_data/projects/2022/SKT (1).png') }}"
                                     data-title="Alumni Dinner Night 2025" />
-                                <img src="{{ asset('img/alumni_data/2025/SKT-RC2.jpg') }}"
+                                <img src="{{ asset('img/alumni_data/projects/2022/SKT (2).png') }}"
                                     class=" hover:shadow-md home-banner-hero  object-cover cursor-pointer rounded  open-modal"
-                                    alt="" data-src="{{ asset('img/alumni_data/2025/SKT-RC2.jpg') }}"
+                                    alt="" data-src="{{ asset('img/alumni_data/projects/2022/SKT (2).png') }}"
                                     data-title="Alumni Dinner Night 2025" />
-                                <img src="{{ asset('img/alumni_data/2025/SKT-RC3.jpg') }}"
+                                <img src="{{ asset('img/alumni_data/projects/2022/SKT (3).png') }}"
                                     class=" hover:shadow-md home-banner-hero  object-cover cursor-pointer rounded  open-modal"
-                                    alt="" data-src="{{ asset('img/alumni_data/2025/SKT-RC3.jpg') }}"
+                                    alt="" data-src="{{ asset('img/alumni_data/projects/2022/SKT (3).png') }}"
                                     data-title="Alumni Dinner Night 2025" />
-                                <img src="{{ asset('img/alumni_data/2025/SKT-RC4.jpg') }}"
+                                <img src="{{ asset('img/alumni_data/projects/2022/SKT (4).png') }}"
                                     class=" hover:shadow-md home-banner-hero  object-cover cursor-pointer rounded  open-modal"
-                                    alt="" data-src="{{ asset('img/alumni_data/2025/SKT-RC4.jpg') }}"
+                                    alt="" data-src="{{ asset('img/alumni_data/projects/2022/SKT (4).png') }}"
                                     data-title="Alumni Dinner Night 2025" />
                             </div>
                         </div>

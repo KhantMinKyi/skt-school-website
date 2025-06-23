@@ -6,8 +6,28 @@
 @endphp
 
 <head>
+    <title>@yield('title', 'SKT International School City Campus')</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="@yield('meta_description', 'Explore SKT International School`s City Campus in Yangon, Myanmar — delivering premier global education through experienced, certified teachers, an internationally benchmarked curriculum, and cutting-edge learning facilities. Join a dynamic community where innovation, academic distinction, and holistic student growth come together. See why SKT stands out as one of Yangon`s and Myanmar`s most trusted international schools.')">
+    <meta name="keywords" content="@yield('meta_keywords', 'school, education, Myanmar, Yangon, International')">
+    <meta name="robots" content="@yield('meta_robots', 'index, follow')">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="@yield('og_title', 'SKT International School City Campus')" />
+    <meta property="og:description" content="@yield('og_description', 'Explore SKT International School`s City Campus in Yangon, Myanmar — delivering premier global education through experienced, certified teachers, an internationally benchmarked curriculum, and cutting-edge learning facilities. Join a dynamic community where innovation, academic distinction, and holistic student growth come together. See why SKT stands out as one of Yangon`s and Myanmar`s most trusted international schools.')" />
+    <meta property="og:image" content="@yield('og_image',asset('assets/images/icon/icon.png'))" />
+    <meta property="og:url" content="@yield('og_url', request()->url())" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="@yield('twitter_title', 'SKT International School City Campus')">
+    <meta name="twitter:description" content="@yield('twitter_description', 'Explore SKT International School`s City Campus in Yangon, Myanmar — delivering premier global education through experienced, certified teachers, an internationally benchmarked curriculum, and cutting-edge learning facilities. Join a dynamic community where innovation, academic distinction, and holistic student growth come together. See why SKT stands out as one of Yangon`s and Myanmar`s most trusted international schools.')">
+    <meta name="twitter:image" content="@yield('twitter_image', asset('assets/images/icon/icon.png'))">
+
+
+
     {{-- <script src="https://cdn.tailwindcss.com"></script> --}}
     {{-- @vite('resources/css/app.css') --}}
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -16,7 +36,6 @@
     <link rel="stylesheet" href="{{ asset('assets/owlcarousel/css/owl.carousel.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/owlcarousel/css/owl.theme.css') }}">
     <link rel="stylesheet" href="{{ asset('guests/css/footer.css') }}" />
-    <title>SKT International School</title>
     <link rel="icon" href="{{ asset('assets/images/icon/icon.png') }}" type="image/png">
     <link rel="stylesheet" href="{{ asset('guests/css/nav.css') }}" />
     <style>

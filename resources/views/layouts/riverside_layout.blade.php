@@ -6,8 +6,27 @@
 @endphp
 
 <head>
+    <title>@yield('title', 'SKT International School Riverside Campus')</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="@yield('meta_description', 'Welcome to SKT International School`s Riverside Campus in Yangon, Myanmar — where exceptional international education meets innovation and excellence. Our certified educators, globally recognized curriculum, and state-of-the-art facilities create the perfect environment for academic success and personal development. Enroll today to join a vibrant community that inspires lifelong learning. Discover why SKT is one of the most respected and sought-after international schools in Yangon and throughout Myanmar.')">
+    <meta name="keywords" content="@yield('meta_keywords', 'school, education, Myanmar, Yangon, International')">
+    <meta name="robots" content="@yield('meta_robots', 'index, follow')">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="@yield('og_title', 'SKT International School Riverside Campus')" />
+    <meta property="og:description" content="@yield('og_description', 'Welcome to SKT International School`s Riverside Campus in Yangon, Myanmar — where exceptional international education meets innovation and excellence. Our certified educators, globally recognized curriculum, and state-of-the-art facilities create the perfect environment for academic success and personal development. Enroll today to join a vibrant community that inspires lifelong learning. Discover why SKT is one of the most respected and sought-after international schools in Yangon and throughout Myanmar.')" />
+    <meta property="og:image" content="@yield('og_image',asset('assets/images/icon/icon.png'))" />
+    <meta property="og:url" content="@yield('og_url', request()->url())" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="@yield('twitter_title', 'SKT International School Riverside Campus')">
+    <meta name="twitter:description" content="@yield('twitter_description', 'Welcome to SKT International School`s Riverside Campus in Yangon, Myanmar — where exceptional international education meets innovation and excellence. Our certified educators, globally recognized curriculum, and state-of-the-art facilities create the perfect environment for academic success and personal development. Enroll today to join a vibrant community that inspires lifelong learning. Discover why SKT is one of the most respected and sought-after international schools in Yangon and throughout Myanmar.')">
+    <meta name="twitter:image" content="@yield('twitter_image', asset('assets/images/icon/icon.png'))">
+
+
     {{-- <script src="https://cdn.tailwindcss.com"></script> --}}
     {{-- @vite('resources/css/app.css') --}}
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -17,7 +36,6 @@
     <link rel="stylesheet" href="{{ asset('assets/owlcarousel/css/owl.carousel.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/owlcarousel/css/owl.theme.css') }}">
     <link rel="stylesheet" href="{{ asset('guests/css/footer.css') }}" />
-    <title>SKT International School</title>
     <link rel="icon" href="{{ asset('assets/images/icon/icon.png') }}" type="image/png">
     <link rel="stylesheet" href="{{ asset('guests/css/nav.css') }}" />
     <style>
@@ -224,7 +242,7 @@
                                 <span class="ti-email"></span>
                                 <h3 class="hidden sm:block">Email </h3>
                             </div>
-                            <p class="break-words ">contact@sktcollege.edu.mm</p>
+                            <p class="break-words ">contact@skt.edu.mm</p>
                         </div>
                         <div class="sf_contact grid grid-cols-2 gap-2">
                             <div>
