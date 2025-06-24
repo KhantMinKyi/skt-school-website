@@ -233,9 +233,9 @@
                                 <h3 class="hidden sm:block">Phone number</h3>
                             </div>
                             <div>
-                                <i class="text-emerald-500"> 𝑹𝒊𝒗𝒆𝒓𝒔𝒊𝒅𝒆 𝑪𝒂𝒎𝒑𝒖𝒔 : </i>
+                                <small class="text-emerald-500"> 𝑹𝒊𝒗𝒆𝒓𝒔𝒊𝒅𝒆 𝑪𝒂𝒎𝒑𝒖𝒔 : </small>
                                 <p class="break-words " > 019410010 |  019410020 | 09456481970</p>
-                                <i class="text-emerald-500">𝑷𝒓𝒆𝒔𝒄𝒉𝒐𝒐𝒍- 𝑹𝒊𝒗𝒆𝒓𝒔𝒊𝒅𝒆 𝑪𝒂𝒎𝒑𝒖𝒔 : </i>
+                                <small class="text-emerald-500">𝑷𝒓𝒆𝒔𝒄𝒉𝒐𝒐𝒍- 𝑹𝒊𝒗𝒆𝒓𝒔𝒊𝒅𝒆 𝑪𝒂𝒎𝒑𝒖𝒔 : </small>
                                 <p class="break-words " >09424463220</p>
                             </div>
                         </div>

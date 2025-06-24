@@ -354,9 +354,9 @@
                                 <h3 class="hidden sm:block">Phone number</h3>
                             </div>
                             <div>
-                                <i class="text-emerald-500">𝑪𝒊𝒕𝒚 𝑪𝒂𝒎𝒑𝒖𝒔 :</i>
+                                <small class="text-emerald-500">𝑪𝒊𝒕𝒚 𝑪𝒂𝒎𝒑𝒖𝒔 :</small>
                                 <p class="break-words "> 019551795 | 019551796 | 09424153552 | 09456481950</p>
-                                <i class="text-emerald-500">𝑷𝒓𝒆𝒔𝒄𝒉𝒐𝒐𝒍-𝑪𝒊𝒕𝒚 𝑪𝒂𝒎𝒑𝒖𝒔 :</i>
+                                <small class="text-emerald-500">𝑷𝒓𝒆𝒔𝒄𝒉𝒐𝒐𝒍-𝑪𝒊𝒕𝒚 𝑪𝒂𝒎𝒑𝒖𝒔 :</small>
                                 <p class="break-words ">09940993141</p>
                             </div>
                         </div>
@@ -376,9 +376,9 @@
                                 <h3 class="hidden sm:block">Address</h3>
                             </div>
                             <div>
-                                <p> <i class="text-emerald-500">𝑪𝒊𝒕𝒚 𝑪𝒂𝒎𝒑𝒖𝒔 : </i> 🏦 𝑵𝒐 25, 𝑷𝒉𝒐 𝑺𝒆𝒊𝒏 𝑹𝒐𝒂𝒅, 𝑩𝒂𝒉𝒂𝒏 𝑻𝒔𝒑, 𝒀𝒂𝒏𝒈𝒐𝒏</p>
+                                <p> <small class="text-emerald-500">𝑪𝒊𝒕𝒚 𝑪𝒂𝒎𝒑𝒖𝒔 : </small>  𝑵𝒐 25, 𝑷𝒉𝒐 𝑺𝒆𝒊𝒏 𝑹𝒐𝒂𝒅, 𝑩𝒂𝒉𝒂𝒏 𝑻𝒔𝒑, 𝒀𝒂𝒏𝒈𝒐𝒏</p>
                                 <hr class="my-1">
-                                <p> <i class="text-emerald-500"> 𝑷𝒓𝒆𝒔𝒄𝒉𝒐𝒐𝒍-𝑪𝒊𝒕𝒚 𝑪𝒂𝒎𝒑𝒖𝒔 : </i>🏦Address - 5/𝑨, 𝑷𝒉𝒐 𝑺𝒆𝒊𝒏 𝑹𝒐𝒂𝒅, 𝑩𝒂𝒉𝒂𝒏 𝑻𝒔𝒑, 𝒀𝒂𝒏𝒈𝒐𝒏.</p>
+                                <p> <small class="text-emerald-500"> 𝑷𝒓𝒆𝒔𝒄𝒉𝒐𝒐𝒍-𝑪𝒊𝒕𝒚 𝑪𝒂𝒎𝒑𝒖𝒔 : </small>Address - 5/𝑨, 𝑷𝒉𝒐 𝑺𝒆𝒊𝒏 𝑹𝒐𝒂𝒅, 𝑩𝒂𝒉𝒂𝒏 𝑻𝒔𝒑, 𝒀𝒂𝒏𝒈𝒐𝒏.</p>
                             </div>
                         </div>
                     </div>
