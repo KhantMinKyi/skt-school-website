@@ -1,5 +1,10 @@
 @extends('layouts.city_layout')
-
+@section('title', 'Contact - SKT International School City ')
+@section('meta_description', 'Reach out to SKT International School in Yangon for inquiries...')
+@section('og_title', 'Contact SKT School City campus')
+@section('og_description', 'Have a question? Get in touch with SKT now.')
+@section('twitter_title', 'Contact Us – SKT City Campus')
+@section('twitter_description', 'Send us your inquiries about admissions, programs, or tours.')
 @section('content')
     <link rel="stylesheet" href="{{ asset('assets/css/slider.css') }}" />
     <link rel="stylesheet" href="{{ asset('guests/css/contact_us.css') }}" />
@@ -33,9 +38,11 @@
                     <div class="single_address">
                         <i class="ti-map"></i>
                         <h4>Our Location</h4>
-                        <p> <strong>City Campus Pre School : </strong> <br>🏦Address - 5/A, Pho Sein Road, Bahan Tsp,
-                            Yangon.<br>
-                            <strong> City Campus : </strong><br> 🏦 No 25, Pho Sein Road, Bahan Tsp, Yangon.
+                        <p> 
+                            <strong> 𝑺𝑲𝑻 𝑰𝒏𝒕𝒆𝒓𝒏𝒂𝒕𝒊𝒐𝒏𝒂𝒍 𝑺𝒄𝒉𝒐𝒐𝒍-𝑪𝒊𝒕𝒚 𝑪𝒂𝒎𝒑𝒖𝒔 : </strong><br> 🏦 No 25, Pho Sein Road, Bahan Tsp, Yangon.
+                            <br><br>
+                            <strong>𝑺𝑲𝑻 𝑰𝒏𝒕𝒆𝒓𝒏𝒂𝒕𝒊𝒐𝒏𝒂𝒍 𝑷𝒓𝒆𝒔𝒄𝒉𝒐𝒐𝒍-𝑪𝒊𝒕𝒚 𝑪𝒂𝒎𝒑𝒖𝒔 : </strong> <br>🏦Address - 5/A, Pho Sein Road, Bahan Tsp,
+                            Yangon.
                         </p>
                     </div>
                 </div><!-- END COL -->
@@ -44,8 +51,8 @@
                     <div class="single_address sabr">
                         <i class="ti-mobile"></i>
                         <h4>Telephone</h4>
-                        <p> <strong>City Campus Pre School :</strong> <br> 01 548452, 09940993141</p>
-                        <p><strong> City Campus : </strong><br>(01) 9551795 - 6 , (01) 543926 ,+959 456 481 950</p>
+                        <p><strong>  𝑺𝑲𝑻 𝑰𝒏𝒕𝒆𝒓𝒏𝒂𝒕𝒊𝒐𝒏𝒂𝒍 𝑺𝒄𝒉𝒐𝒐𝒍-𝑪𝒊𝒕𝒚 𝑪𝒂𝒎𝒑𝒖𝒔 : </strong><br>019551795 | 019551796 | 09424153552 | 09456481950</p> <br>
+                        <p> <strong>𝑺𝑲𝑻 𝑰𝒏𝒕𝒆𝒓𝒏𝒂𝒕𝒊𝒐𝒏𝒂𝒍 𝑷𝒓𝒆𝒔𝒄𝒉𝒐𝒐𝒍-𝑪𝒊𝒕𝒚 𝑪𝒂𝒎𝒑𝒖𝒔 :</strong> <br> 09940993141</p>
                     </div>
                 </div><!-- END COL -->
                 <div class="col-lg-4 col-sm-4 col-xs-12 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s"
@@ -53,7 +60,8 @@
                     <div class="single_address">
                         <i class="ti-email"></i>
                         <h4>Send email</h4>
-                        <p>info@bfi.edu.mm</p>
+                        <p>𝒄𝒐𝒏𝒕𝒂𝒄𝒕.𝒄𝒊𝒕𝒚@𝒔𝒌𝒕.𝒆𝒅𝒖.𝒎𝒎 </p>
+                        <p>𝒄𝒐𝒏𝒕𝒂𝒄𝒕.𝒄𝒊𝒕𝒚𝒌𝒈@𝒔𝒌𝒕.𝒆𝒅𝒖.𝒎𝒎 </p>
                     </div>
                 </div><!-- END COL -->
             </div><!--- END ROW -->

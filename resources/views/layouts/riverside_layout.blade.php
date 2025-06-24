@@ -233,8 +233,10 @@
                                 <h3 class="hidden sm:block">Phone number</h3>
                             </div>
                             <div>
-                                <p> 019410010-20</p>
-                                <p>09424463220</p>
+                                <i class="text-emerald-500"> 𝑹𝒊𝒗𝒆𝒓𝒔𝒊𝒅𝒆 𝑪𝒂𝒎𝒑𝒖𝒔 : </i>
+                                <p class="break-words " > 019410010 |  019410020 | 09456481970</p>
+                                <i class="text-emerald-500">𝑷𝒓𝒆𝒔𝒄𝒉𝒐𝒐𝒍- 𝑹𝒊𝒗𝒆𝒓𝒔𝒊𝒅𝒆 𝑪𝒂𝒎𝒑𝒖𝒔 : </i>
+                                <p class="break-words " >09424463220</p>
                             </div>
                         </div>
                         <div class="sf_contact grid grid-cols-2 gap-2 over">
@@ -242,7 +244,10 @@
                                 <span class="ti-email"></span>
                                 <h3 class="hidden sm:block">Email </h3>
                             </div>
-                            <p class="break-words ">contact@skt.edu.mm</p>
+                            <div>
+                                <p class="break-words ">𝒄𝒐𝒏𝒕𝒂𝒄𝒕.𝒓𝒊𝒗𝒆𝒓@𝒔𝒌𝒕.𝒆𝒅𝒖.𝒎𝒎</p>
+                                <p class="break-words ">𝒄𝒐𝒏𝒕𝒂𝒄𝒕.𝒓𝒊𝒗𝒆𝒓𝒌𝒈@𝒔𝒌𝒕.𝒆𝒅𝒖.𝒎𝒎</p>
+                            </div>
                         </div>
                         <div class="sf_contact grid grid-cols-2 gap-2">
                             <div>

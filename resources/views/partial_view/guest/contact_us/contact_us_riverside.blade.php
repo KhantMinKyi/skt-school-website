@@ -1,5 +1,10 @@
 @extends('layouts.riverside_layout')
-
+@section('title', 'Contact - SKT International School Riverside ')
+@section('meta_description', 'Reach out to SKT International School in Yangon for inquiries...')
+@section('og_title', 'Contact SKT School Riverside campus')
+@section('og_description', 'Have a question? Get in touch with SKT now.')
+@section('twitter_title', 'Contact Us – SKT Riverside Campus')
+@section('twitter_description', 'Send us your inquiries about admissions, programs, or tours.')
 @section('content')
     <link rel="stylesheet" href="{{ asset('assets/css/slider.css') }}" />
     <link rel="stylesheet" href="{{ asset('guests/css/contact_us.css') }}" />
@@ -33,7 +38,7 @@
                     <div class="single_address">
                         <i class="ti-map"></i>
                         <h4>Our Location</h4>
-                        <p> <strong>Riverside campus: </strong> <br>235, Shu Khinn Thar Myo Pat Rd. Thaketa Tsp, Yangon <br>
+                        <p> <strong>Riverside campus: </strong> <br>235, Shu Khinn Thar Myo Pat Rd. Thaketa Tsp, Yangon <br><br>
                             <strong> Riverside Preschool campus:</strong><br> 235, Shu Khinn Thar Myo Pat Rd. Thaketa Tsp,
                             Yangon
                         </p>
@@ -44,8 +49,8 @@
                     <div class="single_address sabr">
                         <i class="ti-mobile"></i>
                         <h4>Telephone</h4>
-                        <p> <strong>Riverside campus: </strong> <br> 019410010-20, 09424451186, 09978439824 </p>
-                        <p><strong> Riverside Preschool campus:</strong><br>09424463220, 01450396-7, 019410010-20</p>
+                        <p> <strong>Riverside campus: </strong> <br>019410010 |  019410020 | 09456481970</p> <br>
+                        <p><strong> Riverside Preschool campus:</strong><br>09424463220</p>
                     </div>
                 </div><!-- END COL -->
                 <div class="col-lg-4 col-sm-4 col-xs-12 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s"
@@ -53,7 +58,8 @@
                     <div class="single_address">
                         <i class="ti-email"></i>
                         <h4>Send email</h4>
-                        <p>info@skt.edu.mm</p>
+                        <p>𝒄𝒐𝒏𝒕𝒂𝒄𝒕.𝒓𝒊𝒗𝒆𝒓@𝒔𝒌𝒕.𝒆𝒅𝒖.𝒎𝒎</p>
+                        <p>𝒄𝒐𝒏𝒕𝒂𝒄𝒕.𝒓𝒊𝒗𝒆𝒓𝒌𝒈@𝒔𝒌𝒕.𝒆𝒅𝒖.𝒎𝒎</p>
                     </div>
                 </div><!-- END COL -->
             </div><!--- END ROW -->
