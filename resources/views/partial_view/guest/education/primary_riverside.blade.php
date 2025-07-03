@@ -711,6 +711,14 @@
                         <hr class="w-28 text-center my-2 border-emerald-500">
                     </p>
                 </div>
+                <div class="my-5">
+                    <p class="text:lg lg:text-xl font-extrabold uppercase">
+                        <span class="text-emerald-500">KNOWLEDGEABLE </span> - <span
+                            class="text-sm md:text-base lg:text-lg xl:text-xl">
+Exploring concepts, ideas, and issues that have local and global significance.</span>
+                        <hr class="w-28 text-center my-2 border-emerald-500">
+                    </p>
+                </div>
             </div>
         </div>
     </div>
@@ -754,6 +762,9 @@
                                 </canvas>
                                 <canvas class="pdf-thumbnail w-48 h-auto cursor-pointer shadow-lg rounded-lg m-4"
                                     data-pdf="{{ asset('pdf/newsletter/SKT-RC/2025 Newsletter 2.pdf') }}">
+                                </canvas>
+                                <canvas class="pdf-thumbnail w-48 h-auto cursor-pointer shadow-lg rounded-lg m-4"
+                                    data-pdf="{{ asset('pdf/newsletter/SKT-RC/2025 Newsletter 3.pdf') }}">
                                 </canvas>
                             </div>
                         </div>
