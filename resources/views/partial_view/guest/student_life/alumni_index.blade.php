@@ -58,7 +58,7 @@
                 <img src="{{ asset('img/alumni_data/alumni.jpg') }}"
                     class=" home-banner-hero rounded-full object-cover h-[240px] w-[240px] lg:h-[420px] lg:w-[420px]"
                     alt="" />
-                <p class="font-semibold">Ismail @ Nay Win</p>
+                <p class="font-semibold">Sitt Hmue Naing @ Muhammed</p>
                 <p class="italic font-semibold">Alumni Principal</p>
             </div>
             <div class="flex items-center justify-center p-4 md:p-20 italic font-semibold text-xs md:text-lg">
