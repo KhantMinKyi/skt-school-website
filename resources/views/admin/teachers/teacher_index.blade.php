@@ -1,5 +1,4 @@
 @extends('layouts.admin_layout')
-
 @section('content')
     @if (Session::has('error'))
         <div class="alert alert-danger alert-dismissible fade show w-50 mx-auto text-center" role="alert">
@@ -67,7 +66,14 @@
                                     </td>
                                     <td>{{ $teacher->branch->branch_name }}</td>
                                     <td>{{ $teacher->teacher_name }}</td>
-                                    <td>{{ ucfirst($teacher->teacher_class) }}</td>
+                                    <td>
+                                        @foreach ($teacher->teacher_type_models as $type)
+                                            <span>{{ $type->title }} <br></span>
+                                            {{-- @if (!$loop->last)
+                                                ,
+                                            @endif --}}
+                                        @endforeach
+                                    </td>
                                     <td>
                                         <div class="d-flex justify-content-center align-items-center">
                                             <a class="animated-icon mr-2"
@@ -137,16 +143,14 @@
                                 <div class="row mb-3">
                                     <label for="inputEmail3" class="col-3 col-form-label"> Class</label>
                                     <div class="col-9">
-                                        <select class="form-control select2" name="teacher_class" required
+                                        <select class="form-control select2" name="teacher_types[]" required multiple
                                             title="Class is required">
                                             <option disabled selected>Select a Class</option>
-                                            <option value='assistant'>Assistant </option>
-                                            <option value='kg'>KG </option>
-                                            <option value='primary'>Primary</option>
-                                            <option value='lower-secondary'>Lower Secondary</option>
-                                            <option value='secondary'>Secondary</option>
-                                            <option value='principal'> Head of School</option>
-                                            <option value='vice-principal'>Deputy Head of School</option>
+                                            @foreach ($teacher_types as $teacher_type)
+                                                <option value='{{ $teacher_type->id }}'>{{ $teacher_type->title }} (
+                                                    {{ $teacher_type->branch->branch_name }})
+                                                </option>
+                                            @endforeach
                                         </select>
                                     </div>
                                 </div>
@@ -185,24 +189,26 @@
                 } else {
                     paginatedData.forEach((teacher, index) => {
                         $("#teacherTable").append(`
-                    <tr>
-                        <td>${teacher.id}</td>
-                        <td><img src="${teacher.teacher_photo}" alt="" width="80px"></td>
-                        <td>${teacher.branch.branch_name}</td>
-                        <td>${teacher.teacher_name}</td>
-                        <td>${teacher.teacher_class.charAt(0).toUpperCase() + teacher.teacher_class.slice(1)}</td>
-                        <td>
-                            <div class="d-flex justify-content-center align-items-center">
-                                <a class="btn btn-sm btn-info mr-2" href="/administration-panel/admin/admin-teachers/${teacher.id}/edit">
-                                    Edit
-                                </a>
-                                <a class="btn btn-sm btn-danger mr-2 delete-btn" href="/administration-panel/admin/admin-teachers/delete-teacher/${teacher.id}" data-id="${teacher.id}">
-                                    Delete
-                                </a>
-                            </div>
-                        </td>
-                    </tr>
-                `);
+                <tr>
+                    <td>${teacher.id}</td>
+                    <td><img src="${teacher.teacher_photo}" alt="" width="80px"></td>
+                    <td>${teacher.branch.branch_name}</td>
+                    <td>${teacher.teacher_name}</td>
+                    <td>${teacher.teacher_type_models && teacher.teacher_type_models.length > 0
+                    ? teacher.teacher_type_models.map(t => t.title).join('<br> ')
+                    : '-'}</td>
+                    <td>
+                        <div class="d-flex justify-content-center align-items-center">
+                            <a class="btn btn-sm btn-info mr-2" href="/administration-panel/admin/admin-teachers/${teacher.id}/edit">
+                                Edit
+                            </a>
+                            <a class="btn btn-sm btn-danger mr-2 delete-btn" href="/administration-panel/admin/admin-teachers/delete-teacher/${teacher.id}" data-id="${teacher.id}">
+                                Delete
+                            </a>
+                        </div>
+                    </td>
+                </tr>
+            `);
                     });
                 }
                 updatePagination(data.length);

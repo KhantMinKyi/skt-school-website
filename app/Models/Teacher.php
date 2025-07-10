@@ -15,6 +15,7 @@ class Teacher extends Model
         'teacher_branch_id',
         'teacher_name',
         // 'teacher_position',
+        'teacher_types',
         'teacher_class',
         'teacher_photo',
         'slug',

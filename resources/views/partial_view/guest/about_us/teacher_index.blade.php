@@ -30,7 +30,7 @@
             </div>
 
             <!-- Filter Buttons -->
-            <div class="grid grid-cols-2 lg:grid-cols-4 text-center mt-10 gap-1 md:gap-5 text-white text-xs md:text-lg">
+            {{-- <div class="grid grid-cols-2 lg:grid-cols-4 text-center mt-10 gap-1 md:gap-5 text-white text-xs md:text-lg">
                 <div class="filter-btn bg-gray-800 p-3 m-2 rounded-lg hover:bg-gray-900 font-semibold cursor-pointer"
                     data-filter="all">All</div>
                 <div class="filter-btn bg-gray-800 p-3 m-2 rounded-lg hover:bg-gray-900 font-semibold cursor-pointer"
@@ -39,20 +39,27 @@
                     data-filter="vice-principal">Senior Leadership Team</div>
                 <div class="filter-btn bg-gray-800 p-3 m-2 rounded-lg hover:bg-gray-900 font-semibold cursor-pointer"
                     data-filter="secondary">Secondary</div>
-                {{-- <div class="filter-btn bg-gray-800 p-3 m-2 rounded-lg hover:bg-gray-900 font-semibold cursor-pointer"
-                    data-filter="lower-secondary">Lower Secondary</div> --}}
                 <div class="filter-btn bg-gray-800 p-3 m-2 rounded-lg hover:bg-gray-900 font-semibold cursor-pointer"
                     data-filter="primary">Primary</div>
                 <div class="filter-btn bg-gray-800 p-3 m-2 rounded-lg hover:bg-gray-900 font-semibold cursor-pointer"
                     data-filter="kg">KG</div>
                 <div class="filter-btn bg-gray-800 p-3 m-2 rounded-lg hover:bg-gray-900 font-semibold cursor-pointer"
                     data-filter="assistant">Other Academic Staff</div>
+            </div> --}}
+            <div class="grid grid-cols-2 lg:grid-cols-4 text-center mt-10 gap-1 md:gap-5 text-white text-xs md:text-lg">
+                <div class="filter-btn bg-gray-800 p-3 m-2 rounded-lg hover:bg-gray-900 font-semibold cursor-pointer"
+                    data-filter="all">All</div>
+                @foreach ($teacher_types as $teacher_type)
+                    <div class="filter-btn bg-gray-800 p-3 m-2 rounded-lg hover:bg-gray-900 font-semibold cursor-pointer"
+                        data-filter="{{ $teacher_type->id }}">{{ $teacher_type->title }}</div>
+                @endforeach
             </div>
 
             <!-- Teachers List -->
             <div class="grid grid-cols-2 lg:grid-cols-4 text-center mt-10" id="teachersList">
                 @foreach ($our_teachers as $teacher)
-                    <div class="teacher-card mx-2 mb-2 open-modal" data-category="{{ strtolower($teacher->teacher_class) }}"
+                    <div class="teacher-card mx-2 mb-2 open-modal"
+                        data-teacher_type_models="{{ strtolower($teacher->teacher_type_models) }}"
                         data-src="{{ asset($teacher->teacher_photo) }}" data-title="{{ $teacher->teacher_name }}">
                         <div class="relative group rounded-md overflow-hidden cursor-pointer">
                             <img src="{{ asset($teacher->teacher_photo) }}" class="w-full " alt="Team Member" />
@@ -123,9 +130,22 @@
                 $nextPage.prop("disabled", page >= totalPages);
             }
 
+            // function applyFilter(filter) {
+            //     filteredTeachers = (filter === "all") ? [...allTeachers] :
+            //         allTeachers.filter(el => el.dataset.teacher_type_models === filter);
+            //     currentPage = 1;
+            //     showPage(currentPage);
+            // }
             function applyFilter(filter) {
-                filteredTeachers = (filter === "all") ? [...allTeachers] :
-                    allTeachers.filter(el => el.dataset.category === filter);
+                if (filter === "all") {
+                    filteredTeachers = [...allTeachers];
+                } else {
+                    filteredTeachers = allTeachers.filter(teacher =>
+                        teacher.dataset.teacher_type_models.includes(Number(filter))
+
+                    );
+                }
+
                 currentPage = 1;
                 showPage(currentPage);
             }

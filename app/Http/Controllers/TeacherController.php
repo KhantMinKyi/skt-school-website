@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Branch;
 use App\Models\Teacher;
+use App\Models\TeacherType;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
@@ -18,8 +19,13 @@ class TeacherController extends Controller
         $user = Auth::user();
         if ($user->is_admin == 1) {
             $branches = Branch::all();
+            $teacher_types = TeacherType::with('branch')->get();
             $teachers = Teacher::with('branch')->get();
-            return view('admin.teachers.teacher_index', compact('teachers', 'branches'));
+            foreach ($teachers as $teacher) {
+                $ids = explode(',', $teacher->teacher_types); // convert "1,2,3" to array
+                $teacher->teacher_type_models = TeacherType::whereIn('id', $ids)->get();
+            }
+            return view('admin.teachers.teacher_index', compact('teachers', 'branches', 'teacher_types'));
         } else {
             $teachers = Teacher::where('teacher_branch_id', $user->branch_id)->get();
             dd($teachers);
@@ -42,8 +48,9 @@ class TeacherController extends Controller
         // dd($request->all());
         $data = $request->validate([
             'teacher_photos'                     => 'required|array',
+            'teacher_types'                     => 'required|array',
             'teacher_branch_id'                 => 'required',
-            'teacher_class'                     => 'required',
+            // 'teacher_class'                     => 'required',
         ]);
         $user = Auth::user();
 
@@ -57,7 +64,7 @@ class TeacherController extends Controller
                 if (!File::exists($filePath)) {
                     $result = File::makeDirectory($filePath, 0755, true);
                 }
-
+                $classArr = implode(',', $data['teacher_types']);
                 $photo = $teacher_photo;
                 $extension = $photo->getClientOriginalExtension();
                 $name = $photo->getClientOriginalName();
@@ -66,6 +73,7 @@ class TeacherController extends Controller
                 $photo->move($filePath, "/teacher_photo_" . $imageUid . "." . $extension);
                 $data['teacher_photo'] = "/" . $photoName;
                 $data['teacher_name'] = $name;
+                $data['teacher_types'] = $classArr;
                 $data['teacher_created_user_id'] = $user_id;
                 $data['teacher_updated_user_id'] = $user_id;
                 $data['slug'] = $branch->branch_short_name;

@@ -13,6 +13,7 @@ use App\Models\Post;
 use App\Models\PrincipalMessage;
 use App\Models\Statement;
 use App\Models\Teacher;
+use App\Models\TeacherType;
 use Illuminate\Http\Request;
 
 class GeneralRouteController extends Controller
@@ -21,10 +22,10 @@ class GeneralRouteController extends Controller
     {
         $branch = Branch::with([
             'posts' => function ($query) {
-                $query->with('category')->where('post_is_show_front', 1)->where('post_is_active', 1)->orderBy('created_at','desc')->take(3);
+                $query->with('category')->where('post_is_show_front', 1)->where('post_is_active', 1)->orderBy('created_at', 'desc')->take(3);
             },
             'events' => function ($query) {
-                $query->with('category')->where('event_is_show_front', 1)->where('event_is_active', 1)->orderBy('created_at','desc')->take(3);
+                $query->with('category')->where('event_is_show_front', 1)->where('event_is_active', 1)->orderBy('created_at', 'desc')->take(3);
             },
             'principal_message',
             'history',
@@ -45,10 +46,10 @@ class GeneralRouteController extends Controller
     {
         $branch = Branch::with([
             'posts' => function ($query) {
-                $query->with('category')->where('post_is_show_front', 1)->where('post_is_active', 1)->orderBy('created_at','desc')->take(3);
+                $query->with('category')->where('post_is_show_front', 1)->where('post_is_active', 1)->orderBy('created_at', 'desc')->take(3);
             },
             'events' => function ($query) {
-                $query->with('category')->where('event_is_show_front', 1)->where('event_is_active', 1)->orderBy('created_at','desc')->take(3);
+                $query->with('category')->where('event_is_show_front', 1)->where('event_is_active', 1)->orderBy('created_at', 'desc')->take(3);
             },
             'principal_message',
             'history',
@@ -102,13 +103,20 @@ class GeneralRouteController extends Controller
     {
         $our_teachers = Teacher::with('branch')->where('slug', $param)->get();
         $branch = Branch::where('branch_short_name', $param)->first();
+        $teacher_types = TeacherType::with('branch')->where('teacher_type_branch_id', $branch->id)->get();
+        foreach ($our_teachers as $teacher) {
+            $ids = explode(',', $teacher->teacher_types);
+            $teacher_types_array = TeacherType::whereIn('id', $ids)->pluck('id'); // convert "1,2,3" to array
+            $teacher->teacher_type_models = $teacher_types_array;
+        }
+        // dd($our_teachers);
         if (!$branch) {
             return view('pages.not_found');
         }
         $layout = ($branch && $branch->branch_short_name === 'SKT-CC')
             ? 'layouts.city_layout'
             : 'layouts.riverside_layout';
-        return view('partial_view.guest.about_us.teacher_index', compact('our_teachers', 'layout', 'branch'));
+        return view('partial_view.guest.about_us.teacher_index', compact('our_teachers', 'layout', 'branch', 'teacher_types'));
     }
     public function sisterSchool($param)
     {
