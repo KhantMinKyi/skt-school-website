@@ -16,7 +16,7 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:title" content="@yield('og_title', 'SKT International School City Campus')" />
     <meta property="og:description" content="@yield('og_description', 'Explore SKT International School`s City Campus in Yangon, Myanmar — delivering premier global education through experienced, certified teachers, an internationally benchmarked curriculum, and cutting-edge learning facilities. Join a dynamic community where innovation, academic distinction, and holistic student growth come together. See why SKT stands out as one of Yangon`s and Myanmar`s most trusted international schools.')" />
-    <meta property="og:image" content="@yield('og_image',asset('assets/images/icon/icon.png'))" />
+    <meta property="og:image" content="@yield('og_image', asset('assets/images/icon/icon.png'))" />
     <meta property="og:url" content="@yield('og_url', request()->url())" />
     <meta property="og:type" content="website" />
 
@@ -269,7 +269,7 @@
                 <div class="col-lg-3 col-sm-6 col-xs-12">
                     <div class="single_footer p-4">
                         {{-- <a href="index.html"><img src="assets/images/all-img/logo2.png" alt="" /></a> --}}
-                        <a href="{{ route('city.home') }}"><img src="{{ asset('img/footer_logo.png') }}"
+                        <a href="{{ route('city.home') }}"><img src="{{ asset('img/footer_logo_SKT-CC.png') }}"
                                 class="max-w-52 sm:max-w-72" alt=""></a>
                         <p>
                             We nurture students to become lifelong learners responsible global citizens, and
@@ -376,9 +376,12 @@
                                 <h3 class="hidden sm:block">Address</h3>
                             </div>
                             <div>
-                                <p> <small class="text-emerald-500">𝑪𝒊𝒕𝒚 𝑪𝒂𝒎𝒑𝒖𝒔 : </small>  𝑵𝒐 25, 𝑷𝒉𝒐 𝑺𝒆𝒊𝒏 𝑹𝒐𝒂𝒅, 𝑩𝒂𝒉𝒂𝒏 𝑻𝒔𝒑, 𝒀𝒂𝒏𝒈𝒐𝒏</p>
+                                <p> <small class="text-emerald-500">𝑪𝒊𝒕𝒚 𝑪𝒂𝒎𝒑𝒖𝒔 : </small> 𝑵𝒐 25, 𝑷𝒉𝒐
+                                    𝑺𝒆𝒊𝒏 𝑹𝒐𝒂𝒅, 𝑩𝒂𝒉𝒂𝒏 𝑻𝒔𝒑, 𝒀𝒂𝒏𝒈𝒐𝒏</p>
                                 <hr class="my-1">
-                                <p> <small class="text-emerald-500"> 𝑷𝒓𝒆𝒔𝒄𝒉𝒐𝒐𝒍-𝑪𝒊𝒕𝒚 𝑪𝒂𝒎𝒑𝒖𝒔 : </small>Address - 5/𝑨, 𝑷𝒉𝒐 𝑺𝒆𝒊𝒏 𝑹𝒐𝒂𝒅, 𝑩𝒂𝒉𝒂𝒏 𝑻𝒔𝒑, 𝒀𝒂𝒏𝒈𝒐𝒏.</p>
+                                <p> <small class="text-emerald-500"> 𝑷𝒓𝒆𝒔𝒄𝒉𝒐𝒐𝒍-𝑪𝒊𝒕𝒚 𝑪𝒂𝒎𝒑𝒖𝒔 :
+                                    </small>Address - 5/𝑨, 𝑷𝒉𝒐 𝑺𝒆𝒊𝒏 𝑹𝒐𝒂𝒅, 𝑩𝒂𝒉𝒂𝒏 𝑻𝒔𝒑, 𝒀𝒂𝒏𝒈𝒐𝒏.
+                                </p>
                             </div>
                         </div>
                     </div>

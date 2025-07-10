@@ -80,6 +80,17 @@
                             <li class="py-2">2 passport-sized photographs</li>
                             <li class="py-2">Child’s health record
                             </li>
+                            <li class="py-2">
+                                Placement Test
+                                <ul class="list-disc list-inside pl-6">
+                                    <li>
+                                        A placement test is required as part of the admission process to assess the
+                                        child’s developmental level and readiness for the program.
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="py-2">Birth Certificate
+                            </li>
                         </ul>
                         <p>After the application is submitted, a parent meeting and child assessment will be scheduled.
                             Based on the applicant’s previous scholastic records and performance on the SKT International
@@ -113,6 +124,17 @@
                             <li class="py-2">မွေးနေ့အထောက်အထား (သို့မဟုတ်) ID card၊ passport မိတ္တူ (ရှိပါက)</li>
                             <li class="py-2">Passport အရွယ် ဓာတ်ပုံ (၂) ပုံ</li>
                             <li class="py-2">ကလေး၏ကျန်းမာရေးမှတ်တမ်း
+                            </li>
+                            <li class="py-2">
+                                ဝင်ခွင့်စာမေးပွဲ
+                                <ul class="list-disc list-inside pl-6">
+                                    <li>
+                                        ကလေး၏ ဖွံ့ဖြိုးတိုးတက်မှုအဆင့်နှင့် အစီအစဉ်အတွက် အဆင်သင့်အကဲဖြတ်ရန်
+                                        ဝင်ခွင့်စာမေးပွဲ၏ တစ်စိတ်တစ်ပိုင်းအနေဖြင့် နေရာချထားစစ်ဆေးမှု လိုအပ်ပါသည်။
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="py-2">မွေးစာရင်း
                             </li>
                         </ul>
                         <p>လျှောက်လွှာတင်ပြီးလျှင် မိဘနှင့်တွေ့ဆုံဆွေးနွေး၍ ကလေးအားအကဲဖြတ် ပါလိမ့်မည်။

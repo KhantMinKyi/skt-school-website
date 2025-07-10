@@ -83,7 +83,7 @@
                             class="single_tca shadow-md p-6 lg:p-8 border m-2 min-h-28 max-h-40 hover:shadow-lg hover:shadow-green-400 flex justify-center items-center flex-col md:flex-row">
                             <img src="{{ asset('assets/images/icon/computer_science.svg') }}"
                                 class=" w-10 sm:w-14 lg:w-20 md:mr-2 mb-2 md:mb-0" alt="" />
-                            <h2 class="text-xs sm:text-sm lg:text-lg"><a href="#">Computer Science</a></h2>
+                            <h2 class="text-xs sm:text-sm lg:text-lg"><a href="#">ICT</a></h2>
                         </div>
                     </div>
                 </div><!-- END COL  -->

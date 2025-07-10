@@ -7,8 +7,7 @@
         class="carousel max-h-screen slide ps_indicators_txt_icon ps_control_txt_icon data-bs-target kbrns_zoomInOut thumb_scroll_x swipe_x ps_easeOutQuart relative w-full overflow-hidden"
         data-ride="carousel" data-pause="hover" data-interval="10000" data-duration="2000">
         <!-- Wrapper For Slides -->
-        <div class="carousel-inner  transition-transform duration-1000 ease-in-out hidden sm:flex"
-            id="carouselInner">
+        <div class="carousel-inner  transition-transform duration-1000 ease-in-out hidden sm:flex" id="carouselInner">
             <!-- First Slide -->
             <div class="carousel-item active w-full flex-shrink-0">
                 <img src="{{ asset('img/banner/education_banners/pre_school/' . $branch->branch_short_name . '.webp') }}"
@@ -24,7 +23,8 @@
         </div>
     </div>
     <!-- START TOPIC-->
-    <section class="topic_content_area section-padding mt-[89px] sm:mt-0" style="background-image: url(assets/images/banner/topic.png);">
+    <section class="topic_content_area section-padding mt-[89px] sm:mt-0"
+        style="background-image: url(assets/images/banner/topic.png);">
         <div class="container mx-auto">
             <div class="section-title p-4">
                 <h2>{{ $branch->branch_name }}</h2>
@@ -70,8 +70,10 @@
                             <div class="flex-grow">
                                 <p class=" text-xs md:text-lg ">
                                     We provide a rich environment filled with stimulating activities like art, music,
-                                    dramatic play, building blocks, sand and water play, and more! Children explore their
-                                    world hands-on, developing their creativity and problem-solving skills.
+                                    dramatic play, building blocks, sand
+                                    and water play, Technology, Easel painting and more! Children explore their world
+                                    hands-on, developing their
+                                    creativity and problem-solving skills..
                                 </p>
                             </div>
                             <div class="flex justify-end items-center mt-auto">
@@ -104,9 +106,11 @@
                             <div class="flex-grow">
                                 <p class="text-xs md:text-lg ">
                                     Through play and inquiry, your child will build a strong foundation in literacy, math,
-                                    and science. Our engaging lessons are tailored to their age and developmental stage,
-                                    incorporating storytelling, music, and movement to make learning fun. We also introduce
-                                    important life skills, such as etiquette and safety.
+                                    phonetic awareness and science.
+                                    Our engaging lessons are tailored to their age and developmental stage, incorporating
+                                    storytelling, music, and
+                                    movement to make learning fun. We also introduce important life skills, such as
+                                    etiquette and Health and safety.
                                 </p>
                             </div>
                             <div class="flex justify-end items-center mt-auto">
@@ -248,13 +252,12 @@
             <div class="grid md:grid-cols-2 my-5">
                 <div class="my-5">
                     <p class="text:lg md:text-xl font-extrabold uppercase">
-                        Inquiry-Based <span class="text-emerald-500">Learning</span>
+                        Oral /Concept <span class="text-emerald-500">Time</span>
                         <hr class="w-28 text-center my-2 border-emerald-500">
                     </p>
-                    <p class="p-1 font-semibold text-gray-800 text-sm md:text-lg">Children explore their interests and
-                        questions through
-                        hands-on activities
-                        and open-ended projects.
+                    <p class="p-1 font-semibold text-gray-800 text-sm md:text-lg">Children get the opportunity to explore
+                        new concepts each week, helping them gain valuable knowledge
+                        through active learning.
                     </p>
                 </div>
                 <div class="my-5">
@@ -368,10 +371,9 @@
                         Field <span class="text-emerald-500">trips</span>
                         <hr class="w-28 text-center my-2 border-emerald-500 ">
                     </p>
-                    <p class="p-1 font-semibold text-gray-800 text-sm md:text-lg"> (if applicable) Exciting excursions to
-                        expand learning
-                        experiences.
-
+                    <p class="p-1 font-semibold text-gray-800 text-sm md:text-lg"> Field trips in kindergarten provide
+                        hands-on learning experiences that enhance classroom lessons. They
+                        also promote social development and curiosity through real-world exploration.
                     </p>
                 </div>
             </div>
