@@ -58,15 +58,15 @@
                 <img src="{{ asset('img/alumni_data/alumni.jpg') }}"
                     class=" home-banner-hero rounded-full object-cover h-[240px] w-[240px] lg:h-[420px] lg:w-[420px]"
                     alt="" />
-                <p class="font-semibold">Sitt Hmue Naing @ Muhammed</p>
+                <p class="font-semibold">Sitt Hmue Naing@Muhammed</p>
                 <p class="italic font-semibold">Alumni Principal</p>
             </div>
             <div class="flex items-center justify-center p-4 md:p-20 italic font-semibold text-xs md:text-lg">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. A voluptatem, aut quibusdam incidunt est provident
-                neque tempora libero hic unde? Ipsa nihil enim distinctio delectus consectetur voluptatem dolorem, ex
-                mollitia. Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium quibusdam nam minima placeat
-                voluptatibus quam, sunt alias ea, officia ullam molestiae eaque, porro cum! Repellendus cumque
-                necessitatibus repudiandae est porro?
+                I attended BISA and SKT from 2006 to 2015. I finished my IGCSE from SKT. During my time in school, I have
+                created many memories with my childhood friends and some teachers through academic and non-academic matters.
+
+                Many of these alumni and teachers are not here with me at this moment. I will always miss them and if
+                possible, I would love to meet all of them again.
             </div>
 
         </div>
@@ -433,9 +433,10 @@
         <div class="w-full bg-white border-gray-200 px-5  text-gray-800">
             <div class="w-full max-w-6xl mx-auto">
                 <div class="text-center max-w-xl mx-auto">
-                    <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold mb-5 text-gray-600">What people <br>are saying.
+                    <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold mb-5 text-gray-600">Our<br>Alumni Community
                     </h1>
-                    <h3 class="text-xl mb-5 font-light">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
+                    <h3 class="text-xl mb-5 font-light">Here are a few of our alumni who continue to inspire us with their
+                        success.</h3>
                     <div class="text-center mb-10">
                         <span class="inline-block w-1 h-1 rounded-full bg-emerald-500 ml-1"></span>
                         <span class="inline-block w-3 h-1 rounded-full bg-emerald-500 ml-1"></span>
@@ -450,76 +451,37 @@
                             class="w-full mx-auto rounded-lg bg-white border border-gray-200 p-5 text-gray-800 font-light mb-6">
                             <div class="w-full flex mb-4 items-center">
                                 <div class="overflow-hidden rounded-full w-10 h-10 bg-gray-50 border border-gray-200">
-                                    <img src="https://i.pravatar.cc/100?img=1" alt="">
+                                    <img src="{{ asset('img/alumni_data/hero/1.jpg') }}" alt="">
                                 </div>
                                 <div class="flex-grow pl-3">
-                                    <h6 class="font-bold text-sm uppercase text-gray-600">Kenzie Edgar.</h6>
+                                    <h6 class="font-bold text-sm uppercase text-gray-600">Saw Pyae Hsu Zaw</h6>
                                 </div>
                             </div>
                             <div class="w-full">
                                 <p class="text-sm leading-tight"><span
-                                        class="text-lg leading-none italic font-bold text-gray-400 mr-1">"</span>Lorem
-                                    ipsum dolor sit amet consectetur adipisicing elit. Quos sunt ratione dolor
-                                    exercitationem minima quas itaque saepe quasi architecto vel! Accusantium, vero sint
-                                    recusandae cum tempora nemo commodi soluta deleniti.<span
-                                        class="text-lg leading-none italic font-bold text-gray-400 ml-1">"</span></p>
+                                        class="text-lg leading-none italic font-bold text-gray-400 mr-1">2019 -
+                                        Stanford University</span><span
+                                        class="text-lg leading-none italic font-bold text-gray-800 ml-1"></span></p>
                             </div>
                         </div>
                         <div
                             class="w-full mx-auto rounded-lg bg-white border border-gray-200 p-5 text-gray-800 font-light mb-6">
                             <div class="w-full flex mb-4 items-center">
                                 <div class="overflow-hidden rounded-full w-10 h-10 bg-gray-50 border border-gray-200">
-                                    <img src="https://i.pravatar.cc/100?img=2" alt="">
+                                    <img src="{{ asset('img/alumni_data/hero/2.jpg') }}" alt="">
                                 </div>
                                 <div class="flex-grow pl-3">
-                                    <h6 class="font-bold text-sm uppercase text-gray-600">Stevie Tifft.</h6>
+                                    <h6 class="font-bold text-sm uppercase text-gray-600">Thet Htun Aung</h6>
                                 </div>
                             </div>
                             <div class="w-full">
                                 <p class="text-sm leading-tight"><span
-                                        class="text-lg leading-none italic font-bold text-gray-400 mr-1">"</span>Lorem
-                                    ipsum, dolor sit amet, consectetur adipisicing elit. Dolore quod necessitatibus, labore
-                                    sapiente, est, dignissimos ullam error ipsam sint quam tempora vel.<span
-                                        class="text-lg leading-none italic font-bold text-gray-400 ml-1">"</span></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="px-3 md:w-1/3">
-                        <div
-                            class="w-full mx-auto rounded-lg bg-white border border-gray-200 p-5 text-gray-800 font-light mb-6">
-                            <div class="w-full flex mb-4 items-center">
-                                <div class="overflow-hidden rounded-full w-10 h-10 bg-gray-50 border border-gray-200">
-                                    <img src="https://i.pravatar.cc/100?img=3" alt="">
-                                </div>
-                                <div class="flex-grow pl-3">
-                                    <h6 class="font-bold text-sm uppercase text-gray-600">Tommie Ewart.</h6>
-                                </div>
-                            </div>
-                            <div class="w-full">
-                                <p class="text-sm leading-tight"><span
-                                        class="text-lg leading-none italic font-bold text-gray-400 mr-1">"</span>Lorem
-                                    ipsum dolor sit amet, consectetur adipisicing elit. Vitae, obcaecati ullam excepturi
-                                    dicta error deleniti sequi.<span
-                                        class="text-lg leading-none italic font-bold text-gray-400 ml-1">"</span></p>
-                            </div>
-                        </div>
-                        <div
-                            class="w-full mx-auto rounded-lg bg-white border border-gray-200 p-5 text-gray-800 font-light mb-6">
-                            <div class="w-full flex mb-4 items-center">
-                                <div class="overflow-hidden rounded-full w-10 h-10 bg-gray-50 border border-gray-200">
-                                    <img src="https://i.pravatar.cc/100?img=4" alt="">
-                                </div>
-                                <div class="flex-grow pl-3">
-                                    <h6 class="font-bold text-sm uppercase text-gray-600">Charlie Howse.</h6>
-                                </div>
-                            </div>
-                            <div class="w-full">
-                                <p class="text-sm leading-tight"><span
-                                        class="text-lg leading-none italic font-bold text-gray-400 mr-1">"</span>Lorem
-                                    ipsum dolor sit amet consectetur adipisicing elit. Architecto inventore voluptatum
-                                    nostrum atque, corrupti, vitae esse id accusamus dignissimos neque reprehenderit natus,
-                                    hic sequi itaque dicta nisi voluptatem! Culpa, iusto.<span
-                                        class="text-lg leading-none italic font-bold text-gray-400 ml-1">"</span></p>
+                                        class="text-lg leading-none italic font-bold text-gray-400 mr-1">2024 -
+                                        Ritsumeikan Asia pacific University</span>
+                                    <br>
+                                    <span class="text-lg leading-none italic font-bold text-gray-800 ml-1">"Full
+                                        Scholarship"</span>
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -528,37 +490,74 @@
                             class="w-full mx-auto rounded-lg bg-white border border-gray-200 p-5 text-gray-800 font-light mb-6">
                             <div class="w-full flex mb-4 items-center">
                                 <div class="overflow-hidden rounded-full w-10 h-10 bg-gray-50 border border-gray-200">
-                                    <img src="https://i.pravatar.cc/100?img=5" alt="">
+                                    <img src="{{ asset('img/alumni_data/hero/3.jpg') }}" alt="">
                                 </div>
                                 <div class="flex-grow pl-3">
-                                    <h6 class="font-bold text-sm uppercase text-gray-600">Nevada Herbertson.</h6>
+                                    <h6 class="font-bold text-sm uppercase text-gray-600">Phway Phway htoo Myat Thu</h6>
                                 </div>
                             </div>
                             <div class="w-full">
                                 <p class="text-sm leading-tight"><span
-                                        class="text-lg leading-none italic font-bold text-gray-400 mr-1">"</span>Lorem
-                                    ipsum dolor sit amet consectetur adipisicing elit. Nobis, voluptatem porro obcaecati
-                                    dicta, quibusdam sunt ipsum, laboriosam nostrum facere exercitationem pariatur deserunt
-                                    tempora molestiae assumenda nesciunt alias eius? Illo, autem!<span
-                                        class="text-lg leading-none italic font-bold text-gray-400 ml-1">"</span></p>
+                                        class="text-lg leading-none italic font-bold text-gray-400 mr-1">2023 -
+                                        University of Leeds</span>
+                                    <br>
+                                    <span class="text-lg leading-none italic font-bold text-gray-800 ml-1"> "50%
+                                        Scholarship"</span>
+                                </p>
                             </div>
                         </div>
                         <div
                             class="w-full mx-auto rounded-lg bg-white border border-gray-200 p-5 text-gray-800 font-light mb-6">
                             <div class="w-full flex mb-4 items-center">
                                 <div class="overflow-hidden rounded-full w-10 h-10 bg-gray-50 border border-gray-200">
-                                    <img src="https://i.pravatar.cc/100?img=6" alt="">
+                                    <img src="{{ asset('img/alumni_data/hero/4.jpg') }}" alt="">
                                 </div>
                                 <div class="flex-grow pl-3">
-                                    <h6 class="font-bold text-sm uppercase text-gray-600">Kris Stanton.</h6>
+                                    <h6 class="font-bold text-sm uppercase text-gray-600">Pyae Hein Htet</h6>
                                 </div>
                             </div>
                             <div class="w-full">
                                 <p class="text-sm leading-tight"><span
-                                        class="text-lg leading-none italic font-bold text-gray-400 mr-1">"</span>Lorem
-                                    ipsum dolor sit amet consectetur adipisicing elit. Voluptatem iusto, explicabo,
-                                    cupiditate quas totam!<span
-                                        class="text-lg leading-none italic font-bold text-gray-400 ml-1">"</span></p>
+                                        class="text-lg leading-none italic font-bold text-gray-400 mr-1">2016 -
+                                        University of Cambridge</span> <br><span
+                                        class="text-lg leading-none italic font-bold text-gray-800 ml-1">"Full
+                                        Scholarship"</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="px-3 md:w-1/3">
+                        <div
+                            class="w-full mx-auto rounded-lg bg-white border border-gray-200 p-5 text-gray-800 font-light mb-6">
+                            <div class="w-full flex mb-4 items-center">
+                                <div class="overflow-hidden rounded-full w-10 h-10 bg-gray-50 border border-gray-200">
+                                    <img src="{{ asset('img/alumni_data/hero/5.jpg') }}" alt="">
+                                </div>
+                                <div class="flex-grow pl-3">
+                                    <h6 class="font-bold text-sm uppercase text-gray-600">Phone Myat Min</h6>
+                                </div>
+                            </div>
+                            <div class="w-full">
+                                <p class="text-sm leading-tight"><span
+                                        class="text-lg leading-none italic font-bold text-gray-400 mr-1">2023 -
+                                        Berkeley University of California</span><span
+                                        class="text-lg leading-none italic font-bold text-gray-800 ml-1"></span></p>
+                            </div>
+                        </div>
+                        <div
+                            class="w-full mx-auto rounded-lg bg-white border border-gray-200 p-5 text-gray-800 font-light mb-6">
+                            <div class="w-full flex mb-4 items-center">
+                                <div class="overflow-hidden rounded-full w-10 h-10 bg-gray-50 border border-gray-200">
+                                    <img src="{{ asset('img/alumni_data/hero/6.jpg') }}" alt="">
+                                </div>
+                                <div class="flex-grow pl-3">
+                                    <h6 class="font-bold text-sm uppercase text-gray-600">Ei Ei Kyaw</h6>
+                                </div>
+                            </div>
+                            <div class="w-full">
+                                <p class="text-sm leading-tight"><span
+                                        class="text-lg leading-none italic font-bold text-gray-400 mr-1">UNSW Sydney</span>
+                                    <span class="text-lg leading-none italic font-bold text-gray-800 ml-1"></span>
+                                </p>
                             </div>
                         </div>
                     </div>
