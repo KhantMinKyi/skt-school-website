@@ -56,6 +56,7 @@
             <h2 class=" text-xl lg:text-2xl  mb-8 font-bold text-emerald-500">
                 Primary Years Programme (PYP) at SKT Riverside Campus
             </h2>
+            <img src="{{ asset('img/ib_pyp_logo.png') }}" alt="ib_pyp_logo" class=" w-96">
             <h3 class=" text-lg lg:text-xl  my-8 font-bold text-gray-700">
                 Inspiring Young Minds, Nurturing Global Citizens
             </h3>
@@ -80,6 +81,9 @@
                 <button data-tab="environment"
                     class="pyp-tab py-2 px-4 font-semibold  whitespace-nowrap border-b-2 border-transparent text-sm sm:text-base">Learning
                     at Riverside</button>
+                <button data-tab="programme"
+                    class="pyp-tab py-2 px-4 font-semibold  whitespace-nowrap border-b-2 border-transparent text-sm sm:text-base">Programme
+                    of Inquiry</button>
             </div>
 
             <!-- Tab Content -->
@@ -141,6 +145,23 @@
                     <p class="mt-2">Whether in the classroom, on the playground, or in the community, SKT learners are
                         constantly growing — not just academically, but as responsible, compassionate individuals prepared
                         for the future.</p>
+                </div>
+                <div id="tab-programme" class="pyp-content hidden">
+                    <h2 class="text-xl font-bold mb-2">At SKT-Riverside</h2>
+                    <p>Our <a class="text-emerald-600 cursor-pointer"
+                            href="{{ asset('pdf/primary/PROGRAMME OF INQUIRY.pdf') }}" target="__blank"> <b>Programme of
+                                Inquiry (POI)</b> </a> serves as the
+                        backbone of our
+                        Primary Years Programme (PYP),
+                        thoughtfully guiding students through a rich and balanced learning journey. Designed by our
+                        dedicated teaching team, the POI ensures that students from KG to Year 6 engage with meaningful
+                        concepts across subjects through six transdisciplinary themes.
+                        Each unit of inquiry is carefully planned to spark curiosity, build understanding, and connect
+                        learning to the real world. The POI reflects our commitment to nurturing internationally minded
+                        learners who are confident, compassionate, and actively involved in their own learning. At SKT, the
+                        Programme of Inquiry helps students explore who they are, how the world works, and how they can make
+                        a positive impact—both in our school and beyond.
+                    </p>
                 </div>
             </div>
         </div>
@@ -756,7 +777,7 @@
                     <div role="tabpanel" class="tab-pane fade show tab-content " id="tab1">
 
                         <div id="pdfThumbnails" class=" inline-block w-full ">
-                            <div class="pdf-item flex ">
+                            <div class="pdf-item flex flex-wrap">
                                 <canvas class="pdf-thumbnail w-48 h-auto cursor-pointer shadow-lg rounded-lg m-4"
                                     data-pdf="{{ asset('pdf/newsletter/SKT-RC/2025 Newsletter 1.pdf') }}">
                                 </canvas>

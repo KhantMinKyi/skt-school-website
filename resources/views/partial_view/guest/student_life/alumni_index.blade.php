@@ -555,8 +555,10 @@
                             </div>
                             <div class="w-full">
                                 <p class="text-sm leading-tight"><span
-                                        class="text-lg leading-none italic font-bold text-gray-400 mr-1">UNSW Sydney</span>
-                                    <span class="text-lg leading-none italic font-bold text-gray-800 ml-1"></span>
+                                        class="text-lg leading-none italic font-bold text-gray-400 mr-1">2019 - UNSW
+                                        Sydney</span><br>
+                                    <span class="text-lg leading-none italic font-bold text-gray-800 ml-1">
+                                        Scholarship - International Student Award (for merit)</span>
                                 </p>
                             </div>
                         </div>
