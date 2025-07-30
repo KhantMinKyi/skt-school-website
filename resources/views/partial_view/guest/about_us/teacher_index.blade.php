@@ -140,8 +140,12 @@
                 if (filter === "all") {
                     filteredTeachers = [...allTeachers];
                 } else {
-                    filteredTeachers = allTeachers.filter(teacher =>
-                        teacher.dataset.teacher_type_models.includes(Number(filter))
+                    filteredTeachers = allTeachers.filter(teacher => {
+                            let types = JSON.parse(teacher.dataset.teacher_type_models); // convert "[1]" => [1]
+                            return types.includes(Number(filter));
+
+                        }
+                        // teacher.dataset.teacher_type_models.includes(Number(filter))
 
                     );
                 }
