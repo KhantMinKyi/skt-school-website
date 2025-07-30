@@ -39,7 +39,7 @@
                             <h2 class="text-2xl font-bold text-gray-800">{{ $post->post_title }}</h2>
                             <img src="{{ asset($post->post_banner) }}" class="img-fluid w-full rounded-lg my-4"
                                 alt="Blog image" />
-                            <p>{{ $post->post_body }}</p>
+                            <p>{!! $post->post_body !!}</p>
                         </div>
                         @php
                             $post_images = explode(',', $post->post_image);
@@ -168,9 +168,8 @@
                                 <ul>
                                     <li>
                                         <div class="social_item b_facebook"><a
-                                                href="https://www.facebook.com/SKTinternationalCollege/"
-                                                title="facebook"><i class="fa-brands fa-facebook-f"></i></i><span
-                                                    class="item-list">150K
+                                                href="https://www.facebook.com/SKTinternationalCollege/" title="facebook"><i
+                                                    class="fa-brands fa-facebook-f"></i></i><span class="item-list">150K
                                                     Likes</span></a>
                                         </div>
                                     </li>
