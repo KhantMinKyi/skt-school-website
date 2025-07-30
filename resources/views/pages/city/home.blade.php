@@ -485,7 +485,7 @@
                                 <span><i class="fa fa-clock-o"></i>{{ $event->event_time }}</span>
                                 <span><i class="fa fa-table"></i><strong>{{ $event->event_location }}</strong></span>
                                 <p>
-                                    {{ \Illuminate\Support\Str::words($event->event_body, 10, '...') }}
+                                    {!! \Illuminate\Support\Str::words($event->event_body, 10, '...') !!}
                                 </p>
                             </div>
                         </a>
