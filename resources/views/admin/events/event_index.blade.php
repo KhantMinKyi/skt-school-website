@@ -11,7 +11,18 @@
             {{ Session::get('success') }}
         </div>
     @endif
+    <script src="{{ asset('tinymce/tinymce.min.js') }}"></script>
 
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            tinymce.init({
+                selector: '.tinymceBox',
+                plugins: 'advlist autolink lists link charmap print preview anchor',
+                toolbar: 'undo redo | formatselect | bold italic underline | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link',
+                height: 300,
+            });
+        });
+    </script>
 
     <div class="card">
         <div class="card-header font-weight-bold h5">Events</div>
@@ -194,8 +205,8 @@
                                 <div class="row mb-3">
                                     <label for="inputEmail3" class="col-3 col-form-label"> Body </label>
                                     <div class="col-9">
-                                        <textarea class="form-control" name="event_body" id="" cols="30" rows="5" required
-                                            placeholder="Enter Event Body "></textarea>
+                                        <small class=" text-danger">You Need To Fill This Text Area</small>
+                                        <textarea class="form-control tinymceBox" name="event_body" placeholder="Enter Event Body "></textarea>
                                     </div>
                                 </div>
                             </div>

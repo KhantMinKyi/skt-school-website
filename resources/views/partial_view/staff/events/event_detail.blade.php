@@ -79,7 +79,7 @@
                                         <span><i
                                                 class="fa fa-table"></i><strong>{{ $event->event_location }}</strong></span>
                                     </div>
-                                    <p>{{ $event->event_body }}</p>
+                                    <p>{!! $event->event_body !!}</p>
                                     @php
                                         $event_images = explode(',', $event->event_image);
                                     @endphp
