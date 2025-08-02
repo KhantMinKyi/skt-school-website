@@ -467,7 +467,7 @@
                     Join Us With <a href="#" class="text-emerald-500 ">Our Events</a>
                 </p>
             </div>
-            <div class="grid grid-cols-1 sm:grid-cols-2  lg:grid-cols-3">
+            <div class="grid grid-cols-1 sm:grid-cols-2  lg:grid-cols-3 gap-5">
                 @foreach ($branch->events as $event)
                     <div class="event-slide  hover:shadow-md ">
                         <a href="{{ route('event-detail.home', $event->id) }}"> {{-- need tobe replaced --}}
@@ -508,7 +508,7 @@
                     Our Latest <span class="text-emerald-500">Posts</span>
                 </p>
             </div>
-            <div class=" grid  grid-cols-1 sm:grid-cols-2  lg:grid-cols-3">
+            <div class=" grid  grid-cols-1 sm:grid-cols-2  lg:grid-cols-3 gap-5">
                 @foreach ($branch->posts as $post)
                     <div class="">
                         <div class="single_blog ">
