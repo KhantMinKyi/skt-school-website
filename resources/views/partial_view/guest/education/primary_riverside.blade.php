@@ -783,18 +783,6 @@
                                         data-pdf="{{ asset($primary_newsletter->primary_newsletter_file) }}">
                                     </canvas>
                                 @endforeach
-                                <canvas class="pdf-thumbnail w-48 h-auto cursor-pointer shadow-lg rounded-lg m-4"
-                                    data-pdf="{{ asset('pdf/newsletter/SKT-RC/2025 Newsletter 1.pdf') }}">
-                                </canvas>
-                                <canvas class="pdf-thumbnail w-48 h-auto cursor-pointer shadow-lg rounded-lg m-4"
-                                    data-pdf="{{ asset('pdf/newsletter/SKT-RC/2025 Newsletter 2.pdf') }}">
-                                </canvas>
-                                <canvas class="pdf-thumbnail w-48 h-auto cursor-pointer shadow-lg rounded-lg m-4"
-                                    data-pdf="{{ asset('pdf/newsletter/SKT-RC/2025 Newsletter 3.pdf') }}">
-                                </canvas>
-                                <canvas class="pdf-thumbnail w-48 h-auto cursor-pointer shadow-lg rounded-lg m-4"
-                                    data-pdf="{{ asset('pdf/newsletter/SKT-RC/2025 Newsletter 4.pdf') }}">
-                                </canvas>
                             </div>
                         </div>
                     </div>

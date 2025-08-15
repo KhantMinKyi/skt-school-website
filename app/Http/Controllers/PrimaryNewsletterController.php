@@ -141,6 +141,14 @@ class PrimaryNewsletterController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $primary_newsletter = PrimaryNewsletter::find($id);
+        if (!$primary_newsletter) {
+            return to_route('admin-primary-newsletters.index')->with('error', 'Newsletter not Found');
+        }
+        if (File::exists(public_path($primary_newsletter->primary_newsletter_file))) {
+            File::delete(public_path($primary_newsletter->primary_newsletter_file));
+        }
+        $primary_newsletter->delete();
+        return to_route('admin-primary-newsletters.index')->with('success', 'Deleted Successfully');
     }
 }

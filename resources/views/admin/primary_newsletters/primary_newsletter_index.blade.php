@@ -67,6 +67,18 @@
                                                     data-anim-loop="false" title="Edit Primary Newsletter">
                                                 </div>
                                             </a>
+                                            <form
+                                                action="{{ route('admin-primary-newsletters.destroy', $primary_newsletter->id) }}"
+                                                method="post">
+                                                @csrf
+                                                @method('DELETE')
+                                                <button class="animated-icon mr-2 border-0 mt-1" type="submit">
+                                                    <div style="width:14px;height:14px; cursor: pointer;"
+                                                        data-animation-path="{{ asset('admin/vendor/animated-icons/trash/trash.json') }}"
+                                                        data-anim-loop="false" title="Delete Primary Newsletter">
+                                                    </div>
+                                                </button>
+                                            </form>
                                         </div>
                                     </td>
                                 </tr>
