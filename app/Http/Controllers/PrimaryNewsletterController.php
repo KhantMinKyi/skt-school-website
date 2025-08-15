@@ -87,7 +87,14 @@ class PrimaryNewsletterController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $primary_newsletter = PrimaryNewsletter::find($id);
+        $branches = Branch::all();
+        $user = Auth::user();
+        if ($user->is_admin == 1) {
+            return view('partial_view.admin.primary_newsletters.primary_newsletter_edit', compact('primary_newsletter', 'branches'));
+        } else {
+            dd($primary_newsletter);
+        }
     }
 
     /**
@@ -95,7 +102,38 @@ class PrimaryNewsletterController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $data = $request->validate([
+            'primary_newsletter_file' => 'nullable|file',
+            'primary_newsletter_title' => 'required',
+            'primary_newsletter_branch_id' => 'required',
+        ]);
+        // dd($data);
+        $primary_newsletter = PrimaryNewsletter::find($id);
+        $branch = Branch::find($data['primary_newsletter_branch_id']);
+        $user_id = Auth::user()->id;
+        if (!$branch) {
+            return to_route('admin-primary-newsletters.index')->with('error', 'No NewsLetter Found ! Please Try Again');
+        }
+        if (isset($data['primary_newsletter_file'])) {
+            if (File::exists(public_path($primary_newsletter->primary_newsletter_file))) {
+                File::delete(public_path($primary_newsletter->primary_newsletter_file));
+            }
+            $filePath = "pdf/primary_newsletter_data/" . $branch->branch_short_name;
+            if (!File::exists($filePath)) {
+                $result = File::makeDirectory($filePath, 0755, true);
+            }
+
+            $photo = $data['primary_newsletter_file'];
+            $extension = $photo->getClientOriginalExtension();
+            $imageUid = uniqid('', true);
+            $photoName = $filePath . "/primary_newsletter_file_" . $imageUid . "." . $extension;
+
+            $photo->move($filePath, "/primary_newsletter_file_" . $imageUid . "." . $extension);
+            $data['primary_newsletter_file'] = "/" . $photoName;
+        }
+        $data['primary_newsletter_updated_user_id'] = $user_id;
+        $primary_newsletter->update($data);
+        return to_route('admin-primary-newsletters.index')->with('success', 'Newsletter Updated Successfully');
     }
 
     /**
