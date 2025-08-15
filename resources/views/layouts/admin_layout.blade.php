@@ -654,6 +654,44 @@
                             </li>
                         </div>
                         <div class="sidebar-item">
+                            <li class="nav-item ">
+
+                                <a class="nav-link d-flex align-items-center nav-link" href="javascript:;">
+                                    <span class="animated-icon">
+                                        <div style="width:18px;height:18px"
+                                            data-animation-path="{{ asset('admin/vendor/animated-icons/book/book.json') }}"
+                                            data-anim-loop="false"></div>
+                                    </span>
+                                    <span class="mr-auto menu-name">Education</span>
+                                    <span class="caret">
+                                        <span class="animated-icon">
+                                            <div style="width:12px;height:12px"
+                                                data-animation-path="{{ asset('admin/vendor/animated-icons/expand/expand.json') }}">
+                                            </div>
+                                        </span>
+                                    </span>
+                                </a>
+                                <div class="sub-menu collapse {{ request()->routeIs('admin-primary-newsletters.index', 'admin-calendars.index', 'admin-statements.index', 'admin-teachers.index') ? 'show' : '' }}"
+                                    aria-expanded="{{ request()->routeIs('admin-primary-newsletters.index', 'admin-calendars.index', 'admin-statements.index', 'admin-teachers.index') ? 'true' : 'false' }}">
+
+                                    <ul class="nav flex-column">
+                                        <li
+                                            class="nav-item {{ request()->routeIs('admin-primary-newsletters.index') ? 'active' : '' }}">
+                                            <a href="{{ route('admin-primary-newsletters.index') }}"
+                                                class="nav-link">
+                                                {{-- <span class="animated-icon">
+                                                    <div style="width:18px;height:18px"
+                                                        data-animation-path="{{ asset('admin/vendor/animated-icons/play-button-circled-click/play-button-circled-click.json') }}"
+                                                        data-anim-loop="false"></div>
+                                                </span> --}}
+                                                <span class="mr-auto menu-name">Primary Newsletters</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </div>
+                        <div class="sidebar-item">
                             <li class="nav-item {{ request()->routeIs('admin-contacts.index') ? 'active' : '' }}">
                                 <a class="nav-link d-flex align-items-center nav-link"
                                     href="{{ route('admin-contacts.index') }}">

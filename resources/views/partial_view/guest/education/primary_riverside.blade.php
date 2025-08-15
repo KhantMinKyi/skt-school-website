@@ -778,6 +778,11 @@
 
                         <div id="pdfThumbnails" class=" inline-block w-full ">
                             <div class="pdf-item flex flex-wrap">
+                                @foreach ($primary_newsletters as $primary_newsletter)
+                                    <canvas class="pdf-thumbnail w-48 h-auto cursor-pointer shadow-lg rounded-lg m-4"
+                                        data-pdf="{{ asset($primary_newsletter->primary_newsletter_file) }}">
+                                    </canvas>
+                                @endforeach
                                 <canvas class="pdf-thumbnail w-48 h-auto cursor-pointer shadow-lg rounded-lg m-4"
                                     data-pdf="{{ asset('pdf/newsletter/SKT-RC/2025 Newsletter 1.pdf') }}">
                                 </canvas>
