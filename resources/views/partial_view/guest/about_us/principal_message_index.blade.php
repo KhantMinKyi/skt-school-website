@@ -71,7 +71,7 @@
                     </p>
                 </div>
             </div>
-            <div class="flex justify-center items-center flex-col">
+            <div class="flex justify-center items-center flex-col mt-6">
                 <img class="w-[200px] h-[200px] md:w-[382px] md:h-[382px] lg:w-[420px] lg:h-[420px] object-cover rounded-full"
                     src="{{ asset($principal_message->principal_photo) }}" alt="" />
                 <p class="mt-4 bold text-lg md:text-xl lg:text-2xl italic">{{ $principal_message->principal_name }}</p>
