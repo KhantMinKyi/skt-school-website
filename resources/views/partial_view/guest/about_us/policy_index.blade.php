@@ -78,6 +78,12 @@
                                     data-bs-toggle="tab">
                                     Academic Integrity</button>
                             </li>
+                            <li>
+                                <button class="tab-btn text-sm md:text-lg font-bold px-4 py-2 rounded-xl"
+                                    onclick="openTab(event, 'tab6')" href="#information" role="tab"
+                                    data-bs-toggle="tab">
+                                    Parent-Student Handbook</button>
+                            </li>
                         </ul>
 
                         <!-- Tab panes 1 -->
@@ -90,9 +96,6 @@
                                     </canvas>
                                     <canvas class="pdf-thumbnail w-48 h-auto cursor-pointer shadow-lg rounded-lg m-4"
                                         data-pdf="{{ asset('pdf/policy/' . $branch->branch_short_name . '/240821 Communication Policy.pdf') }}">
-                                    </canvas>
-                                    <canvas class="pdf-thumbnail w-48 h-auto cursor-pointer shadow-lg rounded-lg m-4"
-                                        data-pdf="{{ asset('pdf/policy/' . $branch->branch_short_name . '/250520 SKT Riverside Parents&Students Handbook 25-26.pdf') }}">
                                     </canvas>
                                     <canvas class="pdf-thumbnail w-48 h-auto cursor-pointer shadow-lg rounded-lg m-4"
                                         data-pdf="{{ asset('pdf/policy/' . $branch->branch_short_name . '/240914 SKT Fire safety Policy.pdf') }}">
@@ -136,6 +139,16 @@
                                 <div class="pdf-item flex ">
                                     <canvas class="pdf-thumbnail w-48 h-auto cursor-pointer shadow-lg rounded-lg m-4"
                                         data-pdf="{{ asset('pdf/policy/' . $branch->branch_short_name . '/SKT Final Academic Integrity policy 2023-2026.pdf') }}">
+                                    </canvas>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Tab panes 6 -->
+                        <div role="tabpanel" class="tab-pane fade show tab-content hidden" id="tab6">
+                            <div id="pdfThumbnails" class=" inline-block w-full ">
+                                <div class="pdf-item flex ">
+                                    <canvas class="pdf-thumbnail w-48 h-auto cursor-pointer shadow-lg rounded-lg m-4"
+                                        data-pdf="{{ asset('pdf/policy/' . $branch->branch_short_name . '/250520 SKT Riverside Parents&Students Handbook 25-26.pdf') }}">
                                     </canvas>
                                 </div>
                             </div>

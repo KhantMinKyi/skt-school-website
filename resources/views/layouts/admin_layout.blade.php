@@ -841,7 +841,7 @@
                                     <button type="button" tabindex="0" role="menuitem" class="dropdown-item">
                                         Notifications
                                     </button>
-                                    <div tabindex="-1" class="dropdown-divider"></div>
+                                    <div tabindex="-1" class="dropdown-divider "></div>
                                     <form action="{{ route('logout') }}" method="post">
                                         @csrf
                                         <button type="submit" tabindex="0" role="menuitem" class="dropdown-item">

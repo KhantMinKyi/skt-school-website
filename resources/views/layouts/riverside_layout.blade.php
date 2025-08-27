@@ -16,7 +16,7 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:title" content="@yield('og_title', 'SKT International School Riverside Campus')" />
     <meta property="og:description" content="@yield('og_description', 'Welcome to SKT International School`s Riverside Campus in Yangon, Myanmar — where exceptional international education meets innovation and excellence. Our certified educators, globally recognized curriculum, and state-of-the-art facilities create the perfect environment for academic success and personal development. Enroll today to join a vibrant community that inspires lifelong learning. Discover why SKT is one of the most respected and sought-after international schools in Yangon and throughout Myanmar.')" />
-    <meta property="og:image" content="@yield('og_image',asset('assets/images/icon/icon.png'))" />
+    <meta property="og:image" content="@yield('og_image', asset('assets/images/icon/icon.png'))" />
     <meta property="og:url" content="@yield('og_url', request()->url())" />
     <meta property="og:type" content="website" />
 
@@ -102,7 +102,7 @@
 
 <body>
     <nav id="navbar"
-        class=" text-white fixed top-0 w-full z-50  transition-all duration-300 bg-gray-900 bg-opacity-90">
+        class=" text-white fixed top-0 w-full z-50 transition-all duration-300 bg-gray-900 bg-opacity-90">
         <div class=" mx-auto flex justify-end p-4">
         </div>
         <div class="main-menu  flex items-center justify-between p-4 md:mt-4">
@@ -234,9 +234,10 @@
                             </div>
                             <div>
                                 <small class="text-emerald-500"> 𝑹𝒊𝒗𝒆𝒓𝒔𝒊𝒅𝒆 𝑪𝒂𝒎𝒑𝒖𝒔 : </small>
-                                <p class="break-words " > 019410010 |  019410020 | 09456481970</p>
-                                <small class="text-emerald-500">𝑷𝒓𝒆𝒔𝒄𝒉𝒐𝒐𝒍- 𝑹𝒊𝒗𝒆𝒓𝒔𝒊𝒅𝒆 𝑪𝒂𝒎𝒑𝒖𝒔 : </small>
-                                <p class="break-words " >09424463220</p>
+                                <p class="break-words "> 019410010 | 019410020 | 09456481970</p>
+                                <small class="text-emerald-500">𝑷𝒓𝒆𝒔𝒄𝒉𝒐𝒐𝒍- 𝑹𝒊𝒗𝒆𝒓𝒔𝒊𝒅𝒆 𝑪𝒂𝒎𝒑𝒖𝒔 :
+                                </small>
+                                <p class="break-words ">09424463220</p>
                             </div>
                         </div>
                         <div class="sf_contact grid grid-cols-2 gap-2 over">
