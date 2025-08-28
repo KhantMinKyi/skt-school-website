@@ -684,7 +684,7 @@
                                                         data-animation-path="{{ asset('admin/vendor/animated-icons/play-button-circled-click/play-button-circled-click.json') }}"
                                                         data-anim-loop="false"></div>
                                                 </span> --}}
-                                                <span class="mr-auto menu-name">Primary Newsletters</span>
+                                                <span class="mr-auto menu-name">Primary </span>
                                             </a>
                                         </li>
                                     </ul>

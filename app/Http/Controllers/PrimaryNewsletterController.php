@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Branch;
+use App\Models\PrimaryActivityPhoto;
 use App\Models\PrimaryNewsletter;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -19,7 +20,8 @@ class PrimaryNewsletterController extends Controller
         if ($user->is_admin == 1) {
             $branches = Branch::all();
             $primary_newsletters = PrimaryNewsletter::all();
-            return view('admin.primary_newsletters.primary_newsletter_index', compact('primary_newsletters', 'branches'));
+            $primary_activity_photos = PrimaryActivityPhoto::all();
+            return view('admin.primary.primary_index', compact('primary_newsletters', 'branches', 'primary_activity_photos'));
         } else {
             $primary_newsletters = PrimaryNewsletter::where('primary_newsletter_branch_id', $user->branch_id)->get();
             dd($primary_newsletters);
@@ -91,7 +93,7 @@ class PrimaryNewsletterController extends Controller
         $branches = Branch::all();
         $user = Auth::user();
         if ($user->is_admin == 1) {
-            return view('partial_view.admin.primary_newsletters.primary_newsletter_edit', compact('primary_newsletter', 'branches'));
+            return view('partial_view.admin.primary.primary_newsletter_edit', compact('primary_newsletter', 'branches'));
         } else {
             dd($primary_newsletter);
         }
