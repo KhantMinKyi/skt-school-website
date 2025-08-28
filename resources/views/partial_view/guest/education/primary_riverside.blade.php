@@ -752,29 +752,16 @@
             </div>
             <div class="col-xs-12">
                 <div class="pd_tab_area fix">
-                    <ul class="pd_tab_btn nav nav-tabs" role="tablist">
+                    <ul class="pd_tab_btn nav nav-tabs" role="">
                         <li>
                             <button
                                 class="tab-btn text-sm md:text-lg font-bold px-4 py-2 bg-green-500 rounded-xl text-white"
-                                onclick="openTab(event, 'tab1')" href="#description" role="tab"
-                                data-bs-toggle="tab">Newsletter </button>
+                                href="#description" role="tab" data-bs-toggle="tab">Newsletter </button>
                         </li>
-                        {{-- <li>
-                                <button class="tab-btn text-sm md:text-lg font-bold px-4 py-2 rounded-xl"
-                                    onclick="openTab(event, 'tab2')" href="#information" role="tab"
-                                    data-bs-toggle="tab">
-                                    Assessment</button>
-                            </li>
-                            <li>
-                                <button class="tab-btn text-sm md:text-lg font-bold px-4 py-2 rounded-xl"
-                                    onclick="openTab(event, 'tab3')" href="#information" role="tab"
-                                    data-bs-toggle="tab">
-                                    Inclusion </button>
-                            </li> --}}
                     </ul>
 
                     <!-- Tab panes 1 -->
-                    <div role="tabpanel" class="tab-pane fade show tab-content " id="tab1">
+                    <div role="" class="tab-pane fade show  " id="">
 
                         <div id="pdfThumbnails" class=" inline-block w-full ">
                             <div class="pdf-item flex flex-wrap">
@@ -786,26 +773,52 @@
                             </div>
                         </div>
                     </div>
-                    {{-- <!-- Tab panes 2 -->
-                        <div role="tabpanel" class="tab-pane fade show tab-content hidden" id="tab2">
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <section class="py-10">
+        <div class="mx-auto container text-black">
+            <div class="text-center text-lg lg:text-2xl font-bold font-serif text-teal-700">
+                Activities
+            </div>
+            <div class="col-xs-12">
+                <div class="pd_tab_area fix">
+                    <ul class="pd_tab_btn nav nav-tabs" role="tablist">
+                        <li>
+                            <button
+                                class="tab-btn text-sm md:text-lg font-bold px-4 py-2 bg-green-500 rounded-xl text-white"
+                                onclick="openTab(event, 'tab0')" href="#description" role="tab"
+                                data-bs-toggle="tab">All</button>
+                        </li>
+                        @foreach ($primary_activities as $key => $primary_activity)
+                            <li>
+                                <button
+                                    class="tab-btn text-sm md:text-lg font-bold px-4 py-2 bg-green-500 rounded-xl text-white"
+                                    onclick="openTab(event, 'tab{{ $key }}')" href="#description"
+                                    role="tab"
+                                    data-bs-toggle="tab">{{ $primary_activity[0]->primary_activity_title }} </button>
+                            </li>
+                        @endforeach
+                    </ul>
+                    @foreach ($primary_activities as $photo_key => $primary_activity)
+                        <!-- Tab panes 1 -->
+                        <div role="tabpanel" class="tab-pane fade show tab-content " id="tab{{ $photo_key }}">
+
                             <div id="pdfThumbnails" class=" inline-block w-full ">
-                                <div class="pdf-item flex ">
-                                    <canvas class="pdf-thumbnail w-48 h-auto cursor-pointer shadow-lg rounded-lg m-4"
-                                        data-pdf="{{ asset('pdf/policy/' . $branch->branch_short_name . '/Assessment policy_SKT 2023-2026_.pdf') }}">
-                                    </canvas>
+                                <div class="pdf-item flex flex-wrap">
+                                    @foreach ($primary_activity as $primary_activity_photo)
+                                        <img src="{{ $primary_activity_photo->primary_activity_file }}"
+                                            class=" w-20 md:w-52 lg:w-64 xl:w-80 open-modal cursor-pointer" alt=""
+                                            data-src="{{ asset($primary_activity_photo->primary_activity_file) }}"
+                                            data-title="{{ $primary_activity_photo->primary_activity_title }}">
+                                    @endforeach
                                 </div>
                             </div>
                         </div>
-                        <!-- Tab panes 3 -->
-                        <div role="tabpanel" class="tab-pane fade show tab-content hidden" id="tab3">
-                            <div id="pdfThumbnails" class=" inline-block w-full ">
-                                <div class="pdf-item flex ">
-                                    <canvas class="pdf-thumbnail w-48 h-auto cursor-pointer shadow-lg rounded-lg m-4"
-                                        data-pdf="{{ asset('pdf/policy/' . $branch->branch_short_name . '/Inclusion Policy 2023-2026.pdf') }}">
-                                    </canvas>
-                                </div>
-                            </div>
-                        </div> --}}
+                    @endforeach
                 </div>
             </div>
         </div>
@@ -825,12 +838,41 @@
             </p>
         </div>
     </div>
+    <!-- Fullscreen Modal -->
+    <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-80  items-center justify-center hidden z-50">
+        <div class="relative max-w-4xl w-full p-4">
+            <button id="closeModal" class="absolute top-2 right-4 text-white text-3xl p-4 cursor-pointer">&times;</button>
+            <img id="modalImage" src="" class="w-full rounded-lg shadow-lg" />
+            <h3 id="modalTitle" class="text-white text-center mt-4 text-xl font-bold"></h3>
+        </div>
+    </div>
     <!-- Vanilla JS to handle tab switching -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const tabs = document.querySelectorAll('.pyp-tab');
             const contents = document.querySelectorAll('.pyp-content');
+            const modal = document.getElementById("imageModal");
+            const modalImage = document.getElementById("modalImage");
+            const modalTitle = document.getElementById("modalTitle");
+            const closeModal = document.getElementById("closeModal");
+            // Event delegation for modal
+            document.body.addEventListener("click", (e) => {
+                const target = e.target.closest(".open-modal");
+                if (target) {
+                    modalImage.src = target.dataset.src;
+                    modalTitle.textContent = target.dataset.title;
+                    modal.classList.remove("hidden");
+                    modal.classList.add("flex");
+                }
+            });
 
+            // Modal close events
+            closeModal.addEventListener("click", () => modal.classList.add("hidden"));
+            modal.addEventListener("click", (e) => {
+                if (e.target === modal) modal.classList.add("hidden");
+            });
+
+            document.querySelectorAll('.tab-content').forEach(tab => tab.classList.add('hidden'));
             tabs.forEach(tab => {
                 tab.addEventListener('click', () => {
                     const selected = tab.getAttribute('data-tab');
@@ -855,7 +897,14 @@
     <script>
         function openTab(event, tabId) {
             document.querySelectorAll('.tab-content').forEach(tab => tab.classList.add('hidden'));
-            document.getElementById(tabId).classList.remove('hidden');
+            if (tabId != 'tab0') {
+
+                document.getElementById(tabId).classList.remove('hidden');
+            } else {
+                // console.log('no');
+                document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('hidden'));
+
+            }
 
             document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('bg-green-500', 'border-green-500',
                 'text-white'));
@@ -889,4 +938,5 @@
             window.open(pdfUrl, '_blank');
         });
     </script>
+    <script></script>
 @endsection

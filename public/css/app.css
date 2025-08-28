@@ -12302,6 +12302,10 @@ video {
   width: 100%;
 }
 
+.w-24 {
+  width: 6rem;
+}
+
 .min-w-0 {
   min-width: 0px;
 }
@@ -14096,6 +14100,10 @@ video {
     width: 420px;
   }
 
+  .md\:w-52 {
+    width: 13rem;
+  }
+
   .md\:min-w-64 {
     min-width: 16rem;
   }
@@ -14311,6 +14319,18 @@ video {
     width: 420px;
   }
 
+  .lg\:w-72 {
+    width: 18rem;
+  }
+
+  .lg\:w-80 {
+    width: 20rem;
+  }
+
+  .lg\:w-64 {
+    width: 16rem;
+  }
+
   .lg\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -14417,6 +14437,10 @@ video {
 
   .xl\:w-\[420px\] {
     width: 420px;
+  }
+
+  .xl\:w-80 {
+    width: 20rem;
   }
 
   .xl\:grid-cols-3 {

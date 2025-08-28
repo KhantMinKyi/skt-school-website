@@ -10,6 +10,7 @@ use App\Models\Event;
 use App\Models\Gallery;
 use App\Models\History;
 use App\Models\Post;
+use App\Models\PrimaryActivityPhoto;
 use App\Models\PrimaryNewsletter;
 use App\Models\PrincipalMessage;
 use App\Models\Statement;
@@ -236,13 +237,14 @@ class GeneralRouteController extends Controller
     {
         $branch = Branch::where('branch_short_name', $param)->first();
         $primary_newsletters = PrimaryNewsletter::where('primary_newsletter_branch_id', $branch->id)->orderBy('created_at', 'desc')->get();
+        $primary_activities = PrimaryActivityPhoto::where('primary_activity_branch_id', $branch->id)->orderBy('created_at', 'desc')->get()->groupBy('primary_activity_uid');
         if (!$branch) {
             return view('pages.not_found');
         }
         if ($branch && $branch->branch_short_name === 'SKT-CC') {
-            return view('partial_view.guest.education.primary_city', compact('branch', 'primary_newsletters'));
+            return view('partial_view.guest.education.primary_city', compact('branch', 'primary_newsletters', 'primary_activities'));
         } else {
-            return view('partial_view.guest.education.primary_riverside', compact('branch', 'primary_newsletters'));
+            return view('partial_view.guest.education.primary_riverside', compact('branch', 'primary_newsletters', 'primary_activities'));
         }
     }
     public function showSecondary($param)
