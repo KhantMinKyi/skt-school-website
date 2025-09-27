@@ -76,8 +76,7 @@
                                                 method="POST" id="deleteJobForm">
                                                 @csrf
                                                 @method('DELETE') <!-- Ensure DELETE method is used -->
-                                                <button type="submit" class="btn btn-danger"
-                                                    onclick="return confirmDelete(event)">Delete</button>
+                                                <button type="submit" class="btn btn-danger">Delete</button>
                                             </form>
                                         </div>
                                     </td>
