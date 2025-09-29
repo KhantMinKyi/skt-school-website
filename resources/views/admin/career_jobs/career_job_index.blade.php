@@ -55,9 +55,9 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach ($jobs as $job)
+                            @foreach ($jobs as $no => $job)
                                 <tr>
-                                    <td>{{ $job->id }}</td>
+                                    <td>{{ $no + 1 }}</td>
                                     <td>{{ $job->branch->branch_name }}</td>
                                     <td>{{ $job->career_job_title }}</td>
                                     <td>{{ date('d-m-Y', strToTime($job->created_at)) }}</td>
