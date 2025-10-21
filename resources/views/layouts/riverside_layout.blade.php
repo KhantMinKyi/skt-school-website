@@ -26,7 +26,16 @@
     <meta name="twitter:description" content="@yield('twitter_description', 'Welcome to SKT International School`s Riverside Campus in Yangon, Myanmar — where exceptional international education meets innovation and excellence. Our certified educators, globally recognized curriculum, and state-of-the-art facilities create the perfect environment for academic success and personal development. Enroll today to join a vibrant community that inspires lifelong learning. Discover why SKT is one of the most respected and sought-after international schools in Yangon and throughout Myanmar.')">
     <meta name="twitter:image" content="@yield('twitter_image', asset('assets/images/icon/icon.png'))">
 
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17656638594">
+    </script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
+    gtag('config', 'AW-17656638594');
+    </script>
     {{-- <script src="https://cdn.tailwindcss.com"></script> --}}
     {{-- @vite('resources/css/app.css') --}}
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">

@@ -25,6 +25,19 @@
     <meta name="twitter:description"
         content="Welcome to SKT International School. Experience innovation, education, and growth in a world-class environment.">
     <meta name="twitter:image" content="{{ asset('assets/images/icon/icon.png') }}">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17656638594">
+    </script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'AW-17656638594');
+    </script>
+
+
     <!-- SITE TITLE -->
     <title>SKT International School</title>
     {{-- @vite('resources/css/app.css') --}}

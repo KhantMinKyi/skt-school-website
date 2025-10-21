@@ -27,7 +27,16 @@
     <meta name="twitter:image" content="@yield('twitter_image', asset('assets/images/icon/icon.png'))">
 
 
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17656638594">
+    </script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
+    gtag('config', 'AW-17656638594');
+    </script>
     {{-- <script src="https://cdn.tailwindcss.com"></script> --}}
     {{-- @vite('resources/css/app.css') --}}
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
