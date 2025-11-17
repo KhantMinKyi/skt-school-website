@@ -34,10 +34,9 @@
             </div>
             <div class=" text-sm md:text-lg p-4">
                 At SKT International Preschool, we believe in nurturing the whole child through a playful and engaging
-                learning approach. We're a Candidate School for the IB PYP Early Years Programme, meaning our curriculum is
-                designed to foster your child's natural curiosity and love of learning. Our play-based, inquiry-driven
-                program focuses on holistic development, covering:
-
+                learning approach. Our Kindergarten is a Candidate School for the IB PYP Early Years Programme, meaning our
+                curriculum is designed to foster your child's natural curiosity and love of learning. Our play-based,
+                inquiry-driven program focuses on holistic development, covering:
             </div>
             <img src="{{ asset('img/ib_pyp_logo.png') }}" alt="ib_pyp_logo" class=" w-96">
             <!-- END ROW -->
