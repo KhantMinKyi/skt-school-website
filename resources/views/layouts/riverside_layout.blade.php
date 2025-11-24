@@ -27,14 +27,16 @@
     <meta name="twitter:image" content="@yield('twitter_image', asset('assets/images/icon/icon.png'))">
 
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17656638594">
-    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17656638594"></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+        window.dataLayer = window.dataLayer || [];
 
-    gtag('config', 'AW-17656638594');
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'AW-17656638594');
     </script>
     {{-- <script src="https://cdn.tailwindcss.com"></script> --}}
     {{-- @vite('resources/css/app.css') --}}
@@ -183,7 +185,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="tel:019410010" target="__blank" class="hlc ">
+                                <a href="tel:09767348310" target="__blank" class="hlc ">
                                     <i class="ti-mobile"></i>
                                 </a>
                             </li>
@@ -243,7 +245,7 @@
                             </div>
                             <div>
                                 <small class="text-emerald-500"> 𝑹𝒊𝒗𝒆𝒓𝒔𝒊𝒅𝒆 𝑪𝒂𝒎𝒑𝒖𝒔 : </small>
-                                <p class="break-words "> 019410010 | 019410020 | 09456481970</p>
+                                <p class="break-words "> 019410010 | 019410020 | 09767348310</p>
                                 <small class="text-emerald-500">𝑷𝒓𝒆𝒔𝒄𝒉𝒐𝒐𝒍- 𝑹𝒊𝒗𝒆𝒓𝒔𝒊𝒅𝒆 𝑪𝒂𝒎𝒑𝒖𝒔 :
                                 </small>
                                 <p class="break-words ">09424463220</p>

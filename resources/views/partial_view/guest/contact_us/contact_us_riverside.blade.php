@@ -38,7 +38,8 @@
                     <div class="single_address">
                         <i class="ti-map"></i>
                         <h4>Our Location</h4>
-                        <p> <strong>Riverside campus: </strong> <br>235, Shu Khinn Thar Myo Pat Rd. Thaketa Tsp, Yangon <br><br>
+                        <p> <strong>Riverside campus: </strong> <br>235, Shu Khinn Thar Myo Pat Rd. Thaketa Tsp, Yangon
+                            <br><br>
                             <strong> Riverside Preschool campus:</strong><br> 235, Shu Khinn Thar Myo Pat Rd. Thaketa Tsp,
                             Yangon
                         </p>
@@ -49,7 +50,7 @@
                     <div class="single_address sabr">
                         <i class="ti-mobile"></i>
                         <h4>Telephone</h4>
-                        <p> <strong>Riverside campus: </strong> <br>019410010 |  019410020 | 09456481970</p> <br>
+                        <p> <strong>Riverside campus: </strong> <br>019410010 | 019410020 | 09767348310</p> <br>
                         <p><strong> Riverside Preschool campus:</strong><br>09424463220</p>
                     </div>
                 </div><!-- END COL -->

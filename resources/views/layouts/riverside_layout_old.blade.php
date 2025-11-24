@@ -273,7 +273,7 @@
                             <span class="ti-mobile"></span>
                             <h3>Phone number</h3>
                             <p> 019410010-20</p>
-                            <p>09424463220</p>
+                            <p>09767348310</p>
                         </div>
                         <div class="sf_contact">
                             <span class="ti-email"></span>

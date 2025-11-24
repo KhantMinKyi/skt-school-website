@@ -88,7 +88,7 @@
                             When a place is offered, you will be required to sign our Payment and Refund policy and pay the
                             registration fee, by the date indicated on the invoice to confirm your child’s place.</p>
                         <p>For more information, please email us or call our admissions office at <b> 019410010-20,
-                                09424451186, 09978439824 </b></p>
+                                09424451186, 09767348310 </b></p>
                     </div>
 
                     <div role="tabpanel" class="tab-pane fade tab-content hidden text-sm md:text-base" id="tab2">
