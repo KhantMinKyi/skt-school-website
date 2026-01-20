@@ -92,7 +92,7 @@
                     </p>
                     {{-- new Statement --}}
                     <h2 class=" text-2xl md:text-4xl font-semibold mt-4 md:mt-10">
-                       Our 
+                        Our
                         <span class="text-emerald-400">Just Cause</span>
                     </h2>
                     <p class="text-xl font-bold  pb-2 pt-4"> Keeping every student engaged</p>
@@ -129,7 +129,7 @@
 
 
             </div>
-         <div class="grid md:grid-cols-2 xl:grid-cols-4 text-center mt-4">
+            <div class="grid md:grid-cols-2 xl:grid-cols-4 text-center mt-4">
                 <div class="mx-2 mb-2">
                     <div class="count-box rounded-lg flex justify-center">
                         {{-- <i class="ti-face-smile"></i> --}}
@@ -165,7 +165,7 @@
                         <div>
                             <span data-purecounter-start="0" data-purecounter-end="163" data-purecounter-duration="1"
                                 class="purecounter"></span>
-                            <p>Winning Award</p>
+                            <p>Winning Awards</p>
                         </div>
                     </div>
                 </div>

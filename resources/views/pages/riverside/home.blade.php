@@ -219,7 +219,7 @@
                         <div>
                             <span data-purecounter-start="0" data-purecounter-end="163" data-purecounter-duration="1"
                                 class="purecounter"></span>
-                            <p>Winning Award</p>
+                            <p>Winning Awards</p>
                         </div>
                     </div>
                 </div>

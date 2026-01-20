@@ -27,7 +27,7 @@
         </div>
     </div>
     <!-- START SCHOOL Facilities -->
-    <section id="" class="mb-10 mt-[89px] sm:mt-0">
+    <section id="" class="mb-10 mt-[89px] sm:mt-10">
         <div class="container mx-auto">
             <div class="section-title text-2xl md:text-4xl mb-6 font-bold text-center">
                 <h2>Our <span class="text-teal-500">Facilities</span></h2>
@@ -73,6 +73,7 @@
     </section>
     <!-- END SCHOOL Facilities -->
     {{-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> --}}
+    <script src={{ asset('admin/vendor/jquery-3.4.1.slim.min.js') }}></script>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             const modal = document.getElementById("imageModal");
@@ -99,9 +100,11 @@
     </script>
     <script>
         $(document).ready(function() {
-            let perPage = 10; // Number of teachers per page
+            let perPage = 8; // Number of teachers per page
             let currentPage = 1;
             let allTeachers = $(".gallery-card").toArray(); // Convert to array for better handling
+            console.log(allTeachers);
+
             let filteredTeachers = [...allTeachers]; // Initially, all teachers are shown
 
             function showPage(page) {

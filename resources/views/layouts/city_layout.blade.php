@@ -28,14 +28,16 @@
 
 
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17656638594">
-    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17656638594"></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+        window.dataLayer = window.dataLayer || [];
 
-    gtag('config', 'AW-17656638594');
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'AW-17656638594');
     </script>
     {{-- <script src="https://cdn.tailwindcss.com"></script> --}}
     {{-- @vite('resources/css/app.css') --}}
@@ -274,7 +276,7 @@
     <!-- START FOOTER -->
     <div class="footer section-padding bg-gray-900">
         <div class="container mx-auto">
-            <div class="grid lg:grid-cols-4 sm:grid-cols-2 ">
+            <div class="grid lg:grid-cols-3 sm:grid-cols-2 ">
                 <div class="col-lg-3 col-sm-6 col-xs-12">
                     <div class="single_footer p-4">
                         {{-- <a href="index.html"><img src="assets/images/all-img/logo2.png" alt="" /></a> --}}
@@ -310,20 +312,6 @@
                             </li>
                         </ul>
                     </div>
-                </div>
-                <!--- END COL -->
-                <div>
-                    {{-- <div class="single_footer">
-                        <h4>Company</h4>
-                        <ul>
-                            <li><a href="#">About us</a></li>
-                            <li><a href="#">Knowledge Base</a></li>
-                            <li><a href="#">Affiliate Program</a></li>
-                            <li><a href="#">Community</a></li>
-                            <li><a href="#">Market API</a></li>
-                            <li><a href="#">Support team</a></li>
-                        </ul>
-                    </div> --}}
                 </div>
                 <!--- END COL -->
                 <div>

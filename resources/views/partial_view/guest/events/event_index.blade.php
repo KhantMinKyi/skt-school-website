@@ -52,9 +52,9 @@
                                 <div class="event-content">
                                     <span><i class="fa-solid fa-clock"></i>{{ $event->event_time }}</span>
                                     <span><i class="fa fa-table"></i><strong>{{ $event->event_location }}</strong></span>
-                                    <p>
+                                    {{-- <p>
                                         {{ \Illuminate\Support\Str::words($event->event_body, 10, '...') }}
-                                    </p>
+                                    </p> --}}
                                 </div>
                                 <a href="{{ route('event-detail.home', $event->id) }}" {{-- need tobe replaced --}}
                                     class="relative inline-block mx-auto py-4 px-6 overflow-hidden group">
