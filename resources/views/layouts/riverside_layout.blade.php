@@ -158,8 +158,12 @@
                 <div class="col-lg-3 col-sm-6 col-xs-12">
                     <div class="single_footer p-4">
                         {{-- <a href="index.html"><img src="assets/images/all-img/logo2.png" alt="" /></a> --}}
-                        <a href="{{ route('river.home') }}"><img src="{{ asset('img/footer_logo_SKT-RC.png') }}"
-                                class=" max-w-52 sm:max-w-72" alt=""></a>
+
+                        <a href="{{ route('river.home') }}" class="flex flex-col justify-center items-center">
+                            {{-- <img
+                                src="{{ asset('img/skt_riverside_campus.png') }}" class=" w-40" alt=""> --}}
+                            <img src="{{ asset('img/footer_logo_SKT-RC.png') }}" class=" max-w-52 sm:max-w-72"
+                                alt=""></a>
                         <p class=" text-sm md:text-lg">
                             We nurture students to become lifelong learners responsible global citizens, and
                             compassionate individuals through a challenging and balanced curriculum in a safe and caring
