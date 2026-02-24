@@ -56,6 +56,7 @@ class TeacherController extends Controller
 
         $branch = Branch::find($data['teacher_branch_id']);
         $user_id = Auth::user()->id;
+        $classArr = implode(',', $data['teacher_types']);
 
         if (isset($data['teacher_photos'])) {
 
@@ -64,7 +65,7 @@ class TeacherController extends Controller
                 if (!File::exists($filePath)) {
                     $result = File::makeDirectory($filePath, 0755, true);
                 }
-                $classArr = implode(',', $data['teacher_types']);
+                // dd($classArr);
                 $photo = $teacher_photo;
                 $extension = $photo->getClientOriginalExtension();
                 $name = $photo->getClientOriginalName();
@@ -103,8 +104,9 @@ class TeacherController extends Controller
         $teacher = Teacher::find($id);
         $branches = Branch::all();
         $user = Auth::user();
+        $teacher_types = TeacherType::with('branch')->get();
         if ($user->is_admin == 1) {
-            return view('partial_view.admin.teachers.teacher_edit', compact('teacher', 'branches'));
+            return view('partial_view.admin.teachers.teacher_edit', compact('teacher', 'branches', 'teacher_types'));
         } else {
             dd($teacher);
         }
@@ -118,12 +120,15 @@ class TeacherController extends Controller
         // dd($request->all());
         //
         $data = $request->validate([
-            'teacher_photo' => 'nullable|file',
-            'teacher_branch_id' => 'required',
-            'teacher_name' => 'required',
-            'teacher_class' => 'required',
+            'teacher_photo'                         => 'nullable|file',
+            'teacher_branch_id'                     => 'required',
+            'teacher_name'                          => 'required',
+            'teacher_types'                         => 'required|array',
+            // 'teacher_class' => 'required',
         ]);
         // dd($data);
+        $classArr = implode(',', $data['teacher_types']);
+        $data['teacher_types'] = $classArr;
         $teacher = Teacher::find($id);
         $branch = Branch::find($data['teacher_branch_id']);
         $user_id = Auth::user()->id;

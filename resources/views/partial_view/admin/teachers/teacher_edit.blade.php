@@ -50,23 +50,20 @@
                         <div class="row mb-3">
                             <label for="inputEmail3" class="col-3 col-form-label"> Class</label>
                             <div class="col-9">
-                                <select class="form-control select2" name="teacher_class" required
+
+                                @php
+                                    $current_teacher_types = array_filter(explode(',', $teacher->teacher_types));
+                                @endphp
+                                <select class="form-control select2" name="teacher_types[]" required multiple
                                     title="Class is required">
                                     <option disabled selected>Select a Class</option>
-                                    <option @if ($teacher->teacher_class == 'assistant') selected @endif value='assistant'>Assistant
-                                    </option>
-                                    <option @if ($teacher->teacher_class == 'kg') selected @endif value='kg'>KG </option>
-                                    <option @if ($teacher->teacher_class == 'primary') selected @endif value='primary'>Primary
-                                    </option>
-                                    <option @if ($teacher->teacher_class == 'lower-secondary') selected @endif value='lower-secondary'>Lower
-                                        Secondary</option>
-                                    <option @if ($teacher->teacher_class == 'secondary') selected @endif value='secondary'>Secondary
-                                    </option>
-                                    <option @if ($teacher->teacher_class == 'principal') selected @endif value='principal'>Principal
-                                    </option>
-                                    <option @if ($teacher->teacher_class == 'vice-principal') selected @endif value='vice-principal'>Vice
-                                        Principal
-                                    </option>
+
+                                    @foreach ($teacher_types as $teacher_type)
+                                        <option value="{{ $teacher_type->id }}"
+                                            {{ in_array($teacher_type->id, $current_teacher_types) ? 'selected' : '' }}>
+                                            {{ $teacher_type->title }} - {{ $teacher_type->branch->branch_name }}
+                                        </option>
+                                    @endforeach
                                 </select>
                             </div>
                         </div>
@@ -84,3 +81,12 @@
         </form>
     </div>
 @endsection
+<script>
+    $(document).ready(function() {
+        $('.select2').select2({
+            placeholder: "Select a Class",
+            allowClear: true,
+            width: '100%' // Ensures it fills the col-9 container
+        });
+    });
+</script>
