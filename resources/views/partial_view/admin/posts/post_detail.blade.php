@@ -28,7 +28,7 @@
                                     <h2 class="text-2xl font-bold text-gray-800">{{ $post->post_title }}</h2>
                                     <img src="{{ asset($post->post_banner) }}" class="img-fluid w-full rounded-lg my-4"
                                         alt="Blog image" />
-                                    <p>{{ $post->post_body }}</p>
+                                    <p>{!! $post->post_body !!}</p>
                                     @php
                                         $post_images = explode(',', $post->post_image);
                                     @endphp
