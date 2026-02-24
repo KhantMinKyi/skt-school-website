@@ -8,14 +8,14 @@
         <div class="carousel-inner  transition-transform duration-1000 ease-in-out hidden sm:flex" id="carouselInner">
             <!-- First Slide -->
             <div class="carousel-item active w-full flex-shrink-0">
-                <img src="{{ asset('img/banner/contact_banners/' . $our_statement->branch->branch_short_name . '.jpg') }}"
+                <img src="{{ asset('img/banner/contact_banners/' . $our_statement->branch->branch_short_name . '.webp') }}"
                     alt="slider-image" class="w-full h-auto object-cover" />
                 <div
                     class="absolute inset-0 mx-auto flex flex-col justify-center items-center  fade-in-out will_hide_div  ">
                     <h1 id="fading-text" class=" text-xl sm:text-5xl lg:text-7xl text-center  ml-10 mt-20 sm:mt-0">
                         <span class="text-emerald-400">{{ $our_statement->branch->branch_name }}</span>
                         <br>
-                        <div class="text-white mt-4 hidden sm:block">Our Statement </div>
+                        <div class="text-black mt-4 hidden sm:block">Our Statement </div>
                     </h1>
                 </div>
             </div>
@@ -59,46 +59,50 @@
             </div>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 mt-10">
-            <div class=" max-w-2xl p-10 flex justify-center  mx-auto">
+            <div class="max-w-2xl p-10 flex justify-center mx-auto">
                 <div class="ab_content">
-                    <h2 class=" text-2xl md:text-4xl font-semibold">
+                    <h2 class="text-2xl md:text-4xl font-semibold">
                         Our
                         <span class="text-emerald-400">Values</span>
                     </h2>
-                    <p class="mt-4">
-                        <span class="text-xl font-bold ">Respect</span>
-                    <p class="pb-2 pt-4">We place great value on the importance of having honour and regard for the worth of
-                        oneself and
-                        others.</p>
-                    <span class="text-xl font-bold ">Responsibility</span>
-                    <p class="pb-2 pt-4">We hold in high esteem the notion of individual and collective responsibility
-                        towards ourselves, the
-                        wider community, and the environment.</p>
-                    <span class="text-xl font-bold ">
-                        Integrity
-                    </span>
-                    <p class="pb-2 pt-4">We focus on the state of being whole and undivided; having the strength of
-                        character
-                        and conscience.
-                    </p>
-                    <span class="text-xl font-bold ">Compassion</span>
-                    <p class="pb-2 pt-4">We encourage and uphold the sense of having concern for the sufferings or
-                        misfortunes of others and
-                        using this to strive towards selﬂessness.</p>
-                    <span class="text-xl font-bold ">Excellence</span>
-                    <p class="pb-2 pt-4"> We value the process of striving for excellence, for individual and collective
-                        achievement in all
-                        aspects of schooling and community action.</p>
-                    </p>
-                    {{-- new Statement --}}
-                    <h2 class=" text-2xl md:text-4xl font-semibold mt-4 md:mt-10">
+
+                    <div class="mt-4">
+                        <span class="text-xl font-bold">SELF-DISCIPLINE</span>
+                        <p class="pb-2 pt-2">Focused and committed to goals, even in the face of challenges or distractions.
+                        </p>
+                    </div>
+
+                    <div class="mt-4">
+                        <span class="text-xl font-bold">COMPASSION</span>
+                        <p class="pb-2 pt-2">Show concern for the wellbeing of all people.</p>
+                    </div>
+
+                    <div class="mt-4">
+                        <span class="text-xl font-bold">RESPECT</span>
+                        <p class="pb-2 pt-2">Treat yourself and those around you with dignity.</p>
+                    </div>
+
+                    <div class="mt-4">
+                        <span class="text-xl font-bold">INTEGRITY</span>
+                        <p class="pb-2 pt-2">Embody strong character and moral principles.</p>
+                    </div>
+
+                    <div class="mt-4">
+                        <span class="text-xl font-bold">BELIEF</span>
+                        <p class="pb-2 pt-2">Know that you can make a positive change.</p>
+                    </div>
+
+                    <div class="mt-4">
+                        <span class="text-xl font-bold">EXCELLENCE</span>
+                        <p class="pb-2 pt-2">It is a habit.</p>
+                    </div>
+
+                    {{-- Just Cause Statement --}}
+                    <h2 class="text-2xl md:text-4xl font-semibold mt-4 md:mt-10">
                         Our
                         <span class="text-emerald-400">Just Cause</span>
                     </h2>
-                    <p class="text-xl font-bold  pb-2 pt-4"> Keeping every student engaged</p>
-                    </p>
-                </div>
-                <div class="ab_content">
+                    <p class="text-xl font-bold pb-2 pt-4">Keeping every student engaged</p>
                 </div>
             </div>
             <div class=" max-w-2xl p-10 flex justify-center items-center">
