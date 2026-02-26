@@ -46,7 +46,7 @@
                 <a href="https://www.instagram.com/skt_riverside_campus/" class="hlc" target="__blank">
                     <i class="ti-instagram"></i>
                 </a>
-                <a href="https://www.youtube.com/@sktinternationalcollege6656" class="hlc" target="__blank">
+                <a href="https://www.youtube.com/@sktinternationalschoolrs" class="hlc" target="__blank">
                     <i class="ti-youtube"></i>
                 </a>
                 {{-- <a href="#" class="hlc" target="__blank">

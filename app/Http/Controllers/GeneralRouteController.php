@@ -159,7 +159,7 @@ class GeneralRouteController extends Controller
         if (!$branch) {
             return view('pages.not_found');
         }
-        $posts = Post::with('category')->where('post_branch_id', $branch->id)->where('post_is_active', 1)->get();
+        $posts = Post::with('category')->where('post_branch_id', $branch->id)->where('post_is_active', 1)->orderBy('created_at', 'desc')->get();
         $layout = ($branch && $branch->branch_short_name === 'SKT-CC')
             ? 'layouts.city_layout'
             : 'layouts.riverside_layout';
@@ -291,7 +291,7 @@ class GeneralRouteController extends Controller
         if (!$branch) {
             return view('pages.not_found');
         }
-        $events = Event::with('category')->where('event_branch_id', $branch->id)->where('event_is_active', 1)->get();
+        $events = Event::with('category')->where('event_branch_id', $branch->id)->where('event_is_active', 1)->orderBy('created_at', 'desc')->get();
         $layout = ($branch && $branch->branch_short_name === 'SKT-CC')
             ? 'layouts.city_layout'
             : 'layouts.riverside_layout';

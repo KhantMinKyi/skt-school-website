@@ -45,7 +45,7 @@
                 <a href="https://www.instagram.com/skt_city_campus/" class="hlc" target="__blank">
                     <i class="ti-instagram"></i>
                 </a>
-                <a href="https://www.youtube.com/@bahaninternationalsciencea7001" class="hlc" target="__blank">
+                <a href="https://www.youtube.com/@sktinternationalschoolcity" class="hlc" target="__blank">
                     <i class="ti-youtube"></i>
                 </a>
                 {{-- <a href="#" class="hlc" target="__blank">

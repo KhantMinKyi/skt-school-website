@@ -183,7 +183,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="https://www.youtube.com/@sktinternationalcollege6656" target="__blank"
+                                <a href="https://www.youtube.com/@sktinternationalschoolrs" target="__blank"
                                     class="hlc ">
                                     <i class="ti-youtube"></i>
                                 </a>

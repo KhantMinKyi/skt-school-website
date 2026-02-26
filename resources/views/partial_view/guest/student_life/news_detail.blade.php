@@ -59,7 +59,7 @@
                                 <ul class="grid grid-cols-2 lg:grid-cols-4 gap-4 mt-2">
                                     <li><a href="https://www.facebook.com/SKTinternationalCollege/" target="__blank"
                                             class="text-blue-600 hover:text-blue-800">Facebook</a></li>
-                                    <li><a href="https://www.youtube.com/@sktinternationalcollege6656" target="__blank"
+                                    <li><a href="https://www.youtube.com/@sktinternationalschoolrs" target="__blank"
                                             class="text-blue-400 hover:text-blue-600">Youtube</a></li>
                                     <li><a href="https://www.instagram.com/skt_riverside_campus/" target="__blank"
                                             class="text-pink-500 hover:text-pink-700">Instagram</a></li>
@@ -70,7 +70,7 @@
                                 <ul class="grid grid-cols-2 lg:grid-cols-4 gap-4 mt-2">
                                     <li><a href="https://www.facebook.com/BahanInternationalScienceAcademy/"
                                             target="__blank" class="text-blue-600 hover:text-blue-800">Facebook</a></li>
-                                    <li><a href="https://www.youtube.com/@bahaninternationalsciencea7001" target="__blank"
+                                    <li><a href="https://www.youtube.com/@sktinternationalschoolcity" target="__blank"
                                             class="text-blue-400 hover:text-blue-600">Youtube</a></li>
                                     <li><a href="https://www.instagram.com/skt_city_campus/" target="__blank"
                                             class="text-pink-500 hover:text-pink-700">Instagram</a></li>
@@ -180,7 +180,7 @@
                                     </li> --}}
                                     <li>
                                         <div class="social_item b_youtube"><a
-                                                href="https://www.youtube.com/@sktinternationalcollege6656"
+                                                href="https://www.youtube.com/@sktinternationalschoolrs"
                                                 title="youtube"><i class="fa-brands fa-youtube"></i><span
                                                     class="item-list">90K
                                                     Subscribers</span></a></div>
@@ -212,7 +212,7 @@
 
                                     <li>
                                         <div class="social_item b_youtube"><a
-                                                href="https://www.youtube.com/@bahaninternationalsciencea7001"
+                                                href="https://www.youtube.com/@sktinternationalschoolcity"
                                                 title="youtube"><i class="fa-brands fa-youtube"></i><span
                                                     class="item-list">90K
                                                     Subscribers</span></a></div>
