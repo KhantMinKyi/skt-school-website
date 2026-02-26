@@ -42,19 +42,21 @@
                                 <span><i class="fa-solid fa-clock"></i></i>{{ $event->event_time }}</span>
                                 <span><i class="fa fa-table"></i><strong>{{ $event->event_location }}</strong></span>
                             </div>
-                            <p>{!! $event->event_body !!}</p>
+                            <div class="rich-text-body">{!! $event->event_body !!}</div>
                             @php
-                                $event_images = explode(',', $event->event_image);
+                                $event_images = array_filter(array_map('trim', explode(',', $event->event_image)));
                             @endphp
-                            <div class="mt-6 flex flex-wrap gap-4 justify-between">
-                                @foreach ($event_images as $event_image)
-                                    <div class="flex-shrink-0 rounded-lg overflow-hidden ">
-                                        <img src="{{ asset($event_image) }}"
-                                            class="h-auto max-h-32 md:max-h-40 xl:max-h-80 w-auto max-w-full object-cover rounded-lg shadow-md hover:shadow-lg transition cursor-pointer"
-                                            alt="">
-                                    </div>
-                                @endforeach
-                            </div>
+                            @if (count($event_images))
+                                <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    @foreach ($event_images as $event_image)
+                                        <div class="rounded-lg overflow-hidden">
+                                            <img src="{{ asset($event_image) }}" data-full-src="{{ asset($event_image) }}"
+                                                class="js-gallery-image w-full h-56 object-cover rounded-xl shadow-md hover:shadow-lg transition duration-200 cursor-pointer"
+                                                alt="Event image">
+                                        </div>
+                                    @endforeach
+                                </div>
+                            @endif
                         </div>
                         <div class="share_sp mt-6">
                             <h4 class="text-lg font-semibold">Share</h4>
@@ -220,4 +222,61 @@
     </section>
 
     <!-- END BLOG -->
+    <div id="galleryModal"
+        class="fixed inset-0 z-[9999] hidden items-center justify-center bg-black/60 p-4 transition-opacity duration-200">
+        <div class="relative w-[92vw] md:w-[70vw] lg:w-[56vw] max-w-4xl bg-white rounded-2xl shadow-2xl p-3 md:p-4">
+            <button type="button" id="galleryModalClose"
+                class="absolute top-4 right-4 z-10 bg-white text-gray-700 border border-gray-200 rounded-full w-10 h-10 flex items-center justify-center text-2xl leading-none shadow"
+                aria-label="Close image modal">
+                &times;
+            </button>
+            <img id="galleryModalImage" src="" alt="Preview"
+                class="w-full h-[38vh] md:h-[50vh] object-contain rounded-xl bg-gray-100">
+        </div>
+    </div>
+
+    <script>
+        (function() {
+            const modal = document.getElementById('galleryModal');
+            const modalImage = document.getElementById('galleryModalImage');
+            const closeBtn = document.getElementById('galleryModalClose');
+            const galleryImages = document.querySelectorAll('.js-gallery-image');
+
+            if (!modal || !modalImage || !closeBtn || !galleryImages.length) return;
+
+            galleryImages.forEach((image) => {
+                image.addEventListener('click', () => {
+                    modalImage.src = image.dataset.fullSrc || image.src;
+                    modal.classList.remove('hidden');
+                    modal.classList.add('flex');
+                    document.body.classList.add('overflow-hidden');
+                });
+            });
+
+            const closeModal = () => {
+                modal.classList.add('hidden');
+                modal.classList.remove('flex');
+                modalImage.src = '';
+                document.body.classList.remove('overflow-hidden');
+            };
+
+            closeBtn.addEventListener('click', closeModal);
+            modal.addEventListener('click', (event) => {
+                if (event.target === modal) closeModal();
+            });
+            document.addEventListener('keydown', (event) => {
+                if (event.key === 'Escape' && !modal.classList.contains('hidden')) closeModal();
+            });
+        })();
+    </script>
+    <style>
+        .rich-text-body {
+            overflow-wrap: anywhere;
+            word-break: break-word;
+        }
+
+        .rich-text-body * {
+            max-width: 100%;
+        }
+    </style>
 @endsection
