@@ -57,7 +57,7 @@
                     </h2>
                     <p class=" text-gray-500 mt-2">
                         Choosing the right school for your child is an important step in shaping their future. At SKT
-                        International School Riverside Campus, we are committed to providing a nurturing and dynamic
+                        International School City Campus, we are committed to providing a nurturing and dynamic
                         learning
                         environment that fosters academic excellence, creativity, and personal growth.
                         Our admissions process is designed to help families understand what makes our school unique. We
