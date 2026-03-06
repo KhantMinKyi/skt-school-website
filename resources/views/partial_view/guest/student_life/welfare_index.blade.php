@@ -110,57 +110,26 @@
                             <span class="text-emerald-400">Message from the Head of Welfare CC</span>
                         </h2>
                         <p class=" text-gray-500">
-                            Welcome to the Welfare Department at SKT International School. I’m <b class="text-emerald-400">
-                                Guvanch Odeniyazov </b>, and
-                            as <b class="text-emerald-400"> Head of Welfare </b>, my role is to support the overall
-                            well-being
-                            of our students—socially,
-                            emotionally, and
-                            morally—while helping them grow into responsible and compassionate individuals.
+                            Mr. Elnur Alakbarov was born in Azerbaijan on July 15, 1985.<b class="text-emerald-400">
+                                He graduated from Azerbaijan University in 2004 and has been dedicated to education ever since.</b>
+                                <b class="text-emerald-400">Mr. Elnur </b>currently serves as a Geography and Global Perspectives teacher as well as the Welfare Coordinator, where he supports both the academic and personal development of students.
 
-                            We implement the Character Education Program, built on the foundation of Character First
-                            Education,
-                            the world’s largest character-based initiative for schools. This program helps students
-                            understand
-                            and live by core universal values such as respect, honesty, and fairness.For <b
-                                class="text-emerald-400"> Years 7–9 </b>, we use the
-                            <b class="text-emerald-400"> Pathways: Values in Action </b> book, which turns these values into
-                            lived experiences that shape our
-                            students into engaged, empathetic global citizens.
-
-                            Beyond the classroom, we offer a wide range of welfare activities that promote connection,
-                            confidence, and character.<b class="text-emerald-400"> For example, our indoor/outdoor
-                                activities
-                                like picnics, movie nights,
-                                and BBQs encourage teamwork and social bonding, while donation programs teach compassion and
-                                social
-                                responsibility through giving and community support. </b> Other activities include DEAR
-                            Time,
-                            birthday
-                            celebrations, sports tournaments, clubs, fundraising events, holiday celebrations, and
-                            excursions.
-
-                            We also conduct home visits to better understand each student’s background and provide
-                            personalized
-                            care and support.
-
-                            Please feel free to reach out—we’re here to help every student thrive.
-                            Warm regards,
+                                He holds TESOL and IELTS certifications, which strengthen his ability to guide students in developing strong communication and global awareness skills. Mr. Elnur is passionate about creating an engaging learning environment and encouraging students to become responsible and active global citizens.
                         </p>
                     </div>
                     <div class="abmv mt-4 principal-message ">
                         <p class=" text-lg md:text-xl italic">
-                            Guvanch Odeniyazov
+                            Mr. Elnur Alakbarov
                         </p>
                         <p class=" text-sm md:text-md italic">
-                            Head of Welfare
+                            Welfare Coordinator / Geography Teacher
                         </p>
                     </div>
                 </div>
                 <div class="flex justify-center items-center flex-col">
                     <img class="w-[200px] h-[200px] md:w-[420px] md:h-[420px] object-cover rounded-full"
-                        src="{{ asset('img/welfare_data/' . $branch->branch_short_name . '.jpg') }}" alt="" />
-                    <p class="mt-4 bold text-xl md:text-2xl italic"> Guvanch Odeniyazov</p>
+                        src="{{ asset('img/welfare_data/' . $branch->branch_short_name . '.webp') }}" alt="" />
+                    <p class="mt-4 bold text-xl md:text-2xl italic">Mr. Elnur Alakbarov</p>
                 </div>
             </div>
         </section>

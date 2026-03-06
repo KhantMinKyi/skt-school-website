@@ -381,7 +381,7 @@
                         </div>
                         <div class="text-center">
                             <h2><a href="#">Cambridge Curriculum</a></h2>
-                            <span>Year 2 to IGCSE</span>
+                            <span>Year 2 to A Level</span>
                         </div>
                     </div>
                 </div>
